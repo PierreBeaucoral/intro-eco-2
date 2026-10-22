@@ -1,0 +1,420 @@
+---
+title: "La crise d'Ormuz : pourquoi les carburants ont-ils flambé ?"
+subtitle: "CM 1 · Partie I · Marchés, prix et régulations"
+description: "Choc d'offre, coût marginal des producteurs, demande peu élastique à court terme."
+cm: 1
+footer: "CM 1 · Ormuz"
+title-slide-attributes:
+  data-kicker: "Introduction à l'économie 2 · CM 1"
+---
+
+```{r}
+#| include: false
+source(here::here("R/theme_cours.R"))
+source(here::here("R/cm1.R"))   # même fichier que la page de cours
+```
+
+## Le 28 février 2026, la guerre ferme de fait le détroit d'Ormuz
+
+![Carte : Goran tek-en, CC BY-SA 4.0, Wikimedia Commons](../cours/img/cm1/ormuz-carte.png){fig-alt="Carte du détroit d'Ormuz : un passage étroit entre l'Iran au nord et la péninsule omanaise de Musandam au sud relie le golfe Persique au golfe d'Oman." width="55%"}
+
+Environ un cinquième du pétrole et du gaz liquéfié y transite (Insee, Note de conjoncture, 24/03/2026).
+
+::: {.notes}
+0 h 00 – 0 h 05. Accroche : qui a fait le plein cette semaine ? Main levée. Les navires doivent tous franchir ce passage étroit, d'où la facilité de le bloquer.
+:::
+
+## À la pompe, le gazole a pris 41 % en huit mois
+
+![Cusset (Allier), 19/04/2026. Photo : Tabl-trai, CC BY-SA 4.0, Wikimedia Commons](../cours/img/cm1/station-cusset-2026.jpg){fig-alt="Panneau d'une station-service affichant le SP95-E10 à 2,031 euros et le gazole à 2,274 euros le litre." width="38%" fig-align="right"}
+
+- Euro-super 95 : 1,71 € à 2,21 € le litre (+29,3 %)
+- Gazole : 1,65 € à 2,33 € (+41,1 %)
+
+(Commission européenne, *Weekly Oil Bulletin*, TTC, du 23/02 au 12/10/2026)
+
+::: {.notes}
+0 h 05 – 0 h 08. Prix TTC, moyennes nationales hebdomadaires. Le panneau est un relevé de station ; les chiffres de la diapo sont des moyennes nationales.
+:::
+
+## La presse raconte un coût qui monte et des automobilistes qui doivent rouler
+
+:::: {.columns}
+::: {.column width="58%"}
+- « La hausse des coûts d'approvisionnement en pétrole fait flamber les prix des carburants » (*Le Figaro*, 09/03/2026)
+- « Si cela continue, je n'aurai plus les moyens d'aller travailler » (*Sud Ouest*, 30/03/2026)
+:::
+
+::: {.column width="42%"}
+![1974. Photo : D. Falconer, domaine public, Wikimedia Commons](../cours/img/cm1/une-oregon-journal-1974.jpg){height="400px" fig-alt="Un homme lit un journal dont la une titre « Gas Rationing Set Monday » ; au fond, un panneau de station-service indique « Sorry no gasoline »."}
+:::
+::::
+
+::: {.notes}
+0 h 08 – 0 h 11. Demander : lequel des deux titres parle de l'offre, lequel de la demande ? Le premier : le coût monte, l'offre recule (choc d'offre). Le second : on ne renonce pas à aller travailler, la demande est peu élastique à court terme. Photo : en 1974, la une annonce le rationnement de l'essence (« Gas Rationing Set Monday »), le panneau dit « plus d'essence ». Autres titres dans la page de cours (Le Figaro 2022, Le Parisien 21/09/2026).
+:::
+
+## Trois faits intriguent
+
+1. Un détroit lointain fait bondir la pompe.
+2. On paie beaucoup plus, on roule à peine moins.
+3. Le gazole devient plus cher que l'essence.
+
+**Pourquoi si fort ?** Deux outils : déplacement, élasticité.
+
+::: {.notes}
+0 h 11 – 0 h 15. Demander lequel des trois les surprend le plus ; on y revient à la fin. Les chiffres sont arrêtés au 14 octobre 2026 (pétrole) et au 12 octobre 2026 (pompe).
+:::
+
+## Rappel : offre et demande se rencontrent en P\*, et un seul facteur change à la fois
+
+::: {.rappel}
+- Au prix d'équilibre P\*, offre et demande valent Q\*.
+- Au-dessous de P\* : **pénurie**. Au-dessus : **surproduction**.
+- *Toutes choses égales par ailleurs* : une seule cause varie.
+- Un producteur fait une unité de plus tant qu'elle rapporte plus qu'elle ne coûte.
+:::
+
+::: {.notes}
+0 h 15 – 0 h 22. Rappel rapide, sans redéfinir. Ajouter : à court terme, le prix dépend surtout de la demande (Marshall) ; l'analyse positive décrit ce qui est, la normative ce qui devrait être. Poser : « Que se passe-t-il au-dessous de P\* ? »
+:::
+
+## Marshall : pour expliquer un prix, dire quelle courbe a bougé
+
+::: {.auteur}
+::: {.wp-portrait}
+![](../cours/img/portraits/alfred-marshall.jpg){fig-alt="Portrait photographique d'Alfred Marshall vers 1891, homme âgé à barbe blanche, en buste."}
+[Vers 1891 · Elliott and Fry, domaine public, Wikimedia Commons]{.wp-credit}
+:::
+
+**Alfred Marshall** (1890), *Principles of Economics* · école néoclassique. Offre et demande sont les deux lames d'une paire de ciseaux.
+:::
+
+::: {.notes}
+0 h 22 – 0 h 27. Le prix monte si l'offre recule ou si la demande augmente. Insister : quelle courbe, et pourquoi.
+:::
+
+## L'offre reflète le coût du dernier baril produit
+
+::: {#def-cout-marginal}
+## Coût marginal
+
+Le **coût marginal (Cm)** est le coût de production d'une unité de plus. Au prix P, on produit toutes les unités dont le Cm est inférieur ou égal à P.
+:::
+
+::: {.notes}
+0 h 27 – 0 h 32. Raisonnement à la marge, côté producteur. Tous les producteurs n'ont pas les mêmes coûts : rangés du moins cher au plus cher, ils donnent une offre croissante. Tant que les capacités suffisent, le prix est le Cm du dernier producteur nécessaire.
+:::
+
+## Un choc d'offre déplace la courbe ; le prix du bien, lui, fait glisser
+
+- **Choc d'offre** : la quantité offerte change *à chaque prix*, O devient O′. Négatif (guerre, panne, embargo) : vers la gauche, ou vers le haut.
+- **Prix du bien** : on glisse le long de la courbe.
+- **Autre cause** : la courbe se déplace.
+
+::: {.notes}
+0 h 32 – 0 h 40. Gauche ou haut : même chose, le montrer au tableau. Vers la gauche : moins de barils à chaque prix. Vers le haut : le dernier baril coûte plus cher. Question : une hausse de revenu glisse-t-elle ou déplace-t-elle ? (Elle déplace la demande.)
+:::
+
+## L'élasticité mesure la réaction de la quantité au prix, faible à court terme pour le carburant
+
+e = variation de Q (en %) ÷ variation de P (en %). Négative.
+
+|e| < 1 : demande **peu élastique**. Pour le carburant, e est compris entre −0,40 et −0,21 (Insee Analyses n° 86, 06/07/2023).
+
+::: {.notes}
+0 h 40 – 0 h 47. Une hausse de 1 % du prix réduit la consommation de 0,21 % à 0,40 % seulement à court terme (données de septembre 2021 à janvier 2023). Pourquoi ? Changer de voiture, déménager ou covoiturer prend des mois. Le CM 2 en fera un outil de calcul complet ; ne pas aller plus loin qu'une lecture.
+:::
+
+## Un choc d'offre fait monter le prix et baisser la quantité
+
+```{r}
+#| label: fig-choc-offre
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Offre et demande : l'offre se déplace vers la gauche de O à O prime, avec une pénurie au prix initial ; le prix monte de P étoile à P étoile prime et la quantité baisse"
+graphe_choc_offre(base_size = 24)
+```
+
+::: {.notes}
+0 h 47 – 0 h 57. Suivre la courbe : E, pénurie, E′. Trois temps : (1) le choc, O devient O′ ; (2) au prix P\*, les acheteurs veulent toujours Q\*, les vendeurs offrent beaucoup moins : pénurie ; (3) les acheteurs enchérissent, on glisse le long de D (de E vers E′) et le long de O′.
+:::
+
+## Piège : le prix a monté, mais la demande n'a pas baissé
+
+::: {.piege}
+La hausse du prix fait baisser la **quantité demandée** (glissement le long de D). La **demande** (la courbe D) n'a pas bougé : seule l'offre s'est déplacée.
+:::
+
+::: {.notes}
+0 h 57 – 1 h 02. Sondage : « le prix va-t-il redescendre tout seul ? » Il ne redescendra que si l'offre revient (réouverture du détroit) ou si la demande se déplace vers la gauche.
+:::
+
+## Le prix est fixé par le producteur le plus cher dont on a besoin
+
+```{r}
+#| label: fig-cout-marginal
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Escalier des coûts marginaux de quatre producteurs fictifs, avec et sans le Golfe ; la demande fixe à 25 millions de barils par jour coupe l'offre à 60 dollars avant le choc et 80 dollars après"
+graphe_cout_marginal(base_size = 24)
+```
+
+::: {.notes}
+1 h 02 – 1 h 10. Chiffres fictifs : quatre producteurs de 10 Mb/j chacun, coûts marginaux Golfe 20 $, X 40 $, Y 60 $, Z 80 $ le baril ; demande fixe à 25 Mb/j.
+:::
+
+## Sans le Golfe, le prix passe de 60 $ à 80 $ : +33 %
+
+1. Avant : Golfe, X et Y suffisent. Prix = Cm de Y = **60 $**.
+2. Après : il faut X, Y **et Z**. Prix = **80 $**.
+3. (80 − 60) ÷ 60 = **+33 %**.
+4. Producteur X : 20 $ par baril de plus que son coût, puis **40 $**.
+
+::: {.notes}
+1 h 10 – 1 h 20. Faire calculer à la main. Aucun producteur restant n'a vu son coût augmenter, et les producteurs épargnés gagnent à la hausse. Question : et si la demande montait à 35 Mb/j ? Aucun coût ne fixe plus le prix : il rationne la demande. En 2026, on est plutôt dans ce cas : à court terme, les autres producteurs ne peuvent pas produire beaucoup plus. C'est le court terme de Marshall.
+:::
+
+## Pause : 15 minutes
+
+::: {.notes}
+1 h 20 – 1 h 35. Pause. À la reprise : le même choc, chiffré en euros par litre.
+:::
+
+## Même choc chiffré : l'équilibre passe de 1,70 € et 100 à 2,20 € et 90, donc e ≈ −0,34
+
+- Le choc retire 20 millions de litres à chaque prix.
+- Prix : +0,50 ÷ 1,70 = **+29,4 %**. Quantité : **−10 %**.
+- e = −10 ÷ 29,4 ≈ **−0,34**, dans la fourchette de l'Insee.
+
+::: {.notes}
+1 h 35 – 1 h 45. Marché fictif de carburant, Q en millions de litres par jour. Lire le tableau de la page : à 1,70 €, demande et offre valent 100 ; au prix de 1,70 €, après le choc, on demande 100 mais on n'offre que 80 : il manque 20. Énigme : l'offre perd 20, la quantité seulement 10 ; la hausse du prix convainc des acheteurs de renoncer à 10 et les vendeurs restants d'offrir 10 de plus le long de O′.
+:::
+
+## Même choc, deux demandes : le prix monte plus si la demande est peu élastique
+
+```{r}
+#| label: fig-elasticite
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Deux panneaux avec le même choc d'offre : demande peu élastique à gauche, le prix passe de 1,70 à 2,20 euros et la quantité de 100 à 90 ; demande élastique à droite, le prix passe à 1,95 euro et la quantité à 85"
+graphe_elasticite(base_size = 24)
+```
+
+::: {.notes}
+1 h 45 – 1 h 50. Comparer A et B. Plus la demande est peu élastique (ici, plus raide au même point), plus le choc passe dans le prix.
+:::
+
+## Même choc, deux histoires : le prix ou la quantité encaisse
+
+- Demande peu élastique (e ≈ −0,34) : prix **+29,4 %**, quantité **−10 %**
+- Demande élastique (e ≈ −1) : prix **+14,7 %**, quantité **−15 %**
+
+::: {.notes}
+1 h 50 – 1 h 55. Plus la demande est inélastique, plus le choc passe dans le prix et moins il passe dans la quantité. La demande élastique est Q = 202 − 60 P : nouvel équilibre à 1,95 € et 85 millions de litres.
+:::
+
+## Le prix à la pompe a suivi le brut, puis les raffineries
+
+```{r}
+#| label: fig-prix-pompe
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Prix hebdomadaires de l'Euro-super 95 et du gazole en France de janvier à octobre 2026, avec une ligne verticale au 28 février, fermeture du détroit d'Ormuz"
+graphe_prix_pompe(base_size = 24)
+```
+
+::: {.notes}
+1 h 55 – 2 h 00. Source sur le graphique. Le gazole, moins cher que l'Euro-super 95 avant la fermeture du détroit, le dépasse dès le 9 mars.
+:::
+
+## Le brut a presque doublé en six semaines
+
+```{r}
+#| label: fig-brent
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Prix du Brent en dollars par baril en 2026, avec une ligne verticale au 28 février : environ 70 dollars avant, 138 dollars le 7 avril, moins de 70 début juillet, plus de 125 en octobre"
+graphe_brent(base_size = 24)
+```
+
+::: {.notes}
+2 h 00 – 2 h 05. De 71,66 $ le 26 février à 138,21 $ le 7 avril, plus haut. Avant la guerre, l'AIE prévoyait pour 2026 un excès d'offre de 3,7 Mb/j ; le 12 mars, elle prévoit une baisse de la production de 8 Mb/j pour le mois (Insee, 24/03/2026). Brent à 126,55 $ le 14 octobre 2026 (EIA).
+:::
+
+## Du baril à la pompe, la hausse vient du prix avant taxes, pas de l'accise
+
+| Euro-super 95, €/L | 23 février | 12 octobre |
+|---|---|---|
+| Prix hors taxes | 0,735 | 1,153 |
+| Accise | 0,690 | 0,690 |
+| TVA à 20 % | 0,285 | 0,369 |
+
+Source : Commission européenne, *Weekly Oil Bulletin* ; calcul de l'auteur (consulté le 21/10/2026).
+
+::: {.notes}
+2 h 05 – 2 h 10. Sur les 0,502 € de hausse, 0,418 € (83 %) viennent du prix avant taxes, rien de l'accise, montant fixe par litre, et 0,084 € de la TVA, pourcentage du prix. Le hors-taxes regroupe le brut, le raffinage, le transport et la marge de distribution, que la source ne sépare pas. Pour le gazole, la part du hors-taxes est la même : le choc passe tout entier par l'amont, que l'État ne fixe pas.
+:::
+
+## Le gazole a subi deux déplacements de l'offre
+
+1. Le **brut** : 71,66 $ le 26 février, 126,55 $ le 14 octobre (Brent, EIA).
+2. Le **raffinage** : diesel importé du Golfe, moratoire russe, raffineries endommagées.
+
+::: {.notes}
+2 h 10 – 2 h 14. D'où +41 % pour le gazole, contre +29 % pour l'essence. Source : Insee, Note de conjoncture, juin 2026 ; AFP, Connaissance des Énergies, 10/09/2026.
+:::
+
+## Les Français ont payé plus cher mais n'ont presque pas moins roulé
+
+```{r}
+#| label: fig-livraisons
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Livraisons mensuelles de carburants routiers en France en 2025 et de janvier à juillet 2026, en millions de tonnes ; l'écart de 2026 reste modeste et existait déjà en janvier et février"
+graphe_livraisons(base_size = 24)
+```
+
+::: {.notes}
+2 h 14 – 2 h 18. De mars à juillet 2026, 4,9 % de carburant routier de moins qu'un an plus tôt ; mais en janvier et février, avant la guerre, l'écart était déjà de 6,0 % (Eurostat, consulté le 21/10/2026) : toutes choses égales par ailleurs, la part de la baisse due au prix est donc faible. Ce sont des livraisons, pas des litres passés à la pompe.
+:::
+
+## Avec e ≈ −0,3, les ménages achètent presque autant, beaucoup plus cher
+
+Prix +40 %, quantité −12 % (0,3 × 40).
+
+Facture : 1,40 × 0,88 ≈ 1,23, soit environ **+23 %**.
+
+::: {.notes}
+2 h 18 – 2 h 22. C'est une première approximation : l'élasticité de court terme est appliquée à une hausse étalée sur huit mois.
+:::
+
+## En mars, les anticipations ont déplacé la demande
+
+Les 2 et 3 mars 2026, plus de 6 millions de paiements par carte dans les stations : une « ruée anticipative » (*The Conversation*, 13/10/2026).
+
+::: {.notes}
+2 h 22 – 2 h 25. Le prix a encore peu bougé : les anticipations déplacent la demande vers la droite pendant quelques jours.
+:::
+
+## Piège : une chute de 30 % de la consommation n'est pas une élasticité
+
+::: {.piege}
+Du 11 au 20 septembre 2026 : −30 % de consommation, environ +5 % de prix (*The Conversation*, 13/10/2026 ; AFP, 10/09/2026). −30 ÷ 5 donnerait e = −6, invraisemblable. Des stations sont aussi à sec : la quantité baisse sans que la demande ait changé.
+:::
+
+::: {.notes}
+2 h 25 – 2 h 28. Gazole d'environ 2,30 €/L (AFP, 10/09/2026) à un record de 2,41 €/L le 20 septembre (*The Conversation*, 13/10/2026). 17 % des stations à sec le 21/09. L'élasticité se mesure toutes choses égales par ailleurs.
+:::
+
+## Un prix plafonné sous l'équilibre crée la pénurie : le cas TotalEnergies
+
+- Depuis le 22 juillet : SP95-E10 à 1,99 € au plus, gazole à 2,25 € (TotalEnergies, 22/07/2026).
+- Le 23/09, le SP95-E10 vaut 2,16 € en moyenne (AFP, 24/09/2026).
+- Part de marché : 22 % à 25 % fin août, selon son PDG (AFP, 29/08/2026).
+
+::: {.notes}
+2 h 28 – 2 h 33. C'est un plafond fixé par une entreprise, non par l'État. Le mécanisme est celui de la pénurie : prix maintenu au-dessous de l'équilibre. Le 12/10/2026, plafond de 2,25 € sur le gazole maintenu au-delà de fin janvier 2027 dans 3 300 stations ; part de marché au-dessus de 30 % en octobre selon l'entreprise.
+:::
+
+## Là où le prix est bloqué, les stations sont à sec et la file rationne
+
+- 21/09/2026 : 17 % des stations manquent d'un carburant, dont 91 % de stations Total (AFP).
+- Le ministre y voit « la conséquence directe du plafonnement du prix ».
+- Coût pour Total : 250 à 300 M€ fin août (selon son PDG, AFP, 29/08/2026), estimation non vérifiée.
+
+::: {.notes}
+2 h 33 – 2 h 37. Le ministre juge aussi l'approvisionnement du pays assuré. Le temps perdu et le risque de station à sec s'ajoutent au 1,99 € : la file rationne à la place du prix. Manque à gagner à comparer à un résultat net ajusté de 11,4 milliards de dollars sur les six premiers mois de 2026 (AFP, 29/08/2026).
+:::
+
+## Les ménages captifs de la voiture paient le plus
+
+- Ménages dépensant plus d'un mois de revenu en carburant : 10,6 % en 2021, 22,4 % aux prix du printemps 2026 (Insee Première n° 2125, 08/09/2026).
+- Actifs ruraux allant au travail en voiture : près de 90 % (AFP, 23/09/2026, d'après l'Insee).
+
+::: {.notes}
+2 h 37 – 2 h 41. Estimation à revenus et usages inchangés. Gros rouleurs : e = −0,32 contre −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86). Élasticité −0,47 en zone rurale, −0,41 en zone urbaine. Génération : aucune source consultée ne chiffre l'effet par âge.
+:::
+
+## Les vendeurs gagnent ; l'effet sur l'État est ambigu
+
+- Producteurs épargnés et raffineurs intacts : ils vendent plus cher.
+- **Accise** (fixe par litre) : rapporte moins.
+- **TVA** (en % du prix) : rapporte plus.
+
+::: {.notes}
+2 h 41 – 2 h 44. Au 30 septembre, recettes de carburant de l'État : −383 M€ sur un an, avec 798 M€ de TVA en plus et 1,18 Md€ d'accises en moins (*The Conversation*, 13/10/2026). Le CM 2 dira qui paie vraiment un impôt.
+:::
+
+## Bloquer les prix recrée la pénurie ; une remise coûte cher et profite aux gros consommateurs
+
+- **Blocage** sous P\*′ : files, quotas, stations à sec.
+- **Remise générale** : coût public, moins d'incitation à économiser. En 2022, 0,18 €/L au 1^er^ avril (Insee Analyses n° 86, 06/07/2023).
+
+::: {.notes}
+2 h 44 – 2 h 48. Le plafond de TotalEnergies le montre en 2026 ; les CM 3 et 4 chiffreront ce mécanisme. Remise de 2022 : 0,30 €/L en septembre, 0,10 €/L mi-novembre, supprimée au 1^er^ janvier 2023 ; 51 à 81 € de dépense évités par ménage automobiliste.
+:::
+
+## Une aide ciblée garde le signal-prix, à condition de savoir cibler
+
+- **Aide ciblée** : aide aux « grands rouleurs » élargie en septembre 2026, dans un plan de 450 M€ (ministère de la Transition écologique, 22/09/2026).
+- Le prix reste libre : les ménages gardent une raison d'économiser.
+
+::: {.notes}
+2 h 48 – 2 h 49. Ce que l'analyse établit : positif. Le reste est un choix.
+:::
+
+## Stocks stratégiques et taxe sur les profits agissent sur l'offre et sur le financement
+
+- **Stocks stratégiques** : O′ se déplace vers la droite, le prix baisse.
+- **Taxe sur les profits exceptionnels** : finance les aides.
+
+::: {.notes}
+2 h 49 – 2 h 51. Après la libération de stocks de diesel, TotalEnergies annonce un avantage d'environ 10 centimes par litre de gazole du 1^er^ novembre 2026 au 31 janvier 2027. Taxe sur les profits : ne change pas le prix à court terme si l'offre n'en dépend pas ; l'Union européenne l'a fait en 2022 (règlement (UE) 2022/1854).
+:::
+
+## Le choix relève d'un jugement : efficacité, équité, climat, budget, concurrence
+
+- **Néoclassiques** : laisser le prix signaler la rareté, puis transferts ciblés (Tinbergen, 1952).
+- **Post-keynésiens** : contenir les prix clés dès le départ (Weber et Wasner, 2023).
+
+::: {.notes}
+2 h 51 – 2 h 55. Débat en amphi : 3 minutes. Les écoles divergent sur ce qu'on est prêt à payer, en pénurie ou en argent public, pas sur le mécanisme. Climat : un prix élevé pousse à la sobriété, au risque de la colère sociale ; en 2018, la hausse de la contribution climat-énergie a été gelée.
+:::
+
+## En droit, bloquer les prix est possible, mais temporaire
+
+::: {.droit}
+Code de commerce, art. L410-2 : décret en Conseil d'État, mesures temporaires d'au plus six mois, en cas de crise ou de situation manifestement anormale du marché.
+:::
+
+::: {.notes}
+2 h 55 – 2 h 57. Principe de liberté des prix, exception encadrée et provisoire.
+:::
+
+## À retenir
+
+::: {.retenir}
+- Dire quelle courbe se déplace.
+- L'offre reflète le coût marginal.
+- Ormuz : O devient O′, P monte, Q baisse.
+- Prix du bien : glissement ; autre cause : déplacement.
+- Demande peu élastique : le prix encaisse.
+- Bloquer ou aider : jugement normatif.
+:::
+
+::: {.notes}
+2 h 57 – 2 h 59. Reprendre les trois énigmes de l'ouverture une à une.
+:::
+
+## Plan de dissertation : I. Ce que dit l'outil ; II. Ce qu'il ne tranche pas
+
+**Faut-il bloquer les prix à la pompe ou aider les automobilistes ?**
+
+**I.** Un choc d'offre fait monter le prix, la demande est peu élastique. Bloquer recrée la pénurie ; la remise coûte ; l'aide ciblée garde le signal-prix.
+
+**II.** Efficacité, équité, climat, budget : un jugement, où les écoles s'opposent.
+
+::: {.notes}
+2 h 59 – 3 h 00. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation.
+:::

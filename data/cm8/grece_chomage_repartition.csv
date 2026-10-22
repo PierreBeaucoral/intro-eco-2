@@ -1,0 +1,16 @@
+groupe,categorie,annee,chomage
+region,Attique,2008,6.7
+region,Attique,2013,28.7
+region,Attique,2025,8.1
+region,Égée méridionale,2008,8.4
+region,Égée méridionale,2013,21.3
+region,Égée méridionale,2025,7.3
+region,Macédoine-Occidentale,2008,12.5
+region,Macédoine-Occidentale,2013,31.6
+region,Macédoine-Occidentale,2025,15.3
+diplome,Diplôme inférieur au lycée,2008,7.5
+diplome,Diplôme inférieur au lycée,2013,29.8
+diplome,Diplôme inférieur au lycée,2025,11.8
+diplome,Diplôme du supérieur,2008,6.4
+diplome,Diplôme du supérieur,2013,20.4
+diplome,Diplôme du supérieur,2025,6.6

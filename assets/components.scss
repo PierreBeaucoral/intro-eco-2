@@ -1,0 +1,258 @@
+/*-- scss:defaults --*/
+// Working Paper · typographie et règles communes aux deux thèmes (site et diapos).
+$font-family-sans-serif: "STIX Two Text", "STIX Two", Georgia, "Times New Roman", serif;
+$headings-font-family: "STIX Two Text", "STIX Two", Georgia, serif;
+$font-family-monospace: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+$font-size-base: 1.125rem;   // 18 px : STIX est petite à l'œil
+$line-height-base: 1.6;
+$headings-font-weight: 600;
+$headings-line-height: 1.2;
+$border-radius: 4px;
+$border-radius-sm: 3px;
+$border-radius-lg: 6px;
+
+/*-- scss:rules --*/
+// Grammaire : celle d'un document de travail. Titre centré, résumé, sections numérotées,
+// « Définition 1. » comme un théorème, « Solution. … ∎ » comme une preuve.
+// Serif (STIX) pour le contenu, Plex Sans pour l'interface, Plex Mono pour les métadonnées.
+
+:root {
+  --wp-papier: #{$wp-papier};
+  --wp-carte: #{$wp-carte};
+  --wp-encre: #{$wp-encre};
+  --wp-encre-2: #{$wp-encre-2};
+  --wp-filet: #{$wp-filet};
+  --wp-accent: #{$wp-accent};
+  --wp-sur-accent: #{$wp-sur-accent};
+  --wp-offre: #{$wp-offre};
+  --wp-rouge: #{$wp-rouge};
+  --wp-teinte: #{$wp-teinte};
+  --wp-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wp-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+
+// ------------------------------------------------------------------
+// Base
+// ------------------------------------------------------------------
+html, body { overflow-x: clip; }
+body { text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; font-variant-numeric: lining-nums; }
+h1, h2, h3, h4, .title { letter-spacing: -0.01em; overflow-wrap: anywhere; min-width: 0; }
+h2 { border-bottom: 0 !important; margin-top: 2.6rem; font-size: 1.55rem; font-weight: 700; }
+h3 { font-size: 1.2rem; margin-top: 1.8rem; font-weight: 700; }
+.header-section-number { color: var(--wp-encre); margin-right: 0.5em; }
+p, li { max-width: 70ch; }
+a { text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--wp-accent); outline-offset: 2px; }
+::selection { background: var(--wp-teinte); color: var(--wp-encre); }
+.wp-mono { font-family: var(--wp-mono); }
+.wp-nowrap { white-space: nowrap; }
+
+// ------------------------------------------------------------------
+// Navbar, pied de page, table des matières : l'interface est en Plex Sans
+// ------------------------------------------------------------------
+.navbar, .nav-footer, #TOC, #quarto-margin-sidebar, .quarto-search, .aa-Panel, .breadcrumb, .page-navigation {
+  font-family: var(--wp-ui);
+}
+.navbar {
+  border-bottom: 1px solid var(--wp-filet);
+  box-shadow: none;
+  font-size: 0.95rem;
+  .navbar-title { font-weight: 600; font-size: 1rem; }
+  .navbar-logo { max-height: 26px; width: 26px; }
+  .nav-link { font-weight: 500; white-space: nowrap; }
+  .nav-link.active { color: var(--wp-accent) !important; text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 0.45em; }
+}
+.nav-footer { border-top: 1px solid var(--wp-filet); font-size: 0.85rem; }
+#TOC, .sidebar nav[role="doc-toc"] { font-size: 0.875rem; }
+
+// ------------------------------------------------------------------
+// Bloc titre des pages : métadonnées en mono, sous-titre en italique
+// ------------------------------------------------------------------
+#title-block-header {
+  margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--wp-filet);
+  .title { font-size: clamp(1.9rem, 4.2vw, 2.7rem); font-weight: 600; line-height: 1.1; }
+  .subtitle { font-style: italic; font-weight: 400; color: var(--wp-encre-2); font-size: 1.2rem; margin-top: 0.4rem; }
+  .description { color: var(--wp-encre-2); max-width: 64ch; }
+  .quarto-title-meta-heading { font-family: var(--wp-mono); font-weight: 400; text-transform: none; letter-spacing: 0; font-size: 0.75rem; }
+  .quarto-title-meta-contents { font-family: var(--wp-ui); }
+}
+
+// ------------------------------------------------------------------
+// Environnements de type théorème (natifs Quarto : #def-, #exm-, #rem-, .solution)
+// ------------------------------------------------------------------
+.theorem, .proof, .remark, .solution {
+  margin: 1.4rem 0;
+  break-inside: avoid;
+}
+.theorem.definition { font-style: italic; }
+.theorem.definition .theorem-title, .theorem.definition strong, .theorem.definition b { font-style: normal; }
+.theorem .theorem-title, .proof .proof-title { font-weight: 700; margin-right: 0.35em; }
+.example { font-style: normal; padding-left: 1rem; border-left: 2px solid var(--wp-offre); }
+.example .theorem-title { color: var(--wp-encre); }
+.proof.solution, .solution {
+  > :last-child::after { content: "∎"; float: right; margin-left: 1rem; }
+  .proof-title em { font-weight: 700; }
+}
+
+// ------------------------------------------------------------------
+// Encadrés pédagogiques : même grammaire, étiquette en tête, filet à gauche
+// Usage : ::: {.retenir} … :::   (aussi .piege, .auteur, .methode)
+// ------------------------------------------------------------------
+.retenir, .piege, .auteur, .methode, .rappel, .s1, .droit {
+  --c: var(--wp-encre);
+  margin: 1.5rem 0;
+  padding: 0.85rem 1.1rem 0.9rem;
+  border-left: 2px solid var(--c);
+  break-inside: avoid;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  > :last-child { margin-bottom: 0; }
+  &::before {
+    content: var(--label);
+    display: block; margin-bottom: 0.3rem;
+    font-family: var(--wp-ui); font-weight: 600; font-size: 0.8rem;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--c);
+  }
+  &[data-label]::before { content: attr(data-label); }
+}
+.retenir { --label: "À retenir"; --c: var(--wp-accent); background: var(--wp-teinte); }
+.rappel, .s1 { --label: "Rappel"; --c: var(--wp-encre-2); background: var(--wp-teinte); }
+.droit   { --label: "Et le droit ?"; --c: var(--wp-encre-2); }
+.piege   { --label: "Piège classique"; --c: var(--wp-rouge); }
+.auteur  { --label: "Auteur · école"; --c: var(--wp-encre-2); }
+.methode { --label: "Méthode"; --c: var(--wp-encre-2); border-left-style: dashed; }
+
+// Portrait dans un encadré (.auteur surtout) : ::: {.wp-portrait} ![](…){fig-alt=…} [crédit]{.wp-credit} :::
+.retenir, .piege, .auteur, .methode, .rappel, .droit { display: flow-root; }
+.wp-portrait {
+  float: right; width: 6.5rem; margin: 0 0 0.6rem 1rem;
+  p { margin: 0; max-width: none; }
+  img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: 2px; }
+  .wp-credit { display: block; margin-top: 0.25rem; font-family: var(--wp-ui); font-size: 0.65rem; line-height: 1.25; color: var(--wp-encre-2); }
+  @media (max-width: 576px) { width: 5rem; }
+}
+
+// Vidéo YouTube intégrée (youtube-nocookie), en petit : ::: {.wp-video} <iframe …> :::
+.wp-video {
+  max-width: 28rem; margin: 1.25rem 0;
+  iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; }
+  p { max-width: none; margin: 0; }
+  p:last-child { font-family: var(--wp-ui); font-size: 0.8rem; color: var(--wp-encre-2); margin-top: 0.35rem; }
+}
+
+// Encadré « en préparation » des pages encore vides
+.wp-avenir {
+  margin: 2rem 0; padding: 1.25rem 1.4rem;
+  border: 1px dashed var(--wp-filet); border-radius: 4px;
+  color: var(--wp-encre-2);
+  &::before { content: "En préparation"; display: block; font-family: var(--wp-mono); font-size: 0.78rem; color: var(--wp-accent); margin-bottom: 0.35rem; }
+  p { margin: 0; }
+}
+
+// ------------------------------------------------------------------
+// Figures, tableaux, notes
+// ------------------------------------------------------------------
+.figure-caption, figcaption, .quarto-float-caption { font-family: var(--wp-ui); font-size: 0.85rem; color: var(--wp-encre-2); }
+.cell-output-display img, .quarto-figure img { background: #FFFFFF; border-radius: 2px; }
+table { font-variant-numeric: tabular-nums; }
+thead th { font-family: var(--wp-ui); font-weight: 600; font-size: 0.9rem; }
+.table > :not(caption) > * > * { padding: 0.5rem 0.6rem; }
+.footnotes, .column-margin, .margin-aside { font-size: 0.875rem; color: var(--wp-encre-2); }
+
+// Boutons
+.wp-btn, a.wp-btn {
+  display: inline-flex; align-items: center; white-space: nowrap;
+  padding: 0.55rem 1.1rem; border-radius: 4px; border: 1px solid var(--wp-encre);
+  font-family: var(--wp-ui); font-weight: 600; font-size: 0.95rem; text-decoration: none; color: var(--wp-encre);
+  &:hover { background: var(--wp-teinte); }
+  &.is-plein { background: var(--wp-accent); border-color: var(--wp-accent); color: var(--wp-sur-accent); &:hover { filter: brightness(1.08); } }
+}
+
+// ------------------------------------------------------------------
+// Accueil : page de titre d'un document de travail
+// ------------------------------------------------------------------
+body.wp-accueil #title-block-header { display: none; }
+.wp-titre {
+  text-align: center; padding: clamp(1.5rem, 5vw, 3.5rem) 0 1.5rem;
+  p { max-width: none; margin-left: auto; margin-right: auto; }
+  .wp-kicker { font-family: var(--wp-mono); font-size: 0.8rem; color: var(--wp-encre-2); }
+  h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); font-weight: 600; line-height: 1.05; margin: 0 0 1rem; }
+  .wp-auteur { font-size: 1.2rem; }
+  .wp-affil { font-size: 0.95rem; color: var(--wp-encre-2); font-style: italic; }
+  .wp-boutons { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1.6rem; }
+}
+.wp-resume {
+  max-width: 40rem; margin: 1.5rem auto 3rem; padding: 1.1rem 0; text-align: left;
+  border-top: 1px solid var(--wp-filet); border-bottom: 1px solid var(--wp-filet);
+  font-size: 1rem;
+  .wp-resume-titre { display: block; font-weight: 700; text-align: center; margin-bottom: 0.4rem; }
+  p { max-width: none; }
+  .wp-mots { margin: 0.6rem 0 0; color: var(--wp-encre-2); font-size: 0.95rem; }
+}
+
+// Sommaire (listing des CM, gabarit assets/sommaire.ejs), groupé par partie
+.wp-partie { font-family: var(--wp-mono); font-size: 0.8rem; color: var(--wp-encre-2); margin: 2rem 0 0.4rem; max-width: none; }
+.wp-sommaire {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 3rem;
+  li {
+    max-width: none; display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 0 0.75rem;
+    padding: 0.9rem 0; border-top: 1px solid var(--wp-filet);
+  }
+  .wp-num { font-weight: 700; font-size: 1.2rem; line-height: 1.5; }
+  h3 { margin: 0; font-size: 1.15rem; line-height: 1.5; a { color: inherit; text-decoration: none; } a:hover { text-decoration: underline; } }
+  p { margin: 0.15rem 0 0.4rem; color: var(--wp-encre-2); font-size: 0.95rem; }
+  .wp-liens { font-family: var(--wp-mono); font-size: 0.78rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.9rem; }
+}
+
+// ------------------------------------------------------------------
+// TD : en-tête, documents, corrigé
+// ------------------------------------------------------------------
+.wp-entete {
+  display: flex; flex-wrap: wrap; gap: 0.3rem 1.75rem; margin: 0 0 1.75rem; padding: 0.7rem 1rem;
+  background: var(--wp-teinte); font-family: var(--wp-mono); font-size: 0.82rem;
+  p { margin: 0; max-width: none; }
+}
+.wp-document {
+  margin: 1.5rem 0; padding: 1rem 1.25rem; border: 1px solid var(--wp-filet);
+  &::before { content: attr(data-label); display: block; font-family: var(--wp-ui); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.4rem; }
+  .wp-source { font-size: 0.85rem; color: var(--wp-encre-2); margin: 0.6rem 0 0; }
+}
+.wp-cc {
+  display: inline-block; font-family: var(--wp-mono); font-size: 0.75rem; color: var(--wp-rouge);
+  border: 1px solid var(--wp-rouge); border-radius: 3px; padding: 0 0.4rem; vertical-align: middle;
+}
+body.wp-corrige #title-block-header .title::after {
+  content: "Corrigé";
+  display: inline-block; margin-left: 0.8rem; vertical-align: middle;
+  font-family: var(--wp-mono); font-weight: 500; font-size: 0.8rem; letter-spacing: 0;
+  color: var(--wp-accent); border: 1px solid var(--wp-accent); border-radius: 3px; padding: 0.1rem 0.5rem;
+}
+.bareme { font-family: var(--wp-mono); font-size: 0.8rem; color: var(--wp-accent); white-space: nowrap; margin-left: 0.4rem; }
+.note-td { border-top: 1px solid var(--wp-filet); padding-top: 0.5rem; font-size: 0.875rem; color: var(--wp-encre-2);
+  > p:first-child::before { content: "Note pour les chargés de TD. "; font-weight: 700; color: var(--wp-encre); }
+}
+
+// Listings (Cours, Fiches, TD)
+.quarto-listing table { font-size: 1rem; }
+.quarto-listing .listing-title, .quarto-listing td a { font-weight: 600; }
+.quarto-listing-container-table th { font-family: var(--wp-ui); }
+
+// ------------------------------------------------------------------
+// Mobile
+// ------------------------------------------------------------------
+@media (max-width: 760px) {
+  .wp-sommaire { grid-template-columns: minmax(0, 1fr); }
+}
+
+// ------------------------------------------------------------------
+// Impression : fiches et sujets en PDF via « Imprimer »
+// ------------------------------------------------------------------
+@media print {
+  @page { size: A4; margin: 16mm 16mm 18mm; }
+  .navbar, #quarto-header, .nav-footer, #quarto-margin-sidebar, #quarto-sidebar, .quarto-search, #quarto-back-to-top, .page-navigation, .wp-no-print { display: none !important; }
+  body { background: #FFFFFF !important; color: #111111 !important; font-size: 11pt; }
+  main.content { max-width: none !important; }
+  h2, h3 { break-after: avoid; }
+  a { color: inherit; text-decoration: none; }
+}

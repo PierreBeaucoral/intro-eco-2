@@ -1,0 +1,22 @@
+---
+title: "TD 1 · Fiche enseignant"
+description: "Réservée aux chargés de TD, jamais publiée"
+---
+<!-- Rédigée dans _drafts/tdN-fiche-enseignant.qmd. Ne quitte jamais _drafts/. -->
+
+## Minutage
+
+| Durée | Activité |
+|---|---|
+| 10 min | Rappel du CM et questions |
+| 40 min | Correction des questions préparées |
+| 50 min | Exercice en séance |
+| 20 min | Synthèse, annonce du TD suivant |
+
+## Ce que les étudiants doivent savoir faire en sortant
+
+## Réponses attendues et barème
+
+## Erreurs fréquentes
+
+## Si le temps manque / s'il en reste

@@ -1,0 +1,31 @@
+# Archives Moodle (S2 2025-26, S1) : données étudiantes possibles -> jamais versionnées
+_archive_2025-26/
+*.zip
+
+# Corrigés en préparation : déplacés dans td/ le jour de la publication
+_drafts/*
+!_drafts/_metadata.yml
+
+# Sorties Quarto
+_site/
+.quarto/
+/.quarto/
+**/*.quarto_ipynb
+_design/prototype/_site*/
+_design/prototype/_freeze/
+_design/prototype/.quarto/
+
+.DS_Store
+.Rhistory
+.Rproj.user/
+*.bak
+_archive_S1/
+.render.lock/
+.playwright-mcp/
+Rplots.pdf
+
+# Documents internes (audit nommant des collègues, critiques, plans) : locaux seulement, dépôt public
+quality_reports/
+session_logs/
+.claude/
+_design/

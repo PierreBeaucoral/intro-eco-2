@@ -1,0 +1,8 @@
+---
+title: "Méthodologie"
+subtitle: "Les exercices du TD et du contrôle continu"
+toc: false
+---
+
+- [La dissertation économique](dissertation.qmd)
+- [L'analyse d'un texte ou d'un document](analyse-document.qmd)

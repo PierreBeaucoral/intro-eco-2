@@ -1,0 +1,70 @@
+/*-- scss:defaults --*/
+// Working Paper · diapos de CM (revealjs).
+// Pile : [default, theme-light.scss, components.scss, slides.scss] -> couleurs et encadrés hérités du site.
+// Échelle amphi : diapo 1280 x 720, corps 32 px (= 24 pt projeté), légendes >= 22 px.
+$body-bg: #FFFFFF;
+$body-color: #111111;
+$link-color: #0062C4;
+$text-muted: #4B5563;
+$presentation-font-size-root: 32px;
+$presentation-font-smaller: 0.75;
+$presentation-line-height: 1.35;
+$presentation-heading-font: "STIX Two Text", "STIX Two", Georgia, serif;
+$presentation-heading-color: #111111;
+$presentation-heading-font-weight: 700;
+$presentation-heading-text-transform: none;
+$presentation-heading-letter-spacing: -0.01em;
+$presentation-heading-line-height: 1.12;
+$presentation-h1-font-size: 2.1em;
+$presentation-h2-font-size: 1.4em;
+$presentation-h3-font-size: 1.05em;
+$presentation-block-margin: 20px;
+
+/*-- scss:rules --*/
+.reveal {
+  font-variant-numeric: lining-nums;
+
+  // Titres-thèses : une phrase, deux lignes au plus
+  .slides section > h2 { max-width: 30em; margin-bottom: 0.8em; }
+  p, li { max-width: 34em; }
+  ul, ol { margin-left: 1.1em; }
+  li { margin-bottom: 0.3em; }
+  li::marker { color: var(--wp-accent); }
+
+  // Théorèmes et encadrés à l'échelle amphi
+  .theorem, .proof, .retenir, .piege, .auteur, .methode, .rappel, .s1, .droit { max-width: 36em; margin: 0.5em 0; }
+  .retenir, .piege, .auteur, .methode, .rappel, .s1, .droit { padding: 0.45em 0.8em 0.5em; border-left-width: 4px; &::before { font-size: 0.6em; } }
+  .example { border-left-width: 4px; }
+  .wp-video { max-width: 22em; }
+
+  // Figures et légendes
+  .quarto-figure-center, .cell-output-display { text-align: center; }
+  .figure-caption, figcaption { font-size: 22px; }
+  .columns { display: flex; gap: 1em; }
+  .columns .column { flex: 1 1 0; min-width: 0; }
+
+  // Note de marge (aside) en bas de diapo
+  .aside, aside { font-size: 22px; color: var(--wp-encre-2); border-top: 1px solid var(--wp-filet); padding-top: 0.3em; max-width: 26em; }
+
+  .slide-number, .footer { font-family: var(--wp-mono) !important; font-size: 18px !important; color: var(--wp-encre-2) !important; }
+}
+
+// Diapo de titre : page de titre de working paper
+.reveal #title-slide {
+  text-align: center;
+  p { margin-left: auto; margin-right: auto; }
+  &::before {
+    content: attr(data-kicker);
+    display: block; margin-bottom: 0.9em;
+    font-family: var(--wp-mono); font-size: 0.6em; color: var(--wp-encre-2);
+  }
+  .title { font-size: 2.1em; font-weight: 600; line-height: 1.05; margin-bottom: 0.3em; }
+  .subtitle { font-style: italic; font-weight: 400; font-size: 1.05em; color: var(--wp-encre-2); margin-bottom: 1.4em; }
+  .quarto-title-authors { justify-content: center; }
+  .quarto-title-author-name, .date { font-size: 0.75em; color: var(--wp-encre); }
+  .quarto-title-author, .quarto-title-authors { padding: 0; margin: 0; }
+  .date { margin-top: 0.2em; color: var(--wp-encre-2); }
+}
+
+// Portraits (.wp-portrait) : plus grands en projection
+.reveal .wp-portrait { width: 190px; margin-left: 1.5rem; .wp-credit { font-size: 13px; } }

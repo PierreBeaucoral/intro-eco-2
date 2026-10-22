@@ -1,0 +1,45 @@
+---
+title: "Programme et organisation"
+subtitle: "Calendrier, travaux dirigés, évaluation"
+---
+
+## Organisation
+
+| | Volume | Intervenant·es |
+|---|---|---|
+| Cours magistral (CM) | 10 séances de 3 h | Pierre Beaucoral |
+| Travaux dirigés (TD) | 8 séances de 2 h | Équipe de TD |
+
+Chaque séance de CM part d'une question de société, s'appuie sur une théorie économique de référence et sur les notions vues au premier semestre, puis construit des outils simples pour y répondre. Le CM commence environ deux semaines avant les TD : chaque TD porte sur des séances déjà traitées en cours.
+
+## Calendrier
+
+::: {.wp-avenir}
+Les dates seront ajoutées dès la publication de l'emploi du temps. Le tableau donne l'ordre des séances.
+:::
+
+| Semaine | CM | TD |
+|---|---|---|
+| 1 | CM 1 · La crise d'Ormuz | |
+| 2 | CM 2 · Le tabac | |
+| 3 | CM 3 · L'Ozempic | TD 1 · Ormuz |
+| 4 | CM 4 · Les loyers | TD 2 · Le tabac |
+| 5 | CM 5 · Les ZFE | TD 3 · Les prix bloqués |
+| 6 | CM 6 · D'où vient l'argent ? | TD 4 · **Contrôle continu 1** |
+| 7 | CM 7 · La BCE | TD 5 · Les ZFE |
+| 8 | CM 8 · La Grèce | TD 6 · Monnaie et taux, correction du CC 1 |
+| 9 | CM 9 · Les droits de douane | TD 7 · La Grèce |
+| 10 | CM 10 · Le climat (ouverture) | TD 8 · **Contrôle continu 2** |
+
+## Évaluation
+
+| Épreuve | Quand | Porte sur |
+|---|---|---|
+| Contrôle continu 1 | TD 4 | CM 1 à 4 et TD 1 à 3 |
+| Contrôle continu 2 | TD 8 | CM 5 à 9 et TD 5 à 7 |
+
+Il n'y a pas d'examen final. La séance 10, consacrée au climat, est une séance d'ouverture : elle rassemble les outils du semestre et n'est pas évaluée.
+
+::: {.wp-avenir}
+Les coefficients des deux contrôles et la règle sur la calculatrice seront précisés ici.
+:::

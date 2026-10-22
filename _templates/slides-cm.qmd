@@ -1,0 +1,43 @@
+---
+title: "La crise d'Ormuz : pourquoi les carburants ont-ils flambé ?"
+subtitle: "CM 1 · Partie I · Marchés, prix et régulations"
+description: "Choc d'offre, coût marginal des producteurs, demande peu élastique à court terme."
+cm: 1
+footer: "CM 1 · Ormuz"
+title-slide-attributes:
+  data-kicker: "Introduction à l'économie 2 · CM 1"
+---
+
+```{r}
+#| include: false
+source(here::here("R/theme_cours.R"))
+source(here::here("R/cmN.R"))   # même fichier que la page de cours
+```
+
+## Le prix de l'essence a bondi en quelques jours
+
+Le fait, une phrase, sa source.
+
+## Rappel : le prix d'équilibre égalise offre et demande
+
+::: {.rappel}
+Aujourd'hui : ce qui fait bouger les courbes, et de combien.
+:::
+
+## Un choc d'offre déplace la courbe, il ne glisse pas dessus
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4.6
+graphe_offre_demande(choc_offre = 2, base_size = 24)
+```
+
+## Ce qu'il faut retenir
+
+::: {.retenir}
+- Un point par ligne, une phrase chacun.
+:::
+
+::: {.notes}
+Notes de l'enseignant : minutage, question à poser à l'amphi.
+:::

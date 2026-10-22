@@ -1,0 +1,40 @@
+---
+title: "TD 1 · Ormuz et le prix des carburants"
+description: "CM 1"
+seance: 1
+---
+
+::: {.wp-entete}
+Séance 1 sur 8
+
+Durée : 2 h
+
+Porte sur : CM 1
+:::
+
+## Objectifs
+
+- Deux ou trois savoir-faire visés, formulés avec un verbe (calculer, expliquer, argumenter).
+
+## À préparer avant la séance
+
+Lire les documents 1 à 3 et répondre aux questions de compréhension.
+
+::: {.wp-document data-label="Document 1"}
+Extrait court (une demi-page au plus), ou tableau, ou graphique.
+
+[Source : média, « titre », date.]{.wp-source}
+:::
+
+## Questions sur les documents
+
+1. Compréhension : repérer une information.
+2. Mobilisation : relier le document à une notion du cours.
+3. Argumentation : discuter en quelques lignes.
+
+## Exercice
+
+Un exercice chiffré, nombres ronds, qui utilise les outils du CM.
+
+1. …
+2. …

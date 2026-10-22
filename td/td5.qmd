@@ -1,0 +1,144 @@
+---
+title: "TD 5 · Les ZFE et les externalités"
+description: "CM 5"
+seance: 5
+---
+
+::: {.wp-entete}
+Séance 5 sur 8
+
+Durée : 2 h
+
+Porte sur : CM 5
+:::
+
+## Objectifs
+
+- **Calculer** le coût marginal social, la quantité de marché et la quantité optimale, la perte sèche, puis ce que chaque instrument (taxe, norme, subvention) fait payer, et à qui.
+- **Mesurer** l'effet propre d'une politique par la méthode des doubles différences, et l'exprimer en points de pourcentage.
+- **Argumenter** sur la question « qui doit payer la transition automobile ? » en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+
+## À préparer avant la séance
+
+- Relire la page du [CM 5](../cours/cm5.qmd), en particulier les définitions et les trois exemples chiffrés.
+- Lire les documents 1 à 4 et répondre par écrit aux questions 1 à 6. La question 7 et l'exercice se traitent en séance ; la question 8 se prépare en plan en séance et se rédige après la séance.
+- Tous les calculs du TD sont faisables à la main, en nombres ronds.
+
+::: {.methode}
+La question 8 demande un court paragraphe argumenté. La démarche (définir les termes, annoncer l'idée, l'appuyer sur un mécanisme et un exemple, conclure) est décrite dans la fiche [La dissertation économique](../methodo/dissertation.qmd) de la rubrique Méthodo.
+:::
+
+## Les documents
+
+::: {.wp-document data-label="Document 1"}
+**Les ZFE ont accéléré un mouvement déjà engagé**
+
+Variation du nombre de voitures des intercommunalités à ZFE, de trois ans avant à deux ans après la ZFE.
+
+| Vignette Crit'Air | Variation observée | Estimée sans ZFE | Effet propre de la ZFE |
+|---|---|---|---|
+| Crit'Air 1 et électriques | +88,4 % | +82,6 % | +5,8 points |
+| Crit'Air 2 | −4,3 % | +2,8 % | −7,1 points |
+| Crit'Air 3 | −34,5 % | −30,0 % | −4,5 points |
+| Crit'Air 4 | −53,6 % | −48,1 % | −5,5 points |
+| Crit'Air 5 et non classées | −64,1 % | −62,0 % | non significatif |
+
+L'Insee compare les neuf intercommunalités qui ont mis en place une ZFE pour les voitures jusqu'en 2023 (hors Grand Paris) à 26 intercommunalités « de taille similaire » sans ZFE. « Non significatif » : l'Insee ne peut pas affirmer que la ZFE y soit pour quelque chose.
+
+Sur la même période, les émissions d'oxydes d'azote des voitures baissent de 38,9 % ; sans ZFE, elles auraient baissé de 34,3 % (champ : six de ces neuf ZFE). Mais deux ans après, « les distances parcourues et le nombre de déplacements domicile-travail en voiture ne diminuent pas significativement ».
+
+[Source : Insee, J. Garson, C. Malgouyres, M. Tô, C. Trevien, « Les ZFE renforcent le verdissement du parc automobile et contribuent au recul de ses émissions polluantes », *Insee Analyses* n° 124, 27/08/2026, fig. 3 et 4, <https://www.insee.fr/fr/statistiques/9031856>. Mise en forme : enseignant ; les guillemets signalent des extraits.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 2"}
+**Les ménages modestes, perdants des ZFE**
+
+Pour les partisans de leur suppression, la mesure est « socialement injuste » : en restreignant la circulation des véhicules les plus polluants, elle pèse surtout sur les ménages qui n'ont pas les moyens de changer de voiture. Et l'effet propre sur les émissions n'est que de quelques points (document 1).
+
+Charlotte Liotta, chercheuse, a calculé ce que ferait une ZFE interdisant les vignettes Crit'Air 3 à 5 dans huit villes françaises. La baisse du nombre d'emplois accessibles peut « atteindre plus de 20 % en moyenne pour certaines catégories socio-professionnelles », dans quatre de ces villes. « Les plus impactés sont les employés et les ouvriers », dans six villes sur huit, car « les plus pauvres possèdent des véhicules plus polluants ».
+
+Les gains de santé vont aux habitants de la zone, qui ne sont pas toujours les mêmes ménages : « à Paris, par exemple, la ZFE bénéficie surtout aux populations les plus riches » ; « à Bruxelles, au contraire, ce sont les habitants les plus modestes qui bénéficient le plus de la ZFE ».
+
+L'autrice ne demande pas la suppression des ZFE. Selon elle, les exemptions « pourraient être modifiées pour prendre en compte le revenu des habitants », dans le cadre d'« un ensemble cohérent de politiques publiques, centrées sur la réduction des inégalités ».
+
+[Source : texte rédigé par l'enseignant. Premier paragraphe d'après « Suppression des ZFE : une mesure jugée injuste mais vertueuse pour la santé », *France 24*, vidéo, 29/05/2025, <https://www.youtube.com/watch?v=7OczPMFm2xk>, et le document 1. Suite d'après C. Liotta (Universitat Autònoma de Barcelona), « Les zones à faibles émissions sont-elles inéquitables ? », *The Conversation*, 27/11/2024, mis à jour le 28/03/2025, <https://theconversation.com/les-zones-a-faibles-emissions-sont-elles-inequitables-243994> ; les guillemets signalent des extraits.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 3"}
+**Les ZFE sont inégalitaires : faut-il les supprimer ou les réformer ?**
+
+Alexis Poulhès, enseignant-chercheur en transports, l'admet : « En ciblant les véhicules les plus anciens, les ZFE sont effectivement inégalitaires. » Mais en Île-de-France, « les déplacements des 20 % les plus pauvres ne contribuent qu'à hauteur de 9 % de la pollution automobile » : les plus pauvres polluent peu et vont peu au centre. Selon lui, ces chiffres « soulèvent donc plutôt des enjeux d'aménagement du territoire et de conditions de logement dans les centres ».
+
+Supprimer les ZFE ne réglerait donc pas ces inégalités : « Enterrer encore une fois les questions d'inégalités plutôt que d'améliorer le système de mobilité autour des ZFE ne fera que renforcer le ressentiment des Français. » Il défend plutôt des restrictions qui touchent toutes les voitures : « Ce type de mesures qui restreint tous les véhicules est non inégalitaire socialement. »
+
+[Source : texte rédigé par l'enseignant d'après A. Poulhès (ENPC), « Faut-il supprimer les zones à faibles émissions au nom de la justice sociale ? », *The Conversation*, 23/06/2025, <https://theconversation.com/faut-il-supprimer-les-zones-a-faibles-emissions-au-nom-de-la-justice-sociale-259516> ; les guillemets signalent des extraits.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 4"}
+**Le leasing social : une aide pour passer à l'électrique**
+
+En 2025, le leasing social propose 50 000 aides pour louer une voiture électrique à bas prix ; « l'aide peut atteindre jusqu'à 5 700 euros pour les ménages aux revenus très modestes ». Au 30 décembre 2025, environ 49 600 aides sont utilisées, selon le ministère de la Transition écologique. L'enveloppe, 350 millions d'euros, est « financée par les certificats d'économies d'énergie (CEE) ». Ce n'est donc pas l'impôt qui finance l'aide. Les CEE sont une obligation imposée aux vendeurs d'énergie, carburants compris, qui peuvent en répercuter le coût sur leurs prix.
+
+[Source : texte rédigé par l'enseignant d'après « Voitures électriques : à quelques heures de la fin 2025, le leasing social n'a pas fait le plein », *L'Info durable* (avec l'AFP), 30/12/2025, <https://www.linfodurable.fr/voitures-electriques-quelques-heures-de-la-fin-2025-le-leasing-social-na-pas-fait-le-plein-53945> ; les guillemets signalent des extraits ; deux dernières phrases : enseignant.]{.wp-source}
+:::
+
+## Questions sur les documents
+
+### Comprendre les documents
+
+1. **(Document 1)** Pour les voitures Crit'Air 3, relevez la variation observée et la variation estimée sans ZFE. Que signifie « −4,5 points » ? La ZFE explique-t-elle plus ou moins du quart de la baisse observée ?
+2. **(Document 1)** Pour quelle vignette la ZFE change-t-elle le sens de l'évolution ? Pourquoi ne peut-on rien conclure pour les Crit'Air 5 et non classées, alors que leur nombre baisse de 64,1 % ?
+3. **(Documents 2 et 3)** Selon le document 2, quels ménages perdent le plus avec une ZFE, et pourquoi ? Selon le document 3, quelle part de la pollution automobile les 20 % les plus pauvres causent-ils en Île-de-France ? Les deux auteurs se contredisent-ils sur ces faits ?
+
+### Mobiliser le cours
+
+4. **(Document 1)** Un article affirme : « Grâce aux ZFE, les émissions d'oxydes d'azote des voitures ont baissé de 38,9 %. » Expliquez l'erreur avec les notions de contrefactuel et d'effet propre, puis calculez l'effet propre par la méthode des doubles différences. Pourquoi l'Insee compare-t-il les ZFE à des intercommunalités « de taille similaire » plutôt qu'à n'importe quelle ville ?
+5. Le marché des trajets.
+   a. **(Cours)** Pourquoi, sans intervention, les automobilistes roulent-ils trop du point de vue de la société ? Tracez le graphique du marché des trajets avec la demande D, le coût marginal Cm et le coût marginal social Cms ; placez Q\*, Q° et la perte sèche.
+   b. **(Document 1)** D'après le document 1, la ZFE agit-elle sur le nombre de kilomètres parcourus ou sur la voiture utilisée ? Qu'aurait changé une taxe par kilomètre pollué ?
+6. **(Documents 1 et 4)** Le leasing social est-il une taxe, une norme ou une subvention ? Qui le paie, au départ puis au final ? Le document 1 montre que le parc verdit fortement même sans ZFE. Pourquoi une aide à la voiture électrique risque-t-elle alors un effet d'aubaine ? Le document 1 permet-il de le mesurer ?
+
+### Argumenter
+
+7. **(Documents 2 et 3)** Trois positions s'opposent : supprimer les ZFE (premier paragraphe du document 2), les corriger (Liotta), les garder en restreignant toutes les voitures (Poulhès). Sur quoi s'accordent-elles, et sur quoi divergent-elles ? Montrez que le désaccord porte sur un jugement, et dites ce que la réponse de Coase (« qui détient le droit ? ») apporte au débat.
+8. **(Ensemble des documents)** « Qui doit payer la transition automobile : le pollueur, le contribuable ou le riverain ? » En une quinzaine de lignes, montrez d'abord ce que l'analyse du cours établit sur ce que chaque instrument fait payer, et à qui, puis ce qui relève d'un jugement.
+
+## Exercice
+
+Les trois parties portent sur des situations **fictives**, en nombres ronds. Tous les calculs se font à la main.
+
+### A. Taxe, norme ou subvention : qui paie ?
+
+Dans une agglomération fictive, Q est le nombre de trajets quotidiens en voiture ancienne, en milliers, et P est en euros par trajet. Un trajet vaut à son auteur P = 10 − Q (la demande D). Le coût privé d'un trajet est constant : Cm = 2 €. La pollution impose aux riverains un dommage marginal constant : Dm = 3 € par trajet.
+
+1. Quel est l'équilibre de marché Q\* ? Calculez le coût marginal social Cms, puis la quantité optimale Q°. Combien de trajets sont de trop ?
+2. Calculez la perte sèche, en euros par jour. Représentez D, Cm et Cms et repérez le triangle de perte sèche.
+3. La ville instaure une taxe pigouvienne.
+   a. Quel est son montant t ? Combien de trajets reste-t-il ? Quelle est la recette de la taxe par jour ?
+   b. Calculez la pollution évitée et le surplus que perdent les conducteurs sur les trajets abandonnés. Quel est le gain pour la société ? Comparez-le à la perte sèche.
+4. À la place, la ville verse 3 € par trajet évité. Combien de trajets reste-t-il ? Combien cette subvention coûte-t-elle au contribuable par jour ?
+5. À la place, la ville crée une ZFE. Elle écarte bien 3 000 trajets, mais ce sont des trajets qui valent en moyenne 7 € à leurs auteurs, par exemple ceux de salariés sans transport en commun. Combien perdent les conducteurs écartés ? Quel est le bilan pour la société ?
+6. Recopiez et complétez le tableau (montants en euros par jour). Que retenez-vous ?
+
+| Instrument | Trajets par jour | Qui paie, et combien ? | Budget public |
+|---|---|---|---|
+| Rien | | | |
+| Taxe | | | |
+| Norme bien ciblée (elle écarte les 3 000 trajets les moins utiles) | | | |
+| ZFE mal ciblée (question 5) | | | |
+| Subvention | | | |
+
+### B. Mesurer l'effet propre d'une ZFE
+
+Chiffres fictifs. Dans les villes qui créent une ZFE, les émissions des voitures passent d'un indice 100 à un indice 60 en cinq ans. Dans des villes témoins comparables, sans ZFE, elles passent de 100 à 70.
+
+1. Calculez la variation en pourcentage des émissions dans chaque groupe.
+2. Quel est l'effet propre de la ZFE, en points de pourcentage ? Quelle part de la baisse observée la ZFE explique-t-elle ?
+3. Un élu compare plutôt les villes à ZFE à une grande métropole très différente, où les émissions n'ont baissé que de 10 %. Il annonce un effet propre de 30 points. Pourquoi ce chiffre est-il douteux ?
+
+### C. Pour aller plus loin, si le temps le permet
+
+On reprend Cm = 2 € et Dm = 3 €. La ville ignore en réalité la demande : elle est basse (P = 9 − Q) ou haute (P = 11 − Q), avec une chance sur deux. Elle hésite entre la taxe de 3 € et une norme de 5 000 trajets.
+
+1. Combien de trajets fait-on avec la taxe, selon la demande ? Que vaut le dernier trajet permis par la norme, selon la demande ?
+2. Le dommage marginal est le même pour chaque trajet. Quel instrument tombe juste ? Et si dépasser 5 000 trajets entraînait une lourde sanction ?

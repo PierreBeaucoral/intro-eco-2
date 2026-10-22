@@ -1,0 +1,20 @@
+# Réglages communs aux diaporamas de CM (revealjs)
+author:
+  - name: "Pierre Beaucoral"
+    url: "https://pierrebeaucoral.github.io/"
+    affiliation: "ATER en économie, Université Clermont Auvergne"
+format:
+  revealjs:
+    theme: [default, ../assets/theme-light.scss, ../assets/components.scss, ../assets/slides.scss]
+    include-in-header: ../assets/fonts.html
+    width: 1280
+    height: 720
+    margin: 0.06
+    center: false
+    transition: none
+    slide-number: c/t
+    hash: true
+knitr:
+  opts_chunk:
+    dev: ragg_png
+    dpi: 200

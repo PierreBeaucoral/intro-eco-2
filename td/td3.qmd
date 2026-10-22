@@ -1,0 +1,160 @@
+---
+title: "TD 3 · Les prix bloqués : Ozempic et loyers"
+description: "CM 3 et 4"
+seance: 3
+---
+
+::: {.wp-entete}
+Séance 3 sur 8
+
+Durée : 2 h
+
+Porte sur : CM 3 et 4
+:::
+
+## Objectifs
+
+- **Expliquer** pourquoi un prix bloqué crée une pénurie quand la demande se déplace, et pourquoi il faut alors répartir le bien autrement que par le prix.
+- **Calculer** une pénurie, un transfert et une perte sèche à partir d'un tableau, à court et à long terme.
+- **Argumenter** sur l'encadrement des loyers en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+
+## À préparer avant la séance
+
+- Relire les pages du [CM 3](../cours/cm3.qmd) et du [CM 4](../cours/cm4.qmd), en particulier les définitions et les exemples chiffrés.
+- Lire les documents 1 à 4 et répondre par écrit aux questions 1 à 7. La question 8 et l'exercice se traitent en séance ; la question 9 se prépare en plan détaillé en séance, puis se rédige à la maison.
+- Tous les calculs du TD sont faisables à la main, en nombres ronds.
+
+::: {.methode}
+La question 9 demande un court paragraphe argumenté qui sépare le positif du normatif. La démarche (définir les termes, annoncer l'idée, l'appuyer sur un mécanisme et un exemple, conclure) est décrite dans la fiche [La dissertation économique](../methodo/dissertation.qmd) de la rubrique Méthodo.
+:::
+
+## Les documents
+
+::: {.wp-document data-label="Document 1"}
+**Ozempic : une pénurie sans hausse de prix**
+
+En France, le prix d'un médicament remboursé est « négocié avec l'industriel », puis « fixé par le CEPS », le Comité économique des produits de santé. Une boîte d'Ozempic 1 mg coûte 76,58 € hors honoraire du pharmacien, et l'Assurance maladie en rembourse 30 % ; un seul laboratoire, Novo Nordisk, le fabrique.
+
+Pour le ministère de la Santé, les tensions viennent d'« une augmentation importante de la demande mondiale », que les industriels ne peuvent pas suivre « dans un temps restreint » ; des personnes non diabétiques le demandent pour maigrir. Le député qui l'interrogeait, surtout sur le Trulicity, de la même famille, y voyait un médicament « vendu en France à un prix d'achat très bas ».
+
+L'Agence nationale de sécurité du médicament (ANSM) organise la répartition :
+
+- **décembre 2023** : ne plus commencer de traitement par Ozempic, Victoza ou Trulicity ;
+- **14 mars 2024** : nouveaux traitements réservés aux diabétiques de type 2 malades des artères ;
+- **septembre 2024** : reprise progressive, sous « distribution fractionnée (contingentement quantitatif) » ; dès le 1^er^ février 2025, le remboursement exige un formulaire du médecin ;
+- **5 juin 2025** : « les initiations de traitement peuvent reprendre pour tous les patients ».
+
+[Source : texte rédigé par l'enseignant d'après ANSM, « Analogues du GLP-1 et diabète de type 2 », mis à jour le 21/04/2026, <https://ansm.sante.fr/actualites/analogues-du-glp-1-et-diabete-de-type-2-reprise-progressive-des-initiations-de-traitement-pour-ozempic-et-victoza> ; Base de données publique des médicaments, fiche OZEMPIC 1 mg, consultée le 21/10/2026, <https://base-donnees-publique.medicaments.gouv.fr/medicament/63210923/extrait> ; autres sources (Assemblée nationale, réponse du ministère au JO du 21/05/2024 ; *The Conversation* ; *Vidal*) : voir le corrigé.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 2"}
+**Boîtes d'analogues du GLP-1 remboursées en France, 2020-2024**
+
+| | 2020 | 2021 | 2022 | 2023 | 2024 |
+|---|---|---|---|---|---|
+| Famille, millions de boîtes | 4,29 | 5,12 | 6,25 | 7,48 | 7,49 |
+| dont Ozempic | 0,75 | 1,39 | 2,03 | 2,92 | 3,64 |
+| Prix moyen Ozempic (€) | 80 | 80 | 81 | 79 | 78 |
+
+Boîtes délivrées en pharmacie de ville et remboursées, tous prescripteurs ; les boîtes non remboursées n'y figurent pas. La famille comprend notamment Ozempic, Trulicity et Victoza. Le prix moyen est la base de remboursement (le tarif sur lequel l'Assurance maladie calcule son remboursement) divisée par le nombre de boîtes, toutes doses confondues, arrondi à l'euro. Une boîte d'Ozempic 1 mg correspond à environ un mois de traitement.
+
+[Source : Assurance Maladie, « Medic'AM : médicaments remboursés par l'Assurance Maladie, par type de prescripteur (données interrégimes) », data.gouv.fr, fichiers 2020 à 2024 téléchargés le 21/10/2026, <https://www.data.gouv.fr/datasets/536999d3a3a729239d20533a> ; totaux et prix moyens calculés par l'enseignant ; durée de traitement : HAS, avis de la Commission de la transparence sur OZEMPIC, 27/08/2025, <https://www.has-sante.fr/upload/docs/evamed/CT-21501_OZEMPIC_PIS_INS_AvisDef_CT21501.pdf>.]{.wp-source}
+:::
+
+{{< pagebreak >}}
+
+::: {.wp-document data-label="Document 3"}
+**Encadrement des loyers : ce que mesure l'évaluation de mai 2026**
+
+Chaque année, le préfet fixe un loyer de référence par mètre carré, égal au loyer médian des logements comparables (même secteur, même nombre de pièces, même époque de construction, vide ou meublé). Le loyer d'un nouveau bail ne peut pas dépasser ce loyer de référence **majoré de 20 %**. Sur environ 270 000 baux signés entre 2020 et 2024, plus d'un tiers dépassent pourtant le plafond : 35,6 % à Paris, 43,5 % à Bordeaux.
+
+La mission compare l'évolution des loyers dans les communes encadrées et dans des communes semblables mais non encadrées, avant et après. Hors Île-de-France, les loyers des annonces baissent de 2 à 3 % par rapport aux communes témoins, et d'environ 5 % après deux ans ; de 3 à 4 % en Seine-Saint-Denis. À Paris, une autre équipe estime l'effet à −5,2 % entre juillet 2019 et juin 2024.
+
+Les transferts vers les locataires atteignent environ 700 millions d'euros par an, payés pour deux tiers par les bailleurs et pour un tiers par l'État : « pour un euro de baisse de loyer, environ un tiers est financé par l'État », car un loyer plus bas réduit l'impôt du bailleur. Hors Île-de-France, « pour deux euros distribués aux 10 % les plus modestes, un euro est redistribué aux 10 % les plus aisés ». À Paris, une part importante des gains va à des locataires aisés ; en Seine-Saint-Denis, surtout à des ménages modestes.
+
+Pour comparaison, en 2023, la moitié des locataires du secteur libre qui font partie des 25 % de ménages les plus modestes consacrent plus de 42,3 % de leur revenu à leur logement, aides au logement déduites, contre 21,6 % pour ceux des 25 % les plus aisés.
+
+[Source : texte rédigé par l'enseignant d'après G. Chapelle et G. Fack, *L'encadrement des loyers : effets économiques et redistributifs. Rapport de la mission d'évaluation*, mai 2026, § 1.1.1, 2.2.4, 3.4, 4.4.1, 4.4.3 et 5.1 (les citations en sont extraites), <https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf> ; dernier paragraphe : Insee, *France, portrait social*, édition 2025, fiche « Logement », 18/11/2025 (enquête SRCV 2024), <https://www.insee.fr/fr/statistiques/8612550>.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 4"}
+**Un même rapport, deux lectures**
+
+Hors Île-de-France, le nombre de nouvelles annonces de location, rapporté au nombre de logements, baisse d'environ 8 % dans les communes encadrées ; à Paris, il évolue en sens inverse. Selon la mission d'évaluation, cette baisse peut venir d'une offre réduite, de locataires qui restent plus longtemps dans leur logement ou d'annonces passées par d'autres canaux : les données ne permettent pas de trancher.
+
+La rapporteure de la commission des affaires économiques du Sénat en tire une première lecture : « Les conditions pour pérenniser cette expérimentation ne sont pas réunies : aucune étude empirique n'a permis d'écarter l'incidence négative sur l'offre locative de ce dispositif […] ». La Ville de Paris, qui applique l'encadrement, retient au contraire « une absence d'effet de l'encadrement des loyers sur l'offre locative parisienne ».
+
+L'expérimentation, créée par la loi Élan de 2018 et prolongée par la loi 3DS de 2022, arrive à son terme fin novembre 2026. Le 11 décembre 2025, l'Assemblée nationale a voté une proposition de loi qui la pérennise et l'étend ; le 14 octobre 2026, la commission du Sénat l'a réduite à une prolongation de deux ans dans les mêmes territoires. Le Sénat a adopté le texte en séance le 21 octobre 2026 ; il n'est pas encore définitif.
+
+[Source : texte rédigé par l'enseignant d'après G. Chapelle et G. Fack, rapport cité au document 3, § 3.5 ; MoneyVox avec l'AFP, « Encadrement des loyers : le Sénat opte pour une prolongation de l'expérimentation », 14/10/2026, <https://www.moneyvox.fr/immobilier/actualites/110804/encadrement-des-loyers-le-senat-opte-pour-une-prolongation-de-experimentation> ; Ville de Paris, « Encadrement des loyers : les résultats sont là ! », mis à jour le 11/09/2026 (source partie prenante), <https://www.paris.fr/pages/encadrement-des-loyers-les-resultats-sont-la-31465> ; LCP, « Encadrement des loyers : l'Assemblée vote en faveur d'une pérennisation du dispositif », 11/12/2025, <https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-vote-en-faveur-d-une-perennisation-du-dispositif> ; Sénat, « Proposition de loi pour retrouver la confiance et l'équilibre dans les rapports locatifs », *La loi en clair*, octobre 2026, <https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-retrouver-la-confiance-et-lequilibre-dans-les-rapports-locatifs.html>. État du droit au 21/10/2026.]{.wp-source}
+:::
+
+## Questions sur les documents
+
+### Comprendre les documents
+
+1. **(Document 1)** Qui fixe le prix d'Ozempic ? A-t-il augmenté avec la demande ? Relevez deux règles que l'ANSM a utilisées pour répartir les boîtes et nommez-les avec le vocabulaire du cours. Le formulaire de février 2025 agit-il sur le prix, sur l'offre ou sur la demande ?
+2. **(Document 2)** Calculez, à un point près, la variation en pourcentage du nombre total de boîtes entre 2022 et 2023, puis entre 2023 et 2024. Par combien le nombre de boîtes d'Ozempic est-il environ multiplié de 2020 à 2024 ? Comment évolue son prix moyen sur la même période ?
+3. **(Document 3)** Comment le plafond d'un loyer est-il fixé ? De combien l'encadrement a-t-il fait baisser les loyers, et à quoi la mission compare-t-elle les communes encadrées pour le savoir ?
+
+### Mobiliser le cours
+
+4. **(Documents 1 et 2)** Les tensions que décrit le ministère viennent-elles d'un choc d'offre ou d'un choc de demande ? Tracez le graphique du marché d'Ozempic : la courbe qui se déplace, le prix fixé P\*, l'équilibre initial E et la pénurie au prix fixé. Placez aussi l'équilibre E′ qu'atteindrait un prix libre. Le document 2 montre-t-il que le prix a servi à répartir le médicament ?
+5. **(Document 2)** Un camarade affirme : « En 2024, le nombre total de boîtes n'augmente plus que de 0,1 % : la demande a donc cessé d'augmenter. » Discutez ce raisonnement en quelques lignes.
+6. **(Document 1)** Un député juge « très bas » le prix français de ces antidiabétiques. Si l'État avait relevé le prix d'Ozempic en 2023, la pénurie aurait-elle disparu rapidement ? Appuyez-vous sur la notion d'offre rigide et sur le fait qu'un seul laboratoire sert le monde entier.
+7. **(Document 3)**
+   a. Le plafond français est-il contraignant pour tous les logements ? Expliquez pourquoi les effets mesurés sur les loyers sont modestes.
+   b. Qui paie la baisse des loyers ? L'encadrement vise-t-il en priorité les locataires pour qui le logement pèse le plus lourd dans le budget ?
+
+### Argumenter
+
+8. **(Document 4)** Que constate le rapport sur l'offre de logements ? Montrez que la rapporteure du Sénat et la Ville de Paris retiennent chacune une moitié de ce constat. Leur désaccord porte-t-il sur un fait ou sur un jugement ?
+9. **(Ensemble des documents)** « Ozempic et les loyers le prouvent : bloquer un prix crée une pénurie, il faut donc laisser les prix libres. » En une quinzaine de lignes (plan détaillé en séance, rédaction à la maison), montrez d'abord ce que l'analyse du cours établit dans chacun des deux cas, puis ce qui relève d'un jugement.
+
+## Exercice
+
+Les deux parties portent sur des marchés **fictifs**, en nombres ronds. Tous les calculs se font à la main.
+
+### A. Un médicament à prix fixé
+
+Sur le marché fictif d'un médicament, Q est en milliers de boîtes par mois et P en euros par boîte. L'État a fixé le prix à 50 €.
+
+| Prix P (€ par boîte) | 50 | 100 | 150 | 200 | 250 |
+|---|---|---|---|---|---|
+| Quantité demandée avant le choc (D) | 80 | 76 | 72 | 68 | 64 |
+| Quantité demandée après le choc (D′) | 120 | 116 | 112 | 108 | 104 |
+| Quantité offerte à court terme (O) | 80 | 86 | 92 | 98 | 104 |
+
+1. Quel est l'équilibre initial (P\*, Q\*) ? Calculez l'élasticité-prix de la demande e entre 50 € et 100 €, avant le choc. Commentez.
+2. De combien la demande augmente-t-elle à chaque prix ? Quelle courbe se déplace ? Au prix fixé de 50 €, calculez la pénurie, en milliers de boîtes puis en pourcentage des demandes.
+3. Supposez que le prix devienne libre, à court terme.
+   a. Quel est le nouvel équilibre ? Calculez la variation en pourcentage du prix et de la quantité.
+   b. Sur les 40 000 boîtes qui manquaient, combien sont produites en plus ? Combien de demandes disparaissent, faute de pouvoir payer ?
+   c. Calculez la recette mensuelle du vendeur au prix fixé, puis au prix libre. Comment s'appelle le gain dû au seul manque ?
+4. Le prix reste fixé à 50 € : il y a 80 000 boîtes pour 120 000 demandes, une boîte par patient. Les demandes se répartissent ainsi (en milliers) : patients déjà traités, 60 ; nouveaux patients avec une complication grave, 20 ; autres nouveaux patients, 20 ; demandes hors indication (pour maigrir), 20.
+   a. *File d'attente* : les patients arrivent au hasard. Quelle est la chance d'être servi ? Combien de patients déjà traités voient leur traitement interrompu ? Combien de boîtes vont aux demandes hors indication ?
+   b. *Critère médical* : on sert d'abord les patients déjà traités, puis les nouveaux patients avec une complication grave. Qui est servi, qui ne l'est pas ?
+   c. Le critère médical a-t-il réduit la pénurie ?
+5. Le laboratoire ouvre une nouvelle usine : à chaque prix, la quantité offerte augmente de 40. Comment note-t-on ce changement ? Que devient la pénurie au prix fixé de 50 € ?
+
+### B. Un plafond de loyer
+
+Dans une ville fictive, Q est en milliers de logements et P est le loyer mensuel, en euros. L'offre de long terme est plus élastique que l'offre de court terme.
+
+| Loyer P (€ par mois) | 400 | 500 | 600 | 700 |
+|---|---|---|---|---|
+| Quantité demandée | 80 | 70 | 60 | 50 |
+| Quantité offerte à court terme | 56 | 58 | 60 | 62 |
+| Quantité offerte à long terme | 40 | 50 | 60 | 70 |
+
+La loi fixe un plafond Pmax = 500 €.
+
+1. Quel est l'équilibre (P\*, Q\*) ? Le plafond est-il contraignant ?
+2. *À long terme.* Au loyer de 500 €, combien de logements sont demandés, offerts, loués ? Quelle est la pénurie ? Pourquoi la quantité louée est-elle la quantité offerte ?
+3. *À long terme, toujours.*
+   a. D'après la ligne de la demande, combien le 50 000^e^ ménage logé était-il prêt à payer ?
+   b. Calculez le transfert des bailleurs vers les locataires logés, puis la perte sèche, en euros par mois.
+   c. Représentez la demande, l'offre de long terme et le plafond sur un graphique, et hachurez le transfert et la perte sèche.
+4. *À court terme.* Au loyer de 500 €, combien de logements sont offerts ? Quelle est la pénurie ? Sur la demande, chaque millier de logements en moins fait monter de 10 € le loyer que le dernier ménage logé est prêt à payer : combien le 58 000^e^ ménage était-il prêt à payer ? Calculez la perte sèche et comparez-la à celle de la question 3.
+5. Le plafond est finalement fixé à 650 €. Quels sont ses effets ? Quel lien faites-vous avec le document 3 ?
+6. *Pour aller plus loin (non noté).* Le SMIC est un prix plancher. Tracez un marché du travail avec un plancher Pmin au-dessus de P\* et montrez l'excès d'offre. Pourquoi un monopsone change-t-il la conclusion ?

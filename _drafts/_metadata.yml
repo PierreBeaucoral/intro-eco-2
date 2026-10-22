@@ -1,0 +1,22 @@
+# Corrigés et fiches enseignant (jamais publiés) : même sortie PDF que td/ (voir td/_metadata.yml)
+body-classes: wp-td wp-corrige
+execute:
+  echo: false
+  warning: false
+  message: false
+knitr:
+  opts_chunk:
+    dev: ragg_png
+    dpi: 150
+    fig-align: center
+format:
+  html:
+    format-links:   # « html » seul masque les liens par défaut (« Typst »)
+      - html
+      - format: typst
+        text: "Télécharger le PDF"
+        icon: file-pdf
+  typst:
+    template-partials: [../assets/typst/typst-template.typ, ../assets/typst/typst-show.typ]
+    filters: [../assets/typst/wp-typst.lua]
+    font-paths: [../assets/fonts]

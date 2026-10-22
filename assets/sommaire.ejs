@@ -1,0 +1,18 @@
+<% let partie = null; %>
+<% for (const item of items) { %>
+<% if (item.partie !== partie) { %>
+<% if (partie !== null) { %></ol><% } %>
+<% partie = item.partie; %>
+<p class="wp-partie"><%= partie %></p>
+<ol class="wp-sommaire">
+<% } %>
+<li <%= metadataAttrs(item) %>>
+<span class="wp-num"><%= item.cm %></span>
+<div>
+<h3><a href="<%- item.path %>"><%= item.title %></a></h3>
+<p><%= item.description %></p>
+<span class="wp-liens"><a href="<%- item.path %>">Cours</a><a href="<%- item.path.replace('cours/', 'slides/') %>">Diapos</a></span>
+</div>
+</li>
+<% } %>
+</ol>

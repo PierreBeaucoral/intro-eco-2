@@ -1,0 +1,149 @@
+---
+title: "TD 7 · La Grèce et le multiplicateur"
+description: "CM 8"
+seance: 7
+---
+
+::: {.wp-entete}
+Séance 7 sur 8
+
+Durée : 2 h
+
+Porte sur : CM 8
+:::
+
+## Objectifs
+
+- **Calculer** l'effet d'une variation de la dépense publique sur le PIB avec le multiplicateur, et l'effet d'une coupe sur le ratio dette / PIB.
+- **Expliquer** pourquoi le ratio dette / PIB de la Grèce a monté de 2010 à 2013, avec la règle k × d ; comprendre, avec l'effet boule de neige, pourquoi il peut ensuite baisser.
+- **Argumenter** sur le bilan de l'austérité en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+
+## À préparer avant la séance
+
+- Relire la page du [CM 8](../cours/cm8.qmd), en particulier les définitions et les trois exemples chiffrés.
+- Lire les documents 1 à 4 et répondre par écrit aux questions 1 à 6. Les questions 7 et 8 et l'exercice se traitent en séance.
+- Tous les calculs du TD sont faisables à la main, en nombres ronds.
+
+::: {.methode}
+La question 8 demande un court paragraphe argumenté. La démarche (définir les termes, annoncer l'idée, l'appuyer sur un mécanisme et un exemple, conclure) est décrite dans la fiche [La dissertation économique](../methodo/dissertation.qmd) de la rubrique Méthodo.
+:::
+
+## Les documents
+
+::: {.wp-document data-label="Document 1"}
+**La Grèce en chiffres, avant, pendant et après la crise**
+
+| | Avant la crise | 2013 | 2025 |
+|---|---|---|---|
+| PIB réel (indice 100 en 2008) | 100 (2008) | 73 | 86 |
+| Taux de chômage, 15-74 ans (% des actifs) | 9,8 (2009) | 27,8 | 8,9 |
+| Taux de chômage, 15-24 ans (% des actifs) | 26,1 (2009) | 59,2 | 19,1 |
+
+| | 2010 | 2013 | 2018 | 2025 |
+|---|---|---|---|---|
+| Dette publique (% du PIB) | 147,8 | 180,4 | 189,0 | 145,4 |
+
+En 2013, le taux de chômage de la zone euro est de 12,2 %. En euros, la dette publique grecque passe d'environ 330 Md€ fin 2010 à environ 321 Md€ fin 2013 : en 2012, les obligations grecques détenues par des investisseurs privés, surtout des banques, ont été restructurées avec une décote de 53,5 %. Entre 2010 et 2013, le PIB en valeur (en euros courants) baisse de 20,3 %. La période des trois plans d'aide va de 2010 à 2018.
+
+[Source : Eurostat, jeux de données nama_10_gdp (PIB), une_rt_a (chômage) et gov_10dd_edpt1 (dette), séries téléchargées le 21/10/2026, <https://ec.europa.eu/eurostat/data/database> ; indice du PIB et dette en euros (ratio × PIB en valeur) calculés par l'enseignant. Décote : Mécanisme européen de stabilité, page « Greece », consultée le 21/10/2026, <https://www.esm.europa.eu/assistance/greece>.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 2"}
+**Les prévisions de 2010 ont sous-estimé le multiplicateur**
+
+Au printemps 2010, le FMI publie, pour 26 pays européens, une prévision de croissance et une prévision d'austérité. Deux économistes du FMI, Olivier Blanchard et Daniel Leigh, comparent ensuite la croissance réalisée en 2010 et 2011 à la croissance prévue. Résultat : plus un pays prévoyait une austérité forte, plus sa croissance a été inférieure aux prévisions. Pour chaque point de PIB d'austérité prévue en plus, le PIB a été inférieur d'environ 1 % à la prévision. Si les prévisions supposaient un multiplicateur d'environ 0,5, le vrai multiplicateur était de l'ordre de 1,5 au début de la crise.
+
+Pourquoi si élevé ? Les auteurs rappellent trois raisons. Les taux d'intérêt étaient déjà au plancher : la banque centrale ne pouvait pas les baisser pour compenser. Le système financier fonctionnait mal : ménages et entreprises dépensaient selon leur revenu du moment, sans pouvoir emprunter. Enfin, l'économie avait beaucoup de capacités de production inutilisées. Pour la Grèce s'ajoute un point : membre de la zone euro, elle ne pouvait pas dévaluer sa monnaie pour vendre moins cher à l'étranger.
+
+Les auteurs ajoutent qu'il n'existe pas de multiplicateur unique, valable partout et toujours, et que leurs résultats « n'impliquent pas que la consolidation budgétaire soit indésirable » : ils mesurent le coût de l'austérité à court terme, pas son bien-fondé.
+
+[Source : texte rédigé par l'enseignant d'après O. Blanchard et D. Leigh, « Growth Forecast Errors and Fiscal Multipliers », *American Economic Review*, 103(3), 117-120, 2013, <https://www.aeaweb.org/articles?id=10.1257/aer.103.3.117> ; version longue : NBER *Working Paper* n° 18779, février 2013, <https://www.nber.org/papers/w18779> ; citation traduite par l'enseignant.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 3"}
+**Le bilan vu par la DG Trésor, en 2025**
+
+« Entre 2010 et 2018, la Grèce a mis en œuvre trois plans d'ajustement, soutenue par des financements européens et du FMI, pour un montant total de 290 Md EUR. En contrepartie, les autorités ont dû mettre en œuvre des mesures d'économie et des réformes nombreuses et difficiles, pour remettre la dette publique sur un chemin viable et mettre en place les conditions d'une croissance durable. Sept ans après la fin du dernier plan, la Grèce fait partie des bons élèves de la zone euro et de l'UE en termes de croissance et de finances publiques. […]
+
+Entre 2018 et 2024, la croissance s'est élevée à 3,9 % en moyenne par an (hors récession de 2020 due à la crise sanitaire) […]. Toutefois, le PIB reste toujours légèrement inférieur par rapport à son niveau pré-crise de la dette. »
+
+À comparer : d'après Eurostat, de 2018 à 2024, le PIB réel augmente de 11 % au total, l'année 2020 comprise. En 2020, la crise sanitaire fait fortement reculer le PIB ; il rebondit en 2021.
+
+[Source : DG Trésor, service économique régional d'Athènes, « Où en est l'économie grecque, dix ans après le point culminant de la crise ? », 03/11/2025, <https://www.tresor.economie.gouv.fr/PagesInternationales/Pages/67796625-12c8-45e7-8872-6b274f92ad24/files/8ccbdff5-3afc-4274-a508-f6991b0c4db4> (extraits). Dernier paragraphe : Eurostat, nama_10_gdp, série téléchargée le 21/10/2026, calcul de l'enseignant.]{.wp-source}
+:::
+
+::: {.content-visible when-format="typst"}
+{{< pagebreak >}}
+:::
+
+::: {.wp-document data-label="Document 4"}
+**Qui a perdu ? Le chômage par groupe et la pauvreté**
+
+« Dix ans après le référendum sur le troisième plan d'austérité proposé par les créanciers de la Grèce, l'économie du pays va mieux, mais une grande partie des habitants sont encore dans une situation difficile. »
+
+| Taux de chômage (% des actifs) | 2013 | 2025 |
+|---|---|---|
+| Ensemble (15-74 ans) | 27,8 | 8,9 |
+| Jeunes (15-24 ans) | 59,2 | 19,1 |
+| Femmes | 31,7 | 11,2 |
+| Hommes | 24,8 | 7,0 |
+| Diplôme inférieur au lycée | 29,8 | 11,8 |
+| Diplôme du supérieur | 20,4 | 6,6 |
+| Attique (Athènes) | 28,7 | 8,1 |
+| Égée méridionale (îles touristiques) | 21,3 | 7,3 |
+| Macédoine-Occidentale (nord-ouest) | 31,6 | 15,3 |
+
+Sauf mention contraire, il s'agit des actifs de 15 à 74 ans. Les taux par diplôme viennent d'un autre tableau, dont le total diffère un peu (27,5 % en 2013).
+
+La part de la population en risque de pauvreté ou d'exclusion sociale passe de 28,1 % en 2008 à 36,0 % en 2014 (définition « Europe 2020 »). Elle vaut 27,5 % en 2025, selon une définition plus récente, qui ne se compare pas directement à l'ancienne.
+
+[Source : Eurostat, une_rt_a, lfsa_urgaed, lfst_r_lfu3rt (chômage), ilc_peps01 et ilc_peps01n (pauvreté), séries téléchargées le 21/10/2026, <https://ec.europa.eu/eurostat/data/database> ; citation : chapeau de M. Rafenberg (*Le Monde*), « Crise grecque de la dette : dix ans après le référendum sur l'austérité, la population reste traumatisée », *Le Temps*, 19/08/2025, <https://www.letemps.ch/articles/crise-grecque-de-la-dette-dix-ans-apres-le-referendum-sur-l-austerite-la-population-reste-traumatisee>.]{.wp-source}
+:::
+
+## Questions sur les documents
+
+### Comprendre les documents
+
+1. **(Document 1)** De combien, en pourcentage, le PIB réel a-t-il baissé entre 2008 et 2013 ? Entre 2008 et 2025 ? Le taux de chômage de 2013 représente environ combien de fois celui de 2009 ?
+2. **(Document 1)** Entre 2010 et 2013, la dette publique en euros a-t-elle augmenté ou baissé ? Et le ratio dette / PIB ? Calculez les deux variations (environ, en % pour la dette en euros, en points pour le ratio).
+3. **(Document 2)** Décrivez en quelques lignes la méthode de Blanchard et Leigh et leur résultat. Que signifie un multiplicateur de 0,5 ? Un multiplicateur de 1,5 ?
+
+### Mobiliser le cours
+
+4. **(Document 2)** Expliquez, avec le mécanisme des vagues de dépense, pourquoi une baisse de la dépense publique peut réduire le PIB de plus que son montant. Pourquoi le multiplicateur était-il élevé en 2010, en particulier en Grèce ?
+5. **(Documents 1 et 2)** Expliquez pourquoi le ratio dette / PIB a monté entre 2010 et 2013 alors que la dette en euros baissait. Appliquez ensuite la règle k × d au cas grec de 2010 (d ≈ 1,5), avec le multiplicateur supposé par les prévisions, puis avec celui que trouvent Blanchard et Leigh. Que concluez-vous ?
+6. **(Documents 1 et 3)** La DG Trésor écrit que le PIB reste « légèrement inférieur » à son niveau d'avant la crise, sans préciser s'il s'agit du PIB en valeur ou du PIB en volume. Que dit le document 1 du PIB en volume ? Pourquoi faut-il savoir de quel PIB on parle avant de reprendre la formule ? Expliquez ensuite pourquoi une croissance de « 3,9 % en moyenne par an (hors récession de 2020) » et une hausse totale de 11 % de 2018 à 2024 ne racontent pas la même histoire.
+
+### Argumenter
+
+7. **(Document 4)** Qui a le plus perdu en 2013 : par génération, par diplôme, par genre et par territoire ? En 2025, quels groupes restent les plus touchés ? Peut-on dire que la part de la population en risque de pauvreté ou d'exclusion a baissé de 36,0 % à 27,5 % ? Justifiez.
+8. **(Ensemble des documents)** « L'austérité grecque a échoué : elle a fait monter la dette au lieu de la réduire. » En une quinzaine de lignes, montrez d'abord ce que l'analyse du cours établit, puis ce qui relève d'un jugement.
+
+## Exercice
+
+Les trois parties portent sur des pays **fictifs**, en nombres ronds. Tous les calculs se font à la main. Notation du cours : k multiplicateur, c propension marginale à consommer, d dette publique / PIB, r taux d'intérêt réel, g croissance du PIB, s solde primaire en % du PIB (positif = excédent).
+
+### A. Le multiplicateur, vague après vague
+
+L'État d'un pays fictif supprime 10 Md€ de commandes de travaux publics. Les ménages consomment 60 % de tout revenu supplémentaire : c = 0,6.
+
+1. Calculez la baisse du PIB lors des trois premières vagues, puis la baisse cumulée après ces trois vagues. Calculez le multiplicateur k = 1 / (1 − c) et la baisse totale du PIB.
+2. Même question (multiplicateur et baisse totale seulement) si c = 0,75. Si l'État avait au contraire **augmenté** sa dépense de 10 Md€, avec c = 0,6, que serait-il arrivé au PIB ?
+3. Les multiplicateurs estimés sont bien plus petits que ce multiplicateur simple : proches de 0,5 en temps normal. Pourquoi ?
+
+### B. Couper la dépense quand la dette est lourde
+
+Un autre pays fictif a un PIB de 200 Md€. Son État économise 10 Md€ de dépenses et emprunte donc 10 Md€ de moins. On ignore les pertes de recettes fiscales.
+
+1. Sa dette vaut 200 Md€ (d = 100 %). Calculez la dette après la coupe, puis le PIB après la coupe si k = 0,5, puis si k = 1,5. Dans chaque cas, le ratio dette / PIB monte-t-il ou baisse-t-il ? (Inutile de diviser : comparez la dette et le PIB après la coupe.)
+2. Vérifiez vos réponses avec la règle du cours : la coupe fait baisser le ratio seulement si k × d < 1. Quel est le multiplicateur au-delà duquel la coupe fait monter le ratio ?
+3. Reprenez la question 1 avec une dette de 400 Md€ (d = 200 %). Calculez le ratio après la coupe si k = 0,5. Quel est le nouveau seuil de k ? Que retenez-vous ?
+4. Le calcul ignore deux choses : les recettes fiscales et ce qui se passe les années suivantes. Dans quel sens chacune modifie-t-elle la conclusion ?
+
+### C. La boule de neige
+
+Un État doit 100 % de son PIB (d = 100 %). Son taux d'intérêt réel est r = 2 %. On applique Δd ≈ (r − g) × d − s.
+
+1. Le pays est en récession : g = −3 %, et son solde primaire est nul (s = 0). Calculez l'effet boule de neige et le ratio d dans un an. Quel excédent primaire faudrait-il pour stabiliser d ?
+2. Repartez de d = 100 %. La croissance revient : g = +4 %, avec un excédent primaire de 1 % du PIB (s = 1). Calculez l'effet boule de neige, la variation Δd et le ratio dans un an.
+3. *Pour aller plus loin, si le temps le permet.* Reprenez la question 1 avec une dette de 200 % du PIB. Comparez l'excédent primaire stabilisant avec celui de la question 1 et reliez le résultat au cas grec de 2010-2013.

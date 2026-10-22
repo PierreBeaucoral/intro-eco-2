@@ -1,0 +1,18 @@
+---
+title: "Travaux dirigés"
+subtitle: "Huit séances de deux heures, dont deux contrôles continus"
+toc: false
+listing:
+  contents: "td/td*.qmd"
+  type: table
+  sort: "seance"
+  fields: [seance, title, description]
+  field-display-names:
+    seance: "Séance"
+    title: "Sujet"
+    description: "Porte sur"
+  sort-ui: false
+  filter-ui: false
+---
+
+Les sujets sont publiés avant chaque séance. Les corrigés sont publiés après la séance correspondante.

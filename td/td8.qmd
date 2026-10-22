@@ -1,0 +1,17 @@
+---
+title: "TD 8 · Contrôle continu 2"
+description: "CM 5 à 9"
+seance: 8
+---
+
+::: {.wp-entete}
+Séance 8 sur 8
+
+Durée : 2 h
+
+Évaluation : [CC]{.wp-cc}
+:::
+
+::: {.wp-avenir}
+Contrôle continu sur table, en séance de TD. Il porte sur les CM 5 à 9 ; le CM 9, sans TD, n'est évalué que dans la partie cours. Les modalités seront précisées ici.
+:::

@@ -1,0 +1,16 @@
+---
+title: "Cours magistral"
+subtitle: "Dix questions de société, une séance de 3 h chacune"
+toc: false
+listing:
+  id: sommaire
+  contents: cours/cm*.qmd
+  sort: "cm"
+  template: assets/sommaire.ejs
+  fields: [title, description, cm, partie]
+---
+
+Chaque séance a une **page de cours**, qui sert de support de révision, et des **diapositives** projetées en amphi. Dans les diapositives, touche `F` pour le plein écran, `E` pour la version imprimable.
+
+::: {#sommaire}
+:::

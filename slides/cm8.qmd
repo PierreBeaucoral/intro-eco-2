@@ -1,0 +1,450 @@
+---
+title: "La Grèce, 2010-2015 : l'austérité a-t-elle marché ?"
+subtitle: "CM 8 · Partie II · La monnaie, l'État, le monde"
+description: "Multiplicateur budgétaire, dynamique de la dette, chômage."
+cm: 8
+footer: "CM 8 · Grèce"
+title-slide-attributes:
+  data-kicker: "Introduction à l'économie 2 · CM 8"
+---
+
+```{r}
+#| include: false
+source(here::here("R/theme_cours.R"))
+source(here::here("R/cm8.R"))   # même fichier que la page de cours
+```
+
+## En 2010, la Grèce reconnaît que ses comptes publics étaient mal déclarés
+
+- Février 2010 : le gouvernement reconnaît des comptes mal déclarés
+- Mai 2010 : premier plan d'aide de la zone euro et du FMI
+- Déficit public de 2009 : 15,4 % du PIB
+
+(MES, « Greece » ; Eurostat, séries du 21/10/2026)
+
+::: {.notes}
+0 h 02 – 0 h 06. Accroche. Qui a entendu parler de la crise grecque ? Le coût des emprunts devient « insoutenable » en mars 2010. Le déficit de 2009 est une estimation actuelle (Eurostat).
+:::
+
+## Le PIB recule de 27 %, le chômage atteint 27,8 % et la dette gonfle
+
+```{r}
+#| label: fig-grece
+#| fig-width: 13
+#| fig-height: 5.6
+#| fig-alt: "Trois petits graphiques en lignes, de 2008 à 2025, avec une bande grise de 2010 à 2018. À gauche, en bleu, le PIB réel part de 100 en 2008, tombe à 73 en 2013, reste plat jusqu'en 2016, remonte à 78 en 2019, chute à 71 en 2020, puis remonte à 86 en 2025. Au centre, en rouge, le chômage monte de 10 pour cent en 2009 à 28 pour cent en 2013, puis descend régulièrement jusqu'à 9 pour cent en 2025. À droite, en ambre, la dette publique monte de 111 pour cent du PIB en 2008 à 189 en 2018, atteint 209 en 2020, puis descend à 145 en 2025."
+# format large (13 × 5.6) : trois panneaux côte à côte, illisibles en 8 × 4.6
+graphe_grece(base_size = 24)
+```
+
+Grèce, 2008-2025 : bande grise = les trois plans d'aide. Source : Eurostat (nama_10_gdp, une_rt_a, gov_10dd_edpt1), séries du 21/10/2026 ; PIB 2024 et 2025 provisoires.
+
+::: {.notes}
+0 h 06 – 0 h 11. Lire les trois panneaux : PIB réel indice 100 en 2008, 73 en 2013. Chômage 9,8 % en 2009, 27,8 % en 2013, contre 12,2 % dans la zone euro. Dette 147,8 % en 2010, 180,4 % en 2013, 189,0 % en 2018, puis 145,4 % en 2025. Pas de taux de chômage 15-74 ans pour 2008 dans la série.
+:::
+
+## Trois plans d'aide en échange de l'austérité : a-t-elle marché ?
+
+- Trois plans (2010, 2012, 2015), environ 289 Md€ de prêts (MES, consulté le 21/10/2026)
+- En échange : baisse des dépenses, hausse des impôts, c'est l'**austérité**
+- Pour quoi faire : alléger la dette, retrouver la croissance, regagner la confiance des prêteurs
+
+::: {.notes}
+0 h 11 – 0 h 14. Sortie du dernier plan le 20 août 2018 (La finance pour tous). Question à l'amphi : si vous aviez été ministre des Finances grec en 2010, quel objectif aurait été prioritaire ? Annoncer les trois outils : multiplicateur, effet boule de neige, règle qui les relie.
+:::
+
+## Rappel : six notions suffisent pour suivre la séance
+
+::: {.rappel}
+- **PIB en volume** : prix retirés
+- **Solde primaire** : solde sans les intérêts
+- **Dette** : un stock, rapporté au PIB
+- **c** : part d'un euro de revenu consommée
+- **r ≈ i − π**
+- **Positif** : ce qui est ; **normatif** : ce qui devrait être
+:::
+
+::: {.notes}
+0 h 14 – 0 h 19. Rappel court. Solde public négatif = déficit. Dette : somme de ce que les administrations doivent ; PIB : un flux annuel. Avec c = 0,8, un ménage qui gagne 100 € de plus en dépense 80. Taux réel : taux nominal moins inflation.
+:::
+
+## Quand des capacités restent inutilisées, la demande fixe la production
+
+::: {.auteur}
+::: {.wp-portrait}
+![](../cours/img/portraits/john-maynard-keynes.jpg){fig-alt="Portrait photographique de John Maynard Keynes en 1929, homme en costume, en buste."}
+[1929 · auteur inconnu (archives Bettmann), domaine public, Wikimedia Commons]{.wp-credit}
+:::
+**John Maynard Keynes** (1936), *The General Theory of Employment, Interest and Money* · école keynésienne. Une baisse de dépense réduit des revenus, donc d'autres dépenses : son effet sur le PIB est **multiplié**.
+:::
+
+::: {.notes}
+0 h 19 – 0 h 24. Idée centrale : la dépense de l'un est le revenu d'un autre. Question : si l'État arrête de commander des travaux, qui est touché en second ? Dire que l'austérité se mesure hors effet de la conjoncture : une récession creuse le déficit d'elle-même.
+:::
+
+## Une baisse de dépense publique réduit le PIB de k fois son montant
+
+::: {#def-multiplicateur}
+## Multiplicateur budgétaire
+ΔPIB = k × Δ(dépense publique). Dans le cas le plus simple : **k = 1 / (1 − c)**. Avec c = 0,5, k = 2 ; avec c = 0,8, k = 5.
+:::
+
+::: {.notes}
+0 h 24 – 0 h 29. Le multiplicateur est noté k, la propension à consommer c. Pas de dérivée : on le construit à la main sur la diapo suivante. Piège classique : « le multiplicateur ne concerne que les relances » est faux, il joue dans les deux sens.
+:::
+
+## Chaque vague de dépense vaut la moitié de la précédente
+
+```{r}
+#| label: fig-multiplicateur
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Diagramme en barres bleues. Six barres de hauteur croissante : 10, puis 15, 17,5, 18,8, 19,4 et 19,7 milliards d'euros. Une ligne rouge en tirets à 20 milliards, étiquetée k fois 10 égale 20 milliards d'euros, marque la limite que les barres approchent."
+graphe_multiplicateur(base_size = 24)
+```
+
+Baisse de 10 Md€, c = 0,5 (exemple fictif). Graphique théorique.
+
+::: {.notes}
+0 h 29 – 0 h 33. Lecture : chaque barre est la baisse cumulée du PIB après une vague de plus ; le total approche 20 sans le dépasser.
+:::
+
+## Une coupe de 10 Md€ réduit le PIB de 20 Md€ si c = 0,5
+
+::: {#exm-multiplicateur}
+## Une coupe de 10 Md€, vague après vague
+10 + 5 + 2,5 + 1,25 + … = 10 × 1 / (1 − 0,5) = **20 Md€**, soit k = 2.
+
+Avec c = 0,8 : k = 1 / 0,2 = 5, et la même coupe réduirait le PIB de **50 Md€**.
+:::
+
+::: {.notes}
+0 h 33 – 0 h 41. Dérouler au tableau. Vague 1 : les entreprises de travaux publics perdent 10 de chiffre d'affaires. Vague 2 : leurs salariés et propriétaires consomment 0,5 × 10 = 5 de moins. Vague 3 : les commerçants perdent 5, consomment 2,5 de moins. Chaque terme est la moitié du précédent. Plus les ménages dépensent leur revenu, plus l'effet est fort. Exercice à main levée : et si c = 0,8 ? Réponse 5.
+:::
+
+## Le multiplicateur simple est un maximum
+
+- Une partie de chaque euro part en impôts, en épargne ou en importations
+- La banque centrale peut baisser ses taux
+- Multiplicateurs estimés : proches de 0,5 en temps normal (Blanchard et Leigh, 2013)
+
+::: {.notes}
+0 h 41 – 0 h 44. Le k = 1/(1 − c) est un plafond théorique, pas une prévision. Les études citées par Blanchard et Leigh donnent environ 0,5 en temps normal.
+:::
+
+## En 2010, chaque point d'austérité a coûté environ 1 % de PIB de plus que prévu
+
+::: {.auteur}
+::: {.wp-portrait}
+![](../cours/img/portraits/olivier-blanchard.jpg){fig-alt="Portrait photographique d'Olivier Blanchard en 2008, homme en costume, en buste."}
+[2008 · Eugene Salazar (FMI), domaine public, Wikimedia Commons]{.wp-credit}
+:::
+**Blanchard et Leigh** (2013), *American Economic Review* · FMI.
+:::
+
+- 26 pays européens, printemps 2010
+- Un point d'austérité prévue en plus : PIB inférieur d'environ 1 % à la prévision
+- Si les prévisions supposaient 0,5, le multiplicateur était de l'ordre de 1,5
+
+::: {.notes}
+0 h 44 – 0 h 50. Méthode : on compare la croissance réalisée en 2010 et 2011 à la croissance prévue (NBER Working Paper n° 18779, février 2013). Le multiplicateur est « nettement supérieur à 1 » au début de la crise. Les auteurs ajoutent qu'il n'existe pas de multiplicateur unique, valable partout et toujours.
+:::
+
+## Taux au plancher, crédit grippé, capacités inutilisées : le multiplicateur était élevé
+
+- Taux d'intérêt déjà au plancher
+- Système financier défaillant : on dépense son revenu du moment
+- Beaucoup de capacités inutilisées
+- Zone euro : pas de dévaluation possible
+
+::: {.notes}
+0 h 50 – 0 h 55. Trois raisons avancées dès 2010 par les auteurs. Pour la Grèce s'ajoute un point : membre de la zone euro, elle ne pouvait pas dévaluer sa monnaie pour vendre moins cher à l'étranger. Question : pourquoi une dévaluation aiderait-elle ?
+:::
+
+## La dette devient lourde si le revenu national croît trop lentement
+
+::: {.auteur}
+**Evsey Domar** (1944), *American Economic Review* · keynésien de la croissance. Ce qui compte est le poids de la dette dans le revenu national.
+:::
+
+Si r dépasse g, la dette grossit plus vite que le PIB.
+
+::: {.notes}
+0 h 55 – 1 h 00. Dans d = dette / PIB, les intérêts font grossir le numérateur au rythme r, la croissance le dénominateur au rythme g. Même sans nouveau déficit.
+:::
+
+## Si r dépasse g, la dette s'alourdit d'elle-même
+
+::: {#def-boule-de-neige}
+## Effet boule de neige
+Δd ≈ (r − g) × d − s, où s est le solde primaire en % du PIB (positif = excédent).
+:::
+
+::: {#def-solde-stabilisant}
+## Solde primaire stabilisant
+**s = (r − g) × d** : l'excédent primaire qui maintient d constant.
+:::
+
+::: {.notes}
+1 h 00 – 1 h 06. Effet boule de neige = (r − g) × d. Plus la dette est lourde et plus r dépasse g, plus l'effort demandé est grand. Le calcul se fait aussi en nominal : l'inflation s'ajoute aux deux, l'écart est presque le même.
+:::
+
+## Avec un écart de 4 points, la dette monte à 222 % en dix ans
+
+```{r}
+#| label: fig-boule-de-neige
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Graphique en lignes sur dix ans. Trois courbes partent de 150 pour cent du PIB. La rouge, r moins g égale plus 4 et s égale 0, monte de plus en plus vite jusqu'à 222. La grise, r moins g égale plus 4 et s égale 6, reste horizontale à 150. La bleue, r moins g égale moins 2 et s égale 0, descend jusqu'à environ 123."
+graphe_boule_de_neige(base_size = 24)
+```
+
+Trois trajectoires du ratio dette / PIB depuis 150 % (exemple fictif). Graphique théorique, Δd ≈ (r − g) × d − s.
+
+::: {.notes}
+1 h 06 – 1 h 11. Rouge : r − g = +4, s = 0, la dette fait boule de neige. Grise : même écart, excédent primaire de 6 % chaque année, le ratio reste à 150 %. Bleue : r − g = −2, s = 0, le ratio descend à 123 %.
+:::
+
+## En récession, il faudrait 12 % d'excédent primaire pour stabiliser la dette
+
+::: {#exm-boule-de-neige}
+## d = 150 %, r = 3 %
+Récession, g = −5 % : r − g = 8 points, effet boule de neige = 8 % × 150 = **+12 points**. Avec s = 0, le ratio passe de 150 % à 162 %.
+:::
+
+::: {.notes}
+1 h 11 – 1 h 17. Pour garder d à 150 %, il faudrait s = 12 % du PIB : intenable en pleine récession. Méthode de lecture à donner à l'oral : (1) écart taux − croissance multiplié par le ratio de départ ; (2) solde primaire, un déficit alourdit, un excédent allège ; (3) l'écart restant vient d'opérations hors solde (annulation, aide aux banques) ou de l'approximation.
+:::
+
+## Avec une dette lourde, la croissance compte autant que le solde primaire
+
+**Deux autres situations** (même dette, d = 150 %)
+
+- g = +2 % : effet = **+1,5 point** ; un excédent primaire de 1,5 % suffit
+- r = 2 %, g = 4 % : effet = **−3 points**, même avec un solde primaire nul
+
+::: {.notes}
+1 h 17 – 1 h 23. Reprendre les trois situations : récession (+12), croissance modeste (+1,5), croissance forte (−3). Conclusion : avec une dette lourde, la croissance compte autant que le solde primaire. Annoncer la pause à 1 h 23.
+:::
+
+## Pause
+
+Reprise à 1 h 38.
+
+::: {.notes}
+1 h 23 – 1 h 38. Pause de 15 minutes. À la reprise : on combine les deux outils, puis on retourne à la Grèce.
+:::
+
+## Une coupe de dépense baisse la dette mais aussi le PIB : lequel gagne ?
+
+| | k = 0,5 (prévision) | k = 1,5 (réalité) |
+|---|---|---|
+| Dette après la coupe | 290 | 290 |
+| PIB après la coupe | 195 | 185 |
+| Dette / PIB | 148,7 % | 156,8 % |
+| Ratio | baisse | monte |
+
+Coupe de 10 Md€ ; dette de 300 Md€, PIB de 200 Md€ (exemple fictif).
+
+::: {.notes}
+1 h 38 – 1 h 43. L'étape 1 est la même dans les deux colonnes ; ce qui change, c'est la réaction du PIB à l'étape 2, donc le sens de la variation à l'étape 4. Laisser les étudiants calculer 290 / 195 à la main.
+:::
+
+## Sous k = 0,67, la coupe allège la dette ; au-dessus, elle l'alourdit
+
+```{r}
+#| label: fig-ratio-coupe
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Graphique avec le multiplicateur k en abscisse, de 0 à 2, et le ratio dette sur PIB après la coupe en ordonnée, de 144 à 162 pour cent. Une courbe rouge croissante part de 145 pour cent pour k égal 0. Elle coupe la ligne horizontale en tirets du ratio de départ, 150 pour cent, en k égal 0,67. Deux points noirs : prévision, k égal 0,5, à 148,7 pour cent ; réalité, k égal 1,5, à 156,8 pour cent."
+graphe_ratio_coupe(base_size = 24)
+```
+
+Ratio dette / PIB après une coupe de 10 Md€ (exemple fictif). Graphique théorique.
+
+::: {.notes}
+1 h 43 – 1 h 48. Lecture : la courbe coupe la ligne de 150 % en k = 0,67. Avec k = 0,5, le ratio passe à 148,7 % ; avec k = 1,5, il monte à 156,8 %.
+:::
+
+## La coupe fait monter le ratio si k × d dépasse 1
+
+::: {#exm-coupe}
+## Couper 10 Md€ quand d = 150 %
+Le ratio baisse seulement si **k × d < 1** (d en nombre : 1,5).
+
+k = 0,5 : 0,75, il baisse. k = 1,5 : 2,25, il monte.
+:::
+
+Cette règle vaut à **court terme**.
+
+::: {.notes}
+1 h 48 – 1 h 55. Si le PIB se redresse ensuite alors que la dette reste plus basse, le ratio finit par baisser : tout dépend de la durée de la récession. L'économie effectivement réalisée est inférieure à 10 Md€ car les recettes fiscales baissent. Piège : « le ratio a monté, donc l'État a emprunté davantage » est faux, le dénominateur peut baisser. Question : donnez un cas où le ratio monte sans nouvel emprunt.
+:::
+
+## Entre 2010 et 2013, la dette grecque en euros baisse mais le ratio gagne 33 points
+
+- Dette : de 330 à 321 Md€, car les obligations détenues par des investisseurs privés ont été restructurées en 2012, avec une décote de 53,5 % (MES)
+- PIB en valeur : −20,3 %
+- Ratio : de 147,8 % à 180,4 %
+
+(Eurostat, calculs du cours)
+
+::: {.notes}
+1 h 55 – 2 h 00. Les obligations grecques détenues par des investisseurs privés, surtout des banques, ont été restructurées en 2012. Sans cette annulation, la dette en euros aurait monté. Le dénominateur a fait monter le ratio.
+:::
+
+## La même formule donne +27 points en 2011 et −14 points en 2023
+
+| | 2011 | 2023 |
+|---|---|---|
+| Écart i − croissance | +13,7 | −6,7 |
+| Effet boule de neige | ≈ +20,3 | ≈ −11,8 |
+| Solde primaire s | −2,8 % | +1,9 % |
+| Variation observée de d | +27,3 | −13,8 |
+
+Source : Eurostat (gov_10dd_edpt1, nama_10_gdp), 21/10/2026 ; calculs du cours, sur valeurs non arrondies.
+
+::: {.notes}
+2 h 00 – 2 h 06. Ratio de l'année précédente : 147,8 % en 2011, 177,8 % en 2023. Variation prévue : environ +23,1 points en 2011 et −13,7 en 2023. Taux apparent i : 4,7 % en 2011, 2,1 % en 2023 ; croissance du PIB en valeur : −9,0 % puis +8,7 %. En 2011 l'essentiel de la hausse vient de l'effet boule de neige, pas du déficit primaire, déjà réduit à 2,8 %. L'écart restant (27,3 contre 23,1) vient en partie de l'approximation, qui sous-estime l'effet quand la croissance est très négative, et d'opérations hors solde. De 2012 à 2016 les prix baissent même (déflateur du PIB : −2,0 % en 2013) : le taux réel dépasse le taux nominal.
+:::
+
+## Le taux du marché a atteint 22,5 % en 2012, mais l'État grec n'empruntait presque plus
+
+```{r}
+#| label: fig-taux-longs
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Graphique en lignes de 2008 à 2025, avec une bande grise de 2010 à 2018. La courbe rouge de la Grèce part de 4,8 pour cent en 2008, monte à 22,5 pour cent en 2012, retombe à 7 pour cent en 2014, remonte à près de 10 pour cent en 2015, puis descend jusqu'à environ 1 pour cent en 2021 et finit à 3,4 pour cent en 2025. La courbe grise de l'Allemagne descend de 4 pour cent en 2008 à un peu moins de zéro en 2019-2021, puis remonte à 2,6 pour cent en 2025."
+graphe_taux_longs(base_size = 24)
+```
+
+Taux à dix ans, moyenne annuelle (%). Source : Eurostat (irt_lt_mcby_a), série du 21/10/2026. Taux apparent : jamais plus de 4,7 % de 2009 à 2025.
+
+::: {.notes}
+2 h 06 – 2 h 11. L'écart entre les deux courbes mesure la méfiance des prêteurs. En 2012 : 22,5 % contre 1,5 % pour l'Allemagne. Le taux apparent est le rapport entre intérêts versés et dette de l'année précédente. Une grande partie de la dette est due à des prêteurs publics européens, qui ont réduit les taux et allongé les durées dès novembre 2012 (MES). En 2025 : 3,4 % contre 2,6 %, la confiance est revenue, mais après la fin des plans.
+:::
+
+## Avec k × d de 0,75 à 2,25, l'austérité alourdissait la dette à court terme
+
+- 2010 : d ≈ 1,5 (147,8 %)
+- Multiplicateur des prévisions : 0,5 × 1,5 = 0,75, la dette s'allège
+- Multiplicateur proche de 1,5 : 1,5 × 1,5 = 2,25, elle s'alourdit
+
+C'est ce qu'on observe jusqu'en 2013.
+
+::: {.notes}
+2 h 11 – 2 h 15. Réserve à dire : l'austérité n'est pas la seule cause de la récession (crédit bloqué, crainte d'une sortie de l'euro).
+:::
+
+## En 2013, le chômage dépasse 20 % dans tous les groupes, surtout chez les jeunes
+
+```{r}
+#| label: fig-chomage-groupes
+#| fig-width: 8
+#| fig-height: 4.6
+#| fig-alt: "Graphique à points, un groupe par ligne, en trois blocs. Pour chaque groupe, un point rouge donne le chômage de 2013 et un point bleu celui de 2025, reliés par un segment gris. Âge et genre : ensemble 27,8 puis 8,9 pour cent ; 15-24 ans 59,2 puis 19,1 ; femmes 31,7 puis 11,2 ; hommes 24,8 puis 7,0. Diplôme : inférieur au lycée 29,8 puis 11,8 ; supérieur 20,4 puis 6,6. Région : Attique 28,7 puis 8,1 ; Égée méridionale 21,3 puis 7,3 ; Macédoine-Occidentale 31,6 puis 15,3."
+graphe_chomage_groupes(base_size = 24)
+```
+
+Chômage en 2013 (rouge) et 2025 (bleu), % des actifs. Source : Eurostat (une_rt_a, lfsa_urgaed, lfst_r_lfu3rt), séries du 21/10/2026.
+
+::: {.notes}
+2 h 15 – 2 h 20. Plus le segment gris est long, plus le chômage du groupe a baissé. Les taux par diplôme viennent d'un autre tableau, dont le total diffère un peu (27,5 % en 2013, au lieu de 27,8 %). En 2025, le chômage reste plus élevé chez les femmes, chez les moins diplômés et en Macédoine-Occidentale.
+:::
+
+## Les jeunes et les moins diplômés ont payé le prix fort
+
+- **Jeunes** : 26,1 % en 2009, **59,2 %** en 2013
+- **Moins diplômés** : 29,8 %, contre 20,4 % pour le supérieur
+- **Femmes** : 31,7 %, contre 24,8 % pour les hommes
+- **Macédoine-Occidentale** : 31,6 %
+
+Chômage 2013 (Eurostat, séries du 21/10/2026)
+
+::: {.notes}
+2 h 20 – 2 h 25. Par revenu : le risque de pauvreté ou d'exclusion sociale passe de 28,1 % en 2008 à 36,0 % en 2014 (Eurostat, ilc_peps01, définition « Europe 2020 ») ; 27,5 % en 2025 selon une définition plus récente, non comparable directement. Beaucoup de jeunes partent : le solde migratoire est « largement négatif » depuis 2010 (DG Trésor, 03/11/2025). Attique : 6,7 % puis 28,7 % ; Égée méridionale : 8,4 % puis 21,3 %. Dix ans après le référendum de juillet 2015, Le Temps (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ». Photo de la manifestation du 21 juin 2015 disponible dans la page de cours.
+:::
+
+## Les créanciers ont partagé la perte, inégalement
+
+- **Banques et investisseurs privés** : décote de 53,5 % en 2012 (MES)
+- **Créanciers publics** : environ 289 Md€ prêtés (MES, consulté le 21/10/2026), à taux réduits et durées allongées
+- **Grecs** : impôts, coupes, reprise plus lente qu'il n'y paraît
+
+::: {.notes}
+2 h 25 – 2 h 29. Détail des 289 Md€ : 52,9 Md€ de prêts des pays de la zone euro, 141,8 Md€ du Fonds européen de stabilité financière, 32,1 Md€ du FMI, 61,9 Md€ du MES. De 2018 à 2024, le PIB réel progresse de 11 %, crise sanitaire comprise, soit moins de 2 % par an (Eurostat, calculs du cours). La DG Trésor avance 3,9 % par an en retirant 2020, mais pas le rebond de 2021.
+:::
+
+## L'analyse établit un multiplicateur sous-estimé, mais pas de « sans austérité » simple
+
+- Multiplicateur sous-estimé (Blanchard et Leigh, 2013)
+- Ratio en hausse tant que r dépassait g
+- En 2010 : solde primaire de −5,3 % du PIB (Eurostat, calculs du cours), plus d'accès aux marchés ; les plans ont **étalé** l'ajustement
+- PIB réel de 2025 : 13,9 % sous celui de 2008 (Eurostat)
+
+::: {.notes}
+2 h 29 – 2 h 35. Sans prêts, l'État aurait dû combler ce déficit d'un coup, ou cesser de payer ses créanciers : la question porte sur le rythme. Un même fait peut être présenté très différemment : la note de la DG Trésor (03/11/2025) dit le PIB « légèrement inférieur » à son niveau d'avant-crise, sans préciser valeur ou volume ; en valeur, le PIB de 2024 est 0,4 % sous celui de 2008.
+:::
+
+## Ce qui relève d'un jugement : le rythme, le partage du fardeau, la conditionnalité
+
+- **Rythme** : récession courte et brutale, ou ajustement plus lent et plus coûteux en prêts ?
+- **Partage** : annuler plus tôt la dette, au détriment des créanciers ?
+- **Conditionnalité** : imposer des réformes à un État souverain ?
+
+::: {.notes}
+2 h 35 – 2 h 40. Débat à l'amphi, deux minutes par table. Rappeler que ces questions ne se tranchent pas par un calcul : ce sont des jugements de valeur.
+:::
+
+## Trois écoles : keynésiens, équivalence ricardienne, austérité expansive
+
+- **Keynésiens** : austérité en récession contre-productive, multiplicateur élevé
+- **Barro** (1974) : relance par l'emprunt compensée par l'épargne, multiplicateur inférieur à 1
+- **Giavazzi et Pagano** (1990) : au Danemark et en Irlande, une forte austérité a été suivie d'une reprise : un ajustement crédible peut rétablir la **confiance**
+
+::: {.notes}
+2 h 40 – 2 h 46. Clément Carbonnier : « les cures austéritaires sont mauvaises pour la croissance » (Alternatives Économiques, 10/08/2026). Barro : « Are Government Bonds Net Wealth? », Journal of Political Economy, 82(6) ; les ménages savent que la dette d'aujourd'hui sera payée par leurs impôts de demain, tradition néoclassique. Giavazzi et Pagano : « Can Severe Fiscal Contractions Be Expansionary? », NBER Macroeconomics Annual, vol. 5, 75-111 ; années 1980.
+:::
+
+## Le MES lie son aide à un programme d'ajustement
+
+::: {.droit}
+Le **Mécanisme européen de stabilité** (octobre 2012) naît d'un traité **intergouvernemental**, hors cadre de l'Union. L'aide est versée par tranches et peut être interrompue : c'est la **conditionnalité**.
+:::
+
+::: {.notes}
+2 h 46 – 2 h 50. Un État qui demande son aide prépare, avec la Commission européenne, en lien avec la BCE et, le cas échéant, le FMI, un programme d'ajustement macroéconomique (règlement (UE) n° 472/2013 ; Parlement européen, fiche thématique n° 91). Les deux premiers plans grecs ont précédé ce cadre ; le troisième (2015) en relève.
+:::
+
+## Le cas grec penche du côté keynésien, sans condamner la consolidation
+
+Blanchard et Leigh : leurs résultats « n'impliquent pas que la consolidation budgétaire soit indésirable ».
+
+Ils mesurent son coût de court terme, pas son bien-fondé.
+
+::: {.notes}
+2 h 50 – 2 h 52. Nuance finale. L'austérité n'est pas la seule cause de la récession grecque. Dire « a marché » dépend de l'objectif.
+:::
+
+## Ce qu'il faut retenir
+
+::: {.retenir}
+- Baisse de dépense : PIB réduit de k fois son montant
+- 2010 : k supposé 0,5, plutôt supérieur à 1
+- Δd ≈ (r − g) × d − s
+- Une coupe fait monter d si k × d > 1
+- « A marché » : un jugement normatif
+:::
+
+::: {.notes}
+2 h 52 – 2 h 56. Vidéo à regarder chez soi : Dessine-moi l'éco, « Austérité ou relance, comment ça marche ? » (3 min 03, 2013) ; Arte, Le Dessous des cartes, « Grèce : la fragile de l'UE » (11 min 58). Liens dans la page de cours.
+:::
+
+## Plan de dissertation : ce que dit l'outil, puis ce qu'il ne tranche pas
+
+1. **Ce que disent les outils** : multiplicateur, effet boule de neige, règle k × d
+2. **Ce qu'ils ne tranchent pas** : rythme, partage du fardeau, conditionnalité
+
+::: {.notes}
+2 h 56 – 3 h 00. Sujet type : « L'austérité peut-elle réduire la dette ? » I. Oui si k × d < 1, ou si la croissance dépasse le taux d'intérêt (g > r), ou si l'excédent primaire atteint (r − g) × d ; II. Mais le choix du rythme et du partage est un jugement. Rappeler le prochain CM.
+:::

@@ -1,0 +1,35 @@
+---
+title: "TD 1 · Ormuz et le prix des carburants"
+description: "CM 1"
+seance: 1
+body-classes: wp-td wp-corrige
+---
+<!-- À rédiger dans _drafts/tdN-corrige.qmd ; déplacé dans td/ le jour de la publication. -->
+
+::: {.wp-entete}
+Séance 1 sur 8
+
+Durée : 2 h
+
+Porte sur : CM 1
+:::
+
+## Questions sur les documents
+
+**1.** Énoncé repris.
+
+::: {.solution}
+Réponse attendue, rédigée comme on l'attend d'un étudiant. [2 pts]{.bareme}
+:::
+
+::: {.column-margin .note-td}
+Erreur fréquente et comment la corriger.
+:::
+
+## Exercice
+
+**1.** Énoncé repris.
+
+::: {.solution}
+Calcul détaillé, étape par étape. [3 pts]{.bareme}
+:::

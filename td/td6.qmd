@@ -1,0 +1,144 @@
+---
+title: "TD 6 · Monnaie et taux, correction du CC1"
+description: "CM 6 et 7"
+seance: 6
+---
+
+::: {.wp-entete}
+Séance 6 sur 8
+
+Durée : 2 h, dont 30 min de correction du CC1
+
+Porte sur : CM 6 et 7
+:::
+
+## Objectifs
+
+- **Construire** le bilan d'une banque avant et après un crédit, et montrer qu'un prêt crée un dépôt, donc de la monnaie.
+- **Expliquer** une panique bancaire avec le jeu de la panique, en distinguant liquidité et solvabilité.
+- **Calculer** un taux d'intérêt réel (r ≈ i − π) et le taux conseillé par la règle de Taylor, puis expliquer pourquoi une hausse des taux freine la demande et non l'offre d'énergie.
+- **Argumenter** sur la garantie des dépôts et sur la politique de la BCE, en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+
+## À préparer avant la séance
+
+- Relire les pages du [CM 6](../cours/cm6.qmd) et du [CM 7](../cours/cm7.qmd), en particulier les définitions et les exemples chiffrés (le prêt de Léa, le jeu de la panique, le taux réel, la règle de Taylor).
+- Lire les documents 1 à 4 et répondre par écrit aux questions 1 à 5. Les questions 6 et 7 et l'exercice se traitent en séance.
+- La séance commence par la correction du CC1 (30 min) : apportez votre copie.
+
+## Les documents
+
+::: {.wp-document data-label="Document 1"}
+**Silicon Valley Bank : quarante-huit heures en mars 2023**
+
+Fin 2022, Silicon Valley Bank (SVB), la banque californienne des start-up, est la 16^e^ banque américaine par la taille de son bilan (environ 212 milliards de dollars d'actifs).
+
+- *Mercredi 8 mars 2023.* Avec la hausse des taux d'intérêt, un portefeuille d'obligations acheté 91 milliards de dollars ne valait plus que 76 milliards fin 2022. SVB annonce une perte de 1,8 milliard de dollars sur la vente de 21 milliards de titres, et cherche du capital.
+- *Jeudi 9 mars.* Poussés par les réseaux sociaux, ses clients, très liés entre eux, retirent leurs dépôts « de manière coordonnée » : plus de 40 milliards de dollars en une journée. La direction en attend plus de 100 milliards le lendemain, soit en tout environ 85 % des dépôts.
+- *Vendredi 10 mars.* SVB est fermée par le régulateur. *Dimanche 12 mars* : les autorités annoncent que tous ses déposants, garantis ou non, récupéreront l'intégralité de leurs dépôts.
+
+| Fin 2022, en % | SVB | Grandes banques |
+|---|---:|---:|
+| Prêts, en % de l'actif | 35 | 58 |
+| Titres, en % de l'actif | 55 | 25 |
+| Dépôts non garantis, en % des dépôts | 94 | 41 |
+
+Garantie publique américaine : 250 000 dollars par déposant. Grandes banques : moyenne pondérée des banques américaines de plus de 100 milliards de dollars d'actifs, hors les plus grandes.
+
+[Source : texte rédigé par l'enseignant d'après Réserve fédérale, *Review of the Federal Reserve's Supervision and Regulation of Silicon Valley Bank*, 28/04/2023, Table 1 et chronologie (la citation en est traduite), <https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf> ; É. Pichet, « Faillite de la Silicon Valley Bank : pourquoi les risques d'une nouvelle crise financière restent limités », *The Conversation*, 13/03/2023, <https://theconversation.com/faillite-de-la-silicon-valley-bank-pourquoi-les-risques-dune-nouvelle-crise-financiere-restent-limites-201650>.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 2"}
+**Garantir les dépôts : un plafond, et un débat**
+
+En France, si une banque fait faillite, le Fonds de garantie des dépôts et de résolution (FGDR) rembourse ses clients jusqu'à 100 000 € par client et par établissement bancaire, sous 7 jours ouvrables. Le fonds a été créé par la loi du 25 juin 1999, après la défaillance du Crédit martiniquais.
+
+Après la faillite de SVB, deux éclairages se complètent. Pour Caroline Perrin, Aurore Burietz et Jérémie Bertrand, une garantie illimitée des dépôts rassure à court terme, mais risque de rendre le système plus fragile à long terme : une banque qui se sait garantie est incitée à prendre plus de risques (aléa moral). Éric Pichet insiste, lui, sur la rapidité d'intervention de l'assureur public américain des dépôts, et note que les grandes banques, aux financements plus diversifiés, ont peu souffert.
+
+[Source : texte rédigé par l'enseignant d'après FGDR, « La garantie pour les comptes en cas de faillite bancaire » et « Histoire du FGDR », consultés le 21/10/2026, <https://www.garantiedesdepots.fr/fr/connaitre-mes-garanties/je-detiens-des-comptes-et-des-livrets-bancaires-quelles-sont-mes-garanties> et <https://www.garantiedesdepots.fr/fr/a-propos-du-fgdr/histoire-du-FGDR> ; C. Perrin, A. Burietz et J. Bertrand, « Garantir les dépôts bancaires de façon illimitée : une nouvelle arme contre les crises ? », *The Conversation*, 23/03/2023, <https://theconversation.com/garantir-les-depots-bancaires-de-facon-illimitee-une-nouvelle-arme-contre-les-crises-202278> ; É. Pichet, *The Conversation*, 13/03/2023 (document 1).]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 3"}
+**Deux chocs d'énergie, deux réponses de la BCE**
+
+| | 2022-2023 | 2026 |
+|-------------|--------------|------------|
+| Première hausse décidée | 21/07/2022 | 11/06/2026 |
+| Inflation le mois précédant la première hausse | 8,6 % (juin 2022) | 3,2 % (mai 2026) |
+| Inflation (π) | 10,6 % (oct. 2022) ; 2,9 % (oct. 2023) | 3,8 % (sept. 2026) |
+| Prix de l'énergie, sur un an | 41,5 % (oct. 2022) | 18,9 % (sept. 2026) |
+| Inflation hors énergie | 6,9 % (oct. 2022) | 2,3 % (sept. 2026) |
+| Hors énergie et alimentation | 5,0 % (oct. 2022) | 2,5 % (sept. 2026) |
+| Taux de dépôt (i) | 0,75 % (oct. 2022) ; 4,00 % (oct. 2023) | 2,50 % (sept. 2026) |
+| Hausses du taux de dépôt | de −0,50 % à 4,00 % (10 hausses) | de 2,00 % à 2,50 % (2 hausses) |
+
+Inflation : hausse sur un an des prix à la consommation de la zone euro (IPCH).
+
+[Source : BCE, « Key ECB interest rates », consulté le 21/10/2026, <https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html> ; Eurostat, « Annual inflation up to 3.8% in the euro area », communiqué du 16/10/2026, <https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-16102026-ap>, et jeu de données prc_hicp_minr, consulté le 21/10/2026.]{.wp-source}
+:::
+
+{{< pagebreak >}}
+
+::: {.wp-document data-label="Document 4"}
+**La BCE en septembre 2026 : agir tôt, sans s'engager**
+
+Le 10 septembre 2026, la BCE relève ses taux pour la deuxième fois de l'année. Elle explique que « plus les prix de l'énergie restent élevés, plus ils risquent de faire monter l'inflation au-delà » de l'énergie. Elle note que, « à ce stade », les salaires ne réagissent pas de façon notable au choc, et que les anticipations d'inflation à long terme se situent « autour de 2 % ». Elle prévoit une inflation de 3,0 % et une croissance de 0,9 % en 2026. Elle décidera « réunion par réunion ».
+
+En juin, l'AFP rappelait que la réaction de la BCE en 2022 avait été « jugée tardive ». Avant la décision, l'économiste Dirk Schumacher (KfW, banque publique allemande) estimait que la BCE devait « envoyer le signal aux marchés financiers, mais aussi aux entreprises et aux ménages ». Pour Éric Dor (IÉSEG, école de commerce), la hausse « risque d'amplifier la contraction de l'activité ».
+
+[Source : BCE, « Monetary policy statement », 10/09/2026, <https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html> (traduction de l'enseignant) ; AFP, « La BCE relève ses taux de 0,25 point face à l'inflation liée à la guerre en Iran », *La Libre*, 11/06/2026, <https://www.lalibre.be/economie/2026/06/11/la-bce-releve-ses-taux-de-025-point-face-a-linflation-liee-a-la-guerre-en-iran-QEZSADHVDNBKFHIHL4PXHGVTGM/>.]{.wp-source}
+:::
+
+## Questions sur les documents
+
+### Comprendre les documents
+
+1. **(Document 1)** Relevez deux différences entre le bilan de SVB et celui des grandes banques américaines. Combien de fois la part des dépôts non garantis est-elle plus forte chez SVB ? Quelle part de ses dépôts SVB perd-elle, ou s'attend-elle à perdre, en deux jours ?
+2. **(Document 3)** Calculez le taux d'intérêt réel ex post, r ≈ i − π, en octobre 2022, en octobre 2023 et en septembre 2026, en prenant le taux de dépôt pour i. Quand le taux réel est-il positif ? Que signifie un taux réel négatif pour celui qui emprunte ?
+3. **(Document 2)** Inès a 130 000 € sur son compte courant, dans une seule banque, qui fait faillite. Combien le FGDR lui rembourse-t-il, et dans quel délai ? Comment aurait-elle pu être couverte en entier ?
+
+### Mobiliser le cours
+
+4. **(Documents 1 et 2)** Avec le jeu de la panique du CM 6, expliquez comment SVB a pu disparaître en deux jours.
+   a. Pourquoi des obligations perdent-elles de la valeur quand les taux d'intérêt montent ?
+   b. Pourquoi les déposants de SVB avaient-ils intérêt à retirer leur argent les premiers ?
+   c. SVB a-t-elle manqué de liquidité, de solvabilité, ou des deux ? Justifiez avec la définition du cours.
+5. **(Documents 3 et 4)**
+   a. La BCE ne produit pas de pétrole. Par quelle chaîne une hausse de ses taux peut-elle ralentir la hausse des prix ? Tracez le schéma d'offre et de demande agrégées (Q en abscisse, P en ordonnée) : le choc d'énergie (O → O′), puis la hausse des taux (D → D′). Placez E, E′ et E″. Qu'est-ce que la hausse des taux coûte ?
+   b. Pourquoi la BCE a-t-elle relevé son taux de dépôt de 4,50 points en 2022-2023, mais de 0,50 point seulement en 2026 ? Appuyez-vous sur l'inflation hors énergie et sur la notion d'effets de second tour.
+
+### Argumenter
+
+::: {.methode}
+La question 7 demande un court paragraphe argumenté. La démarche (définir les termes, annoncer l'idée, l'appuyer sur un mécanisme et un exemple, conclure) est décrite dans la fiche [La dissertation économique](../methodo/dissertation.qmd) de la rubrique Méthodo.
+:::
+
+6. **(Document 2)** Un camarade affirme : « Il suffit de garantir tous les dépôts, sans plafond. Il n'y aura plus jamais de panique, et cela ne coûtera rien, puisque la garantie n'a même pas à servir. » Discutez ce raisonnement en quelques lignes.
+7. **(Documents 3 et 4)** « Relever les taux face à un choc pétrolier ne sert à rien : la BCE aurait dû attendre. » En une quinzaine de lignes, montrez d'abord ce que l'analyse du cours établit, puis ce qui relève d'un jugement, en présentant la position de deux écoles.
+
+## Exercice
+
+Les deux parties portent sur des cas **fictifs**, en nombres ronds. Tous les calculs se font à la main.
+
+### A. Un prêt, un paiement, un taux
+
+La banque Nord a le bilan suivant, en euros.
+
+| Actif | | Passif | |
+|---|---:|---|---:|
+| Réserves à la banque centrale | 500 | Dépôts des clients | 4 500 |
+| Crédits accordés | 4 500 | Fonds propres | 500 |
+| **Total** | **5 000** | **Total** | **5 000** |
+
+1. La banque Nord prête 2 000 € à une boulangerie, qui veut acheter un four. Écrivez le bilan juste après le prêt, avant tout paiement. Combien de monnaie a été créée ? Un autre client a-t-il vu son compte baisser ?
+2. La boulangerie paie son four à un fournisseur, client de la banque Sud. La banque Nord doit transférer 2 000 € de réserves à la banque Sud, et elle veut garder au moins 500 € de réserves. Combien doit-elle emprunter à la banque centrale ? Écrivez son bilan après le paiement, en ajoutant au passif une ligne « Emprunt à la banque centrale ». La monnaie créée à la question 1 a-t-elle disparu ?
+3. La banque centrale prête ces réserves à son taux directeur. Calculez ce que l'emprunt coûte à la banque Nord sur un an si ce taux vaut 2 %, puis 4 %. Expliquez pourquoi une hausse du taux directeur freine la création monétaire.
+4. Un an plus tard, la boulangerie a reçu 2 000 € de ses clients sur son compte à la banque Nord et rembourse son prêt (on oublie les intérêts). Que devient la monnaie créée à la question 1 ?
+
+### B. Taux réel et règle de Taylor
+
+1. Vous prêtez 1 000 € pour un an au taux nominal i = 3 %.
+   a. Combien recevez-vous dans un an ?
+   b. Les prix augmentent de π = 5 %. Combien vous faudrait-il pour acheter ce que 1 000 € achetaient ? Quel est le taux réel approché r ?
+   c. Même question si π = 1 %. Dans chaque cas, qui gagne : le prêteur ou l'emprunteur ?
+2. Avec un écart de production nul, la règle de Taylor s'écrit i = 1 + 1,5 × π. Calculez le taux conseillé pour π = 2 % puis pour π = 6 %, et le taux réel i − π dans chaque cas. Quand l'inflation monte de 4 points, de combien le taux conseillé monte-t-il ? Pourquoi la règle demande-t-elle de monter plus que l'inflation ?
+3. **(Document 3)** Calculez le taux conseillé par la règle en septembre 2026, avec l'inflation d'ensemble (3,8 %), puis avec l'inflation hors énergie (2,3 %). Comparez-les au taux de dépôt de la BCE (2,50 %). Donnez deux raisons, tirées du cours, de ne pas appliquer la règle telle quelle.

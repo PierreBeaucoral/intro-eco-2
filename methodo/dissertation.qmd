@@ -1,0 +1,8 @@
+---
+title: "La dissertation économique"
+subtitle: "Problématiser, construire un plan, argumenter"
+---
+
+::: {.wp-avenir}
+La fiche méthode sera publiée avant le TD 1.
+:::

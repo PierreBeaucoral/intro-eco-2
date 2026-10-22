@@ -1,0 +1,36 @@
+---
+title: "Introduction à l'économie 2"
+toc: false
+body-classes: wp-accueil
+listing:
+  id: sommaire
+  contents: cours/cm*.qmd
+  sort: "cm"
+  template: assets/sommaire.ejs
+  fields: [title, description, cm, partie]
+---
+
+::: {.wp-titre}
+[Licence 1 AES et Droit · Semestre 2 · 2026-2027]{.wp-kicker}
+
+# Introduction à l'économie 2 {.unnumbered .unlisted}
+
+[[Pierre Beaucoral](https://pierrebeaucoral.github.io/)]{.wp-auteur}
+
+[ATER en économie, Université Clermont Auvergne · cours magistral]{.wp-affil}
+
+[[Programme](programme.qmd){.wp-btn .is-plein} [Travaux dirigés](td.qmd){.wp-btn}]{.wp-boutons}
+:::
+
+::: {.wp-resume}
+[Résumé]{.wp-resume-titre}
+
+Ce cours aborde dix questions de société, de la flambée des carburants aux droits de douane. Chaque séance part d'une question, s'appuie sur une théorie économique de référence, construit des outils simples et se termine par une controverse.
+
+[**Mots-clés :** prix, élasticité, réglementation, externalités, monnaie, inflation, dette publique, commerce, climat.]{.wp-mots}
+:::
+
+## Sommaire {.unnumbered}
+
+::: {#sommaire}
+:::

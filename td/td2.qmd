@@ -1,0 +1,131 @@
+---
+title: "TD 2 · Le tabac : élasticité et incidence"
+description: "CM 2"
+seance: 2
+---
+
+::: {.wp-entete}
+Séance 2 sur 8
+
+Durée : 2 h
+
+Porte sur : CM 2
+:::
+
+## Objectifs
+
+- **Calculer** l'effet d'une hausse de prix sur la quantité et sur la dépense à partir d'une élasticité, et vérifier un chiffre publié.
+- **Déterminer** qui supporte une taxe, sur un graphique puis par le calcul, et expliquer pourquoi le partage dépend des élasticités et non de celui qui verse la taxe.
+- **Argumenter** sur la hausse du prix du tabac en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+
+## À préparer avant la séance
+
+- Relire la page du [CM 2](../cours/cm2.qmd), en particulier les définitions et les deux premiers exemples chiffrés.
+- Lire les documents 1 à 4 et répondre par écrit aux questions 1 à 6. Les questions 7 et 8 et l'exercice se traitent en séance.
+- Tous les calculs du TD se font à la main. Quand un énoncé dit « environ », un arrondi raisonnable suffit.
+
+::: {.methode}
+Les questions 7 et 8 demandent un court paragraphe argumenté qui sépare le positif du normatif. La démarche (définir les termes, annoncer l'idée, l'appuyer sur un mécanisme et un exemple, conclure) est décrite dans la fiche [La dissertation économique](../methodo/dissertation.qmd) de la rubrique Méthodo.
+:::
+
+## Les documents
+
+::: {.wp-document data-label="Document 1"}
+**Une demande peu sensible au prix**
+
+« Selon une publication de Santé Publique France, l'élasticité-prix de la demande de tabac était de −0,4 entre 2000 et 2015. Cela signifie que lorsque les prix du tabac augmentent de 1 %, la demande de tabac diminue de 0,4 %, toutes choses égales par ailleurs. Autrement dit, il faudrait, selon ce calcul, augmenter le prix du tabac de 20 % pour en réduire les ventes de 10 %. Les études les plus récentes situent d'ailleurs cette élasticité dans une fourchette assez proche, entre −0,3 et −0,4. »
+
+[Source : *La finance pour tous*, « Augmenter le prix des cigarettes est-il un bon moyen de réduire la consommation de tabac ? », mis à jour le 24/07/2026, <https://www.lafinancepourtous.com/juniors/lyceens/boite-a-outils-de-leconomiste/augmenter-le-prix-des-cigarettes-est-il-un-bon-moyen-de-reduire-la-consommation-de-tabac> (extrait, consulté le 21/10/2026).]{.wp-source}
+:::
+
+{{< pagebreak >}}
+
+::: {.wp-document data-label="Document 2"}
+**Vingt-cinq ans de tabac en France**
+
+*Tableau A. Tabac et prix à la consommation en France (indices, base 100 en 2000)*
+
+| | 2000 | 2025 |
+|---|---|---|
+| Prix du tabac | 100 | 459 |
+| Quantités achetées (volume) | 100 | 36 |
+| Dépense des ménages en tabac (euros courants) | 100 | 164 |
+| Prix à la consommation, ensemble des biens et services | 100 | 159 |
+
+*Tableau B. Recette du droit de consommation sur les tabacs (accises, hors TVA), France continentale, en milliards d'euros courants*
+
+| 1991 | 2019 | 2020 | 2025 |
+|---|---|---|---|
+| 3,26 | 12,60 | 14,35 | 12,74 |
+
+En 2020, les frontières ont été fermées pendant plusieurs semaines à cause du Covid. En euros constants, c'est-à-dire corrigée de l'inflation, la recette de 2025 est inférieure d'environ 13 % à celle de 2019.
+
+[Source : tableau A, Insee, comptes nationaux annuels base 2020, dépense de consommation finale des ménages en produits à base de tabac (séries 011782481, 011782482 et 011782483, mise à jour du 29/05/2026), <https://www.insee.fr/fr/statistiques/serie/011782483> ; dernière ligne : Eurostat, indice des prix à la consommation harmonisé (IPCH) de la France, moyenne annuelle, jeu `prc_hicp_aind`, mis à jour le 06/02/2026, <https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_aind/default/table>. Mise en indices base 100 en 2000 par l'enseignant. Tableau B : C. Hill, *Impact de l'augmentation des prix sur la consommation de tabac*, ex-Institut Gustave Roussy, 2026, tableau 6, <https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf>.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 3"}
+**Les ventes légales ne sont pas la consommation**
+
+En 2025, le réseau des buralistes de métropole a vendu 30 165 tonnes de tabac, contre 32 846 tonnes en 2024 : « les volumes de tabac vendus dans le réseau des buralistes ont diminué de 8,2 % », selon l'Observatoire français des drogues et des tendances addictives (OFDT). Les départements frontaliers sont moins touchés par cette baisse que les années précédentes : la Belgique et le Luxembourg ont relevé leurs taxes, ce qui réduit l'avantage d'y acheter.
+
+L'OFDT rappelle que « les volumes de tabac vendus renvoient à trois catégories : les ventes légales chez les buralistes, les ventes légales à l'étranger ou en duty free, et celles illégales. Seules les premières font l'objet d'un suivi régulier ». En 2025, les volumes de cigarettes saisis par les douanes augmentent de 24,5 %.
+
+Une étude citée par le ministère, sur une période que la réponse ne précise pas, « estime la part des produits du tabac échappant au réseau des buralistes à 17,7 % en moyenne pour un volume moyen de tabac échappant à la fiscalité de 8 081 tonnes, soit 4,3 milliards d'euros échappant à la fiscalité du tabac en France ». Le gouvernement ajoute que la lutte contre la contrebande est « une priorité majeure de la douane ».
+
+[Source : texte rédigé par l'enseignant d'après AFP, « Tabagisme à des niveaux "toujours plus bas" en France, chute des ventes chez les buralistes », *CB News*, 28/05/2026, <https://www.cbnews.fr/node/101206> ; et réponse du ministère de l'Action et des Comptes publics à la question écrite n° 04515, *JO Sénat*, 26/02/2026, <https://www.senat.fr/questions/base/2025/qSEQ250504515.html>. Les passages entre guillemets en sont extraits.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 4"}
+**Qui fume encore ?**
+
+Chez les jeunes, le recul est spectaculaire : 30,8 % des lycéens fumaient tous les jours en 2010, 5,6 % en 2024. Mais il est inégal. « À 17 ans, le tabagisme quotidien touche deux fois plus souvent les jeunes de filière professionnelle que ceux scolarisés en filière générale ou technologique (22,1 % contre 10,1 %) et encore plus souvent les apprentis (38,4 %) ».
+
+Chez les adultes, la part de fumeurs a continué d'augmenter chez les chômeurs jusqu'en 2016, alors qu'elle baissait chez les actifs occupés et les étudiants. Les jeunes sont plus sensibles au prix que leurs aînés. En théorie, les ménages modestes devraient eux aussi réagir davantage au prix, mais les données françaises disponibles ne le montrent pas. Selon l'Organisation mondiale de la santé (OMS), la taxe sur le tabac peut devenir « un outil de politique publique favorable aux pauvres » si une partie de la recette finance l'aide à l'arrêt du tabac des ménages modestes.
+
+[Source : texte rédigé par l'enseignant d'après I. Obradovic, « Alcool, tabac, cannabis : les jeunes se sont-ils vraiment détournés des drogues ? », *The Conversation*, 25/07/2026, <https://theconversation.com/alcool-tabac-cannabis-les-jeunes-se-sont-ils-vraiment-detournes-des-drogues-286189> (la citation sur les 17 ans en est extraite ; ses chiffres viennent de l'enquête ESCAPAD de l'OFDT, menée en mars 2022) ; AFP, *CB News*, 28/05/2026 (voir document 3) pour les lycéens ; C. Hill (2026, voir document 2), § 2.4 et § 4.3, et § 7.6 pour la citation de l'OMS (2012).]{.wp-source}
+:::
+
+## Questions sur les documents
+
+### Comprendre les documents
+
+1. **(Document 1)** Que signifie une élasticité-prix de −0,4 ? Avec cette élasticité, de combien les ventes baissent-elles quand le prix augmente de 20 % ? Le calcul du document (« augmenter le prix de 20 % pour réduire les ventes de 10 % ») est-il juste ? Sinon, de combien faudrait-il augmenter le prix pour réduire les ventes de 10 % ?
+2. **(Document 2, tableau A)** Que signifient les nombres 459, 36 et 164 ? Par combien le prix du tabac a-t-il été multiplié entre 2000 et 2025 ? De combien, en pourcentage, les quantités achetées ont-elles baissé ?
+3. **(Document 3)** Pourquoi la baisse de 8,2 % des ventes des buralistes ne mesure-t-elle pas exactement la baisse de la consommation de tabac ? Relevez deux formes d'achat qui échappent au réseau et deux chiffres qui donnent une idée de leur ampleur.
+
+### Mobiliser le cours
+
+4. **(Document 2, tableau A)**
+   a. La dépense des ménages en tabac a augmenté de 64 % alors que les quantités achetées ont baissé. D'après le cours, qu'est-ce que cela suggère sur l'élasticité de la demande ?
+   b. Les prix en général ont augmenté de 59 % sur la même période. Calculez, environ, par combien le prix réel du tabac (corrigé de l'inflation) a été multiplié, puis l'évolution de la dépense corrigée de l'inflation (arrondissez 159 à 160 si besoin). La conclusion de la question a tient-elle ? Comment la théorie de l'addiction rationnelle de Becker et Murphy explique-t-elle ce résultat, et pourquoi faut-il rester prudent ?
+5. **(Documents 2, tableau B, et 3)** Vérifiez que la recette du droit de consommation a été multipliée par plus de 4 entre 1991 et 2020. Expliquez cette hausse à l'aide de l'élasticité de la demande. Pourquoi l'année 2020 est-elle une mauvaise base de comparaison ? Proposez deux lectures de l'évolution de la recette entre 2019 et 2025.
+6. **(Cours)** Le droit de consommation est versé à l'État par les vendeurs. Tracez le graphique de l'incidence d'une taxe unitaire t sur le marché du tabac : la demande D, l'offre O et l'offre taxée O′, les équilibres E (P\*, Q\*) et E′ (P\*′, Q\*′), le prix gardé par le vendeur P\*′ − t. Qui supporte l'essentiel de la taxe ? Pourquoi ?
+
+### Argumenter
+
+7. **(Document 4)** Un camarade affirme : « La taxe sur le tabac frappe d'abord les plus modestes : c'est donc une mauvaise taxe. » Discutez cette affirmation en quelques lignes, en séparant ce qui est établi de ce qui relève d'un jugement.
+8. **(Ensemble des documents)** « Le tabac est une drogue : augmenter son prix ne fait pas arrêter de fumer, cela remplit seulement les caisses de l'État. » En une quinzaine de lignes, montrez d'abord ce que l'analyse du cours établit, puis ce qui relève d'un jugement.
+
+## Exercice
+
+Les deux parties portent sur des marchés **fictifs**, en nombres ronds. Tous les calculs se font à la main.
+
+### A. Qui paie une taxe de 4 € par paquet ?
+
+Sur un marché fictif du tabac, Q est en millions de paquets par an et P en euros. La demande s'écrit Q = 120 − 4 P et l'offre Q = 12 P − 40.
+
+1. Vérifiez que l'équilibre sans taxe est P\* = 10 € et Q\* = 80 millions de paquets. En partant de cet équilibre, calculez l'élasticité-prix de la demande e et l'élasticité de l'offre quand le prix monte de 1 €.
+2. L'État crée une taxe t = 4 € par paquet, versée par le vendeur. Écrivez la nouvelle offre O′. Calculez le nouvel équilibre : le prix payé par l'acheteur P\*′, la quantité Q\*′ et le prix gardé par le vendeur. Représentez D, O et O′ sur un graphique.
+3. Sur les 4 € de taxe, combien pèsent sur les acheteurs et combien sur les vendeurs ? Vérifiez votre résultat avec la règle du cours : part payée par les acheteurs = élasticité de l'offre ÷ (élasticité de l'offre + |e|).
+4. Calculez la recette fiscale, puis la dépense des acheteurs avant et après la taxe, et sa variation en pourcentage.
+5. La taxe est désormais versée par l'acheteur, et non plus par le vendeur. Quelle courbe se déplace, et de combien ? Calculez le prix reçu par le vendeur et le prix total payé par l'acheteur. Que retenez-vous ?
+6. *Pour aller plus loin, si le temps le permet (non noté).* Une autre demande, Q = 200 − 12 P, passe aussi par l'équilibre sans taxe, avec e = −1,5. Avec la même taxe de 4 € versée par le vendeur, calculez le nouvel équilibre, le partage de la taxe et la recette fiscale. Comparez avec les questions 2 à 4.
+
+### B. Court terme, long terme et fuites
+
+Sur un autre marché fictif, 200 millions de paquets sont fumés chaque année au prix de 10 €. Le prix passe durablement à 11 €. On suppose d'abord que tous les paquets sont achetés en France, au prix affiché.
+
+1. Calculez la variation du prix en pourcentage. L'élasticité-prix de la demande vaut −0,3 la première année et −0,7 au bout de plusieurs années. Calculez la consommation la première année, puis au bout de plusieurs années.
+2. Calculez la dépense des fumeurs avant la hausse, la première année et au bout de plusieurs années, et ses variations en pourcentage. Pourquoi la dépense augmente-t-elle moins à long terme ?
+3. Pourquoi la demande d'un bien addictif est-elle plus élastique à long terme qu'à court terme ?
+4. Au bout de plusieurs années, les buralistes ne vendent plus que 180 millions de paquets : les 6 millions de paquets qui manquent pour arriver à la consommation de la question 1 sont achetés à l'étranger ou en contrebande. Calculez la variation en pourcentage des ventes des buralistes, puis l'élasticité que l'on obtiendrait en la calculant sur ces seules ventes. Comparez avec l'élasticité de la consommation. Si chaque paquet vendu par les buralistes rapporte 8 € de taxes, combien l'État perd-il à cause de ces achats hors réseau ?

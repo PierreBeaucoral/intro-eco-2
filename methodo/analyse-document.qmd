@@ -1,0 +1,8 @@
+---
+title: "L'analyse d'un texte ou d'un document"
+subtitle: "Lire, extraire, mobiliser le cours"
+---
+
+::: {.wp-avenir}
+La fiche méthode sera publiée avant le TD 1.
+:::

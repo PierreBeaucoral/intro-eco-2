@@ -1,0 +1,32 @@
+/*-- scss:defaults --*/
+// Working Paper · thème sombre. Mêmes noms que theme-light.scss.
+// Contrastes sur #0F1115 : encre 15.6:1, encre-2 7.4:1, accent 7.3:1, offre 8.6:1, rouge 6.6:1.
+$wp-papier:  #0F1115;
+$wp-carte:   #161A20;
+$wp-encre:   #E8EAED;
+$wp-encre-2: #9AA3AE;
+$wp-filet:   #2A2F37;
+$wp-accent:  #4DA3FF;
+$wp-sur-accent: #0F1115;
+$wp-offre:   #F0A35E;
+$wp-rouge:   #F97066;
+$wp-teinte:  #152033;
+
+$body-bg: $wp-papier;
+$body-color: $wp-encre;
+$body-secondary: $wp-encre-2;
+$primary: $wp-accent;
+$secondary: $wp-encre-2;
+$danger: $wp-rouge;
+$link-color: $wp-accent;
+$border-color: $wp-filet;
+$navbar-bg: $wp-papier;
+$navbar-fg: $wp-encre;
+$navbar-hl: $wp-accent;
+$footer-bg: $wp-papier;
+$footer-fg: $wp-encre-2;
+$toc-color: $wp-encre-2;
+$text-muted: $wp-encre-2;
+$code-color: $wp-encre;
+$code-bg: $wp-teinte;
+$table-border-color: $wp-filet;

@@ -1,0 +1,24 @@
+# Réglages communs aux pages de cours (une page par CM : poly et fiche de révision)
+author:
+  - name: "Pierre Beaucoral"
+    url: "https://pierrebeaucoral.github.io/"
+    affiliation: "ATER en économie, Université Clermont Auvergne"
+number-sections: true
+body-classes: wp-cours
+knitr:
+  opts_chunk:
+    dev: ragg_png
+    dpi: 150
+    fig-align: center
+# Sortie PDF (Typst), gabarit Working Paper : assets/typst/ (même bloc dans td/_metadata.yml)
+format:
+  html:
+    format-links:   # « html » seul masque les liens par défaut (« Typst »)
+      - html
+      - format: typst
+        text: "Télécharger le PDF"
+        icon: file-pdf
+  typst:
+    template-partials: [../assets/typst/typst-template.typ, ../assets/typst/typst-show.typ]
+    filters: [../assets/typst/wp-typst.lua]
+    font-paths: [../assets/fonts]

@@ -1,0 +1,17 @@
+---
+title: "TD 4 · Contrôle continu 1"
+description: "CM 1 à 4"
+seance: 4
+---
+
+::: {.wp-entete}
+Séance 4 sur 8
+
+Durée : 2 h
+
+Évaluation : [CC]{.wp-cc}
+:::
+
+::: {.wp-avenir}
+Contrôle continu sur table, en séance de TD. Il porte sur les CM 1 à 4. Les modalités seront précisées ici.
+:::

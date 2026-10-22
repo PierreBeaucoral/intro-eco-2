@@ -1,0 +1,175 @@
+---
+title: "TD 1 · Ormuz et le prix des carburants"
+description: "CM 1"
+seance: 1
+---
+
+::: {.wp-entete}
+Séance 1 sur 8
+
+Durée : 2 h
+
+Porte sur : CM 1
+:::
+
+## Objectifs
+
+- **Calculer** une variation en pourcentage et une élasticité-prix de la demande à partir d'un tableau.
+- **Expliquer** une hausse de prix en disant quelle courbe se déplace, et pourquoi : déplacement de l'offre ou de la demande, ou mouvement le long d'une courbe ; montrer ce que provoque un prix plafonné au-dessous de l'équilibre.
+- **Argumenter** sur une mesure publique en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+
+## À préparer avant la séance
+
+- Relire la page du [CM 1](../cours/cm1.qmd), en particulier les définitions et les deux exemples chiffrés.
+- Lire les documents 1 à 4 et répondre par écrit aux questions 1 à 6. La question 7, le plan de la question 8 et l'exercice se traitent en séance ; la question 8 se rédige ensuite à la maison.
+- Tous les calculs du TD sont faisables à la main, en nombres ronds.
+
+::: {.methode}
+La question 8 demande un court paragraphe argumenté. Le TD ne refait pas de cours de méthode : la démarche (définir les termes, annoncer l'idée, l'appuyer sur un mécanisme et un exemple, conclure) est décrite dans la fiche [La dissertation économique](../methodo/dissertation.qmd) de la rubrique Méthodo. Lisez-la avant la séance.
+:::
+
+## Les documents
+
+Les références complètes des documents, avec leurs liens, sont données à la fin du sujet.
+
+::: {.wp-document data-label="Document 1"}
+**Prix moyen du litre de carburant en France en 2026 (en euros, toutes taxes comprises)**
+
+| Semaine du | 23 février | 13 avril | 6 juillet | 21 septembre | 12 octobre |
+|---|---|---|---|---|---|
+| Euro-super 95 | 1,71 | 2,04 | 1,92 | 2,22 | 2,21 |
+| Gazole | 1,65 | 2,31 | 1,86 | 2,38 | 2,33 |
+
+Le détroit d'Ormuz est fermé de fait à partir du 28 février 2026. Les prix sont des moyennes nationales pondérées, relevées chaque semaine, et non des prix de station ; ils sont arrondis au centime.
+
+[Source : Commission européenne, *Weekly Oil Bulletin*, prix à la consommation avec taxes, France, consulté le 21/10/2026 ; conversion en euros par litre par l'enseignant.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 2"}
+**Deux chocs successifs**
+
+Le 28 février 2026, la guerre entre les États-Unis et Israël d'un côté et l'Iran de l'autre ferme de fait le détroit d'Ormuz, « par lequel transite environ un cinquième du pétrole et du gaz liquéfié au niveau mondial ». Avant la guerre, l'Agence internationale de l'énergie (AIE) prévoyait pour 2026 un excès d'offre de 3,7 millions de barils par jour. Le 12 mars, l'AIE prévoit au contraire une baisse de la production mondiale de 8 millions de barils par jour pour le mois de mars. Le baril de Brent passe de 71,66 \$ le 26 février à 118,42 \$ le 20 mars.
+
+Le gazole est touché deux fois. L'Europe importe une partie de son gazole déjà raffiné dans le Golfe : son prix augmente donc plus que ne le voudrait la seule hausse du pétrole brut. Fin juillet, la Russie décide un moratoire sur ses exportations de diesel ; fin août, les hostilités reprennent entre l'Iran et les États-Unis et des raffineries sont endommagées.
+
+[Source : texte rédigé par l'enseignant d'après Insee, *Note de conjoncture*, 24/03/2026 (citation entre guillemets) et 17/06/2026 ; AFP, *Connaissance des Énergies*, 10/09/2026 ; Brent : EIA, *Europe Brent Spot Price FOB*, consulté le 21/10/2026.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 3"}
+**Les automobilistes réduisent peu leur consommation à court terme**
+
+L'Insee a mesuré, à partir des paiements par carte bancaire dans les stations entre septembre 2021 et janvier 2023, comment la consommation de carburant réagit au prix à court terme.
+
+| Groupe d'automobilistes | Élasticité-prix de court terme |
+|---|---|
+| Ensemble | entre −0,40 et −0,21 |
+| Quart qui consomme le moins (« petits rouleurs ») | −1,06 |
+| Quart qui consomme le plus (« gros rouleurs ») | −0,32 |
+| Selon le revenu | l'élasticité « varie peu selon le revenu » |
+| Selon le lieu de vie | −0,47 en zone rurale, −0,41 en zone urbaine |
+
+Chaque valeur par groupe est estimée à part : elle peut sortir de la fourchette de l'ensemble.
+
+Près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains.
+
+[Source : Insee, « Comment les automobilistes ajustent leur consommation de carburant aux variations de prix à court terme », *Insee Analyses* n° 86, 06/07/2023 ; dernière phrase : AFP, *Connaissance des Énergies*, mis à jour le 23/09/2026.]{.wp-source}
+:::
+
+::: {.wp-document data-label="Document 4"}
+**Une ruée, un effondrement, des stations à sec**
+
+Les 2 et 3 mars 2026, alors que les prix à la pompe ont encore peu bougé, plus de 6 millions de demandes d'autorisation de paiement par carte sont enregistrées dans les stations : c'est une « ruée anticipative ». En septembre, la consommation de carburant chute de 30 % en dix jours, du 11 au 20 septembre. Sur la même période, le litre de gazole passe d'environ 2,30 € (le 10 septembre) à un record de 2,41 € en moyenne nationale (le 20 septembre).
+
+Depuis le 22 juillet, TotalEnergies plafonne de nouveau ses prix dans ses quelque 3 300 stations de France hexagonale : le litre de sans-plomb 95 (SP95-E10) n'y dépasse pas 1,99 €, celui de gazole 2,25 €. Le 23 septembre, le SP95-E10 coûte en moyenne 2,16 € en France. Sa part de marché passe de 22 % habituellement à 25 % fin août, selon son PDG, puis dépasse 30 % en octobre, selon l'entreprise. Le 21 septembre, 17 % des stations françaises manquent d'au moins un carburant, et 91 % d'entre elles sont des stations Total.
+
+[Source : texte rédigé par l'enseignant d'après S. Collot, *The Conversation*, 13/10/2026 ; prix du 10 septembre (2,297 €, arrondi) : AFP, d'après les données gouvernementales, *Connaissance des Énergies*, 10/09/2026. Ces prix journaliers ne viennent pas de la même série que ceux du document 1. Second paragraphe : TotalEnergies, communiqués des 22/07 et 12/10/2026 ; AFP, *Connaissance des Énergies*, 29/08, 21/09 et 24/09/2026. Situation au 21/10/2026.]{.wp-source}
+:::
+
+## Questions sur les documents
+
+### Comprendre les documents
+
+1. **(Document 1)** Calculez, à l'unité près, la variation en pourcentage du prix de l'Euro-super 95 et du gazole entre la semaine du 23 février et celle du 12 octobre 2026. Quel carburant était le moins cher avant la fermeture du détroit ? Et le 12 octobre ?
+2. **(Document 2)** Pourquoi la fermeture d'un détroit situé à plusieurs milliers de kilomètres fait-elle monter le prix payé en France ? Relevez les causes propres à la hausse du gazole.
+3. **(Document 3)** Que signifie une élasticité de −0,32 pour les gros rouleurs ? Calculez la baisse de la consommation des gros rouleurs, puis des petits rouleurs, quand le prix augmente de 10 %.
+
+### Mobiliser le cours
+
+4. **(Document 2)** La fermeture d'Ormuz déplace-t-elle l'offre ou la demande ? Tracez le graphique du marché des carburants avant et après le choc. Indiquez la courbe qui se déplace (et dans quel sens), l'équilibre initial E (P\*, Q\*) et le nouvel équilibre E′ (P\*′, Q\*′). La demande a-t-elle baissé ?
+5. **(Documents 1 et 2)** Expliquez pourquoi le gazole, moins cher que l'essence avant la guerre, est devenu plus cher qu'elle.
+6. **Demande et plafond**
+   a. **(Document 4)** La ruée des 2 et 3 mars est-elle un mouvement le long de la courbe de demande ou un déplacement de cette courbe ? Justifiez.
+   b. **(Document 3)** Pourquoi la demande de carburant est-elle peu élastique à court terme, surtout pour les gros rouleurs ? Les actifs ruraux, qui vont au travail en voiture à près de 90 %, sont-ils moins sensibles au prix que les urbains ? La hausse les touche-t-elle pourtant davantage, et pourquoi ? Qu'en déduisez-vous sur la façon dont le choc se répartit entre le prix et la quantité ?
+   c. **(Document 4)** Le plafond de TotalEnergies sur le SP95-E10 est-il au-dessus ou au-dessous du prix d'équilibre ? En vous aidant du graphique de la question 4, expliquez pourquoi les ruptures se concentrent dans les stations Total. Qu'est-ce qui rationne les acheteurs à la place du prix ?
+
+### Argumenter
+
+7. **(Document 4)** Un camarade calcule : « La consommation baisse de 30 % quand le prix monte d'environ 5 %, donc l'élasticité vaut −6 : la demande de carburant est très élastique. » Discutez ce raisonnement en quelques lignes.
+8. **(Ensemble des documents)** « Il suffit de bloquer le prix du gazole à son niveau d'avant-guerre, 1,65 € le litre, pour régler le problème. » Montrez d'abord ce que l'analyse du cours établit sur les effets d'un tel blocage, puis ce qui relève d'un jugement. Le plan se construit en séance, au tableau ; rédigez-le ensuite à la maison, en une quinzaine de lignes.
+
+## Exercice
+
+Les deux parties portent sur des marchés **fictifs**, en nombres ronds. Tous les calculs se font à la main.
+
+### A. Qui fixe le prix du baril ?
+
+Quatre producteurs de pétrole fictifs vendent chacun au plus 10 millions de barils par jour (Mb/j). Leurs coûts marginaux sont constants.
+
+| Producteur | Golfe | U | V | W |
+|---|---|---|---|---|
+| Coût marginal Cm (\$ par baril) | 20 | 40 | 50 | 75 |
+| Capacité (Mb/j) | 10 | 10 | 10 | 10 |
+
+À court terme, la demande est fixe à 25 Mb/j, quel que soit le prix.
+
+1. Rangez les producteurs du moins cher au plus cher et dessinez l'escalier de l'offre O (Q en abscisse, P en ordonnée). Quel est le prix d'équilibre ? Qui produit, et combien ?
+2. Le producteur du Golfe ne peut plus exporter. Dessinez la nouvelle offre O′. Quel est le nouveau prix d'équilibre ? Calculez sa variation en pourcentage.
+3. Combien le producteur U gagne-t-il au-dessus de son coût sur chaque baril, avant puis après le choc ? Son coût a-t-il changé ?
+4. Après le choc, supposez que la demande soit de 32 Mb/j. Quel producteur fixe le prix ? Que se passe-t-il ?
+
+### B. De combien le prix monte-t-il ?
+
+Sur un marché fictif de gazole, P est en euros par litre ; toutes les quantités du tableau sont en millions de litres par jour.
+
+| Prix P (€/L) | Demande D | Offre O (avant) | Offre O′ (après) |
+|---|---|---|---|
+| 1,60 | 104 | 96 | 72 |
+| 1,80 | 100 | 100 | 76 |
+| 2,00 | 96 | 104 | 80 |
+| 2,20 | 92 | 108 | 84 |
+| 2,40 | 88 | 112 | 88 |
+| 2,60 | 84 | 116 | 92 |
+
+1. Quel est l'équilibre initial (P\*, Q\*) ?
+2. De combien l'offre diminue-t-elle à chaque prix ? Au prix P\*, quelle est la pénurie après le choc ?
+3. Quel est le nouvel équilibre (P\*′, Q\*′) ? Représentez D, O et O′ sur un même graphique.
+4. Calculez la variation en pourcentage du prix et de la quantité, puis l'élasticité-prix de la demande e entre les deux équilibres. La demande est-elle peu élastique ?
+5. L'offre a perdu 24 millions de litres à chaque prix, mais la quantité échangée a baissé de moins. Expliquez cet écart.
+6. Calculez la dépense totale des acheteurs (P × Q) avant et après le choc, et sa variation en pourcentage.
+7. Une autre demande, plus élastique, passe aussi par l'équilibre initial : à 1,60 ; 1,80 ; 2,00 ; 2,20 ; 2,40 et 2,60 €, on demande 108, 100, 92, 84, 76 et 68 millions de litres. Avec la même offre O′, trouvez le nouvel équilibre et comparez la hausse du prix avec celle de la question 4. Que retenez-vous ?
+
+## Sources des documents
+
+**Document 1.** Commission européenne, *Weekly Oil Bulletin*, prix à la consommation avec taxes, France, fichier historique, consulté le 21/10/2026, <https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en>.
+
+**Document 2.**
+
+- Insee, « Énergie et matières premières », *Note de conjoncture*, 24/03/2026, <https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf>.
+- Insee, « L'industrie tient la barre, les ménages accusent le coup », *Note de conjoncture*, 17/06/2026, <https://www.insee.fr/fr/statistiques/fichier/9007948/ndc-juin-2026.pdf>.
+- AFP, « Le diesel flambe sous la pression d'Ormuz et des raffineries russes », *Connaissance des Énergies*, 10/09/2026, <https://www.connaissancedesenergies.org/afp/detroit-dormuz-russie-houthis-les-raisons-de-la-nouvelle-flambee-du-diesel-260910>.
+- EIA, *Europe Brent Spot Price FOB*, série quotidienne, consulté le 21/10/2026, <https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=D>.
+
+**Document 3.**
+
+- Insee, « Comment les automobilistes ajustent leur consommation de carburant aux variations de prix à court terme », *Insee Analyses* n° 86, 06/07/2023, <https://www.insee.fr/fr/statistiques/7645853>.
+- AFP, « La flambée du pétrole et du gaz fragilise les ménages français », *Connaissance des Énergies*, mis à jour le 23/09/2026, <https://www.connaissancedesenergies.org/afp/carburants-gaz-fioul-lexposition-des-menages-francais-a-la-hausse-des-prix-260923>.
+
+**Document 4.**
+
+- S. Collot, « Ruée anticipative début mars, puis effondrement en septembre : comment expliquer la consommation de carburant en France en 2026 ? », *The Conversation*, 13/10/2026, <https://theconversation.com/ruee-anticipative-debut-mars-puis-effondrement-en-septembre-comment-expliquer-la-consommation-de-carburant-en-france-en-2026-293608>.
+- AFP, *Connaissance des Énergies*, 10/09/2026 (prix du 10 septembre) : voir document 2.
+- TotalEnergies, communiqué du 22/07/2026, <https://totalenergies.com/newsroom/compte-tenu-de-la-reprise-du-conflit-au-moyen-orient-totalenergies-remet-en-place-le-plafonnement-sur-lessence-a-199-eurl-dans-toutes-ses-stations-service-en-france/?lang=fra>.
+- TotalEnergies, communiqué du 12/10/2026, <https://totalenergies.com/newsroom/diesel-en-france-totalenergies-sengage-a-restituer-aux-francais-lavantage-lie-a-la-liberation-de-stocks-strategiques-de-diesel/?lang=fra>.
+- AFP, *Connaissance des Énergies*, 29/08/2026 (part de marché selon le PDG), <https://www.connaissancedesenergies.org/afp/prix-des-carburants-totalenergies-maintiendra-son-plafonnement-tant-que-le-conflit-durera-assure-son-pdg-260829>.
+- AFP, *Connaissance des Énergies*, 21/09/2026 (ruptures, d'après le ministre de l'Économie), <https://www.connaissancedesenergies.org/afp/carburants-pas-denjeu-dapprovisionnement-a-ce-stade-en-france-assure-lescure-260921>.
+- AFP, *Connaissance des Énergies*, 24/09/2026 (prix moyen du 23 septembre), <https://www.connaissancedesenergies.org/afp/carburants-face-a-une-crise-jamais-vue-les-stations-service-ont-le-blues-260924>.

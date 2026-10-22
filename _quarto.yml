@@ -1,0 +1,77 @@
+# Introduction à l'économie 2 · site du cours (design « Working Paper »)
+# Rendu local : quarto render · Publication : quarto publish gh-pages
+# Seuls les fichiers listés sous `render` sont publiés : design/, quality_reports/,
+# _archive_*/, _templates/ et _drafts/ ne partent jamais en ligne.
+project:
+  type: website
+  output-dir: _site
+  execute-dir: project
+  render:
+    - index.qmd
+    - programme.qmd
+    - cours.qmd
+    - td.qmd
+    - cours/*.qmd
+    - slides/*.qmd
+    - td/*.qmd
+    - methodo/*.qmd
+
+lang: fr
+language:
+  title-block-author-single: "Auteur"
+  title-block-author-plural: "Auteurs"
+  title-block-affiliation-single: "Affiliation"
+crossref:
+  title-delim: " :"
+  tbl-title: "Tableau"   # le PDF Typst écrit « Table » sinon
+date-format: "D MMMM YYYY"
+
+execute:
+  echo: false
+  warning: false
+  message: false
+  freeze: auto
+
+website:
+  title: "Introduction à l'économie 2"
+  description: "Licence 1 AES et Droit · Semestre 2 · Pierre Beaucoral"
+  site-url: "https://pierrebeaucoral.github.io/intro-eco-2/"
+  favicon: assets/logo.svg
+  page-navigation: true
+  back-to-top-navigation: true
+  search:
+    location: navbar
+    type: overlay
+  navbar:
+    logo: assets/logo.svg
+    logo-alt: "Accueil du cours"
+    title: "Introduction à l'économie 2"
+    left:
+      - text: Accueil
+        href: index.qmd
+      - text: Programme
+        href: programme.qmd
+      - text: Cours
+        href: cours.qmd
+      - text: TD
+        href: td.qmd
+      - text: Méthodo
+        href: methodo/index.qmd
+  page-footer:
+    left: "Introduction à l'économie 2 · L1 AES et Droit · [Pierre Beaucoral](https://pierrebeaucoral.github.io/)"
+    right: "Semestre 2 · 2026-2027"
+
+format:
+  html:
+    theme:
+      light: [default, assets/theme-light.scss, assets/components.scss]
+      dark: [default, assets/theme-dark.scss, assets/components.scss]
+    respect-user-color-scheme: true
+    include-in-header: assets/fonts.html
+    toc: true
+    toc-title: "Sur cette page"
+    toc-depth: 2
+    smooth-scroll: true
+    html-math-method: mathjax
+    fig-responsive: true
+    lightbox: false

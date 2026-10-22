@@ -1,0 +1,80 @@
+---
+title: "La crise d'Ormuz : pourquoi les carburants ont-ils flambé ?"
+subtitle: "CM 1 · Partie I · Marchés, prix et régulations"
+description: "Choc d'offre, coût marginal des producteurs, demande peu élastique à court terme."
+cm: 1
+partie: "Partie I · Marchés, prix et régulations"
+---
+
+```{r}
+#| include: false
+source(here::here("R/theme_cours.R"))
+source(here::here("R/cmN.R"))   # remplacer N
+```
+
+::: {.rappel}
+**Offre et demande** : la quantité offerte augmente avec le prix, la quantité demandée diminue ; l'équilibre est le prix où elles s'égalisent. **Toutes choses égales par ailleurs** : on fait varier une seule cause à la fois.
+:::
+
+## La question
+
+Un paragraphe d'accroche : le fait, daté et sourcé, et la question à laquelle la séance répond.
+
+## Ce que dit la théorie
+
+::: {.auteur}
+**Alfred Marshall** (1890), *Principles of Economics* : le prix d'équilibre égalise les quantités offertes et demandées ; on raisonne marché par marché.
+:::
+
+::: {#def-choc-offre}
+## Choc d'offre
+Événement qui modifie la quantité que les producteurs veulent vendre à chaque prix : la courbe d'offre se déplace.
+:::
+
+## Les outils
+
+```{r}
+#| label: fig-choc-offre
+#| fig-cap: "Un choc d'offre négatif : l'offre se déplace vers la gauche, le prix d'équilibre monte. Graphique théorique."
+#| fig-alt: "Courbe de demande décroissante, courbe d'offre croissante, et une seconde courbe d'offre en tirets plus haute ; le nouvel équilibre a un prix plus élevé et une quantité plus faible."
+graphe_offre_demande(choc_offre = 2)
+```
+
+::: {#exm-ormuz}
+## Un calcul simple
+Exemple chiffré, avec des nombres ronds, résolu pas à pas.
+:::
+
+::: {.piege}
+Confondre un déplacement de la courbe et un mouvement le long de la courbe.
+:::
+
+## Effets de répartition
+
+Par revenu, territoire, génération et, quand c'est pertinent, genre.
+
+## La controverse
+
+Ce que l'analyse établit (positif) ; ce qui relève d'un jugement (normatif). Les positions en présence, sourcées, sans parti pris.
+
+::: {.droit}
+Une institution ou une règle de droit liée au sujet, en deux ou trois phrases.
+:::
+
+## À retenir
+
+::: {.retenir}
+- Trois à cinq points, une phrase chacun.
+:::
+
+## Pour aller plus loin
+
+<!-- Dans le PDF, la vidéo devient automatiquement un lien (assets/typst/wp-typst.lua). -->
+::: {.wp-video}
+<iframe src="https://www.youtube-nocookie.com/embed/IDENTIFIANT" title="Titre exact de la vidéo" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>
+
+Dessine-moi l'éco · « Titre exact » · durée
+:::
+
+- Média, « Titre exact de l'article », date. [Lien](https://…)
+- Arte, « Titre du documentaire » (disponible jusqu'au …). [Lien](https://…)
