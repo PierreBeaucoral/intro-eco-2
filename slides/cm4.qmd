@@ -38,7 +38,7 @@ Taux d'effort médian, France métropolitaine, 2023 (Insee, *France, portrait so
 **Faut-il encadrer les loyers ?**
 
 ::: {.notes}
-0 h 05 – 0 h 11. La théorie prédit une pénurie. On mesure de combien, pour qui, à quel horizon, puis on confronte aux évaluations en France et aux États-Unis. L'expérimentation s'arrête fin novembre 2026.
+0 h 05 – 0 h 11. La théorie prédit une pénurie. On mesure de combien, pour qui, à quel horizon, puis on confronte aux évaluations en France et aux États-Unis. L'expérimentation s'arrête le 23 novembre 2026 (Sénat).
 :::
 
 ## Rappel : un plafond fixé sous P\* crée une pénurie qu'il faut répartir autrement
@@ -337,13 +337,13 @@ Source : Eurostat, IPCH, loyers effectifs, consulté le 21/10/2026.
 2 h 35 – 2 h 41. Le normatif. Débat en amphi : 6 minutes, quatre groupes.
 :::
 
-## Deux institutions lisent le même rapport en sens inverse
+## Deux institutions, deux études : l'effet sur l'offre lu en sens inverse
 
-- Sénat : « les conditions pour pérenniser cette expérimentation ne sont pas réunies » (MoneyVox avec l'AFP, 14/10/2026)
-- Ville de Paris : « une absence d'effet de l'encadrement des loyers sur l'offre locative parisienne » (paris.fr, 11/09/2026)
+- Rapporteure du Sénat (rapport de la mission) : « les conditions pour pérenniser cette expérimentation ne sont pas réunies » (AFP, 14/10/2026)
+- Ville de Paris (étude Apur-SeLoger) : « une absence d'effet […] sur l'offre locative parisienne » (paris.fr, 11/09/2026)
 
 ::: {.notes}
-2 h 41 – 2 h 44. La rapporteure de la commission des affaires économiques du Sénat. Le rapport constate une baisse des annonces sans pouvoir dire si l'offre recule. « Aucun effet n'est écarté » ou « aucun effet n'est démontré » : décider à qui revient la charge de la preuve est un jugement. Droit : article 140 de la loi Élan (23/11/2018), expérimentation prolongée par la loi 3DS (21/02/2022) jusqu'à fin novembre 2026 ; la commission du Sénat a réduit la proposition de loi à une prolongation de deux ans (14/10/2026), examinée en séance le 21/10/2026 : à mettre à jour avant le cours (Légifrance).
+2 h 41 – 2 h 44. La rapporteure de la commission des affaires économiques du Sénat s'appuie sur le rapport de la mission (Sénat, *La loi en clair*) ; citation reprise par MoneyVox avec l'AFP. La Ville de Paris s'appuie sur une autre étude, limitée à Paris : Apur, deux laboratoires universitaires et groupe SeLoger, 2024, actualisée en 2025 (série Breuillé et al.). La mission ne voit pas de contraction de l'offre à Paris, mais juge « ambigus » les résultats de cette étude sur les annonces ; hors Île-de-France, baisse des annonces sans pouvoir dire si l'offre recule. L'une souligne qu'aucun effet n'a été écarté, l'autre qu'aucun n'a été trouvé : décider à qui revient la charge de la preuve est un jugement. Droit : article 140 de la loi Élan (23/11/2018), expérimentation prolongée par la loi 3DS (21/02/2022) jusqu'au 23/11/2026 ; la commission du Sénat a réduit la proposition de loi à une prolongation de deux ans (14/10/2026), examinée en séance le 21/10/2026 : à mettre à jour avant le cours (Légifrance).
 :::
 
 ## Arnott : un encadrement modéré peut rééquilibrer bailleur et locataire
@@ -356,10 +356,10 @@ Source : Eurostat, IPCH, loyers effectifs, consulté le 21/10/2026.
 2 h 44 – 2 h 47. *Journal of Economic Perspectives*, 1995 (cités par Chapelle et Fack, § 3.1.1). Le dispositif français n'exempte pas le neuf : le rapport le classe parmi les encadrements de « première génération ». Le rapport recommande de « taxer plutôt que de subventionner la rente foncière ou de réguler les prix » : position normative des auteurs, pas un résultat.
 :::
 
-## En France, l'encadrement repose sur une expérimentation prolongée jusqu'à fin novembre 2026
+## En France, l'encadrement repose sur une expérimentation prolongée jusqu'au 23 novembre 2026
 
 ::: {.droit}
-Article 140 de la loi Élan (23/11/2018) : expérimentation d'encadrement des loyers, prolongée par la loi 3DS (21/02/2022) jusqu'à fin novembre 2026. Un texte qui la prolonge de deux ans est en navette au Parlement : adopté par le Sénat le 21/10/2026, il repart à l'Assemblée nationale (Sénat, La loi en clair, consulté le 21/10/2026).
+Article 140 de la loi Élan (23/11/2018) : expérimentation d'encadrement des loyers, prolongée par la loi 3DS (21/02/2022) jusqu'au 23/11/2026. Un texte qui la prolonge de deux ans est en navette au Parlement : adopté par le Sénat le 21/10/2026, il repart à l'Assemblée nationale (Sénat, La loi en clair, consulté le 21/10/2026).
 :::
 
 ::: {.notes}

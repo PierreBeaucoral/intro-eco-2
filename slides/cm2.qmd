@@ -26,7 +26,7 @@ Le prix moyen était de 3,20 € en 2000 et de 13 € en 2025.
 
 ## Pourtant, les ventes des buralistes reculent de 8,2 % en 2025
 
-- 30 165 tonnes vendues, contre 32 846 en 2024
+- Métropole : 30 165 tonnes vendues, contre 32 846 en 2024
 - Fumeurs quotidiens : environ 25 % des 18-75 ans en 2014, 18 % en 2024
 - Décès prématurés attribués au tabac : 68 000 en 2023
 
@@ -62,14 +62,7 @@ Le prix moyen était de 3,20 € en 2000 et de 13 € en 2025.
 
 ## Marshall : l'élasticité mesure la sensibilité de la demande au prix
 
-::: {.auteur}
-::: {.wp-portrait}
-![](../cours/img/portraits/alfred-marshall.jpg){fig-alt="Portrait photographique d'Alfred Marshall vers 1891, homme âgé à barbe blanche, en buste."}
-[Vers 1891 · Elliott and Fry, domaine public, Wikimedia Commons]{.wp-credit}
-:::
-
-**Alfred Marshall** (1890), *Principles of Economics* · école néoclassique. Elle dépend de l'existence de substituts et du temps laissé aux acheteurs pour s'adapter.
-:::
+**Marshall** (1890) : l'élasticité dépend des substituts et du temps laissé aux acheteurs.
 
 ::: {.notes}
 0 h 20 – 0 h 24. Pour le tabac : peu de substituts à court terme.
@@ -94,7 +87,7 @@ Une hausse de 10 % du prix fait baisser les ventes de 3 à 5 %.
 (Santé publique France ; *La finance pour tous*, 24/07/2026 ; Hill, 2026)
 
 ::: {.notes}
-0 h 28 – 0 h 32. Trois estimations : −0,4 ; entre −0,3 et −0,4 ; −0,50 sur 1950-2025.
+0 h 28 – 0 h 32. Trois estimations : −0,4 ; entre −0,3 et −0,4 ; −0,50 sur 1950-2025 (hors 2016, année aberrante).
 :::
 
 ## Quand le prix monte, on gagne un rectangle et on en perd un
@@ -127,7 +120,7 @@ Peu élastique : la hausse frappe surtout le budget. Élastique : elle réduit s
 ::: {.auteur}
 ::: {.wp-portrait}
 ![](../cours/img/portraits/jenkin-fleeming.jpg){fig-alt="Portrait de Fleeming Jenkin, ingénieur et économiste britannique, en buste."}
-[Avant 1885 · Robert Louis Stevenson, domaine public, Wikimedia Commons]{.wp-credit}
+[Avant 1885 · photographie prêtée par Mrs Dew Smith, frontispice du *Memoir* de R. L. Stevenson, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
 **Fleeming Jenkin** (1872), *Proceedings of the Royal Society of Edinburgh* · précurseur de l'analyse néoclassique. La charge dépend de la forme des deux courbes, non de celui qui verse.
@@ -150,7 +143,7 @@ graphe_incidence(base_size = 24)
 ```
 
 ::: {.notes}
-0 h 50 – 0 h 56. Suivre la flèche : on glisse le long de D. L'acheteur paie P*′, le vendeur garde P*′ − t.
+0 h 50 – 0 h 56. Suivre le déplacement de O à O′, puis glisser le long de D jusqu'à E′. L'acheteur paie P*′, le vendeur garde P*′ − t.
 :::
 
 ## La charge retombe sur le côté du marché le moins élastique
@@ -227,8 +220,8 @@ Recette : 420 millions (A) contre 300 millions (B). Faire baisser la consommatio
 
 ::: {.auteur}
 ::: {.wp-portrait}
-![](../cours/img/portraits/becker-gary.jpg){fig-alt="Portrait photographique de Gary S. Becker en 2004, en buste."}
-[2004 · National Cancer Institute, domaine public, Wikimedia Commons]{.wp-credit}
+![](../cours/img/portraits/becker-gary.jpg){fig-alt="Portrait photographique de Gary S. Becker en 2008, cheveux blancs, veste beige, parlant à un micro."}
+[2008 · MAR, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
 **Gary S. Becker et Kevin M. Murphy** (1988), *Journal of Political Economy*, 96(4) · école de Chicago. Fumer aujourd'hui augmente l'envie de fumer demain ; une hausse durable et annoncée réduit la consommation.
@@ -294,7 +287,7 @@ Dépense : +64 %. Prix réel ×2,9, dépense réelle +3 % (Insee ; Eurostat, IPC
 (Hill, 2026 ; *JO Sénat*, 26/02/2026 ; AFP, 28/05/2026)
 
 ::: {.notes}
-2 h 14 – 2 h 19. Étude citée par le ministère des Comptes publics : 8 081 tonnes. Achats à l'étranger et contrebande.
+2 h 14 – 2 h 19. Étude TAFE (douanes et MILDECA), citée par le ministère de l'Action et des Comptes publics : 8 081 tonnes. Achats à l'étranger et contrebande.
 :::
 
 ## Depuis 2019, la recette stagne en euros courants et baisse de 13 % en euros constants

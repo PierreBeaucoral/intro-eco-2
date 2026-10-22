@@ -29,7 +29,7 @@ source(here::here("R/cm9.R"))   # même fichier que la page de cours
 0 h 02 – 0 h 08. Accroche. Le 2 avril 2025 est baptisé « Jour de la libération » par l'administration américaine. Les douanes encaissaient 7,9 Md\$ en octobre 2024 et 33,1 Md\$ en octobre 2025. L'exercice 2026 va d'octobre 2025 à septembre 2026 ; +57 % est un calcul de l'auteur. Qui a suivi l'actualité sur les « taxes Trump » ? L'argent rentre : alors, qui paie ? Laisser les étudiants proposer.
 :::
 
-## À quoi servent les droits de douane, et qui en paie le coût ?
+## Les droits de douane ont des objectifs affichés, et quelqu'un en paie le coût
 
 1. **Objectifs affichés** : recettes, industrie naissante ou en difficulté, rapport de force, sécurité économique, climat (MACF)
 2. **Coût** : qui paie **vraiment**, l'exportateur étranger, l'importateur ou le consommateur ?
@@ -135,14 +135,14 @@ B est moins productif pour les deux biens et gagne pourtant à l'échange. Sa fa
 
 ::: {.wp-portrait}
 ![](../cours/img/portraits/bertil-ohlin.jpg){fig-alt="Portrait photographique de Bertil Ohlin en 1950, homme en costume, en buste."}
-[1950 · photographe inconnu, CC BY-SA 4.0, Wikimedia Commons]{.wp-credit}
+[1950 · photographe inconnu, CC BY-SA 4.0, redimensionné, Wikimedia Commons]{.wp-credit}
 :::
 
-**Heckscher** (1919), **Ohlin** (1933) · école néoclassique. Un pays exporte ce qui utilise beaucoup son facteur abondant. **Stolper et Samuelson** (1941) : l'ouverture enrichit les détenteurs du facteur abondant, appauvrit ceux du facteur rare.
+**Heckscher** (1919), **Ohlin** (1933) · néoclassiques. Exportations : biens riches en facteur abondant. **Stolper-Samuelson** (1941) : l'ouverture enrichit le facteur abondant, appauvrit le facteur rare.
 :::
 
 ::: {.notes}
-0 h 47 – 0 h 53. Ricardo dit que le pays gagne ; Heckscher et Ohlin, que tous ses habitants ne gagnent pas. Dans un pays riche en travail qualifié, l'ouverture profite aux ingénieurs et pèse sur les ouvriers des industries concurrencées. Un droit de douane déplace de même des gains et des pertes entre groupes. Question : qui sont les perdants dans un pays comme la France ?
+0 h 47 – 0 h 53. Ricardo dit que le pays gagne ; Heckscher et Ohlin, que tous ses habitants ne gagnent pas. Dans un pays riche en travail qualifié, l'ouverture profite aux ingénieurs et pèse sur les ouvriers, d'abord dans les industries concurrencées. Stolper et Samuelson : ce sont les détenteurs du facteur abondant qui s'enrichissent et ceux du facteur rare qui s'appauvrissent. Un droit de douane déplace de même des gains et des pertes entre groupes. Question : qui sont les perdants dans un pays comme la France ?
 :::
 
 ## Un droit de douane est une taxe, et un petit pays subit le prix mondial
@@ -234,10 +234,10 @@ L'exportateur étranger reçoit toujours 20 € : il vend moins, mais au même p
 1 h 49 – 1 h 54. Prix intérieur 19 + 10 = 29 €. À 29 € : demande 71 millions, production 29, importations 42 millions. L'étranger paie 1 € × 42 millions = 42 M€. Perte sèche b + d = 81 M€. Le pays reste perdant : une baisse de 1 € du prix étranger ne suffit pas. En théorie, un grand pays peut gagner à un droit modéré si ce que paie l'étranger dépasse la perte sèche ; encore faut-il que les fournisseurs baissent vraiment leurs prix et que leurs gouvernements ne répliquent pas : c'est ce que mesurent les études empiriques.
 :::
 
-## En 2025, les importateurs américains ont payé près de 90 % des droits
+## En 2025, les acheteurs américains ont supporté près de 90 % des droits
 
 - Exportateurs étrangers : 6 % (janvier-août), 8 % (septembre-octobre), 14 % (novembre)
-- Importateurs américains : 94 %, 92 %, puis 86 %
+- Entreprises et consommateurs américains : 94 %, 92 %, puis 86 %
 
 (Amiti, Flanagan, Heise et Weinstein, *Liberty Street Economics*, 12/02/2026)
 
@@ -295,19 +295,19 @@ graphe_recettes_douane(base_size = 24)
 Recettes douanières américaines, Md\$ par mois.
 
 ::: {.notes}
-2 h 14 – 2 h 19. Bleu : recettes brutes ; ambre : recettes nettes des remboursements. Après l'arrêt de la Cour suprême du 20 février 2026, les remboursements des droits annulés rendent les recettes nettes négatives de mai à juillet 2026. Repères datés de la page : accord UE-États-Unis du 21/08/2025 (droit unique de 15 %), surtaxe temporaire de 10 % du 24/02 au 24/07/2026, droit permanent de 10 % pour l'UE depuis le 24/07/2026 (DG Trésor, 06/08/2026). Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer.
+2 h 14 – 2 h 19. Bleu : recettes brutes ; ambre : recettes nettes des remboursements. Après l'arrêt de la Cour suprême du 20 février 2026, les remboursements des droits annulés rendent les recettes nettes négatives de mai à juillet 2026. Repères datés de la page : accord UE-États-Unis du 21/08/2025 (droit plancher de 15 %, NPF compris), surtaxe temporaire de 10 % du 24/02 au 24/07/2026, droit permanent de 10 % pour l'UE depuis le 24/07/2026 (DG Trésor, 06/08/2026). Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer.
 :::
 
 ## L'argent rendu va aux importateurs, pas forcément à ceux qui ont payé
 
 - Écart brut-net : 7,5 Md\$ (exercice 2025), 145 Md\$ (exercice 2026)
-- Pour les uns, une taxe annulée doit être rendue au contribuable légal
-- Pour d'autres, l'importateur a fait payer ses clients
+- Un tribunal a ordonné de rembourser les importateurs
+- Pour beaucoup, qui a répercuté le droit n'y a pas droit
 
-(Trésor des États-Unis, *Monthly Treasury Statement*, 21/10/2026 ; calcul de l'auteur ; positions : Deysine, *The Conversation*, 23/02/2026)
+(Trésor des États-Unis, MTS, 21/10/2026 ; Bouët, 27/03/2026 ; Deysine, 23/02/2026)
 
 ::: {.notes}
-2 h 19 – 2 h 24. Savoir qui a supporté le droit est une question positive ; décider qui doit être remboursé est une question normative, que tranchent le droit et les tribunaux. Environ 165 Md\$ à rembourser à 330 566 importateurs (Bouët, CEPII, 27/03/2026).
+2 h 19 – 2 h 24. Écart brut-net : calcul de l'auteur sur le *Monthly Treasury Statement*. C'est la Cour du commerce international qui a ordonné de rembourser les importateurs, qui ont versé les droits (Bouët, Blog du CEPII, 27/03/2026) ; pour beaucoup, les entreprises qui ont répercuté la hausse sur leurs clients n'ont droit à aucun remboursement (Deysine, *The Conversation*, 23/02/2026). Savoir qui a supporté le droit est une question positive ; décider qui doit être remboursé est une question normative, que tranchent le droit et les tribunaux. Environ 165 Md\$ à rembourser à 330 566 importateurs (Bouët, CEPII, 27/03/2026).
 :::
 
 ## Un droit sur l'acier protège les aciéries et pénalise ceux qui l'achètent
@@ -340,17 +340,17 @@ Recettes douanières américaines, Md\$ par mois.
 (Autor, Dorn et Hanson, 2013)
 
 ::: {.notes}
-2 h 32 – 2 h 36. Les gains de l'ouverture sont diffus ; ses pertes sont concentrées. Les travailleurs changent difficilement de métier et de région. Cette concentration explique une partie de la demande de protection. Les représailles ont aussi leurs perdants localisés : en 2018, les droits des partenaires ont surtout frappé les travailleurs des secteurs exportateurs, notamment agricoles (Fajgelbaum et al., 2020). Par revenu : un droit sur les biens de consommation ressemble à une taxe sur ces biens ; c'est un raisonnement, les sources de cette séance ne chiffrent pas l'écart par niveau de revenu. Par génération : l'industrie naissante est un pari entre générations, gagnant seulement si le gain futur existe et si la protection est retirée ensuite. À l'étranger : l'UE a vendu 554,7 Md€ de biens aux États-Unis en 2025 (Eurostat, 21/10/2026).
+2 h 32 – 2 h 36. Les gains de l'ouverture sont diffus ; ses pertes sont concentrées. Les travailleurs changent difficilement de métier et de région. Cette concentration explique une partie de la demande de protection. Les représailles ont aussi leurs perdants localisés : en 2018, les représailles des partenaires ont surtout visé l'agriculture et frappé les travailleurs des secteurs exposés au commerce (Fajgelbaum et al., 2020). Par revenu : un droit sur les biens de consommation ressemble à une taxe sur ces biens ; c'est un raisonnement, les sources de cette séance ne chiffrent pas l'écart par niveau de revenu. Par génération : l'industrie naissante est un pari entre générations, gagnant seulement si le gain futur existe et si la protection est retirée ensuite. À l'étranger : l'UE a vendu 554,7 Md€ de biens aux États-Unis en 2025 (Eurostat, 21/10/2026).
 :::
 
 ## Le MACF fait payer le carbone importé comme le carbone européen
 
-- Contre la **fuite de carbone**, depuis le 1^er^ janvier 2026
+- Contre la **fuite de carbone** ; régime définitif depuis le 1^er^ janvier 2026
 - Ciment, fer et acier, aluminium, engrais, électricité, hydrogène
 - Payant en 2027 (Commission européenne, 21/10/2026 ; Mayer Brown, 17/10/2025)
 
 ::: {.notes}
-2 h 36 – 2 h 42. Prix calculé sur celui des quotas européens. Les certificats pour les importations de 2026 sont vendus à partir du 1er février 2027 ; seuls les importateurs de plus de 50 tonnes par an sont concernés. Ce droit vise moins à protéger une industrie qu'à faire payer le même prix au carbone. Ses perdants sont souvent loin : le Mozambique tire près d'un cinquième de ses exportations totales de l'aluminium vendu à l'UE. Deux économistes de l'AFD proposent d'en exempter les pays les moins avancés et de les aider autrement (Godin et Riccioppo Magacho, 10/01/2023).
+2 h 36 – 2 h 42. Prix calculé sur celui des quotas européens. De 2023 à 2025, phase transitoire de simple déclaration. Les certificats pour les importations de 2026 sont vendus à partir du 1er février 2027 ; pour le ciment, l'acier, l'aluminium et les engrais, seuls les importateurs de plus de 50 tonnes par an sont concernés. Ce droit vise moins à protéger une industrie qu'à faire payer le même prix au carbone. Ses perdants sont souvent loin : le Mozambique tire près d'un cinquième de ses exportations totales de l'aluminium vendu à l'UE. Deux économistes de l'AFD proposent d'en exempter les pays les moins avancés et de les aider autrement (Godin et Riccioppo Magacho, 10/01/2023).
 :::
 
 ## Ce que l'analyse établit : ce sont les acheteurs américains qui paient
@@ -381,21 +381,22 @@ Biens seulement. Source : Eurostat, `ext_lt_maineu`, mis à jour le 16/10/2026, 
 
 - Pouvoir d'achat de tous les consommateurs
 - Emplois et territoires concentrés qui perdent
+- Rapport de force, face au risque de représailles
 - Dépendance envers un fournisseur étranger
 - Climat, quand le droit porte sur le carbone importé
 
 ::: {.notes}
-2 h 48 – 2 h 51. Normatif : savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Le désaccord porte moins sur le mécanisme du graphique, largement admis, que sur ce que vaut un emploi industriel préservé comparé au surcoût payé par des millions d'acheteurs. Question à l'amphi : quel poids donnez-vous à chacun ?
+2 h 48 – 2 h 51. Normatif : savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Le droit sert aussi de menace : les droits fondés sur l'IEEPA, ou leur menace, ont aidé les États-Unis à conclure plusieurs accords commerciaux, dont celui avec l'UE (Guimbard, 22/07/2026) ; son coût est le risque de représailles, comme les contre-mesures européennes, suspendues mais réactivables. Le désaccord porte moins sur le mécanisme du graphique, largement admis, que sur ce que vaut un emploi industriel préservé comparé au surcoût payé par des millions d'acheteurs. Question à l'amphi : quel poids donnez-vous à chacun ?
 :::
 
 ## Qui peut fixer les droits de douane ? Le Congrès aux États-Unis, l'Union en Europe
 
 ::: {.droit}
-Le 20 février 2026, dans l'arrêt *Learning Resources, Inc. v. Trump*, la Cour suprême des États-Unis a jugé, par **six voix contre trois**, que la loi sur les pouvoirs d'urgence (IEEPA) ne permet pas au président de créer des droits de douane sans le Congrès. Dans l'UE, la politique commerciale est une **compétence exclusive de l'Union** (TFUE, art. 3 et 207).
+Cour suprême, 20/02/2026, **six voix contre trois** : la loi d'urgence (IEEPA) ne permet pas au président de créer des droits sans le Congrès. Dans l'UE, le commerce est une **compétence exclusive de l'Union** (TFUE, art. 3 et 207).
 :::
 
 ::: {.notes}
-2 h 51 – 2 h 52. La Constitution américaine donne au Congrès, et à lui seul, le pouvoir de lever l'impôt et les droits de douane (Deysine, *The Conversation*, 23/02/2026). En Europe, la France ne fixe pas seule ses droits de douane : la Commission négocie pour les 27.
+2 h 51 – 2 h 52. Arrêt *Learning Resources, Inc. v. Trump* : la loi sur les pouvoirs d'urgence (IEEPA) ne permet pas au président de créer des droits de douane sans le Congrès. La Constitution américaine donne au Congrès, et à lui seul, le pouvoir de lever l'impôt et les droits de douane (Deysine, *The Conversation*, 23/02/2026). En Europe, la France ne fixe pas seule ses droits de douane : la Commission négocie pour les 27.
 :::
 
 ## Libre-échange contre protectionnisme éducateur : deux traditions

@@ -23,7 +23,7 @@ source(here::here("R/cm7.R"))
 
 ## La question
 
-En septembre 2026, les prix à la consommation de la zone euro augmentent de **3,8 %** sur un an, contre 2,2 % un an plus tôt. Les prix de l'énergie bondissent de 18,9 % ; hors énergie, la hausse n'est que de 2,3 % (Eurostat, communiqué du 16/10/2026). La guerre déclenchée le 28/02/2026, qui a fermé de fait le détroit d'Ormuz dès ce jour-là (Insee, *Note de conjoncture*, 24/03/2026), en est la principale cause : l'énergie apporte à elle seule 1,7 point des 3,8 % (Eurostat, 16/10/2026).
+En septembre 2026, les prix à la consommation de la zone euro augmentent de **3,8 %** sur un an, contre 2,2 % un an plus tôt. Les prix de l'énergie bondissent de 18,9 % ; hors énergie, la hausse n'est que de 2,3 % (Eurostat, communiqué du 16/10/2026). La guerre déclenchée le 28/02/2026, qui a fermé de fait le détroit d'Ormuz dans les heures suivantes (Insee, *Note de conjoncture*, 24/03/2026), en est la principale cause : l'énergie apporte à elle seule 1,7 point des 3,8 % (Eurostat, 16/10/2026).
 
 La Banque centrale européenne (BCE) a réagi deux fois. Son taux de dépôt, à 2,00 % depuis le 11/06/2025, passe à **2,25 %** le 17/06/2026, puis à **2,50 %** le 16/09/2026 (décisions des 11/06 et 10/09, en vigueur quelques jours plus tard ; BCE, tableau des taux directeurs, consulté le 21/10/2026). Ce sont ses premières hausses depuis 2023.
 
@@ -35,7 +35,7 @@ Trois faits intriguent.
 2. En 2026, elle agit dès que l'inflation atteint 3,2 % (mai 2026) ; en 2022, sa première hausse intervient quand l'inflation est déjà à 8,6 % (juin 2022) (Eurostat).
 3. En 2026, elle relève son taux de 0,50 point ; en 2022-2023, de 4,50 points.
 
-![Le détroit d'Ormuz, entre le golfe Persique et le golfe d'Oman. Les flèches violettes sont les couloirs de navigation : tout le trafic maritime entre le golfe Persique et l'océan passe par ce passage étroit, entre l'Iran au nord et Oman au sud. Lecture : l'obstacle qui fait monter le prix de l'énergie est physique (un passage bloqué), et non monétaire ; c'est pourquoi une hausse des taux ne le lève pas. Carte : Goran tek-en, CC BY-SA 4.0, Wikimedia Commons (d'après des données OpenStreetMap).](img/cm7/detroit-ormuz.png){#fig-ormuz fig-alt="Carte en couleurs du détroit d'Ormuz. Le golfe Persique, à gauche, communique avec le golfe d'Oman, à droite, par un passage étroit entre la côte iranienne au nord et la péninsule omanaise de Musandam au sud. Deux couloirs de navigation, l'un dans chaque sens, sont tracés en violet et suivent ce passage. Les Émirats arabes unis bordent le golfe Persique au sud."}
+![Le détroit d'Ormuz, entre le golfe Persique et le golfe d'Oman. Les flèches violettes sont les couloirs de navigation : tout le trafic maritime entre le golfe Persique et l'océan passe par ce passage étroit, entre l'Iran au nord et Oman au sud. Lecture : l'obstacle qui fait monter le prix de l'énergie est physique (un passage bloqué), et non monétaire ; c'est pourquoi une hausse des taux ne le lève pas. Carte : Goran tek-en, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), Wikimedia Commons (d'après des données OpenStreetMap et d'autres fonds de carte).](img/cm7/detroit-ormuz.png){#fig-ormuz fig-alt="Carte en couleurs du détroit d'Ormuz. Le golfe Persique, à gauche, communique avec le golfe d'Oman, à droite, par un passage étroit entre la côte iranienne au nord et la péninsule omanaise de Musandam au sud. Deux couloirs de navigation, l'un dans chaque sens, sont tracés en violet et suivent ce passage. Les Émirats arabes unis bordent le golfe Persique au sud."}
 
 **La question de la séance : pourquoi la BCE relève-t-elle ses taux face à un choc d'énergie, et pourquoi pas de la même façon en 2022 et en 2026 ?** Deux outils y répondent : le *taux d'intérêt réel* et la *règle de Taylor*.
 
@@ -89,7 +89,7 @@ où i est le taux d'intérêt nominal. Avec l'inflation observée π au lieu de 
 
 ::: {#def-taux-directeur}
 ## Taux directeurs et points de base
-Les **taux directeurs** sont les trois taux que la BCE fixe pour les banques ; ils bougent en général ensemble. Le taux de la **facilité de dépôt** rémunère l'argent que les banques laissent chez elle au jour le jour ; le taux de **refinancement** est le coût d'un prêt de la BCE à une semaine ; le taux de la **facilité de prêt marginal** est ce que coûte un prêt de la BCE au jour le jour. En septembre 2026, ils valent 2,50 % et 2,65 % (BCE). Un **point de base** vaut un centième de point : 0,25 point = 25 points de base.
+Les **taux directeurs** sont les trois taux que la BCE fixe pour les banques ; ils bougent en général ensemble. Le taux de la **facilité de dépôt** rémunère l'argent que les banques laissent chez elle au jour le jour ; le taux de **refinancement** est le coût d'un prêt de la BCE à une semaine ; le taux de la **facilité de prêt marginal** est ce que coûte un prêt de la BCE au jour le jour. Depuis le 16/09/2026, ils valent 2,50 % (dépôt), 2,65 % (refinancement) et 2,90 % (prêt marginal) (BCE, tableau des taux directeurs, consulté le 22/10/2026). Un **point de base** vaut un centième de point : 0,25 point = 25 points de base.
 :::
 
 ::: {#def-ecart-production}
@@ -97,7 +97,7 @@ Les **taux directeurs** sont les trois taux que la BCE fixe pour les banques ; i
 L'**écart de production** est la différence, en pourcentage, entre la production effective et la production que l'économie peut réaliser sans tension sur les prix. Il est négatif en récession, positif en surchauffe. On ne l'observe pas directement : on l'estime.
 :::
 
-La cible de la BCE est fixée par sa stratégie de 2021 : « viser une inflation de 2 % à moyen terme est le meilleur moyen de maintenir la stabilité des prix », avec un engagement « symétrique » (une inflation trop basse est aussi indésirable) (BCE, *Déclaration relative à la stratégie de politique monétaire*, 2021).
+La cible de la BCE est fixée par sa stratégie de 2021, réaffirmée en juin 2025 : « viser une inflation de 2 % à moyen terme est le meilleur moyen de maintenir la stabilité des prix », avec un engagement « symétrique » (une inflation trop basse est aussi indésirable) (BCE, *Déclaration relative à la stratégie de politique monétaire*, 2021 ; BCE, page « Évaluation de notre stratégie », consultée le 22/10/2026).
 
 ## Les outils
 
@@ -118,8 +118,8 @@ La relation est approchée : le calcul exact donne −5,5 % au lieu de −6 %.
 
 ```{r}
 #| label: fig-taux-inflation
-#| fig-cap: "Taux de dépôt de la BCE et inflation de la zone euro, de janvier 2021 au 21 octobre 2026. Le taux de dépôt est en escalier : il ne change qu'aux décisions de la BCE. L'inflation est la variation des prix sur un an (IPCH), chaque mois. Lecture : l'écart vertical entre les deux courbes (traits rouges) est le taux réel ex post ; il est au plus bas en octobre 2022 (environ −9,9 points) et vaut −1,3 point en septembre 2026. Sources : BCE, Data Portal (séries des taux directeurs) ; Eurostat, jeu de données prc_hicp_minr ; consultés le 21/10/2026."
-#| fig-alt: "Graphique en lignes de 2021 à fin 2026. Le taux de dépôt de la BCE, en bleu et en escalier, reste à moins 0,5 % jusqu'en juillet 2022, monte par marches jusqu'à 4 % en septembre 2023, reste à 4 % jusqu'en juin 2024, redescend à 2 % en juin 2025, puis remonte à 2,25 % en juin 2026 et 2,5 % en septembre 2026. L'inflation de la zone euro, en ambre, monte de moins de 1 % début 2021 à 10,6 % en octobre 2022, redescend sous 3 % fin 2023, oscille autour de 2 % en 2024 et 2025, puis remonte à 3,8 % en septembre 2026. Une ligne pointillée marque la cible de 2 %. Deux traits verticaux rouges relient le taux de dépôt à l'inflation : en octobre 2022, de 0,75 % à 10,6 %, soit un taux réel d'environ moins 9,9 points, le plus bas de la période ; en septembre 2026, de 2,5 % à 3,8 %, soit environ moins 1,3 point."
+#| fig-cap: "Taux de dépôt de la BCE et inflation de la zone euro, de janvier 2021 au 21 octobre 2026. Le taux de dépôt est en escalier : il ne change qu'aux décisions de la BCE. L'inflation est la variation des prix sur un an (IPCH), chaque mois. Lecture : l'écart vertical entre les deux courbes (traits rouges) est le taux réel ex post ; il est au plus bas en octobre 2022 (environ −9,9 %) et vaut −1,3 % en septembre 2026. Sources : BCE, Data Portal (séries des taux directeurs) ; Eurostat, jeu de données prc_hicp_minr ; consultés le 21/10/2026."
+#| fig-alt: "Graphique en lignes de 2021 à fin 2026. Le taux de dépôt de la BCE, en bleu et en escalier, reste à moins 0,5 % jusqu'en juillet 2022, monte par marches jusqu'à 4 % en septembre 2023, reste à 4 % jusqu'en juin 2024, redescend à 2 % en juin 2025, puis remonte à 2,25 % en juin 2026 et 2,5 % en septembre 2026. L'inflation de la zone euro, en ambre, monte de moins de 1 % début 2021 à 10,6 % en octobre 2022, redescend sous 3 % fin 2023, oscille autour de 2 % en 2024 et 2025, puis remonte à 3,8 % en septembre 2026. Une ligne pointillée marque la cible de 2 %. Deux traits verticaux rouges relient le taux de dépôt à l'inflation : en octobre 2022, de 0,75 % à 10,6 %, soit un taux réel d'environ moins 9,9 %, le plus bas de la période ; en septembre 2026, de 2,5 % à 3,8 %, soit environ moins 1,3 %."
 #| fig-width: 7.5
 #| fig-height: 4.8
 graphe_taux_inflation()
@@ -180,7 +180,7 @@ Pourquoi agir quand même ? Parce que le danger est la diffusion de la hausse.
 On parle d'**effets de second tour** quand une hausse de prix initiale (ici l'énergie) se diffuse aux autres prix et aux salaires : les entreprises répercutent leurs coûts, les salariés demandent des hausses pour compenser, ce qui relève encore les coûts. Le choc devient alors une inflation durable.
 :::
 
-La BCE l'écrit ainsi le 10 septembre 2026 : « plus les prix de l'énergie restent élevés, plus ils risquent de faire monter l'inflation au-delà » de l'énergie. Elle note aussi que, « à ce stade », les salaires ne réagissent pas de façon notable au choc, et que les anticipations d'inflation à long terme se situent « autour de 2 % » (BCE, déclaration de politique monétaire, 10/09/2026, traduction du cours).
+La BCE l'écrit ainsi le 10 septembre 2026 : « plus les prix de l'énergie restent élevés, plus ils risquent de faire monter l'inflation au-delà » de l'énergie. Elle note aussi que, « à ce stade », les salaires ne réagissent pas de façon notable au choc, et que la plupart des mesures des anticipations d'inflation à long terme se situent « autour de 2 % », même si les anticipations à court terme restent élevées (BCE, déclaration de politique monétaire, 10/09/2026, notre traduction).
 
 ### La règle de Taylor donne un ordre de grandeur
 
@@ -214,7 +214,7 @@ Appliquée telle quelle, la règle donne un repère, pas une prescription.
 - **Octobre 2022** : avec l'inflation totale (10,6 %), 1 + 1,5 × 10,6 ≈ **17 %** ; avec l'inflation hors énergie (6,9 %, Eurostat, arrondie à 7 %), 1 + 1,5 × 7 = **11,5 %**. Le taux de dépôt est de 0,75 %.
 - **Septembre 2026** : environ **6,7 %** avec l'inflation totale (3,8 %), **4,5 %** hors énergie (2,3 %). Le taux de dépôt est de 2,50 %.
 
-Ces chiffres reposent sur trois hypothèses fortes : un taux réel « normal » de 2 % (calculé par Taylor pour les États-Unis), un écart de production nul (alors que la BCE ne prévoit que 0,9 % de croissance en 2026 : BCE, 10/09/2026), et le choix de l'inflation. Surtout, la règle ne distingue pas l'origine de l'inflation : elle réagit de la même façon à un choc d'offre et à un choc de demande.
+Ces chiffres reposent sur trois hypothèses fortes : un taux réel « normal » de 2 % (calculé par Taylor pour les États-Unis), un écart de production nul (alors qu'une croissance faible, 0,9 % prévus en 2026 par la BCE le 10/09/2026, creuse un écart négatif si elle reste inférieure à celle que l'économie peut soutenir sans tension), et le choix de l'inflation. Surtout, la règle ne distingue pas l'origine de l'inflation : elle réagit de la même façon à un choc d'offre et à un choc de demande.
 
 ### Application : 2022 et 2026, deux chocs d'énergie, deux réponses
 
@@ -244,7 +244,7 @@ La @fig-inflation-diffusion montre cette diffusion. L'inflation d'ensemble culmi
 
 **La BCE de 2026 agit plus tôt.** La dépêche AFP du 11/06/2026 rappelle que sa réaction de 2022 avait été « jugée tardive » (*La Libre*). Agir tôt et peu vise les anticipations (étape 5 de la transmission) : montrer que la cible de 2 % tient avant que les salaires ne s'ajustent.
 
-**Elle reste prudente.** Le 10/09/2026, la BCE prévoit une inflation de 3,0 % en 2026, 2,5 % en 2027 et 2,1 % en 2028, pour une croissance de 0,9 %, 1,4 % et 1,5 % ; elle décide « réunion par réunion » et ne s'engage sur aucune trajectoire de taux (BCE, 10/09/2026, traduction du cours). Elle arbitre ainsi entre les deux risques de la @fig-transmission : plus d'inflation si elle attend, moins d'activité si elle monte fort.
+**Elle reste prudente.** Le 10/09/2026, la BCE prévoit une inflation de 3,0 % en 2026, 2,5 % en 2027 et 2,1 % en 2028, pour une croissance de 0,9 %, 1,4 % et 1,5 % ; elle décide « réunion par réunion » et ne s'engage sur aucune trajectoire de taux (BCE, 10/09/2026, notre traduction). Elle arbitre ainsi entre les deux risques de la @fig-transmission : plus d'inflation si elle attend, moins d'activité si elle monte fort.
 
 **L'écart entre la France et l'Allemagne s'est refermé.** En octobre 2022, l'inflation (IPCH) atteint 11,6 % en Allemagne contre 7,1 % en France (Eurostat). En France, le « bouclier tarifaire » a divisé par deux l'effet de l'énergie : de mi-2021 à mi-2022, l'inflation est de 5,3 %, contre 8,4 % sans bouclier (Insee Analyses n° 75, 01/09/2022). En septembre 2026, l'écart a disparu : 3,4 % en France, 3,3 % en Allemagne (Eurostat, 16/10/2026).
 
@@ -308,6 +308,7 @@ Banque de France · « Taux d'intérêt nominal et réel » · 3 min 33 · mis e
 :::
 
 - Banque de France, « La transmission de la politique monétaire », 3 min 12, 02/06/2020. [Lien](https://www.youtube.com/watch?v=_CKg4Io-e80)
+
 **Articles**
 
 - *The Conversation*, M. Picault et A. Burietz, « Quel est l'impact des décisions de la Banque centrale européenne sur les ménages modestes ? », 04/10/2026, mis à jour le 05/10/2026. [Lien](https://theconversation.com/quel-est-limpact-des-decisions-de-la-banque-centrale-europeenne-sur-les-menages-modestes-284478)
@@ -320,6 +321,7 @@ Banque de France · « Taux d'intérêt nominal et réel » · 3 min 33 · mis e
 - BCE, « Décisions de politique monétaire », communiqué du 21/07/2022. [Lien](https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.mp220721~53e5bdd317.fr.html)
 - BCE, « Monetary policy statement », 10/09/2026 (en anglais). [Lien](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html)
 - BCE, « Déclaration relative à la stratégie de politique monétaire de la BCE » (2021). [Lien](https://www.ecb.europa.eu/home/search/review/html/ecb.strategyreview_monpol_strategy_statement.fr.html)
+- BCE, « Évaluation de notre stratégie » (évaluation de juin 2025, qui réaffirme la cible symétrique de 2 %), consultée le 22/10/2026. [Lien](https://www.ecb.europa.eu/mopo/strategy/strategy-review/html/index.fr.html)
 - BCE, « Indépendance ». [Lien](https://www.ecb.europa.eu/ecb/orga/independence/html/index.fr.html)
 - BCE, « Meeting calendars of the Governing Council » (calendrier des réunions), consulté le 21/10/2026. [Lien](https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html)
 - Eurostat, « Annual inflation up to 3.8% in the euro area », communiqué du 16/10/2026 (en anglais). [Lien](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-16102026-ap)

@@ -14,16 +14,16 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm8.R"))   # même fichier que la page de cours
 ```
 
-## En 2010, la Grèce reconnaît que ses comptes publics étaient mal déclarés
+## Fin 2009 - début 2010, la Grèce reconnaît que ses comptes publics étaient mal déclarés
 
-- Février 2010 : le gouvernement reconnaît des comptes mal déclarés
+- Octobre 2009 - février 2010 : comptes révisés, puis reconnus mal déclarés
 - Mai 2010 : premier plan d'aide de la zone euro et du FMI
 - Déficit public de 2009 : 15,4 % du PIB
 
-(MES, « Greece » ; Eurostat, séries du 21/10/2026)
+(Commission européenne, 08/01/2010 ; MES, « Greece » ; Eurostat, 21/10/2026)
 
 ::: {.notes}
-0 h 02 – 0 h 06. Accroche. Qui a entendu parler de la crise grecque ? Le coût des emprunts devient « insoutenable » en mars 2010. Le déficit de 2009 est une estimation actuelle (Eurostat).
+0 h 02 – 0 h 06. Accroche. Qui a entendu parler de la crise grecque ? Octobre 2009 : forte révision des chiffres de déficit (rapport de la Commission européenne, 08/01/2010) ; février 2010 : comptes reconnus mal déclarés (MES). Le coût des emprunts devient « insoutenable » (notre traduction) en mars 2010. Le déficit de 2009 est une estimation actuelle (Eurostat).
 :::
 
 ## Le PIB recule de 27 %, le chômage atteint 27,8 % et la dette gonfle
@@ -147,7 +147,7 @@ Avec c = 0,8 : k = 1 / 0,2 = 5, et la même coupe réduirait le PIB de **50 Md�
 - Si les prévisions supposaient 0,5, le multiplicateur était de l'ordre de 1,5
 
 ::: {.notes}
-0 h 44 – 0 h 50. Méthode : on compare la croissance réalisée en 2010 et 2011 à la croissance prévue (NBER Working Paper n° 18779, février 2013). Le multiplicateur est « nettement supérieur à 1 » au début de la crise. Les auteurs ajoutent qu'il n'existe pas de multiplicateur unique, valable partout et toujours.
+0 h 44 – 0 h 50. Méthode : on compare la croissance réalisée en 2010 et 2011 à la croissance prévue (NBER Working Paper n° 18779, février 2013). Le multiplicateur est « nettement supérieur à 1 » (notre traduction) au début de la crise. Les auteurs ajoutent qu'il n'existe pas de multiplicateur unique, valable partout et toujours.
 :::
 
 ## Taux au plancher, crédit grippé, capacités inutilisées : le multiplicateur était élevé
@@ -158,7 +158,7 @@ Avec c = 0,8 : k = 1 / 0,2 = 5, et la même coupe réduirait le PIB de **50 Md�
 - Zone euro : pas de dévaluation possible
 
 ::: {.notes}
-0 h 50 – 0 h 55. Trois raisons avancées dès 2010 par les auteurs. Pour la Grèce s'ajoute un point : membre de la zone euro, elle ne pouvait pas dévaluer sa monnaie pour vendre moins cher à l'étranger. Question : pourquoi une dévaluation aiderait-elle ?
+0 h 50 – 0 h 55. Trois raisons, avancées dès 2010 et rappelées par les auteurs. Pour la Grèce s'ajoute un point : membre de la zone euro, elle ne pouvait pas dévaluer sa monnaie pour vendre moins cher à l'étranger. Question : pourquoi une dévaluation aiderait-elle ?
 :::
 
 ## La dette devient lourde si le revenu national croît trop lentement
@@ -293,22 +293,23 @@ Cette règle vaut à **court terme**.
 1 h 55 – 2 h 00. Les obligations grecques détenues par des investisseurs privés, surtout des banques, ont été restructurées en 2012. Sans cette annulation, la dette en euros aurait monté. Le dénominateur a fait monter le ratio.
 :::
 
-## La même formule donne +27 points en 2011 et −14 points en 2023
+## La même formule prévoit +23 points en 2011 et −14 points en 2023
 
 | | 2011 | 2023 |
 |---|---|---|
 | Écart i − croissance | +13,7 | −6,7 |
 | Effet boule de neige | ≈ +20,3 | ≈ −11,8 |
 | Solde primaire s | −2,8 % | +1,9 % |
+| Variation prévue de d | ≈ +23,1 | ≈ −13,7 |
 | Variation observée de d | +27,3 | −13,8 |
 
 Source : Eurostat (gov_10dd_edpt1, nama_10_gdp), 21/10/2026 ; calculs du cours, sur valeurs non arrondies.
 
 ::: {.notes}
-2 h 00 – 2 h 06. Ratio de l'année précédente : 147,8 % en 2011, 177,8 % en 2023. Variation prévue : environ +23,1 points en 2011 et −13,7 en 2023. Taux apparent i : 4,7 % en 2011, 2,1 % en 2023 ; croissance du PIB en valeur : −9,0 % puis +8,7 %. En 2011 l'essentiel de la hausse vient de l'effet boule de neige, pas du déficit primaire, déjà réduit à 2,8 %. L'écart restant (27,3 contre 23,1) vient en partie de l'approximation, qui sous-estime l'effet quand la croissance est très négative, et d'opérations hors solde. De 2012 à 2016 les prix baissent même (déflateur du PIB : −2,0 % en 2013) : le taux réel dépasse le taux nominal.
+2 h 00 – 2 h 06. Ratio de l'année précédente : 147,8 % en 2011, 177,8 % en 2023. Taux apparent i : 4,7 % en 2011, 2,1 % en 2023 ; croissance du PIB en valeur : −9,0 % puis +8,7 %. En 2011 l'essentiel de la hausse vient de l'effet boule de neige, pas du déficit primaire, déjà réduit à 2,8 %. L'écart restant (27,3 contre 23,1) vient en partie de l'approximation, qui sous-estime l'effet quand la croissance est très négative, et d'opérations hors solde. De 2012 à 2016 les prix baissent même (déflateur du PIB : −2,0 % en 2013) : le taux réel dépasse le taux nominal.
 :::
 
-## Le taux du marché a atteint 22,5 % en 2012, mais l'État grec n'empruntait presque plus
+## Le taux du marché a atteint 22,5 % en moyenne en 2012, mais l'État grec n'empruntait presque plus
 
 ```{r}
 #| label: fig-taux-longs
@@ -399,7 +400,7 @@ Chômage 2013 (Eurostat, séries du 21/10/2026)
 ## Trois écoles : keynésiens, équivalence ricardienne, austérité expansive
 
 - **Keynésiens** : austérité en récession contre-productive, multiplicateur élevé
-- **Barro** (1974) : relance par l'emprunt compensée par l'épargne, multiplicateur inférieur à 1
+- **Barro** (1974) : baisse d'impôts financée par l'emprunt compensée par l'épargne ; multiplicateur inférieur à 1
 - **Giavazzi et Pagano** (1990) : au Danemark et en Irlande, une forte austérité a été suivie d'une reprise : un ajustement crédible peut rétablir la **confiance**
 
 ::: {.notes}
@@ -418,7 +419,7 @@ Le **Mécanisme européen de stabilité** (octobre 2012) naît d'un traité **in
 
 ## Le cas grec penche du côté keynésien, sans condamner la consolidation
 
-Blanchard et Leigh : leurs résultats « n'impliquent pas que la consolidation budgétaire soit indésirable ».
+Blanchard et Leigh : leurs résultats « n'impliquent pas que la consolidation budgétaire soit indésirable » (notre traduction).
 
 Ils mesurent son coût de court terme, pas son bien-fondé.
 
@@ -446,5 +447,5 @@ Ils mesurent son coût de court terme, pas son bien-fondé.
 2. **Ce qu'ils ne tranchent pas** : rythme, partage du fardeau, conditionnalité
 
 ::: {.notes}
-2 h 56 – 3 h 00. Sujet type : « L'austérité peut-elle réduire la dette ? » I. Oui si k × d < 1, ou si la croissance dépasse le taux d'intérêt (g > r), ou si l'excédent primaire atteint (r − g) × d ; II. Mais le choix du rythme et du partage est un jugement. Rappeler le prochain CM.
+2 h 56 – 3 h 00. Sujet type : « L'austérité peut-elle réduire la dette ? » I. Oui si k × d < 1, ou si la croissance dépasse le taux d'intérêt (g > r), ou si l'excédent primaire dépasse (r − g) × d ; II. Mais le choix du rythme et du partage est un jugement. Rappeler le prochain CM.
 :::

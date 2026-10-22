@@ -29,3 +29,6 @@ quality_reports/
 session_logs/
 .claude/
 _design/
+
+# Dossiers de figures laissés par un rendu --to typst -M keep-typ
+cours/*_files/

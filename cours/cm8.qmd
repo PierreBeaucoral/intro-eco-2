@@ -23,7 +23,7 @@ source(here::here("R/cm8.R"))
 
 ## La question
 
-En février 2010, le gouvernement grec reconnaît que ses comptes publics avaient été mal déclarés. En mars, le coût de ses emprunts devient « insoutenable » ; en mai 2010, les pays de la zone euro et le FMI lui accordent un premier plan d'aide (source : Mécanisme européen de stabilité, MES, page « Greece », consultée le 21/10/2026). Le déficit public de 2009 est aujourd'hui estimé à 15,4 % du PIB (Eurostat, série téléchargée le 21/10/2026). Deux autres plans suivent, en 2012 puis en 2015 ; la Grèce en sort le 20 août 2018 (La finance pour tous, 20/08/2018). Au total, environ 289 Md€ de prêts (MES ; la DG Trésor arrondit à 290 Md€, 03/11/2025). En échange, l'État grec baisse ses dépenses et augmente ses impôts : c'est l'**austérité**.
+En octobre 2009, le gouvernement grec révise fortement ses chiffres de déficit public (Commission européenne, rapport sur les statistiques grecques du déficit et de la dette, 08/01/2010) ; en février 2010, il reconnaît que ses comptes publics avaient été mal déclarés. En mars, le coût de ses emprunts devient « insoutenable » (notre traduction) ; en mai 2010, les pays de la zone euro et le FMI lui accordent un premier plan d'aide (source : Mécanisme européen de stabilité, MES, page « Greece », consultée le 21/10/2026). Le déficit public de 2009 est aujourd'hui estimé à 15,4 % du PIB (Eurostat, série téléchargée le 21/10/2026). Deux autres plans suivent, en 2012 puis en 2015 ; la Grèce en sort le 20 août 2018 (La finance pour tous, 20/08/2018). Au total, environ 289 Md€ de prêts (MES ; la DG Trésor arrondit à 290 Md€, 03/11/2025). En échange, l'État grec baisse ses dépenses et augmente ses impôts : c'est l'**austérité**.
 
 Le résultat déroute (@fig-grece). De 2008 à 2013, le PIB réel recule de 27 %. Le chômage passe de 9,8 % des actifs en 2009 à 27,8 % en 2013, contre 12,2 % dans la zone euro. Et la dette, que l'austérité devait réduire, passe de 147,8 % du PIB en 2010 à 180,4 % en 2013, puis 189,0 % en 2018 (Eurostat, séries téléchargées le 21/10/2026). Après un pic de 209,4 % en 2020 (crise sanitaire), elle redescend vite : 145,4 % en 2025.
 
@@ -63,14 +63,14 @@ Ce multiplicateur simple est un maximum. En réalité, une partie de chaque euro
 **Olivier Blanchard et Daniel Leigh** (2013), « Growth Forecast Errors and Fiscal Multipliers », *American Economic Review*, 103(3), 117-120 · macroéconomie appliquée (FMI). Dans les pays européens, plus un pays prévoyait une austérité forte en 2010, plus sa croissance a été inférieure aux prévisions. L'explication la plus simple : les multiplicateurs étaient bien plus élevés que ceux que les prévisionnistes supposaient.
 :::
 
-Leur méthode est simple. Au printemps 2010, le FMI publie, pour 26 pays européens, une prévision de croissance et une prévision d'austérité. On compare ensuite la croissance réalisée en 2010 et 2011 à la croissance prévue. Résultat : pour chaque point de PIB d'austérité prévue en plus, le PIB a été inférieur d'environ 1 % à la prévision (Blanchard et Leigh, NBER *Working Paper* n° 18779, février 2013). Si les prévisions supposaient un multiplicateur d'environ 0,5, comme les auteurs le pensent, le vrai multiplicateur était de l'ordre de 1,5 : « nettement supérieur à 1 » au début de la crise.
+Leur méthode est simple. Au printemps 2010, le FMI publie, pour 26 pays européens, une prévision de croissance et une prévision d'austérité. On compare ensuite la croissance réalisée en 2010 et 2011 à la croissance prévue. Résultat : pour chaque point de PIB d'austérité prévue en plus, le PIB a été inférieur d'environ 1 % à la prévision (Blanchard et Leigh, NBER *Working Paper* n° 18779, février 2013). Si les prévisions supposaient un multiplicateur d'environ 0,5, comme les auteurs le pensent, le vrai multiplicateur était de l'ordre de 1,5 : « nettement supérieur à 1 » (notre traduction) au début de la crise.
 
 Pourquoi si élevé ? Trois raisons, avancées dès 2010 : les taux d'intérêt, déjà au plancher, ne pouvaient plus baisser pour compenser ; le crédit fonctionnait mal, si bien que ménages et entreprises dépensaient selon leur revenu du moment ; l'économie avait beaucoup de capacités inutilisées. Membre de la zone euro, la Grèce ne pouvait pas non plus dévaluer sa monnaie.
 
 ### La dette fait boule de neige quand le taux d'intérêt dépasse la croissance
 
 ::: {.auteur}
-**Evsey Domar** (1944), « The “Burden of the Debt” and the National Income », *American Economic Review*, 34(4), 798-827 · keynésien de la croissance. Ce qui compte n'est pas le montant de la dette, mais son poids dans le revenu national. Ce poids se stabilise si le revenu national croît assez vite.
+**Evsey Domar** (1944), « The “Burden of the Debt” and the National Income », *American Economic Review*, 34(4), 798-827 · keynésien de la croissance. Ce qui compte n'est pas le montant de la dette, mais son poids dans le revenu national. Ce poids se stabilise si le revenu national croît régulièrement, à un niveau d'autant plus bas que la croissance est forte.
 :::
 
 Dans le ratio d = dette / PIB, les intérêts font grossir le numérateur au rythme r, la croissance fait grossir le dénominateur au rythme g. Si r dépasse g, la dette grossit plus vite que le PIB, même sans nouveau déficit.
@@ -246,7 +246,7 @@ En 2013, le chômage dépasse 20 % dans tous les groupes de la @fig-chomage-grou
 
 **Par génération.** Chez les 15-24 ans actifs, le chômage passe de 26,1 % en 2009 à **59,2 %** en 2013, puis redescend à 19,1 % en 2025 (Eurostat, une_rt_a ; toutes les séries Eurostat de cette partie sont téléchargées le 21/10/2026). Beaucoup partent : depuis 2010, le solde migratoire de la Grèce est « largement négatif », et la population vieillit (DG Trésor, 03/11/2025).
 
-**Par revenu.** La part de la population en risque de pauvreté ou d'exclusion sociale passe de 28,1 % en 2008 à **36,0 %** en 2014 (Eurostat, ilc_peps01, définition « Europe 2020 »). Elle vaut 27,5 % en 2025, selon une définition plus récente qui ne se compare pas directement (ilc_peps01n). Dix ans après le référendum de juillet 2015 sur le troisième plan, *Le Temps* (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ».
+**Par revenu.** La part de la population en risque de pauvreté ou d'exclusion sociale passe de 28,1 % en 2008 à **36,0 %** en 2014 (Eurostat, ilc_peps01, définition « Europe 2020 »). Elle vaut 27,5 % en 2025, selon une définition plus récente qui ne se compare pas directement (ilc_peps01n). Dix ans après le référendum de juillet 2015 sur les conditions posées par les créanciers, *Le Temps* (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ».
 
 **Par diplôme.** Les moins diplômés perdent le plus : leur taux de chômage passe de 7,5 % en 2008 à 29,8 % en 2013, contre 6,4 % à 20,4 % pour les diplômés du supérieur (Eurostat, lfsa_urgaed).
 
@@ -254,7 +254,7 @@ En 2013, le chômage dépasse 20 % dans tous les groupes de la @fig-chomage-grou
 
 **Par territoire.** Toutes les régions plongent, inégalement. En Attique (Athènes), le chômage passe de 6,7 % en 2008 à 28,7 % en 2013 ; dans les îles touristiques de l'Égée méridionale, de 8,4 % à 21,3 % ; en Macédoine-Occidentale (nord-ouest), de 12,5 % à 31,6 %, et il y reste à 15,3 % en 2025 (Eurostat, lfst_r_lfu3rt).
 
-![Manifestation contre l'austérité place Syntagma, à Athènes, le 21 juin 2015, deux semaines avant le référendum du 5 juillet sur les conditions du troisième plan d'aide. Lecture : les mesures de l'austérité et la conditionnalité de l'aide ont un coût politique et social visible ; ce coût fait partie du bilan, au même titre que les chiffres du PIB et de la dette. Photo : DTRocks, CC BY-SA 4.0, Wikimedia Commons.](img/cm8/athens-2015.jpg){#fig-manif-athenes fig-alt="Photographie d'une foule dense rassemblée de nuit sur une grande place d'Athènes, avec des drapeaux et des pancartes levés."}
+![Manifestation contre l'austérité place Syntagma, à Athènes, le 21 juin 2015, deux semaines avant le référendum du 5 juillet sur les conditions posées par les créanciers. Lecture : les mesures de l'austérité et la conditionnalité de l'aide ont un coût politique et social visible ; ce coût fait partie du bilan, au même titre que les chiffres du PIB et de la dette. Photo : DTRocks, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), Wikimedia Commons (image réduite).](img/cm8/athens-2015.jpg){#fig-manif-athenes fig-alt="Photographie d'une foule dense rassemblée au crépuscule sur une grande place d'Athènes, avec des drapeaux et des pancartes levés."}
 
 ### Les créanciers ont partagé la perte, inégalement
 
@@ -282,10 +282,10 @@ En 2013, le chômage dépasse 20 % dans tous les groupes de la @fig-chomage-grou
 **Les écoles en présence.**
 
 - **Keynésiens** : une austérité en pleine récession est contre-productive, car le multiplicateur y est élevé ; il faut d'abord retrouver la croissance. Pour l'économiste Clément Carbonnier, « les cures austéritaires sont mauvaises pour la croissance » (*Alternatives Économiques*, 10/08/2026).
-- **Équivalence ricardienne** : pour Robert Barro (1974, « Are Government Bonds Net Wealth? », *Journal of Political Economy*, 82(6)), une relance financée par l'emprunt est compensée par l'épargne des ménages, qui savent que la dette d'aujourd'hui sera payée par leurs impôts de demain. Dans cette tradition néoclassique, le multiplicateur est faible, inférieur à 1.
+- **Équivalence ricardienne** : pour Robert Barro (1974, « Are Government Bonds Net Wealth? », *Journal of Political Economy*, 82(6)), une baisse d'impôts financée par l'emprunt est compensée par l'épargne des ménages, qui savent que la dette d'aujourd'hui sera payée par leurs impôts de demain. Dans cette tradition néoclassique, le multiplicateur est faible, inférieur à 1.
 - **Austérité expansive** : Francesco Giavazzi et Marco Pagano (1990, « Can Severe Fiscal Contractions Be Expansionary? Tales of Two Small European Countries », *NBER Macroeconomics Annual*, vol. 5, 75-111) montrent qu'au Danemark et en Irlande, dans les années 1980, une forte austérité a été suivie d'une reprise : un ajustement crédible peut rétablir la **confiance**.
 
-Le cas grec de 2010-2013 penche du côté keynésien, mais Blanchard et Leigh préviennent que leurs résultats « n'impliquent pas que la consolidation budgétaire soit indésirable » : ils mesurent son coût de court terme, pas son bien-fondé.
+Le cas grec de 2010-2013 penche du côté keynésien, mais Blanchard et Leigh préviennent que leurs résultats « n'impliquent pas que la consolidation budgétaire soit indésirable » (notre traduction) : ils mesurent son coût de court terme, pas son bien-fondé.
 
 ::: {.droit}
 Le **Mécanisme européen de stabilité** (MES) a été créé en octobre 2012 par un traité **intergouvernemental**, donc hors du cadre juridique de l'Union européenne. Un État de la zone euro qui demande son aide doit préparer, avec la Commission européenne, en lien avec la BCE et, le cas échéant, le FMI, un programme d'ajustement macroéconomique ; l'aide est versée par tranches et peut être interrompue si les engagements ne sont pas tenus (règlement (UE) n° 472/2013 ; Parlement européen, fiche thématique n° 91, consultée le 21/10/2026). C'est le cadre juridique de la **conditionnalité**. Les deux premiers plans grecs ont précédé ce cadre ; le troisième (2015) en relève.
@@ -294,7 +294,7 @@ Le **Mécanisme européen de stabilité** (MES) a été créé en octobre 2012 p
 ## À retenir
 
 ::: {.retenir}
-- Une baisse de la dépense publique réduit le PIB de k fois son montant : c'est le multiplicateur de Keynes, qui joue aussi bien pour l'austérité que pour la relance.
+- Une baisse de la dépense publique réduit le PIB de k fois son montant : c'est le multiplicateur keynésien, qui joue aussi bien pour l'austérité que pour la relance.
 - En 2010, les prévisions supposaient un multiplicateur d'environ 0,5 ; il était plutôt supérieur à 1, d'où une récession plus forte que prévu (Blanchard et Leigh, 2013).
 - Le ratio dette / PIB évolue selon Δd ≈ (r − g) × d − s : quand r dépasse g, la dette fait boule de neige, même sans déficit primaire.
 - À court terme, une coupe de dépense fait monter le ratio dette / PIB si k × d > 1 : avec une dette de 150 % du PIB, il suffit d'un multiplicateur supérieur à 0,67.
@@ -321,6 +321,7 @@ Dessine-moi l'éco · « Austérité ou relance, comment ça marche ? » · 3 mi
 **Sources institutionnelles**
 
 - DG Trésor, service économique régional d'Athènes, « Où en est l'économie grecque, dix ans après le point culminant de la crise ? », 03/11/2025. [Lien](https://www.tresor.economie.gouv.fr/PagesInternationales/Pages/67796625-12c8-45e7-8872-6b274f92ad24/files/8ccbdff5-3afc-4274-a508-f6991b0c4db4)
+- Commission européenne, « Report on Greek Government Deficit and Debt Statistics », COM(2010) 1, 08/01/2010 (publié par Eurostat le 11/01/2010). [Lien](https://ec.europa.eu/eurostat/web/products-eurostat-news/-/com_2010_report_greek)
 - Mécanisme européen de stabilité, « Greece » (chronologie et montants des trois plans), consulté le 21/10/2026. [Lien](https://www.esm.europa.eu/assistance/greece)
 - Parlement européen, fiche thématique « Assistance financière aux États membres de l'Union européenne », consultée le 21/10/2026. [Lien](https://www.europarl.europa.eu/factsheets/fr/sheet/91/assistance-financiere-aux-etats-membres-de-l-union-europeenne)
 - O. Blanchard et D. Leigh, « Growth Forecast Errors and Fiscal Multipliers », *American Economic Review*, 103(3), 117-120, 2013. [Lien](https://www.aeaweb.org/articles?id=10.1257/aer.103.3.117) ; version longue : NBER *Working Paper* n° 18779, février 2013. [Lien](https://www.nber.org/papers/w18779)

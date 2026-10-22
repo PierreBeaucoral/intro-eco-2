@@ -121,7 +121,7 @@ graphe_svb <- function(base_size = 16) {
   )
   # étiquettes courtes sur deux lignes, dans l'ordre des lignes du fichier
   courtes <- c("Prêts\n(% de l’actif)", "Titres\n(% de l’actif)",
-               "Titres gardés à l’échéance\n(% des titres)", "Dépôts non assurés\n(% des dépôts)")
+               "Titres détenus jusqu’à\nl’échéance (% des titres)", "Dépôts non assurés\n(% des dépôts)")
   d$indicateur <- factor(courtes[match(d$indicateur, svb_cm6$indicateur)], levels = rev(courtes))
   d$banque <- factor(d$banque, levels = c("SVB", "Grandes banques américaines (moyenne)"),
                      labels = c("SVB", "Grandes banques (moyenne)"))   # libellé court : la légende tient
@@ -228,8 +228,8 @@ graphe_composition_m3 <- function(base_size = 16) {
 # dépôts sans qu'aucun autre dépôt baisse ; le paiement transfère 1 000 € de réserves.
 stopifnot(
   with(bilan_cm6, all(reserves + credits == depots + fonds_propres)),
-  with(bilan_cm6, depots[2] - depots[1] == pret_lea_cm6, credits[2] - credits[1] == pret_lea_cm6),
-  with(bilan_cm6, reserves[2] == reserves[1], reserves[2] - reserves[3] == pret_lea_cm6),
+  with(bilan_cm6, depots[2] - depots[1] == pret_lea_cm6 && credits[2] - credits[1] == pret_lea_cm6),
+  with(bilan_cm6, reserves[2] == reserves[1] && reserves[2] - reserves[3] == pret_lea_cm6),
   with(bilan_cm6, depots[3] == depots[1])
 )
 # Exemple 2 : panique bancaire

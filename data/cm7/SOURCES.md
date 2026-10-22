@@ -7,12 +7,14 @@ Téléchargées le **21/10/2026** par curl. À rafraîchir après le flash d'oct
 - **Contenu** : taux directeurs de la BCE, en %, à chaque date de changement (date d'effet), du 18/09/2019 au 16/09/2026 (21 lignes).
   - `date` : date d'effet du nouveau taux (AAAA-MM-JJ) ;
   - `depot` : taux de la facilité de dépôt (série `FM.B.U2.EUR.4F.KR.DFR.LEV`) ;
-  - `refinancement` : taux des opérations principales de refinancement (série `FM.B.U2.EUR.4F.KR.MRR_FR.LEV`).
+  - `refinancement` : taux des opérations principales de refinancement (série `FM.B.U2.EUR.4F.KR.MRR_FR.LEV`) ;
+  - `pret_marginal` : taux de la facilité de prêt marginal (série `FM.B.U2.EUR.4F.KR.MLFR.LEV`, ajoutée le 22/10/2026 : 2,90 % depuis le 16/09/2026).
 - **Source** : BCE, Data Portal.
   - https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.DFR.LEV?startPeriod=2019-01-01&format=csvdata (SHA-256 : `81dadedd9d988f060afdde115a2ef163cc24204e82323d4472f924e24ed21c18`)
   - https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.MRR_FR.LEV?startPeriod=2019-01-01&format=csvdata (SHA-256 : `77ba4f26589d1a92884a47d432697b4b3d9297f93d78debafcbac560f7b965dd`)
+  - https://data-api.ecb.europa.eu/service/data/FM/B.U2.EUR.4F.KR.MLFR.LEV?startPeriod=2019-01-01&format=csvdata (téléchargée le 22/10/2026 ; SHA-256 : `af37fa7a35d8506446afd36381de8c34fa2ba9cc68e7b8aaeab7ebdb0bb60ddd`)
   - Contrôle : tableau « Key ECB interest rates », https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html
-- **Traitement** : colonnes `TIME_PERIOD` et `OBS_VALUE` seulement ; les deux séries ont les mêmes dates. Le prolongement en escalier jusqu'au 21/10/2026 se fait dans `R/cm7.R`.
+- **Traitement** : colonnes `TIME_PERIOD` et `OBS_VALUE` seulement ; les trois séries ont les mêmes 21 dates. Le prolongement en escalier jusqu'au 21/10/2026 se fait dans `R/cm7.R`.
 
 ## `ipch_2021_2026.csv`
 
@@ -35,7 +37,7 @@ Téléchargées le **21/10/2026** par curl. À rafraîchir après le flash d'oct
   - `mois` : AAAA-MM ;
   - `taux` : en %.
 - **Source** : BCE, Data Portal, statistiques des taux d'intérêt des institutions financières monétaires (MIR), série `MIR.M.FR.B.A2C.AM.R.A.2250.EUR.N` (« Cost of borrowing for households for house purchase », France, nouveaux crédits, taux annualisé convenu / taux effectif au sens étroit). Téléchargée le **21/10/2026**.
-  - https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.A2C.AM.R.A.2250.EUR.N?startPeriod=2021-01&format=csvdata (SHA-256 : `a75c05e88b46b5f9455eb41fa3a2406578b99d79ac2d2b186cb90769e0a10e73`)
+  - https://data-api.ecb.europa.eu/service/data/MIR/M.FR.B.A2C.AM.R.A.2250.EUR.N?startPeriod=2021-01&format=csvdata (SHA-256 du fichier brut le 21/10/2026 : `a75c05e88b46b5f9455eb41fa3a2406578b99d79ac2d2b186cb90769e0a10e73`). L'empreinte porte sur tout le CSV, dont les colonnes de métadonnées peuvent changer d'un téléchargement à l'autre : le 22/10/2026, elle vaut `5d30186f9230f07c6639caac35d9c215429e5096d38e3762d79e8302e227116c`, mais les 68 couples `TIME_PERIOD`, `OBS_VALUE` sont identiques à ceux du fichier de données. Le contrôle qui compte est la comparaison de ces deux colonnes.
 - **Traitement** : colonnes `TIME_PERIOD` et `OBS_VALUE` seulement, renommées `mois` et `taux` ; toutes les observations ont le statut `A` (normal).
 - **Attention** : la série « entreprises » correspondante (`MIR.M.FR.B.A2I.AM.R.A.2240.EUR.N`) donne 1,40 % en juillet 2021 et 4,58 % en juillet 2023, et non les 1,08 % et 4,42 % que la page cite d'après Picault et Burietz (*The Conversation*, 04/10/2026), qui utilisent une autre mesure : ne pas mêler les deux.
 - **Utilisé par** : `R/cm7.R` (`credit_habitat_cm7`, `graphe_credit_habitat()`), donc `cours/cm7.qmd`.

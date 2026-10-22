@@ -2,8 +2,12 @@
 # partagés par la page de cours (base_size = 16) et les diapos (base_size = 24).
 # Dépend de R/theme_cours.R (couleurs_eco, police_cours, theme_cours).
 #
-# Toutes les valeurs numériques annoncées dans cours/cm7.qmd sont lues ou
-# calculées ici, puis vérifiées par les stopifnot() en fin de fichier.
+# Les valeurs de cours/cm7.qmd issues des données de data/cm7/ (taux de la BCE,
+# IPCH, crédits à l'habitat) et les calculs qui en découlent sont lus ou calculés
+# ici, puis vérifiés par les stopifnot() en fin de fichier. Les chiffres cités
+# d'après d'autres sources (contribution de l'énergie, projections de la BCE,
+# Insee, livret A, The Conversation) ne sont pas dans ces données : leur source
+# et leur date sont données dans la page, là où ils apparaissent.
 
 # ---------------------------------------------------------------------------
 # 1. Données (provenance : data/cm7/SOURCES.md, téléchargées le 21/10/2026)
@@ -15,7 +19,7 @@ ipch_cm7 <- utils::read.csv(here::here("data/cm7/ipch_2021_2026.csv"))
 credit_habitat_cm7 <- utils::read.csv(here::here("data/cm7/taux_credit_habitat_fr_2021_2026.csv"))
 date_arret_cm7 <- as.Date("2026-10-21")   # faits arrêtés au 21/10/2026
 
-#' Taux de dépôt (ou de refinancement) en vigueur à une date donnée.
+#' Taux de dépôt (ou de refinancement, ou de prêt marginal) en vigueur à une date donnée.
 #' La série BCE ne donne que les dates de changement : on prend le dernier
 #' changement intervenu au plus tard ce jour-là.
 taux_en_vigueur <- function(jour, taux = "depot") {
@@ -69,7 +73,7 @@ graphe_taux_inflation <- function(base_size = 16) {
   )
   reel <- sub("-", "−", format(arrondi1(taux_reel(ecarts$bas, ecarts$haut)), decimal.mark = ",",
                                drop0trailing = TRUE), fixed = TRUE)
-  ecarts$lab <- paste0("taux réel\n", c("oct. 2022", "sept. 2026"), " :\n≈ ", reel, " points")
+  ecarts$lab <- paste0("taux réel\n", c("oct. 2022", "sept. 2026"), " :\n≈ ", reel, " %")
   ecarts$x_lab <- as.Date(c("2021-01-15", "2026-09-30")); ecarts$y_lab <- c(10.8, 10.2)
   taille <- base_size / 3.4
   ggplot() +
@@ -272,6 +276,8 @@ stopifnot(
   proche(taux_en_vigueur("2025-06-11"), 2), proche(taux_en_vigueur("2026-06-16"), 2),   # inchangé de juin 2025 à juin 2026
   proche(taux_en_vigueur("2026-06-17"), 2.25), proche(taux_en_vigueur("2026-09-16"), 2.5),
   proche(taux_en_vigueur("2026-09-16", "refinancement"), 2.65),
+  proche(taux_en_vigueur("2026-09-16", "pret_marginal"), 2.9),
+  proche(taux_en_vigueur("2026-09-16") - taux_en_vigueur("2026-06-16"), 0.5),   # +0,50 point en 2026
   proche(taux_en_vigueur("2022-10-31"), 0.75), proche(taux_en_vigueur("2022-11-02"), 1.5)
 )
 # Deux hausses avant fin octobre 2022 (27/07 et 14/09)
@@ -279,10 +285,11 @@ stopifnot(nrow(subset(taux_bce_cm7, date >= as.Date("2022-07-27") & date <= as.D
 # Dix hausses du 27/07/2022 au 20/09/2023, +450 points de base au total
 hausses_2022_2023 <- subset(taux_bce_cm7, date >= as.Date("2022-07-27") & date <= as.Date("2023-09-20"))
 stopifnot(nrow(hausses_2022_2023) == 10, all(diff(c(-0.5, hausses_2022_2023$depot)) > 0),
-          proche((4 - (-0.5)) * 100, 450))
+          proche((taux_en_vigueur("2023-09-20") - taux_en_vigueur("2022-07-26")) * 100, 450))
 # Inflation IPCH (Eurostat, prc_hicp_minr)
 stopifnot(
-  proche(inflation_mois("2026-09"), 3.8), proche(inflation_mois("2026-08"), 3.2),
+  proche(inflation_mois("2026-09"), 3.8), proche(inflation_mois("2025-09"), 2.2),
+  proche(inflation_mois("2026-08"), 3.2),
   proche(inflation_mois("2026-05"), 3.2), proche(inflation_mois("2022-06"), 8.6),
   proche(inflation_mois("2022-10"), 10.6), proche(inflation_mois("2022-11"), 10.1),
   proche(inflation_mois("2023-10"), 2.9),
@@ -340,14 +347,14 @@ stopifnot(
   proche(round((1.04 / 1.10 - 1) * 100, 1), -5.5),               # valeur exacte, proche de −6
   proche(taux_reel(taux_en_vigueur("2022-10-31"), inflation_mois("2022-10")), -9.85),
   proche(arrondi1(taux_reel(taux_en_vigueur("2022-10-31"), inflation_mois("2022-10"))), -9.9),   # « environ −9,9 % »
-  proche(arrondi1(-1.3), -1.3),
+  proche(arrondi1(taux_reel(taux_en_vigueur("2026-09-30"), inflation_mois("2026-09"))), -1.3),
   proche(taux_reel(taux_en_vigueur("2023-10-15"), inflation_mois("2023-10")), 1.1),
   proche(taux_reel(taux_en_vigueur("2026-09-30"), inflation_mois("2026-09")), -1.3),
   proche(taux_reel(2.5, inflation_mois("2026-09", "ES")), -2.5),
   proche(taux_reel(2.5, inflation_mois("2026-09", "DE")), -0.8),
   proche(taux_reel(2.5, inflation_mois("2026-09", "FR")), -0.9),
   proche(taux_reel(2.5, inflation_mois("2026-09", "IT")), -1.7),
-  proche(1.7 - 3.1, -1.4)                                        # livret A (1,7 %) et IPC France, sept. 2026
+  proche(1.7 - 3.1, -1.4)    # calcul seul : livret A (Service-public.fr) et IPC France (Insee), hors données
 )
 # Taux réel ex post mensuel (taux de dépôt en fin de mois − inflation du mois) :
 # point bas en octobre 2022 sur 2021-2026 ; premier mois positif après juillet 2022 : octobre 2023
@@ -365,7 +372,7 @@ stopifnot(
   proche(taux_taylor(4) - taux_taylor(2), 3),
   proche(round(taux_taylor(3.8), 1), 6.7), proche(taux_taylor(2.3), 4.45)
 )
-# Théorie quantitative en taux de croissance (approximation) : 10 % de monnaie, 2 % de production
+# Théorie quantitative en taux de croissance (approximation), nombres fictifs : 10 % de monnaie, 2 % de production
 stopifnot(proche(10 + 0 - 2, 8))
 # Graphique théorique : équilibres annoncés
 stopifnot(

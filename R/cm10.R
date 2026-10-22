@@ -220,6 +220,8 @@ stopifnot(
   2^3 < 10, 2^4 > 10, proche(round(70 / 30, 1), 2.3),
   # Exemple 1, étape 5 : 370 € à 1 % contre 1,15 € à 7 %, rapport « environ 300 »
   abs(valeur_actuelle(1000, 0.01, 100) / valeur_actuelle(1000, 0.07, 100) - 300) < 30,
+  # Écart entre 1 % et 5 % sur un siècle : 370 € contre 8 €, rapport « près de 50 »
+  abs(valeur_actuelle(1000, 0.01, 100) / valeur_actuelle(1000, 0.05, 100) - 50) < 2,
   # Exemple 3 : VAC 256 € en 2025 à 3,2 % par an : environ 264 € en 2026 et 300 € en 2030
   proche(round(vac_cm10$v2025 * 1.032), 264), proche(round(vac_2030_cm10), 300),
   # Ramsey (illustration) : 0,1 + 1 x 1,3 = 1,4 ; 1,5 + 2 x 2 = 5,5
@@ -244,6 +246,10 @@ stopifnot(
   proche(round(parts("Inde"), 1), c(3.6, 17.8)),
   proche(round(parts("Afrique"), 1), c(2.9, 18.3)),
   proche(round(parts("France"), 1), c(2.2, 0.8)),
+  # États-Unis + UE : « près de 40 % » du CO2 cumulé, « moins de 10 % » de la population
+  (parts("États-Unis") + parts("Union européenne (27)"))[1] >= 38,
+  (parts("États-Unis") + parts("Union européenne (27)"))[1] < 40,
+  (parts("États-Unis") + parts("Union européenne (27)"))[2] < 10,
   proche(round(monde_cm10$co2_cumule_1750_2024_t / 1e9), 1849),
   proche(co2_cm10$co2_par_hab_2024_t[co2_cm10$entite == "États-Unis"], 14.2),
   proche(co2_cm10$co2_par_hab_2024_t[co2_cm10$entite == "Chine"], 8.66),

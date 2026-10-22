@@ -20,6 +20,7 @@ source(here::here("R/cm10.R"))   # même fichier que la page de cours
 
 ## La tonne de CO₂ évitée vaut 256 € en 2025, contre 187 € auparavant
 
+- En euros de 2023, par tonne d'équivalent CO₂
 - Elle vaudra 300 € en 2030
 - Rentable pour la collectivité si elle coûte moins de 256 €
 - Taux d'actualisation : 3,2 % par an
@@ -95,14 +96,14 @@ Valeur actuelle = montant ÷ (1 + δ)^n^ ; le facteur 1 ÷ (1 + δ)^n^ est compr
 0 h 29 – 0 h 36. La question devient : quel taux choisir ? Trois économistes y répondent différemment.
 :::
 
-## Ramsey : ce qu'on épargne pour nos descendants dépend de leur enrichissement
+## Ramsey : combien épargner pour nos descendants, sans compter moins leur bien-être
 
 ::: {.auteur}
-**Frank Ramsey** (1928), « A Mathematical Theory of Saving », *The Economic Journal* · école néoclassique. La réponse dépend du fait que les générations futures seront plus riches ; l'impatience pure, il la juge injustifiable.
+**Frank Ramsey** (1928), « A Mathematical Theory of Saving », *The Economic Journal* · école néoclassique. L'épargne optimale dépend de la richesse qu'elle procurera aux générations suivantes ; l'impatience pure, il la juge injustifiable.
 :::
 
 ::: {.notes}
-0 h 36 – 0 h 41. Citation de Ramsey (1928, p. 543) : pratique « éthiquement indéfendable », qui « vient seulement d'une faiblesse de l'imagination ».
+0 h 36 – 0 h 41. Citation de Ramsey (1928, p. 543 ; notre traduction) : pratique « éthiquement indéfendable », qui « vient seulement d'une faiblesse de l'imagination ». La règle de Ramsey, avec la croissance, a été tirée ensuite de son modèle.
 :::
 
 ## Le taux additionne l'impatience pure et un terme lié à la croissance
@@ -127,7 +128,7 @@ Valeur actuelle = montant ÷ (1 + δ)^n^ ; le facteur 1 ÷ (1 + δ)^n^ est compr
 **William Nordhaus** (1992), *Science* · école néoclassique. Modèle DICE : avec un taux proche des rendements du capital, la politique optimale réduit les émissions progressivement, avec un prix du carbone qui monte.
 :::
 
-Rendement réel avant impôt du capital des entreprises américaines : « d'environ 7 % par an » pendant quarante ans (Nordhaus, Yale, 2007).
+Rendement réel avant impôt du capital des entreprises américaines : « d'environ 7 % par an » pendant quarante ans (Nordhaus, Yale, 2007 ; notre traduction).
 
 ::: {.notes}
 0 h 48 – 0 h 54. Taux proche du taux d'intérêt réel r. Prix Nobel 2018 (*The Conversation*, 12/11/2018).
@@ -147,7 +148,7 @@ Rendement réel avant impôt du capital des entreprises américaines : « d'envi
 Taux réel d'équilibre : **1,4 % par an** (Nordhaus, 2007).
 
 ::: {.notes}
-0 h 54 – 1 h 00. Impatience pure presque nulle chez Stern. Avec un taux faible, agir tôt et fort coûte moins cher que laisser faire. Sans action, le coût serait d'« au moins 5 % du PIB mondial chaque année, maintenant et pour toujours », jusqu'à 20 % en comptant plus de risques (cité par Nordhaus, 2007).
+0 h 54 – 1 h 00. Impatience pure presque nulle chez Stern. Avec un taux faible, agir tôt et fort coûte moins cher que laisser faire. Sans action, le coût serait d'« au moins 5 % du PIB mondial chaque année, maintenant et pour toujours », jusqu'à 20 % en comptant plus de risques (cité par Nordhaus, 2007 ; notre traduction).
 :::
 
 ## Le coût social du carbone dépend du taux
@@ -173,7 +174,7 @@ Prix d'une tonne de CO₂ évitée retenu par l'État pour évaluer les projets 
 (OFCE, 18/11/2025)
 
 ::: {.notes}
-1 h 05 – 1 h 10. Le taux agit aux étapes de l'actualisation, du coût social et de la VAC, mais pas au moment d'émettre ni de trier.
+1 h 05 – 1 h 10. Deux routes : le coût social du carbone part des dommages, la VAC d'un objectif d'émissions. Le taux agit à presque toutes les étapes de calcul (actualisation, coût social, VAC, tri des projets), mais pas au moment d'émettre.
 :::
 
 ## Entre 1 % et 5 %, la valeur actuelle de 1 000 € dans un siècle est divisée par près de 50
@@ -324,7 +325,7 @@ graphe_parts_co2(base_size = 24)
 Source : Global Carbon Budget (2025) ; population : HYDE (2023), Gapminder (2022), Nations unies (2024) ; Our World in Data, 21/10/2026.
 
 ::: {.notes}
-2 h 18 – 2 h 23. CO₂ fossile et industriel, 1750-2024, hors changement d'usage des sols. Le CO₂ s'accumule : c'est le stock émis depuis deux siècles qui réchauffe, pas le flux de l'année. Sur 1 849 milliards de tonnes, l'Afrique, avec 18 % de la population, en a émis 3 %. La France fait partie de l'UE à 27.
+2 h 18 – 2 h 23. CO₂ fossile et industriel, 1750-2024, hors changement d'usage des sols. Le CO₂ s'accumule : c'est le stock émis depuis deux siècles qui réchauffe, pas seulement le flux de l'année. La concentration monte tant que les émissions dépassent ce qu'absorbent océans et végétation, environ la moitié de 2015 à 2024 (Global Carbon Budget 2025, *ESSD*, 13/05/2026). Sur 1 849 milliards de tonnes, l'Afrique, avec 18 % de la population, en a émis 3 %. La France fait partie de l'UE à 27.
 :::
 
 ## Par habitant, la Chine dépasse l'UE chaque année depuis 2017
@@ -333,7 +334,7 @@ Source : Global Carbon Budget (2025) ; population : HYDE (2023), Gapminder (2022
 #| label: fig-flux-co2
 #| fig-width: 8
 #| fig-height: 4.6
-#| fig-alt: "Six courbes de 1990 à 2024. La courbe bleue des États-Unis, la plus haute, part d'environ 20 tonnes par habitant, reste au-dessus de 20 jusqu'au milieu des années 2000 puis baisse jusqu'à 14,2 tonnes. La courbe ambre de l'Union européenne à 27 baisse de 9,2 à 5,4 tonnes. La courbe rouge de la Chine monte de 2,2 à 8,7 tonnes et passe au-dessus de l'Union européenne vers 2013, durablement depuis 2017. La moyenne mondiale, en tirets noirs, reste entre 4 et 5 tonnes. L'Inde, en gris, monte de 0,7 à 2,2 tonnes ; l'Afrique, en pointillés gris, reste autour d'une tonne."
+#| fig-alt: "Six courbes de 1990 à 2024. La courbe bleue des États-Unis, la plus haute, part d'environ 20 tonnes par habitant, reste autour de 20 tonnes jusqu'en 2007 puis baisse jusqu'à 14,2 tonnes. La courbe ambre de l'Union européenne à 27 baisse de 9,2 à 5,4 tonnes. La courbe rouge de la Chine monte de 2,2 à 8,7 tonnes et passe au-dessus de l'Union européenne vers 2013, durablement depuis 2017. La moyenne mondiale, en tirets noirs, reste entre 4 et 5 tonnes. L'Inde, en gris, monte de 0,7 à 2,2 tonnes ; l'Afrique, en pointillés gris, reste autour d'une tonne."
 graphe_flux_co2(base_size = 24)
 ```
 
@@ -369,11 +370,11 @@ CCNUCC (1992, art. 3.1) : « responsabilités communes mais différenciées et [
 
 **Positif.**
 
-- Entre le rapport Stern et les autres études (Yale, 2007)
+- Stern face aux autres études (Yale, 2007 ; notre traduction)
 - Coût social du carbone chez Nordhaus : de 50 à 235 dollars par tonne de carbone (14 à 64 par tonne de CO₂), selon 5 % ou 2,5 % (*The Conversation*, 12/11/2018)
 
 ::: {.notes}
-2 h 36 – 2 h 41. Chez Stern, des pertes inférieures à 1 % de la production mondiale en 2050 et d'environ 3 % en 2100 deviennent une perte « maintenant » de 14 % par actualisation à un taux très faible (Nordhaus, conférence de Yale, 2007).
+2 h 36 – 2 h 41. Dans le scénario le plus pessimiste de Stern, des pertes inférieures à 1 % de la production mondiale en 2050 et d'environ 3 % en 2100 deviennent une perte « maintenant » de 14 % par actualisation à un taux très faible (Nordhaus, conférence de Yale, 2007).
 :::
 
 ## Le résultat dépend aussi de la fonction de dommages
@@ -425,7 +426,7 @@ Décision n° 2023-1066 QPC du 27 octobre 2023 (Cigéo) : le législateur doit v
 - 1 000 € dans cent ans : 370 € à 1 %, 8 € à 5 %
 - Ramsey : impatience pure + croissance
 - Taux faible : optimum d'émissions bas
-- États-Unis et UE : 40 % du CO₂, moins de 10 % de la population
+- États-Unis et UE : près de 40 % du CO₂, moins de 10 % de la population
 - Le taux mêle faits et jugement
 :::
 

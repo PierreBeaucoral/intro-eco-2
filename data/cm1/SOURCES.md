@@ -15,6 +15,16 @@
 - **Utilisé par** : `R/cm1.R` (`prix_pompe_cm1`, `graphe_prix_pompe()`), donc `cours/cm1.qmd` et `slides/cm1.qmd`.
 - **Attention** : ce sont des moyennes pondérées, pas des relevés de station ; elles diffèrent un peu des chiffres journaliers de la presse ou du SDES.
 
+## Prix hors taxes (sans fichier, codés dans `R/cm1.R`)
+
+- **Contenu** : prix hors taxes en France, en euros pour 1 000 litres, aux deux seules dates du tableau « Du baril à la pompe » de la page (23/02/2026 et 12/10/2026). Quatre valeurs, trop peu pour un CSV : elles sont écrites en dur dans `R/cm1.R`.
+  - `ht_euro95` : Euro-super 95, colonne `FR_price_wo_tax_euro95` : 735,025 (23/02) et 1 153,317 (12/10) ;
+  - `ht_gazole` : gazole, colonne `FR_price_wo_tax_diesel` : 767,267 (23/02) et 1 332,708 (12/10).
+- **Source** : même fichier historique du *Weekly Oil Bulletin* que ci-dessus, feuille « Prices wo taxes ».
+- **Lu le** : 21/10/2026 (Euro-super 95) ; relu le 22/10/2026 pour les deux carburants sur le fichier republié (SHA-256 `7e019a27fe2df6f324ec7a7c551b98142713fbee32aa7a030906101ffc22b2fd`), valeurs identiques.
+- **Traitement** : arrondi à trois décimales. L'accise et la TVA se déduisent dans `R/cm1.R` (TVA = TTC ÷ 6 ; accise = TTC − hors taxes − TVA).
+- **Utilisé par** : `R/cm1.R` (`decompose_pompe()` et ses `stopifnot()`), donc le tableau `@tbl-baril-pompe` de `cours/cm1.qmd` et la diapo correspondante de `slides/cm1.qmd`.
+
 ## `brent_eia_2025_2026.csv`
 
 - **Contenu** : prix du Brent au comptant (« Europe Brent Spot Price FOB »), en dollars par baril, une ligne par jour de cotation, du 02/01/2025 au 14/10/2026 (452 lignes).

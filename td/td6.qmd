@@ -32,7 +32,8 @@ Porte sur : CM 6 et 7
 
 Fin 2022, Silicon Valley Bank (SVB), la banque californienne des start-up, est la 16^e^ banque américaine par la taille de son bilan (environ 212 milliards de dollars d'actifs).
 
-- *Mercredi 8 mars 2023.* Avec la hausse des taux d'intérêt, un portefeuille d'obligations acheté 91 milliards de dollars ne valait plus que 76 milliards fin 2022. SVB annonce une perte de 1,8 milliard de dollars sur la vente de 21 milliards de titres, et cherche du capital.
+- *Fin 2022.* Avec la hausse des taux d'intérêt, un portefeuille d'obligations acheté 91 milliards de dollars ne vaut plus que 76 milliards sur le marché.
+- *Mercredi 8 mars 2023.* SVB annonce une perte de 1,8 milliard de dollars sur la vente de 21 milliards de titres, et cherche du capital.
 - *Jeudi 9 mars.* Poussés par les réseaux sociaux, ses clients, très liés entre eux, retirent leurs dépôts « de manière coordonnée » : plus de 40 milliards de dollars en une journée. La direction en attend plus de 100 milliards le lendemain, soit en tout environ 85 % des dépôts.
 - *Vendredi 10 mars.* SVB est fermée par le régulateur. *Dimanche 12 mars* : les autorités annoncent que tous ses déposants, garantis ou non, récupéreront l'intégralité de leurs dépôts.
 
@@ -81,9 +82,9 @@ Inflation : hausse sur un an des prix à la consommation de la zone euro (IPCH)
 ::: {.wp-document data-label="Document 4"}
 **La BCE en septembre 2026 : agir tôt, sans s'engager**
 
-Le 10 septembre 2026, la BCE relève ses taux pour la deuxième fois de l'année. Elle explique que « plus les prix de l'énergie restent élevés, plus ils risquent de faire monter l'inflation au-delà » de l'énergie. Elle note que, « à ce stade », les salaires ne réagissent pas de façon notable au choc, et que les anticipations d'inflation à long terme se situent « autour de 2 % ». Elle prévoit une inflation de 3,0 % et une croissance de 0,9 % en 2026. Elle décidera « réunion par réunion ».
+Le 10 septembre 2026, la BCE relève ses taux pour la deuxième fois de l'année. Elle explique que « plus les prix de l'énergie restent élevés, plus ils risquent de faire monter l'inflation au-delà » de l'énergie. Elle note que, « à ce stade », les salaires ne réagissent pas de façon notable au choc, et que la plupart des mesures des anticipations d'inflation à long terme se situent « autour de 2 % », même si les anticipations à court terme restent élevées. Elle prévoit une inflation de 3,0 % et une croissance de 0,9 % en 2026. Elle décidera « réunion par réunion ».
 
-En juin, l'AFP rappelait que la réaction de la BCE en 2022 avait été « jugée tardive ». Avant la décision, l'économiste Dirk Schumacher (KfW, banque publique allemande) estimait que la BCE devait « envoyer le signal aux marchés financiers, mais aussi aux entreprises et aux ménages ». Pour Éric Dor (IÉSEG, école de commerce), la hausse « risque d'amplifier la contraction de l'activité ».
+En juin, l'AFP rappelait que la réaction de la BCE en 2022 avait été « jugée tardive ». Avant la décision de juin, l'économiste Dirk Schumacher (KfW, banque publique allemande) estimait que la BCE devait « envoyer le signal aux marchés financiers, mais aussi aux entreprises et aux ménages ». Pour Éric Dor (IÉSEG, école de commerce), la hausse « risque d'amplifier la contraction de l'activité ».
 
 [Source : BCE, « Monetary policy statement », 10/09/2026, <https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html> (traduction de l'enseignant) ; AFP, « La BCE relève ses taux de 0,25 point face à l'inflation liée à la guerre en Iran », *La Libre*, 11/06/2026, <https://www.lalibre.be/economie/2026/06/11/la-bce-releve-ses-taux-de-025-point-face-a-linflation-liee-a-la-guerre-en-iran-QEZSADHVDNBKFHIHL4PXHGVTGM/>.]{.wp-source}
 :::

@@ -21,12 +21,12 @@ Déc. 2023 : l'ANSM gèle les nouveaux traitements par Ozempic, Victoza, Trulici
 Cause officielle : « une augmentation importante de la demande mondiale » (ministère de la Santé, 21/05/2024).
 
 ::: {.notes}
-0 h 00 – 0 h 05. Accroche : qui connaît quelqu'un sous Ozempic ou Wegovy ? Faits arrêtés au 21/10/2026 : la pénurie est terminée.
+0 h 00 – 0 h 05. Accroche : qui a déjà entendu parler d'Ozempic ou de Wegovy ? Où ? Faits arrêtés au 21/10/2026 : la pénurie est terminée.
 :::
 
 ## Pourtant, son prix n'est pas fixé par un marché mais par l'État
 
-![Photo : HualinXMN, CC BY-SA 4.0, Wikimedia Commons](../cours/img/cm3/ozempic-stylo-3ml.jpg){width=45% fig-alt="Photographie d'un stylo injecteur bleu clair posé sur un fond de carton gris, avec une étiquette verte portant le nom Ozempic et des caractères chinois."}
+![Photo : HualinXMN, CC BY-SA 4.0, Wikimedia Commons (réduite)](../cours/img/cm3/ozempic-stylo-3ml.jpg){width=45% fig-alt="Photographie d'un stylo injecteur bleu clair posé sur un fond de carton gris, avec une étiquette verte portant le nom Ozempic et des caractères chinois."}
 
 Une boîte d'Ozempic 1 mg : 76,58 € ; remboursement de 30 % (Base de données publique des médicaments, 21/10/2026).
 
@@ -117,15 +117,15 @@ La quantité offerte varie très peu avec le prix. Produire plus exige des usine
 0 h 34 – 0 h 38. Question : pourquoi payer plus cher ne fait-il pas apparaître des stylos demain ?
 :::
 
-## Arrow : la santé n'est pas un marché comme les autres
+## Arrow : les soins médicaux ne sont pas un marché comme les autres
 
 ::: {.auteur}
 :::: {.wp-portrait}
 ![](../cours/img/portraits/arrow-kenneth.jpg){fig-alt="Portrait photographique de Kenneth J. Arrow en 1996, homme âgé aux cheveux blancs, en buste."}
-[1996 · Linda A. Cicero, CC BY 3.0, Wikimedia Commons]{.wp-credit}
+[1996 · Linda A. Cicero / Stanford News Service, CC BY 3.0, Wikimedia Commons]{.wp-credit}
 ::::
 
-**Kenneth J. Arrow** (1963), « Uncertainty and the Welfare Economics of Medical Care » · école néoclassique. Maladie imprévisible, patient moins informé que son médecin : la santé repose sur l'assurance, la confiance et des règles collectives.
+**Kenneth J. Arrow** (1963), « Uncertainty and the Welfare Economics of Medical Care » · école néoclassique. Maladie imprévisible, patient moins informé que son médecin : les soins reposent sur l'assurance, la confiance, des règles collectives.
 :::
 
 ::: {.notes}
@@ -142,7 +142,7 @@ graphe_penurie(base_size = 24)
 ```
 
 ::: {.notes}
-0 h 46 – 0 h 55. Suivre la flèche D → D′. Le prix reste à P\* : la pénurie est le trait rouge. E′ : ce qu'un prix libre donnerait. Graphique théorique.
+0 h 46 – 0 h 55. Suivre la flèche D → D′. Le prix reste à P\* : la pénurie est le trait rouge. E′ : ce qu'un prix libre donnerait sur un marché à nombreux vendeurs. Graphique théorique.
 :::
 
 ## Chaque étape de la chaîne explique la suivante
@@ -197,11 +197,11 @@ P\* = 75 €, Q\* = 100. e = −10 ÷ 66,7 ≈ **−0,15**.
 
 - À 275 € : 120 demandés, 120 offerts
 - Prix : **+267 %** ; quantité : **+20 %**
-- Sur 60 000 boîtes manquantes, 20 000 produites en plus ; 40 000 patients renoncent
+- Sur 60 000 boîtes manquantes, 20 000 produites en plus ; 40 000 patients renoncent, s'ils paient tout le prix
 - Recette : 7,5 → 33 millions d'euros par mois
 
 ::: {.notes}
-1 h 17 – 1 h 24. 100 000 × 75 € = 7,5 M€ ; 120 000 × 275 € = 33 M€. La hausse paie surtout la pénurie, pas un effort de production.
+1 h 17 – 1 h 24. 100 000 × 75 € = 7,5 M€ ; 120 000 × 275 € = 33 M€. La hausse paie surtout la pénurie, pas un effort de production. Hypothèse : médicament non remboursé ; remboursé, la hausse pèserait surtout sur l'Assurance maladie et la demande reculerait encore moins. Marché fictif à nombreux vendeurs.
 :::
 
 ## Avec une offre rigide, libérer le prix change surtout qui est servi
@@ -252,19 +252,19 @@ Exemple fictif : 100 000 boîtes pour 160 000 demandes.
 1 h 52 – 2 h 00. Piège : « le critère a supprimé la pénurie » est faux. Il manque toujours 60 000 boîtes : la règle décide seulement qui subit la pénurie. Le quota par pharmacie doit être combiné avec une autre règle.
 :::
 
-## Entre 2023 et 2025, l'État a rationné puis freiné la demande remboursée
+## Entre 2023 et 2025, l'État a rationné, puis encadré le remboursement
 
 | Date | Décision |
 |---|---|
 | Déc. 2023 | Ne plus commencer de traitement |
 | 14/03/2024 | Réservé aux diabétiques de type 2 avec maladie des artères |
-| 01/02/2025 | Formulaire du médecin pour le remboursement |
+| 01/02/2025 | Formulaire du médecin pour le remboursement (tolérance jusqu'au 01/09/2025) |
 | 05/06/2025 | Ozempic et Victoza de nouveau disponibles |
 
-Sources : ANSM ; Vidal, 16/01/2025
+Sources : ANSM ; Vidal, 16/01/2025 et 03/06/2025
 
 ::: {.notes}
-2 h 00 – 2 h 06. Sources : ANSM, Vidal 16/01/2025. Septembre-octobre 2024 : reprise progressive sous contingentement. En juin 2025 : « la fin des tensions d'approvisionnement », sans que le prix ait servi à les résorber.
+2 h 00 – 2 h 06. Sources : ANSM, Vidal 16/01/2025 et 03/06/2025. Septembre-octobre 2024 : reprise progressive sous contingentement. Le formulaire, toléré jusqu'au 01/09/2025, n'explique pas la fin de la pénurie. En juin 2025 : « la fin des tensions d'approvisionnement », sans que le prix ait servi à les résorber ; compatible avec un déplacement de l'offre, sans que les sources séparent offre et demande.
 :::
 
 ## Les boîtes remboursées cessent de croître en 2024, année du rationnement
@@ -279,7 +279,7 @@ graphe_boites_aglp1(base_size = 24)
 Compatible avec une quantité bloquée par l'offre, sans le prouver : une baisse de la demande donnerait le même chiffre. Source : Assurance Maladie, Medic'AM (21/10/2026).
 
 ::: {.notes}
-2 h 06 – 2 h 13. +19,7 % en 2023, +0,1 % en 2024. Ozempic +24,6 %, Trulicity −7,7 %, Victoza −49,8 %. On observe la quantité vendue, la plus petite des deux. Les boîtes non remboursées n'y figurent pas.
+2 h 06 – 2 h 13. +19,7 % en 2023, +0,1 % en 2024. Ozempic +24,6 %, Trulicity −7,7 %, Victoza −49,8 % (la chute de Victoza, qui a repris en même temps qu'Ozempic, a d'autres causes, que la source ne donne pas). On observe la quantité vendue, la plus petite des deux. Les boîtes non remboursées n'y figurent pas.
 :::
 
 ## Le prix d'Ozempic n'a pas répondu au choc de demande
@@ -305,7 +305,7 @@ Boîtes ×4,9 ; prix moyen de 80,0 € à 77,8 € (−2,7 %). Source : Assuranc
 4. Pour l'État, un **choc de demande** mondiale
 
 ::: {.notes}
-2 h 20 – 2 h 24. Brevet : un seul fabricant. Un prix français plus élevé aurait peut-être attiré des stylos aux dépens d'autres pays : déduction du modèle, non fait observé.
+2 h 20 – 2 h 24. Brevet : un seul fabricant. Sans nombreux vendeurs, pas de courbe d'offre : E′ n'est qu'un repère ; un laboratoire libre fixerait son prix, probablement plus haut. Un prix français plus élevé aurait peut-être attiré des stylos aux dépens d'autres pays : déduction du modèle, non fait observé.
 :::
 
 ## Le modèle éclaire le mécanisme, pas la cause
@@ -333,7 +333,7 @@ Depuis le 15 juin 2026, remboursés à 65 % dans l'obésité sévère (Caducée.
 ## Le critère médical protège les patients déjà traités, pas les nouveaux
 
 - **Santé** : les nouveaux patients sans maladie des artères perdent
-- **Revenu** : à 275 €, un patient modeste renonce avant un patient aisé
+- **Revenu** : à 275 € à sa charge, le modeste renonce avant l'aisé
 - **Territoire, génération** : effet non chiffré par les sources de la séance
 - **Fabricant** : il ne profite pas de la rente de pénurie
 
@@ -352,7 +352,7 @@ Depuis le 15 juin 2026, remboursés à 65 % dans l'obésité sévère (Caducée.
 
 ## Le prix ne suffit pas, et la responsabilité du fabricant est discutée
 
-- Suisse et Allemagne, prix supérieurs, « sont aussi touchés » (Public Sénat, 06/07/2023)
+- Suisse et Allemagne : prix supérieurs, pénuries aussi, rappelle la rapporteure du Sénat (Public Sénat, 06/07/2023)
 - Test-Achats : « principalement la faute » de Novo Nordisk (14/11/2023)
 
 ::: {.notes}
@@ -381,7 +381,7 @@ Depuis le 15 juin 2026, remboursés à 65 % dans l'obésité sévère (Caducée.
 ## Le droit agit ici sur la demande remboursée, non sur le prix
 
 ::: {.droit}
-Code de la sécurité sociale, art. L162-19-1 : remboursement « subordonné au renseignement par le prescripteur d'éléments relatifs aux circonstances et indications ». Appliqué à Ozempic depuis le 1^er^ février 2025 (Vidal, 16/01/2025).
+Remboursement « subordonné au renseignement par le prescripteur d'éléments relatifs aux circonstances et indications de la prescription » (Vidal, 16/01/2025, d'après le Code de la sécurité sociale, art. L162-19-1). Appliqué à Ozempic depuis le 1^er^ février 2025.
 :::
 
 ::: {.notes}
@@ -395,7 +395,7 @@ Code de la sécurité sociale, art. L162-19-1 : remboursement « subordonné au 
 - Sans prix, il faut rationner : file, critère ou quota
 - La règle décide **qui** subit la pénurie
 - À prix fixé, seul le déplacement d'une courbe (O → O′, ou une demande qui recule) referme la pénurie
-- La santé n'est pas un marché ordinaire (Arrow, 1963)
+- Soins médicaux : pas un marché ordinaire (Arrow, 1963)
 :::
 
 ::: {.notes}

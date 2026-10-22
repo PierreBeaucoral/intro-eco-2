@@ -336,8 +336,9 @@ stopifnot(
 )
 # Données Eurostat (Md€)
 stopifnot(
-  proche(commerce_cm9$exportations[commerce_cm9$annee == 2025], 554.7),
-  proche(commerce_cm9$importations[commerce_cm9$annee == 2025], 356.7),
+  proche(commerce_cm9$annee, 2023:2025),
+  proche(commerce_cm9$exportations, c(505.9, 535.6, 554.7)),   # tableau de la page, 2023-2025
+  proche(commerce_cm9$importations, c(347.8, 337.4, 356.7)),
   proche(commerce_cm9$solde, c(158.1, 198.2, 198.0), tol = 1e-6)
 )
 # Données du BLS (indices de prix)

@@ -253,7 +253,7 @@ graphe_chomage_groupes <- function(base_size = 16) {
   a <- data.frame(bloc = blocs[1], categorie = rep(noms, 2), annee = rep(c(2013, 2025), each = 4),
                   chomage = c(vapply(cols, gr, numeric(1), an = 2013),
                               vapply(cols, gr, numeric(1), an = 2025)))
-  r <- repartition_cm8[repartition_cm8$annee %in% c(2013, 2025), ]
+  r <- repartition_cm8[repartition_cm8$annee %in% c(2013, 2025) & repartition_cm8$groupe != "diplome_total", ]
   r$bloc <- ifelse(r$groupe == "region", blocs[3], blocs[2])
   d <- rbind(a, r[, c("bloc", "categorie", "annee", "chomage")])
   d$bloc <- factor(d$bloc, levels = blocs)
@@ -345,7 +345,9 @@ stopifnot(
   proche(gr("chomage_femmes", 2025), 11.2), proche(gr("chomage_hommes", 2025), 7.0),
   proche(gr("pauvrete_ue2020", 2008), 28.1), proche(gr("pauvrete_ue2020", 2014), 36.0),
   proche(max(grece_cm8$pauvrete_ue2020, na.rm = TRUE), 36.0), proche(gr("pauvrete_ue2030", 2025), 27.5),
-  proche(nrow(repartition_cm8), 15),
+  proche(nrow(repartition_cm8), 16),
+  # total 2013 du tableau par diplôme (lfsa_urgaed), cité dans les légendes : 27,5 % au lieu de 27,8 %
+  proche(with(repartition_cm8, chomage[groupe == "diplome_total" & annee == 2013]), 27.5),
   # solde primaire de 2010 (solde + intérêts) et prix en baisse de 2012 à 2016 (déflateur du PIB)
   proche(r1(gr("solde", 2010) + gr("interets", 2010)), -5.3),
   all(diff(grece_cm8$pib_valeur / grece_cm8$pib_reel)[grece_cm8$annee[-1] %in% 2012:2016] < 0),

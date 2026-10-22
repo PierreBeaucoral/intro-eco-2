@@ -29,7 +29,7 @@ Minutage total : 3 h (180 min), pause comprise. Question à l'amphi : « Qui pen
 [0 h 00 – 0 h 04] La direction attendait plus de 100 milliards de plus le lendemain : environ 85 % des dépôts. Demander : qu'est-ce qui a pu pousser tant de clients à partir en même temps ?
 :::
 
-## Neuf euros sur cent seulement sont des billets
+## Neuf euros sur cent seulement sont des billets ou des pièces
 
 - Zone euro, août 2026 : M3 = **17 646 Md€**.
 - Billets et pièces : 1 617 Md€, soit environ **9 %**.
@@ -71,10 +71,8 @@ Deux outils : le **bilan bancaire** et le **jeu de la panique**.
 **McLeay, Radia et Thomas** (2014), Banque d'Angleterre. Quand une banque accorde un prêt, elle crédite le compte de l'emprunteur : elle crée un dépôt nouveau, au lieu de prêter l'épargne d'autres clients.
 :::
 
-*Au Royaume-Uni, en 2014, les dépôts bancaires représentaient 97 % de la monnaie des ménages et des entreprises (Banque d'Angleterre, 2014).*
-
 ::: {.notes}
-[0 h 15 – 0 h 20] « Money creation in the modern economy », Bank of England Quarterly Bulletin, 2014 T1. La banque centrale ne fixe pas directement la quantité de monnaie : elle l'influence surtout par le taux d'intérêt.
+[0 h 15 – 0 h 20] « Money creation in the modern economy », Bank of England Quarterly Bulletin, 2014 T1. La banque centrale ne fixe pas directement la quantité de monnaie : elle l'influence surtout par le taux d'intérêt. Au Royaume-Uni, en 2014, les dépôts bancaires représentaient 97 % de la monnaie des ménages et des entreprises (Banque d'Angleterre, 2014).
 :::
 
 ## La monnaie existe sous trois formes
@@ -167,7 +165,7 @@ Chez une banque, le dépôt **naît** du prêt. Mais elle doit se procurer des r
 3. **La politique monétaire** : les taux rendent le crédit plus ou moins cher.
 
 ::: {.notes}
-[0 h 55 – 1 h 00] Source : Banque d'Angleterre (2014). Un prêt non remboursé est une perte ; la réglementation impose des fonds propres et des réserves de précaution. La troisième est la limite ultime.
+[0 h 55 – 1 h 00] Source : Banque d'Angleterre (2014). Un prêt non remboursé est une perte ; la réglementation impose des fonds propres et un minimum d'actifs liquides. La troisième est la limite ultime.
 :::
 
 ## Quand les taux montent, crédit et monnaie ralentissent
@@ -182,7 +180,7 @@ graphe_m3_credits(base_size = 24)
 *Source : BCE, Data Portal (consulté le 21/10/2026) ; août 2026 provisoire.*
 
 ::: {.notes}
-[1 h 00 – 1 h 07] Lecture : en août 2023, la quantité de monnaie M3 est inférieure de 1,3 % à celle d'août 2022. La ligne en tirets marque le 27 juillet 2022 : la BCE relève ses taux pour la première fois depuis 2011 (hausse décidée le 21 juillet, effective le 27).
+[1 h 00 – 1 h 07] Lecture : en août 2023, la croissance sur un an de M3 est de −1,3 % : la quantité de monnaie a reculé par rapport à août 2022. La ligne en tirets marque le 27 juillet 2022 : la BCE relève ses taux pour la première fois depuis 2011 (hausse décidée le 21 juillet, effective le 27).
 :::
 
 ## La monnaie suit le crédit, sans que ce soit une preuve
@@ -213,10 +211,10 @@ Reprise dans quinze minutes.
 
 :::: {.wp-portrait}
 ![](../cours/img/portraits/philip-dybvig.jpg){fig-alt="Portrait photographique de Philip H. Dybvig en 2025, homme en buste."}
-[2025 · Xuthoria, CC BY-SA 4.0, Wikimedia Commons]{.wp-credit}
+[2025 · Xuthoria, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), recadré, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ASSA_2025_-_Philip_Dybvig_01.jpg)]{.wp-credit}
 :::
 
-**Diamond et Dybvig** (1983), *Journal of Political Economy*. Si chacun craint que les autres retirent, tous se précipitent. Une garantie des dépôts supprime la raison de se précipiter.
+**Diamond et Dybvig** (1983) : si chacun craint que les autres retirent, tous se précipitent ; une garantie des dépôts l'empêche.
 :::
 
 ::: {.notes}
@@ -305,7 +303,7 @@ graphe_panique(base_size = 24)
 ```{r}
 #| fig-width: 8
 #| fig-height: 4.6
-#| fig-alt: "Barres horizontales, SVB et grandes banques. Prêts en % de l'actif : 35 contre 58. Titres en % de l'actif : 55 contre 25. Titres gardés jusqu'à l'échéance : 78 contre 42. Dépôts non assurés : 94 contre 41."
+#| fig-alt: "Barres horizontales, SVB et grandes banques. Prêts en % de l'actif : 35 contre 58. Titres en % de l'actif : 55 contre 25. Titres détenus jusqu'à l'échéance : 78 contre 42. Dépôts non assurés : 94 contre 41."
 graphe_svb(base_size = 24)
 ```
 
@@ -321,10 +319,10 @@ graphe_svb(base_size = 24)
 2. Un actif peu liquide : obligations longues, moins-values latentes.
 3. Une rumeur qui va vite : 40 Md$ retirés le 9 mars.
 
-SVB n'était pas parfaitement saine : la panique a transformé une fragilité en faillite.
+Une banque fragile, achevée par la panique.
 
 ::: {.notes}
-[2 h 15 – 2 h 22] Garantie américaine : 250 000 dollars par déposant (The Conversation, 13/03/2023). Fin 2022, un portefeuille d'obligations acheté 91 milliards de dollars n'en valait plus que 76 sur le marché, soit environ 16 % de moins ; au total, environ 17 milliards de dollars de moins-values latentes. Le 8 mars 2023, SVB annonce une perte de 1,8 milliard de dollars sur la vente de 21 milliards de titres et cherche du capital. Selon la Réserve fédérale, les retraits reflétaient aussi des « inquiétudes fondamentales » sur la banque. Clients retirant « de manière coordonnée », poussés par les réseaux sociaux (Réserve fédérale, 28/04/2023).
+[2 h 15 – 2 h 22] SVB n'était pas parfaitement saine : la panique a transformé une fragilité en faillite. Garantie américaine : 250 000 dollars par déposant (The Conversation, 13/03/2023). Fin 2022, un portefeuille d'obligations acheté 91 milliards de dollars n'en valait plus que 76 sur le marché, soit environ 16 % de moins ; au total, environ 17 milliards de dollars de moins-values latentes. Le 8 mars 2023, SVB annonce une perte de 1,8 milliard de dollars sur la vente de 21 milliards de titres et cherche du capital. Selon la Réserve fédérale, les retraits reflétaient aussi des « inquiétudes fondamentales » sur la banque. Clients retirant « de manière coordonnée », poussés par les réseaux sociaux (Réserve fédérale, 28/04/2023, notre traduction).
 :::
 
 ## Le mobile money est un moyen de paiement, pas une création monétaire
@@ -333,10 +331,8 @@ SVB n'était pas parfaitement saine : la panique a transformé une fragilité en
 L'opérateur inscrit sur le compte la somme qu'il a reçue : la monnaie change de forme, pas de quantité. Il n'y a création que si une banque **prête** ou achète un titre.
 :::
 
-*2,3 milliards de comptes dans le monde en 2025 (GSMA, 2026).*
-
 ::: {.notes}
-[2 h 22 – 2 h 27] Plus de 2 100 milliards de dollars y ont circulé. En général, la réglementation oblige l'opérateur à placer un montant égal sur des comptes bancaires à part (GSMA, 2026, glossaire). Le crédit arrive pourtant par le téléphone : à Abidjan, Tik Tak (Orange) et MoMo Kash (MTN) accordent de petits prêts sur décision d'un algorithme (Ducourant et al., The Conversation, 01/09/2026).
+[2 h 22 – 2 h 27] En 2025, 2,3 milliards de comptes de mobile money dans le monde, et plus de 2 100 milliards de dollars y ont circulé (GSMA, 2026). En général, la réglementation oblige l'opérateur à placer un montant égal sur des comptes bancaires à part (GSMA, 2026, glossaire). Le crédit arrive pourtant par le téléphone : à Abidjan, Tik Tak (Orange) et MoMo Kash (MTN) accordent de petits prêts sur décision d'un algorithme (Ducourant et al., The Conversation, 01/09/2026).
 :::
 
 ## Les petits déposants sont couverts, les gros beaucoup moins
@@ -351,12 +347,14 @@ L'opérateur inscrit sur le compte la somme qu'il a reçue : la monnaie change d
 
 ## Le mobile money ouvre le paiement, mais pas à tous également
 
-- **Territoire** : l'essentiel des nouveaux comptes vient d'Afrique subsaharienne (GSMA, 2026).
-- **Génération** : à Abidjan, l'historique mobile money tient lieu de dossier (Ducourant et al., 2026).
-- **Genre** : dans les pays à revenu faible ou intermédiaire, les femmes ont 36 % de chances en moins de posséder un compte de mobile money (2024, contre 30 % en 2021 ; GSMA, 2026, d'après la Banque mondiale).
+- **Territoire** : surtout l'Afrique subsaharienne.
+- **Génération** : à Abidjan, des enquêtés sans passé bancaire, dont de jeunes adultes, empruntent sur leur historique.
+- **Genre** : en 2024, 36 % de chances en moins pour une femme d'avoir un compte.
+
+*GSMA, 2026 ; Ducourant et al., 2026.*
 
 ::: {.notes}
-[2 h 30 – 2 h 34] GSMA (2026, d'après la Banque mondiale) : 36 % en 2024 contre 30 % en 2021, pays à revenu faible ou intermédiaire. Sénégal : taxe de 0,5 % sur le mobile money depuis septembre 2025.
+[2 h 30 – 2 h 34] Territoire : c'est d'Afrique subsaharienne que vient l'essentiel des nouveaux comptes (GSMA, 2026). Génération : enquête qualitative de mai 2025 à Abidjan, dont des enquêtés de 21 ans ; la plupart n'ont jamais eu accès au crédit bancaire, et l'enquête ne compare pas les âges (Ducourant et al., The Conversation, 01/09/2026). Genre : GSMA (2026, d'après la Banque mondiale), 36 % en 2024 contre 30 % en 2021, pays à revenu faible ou intermédiaire, compte de mobile money. Sénégal : taxe de 0,5 % sur les paiements, transferts et retraits en mobile money, adoptée en septembre 2025 (Diouf, The Conversation, 10/10/2025).
 :::
 
 ## Les banques créent la monnaie, mais pas à partir de rien
@@ -383,11 +381,11 @@ La Banque d'Angleterre se range de ce côté.
 ## Garantir tous les dépôts rassure, mais peut inciter au risque
 
 - **Aléa moral** : celui qui est assuré se comporte de façon plus risquée.
-- Perrin, Burietz et Bertrand : une garantie illimitée rassure à court terme, mais risque de fragiliser le système à long terme.
-- 12 mars 2023 : les autorités garantissent tous les dépôts de SVB, après coup (The Conversation, 13/03/2023).
+- Garantie illimitée : rassurante à court terme, fragilisante à long terme (Perrin et al., 2023).
+- 12 mars 2023 : tous les dépôts de SVB garantis, après coup (The Conversation, 13/03/2023).
 
 ::: {.notes}
-[2 h 47 – 2 h 53] Éric Pichet (The Conversation, 13/03/2023) insiste, lui, sur la rapidité d'intervention de l'assureur public américain des dépôts et note que les grandes banques, aux financements plus diversifiés, ont peu souffert. Perrin et al. : The Conversation, 23/03/2023. Normatif : relever le plafond, au risque de couvrir des déposants riches capables de surveiller leur banque, ou le garder bas, au risque de nouvelles paniques ? La réponse dépend du poids donné à la stabilité immédiate et aux comportements à long terme. Autre voie : mieux surveiller les banques, conclusion du rapport de la Réserve fédérale (28/04/2023), qui reconnaît que ses superviseurs ont sous-estimé les fragilités de SVB.
+[2 h 47 – 2 h 53] Éric Pichet (The Conversation, 13/03/2023) insiste, lui, sur la rapidité d'intervention de l'assureur public américain des dépôts et note que les grandes banques, aux financements plus diversifiés, ont peu souffert. Perrin, Burietz et Bertrand : The Conversation, 23/03/2023 ; une garantie illimitée rassure à court terme, mais risque de fragiliser le système à long terme. Normatif : relever le plafond, au risque de couvrir des déposants riches capables de surveiller leur banque, ou le garder bas, au risque de nouvelles paniques ? La réponse dépend du poids donné à la stabilité immédiate et aux comportements à long terme. Autre voie : mieux surveiller les banques, conclusion du rapport de la Réserve fédérale (28/04/2023), qui reconnaît que ses superviseurs ont sous-estimé les fragilités de SVB.
 :::
 
 ## En France, la garantie des dépôts est née d'une défaillance locale

@@ -63,13 +63,13 @@ Une avocate tape plus vite que son assistant ; elle a pourtant intérêt à lui 
 
 ::: {.wp-portrait}
 ![](img/portraits/bertil-ohlin.jpg){fig-alt="Portrait photographique de Bertil Ohlin en 1950, homme en costume, en buste."}
-[1950 · photographe inconnu, CC BY-SA 4.0, Wikimedia Commons]{.wp-credit}
+[1950 · photographe inconnu, CC BY-SA 4.0, redimensionné, Wikimedia Commons]{.wp-credit}
 :::
 
 **Eli Heckscher** (1919), « Utrikeshandelns verkan på inkomstfördelningen », *Ekonomisk Tidskrift*, et **Bertil Ohlin** (1933), *Interregional and International Trade*, Harvard University Press · école néoclassique. Un pays exporte les biens qui utilisent beaucoup le facteur de production dont il est bien doté (travail qualifié, terres, capital) et importe ceux qui utilisent le facteur qui lui manque. Wolfgang Stolper et Paul Samuelson en tirent la conséquence (1941, « Protection and Real Wages ») : l'ouverture enrichit les détenteurs du facteur abondant et appauvrit ceux du facteur rare.
 :::
 
-Ricardo dit que **le pays** gagne ; Heckscher et Ohlin, que **tous ses habitants** ne gagnent pas. Dans un pays riche en travail qualifié, l'ouverture profite aux ingénieurs et pèse sur les ouvriers des industries concurrencées. Un droit de douane, de même, déplace des gains et des pertes entre des groupes.
+Ricardo dit que **le pays** gagne ; Heckscher et Ohlin, que **tous ses habitants** ne gagnent pas. Dans un pays riche en travail qualifié, l'ouverture profite aux ingénieurs et pèse sur les ouvriers, d'abord dans les industries concurrencées. Un droit de douane, de même, déplace des gains et des pertes entre des groupes.
 
 ### Un droit de douane est une taxe sur un bien importé
 
@@ -145,17 +145,17 @@ Sur un marché fictif, Q est en millions de tee-shirts par an et P en euros. La 
 
 ```{r}
 #| label: fig-tarif-chiffre
-#| fig-cap: "Le droit de 10 € sur les tee-shirts de l'@exm-tarif (marché fictif). Demande D : Q = 100 − P ; offre intérieure O : Q = P ; prix mondial Pm = 20 €, prix avec droit Pm + t = 30 €. Lecture : sans droit, le pays produit 20 millions de tee-shirts, en consomme 80 et en importe 60 ; avec le droit, il en produit 30, en consomme 70 et en importe 40. Les aires valent a = 250 M€, b = 50 M€, c = 400 M€ et d = 50 M€."
+#| fig-cap: "Le droit de 10 € sur les tee-shirts de l'@exm-tarif (marché fictif). Demande D : Q = 100 − P ; offre intérieure O : Q = P ; prix mondial Pm = 20 €, prix avec droit Pm + t = 30 €. Lecture : sans droit, le pays produit 20 millions de tee-shirts, en consomme 80 et en importe 60 ; avec le droit, il en produit 30, en consomme 70 et en importe 40. Les aires, en millions d'euros (M€) par an, valent a = 250, b = 50, c = 400 et d = 50."
 #| fig-alt: "Graphique offre-demande des tee-shirts. Demande D, bleue : Q = 100 moins P ; offre intérieure O, ambre : Q = P. Deux droites horizontales : prix mondial Pm = 20 euros et prix avec droit 30 euros. Quantités marquées en abscisse : 20, 30, 70 et 80 millions. Entre les deux prix, les aires a, b, c et d. Deux flèches horizontales : importations sans droit, de 20 à 80 millions, soit 60 millions ; importations avec droit, de 30 à 70 millions, soit 40 millions."
 #| fig-width: 7
 #| fig-height: 4.6
 graphe_tarif(chiffres = TRUE)
 ```
 
-1. *Les consommateurs.* Ils paient 10 € de plus. Sur les 70 millions qu'ils achètent encore, ils perdent 700 M€ ; sur les 10 millions auxquels ils renoncent, ils perdent en moyenne 5 €, soit 50 M€. Au total : (80 + 70) ÷ 2 × 10 = **750 M€** (a + b + c + d).
+1. *Les consommateurs.* Ils paient 10 € de plus. Sur les 70 millions qu'ils achètent encore, ils perdent 700 millions d'euros (M€) par an ; sur les 10 millions auxquels ils renoncent, ils perdent en moyenne 5 €, soit 50 M€. Au total : (80 + 70) ÷ 2 × 10 = **750 M€ par an** (a + b + c + d).
 2. *Les producteurs du pays.* Ils vendent plus cher et plus : leur surplus augmente de (20 + 30) ÷ 2 × 10 = **250 M€** (aire a).
 3. *L'État.* Il perçoit 10 € sur chacun des 40 millions de tee-shirts importés : **400 M€** (aire c).
-4. *Le bilan.* 750 − 250 − 400 = **100 M€** perdus par l'ensemble du pays : c'est la perte sèche.
+4. *Le bilan.* 750 − 250 − 400 = **100 M€ par an** perdus par l'ensemble du pays : c'est la perte sèche.
 5. *D'où vient-elle ?* Aire b, (30 − 20) × 10 ÷ 2 = **50 M€** : le pays produit lui-même 10 millions de tee-shirts qui lui coûtent entre 20 et 30 €, alors qu'il pourrait les importer à 20 €. Aire d, (80 − 70) × 10 ÷ 2 = **50 M€** : 10 millions d'achats n'ont plus lieu, alors que les acheteurs étaient prêts à payer plus que le prix mondial.
 6. *La lecture.* Le droit **transfère** 650 M€ des consommateurs vers les producteurs et l'État, et en **détruit** 100. Le transfert est plus de six fois plus gros que la perte.
 :::
@@ -175,7 +175,7 @@ Reprenons le droit de 10 € par tee-shirt, mais dans un grand pays. Les exporta
 1. *Le prix intérieur.* 19 + 10 = 29 €, au lieu de 20 € sans droit : les acheteurs paient **9 €** de plus.
 2. *La part des exportateurs.* Ils reçoivent 1 € de moins par tee-shirt : ils paient **1 €** du droit.
 3. *L'incidence.* Part payée par l'étranger = baisse du prix hors droit ÷ droit = 1 ÷ 10 = **10 %**. Part payée dans le pays : **90 %**.
-4. *Le bilan pour le pays.* À 29 €, on demande 100 − 29 = 71 millions de tee-shirts et on en produit 29 : on importe 71 − 29 = 42 millions. L'étranger paie donc 1 € × 42 millions = **42 M€**. La perte sèche vaut b + d = 9 × 9 ÷ 2 + 9 × 9 ÷ 2 = **81 M€**. Le pays reste perdant : une baisse de 1 € du prix étranger ne suffit pas.
+4. *Le bilan pour le pays.* À 29 €, on demande 100 − 29 = 71 millions de tee-shirts et on en produit 29 : on importe 71 − 29 = 42 millions. L'étranger paie donc 1 € × 42 millions = **42 M€ par an**. La perte sèche vaut b + d = 9 × 9 ÷ 2 + 9 × 9 ÷ 2 = **81 M€ par an**. Le pays reste perdant : une baisse de 1 € du prix étranger ne suffit pas.
 :::
 
 Un grand pays peut donc gagner à un droit modéré si ce que paie l'étranger (la baisse de son prix hors droit multipliée par les importations) dépasse la perte sèche. Encore faut-il que ses fournisseurs baissent vraiment leurs prix et que leurs gouvernements ne répliquent pas : c'est ce que mesurent les études empiriques.
@@ -187,20 +187,22 @@ Les droits relevés en 2018 donnent un premier repère : les prix hors droit des
 | Date | Mesure | Source |
 |:---|:---|:---|
 | 01/2025 → 04/2025 → 02/2026 | Droit moyen américain : 4,9 %, 24,2\ %, puis environ 15 % | Guimbard, 22/07/2026 |
-| 21/08/2025 | Accord UE-États-Unis : droit américain unique de 15 %, NPF compris (le droit NPF s'il est plus élevé) ; l'UE annonce supprimer ses droits sur les produits industriels américains | Maison-Blanche, 21/08/2025 |
+| 21/08/2025 | Accord UE-États-Unis : droit américain plancher de 15 %, NPF compris (le droit NPF s'il est plus élevé) ; l'UE annonce supprimer ses droits sur les produits industriels américains | Maison-Blanche, 21/08/2025 |
 | 20/02/2026 | La Cour suprême annule les droits fondés sur une loi d'urgence (IEEPA) | Deysine, 23/02/2026 |
 | 24/02 → 24/07/2026 | Surtaxe temporaire de 10 % (section 122) | DG Trésor, 06/08/2026 |
 | Depuis le 24/07/2026 | Droit permanent de 10 % (NPF compris) pour l'UE (section 301) ; automobiles européennes à 15 % (section 232) | DG Trésor, 06/08/2026 |
-| 30/07/2026 | L'UE suspend ses contre-mesures (jusqu'à 30 % sur 93 Md€), réactivables à tout moment | DG Trésor, 06/08/2026 |
+| 30/07/2026 | L'UE suspend sans limite de durée ses contre-mesures (jusqu'à 30 % sur 93 Md€), jamais entrées en vigueur, réactivables à tout moment | DG Trésor, 06/08/2026 |
 | 2026 | Droits annulés à rembourser : environ 165 Md\$ à 330 566 importateurs | Bouët, 27/03/2026 |
 
 : Repères datés, arrêtés au 21/10/2026. {#tbl-reperes tbl-colwidths="[20,55,25]"}
 
+Le droit sert aussi de menace : les droits fondés sur l'IEEPA, ou leur menace, ont aidé les États-Unis à conclure plusieurs accords commerciaux, dont celui avec l'UE (Guimbard, 22/07/2026). Son coût est le risque de représailles, comme les contre-mesures européennes, suspendues mais réactivables.
+
 Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer.
 
-**Le droit est payé aux États-Unis.** Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Les exportateurs étrangers ont supporté 6 % des droits de janvier à août 2025, 8 % en septembre-octobre et 14 % en novembre. Le reste, 94 %, 92 % puis 86 %, est payé par les importateurs américains : « près de 90 % » du fardeau (Amiti, Flanagan, Heise et Weinstein, *Liberty Street Economics*, 12/02/2026). Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s'est passé.
+**Le droit est payé aux États-Unis.** Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Les exportateurs étrangers ont supporté 6 % des droits de janvier à août 2025, 8 % en septembre-octobre et 14 % en novembre. Le reste, 94 %, 92 % puis 86 %, est payé aux États-Unis : près de 90 % du fardeau retombe sur les entreprises et les consommateurs américains (Amiti, Flanagan, Heise et Weinstein, *Liberty Street Economics*, 12/02/2026). Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s'est passé.
 
-**Puis il passe dans les prix à la consommation.** Les prix à l'importation réagissent presque un pour un dès le premier mois ; un point de droit en plus fait monter les prix des biens de consommation d'environ 0,25 % au bout d'un an. L'effet est plus faible que le droit : les biens importés ne sont qu'une partie de ce que l'on consomme, et un tee-shirt vendu en magasin contient aussi du transport, des loyers et des salaires du pays. En février 2026, les droits ajoutaient 2,9 points à l'inflation des biens, dont les prix auraient sinon légèrement baissé (Amiti, Heise et Weinstein, *Liberty Street Economics*, 06/10/2026).
+**Puis il passe dans les prix à la consommation.** Les prix à l'importation réagissent presque un pour un dès le premier mois ; un point de droit en plus fait monter les prix des biens de consommation d'environ 0,25 % au bout d'un an, délai au bout duquel l'effet est complet. L'effet est plus faible que le droit : les biens importés ne sont qu'une partie de ce que l'on consomme, et un tee-shirt vendu en magasin contient aussi du transport, des loyers et des salaires du pays. En février 2026, les droits ajoutaient 2,9 points à l'inflation des biens, dont les prix auraient sinon légèrement baissé (Amiti, Heise et Weinstein, *Liberty Street Economics*, 06/10/2026).
 
 ```{r}
 #| label: fig-prix-import
@@ -224,7 +226,7 @@ De janvier à septembre 2025, les prix hors droit des biens importés ne bougent
 graphe_recettes_douane()
 ```
 
-**L'argent rendu ne revient pas forcément à ceux qui ont payé.** L'écart entre recettes brutes et nettes, surtout des remboursements, passe de 7,5 Md\$ sur l'exercice 2025 à 145 Md\$ sur l'exercice 2026 (@fig-recettes-douane ; calcul de l'auteur). Ces remboursements vont aux **importateurs**, qui ont versé les droits, alors qu'ils ont pu en répercuter une partie sur leurs clients. Pour les uns, une taxe annulée doit être rendue au contribuable légal ; pour d'autres, l'importateur qui a fait payer ses clients n'a droit à rien (Deysine, *The Conversation*, 23/02/2026). Savoir qui a supporté le droit est une question positive ; décider qui doit être remboursé est une question normative, que tranchent le droit et les tribunaux.
+**L'argent rendu ne revient pas forcément à ceux qui ont payé.** L'écart entre recettes brutes et nettes, surtout des remboursements, passe de 7,5 Md\$ sur l'exercice 2025 à 145 Md\$ sur l'exercice 2026 (@fig-recettes-douane ; calcul de l'auteur). Ces remboursements vont aux **importateurs**, qui ont versé les droits, alors qu'ils ont pu en répercuter une partie sur leurs clients. La Cour du commerce international a ordonné de rembourser les importateurs, qui ont versé les droits (Bouët, Blog du CEPII, 27/03/2026) ; pour beaucoup, les entreprises qui ont répercuté la hausse sur leurs clients n'ont droit à aucun remboursement (Deysine, *The Conversation*, 23/02/2026). Savoir qui a supporté le droit est une question positive ; décider qui doit être remboursé est une question normative, que tranchent le droit et les tribunaux.
 
 ## Effets de répartition
 
@@ -244,7 +246,7 @@ En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme 
 | Étape | Ce qui se passe |
 |:---|:---|
 | 1 | Le droit de douane t renchérit l'acier importé. |
-| 2 | Les aciéries du pays peuvent relever leur prix : elles gagnent (le rectangle a de la @fig-tarif). |
+| 2 | Les aciéries du pays peuvent relever leur prix : elles gagnent (l'aire a de la @fig-tarif). |
 | 3 | Les entreprises qui achètent de l'acier (automobile, machines) voient leur coût marginal (Cm) monter. |
 | 4 | Elles relèvent leur prix ou réduisent leur production : les acheteurs de voitures et de machines paient plus. |
 | 5 | Ces entreprises vendent moins, y compris à l'exportation : le droit censé protéger l'industrie en pénalise une partie. |
@@ -253,7 +255,7 @@ En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme 
 
 ![Un porte-conteneurs à quai au port de Los Angeles. Lecture : le droit de douane se perçoit à ce type de frontière ; dans une chaîne de valeur, une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Photo : Downtowngal, CC BY-SA 4.0, Wikimedia Commons.](img/cm9/port-los-angeles.jpg){#fig-port-los-angeles fig-alt="Photographie d'un grand porte-conteneurs chargé de conteneurs colorés, amarré à un quai équipé de hautes grues, sous un ciel clair."}
 
-**Par territoire.** Les gains de l'ouverture sont diffus ; ses pertes sont concentrées. De 1990 à 2007, les zones industrielles américaines les plus exposées aux importations chinoises ont connu plus de chômage, des salaires plus bas et plus d'aides sociales ; cette concurrence explique environ un quart du recul de l'emploi industriel américain (Autor, Dorn et Hanson, 2013). Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles ont aussi leurs perdants localisés : en 2018, les droits des partenaires ont surtout frappé les travailleurs des secteurs exportateurs, notamment agricoles (Fajgelbaum et al., 2020).
+**Par territoire.** Les gains de l'ouverture sont diffus ; ses pertes sont concentrées. De 1990 à 2007, les zones industrielles américaines les plus exposées aux importations chinoises ont connu plus de chômage, des salaires plus bas et plus d'aides sociales ; cette concurrence explique environ un quart du recul de l'emploi industriel américain (Autor, Dorn et Hanson, 2013). Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles ont aussi leurs perdants localisés : en 2018, les représailles des partenaires ont surtout visé l'agriculture et frappé les travailleurs des secteurs exposés au commerce (Fajgelbaum et al., 2020).
 
 **Par génération.** L'argument de l'industrie naissante (voir la controverse) est un pari entre générations : les consommateurs d'aujourd'hui paient plus cher pour qu'une industrie devienne compétitive demain. Il n'est gagnant que si ce gain existe et si la protection est retirée ensuite.
 
@@ -261,7 +263,7 @@ En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme 
 
 ### Le MACF : un droit de douane pour le climat ?
 
-L'Union européenne fait payer à ses industriels un prix du carbone. Produire hors de l'UE, là où émettre ne coûte rien, puis y exporter devient tentant : c'est la **fuite de carbone**. Le **mécanisme d'ajustement carbone aux frontières** (MACF) veut l'empêcher en faisant payer aux importations le carbone émis pour les produire, à un prix calculé sur celui des quotas européens (Commission européenne, page CBAM, consultée le 21/10/2026). Il s'applique depuis le 1^er^ janvier 2026 au ciment, au fer et à l'acier, à l'aluminium, aux engrais, à l'électricité et à l'hydrogène (*ibid.*). Il devient payant en 2027 : les certificats pour les importations de 2026 sont vendus à partir du 1^er^ février 2027, et seuls les importateurs de plus de 50 tonnes par an sont concernés (Mayer Brown, 17/10/2025).
+L'Union européenne fait payer à ses industriels un prix du carbone. Produire hors de l'UE, là où émettre ne coûte rien, puis y exporter devient tentant : c'est la **fuite de carbone**. Le **mécanisme d'ajustement carbone aux frontières** (MACF) veut l'empêcher en faisant payer aux importations le carbone émis pour les produire, à un prix calculé sur celui des quotas européens (Commission européenne, page CBAM, consultée le 21/10/2026). Après une phase de simple déclaration de 2023 à 2025, son régime définitif s'applique depuis le 1^er^ janvier 2026 au ciment, au fer et à l'acier, à l'aluminium, aux engrais, à l'électricité et à l'hydrogène (*ibid.*). Il devient payant en 2027 : les certificats pour les importations de 2026 sont vendus à partir du 1^er^ février 2027 ; pour le ciment, l'acier, l'aluminium et les engrais, seuls les importateurs de plus de 50 tonnes par an sont concernés (Mayer Brown, 17/10/2025).
 
 Ce droit vise moins à protéger une industrie qu'à faire payer le même prix au carbone produit dans l'UE et au carbone importé. Ses perdants sont souvent loin : le Mozambique tire près d'un cinquième de ses exportations totales de l'aluminium vendu à l'UE. Deux économistes de l'Agence française de développement proposent d'en exempter les pays les moins avancés et de les aider autrement (Godin et Riccioppo Magacho, *The Conversation*, 10/01/2023).
 
@@ -287,6 +289,7 @@ Ce droit vise moins à protéger une industrie qu'à faire payer le même prix a
 
 - au **pouvoir d'achat** de tous les consommateurs ;
 - aux **emplois** et aux **territoires** concentrés qui perdent à l'ouverture ;
+- au **rapport de force** dans une négociation, face au risque de représailles ;
 - à la **dépendance** envers un fournisseur étranger en cas de crise ;
 - au **climat**, quand le droit porte sur le carbone importé.
 

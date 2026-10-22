@@ -24,6 +24,7 @@ language:
 crossref:
   title-delim: " :"
   tbl-title: "Tableau"   # le PDF Typst écrit « Table » sinon
+  tbl-prefix: "tableau"  # renvois @tbl- (« tableau 1 ») en HTML et PDF
 date-format: "D MMMM YYYY"
 
 execute:

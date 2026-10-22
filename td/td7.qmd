@@ -33,7 +33,7 @@ La question 8 demande un court paragraphe argumenté. La démarche (définir les
 ::: {.wp-document data-label="Document 1"}
 **La Grèce en chiffres, avant, pendant et après la crise**
 
-| | Avant la crise | 2013 | 2025 |
+| | Début de période | 2013 | 2025 |
 |---|---|---|---|
 | PIB réel (indice 100 en 2008) | 100 (2008) | 73 | 86 |
 | Taux de chômage, 15-74 ans (% des actifs) | 9,8 (2009) | 27,8 | 8,9 |
@@ -112,7 +112,7 @@ La part de la population en risque de pauvreté ou d'exclusion sociale passe de 
 
 4. **(Document 2)** Expliquez, avec le mécanisme des vagues de dépense, pourquoi une baisse de la dépense publique peut réduire le PIB de plus que son montant. Pourquoi le multiplicateur était-il élevé en 2010, en particulier en Grèce ?
 5. **(Documents 1 et 2)** Expliquez pourquoi le ratio dette / PIB a monté entre 2010 et 2013 alors que la dette en euros baissait. Appliquez ensuite la règle k × d au cas grec de 2010 (d ≈ 1,5), avec le multiplicateur supposé par les prévisions, puis avec celui que trouvent Blanchard et Leigh. Que concluez-vous ?
-6. **(Documents 1 et 3)** La DG Trésor écrit que le PIB reste « légèrement inférieur » à son niveau d'avant la crise, sans préciser s'il s'agit du PIB en valeur ou du PIB en volume. Que dit le document 1 du PIB en volume ? Pourquoi faut-il savoir de quel PIB on parle avant de reprendre la formule ? Expliquez ensuite pourquoi une croissance de « 3,9 % en moyenne par an (hors récession de 2020) » et une hausse totale de 11 % de 2018 à 2024 ne racontent pas la même histoire.
+6. **(Documents 1 et 3)** La DG Trésor écrit que le PIB reste « légèrement inférieur » à son niveau d'avant la crise, sans préciser s'il s'agit du PIB en valeur ou du PIB en volume. Que dit le document 1 du PIB en volume ? Pourquoi faut-il savoir de quel PIB on parle avant de reprendre la formule ? Expliquez ensuite pourquoi une croissance de « 3,9 % en moyenne par an (hors récession de 2020 […]) » et une hausse totale de 11 % de 2018 à 2024 ne racontent pas la même histoire.
 
 ### Argumenter
 

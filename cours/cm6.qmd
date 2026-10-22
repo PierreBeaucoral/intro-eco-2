@@ -80,7 +80,7 @@ Un prêteur qui n'est pas une banque (un fonds d'investissement, un particulier)
 
 :::: {.wp-portrait}
 ![](img/portraits/philip-dybvig.jpg){fig-alt="Portrait photographique de Philip H. Dybvig en 2025, homme en buste."}
-[2025 · Xuthoria, CC BY-SA 4.0, Wikimedia Commons]{.wp-credit}
+[2025 · Xuthoria, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), recadré, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ASSA_2025_-_Philip_Dybvig_01.jpg)]{.wp-credit}
 :::
 
 **Douglas W. Diamond et Philip H. Dybvig** (1983), « Bank Runs, Deposit Insurance, and Liquidity », *Journal of Political Economy*, 91(3), p. 401-419 · économie bancaire, « Nobel » d'économie 2022 (*The Conversation*, 23/03/2023). Une banque reçoit des dépôts que l'on peut retirer à tout moment et accorde des prêts qui ne seront remboursés que plus tard ; si chacun craint que les autres retirent leur argent, tous se précipitent et une banque saine peut tomber, sauf si une garantie des dépôts supprime la raison de se précipiter.
@@ -147,7 +147,7 @@ Léa, étudiante, demande à sa banque, la banque A, un prêt de **1 000 €**
 
 Qu'est-ce qui empêche une banque de prêter sans fin ? La Banque d'Angleterre (2014) donne trois limites.
 
-1. **La banque elle-même.** Chaque prêt doit être rentable face aux banques concurrentes, et risqué le moins possible : un prêt non remboursé est une perte. La réglementation impose aussi des fonds propres et des réserves de précaution.
+1. **La banque elle-même.** Chaque prêt doit être rentable face aux banques concurrentes, et risqué le moins possible : un prêt non remboursé est une perte. La réglementation impose aussi des fonds propres et un minimum d'actifs liquides.
 2. **Les ménages et les entreprises.** Ils peuvent détruire la monnaie aussitôt créée, par exemple en remboursant d'autres crédits.
 3. **La politique monétaire.** En fixant ses taux, la banque centrale rend le crédit plus ou moins cher, donc plus ou moins demandé. C'est la limite ultime.
 
@@ -155,7 +155,7 @@ La troisième limite se voit dans les chiffres de la zone euro.
 
 ```{r}
 #| label: fig-m3-credits
-#| fig-cap: "Croissance sur un an de la monnaie (M3), des crédits aux entreprises (sociétés non financières) et des crédits aux ménages dans la zone euro, chaque mois de janvier 2019 à août 2026, en %. Lecture : en août 2023, la quantité de monnaie M3 est inférieure de 1,3 % à celle d'août 2022. La ligne en tirets marque le 27 juillet 2022 : la BCE relève ses taux pour la première fois depuis 2011 (hausse décidée le 21 juillet, effective le 27). Source : BCE, Data Portal, séries BSI (consulté le 21/10/2026) ; août 2026 provisoire."
+#| fig-cap: "Croissance sur un an de la monnaie (M3), des crédits aux entreprises (sociétés non financières) et des crédits aux ménages dans la zone euro, chaque mois de janvier 2019 à août 2026, en %. Lecture : en août 2023, la croissance sur un an de M3 est de −1,3 % : la quantité de monnaie a reculé par rapport à août 2022. La ligne en tirets marque le 27 juillet 2022 : la BCE relève ses taux pour la première fois depuis 2011 (hausse décidée le 21 juillet, effective le 27). Source : BCE, Data Portal, séries BSI (consulté le 21/10/2026) ; août 2026 provisoire."
 #| fig-alt: "Graphique en lignes de 2019 à 2026, trois séries. La monnaie M3, en noir, croît de 4 à 6 % par an en 2019, bondit à 12,5 % en janvier 2021, puis ralentit, devient négative de juillet à novembre 2023 avec un creux à moins 1,3 % en août 2023, et remonte vers 3,5 % en 2026. Les crédits aux entreprises, en bleu, montent à plus de 7 % en 2020, retombent vers 2 % en 2021, culminent à 8,9 % en septembre 2022, deviennent légèrement négatifs en octobre 2023 et remontent à 4,2 % en août 2026. Les crédits aux ménages, en orange, restent entre 3 et 4,6 % jusqu'en 2022, tombent vers 0,2 % en 2024 et remontent à 3,1 % en 2026. Une ligne verticale en tirets marque juillet 2022."
 #| fig-width: 7.5
 #| fig-height: 4.6
@@ -218,7 +218,7 @@ SVB n'était pas une petite banque : avec environ 212 milliards de dollars d'ac
 ```{r}
 #| label: fig-svb
 #| fig-cap: "SVB face aux grandes banques américaines, fin 2022, en %. Lecture : 94 % des dépôts de SVB dépassaient le plafond de la garantie publique, contre 41 % en moyenne dans les grandes banques ; ses titres représentaient 55 % de son actif, contre 25 %. Grandes banques : moyenne pondérée des banques américaines de plus de 100 milliards de dollars d'actifs, hors les plus grandes. Source : Réserve fédérale, rapport sur SVB du 28/04/2023, Table 1."
-#| fig-alt: "Diagramme en barres horizontales, quatre indicateurs, SVB en rouge et grandes banques en gris. Prêts en pourcentage de l'actif : 35 pour SVB, 58 pour les grandes banques. Titres en pourcentage de l'actif : 55 contre 25. Titres gardés jusqu'à l'échéance en pourcentage des titres : 78 contre 42. Dépôts non assurés en pourcentage des dépôts : 94 contre 41."
+#| fig-alt: "Diagramme en barres horizontales, quatre indicateurs, SVB en rouge et grandes banques en gris. Prêts en pourcentage de l'actif : 35 pour SVB, 58 pour les grandes banques. Titres en pourcentage de l'actif : 55 contre 25. Titres détenus jusqu'à l'échéance en pourcentage des titres : 78 contre 42. Dépôts non assurés en pourcentage des dépôts : 94 contre 41."
 #| fig-width: 7.5
 #| fig-height: 4.4
 graphe_svb()
@@ -227,8 +227,8 @@ graphe_svb()
 On retrouve les ingrédients du jeu de la panique.
 
 1. **Des dépôts prompts à partir.** Aux États-Unis, la garantie publique couvre 250 000 dollars par déposant (*The Conversation*, 13/03/2023). Les clients de SVB étaient surtout des start-up et des fonds d'investissement, aux comptes bien plus gros : **94 %** des dépôts n'étaient pas garantis (@fig-svb). Pour eux, attendre, c'était risquer d'en perdre une partie.
-2. **Un actif peu liquide.** SVB avait placé plus de la moitié de son actif en titres, surtout des obligations longues. Quand les taux d'intérêt montent, les nouvelles obligations rapportent plus que les anciennes : celles-ci perdent de la valeur si on doit les vendre avant leur échéance. Fin 2022, un portefeuille d'obligations acheté 91 milliards de dollars n'en valait plus que 76 sur le marché, soit environ 16 % de moins ; au total, ses obligations affichaient environ 17 milliards de dollars de moins-values latentes (*The Conversation*, 13/03/2023). Le 8 mars 2023, SVB annonce une perte de 1,8 milliard de dollars sur la vente de 21 milliards de titres, et cherche du capital (Réserve fédérale, 28/04/2023). SVB n'était donc pas une banque parfaitement saine : selon la Réserve fédérale, les retraits reflétaient aussi des « inquiétudes fondamentales » sur la banque (28/04/2023). La panique a transformé une fragilité en faillite en deux jours.
-3. **Une rumeur qui va vite.** Poussés par les réseaux sociaux, ces clients très liés entre eux ont retiré leurs dépôts « de manière coordonnée » (Réserve fédérale, 28/04/2023) : 40 milliards de dollars le 9 mars.
+2. **Un actif peu liquide.** SVB avait placé plus de la moitié de son actif en titres, surtout des obligations longues. Quand les taux d'intérêt montent, les nouvelles obligations rapportent plus que les anciennes : celles-ci perdent de la valeur si on doit les vendre avant leur échéance. Fin 2022, un portefeuille d'obligations acheté 91 milliards de dollars n'en valait plus que 76 sur le marché, soit environ 16 % de moins ; au total, ses obligations affichaient environ 17 milliards de dollars de moins-values latentes (*The Conversation*, 13/03/2023). Le 8 mars 2023, SVB annonce une perte de 1,8 milliard de dollars sur la vente de 21 milliards de titres, et cherche du capital (Réserve fédérale, 28/04/2023). SVB n'était donc pas une banque parfaitement saine : selon la Réserve fédérale, les retraits reflétaient aussi des « inquiétudes fondamentales » sur la banque (28/04/2023, notre traduction). La panique a transformé une fragilité en faillite en deux jours.
+3. **Une rumeur qui va vite.** Poussés par les réseaux sociaux, ces clients très liés entre eux ont retiré leurs dépôts « de manière coordonnée » (Réserve fédérale, 28/04/2023, notre traduction) : 40 milliards de dollars le 9 mars.
 
 Le 12 mars 2023, les autorités américaines annoncent que tous les déposants de SVB, garantis ou non, récupéreront l'intégralité de leurs dépôts (*The Conversation*, 13/03/2023 et 23/03/2023). La garantie a été étendue après coup, pour éviter que la panique ne gagne d'autres banques.
 
@@ -248,9 +248,9 @@ Le crédit arrive pourtant par le téléphone. À Abidjan, des offres comme Tik 
 
 **Par revenu.** Avec un plafond de 100 000 € par client et par banque, un ménage qui a moins que cette somme dans sa banque est couvert en entier (FGDR). Les gros déposants, entreprises ou ménages aisés, ne sont couverts que jusqu'au plafond : ce sont eux qui ont intérêt à fuir les premiers, comme chez SVB. L'extension de la garantie en mars 2023 a donc surtout protégé de gros déposants, les petits l'étant déjà. Côté emprunteurs, le crédit digital dépanne des ménages aux revenus irréguliers, mais coûte cher : au Kenya, en 2021, les taux annuels allaient de 49 % à 442 % selon l'offre (Ducourant et al., 01/09/2026).
 
-**Par territoire.** Le mobile money donne accès au paiement là où les banques sont rares : c'est d'Afrique subsaharienne que vient l'essentiel des nouveaux comptes (GSMA, 2026). Depuis septembre 2025, le Sénégal taxe à 0,5 % les opérations en mobile money ; selon Awa Diouf (*The Conversation*, 10/10/2025), ce type de taxe pèse proportionnellement plus sur les ménages pauvres et peut les ramener vers l'argent liquide. En France, le Fonds de garantie des dépôts est né d'une crise locale : la défaillance du Crédit martiniquais, en 1999 (FGDR).
+**Par territoire.** Le mobile money donne accès au paiement là où les banques sont rares : c'est d'Afrique subsaharienne que vient l'essentiel des nouveaux comptes (GSMA, 2026). En septembre 2025, le Sénégal a adopté une taxe de 0,5 % sur les paiements, transferts et retraits en mobile money ; selon Awa Diouf (*The Conversation*, 10/10/2025), ce type de taxe pèse proportionnellement plus sur les ménages pauvres et peut les ramener vers l'argent liquide. En France, le Fonds de garantie des dépôts est né d'une crise locale : la défaillance du Crédit martiniquais, en 1999 (FGDR).
 
-**Par génération.** À Abidjan, de jeunes adultes de 21 ans sans accès au crédit bancaire empruntent grâce à leur historique de mobile money, qui tient lieu de dossier ; bien rembourser fait monter leur plafond, un retard le fait baisser (Ducourant et al., 01/09/2026).
+**Par génération.** À Abidjan, une enquête qualitative menée en mai 2025 auprès d'usagers du crédit digital, dont de jeunes adultes de 21 ans, montre que la plupart n'ont jamais eu accès au crédit bancaire : leur historique de mobile money tient lieu de dossier ; bien rembourser fait monter leur plafond, un retard le fait baisser (Ducourant et al., 01/09/2026). L'enquête ne compare pas les âges.
 
 **Par genre.** Dans les pays à revenu faible ou intermédiaire, les femmes avaient en 2024 **36 %** de chances en moins que les hommes de posséder un compte de mobile money, contre 30 % en 2021 : l'écart se creuse (GSMA, 2026, d'après la Banque mondiale).
 
@@ -264,7 +264,7 @@ Créer de la monnaie rapporte aux banques. Leur gain n'est pas la totalité des 
 
 **Ce que l'analyse établit (positif).**
 
-- Les banques créent l'essentiel de la monnaie en accordant des crédits ; un remboursement la détruit (Banque d'Angleterre, 2014 ; La finance pour tous, 2026).
+- Les banques créent l'essentiel de la monnaie en accordant des crédits (Banque d'Angleterre, 2014 ; La finance pour tous, 2026) ; un remboursement la détruit (Banque d'Angleterre, 2014).
 - La monnaie n'est pas créée sans contrepartie : chaque dépôt nouveau correspond à une dette de l'emprunteur. La création est limitée par la rentabilité, la réglementation et la politique monétaire (@exm-bilan et section précédente).
 - Une banque solvable peut tomber par manque de liquidité si ses déposants paniquent (Diamond et Dybvig, 1983). SVB l'illustre en partie : ses pertes sur obligations ont donné une raison de craindre, et la panique a fait le reste.
 

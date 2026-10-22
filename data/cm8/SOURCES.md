@@ -35,6 +35,7 @@ Taux de chômage, 15-74 ans, % de la population active, en 2008, 2013 et 2025.
 |---|---|---|---|
 | `region` | Trois régions NUTS 2 : Attique (`EL30`, Athènes), Égée méridionale (`EL42`, îles touristiques), Macédoine-Occidentale (`EL53`) | `lfst_r_lfu3rt?geo=EL30&geo=EL42&geo=EL53&age=Y15-74&sex=T&unit=PC&isced11=TOTAL` | 10/09/2026 |
 | `diplome` | Niveau de diplôme : inférieur au lycée (`ED0-2`) et supérieur (`ED5-8`), Grèce entière | `lfsa_urgaed?geo=EL&age=Y15-74&sex=T&unit=PC&isced11=ED0-2&isced11=ED5-8` | 10/09/2026 |
+| `diplome_total` | Total de ce même tableau, 2013 seulement (sert à la note des légendes) | `lfsa_urgaed?geo=EL&age=Y15-74&sex=T&unit=PC&isced11=TOTAL&time=2013` (vérifié le 22/10/2026) | 10/09/2026 |
 
 La série par diplôme vient d'un autre tableau que `une_rt_a` : son total diffère un peu (27,5 % en 2013 au lieu de 27,8 %).
 

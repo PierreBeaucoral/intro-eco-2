@@ -41,10 +41,11 @@ L'Agence nationale de sécurité du médicament (ANSM) organise la répartition 
 
 - **décembre 2023** : ne plus commencer de traitement par Ozempic, Victoza ou Trulicity ;
 - **14 mars 2024** : nouveaux traitements réservés aux diabétiques de type 2 malades des artères ;
-- **septembre 2024** : reprise progressive, sous « distribution fractionnée (contingentement quantitatif) » ; dès le 1^er^ février 2025, le remboursement exige un formulaire du médecin ;
+- **septembre-octobre 2024** : reprise progressive des nouveaux traitements, sous « distribution fractionnée (contingentement quantitatif) » ;
+- **1^er^ février 2025** : le remboursement exige un formulaire du médecin, appliqué avec une tolérance jusqu'au 1^er^ septembre 2025 ;
 - **5 juin 2025** : « les initiations de traitement peuvent reprendre pour tous les patients ».
 
-[Source : texte rédigé par l'enseignant d'après ANSM, « Analogues du GLP-1 et diabète de type 2 », mis à jour le 21/04/2026, <https://ansm.sante.fr/actualites/analogues-du-glp-1-et-diabete-de-type-2-reprise-progressive-des-initiations-de-traitement-pour-ozempic-et-victoza> ; Base de données publique des médicaments, fiche OZEMPIC 1 mg, consultée le 21/10/2026, <https://base-donnees-publique.medicaments.gouv.fr/medicament/63210923/extrait> ; autres sources (Assemblée nationale, réponse du ministère au JO du 21/05/2024 ; *The Conversation* ; *Vidal*) : voir le corrigé.]{.wp-source}
+[Source : texte rédigé par l'enseignant d'après ANSM, « Analogues du GLP-1 et diabète de type 2 », mis à jour le 21/04/2026 (notes du 03/10/2024 et du 05/06/2025), <https://ansm.sante.fr/actualites/analogues-du-glp-1-et-diabete-de-type-2-reprise-progressive-des-initiations-de-traitement-pour-ozempic-et-victoza> ; Base de données publique des médicaments, fiche OZEMPIC 1 mg, consultée le 21/10/2026, <https://base-donnees-publique.medicaments.gouv.fr/medicament/63210923/extrait> ; tolérance : *Vidal*, 03/06/2025, <https://www.vidal.fr/actualites/31409-diabete-des-dispositions-transitoires-concernant-la-delivrance-des-analogues-du-glp-1.html> ; autres sources (Assemblée nationale, réponse du ministère au JO du 21/05/2024 ; *The Conversation* ; *Vidal*, 16/01/2025) : voir le corrigé.]{.wp-source}
 :::
 
 ::: {.wp-document data-label="Document 2"}
@@ -56,7 +57,7 @@ L'Agence nationale de sécurité du médicament (ANSM) organise la répartition 
 | dont Ozempic | 0,75 | 1,39 | 2,03 | 2,92 | 3,64 |
 | Prix moyen Ozempic (€) | 80 | 80 | 81 | 79 | 78 |
 
-Boîtes délivrées en pharmacie de ville et remboursées, tous prescripteurs ; les boîtes non remboursées n'y figurent pas. La famille comprend notamment Ozempic, Trulicity et Victoza. Le prix moyen est la base de remboursement (le tarif sur lequel l'Assurance maladie calcule son remboursement) divisée par le nombre de boîtes, toutes doses confondues, arrondi à l'euro. Une boîte d'Ozempic 1 mg correspond à environ un mois de traitement.
+Boîtes délivrées en pharmacie de ville et remboursées, tous prescripteurs ; les boîtes non remboursées n'y figurent pas. La famille comprend notamment Ozempic, Trulicity et Victoza. Le prix moyen est la base de remboursement (le tarif sur lequel l'Assurance maladie calcule son remboursement) divisée par le nombre de boîtes, toutes doses confondues, arrondi à l'euro. Une boîte d'Ozempic 1 mg (stylo de 3 ml, quatre doses hebdomadaires) correspond à environ un mois de traitement ; une présentation de huit doses est autorisée depuis le 16/05/2025.
 
 [Source : Assurance Maladie, « Medic'AM : médicaments remboursés par l'Assurance Maladie, par type de prescripteur (données interrégimes) », data.gouv.fr, fichiers 2020 à 2024 téléchargés le 21/10/2026, <https://www.data.gouv.fr/datasets/536999d3a3a729239d20533a> ; totaux et prix moyens calculés par l'enseignant ; durée de traitement : HAS, avis de la Commission de la transparence sur OZEMPIC, 27/08/2025, <https://www.has-sante.fr/upload/docs/evamed/CT-21501_OZEMPIC_PIS_INS_AvisDef_CT21501.pdf>.]{.wp-source}
 :::
@@ -74,19 +75,21 @@ Les transferts vers les locataires atteignent environ 700 millions d'euros par a
 
 Pour comparaison, en 2023, la moitié des locataires du secteur libre qui font partie des 25 % de ménages les plus modestes consacrent plus de 42,3 % de leur revenu à leur logement, aides au logement déduites, contre 21,6 % pour ceux des 25 % les plus aisés.
 
-[Source : texte rédigé par l'enseignant d'après G. Chapelle et G. Fack, *L'encadrement des loyers : effets économiques et redistributifs. Rapport de la mission d'évaluation*, mai 2026, § 1.1.1, 2.2.4, 3.4, 4.4.1, 4.4.3 et 5.1 (les citations en sont extraites), <https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf> ; dernier paragraphe : Insee, *France, portrait social*, édition 2025, fiche « Logement », 18/11/2025 (enquête SRCV 2024), <https://www.insee.fr/fr/statistiques/8612550>.]{.wp-source}
+[Source : texte rédigé par l'enseignant d'après G. Chapelle et G. Fack, *L'encadrement des loyers : effets économiques et redistributifs. Rapport de la mission d'évaluation*, mai 2026, § 1.1.1, 2.2.4, 3.1.3, 3.4, 4.4.1, 4.4.3 et 5.1 (les citations en sont extraites), <https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf> ; dernier paragraphe : Insee, *France, portrait social*, édition 2025, fiche « Logement », 18/11/2025 (enquête SRCV 2024), <https://www.insee.fr/fr/statistiques/8612550>.]{.wp-source}
 :::
 
 ::: {.wp-document data-label="Document 4"}
-**Un même rapport, deux lectures**
+**Deux études, deux lectures**
 
-Hors Île-de-France, le nombre de nouvelles annonces de location, rapporté au nombre de logements, baisse d'environ 8 % dans les communes encadrées ; à Paris, il évolue en sens inverse. Selon la mission d'évaluation, cette baisse peut venir d'une offre réduite, de locataires qui restent plus longtemps dans leur logement ou d'annonces passées par d'autres canaux : les données ne permettent pas de trancher.
+Selon la mission d'évaluation (document 3), hors Île-de-France, le nombre de nouvelles annonces de location, rapporté au nombre de logements, baisse d'environ 8 % dans les communes encadrées. Cette baisse peut venir d'une offre réduite, de locataires qui restent plus longtemps dans leur logement ou d'annonces passées par d'autres canaux : les données ne permettent pas de trancher. À Paris, les annonces augmentent, et la mission ne voit pas de contraction de l'offre.
 
-La rapporteure de la commission des affaires économiques du Sénat en tire une première lecture : « Les conditions pour pérenniser cette expérimentation ne sont pas réunies : aucune étude empirique n'a permis d'écarter l'incidence négative sur l'offre locative de ce dispositif […] ». La Ville de Paris, qui applique l'encadrement, retient au contraire « une absence d'effet de l'encadrement des loyers sur l'offre locative parisienne ».
+La rapporteure de la commission des affaires économiques du Sénat s'appuie sur ce rapport : « Les conditions pour pérenniser cette expérimentation ne sont pas réunies : aucune étude empirique n'a permis d'écarter l'incidence négative sur l'offre locative de ce dispositif […] ».
 
-L'expérimentation, créée par la loi Élan de 2018 et prolongée par la loi 3DS de 2022, arrive à son terme fin novembre 2026. Le 11 décembre 2025, l'Assemblée nationale a voté une proposition de loi qui la pérennise et l'étend ; le 14 octobre 2026, la commission du Sénat l'a réduite à une prolongation de deux ans dans les mêmes territoires. Le Sénat a adopté le texte en séance le 21 octobre 2026 ; il n'est pas encore définitif.
+La Ville de Paris, qui applique l'encadrement, s'appuie sur une autre étude, limitée à Paris : celle de l'Atelier parisien d'urbanisme (Apur), de deux laboratoires universitaires et du groupe SeLoger, réalisée en 2024 et actualisée en 2025. C'est l'équipe qui estime à −5,2 % l'effet sur les loyers parisiens (document 3). Elle en retient « une absence d'effet de l'encadrement des loyers sur l'offre locative parisienne » entre 2018 et 2025. La mission juge pourtant « ambigus » les résultats de cette étude sur le volume d'annonces.
 
-[Source : texte rédigé par l'enseignant d'après G. Chapelle et G. Fack, rapport cité au document 3, § 3.5 ; MoneyVox avec l'AFP, « Encadrement des loyers : le Sénat opte pour une prolongation de l'expérimentation », 14/10/2026, <https://www.moneyvox.fr/immobilier/actualites/110804/encadrement-des-loyers-le-senat-opte-pour-une-prolongation-de-experimentation> ; Ville de Paris, « Encadrement des loyers : les résultats sont là ! », mis à jour le 11/09/2026 (source partie prenante), <https://www.paris.fr/pages/encadrement-des-loyers-les-resultats-sont-la-31465> ; LCP, « Encadrement des loyers : l'Assemblée vote en faveur d'une pérennisation du dispositif », 11/12/2025, <https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-vote-en-faveur-d-une-perennisation-du-dispositif> ; Sénat, « Proposition de loi pour retrouver la confiance et l'équilibre dans les rapports locatifs », *La loi en clair*, octobre 2026, <https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-retrouver-la-confiance-et-lequilibre-dans-les-rapports-locatifs.html>. État du droit au 21/10/2026.]{.wp-source}
+L'expérimentation, créée par la loi Élan de 2018 et prolongée par la loi 3DS de 2022, arrive à son terme le 23 novembre 2026. Le 11 décembre 2025, l'Assemblée nationale a voté une proposition de loi qui la pérennise et l'étend ; le 14 octobre 2026, la commission du Sénat l'a réduite à une prolongation de deux ans dans les mêmes territoires. Le Sénat a adopté le texte en séance le 21 octobre 2026 ; il n'est pas encore définitif.
+
+[Source : texte rédigé par l'enseignant d'après G. Chapelle et G. Fack, rapport cité au document 3, § 3.1.3 et 3.5 ; MoneyVox avec l'AFP, « Encadrement des loyers : le Sénat opte pour une prolongation de l'expérimentation », 14/10/2026, <https://www.moneyvox.fr/immobilier/actualites/110804/encadrement-des-loyers-le-senat-opte-pour-une-prolongation-de-experimentation> ; Ville de Paris, « Encadrement des loyers : les résultats sont là ! », mis à jour le 11/09/2026 (source partie prenante, qui présente l'étude de l'Apur, du CESAER, du LéP et du groupe SeLoger), <https://www.paris.fr/pages/encadrement-des-loyers-les-resultats-sont-la-31465> ; LCP, « Encadrement des loyers : l'Assemblée vote en faveur d'une pérennisation du dispositif », 11/12/2025, <https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-vote-en-faveur-d-une-perennisation-du-dispositif> ; Sénat, « Proposition de loi pour retrouver la confiance et l'équilibre dans les rapports locatifs », *La loi en clair*, octobre 2026 (appui de la rapporteure sur le rapport de la mission), <https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-retrouver-la-confiance-et-lequilibre-dans-les-rapports-locatifs.html>. État du droit au 21/10/2026.]{.wp-source}
 :::
 
 ## Questions sur les documents
@@ -99,16 +102,16 @@ L'expérimentation, créée par la loi Élan de 2018 et prolongée par la loi 3D
 
 ### Mobiliser le cours
 
-4. **(Documents 1 et 2)** Les tensions que décrit le ministère viennent-elles d'un choc d'offre ou d'un choc de demande ? Tracez le graphique du marché d'Ozempic : la courbe qui se déplace, le prix fixé P\*, l'équilibre initial E et la pénurie au prix fixé. Placez aussi l'équilibre E′ qu'atteindrait un prix libre. Le document 2 montre-t-il que le prix a servi à répartir le médicament ?
+4. **(Documents 1 et 2)** Les tensions que décrit le ministère viennent-elles d'un choc d'offre ou d'un choc de demande ? Tracez le graphique du marché d'Ozempic : la courbe qui se déplace, le prix fixé P\*, l'équilibre initial E et la pénurie au prix fixé. Placez aussi l'équilibre E′ qu'atteindrait un prix libre sur un marché à nombreux vendeurs. Le document 2 montre-t-il que le prix a servi à répartir le médicament ?
 5. **(Document 2)** Un camarade affirme : « En 2024, le nombre total de boîtes n'augmente plus que de 0,1 % : la demande a donc cessé d'augmenter. » Discutez ce raisonnement en quelques lignes.
-6. **(Document 1)** Un député juge « très bas » le prix français de ces antidiabétiques. Si l'État avait relevé le prix d'Ozempic en 2023, la pénurie aurait-elle disparu rapidement ? Appuyez-vous sur la notion d'offre rigide et sur le fait qu'un seul laboratoire sert le monde entier.
+6. **(Document 1)** Un député juge « très bas » le prix français du Trulicity, de la même famille qu'Ozempic. Si l'État avait relevé le prix d'Ozempic en 2023, la pénurie aurait-elle disparu rapidement ? Appuyez-vous sur la notion d'offre rigide et sur le fait qu'un seul laboratoire sert le monde entier.
 7. **(Document 3)**
    a. Le plafond français est-il contraignant pour tous les logements ? Expliquez pourquoi les effets mesurés sur les loyers sont modestes.
    b. Qui paie la baisse des loyers ? L'encadrement vise-t-il en priorité les locataires pour qui le logement pèse le plus lourd dans le budget ?
 
 ### Argumenter
 
-8. **(Document 4)** Que constate le rapport sur l'offre de logements ? Montrez que la rapporteure du Sénat et la Ville de Paris retiennent chacune une moitié de ce constat. Leur désaccord porte-t-il sur un fait ou sur un jugement ?
+8. **(Document 4)** Sur quelle étude s'appuient la rapporteure du Sénat, d'une part, et la Ville de Paris, d'autre part ? Que constate chaque étude sur l'offre de logements ? Montrez que l'une met en avant qu'aucun effet négatif n'a été écarté, l'autre qu'aucun effet n'a été trouvé. Leur désaccord porte-t-il sur un fait ou sur un jugement ?
 9. **(Ensemble des documents)** « Ozempic et les loyers le prouvent : bloquer un prix crée une pénurie, il faut donc laisser les prix libres. » En une quinzaine de lignes (plan détaillé en séance, rédaction à la maison), montrez d'abord ce que l'analyse du cours établit dans chacun des deux cas, puis ce qui relève d'un jugement.
 
 ## Exercice
@@ -117,7 +120,7 @@ Les deux parties portent sur des marchés **fictifs**, en nombres ronds. Tous le
 
 ### A. Un médicament à prix fixé
 
-Sur le marché fictif d'un médicament, Q est en milliers de boîtes par mois et P en euros par boîte. L'État a fixé le prix à 50 €.
+Sur le marché fictif d'un médicament, à nombreux vendeurs, Q est en milliers de boîtes par mois et P en euros par boîte. L'État a fixé le prix à 50 €.
 
 | Prix P (€ par boîte) | 50 | 100 | 150 | 200 | 250 |
 |---|---|---|---|---|---|
@@ -127,7 +130,7 @@ Sur le marché fictif d'un médicament, Q est en milliers de boîtes par mois et
 
 1. Quel est l'équilibre initial (P\*, Q\*) ? Calculez l'élasticité-prix de la demande e entre 50 € et 100 €, avant le choc. Commentez.
 2. De combien la demande augmente-t-elle à chaque prix ? Quelle courbe se déplace ? Au prix fixé de 50 €, calculez la pénurie, en milliers de boîtes puis en pourcentage des demandes.
-3. Supposez que le prix devienne libre, à court terme.
+3. Supposez que le prix devienne libre, à court terme, et que le patient paie tout le prix (médicament non remboursé).
    a. Quel est le nouvel équilibre ? Calculez la variation en pourcentage du prix et de la quantité.
    b. Sur les 40 000 boîtes qui manquaient, combien sont produites en plus ? Combien de demandes disparaissent, faute de pouvoir payer ?
    c. Calculez la recette mensuelle du vendeur au prix fixé, puis au prix libre. Comment s'appelle le gain dû au seul manque ?

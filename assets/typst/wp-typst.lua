@@ -111,11 +111,16 @@ end
 -- Typographie française : espace insécable avant ; : ! ? » % et après «
 local function avant(t) return t:match("^[;:!?%%]") or t:sub(1, 2) == "»" end  -- » : 2 octets, hors classe
 local function apres(t) return t:sub(-2) == "«" end
+-- Espace fine insécable (U+202F) : l'insécable U+00A0 devient « ~ » en Typst, visible tel quel dans les titres d'exemples
+local FINE = "\u{202F}"
+function Str(el)
+  if el.text:find("\u{00A0}") then return pandoc.Str((el.text:gsub("\u{00A0}", FINE))) end
+end
 function Inlines(els)
   for i = #els - 1, 2, -1 do
     local prev, nxt = els[i - 1], els[i + 1]
     if els[i].t == "Space" and ((nxt.t == "Str" and avant(nxt.text)) or (prev.t == "Str" and apres(prev.text))) then
-      els[i] = pandoc.Str("\u{00A0}")
+      els[i] = pandoc.Str(FINE)
     end
   end
   return els

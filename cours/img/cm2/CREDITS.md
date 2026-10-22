@@ -10,4 +10,4 @@ Lieu, d'après la description de la page Commons : « Étalage de paquets de cig
 Modifications :
 
 - `.jpg` (utilisé par la page de cours) : original de 779 × 779 px converti en JPEG (qualité 85), 288 Ko, sans recadrage ni redimensionnement.
-- `.png` : original téléchargé à nouveau le 21/10/2026, 779 × 779 px, 1,1 Mo, sans modification. Il remplace une copie agrandie à 1 600 × 1 600 px (3,5 Mo). Il ne reste que pour les diapos, qui pointent encore vers le `.png` ; à supprimer quand elles passeront au `.jpg`.
+- `.png` : original téléchargé à nouveau le 21/10/2026, 779 × 779 px, 1,1 Mo, sans modification. Il remplace une copie agrandie à 1 600 × 1 600 px (3,5 Mo). La page et les diapos utilisent désormais le `.jpg` : le `.png` n'est plus référencé nulle part (vérifié le 22/10/2026) et peut être supprimé.

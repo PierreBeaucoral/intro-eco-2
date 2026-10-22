@@ -14,9 +14,9 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm5.R"))   # même fichier que la page de cours
 ```
 
-## Le 8 octobre 2026, l'Assemblée n'a pas voté la suppression des ZFE
+## Le 8 octobre 2026, le débat sur la suppression des ZFE s'arrête à minuit, sans vote
 
-- Débat arrêté à minuit, sans vote (LCP, 09/10/2026)
+- Texte non adopté (LCP, 09/10/2026, [lien](https://lcp.fr/actualites/zfe-le-rn-ne-parvient-pas-a-faire-voter-leur-suppression-lors-de-sa-niche-parlementaire))
 - 21 mai 2026 : article censuré pour vice de procédure (décision n° 2026-903 DC)
 - 25 agglomérations de l'Hexagone avaient une ZFE au 1^er^ janvier 2025 (*The Conversation*, 11/06/2026)
 
@@ -236,10 +236,10 @@ Chiffres fictifs, montants par jour.
 ::: {.auteur}
 :::: {.wp-portrait}
 ![](../cours/img/portraits/weitzman-martin.jpg){fig-alt="Portrait photographique de Martin Weitzman en 2015, homme âgé à lunettes, en buste."}
-[2015 · European University Institute, CC BY-SA 2.0, Wikimedia Commons]{.wp-credit}
+[2015 · European University Institute, CC BY-SA 2.0, recadré, Wikimedia Commons]{.wp-credit}
 :::
 
-**Martin Weitzman** (1974), « Prices vs. Quantities » · économie publique. Quantité si le dommage grimpe vite au-delà d'un seuil ; prix si le dommage de chaque unité est à peu près le même.
+**Martin Weitzman** (1974), « Prices vs. Quantities » · économie publique. Quantité si le dommage grimpe vite au-delà d'un seuil, plus vite que le coût de l'effort ; prix si le dommage de chaque unité est à peu près le même.
 :::
 
 ::: {.notes}
@@ -277,7 +277,7 @@ Chiffres fictifs.
 - Pour le CO₂, un prix se défend : le dommage d'une tonne de plus est à peu près constant.
 
 ::: {.notes}
-2 h 03 – 2 h 08. Ce seuil est juridique, pas sanitaire : le dommage du NO₂ croît sans seuil connu. Une ZFE n'en est qu'une approximation : elle interdit des vignettes sans plafonner les émissions.
+2 h 03 – 2 h 08. Ce seuil est fixé par le droit : au-delà, la sanction rend le dépassement très coûteux. Une ZFE n'en est qu'une approximation : elle interdit des vignettes sans plafonner les émissions.
 :::
 
 ## Pour juger une politique, il faut comparer avec ce qui se serait passé sans elle
@@ -348,7 +348,7 @@ Elles auraient baissé de 34,3 % sans ZFE. L'effet est petit, mais mesuré et di
 ## La norme vise la vignette, pas le kilomètre
 
 - Les voitures des résidents ne roulent pas significativement moins.
-- Les Crit'Air 5 et non classées pesaient environ 6 % du parc des ZFE (223 400 sur 3,6 millions).
+- Crit'Air 5 et non classées : environ 6 % du parc trois ans avant la ZFE, moins de 5 % à sa mise en place.
 - Environ 12 600 contraventions liées aux ZFE en 2019, 2 300 en 2024 (Insee, 27/08/2026)
 
 ::: {.notes}
@@ -364,7 +364,7 @@ Elles auraient baissé de 34,3 % sans ZFE. L'effet est petit, mais mesuré et di
 2 h 38 – 2 h 43. C'est l'étape 7 de l'exemple : la norme demande l'effort selon l'âge de la voiture, pas selon la pollution émise. Huit villes étudiées : employés et ouvriers les plus touchés dans six (Liotta, 27/11/2024). Gains de santé : les études divergent (surtout aux plus riches à Paris, l'inverse à Bruxelles, selon Liotta ; « également répartis » en région parisienne, selon une étude citée par Poulhès) ; la question reste ouverte.
 :::
 
-## Une taxe sur le carburant frapperait d'abord les ménages ruraux
+## Une taxe sur le carburant toucherait plus souvent les ménages ruraux
 
 ```{r}
 #| label: fig-carburant
@@ -386,7 +386,7 @@ Source : Insee, *Insee Première* n° 2125, 08/09/2026.
 |---|---|
 | 1. La règle | Propriétaires de voitures anciennes |
 | 2. La réaction | Ménages modestes et intermédiaires |
-| 3. Le parc | Territoires voisins sans restriction |
+| 3. Le parc | Territoires sans restriction, non voisins |
 | 4. L'air | Habitants de la zone |
 
 ::: {.notes}
@@ -409,7 +409,7 @@ Décision n° 2026-903 DC du 21 mai 2026 : censure pour une raison de procédure
 - **Normatif** : qui détient le droit ? efficacité ou équité ? quel poids à la santé ?
 
 ::: {.notes}
-2 h 53 – 2 h 56. Les positions : suppression jugée injuste (France 24, 29/05/2025) ; Liotta : accompagner ; Poulhès : l'argument social ne justifie pas la suppression. Aucune position partisane. Le statut au 21/10/2026 : les ZFE restent en vigueur.
+2 h 53 – 2 h 56. Les positions : suppression jugée injuste (France 24, 29/05/2025 ; exposé des motifs de la proposition de loi n° 2970, 23/06/2026) ; Liotta : accompagner ; Poulhès : l'argument social ne justifie pas la suppression. Aucune position partisane. Le statut au 21/10/2026 : les ZFE restent en vigueur.
 :::
 
 ## Ce qu'il faut retenir

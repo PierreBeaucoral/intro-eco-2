@@ -31,7 +31,7 @@ Le 28 février 2026, la guerre entre les États-Unis et Israël d'un côté et l
 | Janvier 1974 | *The Oregon Journal* (Portland, États-Unis) | « Gas Rationing Set Monday » (le rationnement de l'essence commence lundi), @fig-une-1974 |
 | 08/03/2022 | *Le Figaro* | [« Pourquoi les prix des carburants augmentent-ils si rapidement ? »](https://www.lefigaro.fr/conjoncture/pourquoi-les-prix-des-carburants-augmentent-ils-si-rapidement-20220308) |
 | 09/03/2026 | *Le Figaro* | [« La hausse des coûts d'approvisionnement en pétrole fait flamber les prix des carburants »](https://www.lefigaro.fr/societes/la-hausse-des-couts-d-approvisionnement-en-petrole-fait-flamber-les-prix-des-carburants-20260309) |
-| 30/03/2026 | *Sud Ouest* | [« Prix des carburants : “Si cela continue, je n'aurai plus les moyens d'aller travailler” »](https://www.sudouest.fr/charente-maritime/royan/municipales-de-royan/temoignages-prix-des-carburants-si-cela-continue-je-n-aurai-plus-les-moyens-d-aller-travailler-28508665.php) |
+| 30/03/2026 | *Sud Ouest* | [« TÉMOIGNAGES. Prix des carburants : “Si cela continue, je n'aurai plus les moyens d'aller travailler” »](https://www.sudouest.fr/charente-maritime/royan/municipales-de-royan/temoignages-prix-des-carburants-si-cela-continue-je-n-aurai-plus-les-moyens-d-aller-travailler-28508665.php) |
 | 21/09/2026 | *Le Parisien* | [« […] le gouvernement sur tous les fronts face à la flambée du carburant »](https://www.leparisien.fr/economie/aides-ciblees-approvisionnement-et-prix-a-la-pompe-le-gouvernement-sur-tous-les-fronts-face-a-la-flambee-du-carburant-21-09-2026-DB2477JHQVFYBCWGAUV67ILD3U.php) |
 
 : Comment la presse a titré les flambées du carburant (titres exacts, pages consultées le 22/10/2026). {#tbl-unes}
@@ -56,7 +56,7 @@ Les chiffres sont arrêtés au 14 octobre 2026 (pétrole) et au 12 octobre 2026 
 
 ::: {.auteur}
 ::: {.wp-portrait}
-![](img/portraits/alfred-marshall.jpg){fig-alt="Portrait photographique d'Alfred Marshall vers 1891, homme âgé à barbe blanche, en buste."}
+![](img/portraits/alfred-marshall.jpg){fig-alt="Portrait photographique d'Alfred Marshall vers 1891, debout, accoudé à une cheminée, moustache blanche."}
 [Vers 1891 · Elliott and Fry, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
@@ -144,7 +144,7 @@ Quatre producteurs fictifs vendent chacun 10 millions de barils par jour (Mb/j).
 5. *Qui gagne ?* X touchait 60 − 40 = 20 \$ de plus que son coût sur chaque baril ; il touche maintenant 80 − 40 = **40 \$**. Les producteurs épargnés par le choc gagnent à la hausse.
 :::
 
-Le blocage d'Ormuz retire du marché des barils du Golfe, parmi les **moins chers** à produire. Tant qu'il reste des capacités, le prix est fixé par des barils plus coûteux. Mais si même le producteur le plus cher ne suffit plus (ici, une demande de 35 Mb/j après le choc), aucun coût ne fixe le prix : il monte au-dessus du coût de tous les producteurs, jusqu'à ce que des acheteurs renoncent. Il sert alors à **rationner** la demande. En 2026, on est plutôt dans ce second cas : à court terme, les autres producteurs ne peuvent pas produire beaucoup plus, et le Brent atteint 126,55 \$ le 14 octobre. C'est le court terme de Marshall : le prix dépend surtout de la demande.
+Le blocage d'Ormuz retire du marché des barils du Golfe, parmi les **moins chers** à produire. Tant qu'il reste des capacités, le prix est fixé par des barils plus coûteux. Mais si même le producteur le plus cher ne suffit plus (ici, une demande de 35 Mb/j après le choc), aucun coût ne fixe le prix : il monte au-dessus du coût de tous les producteurs, jusqu'à ce que des acheteurs renoncent ; l'hypothèse d'une demande fixe cesse alors de tenir. Le prix sert à **rationner** la demande. En 2026, on est probablement dans ce second cas : à court terme, les autres producteurs ne peuvent pas produire beaucoup plus, et le Brent atteint 126,55 \$ le baril le 14 octobre 2026 (EIA, @fig-brent). C'est le court terme de Marshall : le prix dépend surtout de la demande.
 
 ### Une demande peu élastique : le prix monte beaucoup, la quantité baisse peu
 
@@ -186,7 +186,7 @@ graphe_elasticite()
 
 ```{r}
 #| label: fig-prix-pompe
-#| fig-cap: "Prix à la pompe en France en 2026, en euros par litre, toutes taxes comprises, chaque semaine du 5 janvier au 12 octobre 2026. Lecture : le gazole, moins cher que l'Euro-super 95 avant la fermeture du détroit, le dépasse dès le 9 mars. Il le rejoint en juin, passe dessous de la semaine du 22 juin à celle du 13 juillet, puis le dépasse de nouveau à partir du 20 juillet. Source : Commission européenne, Weekly Oil Bulletin, moyennes nationales (consulté le 21/10/2026)."
+#| fig-cap: "Prix à la pompe en France en 2026, en euros par litre, toutes taxes comprises, chaque semaine du 5 janvier au 12 octobre 2026. Lecture : le gazole, moins cher que l'Euro-super 95 avant la fermeture du détroit, le dépasse dès le 9 mars. Il passe de justesse sous lui la semaine du 1er juin, le rejoint les deux semaines suivantes, passe franchement dessous de la semaine du 22 juin à celle du 13 juillet, puis le dépasse de nouveau à partir du 20 juillet. Source : Commission européenne, Weekly Oil Bulletin, moyennes nationales (consulté le 21/10/2026)."
 #| fig-alt: "Graphique en lignes de janvier à mi-octobre 2026, une valeur par semaine. L'Euro-super 95 en bleu reste vers 1,70 euro jusqu'à fin février, vaut 2,04 euros mi-avril, monte jusqu'à 2,11 euros fin mai, redescend à 1,92 euro début juillet, puis atteint 2,22 euros fin septembre et y reste en octobre. Le gazole en ambre part de 1,59 euro en janvier, culmine à 2,31 euros mi-avril, retombe à 1,86 euro début juillet, puis monte à 2,38 euros fin septembre et 2,33 euros le 12 octobre. Le gazole passe au-dessus de l'essence début mars, de justesse sous elle la semaine du 1er juin, puis franchement sous elle de fin juin à mi-juillet, et de nouveau au-dessus à partir du 20 juillet. Une ligne verticale marque le 28 février, date de la fermeture du détroit d'Ormuz."
 #| fig-width: 7.5
 #| fig-height: 4.4
@@ -197,8 +197,8 @@ graphe_prix_pompe()
 
 ```{r}
 #| label: fig-brent
-#| fig-cap: "Prix du pétrole brut (Brent au comptant, cotation « Europe »), en dollars par baril, chaque jour ouvré du 2 janvier au 14 octobre 2026. Tirets horizontaux : moyenne de 2025 (69 \\$). Lecture : le prix bondit dès la fermeture du détroit, culmine à 138,21 \\$ le 7 avril, retombe sous 70 \\$ début juillet, remonte dès la mi-juillet (105,32 \\$ le 23 juillet), atteint 130,80 \\$ le 15 septembre, puis se tient au-dessus de 125 \\$ à partir du 2 octobre. Source : EIA, Europe Brent Spot Price FOB (consulté le 21/10/2026)."
-#| fig-alt: "Graphique en ligne du prix du Brent en 2026, en dollars par baril. De janvier à fin février, il oscille entre 61 et 73 dollars, autour de la moyenne de 2025, 69 dollars, tracée en tirets. Une ligne verticale marque le 28 février, fermeture du détroit d'Ormuz. Le prix monte alors très vite, à 118 dollars le 20 mars et 138 dollars le 7 avril, son plus haut. Il redescend par à-coups jusqu'à moins de 70 dollars début juillet, remonte dès la mi-juillet, à 105 dollars le 23, puis au-dessus de 100 dollars de façon durable à partir de septembre, et se tient au-dessus de 125 dollars en octobre, à 126,55 dollars le 14."
+#| fig-cap: "Prix du pétrole brut (Brent au comptant, cotation « Europe »), en dollars par baril, chaque jour ouvré du 2 janvier au 14 octobre 2026. Tirets horizontaux : moyenne de 2025 (69 \\$). Lecture : le prix bondit dès la fermeture du détroit, culmine à 138,21 \\$ le 7 avril, retombe sous 70 \\$ début juillet, remonte dès la mi-juillet (105,32 \\$ le 23 juillet), atteint 130,80 \\$ le 15 septembre et 135,51 \\$ le 2 octobre, puis se tient au-dessus de 125 \\$. Source : EIA, Europe Brent Spot Price FOB (consulté le 21/10/2026)."
+#| fig-alt: "Graphique en ligne du prix du Brent en 2026, en dollars par baril. De janvier à fin février, il oscille entre 61 et 73 dollars, autour de la moyenne de 2025, 69 dollars, tracée en tirets. Une ligne verticale marque le 28 février, fermeture du détroit d'Ormuz. Le prix monte alors très vite, à 118 dollars le 20 mars et 138 dollars le 7 avril, son plus haut. Il redescend par à-coups jusqu'à moins de 70 dollars début juillet, remonte dès la mi-juillet, à 105 dollars le 23, puis au-dessus de 100 dollars de façon durable à partir du 3 septembre, à 135,51 dollars le 2 octobre, et se tient au-dessus de 125 dollars en octobre, à 126,55 dollars le 14."
 #| fig-width: 7.5
 #| fig-height: 4.4
 graphe_brent()
@@ -217,7 +217,7 @@ De la @fig-brent au prix payé, le chemin passe par le raffinage, le transport, 
 
 : Du baril à la pompe : où va la hausse du litre d'Euro-super 95, en euros par litre. Lecture : sur les 0,502 € de hausse, 0,418 € viennent du prix avant taxes, rien de l'accise, qui est un montant fixe par litre, et 0,084 € de la TVA, qui est un pourcentage du prix. Le hors-taxes regroupe le brut, le raffinage, le transport et la marge de distribution, que la source ne sépare pas. Source : Commission européenne, *Weekly Oil Bulletin*, France (prix avec et sans taxes) ; TVA au taux normal de 20 %, accise déduite ; calcul de l'auteur (consulté le 21/10/2026). {#tbl-baril-pompe}
 
-Pour le gazole, la part du hors-taxes dans la hausse est mécaniquement la même (83 %), l'accise étant fixe : le choc passe tout entier par l'amont de la chaîne, que l'État ne fixe pas.
+Pour le gazole, la part du hors-taxes dans la hausse est mécaniquement la même (83 %), l'accise étant fixe : le choc naît tout entier en amont de la chaîne, que l'État ne fixe pas ; la TVA l'amplifie de 20 %.
 
 **Un second choc d'offre, sur le gazole.** L'Europe importe une partie de son gazole raffiné dans le Golfe : le prix du diesel augmente donc plus que l'effet mécanique du brut (Insee, Note de conjoncture, juin 2026). Fin juillet, la Russie décide un moratoire sur ses exportations de diesel, puis le prolonge ; fin août, les hostilités reprennent entre l'Iran et les États-Unis et des raffineries sont endommagées (AFP, *Connaissance des Énergies*, 10/09/2026). Le gazole subit **deux** déplacements de l'offre : celui du brut, sa matière première, et celui du raffinage. D'où sa hausse de 41 % contre 29 % pour l'essence entre le 23 février et le 12 octobre (@fig-prix-pompe).
 
@@ -242,11 +242,11 @@ La @fig-livraisons confirme le deuxième fait de la séance : de mars à juillet
 
 ### Un prix plafonné sous l'équilibre crée des files d'attente : le cas TotalEnergies {#sec-plafond-total}
 
-Depuis mars 2026, par intermittence, TotalEnergies plafonne ses prix. Depuis le 22 juillet, dans ses quelque 3 300 stations de France hexagonale, le litre de sans-plomb 95 (SP95-E10) ne dépasse pas 1,99 € et celui de gazole 2,25 € (TotalEnergies, communiqué, 22/07/2026). C'est un **plafond** (un prix maximal) fixé par une entreprise, non par l'État. Le 12/10/2026, l'entreprise annonce qu'elle maintient son plafond de 2,25 € sur le gazole au-delà de fin janvier 2027 (TotalEnergies, communiqué, 12/10/2026). Le mécanisme est celui de la pénurie de la @fig-choc-offre : le prix est maintenu **au-dessous de l'équilibre**.
+Depuis mars 2026, par intermittence, TotalEnergies plafonne ses prix. Depuis le 22 juillet, dans ses quelque 3 300 stations de France hexagonale, le litre de sans-plomb 95 (SP95-E10) ne dépasse pas 1,99 € et celui de gazole 2,25 € (TotalEnergies, communiqué, 22/07/2026 ; nombre de stations : communiqué du 12/10/2026 ; carburant SP95-E10 : AFP, *Connaissance des Énergies*, 24/09/2026). C'est un **plafond** (un prix maximal) fixé par une entreprise, non par l'État. Le 12/10/2026, l'entreprise annonce qu'elle maintient son plafond de 2,25 € sur le gazole au-delà de fin janvier 2027 (TotalEnergies, communiqué, 12/10/2026). Le mécanisme est celui de la pénurie de la @fig-choc-offre : le prix est maintenu **au-dessous de l'équilibre**.
 
-1. **Le report de clientèle.** Le 23/09/2026, le SP95-E10 coûte en moyenne 2,16 € en France, plus de 15 centimes au-dessus du plafond (AFP, *Connaissance des Énergies*, 24/09/2026). Les clients affluent chez Total : sa part de marché passe de 22 % habituellement à 25 % fin août, selon son PDG (AFP, 29/08/2026), puis dépasse 30 % en octobre selon l'entreprise (communiqué, 12/10/2026).
+1. **Le report de clientèle.** Le 23/09/2026, le SP95-E10 coûte en moyenne 2,16 € en France, plus de 15 centimes au-dessus du plafond (AFP, *Connaissance des Énergies*, 24/09/2026). Les clients affluent chez Total : sa part de marché passe de 22 % habituellement à 25 % fin août, selon son PDG (AFP, 29/08/2026), puis dépasse 30 % en octobre, contre 23 % en 2025, selon l'entreprise (communiqué, 12/10/2026).
 2. **Les ruptures.** Les livraisons ne suivent pas. Le 21/09/2026, 17 % des stations manquent d'au moins un carburant, et 91 % d'entre elles sont des stations Total : le ministre de l'Économie y voit « la conséquence directe du plafonnement du prix », tout en jugeant l'approvisionnement du pays assuré (AFP, 21/09/2026). La pénurie se concentre là où le prix est bloqué.
-3. **La file d'attente.** Des gérants décrivent des disputes dans la file et des cuves vides (AFP, 24/09/2026). Le temps perdu et le risque de trouver la station à sec s'ajoutent au 1,99 € : la file **rationne** à la place du prix.
+3. **La file d'attente.** Une gérante décrit des disputes dans la file et des cuves vides (AFP, 24/09/2026). Le temps perdu et le risque de trouver la station à sec s'ajoutent au 1,99 € : la file **rationne** à la place du prix.
 4. **Le coût pour l'entreprise.** Son PDG estime le manque à gagner à 250 à 300 millions d'euros fin août, estimation non vérifiée, pour un résultat net ajusté de 11,4 milliards de dollars sur les six premiers mois de 2026 (AFP, 29/08/2026).
 
 ## Effets de répartition
@@ -255,7 +255,7 @@ Depuis mars 2026, par intermittence, TotalEnergies plafonne ses prix. Depuis le 
 
 **Par revenu.** En 2021, 10,6 % des ménages motorisés consacraient au carburant plus d'un mois de revenu par an ; aux prix du printemps 2026, ce serait 22,4 %, à revenus et kilomètres inchangés (Insee Première n° 2125, 08/09/2026). Les ménages modestes consacrent une part plus élevée de leur budget à l'énergie (BCE, citée par l'AFP, *Connaissance des Énergies*, 23/09/2026), sans réduire davantage leur consommation : l'élasticité « varie peu selon le revenu » (Insee Analyses n° 86). La hausse pèse donc plus lourd pour eux.
 
-**Par territoire.** Près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains (AFP, 23/09/2026, d'après l'Insee). Ils ne sont pas moins sensibles au prix : l'élasticité varie peu selon le lieu de vie (−0,47 en zone rurale, −0,41 en zone urbaine). Mais ils consomment plus de litres, donc la hausse leur coûte plus en euros (Insee Analyses n° 86).
+**Par territoire.** Près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains (Insee Première n° 2125, 08/09/2026). Ils ne sont pas moins sensibles au prix : l'élasticité varie peu selon le lieu de vie (−0,47 en zone rurale, −0,41 en zone urbaine). Chaque valeur par groupe est estimée à part : elle peut sortir de la fourchette de l'ensemble. Mais ils consomment plus de litres, donc la hausse leur coûte plus en euros (Insee Analyses n° 86).
 
 **Par usage.** Les gros rouleurs sont les moins sensibles au prix : l'élasticité vaut −0,32 pour le quart qui consomme le plus, contre −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86).
 
@@ -285,7 +285,7 @@ On sépare ce que l'analyse **établit** (positif) de ce qui relève d'un **juge
 
 - L'**efficacité** : le prix doit-il signaler la rareté ?
 - L'**équité** : faut-il d'abord protéger les ménages captifs de la voiture ?
-- Le **climat** : un prix élevé pousse à la sobriété, au risque de la colère sociale ; en 2018, la hausse prévue de la contribution climat-énergie a été gelée.
+- Le **climat** : un prix élevé pousse à la sobriété, au risque de la colère sociale ; en décembre 2018, la hausse prévue pour 2019 de la contribution climat-énergie a été gelée (Banque des Territoires, *Localtis*, 19/12/2018).
 - Le **coût budgétaire** : qui finance l'aide ?
 - La **concurrence** : le plafond de TotalEnergies protège-t-il les automobilistes, ou sert-il une stratégie commerciale ? Des distributeurs parlent de « concurrence déloyale », et une fédération de stations indépendantes a saisi l'Autorité de la concurrence mi-juillet 2026 (AFP, *Connaissance des Énergies*, 15/09/2026).
 
@@ -349,4 +349,5 @@ Arte, *Le Dessous des cartes* · « Golfe Persique : vers un choc pétrolier 
 - Règlement (UE) 2022/1854 du Conseil du 6 octobre 2022 sur une intervention d'urgence pour faire face aux prix élevés de l'énergie, *Journal officiel de l'Union européenne*. [Lien](http://data.europa.eu/eli/reg/2022/1854/oj)
 - I. M. Weber et E. Wasner, « Sellers' inflation, profits and conflict: why can large firms hike prices in an emergency? », *Review of Keynesian Economics*, vol. 11, n° 2, 2023. [Lien](https://doi.org/10.4337/roke.2023.02.05)
 - J. Tinbergen, *On the Theory of Economic Policy*, Amsterdam, North-Holland, 1952.
-- La finance pour tous, « Évolution du prix du pétrole », mis à jour le 21/10/2024. [Lien](https://www.lafinancepourtous.com/decryptages/entreprise/secteurs-dactivites/le-prix-de-l-energie/le-prix-du-petrole/quest-ce-qui-fait-bouger-le-petrole/)
+- La finance pour tous, « Évolution du prix du pétrole », mis à jour le 21/10/2024. [Lien](https://www.lafinancepourtous.com/decryptages/entreprise/secteurs-dactivites/le-prix-de-l-energie/le-prix-du-petrole/evolution-prix-petrole/)
+- Banque des Territoires, *Localtis*, « PLF 2019 : les députés votent le gel de la hausse des taxes sur les carburants », 19/12/2018. [Lien](https://www.banquedesterritoires.fr/plf-2019-les-deputes-votent-le-gel-de-la-hausse-des-taxes-sur-les-carburants)

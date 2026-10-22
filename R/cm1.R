@@ -443,3 +443,49 @@ stopifnot(
   proche(round(100 * (decompose_pompe("2026-10-12")[["ht"]] - decompose_pompe("2026-02-23")[["ht"]]) /
                  (decompose_pompe("2026-10-12")[["ttc"]] - decompose_pompe("2026-02-23")[["ttc"]])), 83)
 )
+
+# Gazole : même calcul, pour la phrase « la part du hors-taxes […] est la même (83 %) ».
+# Hors taxes : Weekly Oil Bulletin, feuille « Prices wo taxes », colonne
+# FR_price_wo_tax_diesel (valeurs relues le 22/10/2026, voir data/cm1/SOURCES.md).
+ht_gazole <- c("2026-02-23" = 767.267, "2026-10-12" = 1332.708)
+stopifnot(
+  proche(round(100 * diff(ht_gazole) /
+                 (prix_semaine("gazole", "2026-10-12") - prix_semaine("gazole", "2026-02-23"))), 83),
+  # « la TVA l'amplifie de 20 % » : hausse de TVA = 20 % de la hausse hors taxes (essence)
+  proche(round((decompose_pompe("2026-10-12")[["tva"]] - decompose_pompe("2026-02-23")[["tva"]]) /
+                 diff(ht_euro95 / 1000), 2), 0.20)
+)
+
+# ---------------------------------------------------------------------------
+# 8. Vérifications complémentaires : chiffres des légendes, des fig-alt et du TD 1
+#    qui n'étaient pas couverts plus haut
+# ---------------------------------------------------------------------------
+# Prix à la pompe (Weekly Oil Bulletin)
+stopifnot(
+  proche(round(prix_semaine("gazole", "2026-02-23") / 1000, 2), 1.65),      # gazole avant la guerre
+  proche(round(prix_semaine("gazole", "2026-10-12") / 1000, 2), 2.33),      # gazole au 12/10
+  proche(round(prix_semaine("essence", "2026-04-13") / 1000, 2), 2.04),     # essence mi-avril (Cusset, TD doc 1)
+  proche(round(prix_semaine("essence", "2026-09-21") / 1000, 2), 2.22),     # TD doc 1
+  proche(round(prix_semaine("gazole", "2026-09-21") / 1000, 2), 2.38),      # TD doc 1
+  # croisements de juin : de justesse dessous le 1er, à égalité les 8 et 15, franchement dessous du 22/06 au 13/07
+  prix_semaine("gazole", "2026-06-01") < prix_semaine("essence", "2026-06-01"),
+  all(abs(sapply(c("2026-06-08", "2026-06-15"), function(j)
+    prix_semaine("gazole", j) - prix_semaine("essence", j))) < 10),        # moins de 1 centime d'écart
+  all(with(subset(prix_pompe_cm1, date >= as.Date("2026-06-22") & date <= as.Date("2026-07-13")),
+           gazole < essence))
+)
+# Brent (EIA) : fig-alt et légende
+stopifnot(
+  identical(round(range(brent_cm1$brent[brent_cm1$date >= as.Date("2026-01-01") &
+                                          brent_cm1$date < as.Date("2026-02-28")])), c(61, 73)),
+  proche(brent_jour("2026-07-23"), 105.32), proche(brent_jour("2026-09-15"), 130.80),
+  proche(brent_jour("2026-10-02"), 135.51),
+  brent_jour("2026-09-02") < 100,
+  all(brent_cm1$brent[brent_cm1$date >= as.Date("2026-09-03")] > 100)      # « au-dessus de 100 $ à partir du 3 septembre »
+)
+# Livraisons (Eurostat) : fig-alt
+stopifnot(
+  identical(round(range(livraisons_cm1$total[livraisons_cm1$annee == "2025"]) / 1000, 1), c(3.3, 4.1)),
+  proche(round(livraisons_cm1$total[livraisons_cm1$mois == "2026-05"] / 1000, 1), 3.2),
+  proche(round(livraisons_cm1$total[livraisons_cm1$mois == "2025-05"] / 1000, 1), 3.6)
+)

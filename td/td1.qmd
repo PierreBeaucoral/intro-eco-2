@@ -72,7 +72,7 @@ Chaque valeur par groupe est estimée à part : elle peut sortir de la fourchet
 
 Près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains.
 
-[Source : Insee, « Comment les automobilistes ajustent leur consommation de carburant aux variations de prix à court terme », *Insee Analyses* n° 86, 06/07/2023 ; dernière phrase : AFP, *Connaissance des Énergies*, mis à jour le 23/09/2026.]{.wp-source}
+[Source : Insee, « Comment les automobilistes ajustent leur consommation de carburant aux variations de prix à court terme », *Insee Analyses* n° 86, 06/07/2023 ; dernière phrase : Insee, *Insee Première* n° 2125, 08/09/2026.]{.wp-source}
 :::
 
 ::: {.wp-document data-label="Document 4"}
@@ -162,7 +162,7 @@ Sur un marché fictif de gazole, P est en euros par litre ; toutes les quantit�
 **Document 3.**
 
 - Insee, « Comment les automobilistes ajustent leur consommation de carburant aux variations de prix à court terme », *Insee Analyses* n° 86, 06/07/2023, <https://www.insee.fr/fr/statistiques/7645853>.
-- AFP, « La flambée du pétrole et du gaz fragilise les ménages français », *Connaissance des Énergies*, mis à jour le 23/09/2026, <https://www.connaissancedesenergies.org/afp/carburants-gaz-fioul-lexposition-des-menages-francais-a-la-hausse-des-prix-260923>.
+- Insee, E. Lenzi, K. Masson, V. Mora, « Les dépenses de carburant pèsent davantage sur le budget des ménages ruraux », *Insee Première* n° 2125, 08/09/2026, <https://www.insee.fr/fr/statistiques/9037833>.
 
 **Document 4.**
 

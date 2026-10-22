@@ -24,7 +24,7 @@ source(here::here("R/cm2.R"))
 
 En février 2026, un paquet type de 20 cigarettes coûte **13,50 €** en France métropolitaine (C. Hill, *Impact de l'augmentation des prix sur la consommation de tabac*, 2026, tableau 5.2). Le prix moyen d'un paquet était de 3,20 € en 2000 et de 13 € en 2025 (I. Obradovic, *The Conversation*, 25/07/2026). Au 1^er^ novembre 2026, 59 références sur 4 999 changent de prix (37 hausses, 22 baisses) : le Marlboro Red en paquet souple passe de 13,50 € à 14,00 €, le paquet rigide reste à 13,50 € (*Bourse Inside*, 08/10/2026, d'après l'arrêté d'homologation du 29/09/2026).
 
-Dans le même temps, la consommation recule. En 2025, le réseau des buralistes a vendu 30 165 tonnes de tabac, contre 32 846 tonnes en 2024, soit **−8,2 %** (OFDT, cité par l'AFP, *CB News*, 28/05/2026). La part des fumeurs quotidiens chez les 18-75 ans passe d'environ 25 % en 2014 à 18 % en 2024 (Santé publique France, citée par *La finance pour tous*, 24/07/2026). Le tabac reste pourtant meurtrier : 68 000 décès prématurés lui sont attribués en France en 2023 (*ibid.*).
+Dans le même temps, la consommation recule. En 2025, le réseau des buralistes de métropole a vendu 30 165 tonnes de tabac, contre 32 846 tonnes en 2024, soit **−8,2 %** (OFDT, cité par l'AFP, *CB News*, 28/05/2026). La part des fumeurs quotidiens chez les 18-75 ans passe d'environ 25 % en 2014 à 18 % en 2024 (Santé publique France, citée par *La finance pour tous*, 24/07/2026). Le tabac reste pourtant meurtrier : 68 000 décès prématurés lui sont attribués en France en 2023 (*ibid.*).
 
 **La question de la séance : augmenter le prix du tabac fait-il arrêter de fumer ?** Elle en contient trois.
 
@@ -48,7 +48,7 @@ La **dépense totale** des acheteurs est P × Q ; c'est aussi la recette des ven
 On définit de même l'**élasticité de l'offre** : variation de la quantité offerte (en %) ÷ variation du prix (en %). Elle est positive.
 :::
 
-Pour le tabac, les estimations sont nettement inférieures à 1 en valeur absolue. Santé publique France retient e ≈ −0,4 pour 2000-2015, et des études récentes donnent entre −0,3 et −0,4 (*La finance pour tous*, 24/07/2026). Sur 1950-2025, le rapport moyen entre la variation des ventes et celle du prix vaut environ −0,50 (Hill, 2026, figure 4.2). Retenons une fourchette : **e est compris entre −0,5 et −0,3**. Une hausse de 10 % du prix fait baisser les ventes de 3 à 5 %.
+Pour le tabac, les estimations sont nettement inférieures à 1 en valeur absolue. Santé publique France retient e ≈ −0,4 pour 2000-2015, et des études récentes donnent entre −0,3 et −0,4 (*La finance pour tous*, 24/07/2026). Sur 1950-2025 (hors 2016, année aberrante), le rapport moyen entre la variation des ventes et celle du prix vaut environ −0,50 (Hill, 2026, figure 4.2). Retenons une fourchette : **e est compris entre −0,5 et −0,3**. Une hausse de 10 % du prix fait baisser les ventes de 3 à 5 %.
 
 ### Ce n'est pas celui qui verse la taxe qui la paie
 
@@ -57,7 +57,7 @@ L'accise sur le tabac est versée à l'État par les vendeurs, en amont du bural
 ::: {.auteur}
 ::: {.wp-portrait}
 ![](img/portraits/jenkin-fleeming.jpg){fig-alt="Portrait de Fleeming Jenkin, ingénieur et économiste britannique, en buste."}
-[Avant 1885 · Robert Louis Stevenson, domaine public, Wikimedia Commons]{.wp-credit}
+[Avant 1885 · photographie prêtée par Mrs Dew Smith, frontispice du *Memoir* de R. L. Stevenson, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
 **Fleeming Jenkin** (1872), « On the Principles which Regulate the Incidence of Taxes », *Proceedings of the Royal Society of Edinburgh* · précurseur de l'analyse néoclassique. Jenkin est l'un des premiers à tracer des courbes d'offre et de demande. Il s'en sert pour montrer que la charge d'une taxe dépend de la forme des deux courbes, et non de celui qui la verse.
@@ -76,8 +76,8 @@ On pourrait croire qu'un produit addictif échappe à la logique du prix. Deux t
 
 ::: {.auteur}
 ::: {.wp-portrait}
-![](img/portraits/becker-gary.jpg){fig-alt="Portrait photographique de Gary S. Becker en 2004, en buste."}
-[2004 · National Cancer Institute, domaine public, Wikimedia Commons]{.wp-credit}
+![](img/portraits/becker-gary.jpg){fig-alt="Portrait photographique de Gary S. Becker en 2008, cheveux blancs, veste beige, parlant à un micro."}
+[2008 · MAR, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
 **Gary S. Becker et Kevin M. Murphy** (1988), « A Theory of Rational Addiction », *Journal of Political Economy*, 96(4), 675-700 · école de Chicago. Fumer aujourd'hui augmente l'envie de fumer demain : c'est ce qui définit l'addiction. Un fumeur rationnel le sait et tient compte des prix futurs ; une hausse de prix durable et annoncée réduit donc la consommation, un peu tout de suite et davantage à long terme.
@@ -112,7 +112,7 @@ La dépense P × Q est l'aire d'un rectangle sous la demande : quand le prix mon
 
 ```{r}
 #| label: fig-depense
-#| fig-cap: "La dépense des fumeurs quand le prix passe de 10 € à 12 € (exemple fictif de l'@exm-depense, demande peu élastique, e = −0,4). La quantité passe de 100 à 92 millions de paquets. Lecture : le rectangle bleu est la dépense en plus sur les 92 millions de paquets encore achetés, (12 − 10) × 92 = 184 millions d'euros ; le rectangle rouge est la dépense perdue sur les 8 millions de paquets abandonnés, 10 × 8 = 80 millions d'euros. Le gain l'emporte : la dépense augmente de 104 millions d'euros."
+#| fig-cap: "La dépense des fumeurs quand le prix passe de 10 € à 12 € (marché fictif de l'@exm-depense, demande peu élastique, e = −0,4). La quantité passe de 100 à 92 millions de paquets. Lecture : le rectangle bleu est la dépense en plus sur les 92 millions de paquets encore achetés, (12 − 10) × 92 = 184 millions d'euros ; le rectangle rouge est la dépense perdue sur les 8 millions de paquets abandonnés, 10 × 8 = 80 millions d'euros. Le gain l'emporte : la dépense augmente de 104 millions d'euros."
 #| fig-alt: "Graphique avec une droite de demande bleue, raide et décroissante. Au prix de 10 euros, on achète 100 millions de paquets ; au prix de 12 euros, 92 millions. Un rectangle bleu, entre 10 et 12 euros et de 0 à 92 millions de paquets, est marqué plus 184. Un rectangle rouge, entre 0 et 10 euros et de 92 à 100 millions de paquets, est marqué moins 80."
 #| fig-width: 7
 #| fig-height: 4.4
@@ -163,7 +163,7 @@ Sur un marché fictif, Q est en millions de paquets et P en euros. L'offre s'éc
 
 ```{r}
 #| label: fig-incidence-elasticite
-#| fig-cap: "Même taxe de 5 € par paquet, deux demandes (exemple fictif de l'@exm-incidence). Panneau A : demande peu élastique (e = −0,4) ; le prix payé passe de 10 € à 14 €, le prix gardé par le vendeur tombe à 9 €, la quantité passe de 100 à 84 millions. Panneau B : demande plus élastique (e = −1,6) ; le prix payé monte à 12,50 €, le prix gardé tombe à 7,50 €, la quantité à 60 millions. Lecture : le trait rouge mesure la taxe ; la part au-dessus de 10 € est payée par les acheteurs, la part au-dessous par les vendeurs."
+#| fig-cap: "Même taxe de 5 € par paquet, deux demandes (marché fictif de l'@exm-incidence). Panneau A : demande peu élastique (e = −0,4) ; le prix payé passe de 10 € à 14 €, le prix gardé par le vendeur tombe à 9 €, la quantité passe de 100 à 84 millions. Panneau B : demande plus élastique (e = −1,6) ; le prix payé monte à 12,50 €, le prix gardé tombe à 7,50 €, la quantité à 60 millions. Lecture : le trait rouge mesure la taxe ; la part au-dessus de 10 € est payée par les acheteurs, la part au-dessous par les vendeurs."
 #| fig-alt: "Deux graphiques côte à côte, avec la même offre O ambre et la même offre taxée O prime en tirets, plus haute de 5 euros. À gauche, panneau A, la demande bleue est raide : l'équilibre passe de 10 euros et 100 millions à 14 euros et 84 millions, et le trait rouge de la taxe va de 9 à 14 euros. À droite, panneau B, la demande est plus plate : l'équilibre passe à 12,50 euros et 60 millions, et le trait rouge va de 7,50 à 12,50 euros."
 #| fig-width: 8
 #| fig-height: 4.4
@@ -217,7 +217,7 @@ Avec des valeurs fictives : si e vaut −0,3 la première année et −0,6 au bo
 
 ### En France, le prix a fait baisser les ventes, mais avec des fuites
 
-**L'effet sur les ventes.** De 2006 à 2025, le prix réel du tabac (corrigé de l'inflation) a été multiplié par 2,1 et les ventes de cigarettes des buralistes divisées par 2,6 (Hill, 2026, chapitre 4). Selon la plupart des experts, une hausse de prix agit pour moitié sur le **nombre de fumeurs** (surtout des adultes qui arrêtent) et pour moitié sur la **quantité fumée** par chacun (OMS, 2012, et Hill, 2026, § 4.3). La réponse est donc oui, en partie : d'autres mesures ont joué en même temps (campagnes, interdiction de vente aux mineurs, *ibid.*), et ce « oui » repose sur une corrélation, pas sur une expérience.
+**L'effet sur les ventes.** De 2006 à 2025, le prix réel du tabac (corrigé de l'inflation) a été multiplié par 2,1 et les ventes de cigarettes des buralistes par adulte divisées par 2,6 (Hill, 2026, chapitre 4). Selon la plupart des experts, une hausse de prix agit pour moitié sur le **nombre de fumeurs** (surtout des adultes qui arrêtent) et pour moitié sur la **quantité fumée** par chacun (OMS, 2012, et Hill, 2026, § 4.3). La réponse est donc oui, en partie : d'autres mesures ont joué en même temps (campagnes, interdiction de vente aux mineurs, *ibid.*), et ce « oui » repose sur une corrélation, pas sur une expérience.
 
 ```{r}
 #| label: fig-conso-tabac
@@ -230,11 +230,11 @@ graphe_conso_tabac()
 
 Les comptes nationaux de l'Insee confirment cette image (@fig-conso-tabac) : de 2000 à 2025, le prix est multiplié par 4,6, les quantités sont divisées par 2,8 et la dépense augmente de 64 % en euros courants. Les prix en général ayant monté de 59 % (Eurostat, indice des prix à la consommation harmonisé, février 2026), le prix réel du tabac est multiplié par 2,9 et la dépense corrigée de l'inflation est presque stable (+3 %). Les quantités baissent donc presque autant que le prix réel monte : à long terme, la réaction est bien plus forte que d'une année sur l'autre (@fig-court-long), mais elle mêle l'effet du prix et celui des autres mesures.
 
-**Les fuites.** Les ventes des buralistes ne sont pas la consommation. Une hausse limitée aux cigarettes pousse vers le **tabac à rouler**, moins cher : jusqu'en 2013, 10 % de hausse du prix des seules cigarettes faisaient monter de 4,2 % ses ventes (Hill, 2026, chapitre 4). S'y ajoutent les achats à l'étranger et la contrebande : selon une étude citée par le ministère des Comptes publics, **17,7 %** des produits du tabac échappent en moyenne aux buralistes, soit 8 081 tonnes et 4,3 milliards d'euros de taxes (*JO Sénat*, 26/02/2026, réponse à la question écrite n° 04515). En 2025, les volumes de cigarettes saisis par les douanes augmentent de 24,5 % (AFP, *CB News*, 28/05/2026).
+**Les fuites.** Les ventes des buralistes ne sont pas la consommation. Une hausse limitée aux cigarettes pousse vers le **tabac à rouler**, moins cher : jusqu'en 2013, 10 % de hausse du prix des seules cigarettes faisaient monter de 4,2 % ses ventes (Hill, 2026, chapitre 4). S'y ajoutent les achats à l'étranger et la contrebande : selon l'étude TAFE des douanes et de la Mission interministérielle de lutte contre les drogues et les conduites addictives (MILDECA), citée par le ministère de l'Action et des Comptes publics, **17,7 %** des produits du tabac échappent en moyenne aux buralistes, soit 8 081 tonnes et 4,3 milliards d'euros de taxes (*JO Sénat*, 26/02/2026, réponse à la question écrite n° 04515). En 2025, les volumes de cigarettes saisis par les douanes augmentent de 24,5 % (AFP, *CB News*, 28/05/2026).
 
 ```{r}
 #| label: fig-recettes
-#| fig-cap: "Recettes du droit de consommation sur les tabacs (accise proportionnelle et accise spécifique, hors TVA), France continentale, 1991-2025, en milliards d'euros courants et en milliards d'euros constants (prix de 2001). Lecture : la recette augmente presque sans interruption jusqu'en 2020 (14,35 Md€), puis baisse de 11 % en euros courants et d'environ 23 % en euros constants jusqu'en 2025 (12,74 Md€). Le sommet de 2020 est en partie dû à la fermeture des frontières pendant le Covid ; par rapport à 2019, la recette de 2025 est stable en euros courants et baisse d'environ 13 % en euros constants. Source : C. Hill (2026), Impact de l'augmentation des prix sur la consommation de tabac, tableau 6 ; euros constants calculés avec l'indice des prix de ce tableau."
+#| fig-cap: "Recettes du droit de consommation sur les tabacs (accise proportionnelle et accise spécifique, hors TVA), France continentale, 1991-2025, en milliards d'euros courants et en milliards d'euros constants (prix de 2001). Lecture : la recette augmente fortement, avec quelques reculs, jusqu'en 2020 (14,35 Md€), puis baisse de 11 % en euros courants et d'environ 23 % en euros constants jusqu'en 2025 (12,74 Md€). Le sommet de 2020 est en partie dû à la fermeture des frontières pendant le Covid ; par rapport à 2019, la recette de 2025 est stable en euros courants et baisse d'environ 13 % en euros constants. Source : C. Hill (2026), Impact de l'augmentation des prix sur la consommation de tabac, tableau 6 ; euros constants calculés avec l'indice des prix de ce tableau."
 #| fig-alt: "Graphique en lignes de 1991 à 2025. La recette en euros courants, en bleu, passe de 3,3 milliards en 1991 à 8 milliards en 2000, 10,5 milliards en 2010, puis culmine à 14,4 milliards en 2020 avant de redescendre à 12,7 milliards en 2025. La recette en euros constants, en orange, suit la même allure mais monte moins : environ 8 à 10 milliards de 2000 à 2019, 11 milliards en 2020, puis 8,5 milliards en 2025. Une ligne verticale en tirets marque l'année 2020, sommet atteint quand les frontières étaient fermées."
 #| fig-width: 7.5
 #| fig-height: 4.4

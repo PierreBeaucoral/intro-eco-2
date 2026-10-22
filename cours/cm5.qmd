@@ -23,7 +23,7 @@ source(here::here("R/cm5.R"))
 
 ## La question
 
-Le 8 octobre 2026, l'Assemblée nationale examine une proposition de loi visant à abroger les zones à faibles émissions (ZFE). Le débat s'arrête à minuit sans vote : le texte n'est pas adopté (LCP, 09/10/2026 ; dossier législatif : Assemblée nationale, proposition de loi n° 2970, [lien](https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54557)). Quelques mois plus tôt, le 21 mai 2026, le Conseil constitutionnel avait censuré pour une raison de procédure l'article de loi qui supprimait les ZFE (décision n° 2026-903 DC). Une ZFE interdit aux voitures les plus polluantes, repérées par leur vignette Crit'Air, de circuler dans une agglomération. Au 1^er^ janvier 2025, 25 agglomérations de l'Hexagone en avaient une (*The Conversation*, 11/06/2026). À Clermont-Ferrand, la restriction ne vise que les véhicules utilitaires, pas les voitures des particuliers (Insee Analyses n° 124, 27/08/2026).
+Le 8 octobre 2026, l'Assemblée nationale examine une proposition de loi visant à abroger les zones à faibles émissions (ZFE). Le débat s'arrête à minuit sans vote : le texte n'est pas adopté (LCP, 09/10/2026, [lien](https://lcp.fr/actualites/zfe-le-rn-ne-parvient-pas-a-faire-voter-leur-suppression-lors-de-sa-niche-parlementaire) ; dossier législatif : Assemblée nationale, proposition de loi n° 2970, [lien](https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54557)). Quelques mois plus tôt, le 21 mai 2026, le Conseil constitutionnel avait censuré pour une raison de procédure l'article de loi qui supprimait les ZFE (décision n° 2026-903 DC). Une ZFE interdit aux voitures les plus polluantes, repérées par leur vignette Crit'Air, de circuler dans une agglomération. Au 1^er^ janvier 2025, 25 agglomérations de l'Hexagone en avaient une (*The Conversation*, 11/06/2026). À Clermont-Ferrand, la restriction ne vise que les véhicules utilitaires, pas les voitures des particuliers (Insee Analyses n° 124, 27/08/2026).
 
 Trois faits intriguent.
 
@@ -87,10 +87,10 @@ Si les riverains ont droit à un air sain, les automobilistes paient pour pollue
 ::: {.auteur}
 :::: {.wp-portrait}
 ![](img/portraits/weitzman-martin.jpg){fig-alt="Portrait photographique de Martin Weitzman en 2015, homme âgé à lunettes, en buste."}
-[2015 · European University Institute, CC BY-SA 2.0, Wikimedia Commons]{.wp-credit}
+[2015 · European University Institute, CC BY-SA 2.0, recadré, Wikimedia Commons]{.wp-credit}
 :::
 
-**Martin Weitzman** (1974), « Prices vs. Quantities », *The Review of Economic Studies*, 41(4), p. 477-491 · économie publique. Le régulateur connaît mal ce que coûtera l'effort de dépollution : une taxe fixe le prix de la pollution mais laisse la quantité incertaine, une norme fixe la quantité mais laisse le coût incertain. Il vaut mieux fixer la quantité quand le dommage grimpe vite au-delà d'un seuil, et fixer le prix quand le dommage de chaque unité est à peu près le même.
+**Martin Weitzman** (1974), « Prices vs. Quantities », *The Review of Economic Studies*, 41(4), p. 477-491 · économie publique. Le régulateur connaît mal ce que coûtera l'effort de dépollution : une taxe fixe le prix de la pollution mais laisse la quantité incertaine, une norme fixe la quantité mais laisse le coût incertain. Il vaut mieux fixer la quantité quand le dommage grimpe vite au-delà d'un seuil, plus vite que le coût de l'effort, et fixer le prix quand le dommage de chaque unité est à peu près le même.
 :::
 
 ::: {#def-instruments}
@@ -180,7 +180,7 @@ On reprend Cm = 4 € et Dm = 2 €. La ville ignore la demande : elle est bas
 4. *Si le dommage grimpe vite au-delà de 6 000 trajets* (par exemple si dépasser un seuil légal entraîne une sanction), dépasser coûte très cher. La norme, qui garantit 6 000, l'emporte : c'est le résultat de Weitzman.
 :::
 
-**Application.** Pour le dioxyde d'azote (NO₂), le droit européen fixe des **valeurs limites** de concentration à ne pas dépasser, et la France a déjà été condamnée par la Cour de justice de l'Union européenne pour les avoir dépassées « de manière systématique et persistante » (*The Conversation*, 11/06/2026). Ce seuil est juridique, pas sanitaire : le dommage du NO₂ croît sans seuil connu. Mais au-delà du seuil, la sanction rend le dépassement très coûteux : c'est l'argument de Weitzman pour un instrument qui garantit le résultat. Une ZFE n'en est qu'une approximation : elle interdit des vignettes sans plafonner les émissions. Pour le CO₂, le dommage dépend du stock mondial : celui d'une tonne de plus est à peu près constant, ce qui plaide pour un prix.
+**Application.** Pour le dioxyde d'azote (NO₂), le droit européen fixe des **valeurs limites** de concentration à ne pas dépasser, et la France a déjà été condamnée par la Cour de justice de l'Union européenne pour les avoir dépassées « de manière systématique et persistante » (*The Conversation*, 11/06/2026). Ce seuil est fixé par le droit : au-delà, la sanction rend le dépassement très coûteux : c'est l'argument de Weitzman pour un instrument qui garantit le résultat. Une ZFE n'en est qu'une approximation : elle interdit des vignettes sans plafonner les émissions. Pour le CO₂, le dommage dépend du stock mondial : celui d'une tonne de plus est à peu près constant, ce qui plaide pour un prix.
 
 ### Mesurer l'effet propre d'une ZFE : comparer avec ce qui se serait passé sans elle
 
@@ -216,13 +216,13 @@ Sur le parc, même logique : dans les intercommunalités à ZFE, les voitures Cr
 ```{r}
 #| label: fig-parc-zfe
 #| fig-cap: "Effet propre des ZFE sur le parc de voitures, par vignette Crit'Air, de trois ans avant à deux ans après leur mise en place. En bleu, la variation observée du nombre de voitures dans les intercommunalités à ZFE ; en gris, la variation estimée sans ZFE (contrefactuel), avec son intervalle de confiance. Sous chaque vignette, l'effet propre publié par l'Insee, en points de pourcentage. Lecture : les Crit'Air 3 baissent de 34,5 % ; sans ZFE, elles auraient baissé de 30,0 % ; l'effet propre est de −4,5 points. Champ : ZFE pour les voitures mises en place jusqu'en 2023. Source : Insee, Insee Analyses n° 124, 27/08/2026 (SDES, RSVERO)."
-#| fig-alt: "Graphique en barres horizontales pour cinq groupes de vignettes. Crit'Air 1 et électriques : plus 88,4 % observé, plus 82,6 % sans ZFE, effet plus 5,8 points. Crit'Air 2 : moins 4,3 % observé, plus 2,8 % sans ZFE, effet moins 7,1 points. Crit'Air 3 : moins 34,5 % observé, moins 30,0 % sans ZFE, effet moins 4,5 points. Crit'Air 4 : moins 53,6 % observé, moins 48,1 % sans ZFE, effet moins 5,5 points. Crit'Air 5 et non classées : moins 64,1 % observé, moins 62,0 % sans ZFE, effet non significatif. Pour chaque vignette, la barre bleue observée est proche de la barre grise du contrefactuel."
+#| fig-alt: "Graphique en barres horizontales pour cinq groupes de vignettes. Crit'Air 1 et électriques : plus 88,4 % observé, plus 82,6 % sans ZFE, effet plus 5,8 points. Crit'Air 2 : moins 4,3 % observé, plus 2,8 % sans ZFE, effet moins 7,1 points. Crit'Air 3 : moins 34,5 % observé, moins 30,0 % sans ZFE, effet moins 4,5 points. Crit'Air 4 : moins 53,6 % observé, moins 48,1 % sans ZFE, effet moins 5,5 points. Crit'Air 5 et non classées : moins 64,1 % observé, moins 62,0 % sans ZFE, effet non significatif. Pour chaque vignette sauf les Crit'Air 2, la barre bleue observée est proche de la barre grise du contrefactuel."
 #| fig-width: 8
 #| fig-height: 5.6
 graphe_parc_zfe()
 ```
 
-Pour chaque vignette, la barre bleue est proche de la barre grise : l'essentiel du verdissement du parc se serait produit sans ZFE. Pour les Crit'Air 5 et non classées, la baisse observée (−64,1 %) reste dans l'intervalle de confiance du contrefactuel : on ne peut pas dire que la ZFE y soit pour quelque chose.
+Pour chaque vignette sauf les Crit'Air 2, dont le parc baisse alors qu'il aurait augmenté sans ZFE, la barre bleue est proche de la barre grise : l'essentiel du verdissement du parc se serait produit sans ZFE. Pour les Crit'Air 5 et non classées, la baisse observée (−64,1 %) reste dans l'intervalle de confiance du contrefactuel : on ne peut pas dire que la ZFE y soit pour quelque chose.
 
 ::: {.piege}
 « Les émissions d'oxydes d'azote ont baissé de 38,9 % grâce aux ZFE. » C'est faux. Elles auraient baissé de 34,3 % sans ZFE, parce que le parc se renouvelle de toute façon. La ZFE n'explique que **4,6 points** sur 38,9. À l'inverse, « la ZFE ne sert à rien » est faux aussi : l'effet est petit, mais il est mesuré et différent de zéro. Comparer un avant et un après ne suffit jamais : il faut un contrefactuel.
@@ -231,7 +231,7 @@ Pour chaque vignette, la barre bleue est proche de la barre grise : l'essentiel 
 **Pourquoi un effet si modeste ?** L'outil de l'@exm-pigou éclaire trois résultats de l'Insee (27/08/2026).
 
 - *La norme vise la vignette, pas le kilomètre.* Deux ans après, les voitures des résidents ne roulent pas significativement moins, et les trajets domicile-travail en voiture ne baissent pas. La ZFE change **quelle** voiture on conduit, pas **combien** on roule. Une taxe par kilomètre pollué jouerait sur les deux.
-- *Elle frappe des voitures qui partaient déjà.* Les Crit'Air 5 et non classées baissent de 64,1 %, mais l'effet de la ZFE n'est pas significatif : elles ne pesaient qu'environ 6 % du parc des ZFE au départ (223 400 voitures sur 3,6 millions).
+- *Elle frappe des voitures qui partaient déjà.* Les Crit'Air 5 et non classées baissent de 64,1 %, mais l'effet de la ZFE n'est pas significatif : elles ne pesaient qu'environ 6 % du parc des ZFE trois ans avant leur mise en place (223 400 voitures sur 3,6 millions), et moins de 5 % à leur mise en place.
 - *Elle est peu contrôlée.* Environ 12 600 contraventions liées aux ZFE en 2019 et 2 300 en 2024, sur plus de 24 millions de contraventions routières par an. Les ménages réagissent pourtant dès l'annonce de 2019 : la norme agit surtout par les **anticipations**, à l'achat d'une occasion.
 
 ## Effets de répartition
@@ -242,9 +242,9 @@ Pour chaque vignette, la barre bleue est proche de la barre grise : l'essentiel 
 
 **Les gains de santé** vont aux habitants de la zone : surtout aux plus riches à Paris, l'inverse à Bruxelles, selon Liotta ; « également répartis » en région parisienne, selon une étude citée par Poulhès. La question reste ouverte.
 
-### Le centre respire, la périphérie s'adapte
+### Le centre respire, des territoires éloignés héritent des vieilles voitures
 
-**Par territoire.** Les voitures polluantes ne disparaissent pas toutes : une partie est revendue d'occasion dans des territoires sans restriction (Insee, 27/08/2026). Une taxe sur le carburant ou au kilomètre frapperait d'autres ménages que la ZFE : en 2021, 13,5 % des ménages des intercommunalités rurales consacrent plus d'un mois de revenu par an au carburant, contre 9,0 % dans les intercommunalités urbaines (Insee Première n° 2125, 08/09/2026). Changer d'instrument, c'est changer de perdants.
+**Par territoire.** Les voitures polluantes ne disparaissent pas toutes : une partie est revendue d'occasion dans des territoires sans restriction, et non voisins de la zone : dans les communes proches, le parc verdit comme ailleurs (Insee, 27/08/2026). Une taxe sur le carburant ou au kilomètre frapperait d'autres ménages que la ZFE : en 2021, 13,5 % des ménages avec voiture des intercommunalités rurales consacrent plus d'un mois de revenu par an au carburant, contre 9,0 % dans les intercommunalités urbaines (Insee Première n° 2125, 08/09/2026). Changer d'instrument, c'est changer de perdants.
 
 ```{r}
 #| label: fig-carburant
@@ -255,7 +255,7 @@ Pour chaque vignette, la barre bleue est proche de la barre grise : l'essentiel 
 graphe_carburant()
 ```
 
-Quand le prix du carburant monte, la part des ménages très exposés double à peu près partout, et l'écart entre rural et urbain passe de 4,5 à 10,2 points : une taxe sur le carburant pèserait d'abord sur les ménages ruraux.
+Quand le prix du carburant monte, la part des ménages très exposés double à peu près partout. L'écart entre rural et urbain passe de 4,5 à 10,2 points, mais le rapport entre les deux parts reste voisin de 1,5 : l'Insee parle d'un « léger creusement » de l'écart (Insee Première n° 2125, 08/09/2026). Une taxe sur le carburant pèserait donc plus souvent sur les ménages ruraux, en proportion ; en nombre, les ménages très exposés restent plus nombreux dans les intercommunalités urbaines (Insee Première n° 2125, tableau complémentaire 3).
 
 **Par génération.** Parmi les ménages très exposés au prix du carburant, 77,9 % ont au moins un membre en emploi, contre 70,9 % pour l'ensemble des ménages motorisés ; les ménages sans emploi de 65 ans ou plus (personne de référence) n'en représentent que 10,2 %, contre 24,3 % (Insee Première n° 2125, données 2021). Une taxe sur le carburant pèserait donc surtout sur les actifs qui roulent loin pour travailler.
 
@@ -265,7 +265,7 @@ La chaîne de causalité d'une ZFE résume pourquoi ses coûts et ses bénéfice
 |---|---|---|
 | 1. La règle | Les vignettes les plus anciennes sont interdites dans la zone | Les propriétaires de voitures anciennes |
 | 2. La réaction | Changer de voiture, la revendre ailleurs, ou renoncer à entrer | Surtout les ménages modestes et à revenu intermédiaire |
-| 3. Le parc | Moins de voitures polluantes dans la zone, mais certaines sont revendues hors zone | Les territoires voisins sans restriction |
+| 3. Le parc | Moins de voitures polluantes dans la zone, mais certaines sont revendues hors zone | Des territoires sans restriction, non voisins de la zone |
 | 4. L'air | Moins d'émissions locales, baisse supérieure au tendanciel de quelques points seulement | Les habitants de la zone |
 
 : De la règle à l'air : la chaîne de causalité d'une ZFE. Lecture : le coût d'adaptation tombe à l'étape 2 sur les propriétaires de voitures anciennes, le bénéfice sanitaire à l'étape 4 sur les habitants de la zone ; ce ne sont pas toujours les mêmes personnes. Source : synthèse de cette section (Insee, Insee Analyses n° 124, 27/08/2026 ; Insee Première n° 2125, 08/09/2026). {#tbl-chaine-zfe}
@@ -291,7 +291,7 @@ En 2025, le **leasing social** propose 50 000 aides pour louer une voiture éle
 - **Efficacité ou équité ?** Quand le dommage est à peu près constant, la taxe atteint l'optimum au moindre coût ; mais elle frappe les ménages captifs de la voiture ; on peut la compenser, si l'on sait les identifier.
 - **Quel poids donner à la santé** des riverains par rapport à l'accès à l'emploi des périurbains ?
 
-**Les positions en présence.** Pour les partisans de la suppression, la mesure est injuste : elle pèse surtout sur les ménages qui ne peuvent pas changer de voiture (France 24, 29/05/2025), pour un effet propre sur les émissions de quelques points seulement (Insee, 27/08/2026). Pour Liotta, les ZFE actuelles réduisent l'accès à l'emploi des plus modestes ; elle propose de les accompagner pour les rendre plus égalitaires (*The Conversation*, 27/11/2024). Pour Poulhès, les ZFE sont bien inégalitaires, mais l'argument social ne justifie pas de les supprimer : les plus pauvres polluent peu et vont peu au centre, et ces chiffres « soulèvent plutôt des enjeux d'aménagement du territoire et de conditions de logement dans les centres » (*The Conversation*, 23/06/2025).
+**Les positions en présence.** Pour les partisans de la suppression, la mesure est injuste : elle pèse surtout sur les ménages qui ne peuvent pas changer de voiture (France 24, 29/05/2025), pour un effet propre sur les émissions de quelques points seulement (Insee, 27/08/2026) ; l'exposé des motifs de la proposition de loi n° 2970 y voit « une atteinte à notre pacte républicain de liberté, d'égalité et de fraternité » (Assemblée nationale, 23/06/2026, [lien](https://www.assemblee-nationale.fr/dyn/17/textes/l17b2970_proposition-loi)). Pour Liotta, les ZFE actuelles réduisent l'accès à l'emploi des plus modestes ; elle propose de les accompagner pour les rendre plus égalitaires (*The Conversation*, 27/11/2024). Pour Poulhès, les ZFE sont bien inégalitaires, mais l'argument social ne justifie pas de les supprimer : les plus pauvres polluent peu et vont peu au centre, et ces chiffres « soulèvent donc plutôt des enjeux d'aménagement du territoire et de conditions de logement dans les centres » (*The Conversation*, 23/06/2025).
 
 **Les écoles.** Pour **Pigou**, l'État corrige l'externalité par un prix, la taxe. **Coase** objecte que l'intervention a elle-même un coût. Pour **Weitzman**, ni la taxe ni la norme ne sont meilleures en soi : tout dépend de l'erreur la plus grave.
 
@@ -305,7 +305,7 @@ En 2025, le **leasing social** propose 50 000 aides pour louer une voiture éle
 - Avec une externalité négative, Cms = Cm + Dm dépasse le coût privé : le marché produit trop, d'où une perte sèche.
 - Une taxe égale au dommage marginal (Pigou) amène le marché à l'optimum Q° ; sa recette est un transfert, pas une perte.
 - Taxe, norme et subvention peuvent viser la même quantité ; elles diffèrent par le payeur : le pollueur, le pollueur écarté ou le contribuable (Coase).
-- Quand le dommage grimpe vite au-delà d'un seuil, mieux vaut fixer la quantité (une norme) ; quand il est à peu près constant, mieux vaut fixer le prix (Weitzman).
+- Quand le dommage grimpe vite au-delà d'un seuil, plus vite que le coût de l'effort, mieux vaut fixer la quantité (une norme) ; quand il est à peu près constant, mieux vaut fixer le prix (Weitzman).
 - L'effet propre d'une politique se mesure contre un contrefactuel : les ZFE expliquent 4,6 points d'une baisse de 38,9 % des oxydes d'azote (Insee, 2026).
 - Qui doit payer relève d'un jugement ; l'analyse dit qui paie avec chaque instrument.
 :::

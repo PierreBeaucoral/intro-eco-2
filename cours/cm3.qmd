@@ -32,7 +32,7 @@ Or le prix d'Ozempic ne se forme pas sur un marché : il est fixé par l'État.
 2. Ce sont des règles médicales qui ont décidé qui serait soigné.
 3. Même en payant plus cher, le monde n'aurait pas eu tout de suite plus de stylos : la France en aurait peut-être attiré davantage, au détriment d'autres pays.
 
-![Un stylo prérempli d'Ozempic (semaglutide, 1,34 mg par ml, 3 ml), modèle vendu en Chine. Lecture : le produit en jeu est un stylo injectable à usage hebdomadaire, fabriqué par un seul laboratoire pour le monde entier ; c'est ce petit objet, et non un bien ordinaire, qu'il a fallu rationner. Photo : HualinXMN, CC BY-SA 4.0, Wikimedia Commons.](img/cm3/ozempic-stylo-3ml.jpg){#fig-stylo width=60% fig-alt="Photographie d'un stylo injecteur bleu clair posé sur un fond de carton gris, avec une étiquette verte portant le nom Ozempic et des caractères chinois."}
+![Un stylo prérempli d'Ozempic (semaglutide, 1,34 mg par ml, 3 ml), modèle vendu en Chine. Lecture : le produit en jeu est un stylo injectable à usage hebdomadaire, fabriqué par un seul laboratoire pour le monde entier ; c'est ce petit objet, et non un bien ordinaire, qu'il a fallu rationner. Photo : HualinXMN, CC BY-SA 4.0, Wikimedia Commons (réduite).](img/cm3/ozempic-stylo-3ml.jpg){#fig-stylo width=60% fig-alt="Photographie d'un stylo injecteur bleu clair posé sur un fond de carton gris, avec une étiquette verte portant le nom Ozempic et des caractères chinois."}
 
 **La question de la séance : pourquoi des diabétiques ont-ils manqué d'Ozempic, et pourquoi le prix n'a-t-il pas réglé la pénurie ?** Trois outils y répondent : le prix administré, le rationnement hors prix et la rigidité de l'offre. Les faits sont arrêtés au 21 octobre 2026 ; la pénurie est terminée, le raisonnement vaut pour toute pénurie à prix fixé.
 
@@ -75,7 +75,7 @@ L'ANSM a combiné un critère (patients déjà traités, puis patients atteints 
 L'offre est **rigide** quand la quantité offerte varie très peu avec le prix. À court terme, l'offre d'un médicament est rigide : produire plus exige des usines et des autorisations, qui prennent des mois ou des années. À long terme, elle devient plus élastique.
 :::
 
-### La santé n'est pas un marché comme les autres
+### Les soins médicaux ne sont pas un marché comme les autres
 
 ::: {.auteur}
 :::: {.wp-portrait}
@@ -83,7 +83,7 @@ L'offre est **rigide** quand la quantité offerte varie très peu avec le prix. 
 [1996 · Linda A. Cicero / Stanford News Service, CC BY 3.0, Wikimedia Commons]{.wp-credit}
 ::::
 
-**Kenneth J. Arrow** (1963), « Uncertainty and the Welfare Economics of Medical Care », *American Economic Review*, 53(5), p. 941-973 · école néoclassique, économie de la santé. La maladie est imprévisible et le patient en sait beaucoup moins que son médecin : il ne choisit pas ses soins comme un bien ordinaire. La santé repose donc sur l'assurance, la confiance et des règles collectives plutôt que sur le seul prix.
+**Kenneth J. Arrow** (1963), « Uncertainty and the Welfare Economics of Medical Care », *American Economic Review*, 53(5), p. 941-973 · école néoclassique, économie de la santé. La maladie est imprévisible et le patient en sait beaucoup moins que son médecin : il ne choisit pas ses soins comme un bien ordinaire. Les soins reposent donc sur l'assurance, la confiance et des règles collectives plutôt que sur le seul prix.
 :::
 
 On retrouve trois traits de l'analyse d'Arrow dans le cas Ozempic.
@@ -98,7 +98,7 @@ On retrouve trois traits de l'analyse d'Arrow dans le cas Ozempic.
 
 ```{r}
 #| label: fig-penurie
-#| fig-cap: "Un choc de demande sous un prix fixé. Au départ, le prix fixé P\\* est le prix d'équilibre (point E). La demande se déplace vers la droite (D → D′, en tirets). Le prix reste à P\\* : la quantité demandée dépasse la quantité offerte, c'est la pénurie (trait rouge). Le point creux E′ montre l'équilibre qu'atteindrait un prix libre. L'offre O est raide : produire plus prend du temps. Graphique théorique."
+#| fig-cap: "Un choc de demande sous un prix fixé. Au départ, le prix fixé P\\* est le prix d'équilibre (point E). La demande se déplace vers la droite (D → D′, en tirets). Le prix reste à P\\* : la quantité demandée dépasse la quantité offerte, c'est la pénurie (trait rouge). Le point creux E′ montre l'équilibre qu'atteindrait un prix libre sur un marché à nombreux vendeurs. L'offre O est raide : produire plus prend du temps. Graphique théorique."
 #| fig-alt: "Graphique offre-demande. La demande D est une droite décroissante bleue, l'offre O une droite croissante ambre très raide. Une seconde demande D prime, en tirets bleus, est décalée vers la droite, avec une flèche horizontale de D vers D prime. L'équilibre initial E se situe au prix P étoile, marqué prix fixé, et à la quantité Q étoile. Au prix P étoile, un trait rouge marqué pénurie va de l'offre jusqu'à la demande D prime. Plus haut, un point creux E prime, marqué prix libre, se trouve à l'intersection de l'offre et de D prime, au prix P étoile prime, bien plus élevé."
 #| fig-width: 7
 #| fig-height: 4.6
@@ -108,7 +108,7 @@ graphe_penurie()
 1. **Le départ.** Le prix fixé P\* est le prix d'équilibre : tout patient muni d'une ordonnance est servi (point E).
 2. **Le choc.** La demande augmente à chaque prix : la courbe passe de D à D′.
 3. **Le prix ne bouge pas.** Au prix P\*, les vendeurs offrent toujours Q\*, mais les acheteurs demandent beaucoup plus : c'est la pénurie.
-4. **Ce qui ne se produit pas.** Sur un marché libre, les acheteurs prêts à payer plus feraient monter le prix jusqu'à E′. Ici, la pénurie dure tant que l'offre ne rattrape pas la demande, ou que la demande ne recule pas.
+4. **Ce qui ne se produit pas.** Sur un marché libre à nombreux vendeurs, les acheteurs prêts à payer plus feraient monter le prix jusqu'à E′. Ici, la pénurie dure tant que l'offre ne rattrape pas la demande, ou que la demande ne recule pas.
 
 | Étape | Ce qui se passe | Effet sur le marché |
 |---|---|---|
@@ -128,7 +128,7 @@ graphe_penurie()
 
 ::: {#exm-ozempic}
 ## Un choc de demande sur un marché de médicament fictif
-Sur un marché fictif, Q est en milliers de boîtes par mois et P en euros par boîte. Le prix fixé est de 75 €, un arrondi des 76,58 € réels.
+Sur un marché fictif à nombreux vendeurs, Q est en milliers de boîtes par mois et P en euros par boîte. Le prix fixé est de 75 €, un arrondi des 76,58 € réels.
 
 | Prix P (€ par boîte) | 75 | 125 | 175 | 225 | 275 |
 |---|---|---|---|---|---|
@@ -140,10 +140,10 @@ Sur un marché fictif, Q est en milliers de boîtes par mois et P en euros par b
 2. *Une demande très peu élastique.* De 75 € à 125 €, le prix monte de 50 ÷ 75 ≈ 66,7 % et la quantité demandée baisse de 10 %. e = −10 ÷ 66,7 ≈ **−0,15**.
 3. *Le choc.* À chaque prix, la demande augmente de 60 : D′ = D + 60.
 4. *La pénurie.* Le prix reste à 75 €. On demande 160, on offre 100 : il manque **60** milliers de boîtes, soit 60 ÷ 160 = **37,5 %** des demandes.
-5. *Si le prix était libre, à court terme.* À 275 €, on demande 120 et on offre 120. Le prix augmente de **267 %**, la quantité de **20 %** seulement. Des 60 000 boîtes manquantes, 20 000 sont produites en plus ; pour les 40 000 autres, des patients renoncent, faute de payer 275 €.
+5. *Si le prix était libre, à court terme.* À 275 €, on demande 120 et on offre 120. Le prix augmente de **267 %**, la quantité de **20 %** seulement. Des 60 000 boîtes manquantes, 20 000 sont produites en plus ; pour les 40 000 autres, des patients renoncent, faute de payer 275 €. On suppose ici que le patient paie tout le prix (médicament non remboursé). S'il restait remboursé, l'Assurance maladie paierait l'essentiel de la hausse : la demande reculerait encore moins, et le prix devrait monter plus haut (déduction du modèle).
 6. *La recette du vendeur.* Au prix fixé : 100 000 boîtes × 75 € = 7,5 millions d'euros par mois. À prix libre : 120 000 × 275 € = 33 millions. La hausse paie surtout la pénurie, pas un effort de production.
 
-*Variante de long terme.* Une fois de nouvelles usines construites, l'offre devient plus élastique : elle vaut toujours 100 à 75 €, mais 145 à 150 €, où elle rejoint D′. Un prix libre doublerait (+100 %) et la quantité augmenterait de 45 % : sur les 60 000 demandes non servies, 45 000 seraient servies et 15 000 abandonnées, faute de payer 150 €. Mais à 75 €, même cette offre reste à 100. À prix fixé, seul le **déplacement d'une courbe** referme la pénurie : une offre qui augmente (O → O′) ou une demande qui recule.
+*Variante de long terme.* Une fois de nouvelles usines construites, l'offre devient plus élastique : elle vaut toujours 100 à 75 €, mais 145 à 150 €, où elle rejoint D′. Un prix libre doublerait (+100 %) et la quantité augmenterait de 45 % : sur les 60 000 demandes non servies, 45 000 seraient servies et 15 000 abandonnées, faute de payer 150 € (même hypothèse). Mais à 75 €, même cette offre reste à 100. À prix fixé, seul le **déplacement d'une courbe** referme la pénurie : une offre qui augmente (O → O′) ou une demande qui recule.
 :::
 
 ```{r}
@@ -155,7 +155,7 @@ Sur un marché fictif, Q est en milliers de boîtes par mois et P en euros par b
 graphe_rigidite()
 ```
 
-Avec une offre rigide, libérer le prix fait apparaître peu de boîtes : il change surtout **qui** les reçoit, ceux qui peuvent payer (@fig-rigidite). Or la pénurie française a pris fin alors que le prix restait administré : elle ne pouvait se refermer que par de nouvelles capacités, qui **déplacent l'offre** (O → O′), ou par une demande remboursée freinée, comme avec le formulaire de 2025. Le ministère signale « des investissements importants » des laboratoires, notamment à Chartres et à Fegersheim (réponse du 21/05/2024).
+Avec une offre rigide, libérer le prix fait apparaître peu de boîtes : il change surtout **qui** les reçoit, ceux qui peuvent payer (@fig-rigidite). Or la pénurie française a pris fin alors que le prix restait administré : elle ne pouvait se refermer que par de nouvelles capacités, qui **déplacent l'offre** (O → O′), ou par un recul de la demande. Le ministère signale « des investissements importants » des laboratoires, notamment à Chartres et à Fegersheim (réponse du 21/05/2024).
 
 ### La règle de rationnement décide qui subit la pénurie
 
@@ -190,23 +190,23 @@ La même pénurie interrompt le traitement de 30 000 patients avec la file d'at
 | Décembre 2023 | Ne plus commencer de traitement par Ozempic, Victoza, Trulicity | ANSM |
 | 14/03/2024 | Nouveaux traitements réservés aux diabétiques de type 2 avec maladie des artères avérée ; sinon, une autre classe d'antidiabétiques « à privilégier » | ANSM |
 | Septembre-octobre 2024 | Reprise progressive des nouveaux traitements, sous contingentement | ANSM, 03/10/2024 |
-| 01/02/2025 | Remboursement subordonné à un formulaire du médecin (âge, diabète de type 2, traitement seul ou associé) | Vidal, 16/01/2025 |
+| 01/02/2025 | Remboursement subordonné à un formulaire du médecin (âge, diabète de type 2, traitement seul ou associé), appliqué avec une tolérance jusqu'au 01/09/2025 | Vidal, 16/01/2025 et 03/06/2025 |
 | 05/06/2025 | Ozempic et Victoza de nouveau disponibles pour tous ; Trulicity reste en distribution fractionnée | ANSM, 05/06/2025 |
 
 : Chronologie de la pénurie d'analogues du GLP-1 en France (sources ouvertes le 21/10/2026). {#tbl-chronologie}
 
-La chronologie (@tbl-chronologie) suit les outils. Un **choc de demande** crée une pénurie au prix fixé. L'État **rationne par critère et par quota**, puis **freine la demande remboursée** avec le formulaire de février 2025. Enfin l'**offre se déplace** (O → O′) et rattrape la demande : en juin 2025, l'ANSM constate « la fin des tensions d'approvisionnement », sans que le prix ait servi à les résorber.
+La chronologie (@tbl-chronologie) suit les outils. Un **choc de demande** crée une pénurie au prix fixé. L'État **rationne par critère et par quota**, puis **encadre la demande remboursée** par le formulaire de février 2025. Appliqué avec une tolérance jusqu'au 1^er^ septembre 2025 (Vidal, 03/06/2025), ce formulaire n'explique pas la fin de la pénurie. En juin 2025, l'ANSM constate « la fin des tensions d'approvisionnement », sans que le prix ait servi à les résorber. C'est **compatible** avec un déplacement de l'offre (O → O′), après les investissements de Chartres et de Fegersheim, mais les sources ne séparent pas l'effet de l'offre de celui de la demande.
 
 ```{r}
 #| label: fig-boites
-#| fig-cap: "Boîtes d'analogues du GLP-1 remboursées en France, en millions, de 2020 à 2024, par produit ; total au-dessus de chaque barre. Lecture : le total progresse de 19,7 % en 2023, puis de 0,1 % seulement en 2024, année du rationnement ; les boîtes d'Ozempic continuent d'augmenter, celles de Trulicity et de Victoza reculent. Une boîte d'Ozempic 1 mg contient quatre doses hebdomadaires, soit environ un mois de traitement (HAS, avis du 27/08/2025). Source : Assurance Maladie, Medic'AM, délivrances en pharmacie de ville, tous prescripteurs (téléchargé le 21/10/2026)."
+#| fig-cap: "Boîtes d'analogues du GLP-1 remboursées en France, en millions, de 2020 à 2024, par produit ; total au-dessus de chaque barre. Lecture : le total progresse de 19,7 % en 2023, puis de 0,1 % seulement en 2024, année du rationnement ; les boîtes d'Ozempic continuent d'augmenter, celles de Trulicity et de Victoza reculent. Une boîte d'Ozempic 1 mg (stylo de 3 ml) contient quatre doses hebdomadaires, soit environ un mois de traitement ; une présentation de huit doses est autorisée depuis le 16/05/2025 (HAS, avis du 27/08/2025). Source : Assurance Maladie, Medic'AM, délivrances en pharmacie de ville, tous prescripteurs (téléchargé le 21/10/2026)."
 #| fig-alt: "Diagramme en barres empilées, une barre par année de 2020 à 2024. Le total passe de 4,29 millions de boîtes en 2020 à 5,12 en 2021, 6,25 en 2022, 7,48 en 2023 et 7,49 en 2024. La part bleue d'Ozempic grossit chaque année, de 0,75 million en 2020 à 3,64 millions en 2024. La part ambre de Trulicity augmente jusqu'en 2023 puis diminue en 2024. La part rouge de Victoza diminue chaque année. Une part grise très fine représente les autres produits."
 #| fig-width: 7
 #| fig-height: 4.4
 graphe_boites_aglp1()
 ```
 
-De 2022 à 2023, les boîtes remboursées de la famille passent de 6,25 à 7,48 millions (+19,7 %) ; en 2024, elles ne progressent plus que de 0,1 % (@fig-boites). En 2024, Ozempic progresse encore (+24,6 %), quand Trulicity (−7,7 %) et Victoza (−49,8 %) reculent (Medic'AM, téléchargé le 21/10/2026). La source ne dit pas pourquoi ; on sait que l'ANSM a laissé reprendre les nouveaux traitements par Ozempic en septembre 2024, quand Trulicity restait « en forte tension » (ANSM, 10/09/2024), ce qui est compatible avec ces écarts sans les prouver. Le total, lui, cesse de croître quand le rationnement s'applique.
+De 2022 à 2023, les boîtes remboursées de la famille passent de 6,25 à 7,48 millions (+19,7 %) ; en 2024, elles ne progressent plus que de 0,1 % (@fig-boites). En 2024, Ozempic progresse encore (+24,6 %), quand Trulicity (−7,7 %) et Victoza (−49,8 %) reculent (Medic'AM, téléchargé le 21/10/2026). La source ne dit pas pourquoi ; on sait que l'ANSM a laissé reprendre les nouveaux traitements par Ozempic en septembre 2024, quand Trulicity restait « en forte tension » (ANSM, 10/09/2024), ce qui est compatible avec la hausse d'Ozempic et le recul de Trulicity sans les prouver. Victoza a repris en même temps qu'Ozempic : sa chute a d'autres causes, que la source ne donne pas. Le total, lui, cesse de croître quand le rationnement s'applique.
 
 ::: {.piege}
 **Les boîtes délivrées ne mesurent pas la demande.** Pendant une pénurie, on observe la quantité *vendue* : la plus petite des deux, quantité demandée ou quantité offerte. Le plateau de 2024 est **compatible** avec une quantité bloquée par l'offre, sans le prouver : une baisse de la demande donnerait le même chiffre. Les boîtes non remboursées n'y figurent pas.
@@ -227,10 +227,10 @@ Pendant que les boîtes d'Ozempic remboursées sont multipliées par 4,9, leur p
 
 La @fig-penurie ressemble à celle d'un **prix plafond** : un prix maximum fixé par l'État ; il crée une pénurie quand il est fixé sous l'équilibre, sur un marché à nombreux vendeurs (CM 4). Le cas Ozempic s'en écarte sur quatre points.
 
-1. **Un prix négocié, pas un plafond.** Ozempic, médicament récent protégé par un brevet, n'a qu'un fabricant, Novo Nordisk (Base de données publique des médicaments). Son prix est négocié avec lui. Il n'est pas trop bas par décision : il l'est devenu quand la demande a bondi.
+1. **Un prix négocié, pas un plafond.** Ozempic, médicament récent protégé par un brevet, n'a qu'un fabricant, Novo Nordisk (Base de données publique des médicaments). Son prix est négocié avec lui. Il n'est pas trop bas par décision : il l'est devenu quand la demande a bondi. Avec un seul vendeur, il n'y a pas de courbe d'offre au sens du modèle : E′ est le repère d'un marché à nombreux vendeurs. Un laboratoire libre de son prix le fixerait lui-même, probablement plus haut.
 2. **Une offre mondiale et rigide.** Le fabricant sert le monde entier avec des capacités limitées. Un prix français plus élevé aurait peut-être attiré des stylos, aux dépens d'autres pays : la pénurie se serait déplacée sans disparaître (déduction du modèle, non fait observé).
 3. **Une demande qui passe par le médecin et l'assurance.** Elle dépend des prescriptions et du remboursement plus que du prix public : le formulaire de 2025 agit sur elle sans toucher au prix.
-4. **Le prix n'était pas la cause principale, selon l'État.** Le ministère invoque un choc de demande mondiale face à des capacités limitées. Le député auteur de la question écrite, qui visait surtout le Trulicity, y voyait aussi un médicament « vendu en France à un prix d'achat très bas », donc très accessible (JO du 20/02/2024). Pour les médicaments en général, des prix plus élevés n'évitent pas toujours les pénuries : la Suisse et l'Allemagne, « qui pratiquent des prix supérieurs, sont aussi touchés par des pénuries importantes », selon la rapporteure de la commission d'enquête du Sénat (Public Sénat, 06/07/2023).
+4. **Le prix n'était pas la cause principale, selon l'État.** Le ministère invoque un choc de demande mondiale face à des capacités limitées. Le député auteur de la question écrite, qui visait surtout le Trulicity, y voyait aussi un médicament « vendu en France à un prix d'achat très bas », donc très accessible (JO du 20/02/2024). Pour les médicaments en général, des prix plus élevés n'évitent pas toujours les pénuries : la rapporteure de la commission d'enquête du Sénat veut « démonter cet argument », en rappelant que la Suisse et l'Allemagne, qui pratiquent des prix supérieurs, connaissent aussi des pénuries importantes (Public Sénat, 06/07/2023).
 
 Le modèle explique **pourquoi** une pénurie dure à prix fixe et pourquoi il faut alors rationner autrement. Il ne permet pas de conclure qu'un prix plus élevé aurait évité la pénurie d'Ozempic.
 
@@ -252,7 +252,7 @@ On applique les trois outils, dans l'ordre :
 
 **Par état de santé.** Avec la règle de l'ANSM, les patients déjà traités gardent leur traitement. Les perdants sont les **nouveaux** patients sans maladie des artères, orientés vers une autre classe d'antidiabétiques (ANSM, 14/03/2024), et les demandes hors indication. Une file d'attente aurait interrompu des traitements en cours (@exm-rationnement).
 
-**Par revenu.** Un rationnement par le prix sert d'abord ceux qui peuvent payer : à 275 € la boîte (@exm-ozempic), un patient modeste renonce avant un patient aisé, à besoin égal. Le prix administré et le critère médical rendent l'accès indépendant du revenu pour les patients qui y ont droit ; le reste à charge dépend toutefois de la complémentaire santé et des exonérations de chacun.
+**Par revenu.** Un rationnement par le prix sert d'abord ceux qui peuvent payer : à 275 € la boîte payés par le patient (@exm-ozempic), un patient modeste renonce avant un patient aisé, à besoin égal. Le prix administré et le critère médical rendent l'accès indépendant du revenu pour les patients qui y ont droit ; le reste à charge dépend toutefois de la complémentaire santé et des exonérations de chacun.
 
 **Par territoire.** Le contingentement répartit les boîtes entre pharmacies : un patient peut trouver son traitement dans une officine et pas dans une autre. Aucune source ouverte pour cette séance ne chiffre ces écarts. Les investissements à Chartres et à Fegersheim (réponse ministérielle du 21/05/2024) augmentent l'offre et l'activité de ces territoires.
 
@@ -286,7 +286,7 @@ On sépare ce que l'analyse **établit** (positif) de ce qui relève d'un **juge
 **Les écoles en présence.** Les deux camps partent du même cadre néoclassique et divergent sur le poids des défaillances de marché en santé. Pour l'**approche par le marché**, le prix est un signal : un prix bas décourage l'investissement et prépare les pénuries de demain ; on aide ensuite les plus modestes par l'assurance ou des transferts. L'**économie de la santé** issue d'Arrow souligne ce qui distingue la santé d'un marché ordinaire : un patient moins informé que son médecin, une assurance qui paie. Elle en déduit que des priorités médicales fixées collectivement servent mieux les patients qu'un prix libre. Le débat porte moins sur le mécanisme de la @fig-penurie, admis par tous, que sur le poids donné à l'offre de demain et à l'accès de chacun aux soins aujourd'hui.
 
 ::: {.droit}
-Le remboursement de certains médicaments peut être « subordonné au renseignement par le prescripteur d'éléments relatifs aux circonstances et indications » de la prescription (Code de la sécurité sociale, art. L162-19-1). Depuis la loi de financement de la sécurité sociale pour 2024 (art. 73, qui modifie cet article), ce renseignement peut passer par un formulaire joint à l'ordonnance (décret n° 2024-968 du 30 octobre 2024, selon l'Ordre national des pharmaciens, 14/11/2024). Pour Ozempic, Victoza et Trulicity, la règle s'applique depuis le 1^er^ février 2025, par des arrêtés publiés au JO du 15 janvier 2025 (Vidal, 16/01/2025, d'où vient la citation). Le droit agit ici sur la demande remboursée, non sur le prix.
+Selon Vidal (16/01/2025), le remboursement d'Ozempic, de Victoza et de Trulicity est « subordonné au renseignement par le prescripteur d'éléments relatifs aux circonstances et indications de la prescription », en application du Code de la sécurité sociale (art. L162-19-1). Depuis la loi de financement de la sécurité sociale pour 2024 (art. 73, qui modifie cet article), ce renseignement peut passer par un formulaire joint à l'ordonnance (décret n° 2024-968 du 30 octobre 2024, selon l'Ordre national des pharmaciens, 14/11/2024). Pour Ozempic, Victoza et Trulicity, la règle s'applique depuis le 1^er^ février 2025, par des arrêtés publiés au JO du 15 janvier 2025 (Vidal, 16/01/2025). Le droit agit ici sur la demande remboursée, non sur le prix.
 :::
 
 ## À retenir
@@ -296,7 +296,7 @@ Le remboursement de certains médicaments peut être « subordonné au renseign
 - Quand le prix ne départage plus les acheteurs, il faut un rationnement hors prix : file d'attente, critère médical ou quota.
 - La règle de rationnement décide qui subit la pénurie : le critère de l'ANSM a protégé les patients déjà traités, au détriment des nouveaux.
 - Avec une offre rigide, libérer le prix ferait surtout monter le prix et changerait qui est servi ; à prix fixé, seul le déplacement d'une courbe referme la pénurie : une offre qui augmente (O → O′) ou une demande qui recule.
-- La santé n'est pas un marché ordinaire (Arrow, 1963) : le médecin prescrit, l'assurance paie une partie, la collectivité fixe des priorités.
+- Les soins médicaux ne sont pas un marché ordinaire (Arrow, 1963) : le médecin prescrit, l'assurance paie une partie, la collectivité fixe des priorités.
 - Pour Ozempic, le modèle du prix plafond a des limites : prix négocié avec un seul fabricant, offre mondiale, et une pénurie que l'État attribue à un choc de demande.
 :::
 
@@ -324,6 +324,7 @@ RTBF, *#Investigation* · « Pénurie d'Ozempic, un médicament contre le diab�
 
 **Autres sources citées**
 
+- *Vidal*, D. Paitraud, « Diabète : des dispositions transitoires concernant la délivrance des analogues du GLP-1 », 03/06/2025. [Lien](https://www.vidal.fr/actualites/31409-diabete-des-dispositions-transitoires-concernant-la-delivrance-des-analogues-du-glp-1.html)
 - *Vidal*, « Mounjaro et Wegovy coûteront “une centaine de millions d'euros” aux finances publiques en année pleine » (titre abrégé), 28/05/2026. [Lien](https://www.vidal.fr/actualites/37848-mounjaro-et-wegovy-couteront-une-centaine-de-millions-d-euros-aux-finances-publiques-en-annee-pleine-stephanie-rist.html)
 - *Caducée.net*, « Wegovy et Mounjaro remboursés : un tournant sous conditions pour l'obésité sévère », 29/05/2026. [Lien](https://www.caducee.net/actualite-medicale/16902/wegovy-et-mounjaro-rembourses-un-tournant-sous-conditions-pour-l-obesite-severe.html)
 - Test-Achats, « La pénurie d'Ozempic est principalement la faute de son fabricant Novo Nordisk », 14/11/2023. [Lien](https://www.test-achats.be/sante/maladies-et-medicaments/medicaments/presse/penurie-ozempic)

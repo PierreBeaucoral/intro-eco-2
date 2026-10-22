@@ -284,7 +284,7 @@ proche <- function(x, y, tol = 1e-6) abs(x - y) < tol
 stopifnot(
   proche(bilan_lt_cm4$p_eq, 1000), proche(bilan_lt_cm4$q_eq, 100),
   proche(bilan_ct_cm4$p_eq, 1000), proche(bilan_ct_cm4$q_eq, 100),
-  proche(100 * (1000 - marche_cm4$plafond) / 1000, 20)              # plafond 20 % sous P*
+  proche(100 * (bilan_lt_cm4$p_eq - marche_cm4$plafond) / bilan_lt_cm4$p_eq, 20)  # plafond 20 % sous P*
 )
 # Exemple 1 : long terme
 stopifnot(
@@ -324,5 +324,6 @@ stopifnot(
   nrow(taux_effort_cm4) == 8,
   proche(taux_effort("Secteur libre", 1), 42.3), proche(taux_effort("Secteur libre", 4), 21.6),
   proche(round(taux_effort("Secteur libre", 1) / taux_effort("Secteur libre", 4), 1), 2),
-  proche(taux_effort("Secteur social", 1), 30.3)
+  proche(taux_effort("Secteur social", 1), 30.3),
+  proche(taux_effort_ensemble_cm4[["libre"]], 29.6)                 # accroche : 29,6 %
 )

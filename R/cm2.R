@@ -360,9 +360,11 @@ stopifnot(
   proche(eq_a1$p * eq_a1$q, 1176),
   proche(var_pct(eq_a0$q, eq_a1$q), -16), proche(var_pct(eq_a0$p, eq_a1$p), 40),
   proche(var_pct(eq_a0$q, eq_a1$q) / var_pct(eq_a0$p, eq_a1$p), -0.4),
-  # élasticités au point de départ : demande -0,4, offre 1,6 ; règle 1,6 / (1,6 + 0,4) = 0,8
+  # élasticités au point de départ : demande -0,4, offre 1,6 ; règle Es / (Es + |e|) = 0,8,
+  # égale à la part payée par les acheteurs calculée sur l'équilibre
   proche(-marche_cm2$a_b * 10 / 100, -0.4), proche(marche_cm2$o_s * 10 / 100, 1.6),
-  proche(1.6 / (1.6 + 0.4), 0.8)
+  proche((marche_cm2$o_s * 10 / 100) / (marche_cm2$o_s * 10 / 100 + marche_cm2$a_b * 10 / 100),
+         part_acheteurs(eq_a0, eq_a1, marche_cm2$t))
 )
 # Exemple 2, marché B : (10 ; 100) -> acheteur 12,5 €, vendeur 7,5 €, Q = 60 ; 50/50 ; recette 300 M€
 stopifnot(
@@ -371,14 +373,17 @@ stopifnot(
   proche(part_acheteurs(eq_b0, eq_b1, marche_cm2$t), 0.5),
   proche(marche_cm2$t * eq_b1$q, 300),
   proche(-marche_cm2$b_b * 10 / 100, -1.6),
+  proche((marche_cm2$o_s * 10 / 100) / (marche_cm2$o_s * 10 / 100 + marche_cm2$b_b * 10 / 100),
+         part_acheteurs(eq_b0, eq_b1, marche_cm2$t)),   # règle Es / (Es + |e|) = 0,5
   proche(var_pct(eq_b0$q, eq_b1$q), -40), proche(var_pct(eq_b0$p, eq_b1$p), 25)
 )
-# Encadré addiction (valeurs fictives) : +20 % -> -6 % à court terme, -12 % à long terme
+# Figure de l'exemple 1 et passage court terme / long terme (valeurs fictives)
 stopifnot(
   # figure de l'exemple 1 : rectangle gagné 184, perdu 80, solde 104
   proche((ex1_cm2$p1 - ex1_cm2$p0) * ex1_cm2$q1_faible, 184),
   proche(ex1_cm2$p0 * (ex1_cm2$q0 - ex1_cm2$q1_faible), 80),
   proche((140 - 4 * ex1_cm2$p1), ex1_cm2$q1_faible),   # la demande tracée passe bien par (92 ; 12)
+  # court / long terme : +20 % -> -6 % la première année, -12 % ensuite
   proche(addiction_cm2$e_ct * 20, -6), proche(addiction_cm2$e_lt * 20, -12),
   proche(with(demande_par_point(addiction_cm2$e_ct), a - b * 12), 94),
   proche(with(demande_par_point(addiction_cm2$e_lt), a - b * 12), 88)
@@ -415,9 +420,7 @@ stopifnot(
 )
 # Faits cités dans la page (sources dans le texte)
 stopifnot(
-  proche(round(var_pct(32846, 30165), 1), -8.2),     # OFDT, ventes 2024 -> 2025
-  proche(-0.5 * 10, -5), proche(-0.3 * 10, -3),       # e entre -0,3 et -0,5 : +10 % -> -3 % à -5 %
-  proche(0.42 * 10, 4.2)                              # substitution vers le tabac à rouler (Hill)
+  proche(round(var_pct(32846, 30165), 1), -8.2)      # OFDT, ventes 2024 -> 2025
 )
 # Données : prix, quantités et dépense de tabac des ménages, 2000 -> 2025 (Insee ; Eurostat pour l'IPCH)
 # Prix x 4,6 (+359 %), quantités / 2,8 (-64 %), dépense +64 % en euros courants ;
