@@ -419,22 +419,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 4)
 1 h 09 – 1 h 13. Une partie de la perte des consommateurs va aux producteurs protégés (a), une partie à l'État (c) ; le reste (b et d) n'est récupéré par personne. b : production plus coûteuse que l'importation ; d : achats qui n'ont plus lieu. Question : quelle aire disparaîtrait si l'offre intérieure était verticale ? (b.) Transition : on chiffre.
 :::
 
-## Exemple chiffré : un droit de 10 € sur les tee-shirts
-
-Marché fictif : Q en millions de tee-shirts par an, P en euros.
-
-::: {.incremental}
-- Demande intérieure D : Q = 100 − P ; offre intérieure O : Q = P.
-- Prix mondial : Pw = 20 €. Droit : t = 10 € par tee-shirt, soit **50 %** du prix mondial.
-- Sans droit, au prix de 20 € : demande 80, production 20, importations **60**.
-- Avec droit, au prix de 30 € : demande 70, production 30, importations **40**.
-:::
-
-::: {.notes}
-1 h 13 – 1 h 16. Faire calculer chaque ligne avant le clic : 100 − 20 = 80, 80 − 20 = 60 ; 100 − 30 = 70, 70 − 30 = 40. Le tableau complet est dans la page. Question : de combien les importations baissent-elles, et pour quelles deux raisons ? Transition : sur le graphique.
-:::
-
-## Exemple chiffré (1/3) : les importations passent de 60 à 40 millions
+## Exemple chiffré (1/3) : un droit de 10 €, les importations passent de 60 à 40 millions
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -448,16 +433,16 @@ graphe_tarif(chiffres = TRUE, base_size = 24, etape = 2)
 
 ::: {.column width="40%"}
 ::: {.incremental}
-- Production : de 20 à **30** millions.
-- Consommation : de 80 à **70** millions.
+- D : Q = 100 − P ; O : Q = P (Q en millions, P en €).
+- Pw = 20 € ; t = 10 € (**50 %** de Pw) : le prix intérieur passe à **30 €**.
+- Production : de 20 à **30** millions ; consommation : de 80 à **70**.
 - Importations : de 60 à **40** millions.
-- Le prix intérieur monte de 20 € à 30 €.
 :::
 :::
 ::::
 
 ::: {.notes}
-1 h 16 – 1 h 20. Les 20 millions d'importations en moins se décomposent en 10 millions produits dans le pays et 10 millions d'achats abandonnés. Question : sur ces 20 millions, combien sont désormais produits dans le pays ? Transition : chiffrer les aires.
+1 h 13 – 1 h 20. Marché fictif : Q en millions de tee-shirts par an, P en euros. Faire calculer chaque ligne avant le clic : sans droit, au prix de 20 €, demande 100 − 20 = 80, production 20, importations 80 − 20 = 60 ; avec droit, au prix de 30 €, demande 100 − 30 = 70, production 30, importations 70 − 30 = 40. Le tableau complet est dans la page. Les 20 millions d'importations en moins se décomposent en 10 millions produits dans le pays et 10 millions d'achats abandonnés. Question : de combien les importations baissent-elles, et pour quelles deux raisons ? Sur ces 20 millions, combien sont désormais produits dans le pays ? Transition : chiffrer les aires.
 :::
 
 ## Exemple chiffré (2/3) : producteurs + 250 M€, État + 400 M€

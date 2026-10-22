@@ -676,18 +676,6 @@ graphe_court_long(base_size = 24)
 2 h 03 – 2 h 06. Trait fin, pas de tirets : la courbe ne s'est pas déplacée, c'est une autre demande, à un autre horizon. Transition : que montrent les données françaises ?
 :::
 
-## France, 2006-2025 : prix réel multiplié par 2,1, ventes divisées par 2,6
-
-::: {.incremental}
-- Prix réel du tabac (corrigé de l'inflation) **× 2,1** ; ventes de cigarettes des buralistes par adulte **÷ 2,6** (Hill, 2026, chapitre 4).
-- Effet pour moitié sur le **nombre de fumeurs** (surtout des adultes qui arrêtent), pour moitié sur la **quantité fumée** par chacun (OMS, 2012 ; Hill, 2026).
-- Réponse : oui, en partie. D'autres mesures ont joué (campagnes, interdiction de vente aux mineurs) : une **corrélation**, pas une expérience.
-:::
-
-::: {.notes}
-2 h 06 – 2 h 08. « Selon la plupart des experts » (Hill, 2026, § 4.3). Question : pourquoi une corrélation ne suffit-elle pas à prouver l'effet du prix ? Transition : les comptes nationaux de l'Insee.
-:::
-
 ## Tabac, 2000-2025 : prix multiplié par 4,6, quantités divisées par 2,8
 
 :::: {.columns}
@@ -701,17 +689,18 @@ graphe_conso_tabac(base_size = 24)
 :::
 
 ::: {.column width="40%"}
-- 2000-2025 : prix **× 4,6**, quantités **÷ 2,8**, dépense **+64 %** en euros courants.
+- Prix **× 4,6**, quantités **÷ 2,8**, dépense **+64 %** ; corrigé de l'inflation, prix réel **× 2,9**.
 
 ::: {.fragment}
 
-- Prix en général : +59 % (Eurostat, IPCH, février 2026). Prix réel du tabac **× 2,9** ; dépense réelle presque stable (**+3 %**).
+- Effet pour moitié sur le **nombre de fumeurs**, pour moitié sur la **quantité fumée** (OMS, 2012 ; Hill, 2026).
+- Oui, en partie : d'autres mesures ont joué, c'est une **corrélation**, pas une expérience.
 :::
 :::
 ::::
 
 ::: {.notes}
-2 h 08 – 2 h 11. La dépense est le prix multiplié par la quantité : P × Q sur une même figure. En 2020, frontières fermées, les quantités ne baissent presque pas (−0,2 %). Les quantités baissent presque autant que le prix réel monte : à long terme, la réaction est bien plus forte que d'une année sur l'autre, mais elle mêle l'effet du prix et celui des autres mesures. Transition : ventes ou consommation ?
+2 h 06 – 2 h 11. Mêmes faits chez Hill (2026, chapitre 4), sur 2006-2025 : prix réel du tabac (corrigé de l'inflation) × 2,1, ventes de cigarettes des buralistes par adulte ÷ 2,6. Prix en général : +59 % sur 2000-2025 (Eurostat, IPCH, février 2026), d'où le prix réel × 2,9 ; dépense réelle presque stable (+3 %). Moitié-moitié « selon la plupart des experts » (Hill, 2026, § 4.3) ; ceux qui arrêtent sont surtout des adultes. Autres mesures : campagnes, interdiction de vente aux mineurs. Question : pourquoi une corrélation ne suffit-elle pas à prouver l'effet du prix ? La dépense est le prix multiplié par la quantité : P × Q sur une même figure. En 2020, frontières fermées, les quantités ne baissent presque pas (−0,2 %). Les quantités baissent presque autant que le prix réel monte : à long terme, la réaction est bien plus forte que d'une année sur l'autre, mais elle mêle l'effet du prix et celui des autres mesures. Transition : ventes ou consommation ?
 :::
 
 ## Fuites : les ventes des buralistes ne sont pas la consommation

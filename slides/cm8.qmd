@@ -304,27 +304,16 @@ graphe_multiplicateur(base_size = 24)
 - Le total vaut k × 10, avec k = 1 / (1 − 0,5) = 2.
 - La coupe de 10 réduit le PIB de **20**.
 :::
+
+::: {.fragment}
+
+- Avec c = 0,8 : k = 1 / 0,2 = 5 ; la même coupe réduit le PIB de **50 Md€**.
+:::
 :::
 ::::
 
 ::: {.notes}
-0 h 40 – 0 h 43. Graphique théorique. Lecture : les barres de la vague 4 à la vague 6 valent 18,8, 19,4 et 19,7. La ligne en tirets est une limite, pas une vague. Question : avec c = 0,8, quelle limite les barres approcheraient-elles ? (50 Md€.) Transition : on refait le calcul complet, étape par étape.
-:::
-
-## Exemple chiffré : une coupe de 10 Md€, vague après vague
-
-Pays fictif : l'État supprime 10 Md€ de dépenses ; c = 0,5.
-
-::: {.incremental}
-1. Première vague : le PIB baisse de **10**.
-2. Deuxième vague : 0,5 × 10 = **5** de consommation en moins.
-3. Troisième vague : 0,5 × 5 = **2,5** de moins ; chaque terme est la moitié du précédent.
-4. Total : 10 × 1 / (1 − 0,5) = 10 × 2 = **20 Md€** ; k = 2.
-5. Avec c = 0,8 : k = 1 / 0,2 = 5 ; la même coupe réduirait le PIB de **50 Md€**.
-:::
-
-::: {.notes}
-0 h 43 – 0 h 50. Faire trouver chaque étape avant le clic. Exercice à main levée sur l'étape 5 : et si c = 0,8 ? Réponse : 5, donc 50 Md€. Plus les ménages dépensent leur revenu, plus l'effet est fort. Transition : une erreur fréquente sur le sens du multiplicateur.
+0 h 40 – 0 h 50. Graphique théorique. Lecture : les barres de la vague 4 à la vague 6 valent 18,8, 19,4 et 19,7. La ligne en tirets est une limite, pas une vague. Récapituler le calcul complet : 10, puis 0,5 × 10 = 5, puis 0,5 × 5 = 2,5, total 10 × 1 / (1 − 0,5) = 20 Md€, k = 2 ; faire trouver chaque étape avant le clic. Exercice à main levée avant le dernier clic : avec c = 0,8, quelle limite les barres approcheraient-elles ? Réponse : k = 5, donc 50 Md€. Plus les ménages dépensent leur revenu, plus l'effet est fort. Transition : une erreur fréquente sur le sens du multiplicateur.
 :::
 
 ## Point d'attention : le multiplicateur joue dans les deux sens
@@ -829,7 +818,7 @@ graphe_chomage_groupes(base_size = 24) +
 ::::
 
 ::: {.notes}
-2 h 17 – 2 h 20. Plus le segment gris est long, plus le chômage du groupe a baissé depuis 2013 ; un point bleu loin à droite signale un groupe encore touché. Les taux par diplôme viennent d'un autre tableau, dont le total diffère un peu (27,5 % en 2013, au lieu de 27,8 %). Question : quel groupe a connu la plus forte hausse, puis la plus forte décrue ? (Les 15-24 ans.) Transition : détail par génération et par revenu.
+2 h 17 – 2 h 22. Source dans la légende du graphique : Eurostat (une_rt_a, lfsa_urgaed, lfst_r_lfu3rt). Plus le segment gris est long, plus le chômage du groupe a baissé depuis 2013 ; un point bleu loin à droite signale un groupe encore touché. Les taux par diplôme viennent d'un autre tableau, dont le total diffère un peu (27,5 % en 2013, au lieu de 27,8 %). Point de départ en 2008 : moins diplômés 7,5 %, supérieur 6,4 % ; Attique 6,7 %, Égée méridionale 8,4 %, Macédoine-Occidentale 12,5 %. Le chômage des femmes était déjà plus élevé avant la crise ; l'écart demeure (31,7 % contre 24,8 % en 2013 ; 11,2 % contre 7,0 % en 2025). Attique = Athènes ; Égée méridionale = îles touristiques ; Macédoine-Occidentale = nord-ouest. Toutes les régions plongent, inégalement. Question : quel groupe a connu la plus forte hausse, puis la plus forte décrue ? (Les 15-24 ans.) Quelle région reste la plus touchée en 2025 ? (Macédoine-Occidentale, 15,3 %.) Transition : détail par génération et par revenu.
 :::
 
 ## Répartition par génération et par revenu : chômage des jeunes et pauvreté
@@ -840,7 +829,7 @@ graphe_chomage_groupes(base_size = 24) +
 :::
 
 ::: {.notes}
-2 h 20 – 2 h 22. Beaucoup de jeunes partent, et la population vieillit (DG Trésor). Pauvreté : 27,5 % en 2025 selon une définition plus récente (ilc_peps01n), qui ne se compare pas directement. Dix ans après le référendum de juillet 2015, Le Temps (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ». Question : pourquoi ne pas comparer 2014 et 2025 pour la pauvreté ? (Définitions différentes.) Transition : les départs, chiffrés.
+2 h 22 – 2 h 24. Beaucoup de jeunes partent, et la population vieillit (DG Trésor). Pauvreté : 27,5 % en 2025 selon une définition plus récente (ilc_peps01n), qui ne se compare pas directement. Dix ans après le référendum de juillet 2015, Le Temps (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ». Question : pourquoi ne pas comparer 2014 et 2025 pour la pauvreté ? (Définitions différentes.) Transition : les départs, chiffrés.
 :::
 
 ## Solde migratoire : négatif de 2010 à 2017, au plus bas en 2013
@@ -869,21 +858,7 @@ graphe_soldes_demographiques(base_size = 24)
 [Source : Eurostat (demo_gind), téléchargé le 22/10/2026 ; 2025 provisoire.]{.wp-source}
 
 ::: {.notes}
-2 h 22 – 2 h 25. Solde migratoire : arrivées moins départs ; solde naturel : naissances moins décès. Le solde migratoire est calculé par différence et absorbe les corrections des recensements de 2011 et 2021 : ne pas commenter 2021. La citation de la DG Trésor (« largement négatif » depuis 2010) vaut pour la crise, pas pour les années récentes. Question : quel lien faire avec le chômage des 15-24 ans, à 59,2 % en 2013 ? Transition : diplôme, genre, territoire.
-:::
-
-## Répartition par diplôme, genre et territoire : des écarts qui demeurent
-
-::: {.incremental}
-- **Diplôme** : chômage des moins diplômés de 7,5 % en 2008 à **29,8 %** en 2013, contre 6,4 % à 20,4 % pour le supérieur.
-- **Genre** : femmes 31,7 % en 2013, hommes 24,8 % ; en 2025, 11,2 % contre 7,0 %.
-- **Territoire** : Attique de 6,7 % à 28,7 % ; Égée méridionale de 8,4 % à 21,3 % ; Macédoine-Occidentale de 12,5 % à **31,6 %**, encore 15,3 % en 2025.
-:::
-
-[Source : Eurostat (lfsa_urgaed, une_rt_a, lfst_r_lfu3rt), séries téléchargées le 21/10/2026.]{.wp-source}
-
-::: {.notes}
-2 h 25 – 2 h 27. Source : Eurostat (lfsa_urgaed, une_rt_a, lfst_r_lfu3rt), séries téléchargées le 21/10/2026. Le chômage des femmes était déjà plus élevé avant la crise ; l'écart demeure. Attique = Athènes ; Égée méridionale = îles touristiques ; Macédoine-Occidentale = nord-ouest. Toutes les régions plongent, inégalement. Question : quelle région reste la plus touchée en 2025 ? (Macédoine-Occidentale, 15,3 %.) Transition : le coût social se voit aussi dans la rue.
+2 h 24 – 2 h 27. Solde migratoire : arrivées moins départs ; solde naturel : naissances moins décès. Le solde migratoire est calculé par différence et absorbe les corrections des recensements de 2011 et 2021 : ne pas commenter 2021. La citation de la DG Trésor (« largement négatif » depuis 2010) vaut pour la crise, pas pour les années récentes. Question : quel lien faire avec le chômage des 15-24 ans, à 59,2 % en 2013 ? Transition : le coût social se voit aussi dans la rue.
 :::
 
 ## Athènes, 21 juin 2015 : le coût politique et social de l'austérité

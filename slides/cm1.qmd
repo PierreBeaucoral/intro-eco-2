@@ -693,19 +693,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 2 h 15 – 2 h 17. En 2026, la perte d'accise l'emporte. Le CM 2 dira qui paie vraiment un impôt. Question : l'État s'enrichit-il de la crise ? (Non, au total : −383 M€.) Transition : du côté des ménages, qui paie le plus ?
 :::
 
-## Effets de répartition : les ménages captifs de la voiture paient le plus
-
-::: {.incremental}
-- **Par revenu** : ménages consacrant au carburant plus d'un mois de revenu par an : 10,6 % en 2021, 22,4 % aux prix du printemps 2026 (Insee Première n° 2125).
-- **Par territoire** : près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains (*ibid.*).
-- **Par usage** : e = −0,32 pour le quart qui consomme le plus, −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86).
-:::
-
-::: {.notes}
-2 h 17 – 2 h 19. Estimation à revenus et kilomètres inchangés. Les ruraux ne sont pas moins sensibles au prix, ils consomment plus de litres. Génération : aucune source consultée ne chiffre l'effet par âge. Question : qui, dans l'amphi, ne peut pas se passer de sa voiture ? Transition : les chiffres de l'Insee, territoire par territoire.
-:::
-
-## Ménages très exposés : près de deux fois plus nombreux à la campagne
+## Ménages captifs de la voiture : près de deux fois plus exposés à la campagne
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -718,13 +706,13 @@ graphe_menages_exposes(base_size = 24)
 :::
 
 ::: {.column width="40%"}
-- Ménages motorisés qui consacrent au carburant plus d'un mois de revenu par an.
-- Pôles urbains : 8,4 % → 17,4 %.
-- Rural non périurbain : 16,7 % → 32,9 %.
+- Ménages motorisés qui consacrent au carburant plus d'un mois de revenu par an, de 2021 au printemps 2026 :
+- Ensemble : 10,6 % → 22,4 %.
+- Pôles urbains : 8,4 % → 17,4 % ; rural non périurbain : 16,7 % → 32,9 %.
 
 ::: {.fragment}
 
-- Simulation : revenus et kilomètres de 2021, litre à 2,0 € (essence) et 2,2 € (gazole).
+- Près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains.
 :::
 :::
 ::::
@@ -732,7 +720,7 @@ graphe_menages_exposes(base_size = 24)
 [Source : Insee Première n° 2125, 08/09/2026, tableau complémentaire 3.]{.wp-source}
 
 ::: {.notes}
-2 h 19 – 2 h 22. Point gris : prix de 2021 ; point rouge : 2,0 € et 2,2 € le litre, niveaux que l'Insee présente comme ceux du printemps 2026. Ensemble : 10,6 % puis 22,4 %. La part double environ partout ; c'est le niveau qui est près de deux fois plus haut à la campagne. Question : pourquoi les ruraux sont-ils plus exposés, s'ils ne sont pas moins sensibles au prix ? (Ils consomment plus de litres.) Transition : qui réagit le moins au prix ?
+2 h 17 – 2 h 22. Point gris : prix de 2021 ; point rouge : 2,0 € et 2,2 € le litre, niveaux que l'Insee présente comme ceux du printemps 2026. Simulation à revenus et kilomètres de 2021 inchangés, litre à 2,0 € (essence) et 2,2 € (gazole). La part double environ partout ; c'est le niveau qui est près de deux fois plus haut à la campagne. Les ruraux ne sont pas moins sensibles au prix, ils consomment plus de litres. Génération : aucune source consultée ne chiffre l'effet par âge. Par usage (diapo suivante) : e = −0,32 pour le quart qui consomme le plus, −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86). Question : qui, dans l'amphi, ne peut pas se passer de sa voiture ? Puis : pourquoi les ruraux sont-ils plus exposés, s'ils ne sont pas moins sensibles au prix ? (Ils consomment plus de litres.) Transition : qui réagit le moins au prix ?
 :::
 
 ## Élasticité selon l'usage : les gros rouleurs réagissent trois fois moins
