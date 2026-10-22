@@ -343,6 +343,178 @@ graphe_carburant <- function(base_size = 16, etape = 2) {
 }
 
 # ---------------------------------------------------------------------------
+# 4 ter. Graphique de données : décès prématurés attribuables aux particules fines
+#    Eurostat, sdg_11_52 (estimations de l'Agence européenne pour l'environnement),
+#    France, nombre de décès, 2005 et 2007-2023 (pas d'estimation pour 2006).
+#    Toutes sources de PM2,5 confondues, pas seulement les voitures.
+#    Fichier et provenance : data/cm5/eurostat_deces_pm25_fr_2005_2023.csv et data/cm5/SOURCES.md.
+# ---------------------------------------------------------------------------
+deces_pm25_cm5 <- read.csv(here::here("data/cm5/eurostat_deces_pm25_fr_2005_2023.csv"))
+
+#' Entier au format français, espace des milliers (14 741)
+fr_entier <- function(x) format(x, big.mark = " ", trim = TRUE)
+
+#' Barres annuelles des décès prématurés, en milliers ; la dernière année en rouge,
+#' la première et la dernière chiffrées.
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_deces_pm25 <- function(base_size = 16) {
+  d <- deces_pm25_cm5
+  d$couleur <- ifelse(d$annee == max(d$annee), couleurs_eco[["alerte"]], couleurs_eco[["neutre"]])
+  ext <- d[d$annee %in% range(d$annee), ]
+  ggplot(d, aes(annee, deces / 1000)) +
+    geom_col(aes(fill = couleur), width = 0.75) +
+    geom_text(data = ext, aes(label = fr_entier(deces), colour = couleur), vjust = -0.5,
+              family = police_cours, size = base_size / 3.8) +
+    scale_fill_identity() +
+    scale_colour_identity() +
+    scale_x_continuous(breaks = seq(2005, 2023, 3)) +
+    scale_y_continuous(limits = c(0, 45), breaks = seq(0, 40, 10), expand = c(0, 0)) +
+    labs(x = "Année (pas d'estimation pour 2006)", y = "Décès prématurés (milliers)",
+         caption = "Source : Eurostat, sdg_11_52 (estimations de l'AEE)\n(consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 4 quater. Graphique de données : émissions des voitures en France depuis 1990
+#    Eurostat, env_air_emis (inventaire national transmis par la France, Citepa),
+#    voitures particulières, émissions à l'échappement (NFR 1A3bi), en tonnes,
+#    oxydes d'azote (NOx) et particules fines (PM2,5), 1990-2024 ; indice 100 en 1990.
+#    L'usure des pneus, freins et routes (NFR 1A3bvi) n'est pas comprise.
+#    Fichier et provenance : data/cm5/eurostat_emissions_voitures_fr_1990_2024.csv et data/cm5/SOURCES.md.
+# ---------------------------------------------------------------------------
+emissions_cm5 <- read.csv(here::here("data/cm5/eurostat_emissions_voitures_fr_1990_2024.csv"))
+
+#' Variation (%) des émissions d'un polluant ("NOX" ou "PM2_5") entre deux années
+var_emissions <- function(polluant, de, a) {
+  e <- emissions_cm5[emissions_cm5$polluant == polluant, ]
+  100 * (e$tonnes[e$annee == a] / e$tonnes[e$annee == de] - 1)
+}
+
+#' Deux courbes en indice 100 en 1990 (NOx en azur, PM2,5 en ambre), étiquetées
+#' en bout de trait ; ligne pointillée en 2019, annonce des ZFE.
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_emissions_voitures <- function(base_size = 16) {
+  noms <- c(NOX = "Oxydes d'azote", PM2_5 = "Particules fines")
+  e <- emissions_cm5
+  e$serie <- noms[e$polluant]
+  fin <- e[e$annee == max(e$annee), ]
+  fin$etiquette <- paste0(fin$serie, " : ", fr_num(fin$indice_1990))
+  fin$vj <- ifelse(fin$polluant == "NOX", 0, 1)            # NOx au-dessus, PM2,5 au-dessous (valeurs proches)
+  neutre <- couleurs_eco[["neutre"]]
+  ggplot(e, aes(annee, indice_1990, colour = serie)) +
+    geom_vline(xintercept = 2019, colour = neutre, linetype = "dotted") +
+    annotate("text", x = 2018.5, y = 118, hjust = 1, family = police_cours, size = base_size / 4,
+             colour = neutre, lineheight = 0.9, label = "2019 : annonce\ndes ZFE") +
+    geom_line(linewidth = 1.1) +
+    geom_text(data = fin, aes(label = etiquette, vjust = vj), hjust = 0, nudge_x = 0.6,
+              family = police_cours, size = base_size / 3.4) +
+    scale_colour_manual(values = setNames(unname(couleurs_eco[c("demande", "offre")]), unname(noms))) +
+    scale_x_continuous(breaks = seq(1990, 2020, 10), expand = expansion(add = c(1, 1))) +
+    scale_y_continuous(breaks = seq(0, 125, 25), limits = c(0, 125)) +
+    coord_cartesian(clip = "off") +                          # étiquettes dans la marge droite
+    labs(x = "Année", y = "Indice 100 en 1990",
+         caption = "Source : Eurostat, env_air_emis (inventaire de la France),\nvoitures, échappement (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.margin = margin(10, 10 * base_size, 8, 8),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 4 quinquies. Graphique de données : parc national de voitures par vignette Crit'Air
+#    SDES, parc de véhicules routiers au niveau communal (millésime 2026-06),
+#    voitures particulières, somme nationale faite à la préparation des données ;
+#    parc au 1er janvier 2011 à 2026 (2026 provisoire). Vignette attribuée
+#    rétrospectivement avant 2016. Champ national : ZFE comprises, pas un contrefactuel.
+#    Fichier et provenance : data/cm5/sdes_parc_critair_fr_2011_2026.csv et data/cm5/SOURCES.md.
+# ---------------------------------------------------------------------------
+parc_critair_cm5 <- read.csv(here::here("data/cm5/sdes_parc_critair_fr_2011_2026.csv"))
+
+#' Part (%) d'un groupe de vignettes ("E_1", "2", "3_plus") dans le parc d'une année
+part_critair <- function(g, a) parc_critair_cm5$part[parc_critair_cm5$groupe == g & parc_critair_cm5$annee == a]
+
+#' Trois courbes de parts du parc (électriques et Crit'Air 1 en azur, Crit'Air 2
+#' en gris, Crit'Air 3 à 5 et non classées en rouge), étiquetées en 2026.
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_parc_critair <- function(base_size = 16) {
+  noms <- c(E_1 = "Électriques\net Crit'Air 1", `2` = "Crit'Air 2",
+            `3_plus` = "Crit'Air 3, 4, 5\net non classées")
+  p <- parc_critair_cm5
+  p$serie <- noms[as.character(p$groupe)]
+  fin <- p[p$annee == max(p$annee), ]
+  fin$etiquette <- paste0(fin$serie, " : ", fr_num(fin$part), " %")
+  # écarte les étiquettes voisines (41,5 %, 34,2 % et 24,3 % sont proches)
+  fin$y_etiq <- fin$part + c(E_1 = 7, `2` = 0, `3_plus` = -5)[as.character(fin$groupe)] * base_size / 16
+  ggplot(p, aes(annee, part, colour = serie)) +
+    geom_line(linewidth = 1.1) +
+    geom_point(data = fin, size = base_size / 8) +
+    geom_text(data = fin, aes(y = y_etiq, label = etiquette), hjust = 0, nudge_x = 0.4 * base_size / 16, lineheight = 0.9,
+              family = police_cours, size = base_size / 3.4) +
+    scale_colour_manual(values = setNames(unname(couleurs_eco[c("demande", "neutre", "alerte")]), unname(noms))) +
+    scale_x_continuous(breaks = seq(2011, 2026, 5), expand = expansion(add = c(0.5, 0.5))) +
+    scale_y_continuous(breaks = seq(0, 100, 25), limits = c(0, 100), labels = function(x) paste0(x, " %")) +
+    coord_cartesian(clip = "off") +                          # étiquettes dans la marge droite
+    labs(x = "Parc au 1er janvier", y = "Part du parc",
+         caption = "Source : SDES, parc de véhicules routiers (millésime 2026-06),\nFrance ; 2026 provisoire (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.margin = margin(10, 10 * base_size, 8, 8),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 4 sexies. Graphique de données : prix hebdomadaires à la pompe en France
+#    Commission européenne, Weekly Oil Bulletin, feuille « Prices with taxes »,
+#    Euro-super 95 et gazole, en € par litre toutes taxes, du 07/01/2019 au 19/10/2026.
+#    Printemps 2026 : du 20 mars au 21 juin, soit les 13 semaines du 23/03 au 15/06.
+#    Fichier et provenance : data/cm5/wob_prix_carburants_fr_2019_2026.csv et data/cm5/SOURCES.md.
+# ---------------------------------------------------------------------------
+prix_carburants_cm5 <- read.csv(here::here("data/cm5/wob_prix_carburants_fr_2019_2026.csv"))
+prix_carburants_cm5$date <- as.Date(prix_carburants_cm5$date)
+printemps_cm5 <- as.Date(c("2026-03-20", "2026-06-21"))
+
+#' Prix moyen (€/l) d'un carburant ("sp95" ou "gazole") sur les semaines du printemps 2026
+prix_printemps <- function(carburant) {
+  d <- prix_carburants_cm5
+  mean(d[[carburant]][d$date >= printemps_cm5[1] & d$date <= printemps_cm5[2]])
+}
+
+#' Deux courbes hebdomadaires (gazole en azur, sans plomb 95 en ambre), étiquetées
+#' au dernier point ; bande grise sur le printemps 2026, avec les prix du scénario
+#' de l'Insee (Insee Première n° 2125) utilisés par graphe_carburant().
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_prix_carburants <- function(base_size = 16) {
+  d <- prix_carburants_cm5
+  long <- rbind(data.frame(date = d$date, prix = d$gazole, serie = "Gazole"),
+                data.frame(date = d$date, prix = d$sp95, serie = "Sans plomb 95"))
+  fin <- long[long$date == max(long$date), ]
+  sep <- if (base_size > 16) "\n" else " : "              # diapos : étiquette sur deux lignes
+  fin$etiquette <- paste0(fin$serie, sep, format(round(fin$prix, 2), decimal.mark = ",", nsmall = 2), " €")
+  fin$vj <- ifelse(fin$serie == "Gazole", 0, 1)            # gazole au-dessus, sans plomb au-dessous
+  neutre <- couleurs_eco[["neutre"]]
+  ggplot(long, aes(date, prix, colour = serie)) +
+    annotate("rect", xmin = printemps_cm5[1], xmax = printemps_cm5[2], ymin = -Inf, ymax = Inf,
+             fill = neutre, alpha = 0.15) +
+    annotate("text", x = printemps_cm5[1] - 20, y = 2.4, hjust = 1, family = police_cours,
+             size = base_size / 4.2, colour = neutre, lineheight = 0.9,
+             label = "printemps 2026 : scénario de l'Insee\n(2,0 € l'essence, 2,2 € le gazole)") +
+    geom_line(linewidth = 0.9) +
+    geom_text(data = fin, aes(label = etiquette, vjust = vj), hjust = 0, nudge_x = 40,
+              lineheight = 0.9, family = police_cours, size = base_size / 3.4) +
+    scale_colour_manual(values = c(Gazole = couleurs_eco[["demande"]], `Sans plomb 95` = couleurs_eco[["offre"]])) +
+    scale_x_date(date_breaks = if (base_size > 16) "2 years" else "1 year", date_labels = "%Y",
+                 expand = expansion(add = c(20, 30))) +
+    scale_y_continuous(labels = function(x) format(x, decimal.mark = ",", nsmall = 1),
+                       breaks = seq(1.2, 2.4, 0.2),
+                       limits = c(1.1, if (base_size > 16) 2.6 else 2.45)) +   # diapos : place pour l'étiquette du gazole
+    coord_cartesian(clip = "off") +
+    labs(x = "Semaine", y = "€ par litre, TTC",
+         caption = "Source : Commission européenne, Weekly Oil Bulletin,\nFrance ; dernier point : 19/10/2026 (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.margin = margin(10, 8.5 * base_size, 8, 8),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
 # 5. Vérifications : chaque chiffre du texte
 # ---------------------------------------------------------------------------
 proche <- function(x, y, tol = 1e-9) all(abs(x - y) < tol)
@@ -393,4 +565,27 @@ stopifnot(
   # dans chacun des sept types d'intercommunalité (de 1,97 en rural non périurbain à 2,18)
   with(carburant_cm5, all(part_exposes_prix_2026 / part_exposes_prix_2021 > 1.9 &
                           part_exposes_prix_2026 / part_exposes_prix_2021 < 2.2))
+)
+
+# Graphiques de données ajoutés le 22/10/2026 (sections 4 ter à 4 sexies)
+stopifnot(
+  # Eurostat, sdg_11_52 : 38 447 décès en 2005, 14 741 en 2023 ; pas de valeur pour 2006
+  deces_pm25_cm5$deces[deces_pm25_cm5$annee == 2005] == 38447,
+  deces_pm25_cm5$deces[deces_pm25_cm5$annee == 2023] == 14741,
+  !2006 %in% deces_pm25_cm5$annee,
+  # Eurostat, env_air_emis : de 1990 à 2024, NOx −80 % et PM2,5 −87 % ;
+  # déjà −71 % et −76 % en 2019, année de l'annonce des ZFE
+  proche(round(c(var_emissions("NOX", 1990, 2024), var_emissions("PM2_5", 1990, 2024))), c(-80, -87)),
+  proche(round(c(var_emissions("NOX", 1990, 2019), var_emissions("PM2_5", 1990, 2019))), c(-71, -76)),
+  # SDES : Crit'Air 3, 4, 5 et non classées 87,7 % (2011) puis 24,3 % (2026) ;
+  # électriques et Crit'Air 1 1,6 % puis 41,5 % ; parc 2026 : 39 947 297 voitures
+  proche(c(part_critair("3_plus", 2011), part_critair("3_plus", 2026)), c(87.7, 24.3)),
+  proche(c(part_critair("E_1", 2011), part_critair("E_1", 2026)), c(1.6, 41.5)),
+  unique(parc_critair_cm5$total[parc_critair_cm5$annee == 2026]) == 39947297,
+  # Weekly Oil Bulletin : printemps 2026 (13 semaines), 2,04 € le sans plomb 95, 2,14 € le gazole ;
+  # semaine du 19/10/2026 : 2,23 € et 2,35 €
+  sum(prix_carburants_cm5$date >= printemps_cm5[1] & prix_carburants_cm5$date <= printemps_cm5[2]) == 13,
+  proche(round(c(prix_printemps("sp95"), prix_printemps("gazole")), 2), c(2.04, 2.14)),
+  max(prix_carburants_cm5$date) == as.Date("2026-10-19"),
+  proche(round(unlist(prix_carburants_cm5[nrow(prix_carburants_cm5), c("sp95", "gazole")]), 2), c(2.23, 2.35))
 )

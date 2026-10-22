@@ -1,0 +1,23 @@
+"geo","pays","inflation","taux_depot","taux_reel"
+"MT","Malte",2.4,2.5,0.1
+"FI","Finlande",2.7,2.5,-0.2
+"LV","Lettonie",3,2.5,-0.5
+"NL","Pays-Bas",3,2.5,-0.5
+"SK","Slovaquie",3,2.5,-0.5
+"EE","Estonie",3.1,2.5,-0.6
+"DE","Allemagne",3.3,2.5,-0.8
+"FR","France",3.4,2.5,-0.9
+"AT","Autriche",3.6,2.5,-1.1
+"PT","Portugal",3.6,2.5,-1.1
+"SI","Slovénie",3.7,2.5,-1.2
+"EA","Zone euro",3.8,2.5,-1.3
+"IE","Irlande",3.8,2.5,-1.3
+"IT","Italie",4.2,2.5,-1.7
+"HR","Croatie",4.3,2.5,-1.8
+"BE","Belgique",4.5,2.5,-2
+"ES","Espagne",5,2.5,-2.5
+"EL","Grèce",5.1,2.5,-2.6
+"CY","Chypre",5.2,2.5,-2.7
+"LU","Luxembourg",5.2,2.5,-2.7
+"BG","Bulgarie",5.6,2.5,-3.1
+"LT","Lituanie",6.1,2.5,-3.6

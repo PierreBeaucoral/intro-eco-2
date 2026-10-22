@@ -30,7 +30,34 @@ source(here::here("R/cm9.R"))   # même fichier que la page de cours
 [Sources : Guimbard, CEPII, *The Conversation*, 22/07/2026 ; Trésor des États-Unis, *Monthly Treasury Statement*, téléchargé le 21/10/2026, calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
-0 h 00 – 0 h 05. Accueil. Le fait de départ est la décision américaine du 2 avril 2025 ; la hausse du droit moyen et des recettes en sont les conséquences. Les douanes encaissaient 7,9 Md\$ en octobre 2024 et 33,1 Md\$ en octobre 2025 ; l'exercice 2026 va d'octobre 2025 à septembre 2026 ; +57 % est un calcul de l'auteur. En février 2026, le droit moyen vaut trois fois son niveau de départ. Question à l'amphi : qui a suivi l'actualité sur les « taxes Trump » ? L'argent rentre : alors, qui paie ? Laisser proposer. Cette séance est la dernière du programme du CC2 ; elle n'a pas de TD et n'est évaluée que dans la partie cours. Transition : deux questions précises.
+0 h 00 – 0 h 05. Accueil. Le fait de départ est la décision américaine du 2 avril 2025 ; la hausse du droit moyen et des recettes en sont les conséquences. Les douanes encaissaient 7,9 Md\$ en octobre 2024 et 33,1 Md\$ en octobre 2025 ; l'exercice 2026 va d'octobre 2025 à septembre 2026 ; +57 % est un calcul de l'auteur. En février 2026, le droit moyen vaut trois fois son niveau de départ. Question à l'amphi : qui a suivi l'actualité sur les « taxes Trump » ? L'argent rentre : alors, qui paie ? Laisser proposer. Cette séance est la dernière du programme du CC2 ; elle n'a pas de TD et n'est évaluée que dans la partie cours. Transition : ce droit, mesuré sur un siècle.
+:::
+
+## Droit effectivement perçu : en 2025, le plus élevé depuis 1946
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Graphique en lignes, un point par année de 1929 à 2025 : droits de douane perçus en pourcentage des importations de biens des États-Unis. La courbe bleue culmine à 18,7 % en 1933, tombe à 9,7 % en 1946, puis descend vers 1,5 % dans les années 2000 ; elle est à 2,6 % en 2024 et bondit à 8,0 % en 2025, point rouge."
+graphe_droit_effectif(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- Droits perçus ÷ importations de biens : **2,6 %** en 2024, **8,0 %** en 2025.
+- Le plus haut depuis 1946 (9,7 %), loin du pic de 1933 (**18,7 %**).
+- Plus bas que le droit moyen (24,2 %) : les achats se détournent des produits taxés.
+:::
+:::
+::::
+
+[Source : BEA, comptes nationaux, via FRED, consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+
+::: {.notes}
+0 h 05 – 0 h 08. Une conséquence du 2 avril, vue sur un siècle. Lecture : le droit effectivement perçu triple en un an. Ce droit effectif n'est pas le droit moyen de Guimbard : il est plus bas parce que les achats se détournent des produits les plus taxés, que certains produits sont exemptés et que les droits sont versés avec retard ; l'écart entre les deux mesures est lui-même un effet du droit. Le pic de 1933 suit la loi Smoot-Hawley de 1930. Moyenne annuelle : elle lisse les variations à l'intérieur de 2025. Question à l'amphi : pourquoi le droit effectivement payé est-il plus bas que le droit affiché ? Transition : deux questions précises.
 :::
 
 ## Objectifs affichés, coûts réels : deux questions et deux outils
@@ -46,7 +73,7 @@ source(here::here("R/cm9.R"))   # même fichier que la page de cours
 - **Outils** : l'avantage comparatif (d'où viennent les gains) ; l'analyse en surplus (qui paie, qui gagne, ce qui est perdu).
 
 ::: {.notes}
-0 h 05 – 0 h 09. Les objectifs affichés : procurer des recettes à l'État, protéger une industrie naissante ou en difficulté, peser dans une négociation commerciale, réduire la dépendance envers un fournisseur étranger (sécurité économique, souveraineté), faire payer le carbone importé avec le mécanisme d'ajustement carbone aux frontières (MACF) européen. On confronte ces objectifs à ce que les droits coûtent, et à qui. Savoir si un objectif vaut ce qu'il coûte relève d'un jugement : ce sera la controverse, sans trancher. Question : quel objectif vous paraît le plus convaincant ? Transition : cinq notions nécessaires.
+0 h 08 – 0 h 11. Les objectifs affichés : procurer des recettes à l'État, protéger une industrie naissante ou en difficulté, peser dans une négociation commerciale, réduire la dépendance envers un fournisseur étranger (sécurité économique, souveraineté), faire payer le carbone importé avec le mécanisme d'ajustement carbone aux frontières (MACF) européen. On confronte ces objectifs à ce que les droits coûtent, et à qui. Savoir si un objectif vaut ce qu'il coûte relève d'un jugement : ce sera la controverse, sans trancher. Question : quel objectif vous paraît le plus convaincant ? Transition : cinq notions nécessaires.
 :::
 
 ## Rappel : cinq notions nécessaires pour la séance
@@ -60,7 +87,7 @@ source(here::here("R/cm9.R"))   # même fichier que la page de cours
 :::
 
 ::: {.notes}
-0 h 09 – 0 h 14. Rappel court, dans les mots de la page. Coût d'opportunité : une heure passée à produire du blé est une heure qui ne produit pas de vêtements. Surplus : aires entre les courbes et la droite de prix. Perte sèche : échanges qui n'ont plus lieu, ou production plus coûteuse que l'importation. Incidence : tout dépend de la réaction des prix et des quantités. Importations : achats de biens à l'étranger ; exportations : ventes à l'étranger. Question : « Qui supporte une taxe sur l'essence ? » Transition : d'où viennent les gains de l'échange.
+0 h 11 – 0 h 15. Rappel court, dans les mots de la page. Coût d'opportunité : une heure passée à produire du blé est une heure qui ne produit pas de vêtements. Surplus : aires entre les courbes et la droite de prix. Perte sèche : échanges qui n'ont plus lieu, ou production plus coûteuse que l'importation. Incidence : tout dépend de la réaction des prix et des quantités. Importations : achats de biens à l'étranger ; exportations : ventes à l'étranger. Question : « Qui supporte une taxe sur l'essence ? » Transition : d'où viennent les gains de l'échange.
 :::
 
 ## Ricardo (1817) : l'échange enrichit même le pays le moins productif
@@ -79,7 +106,7 @@ source(here::here("R/cm9.R"))   # même fichier que la page de cours
 Ce qui compte n'est pas la productivité comparée des pays, mais le **coût d'un bien mesuré en l'autre bien**, à l'intérieur de chaque pays.
 
 ::: {.notes}
-0 h 14 – 0 h 18. Ricardo écrit à Londres, chez John Murray, en 1817. L'idée choque l'intuition : un pays moins productif partout aurait quelque chose à gagner. Question à l'amphi : un pays moins productif en tout a-t-il intérêt à commercer ? Faire voter avant le clic. Transition : deux notions à distinguer.
+0 h 15 – 0 h 18. Ricardo écrit à Londres, chez John Murray, en 1817. L'idée choque l'intuition : un pays moins productif partout aurait quelque chose à gagner. Question à l'amphi : un pays moins productif en tout a-t-il intérêt à commercer ? Faire voter avant le clic. Transition : deux notions à distinguer.
 :::
 
 ## Avantage absolu et avantage comparatif : définitions
@@ -95,7 +122,7 @@ Un pays a un **avantage absolu** dans un bien s'il le produit avec moins de trav
 - Il a toujours un avantage comparatif dès que ses coûts d'opportunité diffèrent de ceux de son partenaire.
 
 ::: {.notes}
-0 h 18 – 0 h 22. Définition mot pour mot. Insister : l'avantage absolu compare des heures de travail entre pays ; l'avantage comparatif compare, à l'intérieur de chaque pays, ce qu'il faut sacrifier d'un bien pour produire l'autre. Question : un pays peut-il avoir un avantage comparatif dans les deux biens ? (Non : s'il renonce à moins de blé pour les vêtements, il renonce à plus de vêtements pour le blé.) Transition : une image tirée du monde du droit.
+0 h 18 – 0 h 21. Définition mot pour mot. Insister : l'avantage absolu compare des heures de travail entre pays ; l'avantage comparatif compare, à l'intérieur de chaque pays, ce qu'il faut sacrifier d'un bien pour produire l'autre. Question : un pays peut-il avoir un avantage comparatif dans les deux biens ? (Non : s'il renonce à moins de blé pour les vêtements, il renonce à plus de vêtements pour le blé.) Transition : une image tirée du monde du droit.
 :::
 
 ## L'avocate et son assistant : les écarts de coûts d'opportunité
@@ -111,7 +138,7 @@ Un pays a un **avantage absolu** dans un bien s'il le produit avec moins de trav
 - Le gain de l'échange vient des **écarts de coûts d'opportunité**, pas des écarts de productivité.
 
 ::: {.notes}
-0 h 22 – 0 h 25. Image utile pour les étudiants de Droit. Question : quel est le coût d'opportunité d'une heure de frappe pour l'avocate ? (Une heure de plaidoirie.) Et pour l'assistant ? Transition : le même raisonnement, chiffré, entre deux pays.
+0 h 21 – 0 h 24. Image utile pour les étudiants de Droit. Question : quel est le coût d'opportunité d'une heure de frappe pour l'avocate ? (Une heure de plaidoirie.) Et pour l'assistant ? Transition : le même raisonnement, chiffré, entre deux pays.
 :::
 
 ## Exemple chiffré : deux pays, deux biens, un avantage comparatif
@@ -128,7 +155,7 @@ Un pays a un **avantage absolu** dans un bien s'il le produit avec moins de trav
 :::
 
 ::: {.notes}
-0 h 25 – 0 h 30. Pays fictifs ; le travail est le seul facteur. Faire calculer les étudiants avant chaque clic. Dans A, un lot de vêtements prend 4 h, le temps de produire 2 tonnes de blé ; dans B, il prend 6 h, le temps de produire 0,5 tonne. Les vêtements coûtent moins de blé dans B. Question : quel est le coût d'opportunité d'une tonne de blé dans B ? (2 lots.) Transition : on représente ce que chaque pays peut produire seul.
+0 h 24 – 0 h 28. Pays fictifs ; le travail est le seul facteur. Faire calculer les étudiants avant chaque clic. Dans A, un lot de vêtements prend 4 h, le temps de produire 2 tonnes de blé ; dans B, il prend 6 h, le temps de produire 0,5 tonne. Les vêtements coûtent moins de blé dans B. Question : quel est le coût d'opportunité d'une tonne de blé dans B ? (2 lots.) Transition : on représente ce que chaque pays peut produire seul.
 :::
 
 ## Gains de l'échange (1/3) : frontières de production de A et de B
@@ -146,7 +173,7 @@ graphe_ricardo(base_size = 24, etape = 1)
 Chaque droite est la **frontière de production** : tout ce qu'un pays peut produire seul avec ses heures. A : 60 t de blé ou 30 lots ; B : 20 t ou 40 lots.
 
 ::: {.notes}
-0 h 30 – 0 h 33. A : 120 ÷ 2 = 60 t s'il ne fait que du blé, 120 ÷ 4 = 30 lots s'il ne fait que des vêtements. B : 240 ÷ 12 = 20 t, ou 240 ÷ 6 = 40 lots. Question : où lit-on le coût d'opportunité ? (A sacrifie 60 t pour 30 lots : 2 t par lot ; B sacrifie 20 t pour 40 lots : 0,5 t par lot.) Transition : sans échange, où se placent-ils ?
+0 h 28 – 0 h 31. A : 120 ÷ 2 = 60 t s'il ne fait que du blé, 120 ÷ 4 = 30 lots s'il ne fait que des vêtements. B : 240 ÷ 12 = 20 t, ou 240 ÷ 6 = 40 lots. Question : où lit-on le coût d'opportunité ? (A sacrifie 60 t pour 30 lots : 2 t par lot ; B sacrifie 20 t pour 40 lots : 0,5 t par lot.) Transition : sans échange, où se placent-ils ?
 :::
 
 ## Gains de l'échange (2/3) : en autarcie, 40 tonnes et 35 lots
@@ -164,7 +191,7 @@ graphe_ricardo(base_size = 24, etape = 2)
 Chaque pays consacre la moitié de ses heures à chaque bien. A : 30 t et 15 lots ; B : 10 t et 20 lots. À deux : **40 t et 35 lots**.
 
 ::: {.notes}
-0 h 33 – 0 h 36. A : 60 ÷ 2 = 30 t et 60 ÷ 4 = 15 lots ; B : 120 ÷ 12 = 10 t et 120 ÷ 6 = 20 lots. Le cercle vide est sur la frontière : chaque pays consomme ce qu'il produit. Question : peut-on faire mieux avec les mêmes heures ? Transition : la spécialisation.
+0 h 31 – 0 h 34. A : 60 ÷ 2 = 30 t et 60 ÷ 4 = 15 lots ; B : 120 ÷ 12 = 10 t et 120 ÷ 6 = 20 lots. Le cercle vide est sur la frontière : chaque pays consomme ce qu'il produit. Question : peut-on faire mieux avec les mêmes heures ? Transition : la spécialisation.
 :::
 
 ## Spécialisation : plus des deux biens avec les mêmes heures
@@ -176,7 +203,7 @@ Chaque pays consacre la moitié de ses heures à chaque bien. A : 30 t et 15 lot
 :::
 
 ::: {.notes}
-0 h 36 – 0 h 39. Faire trouver 60 et 40 avant le clic. Le gain total, +20 t et +5 lots, vient seulement de ce que chacun produit le bien où son coût d'opportunité est le plus faible. Question : à quel prix A et B doivent-ils échanger pour que les deux y gagnent ? Transition : l'échange, sur le graphique.
+0 h 34 – 0 h 37. Faire trouver 60 et 40 avant le clic. Le gain total, +20 t et +5 lots, vient seulement de ce que chacun produit le bien où son coût d'opportunité est le plus faible. Question : à quel prix A et B doivent-ils échanger pour que les deux y gagnent ? Transition : l'échange, sur le graphique.
 :::
 
 ## Gains de l'échange (3/3) : chaque pays consomme au-delà de sa frontière
@@ -194,7 +221,7 @@ graphe_ricardo(base_size = 24, etape = 3)
 A vend 20 t de blé à B contre 20 lots. A consomme 40 t et 20 lots (au lieu de 30 et 15) ; B, 20 t et 20 lots (au lieu de 10 et 20).
 
 ::: {.notes}
-0 h 39 – 0 h 43. Point bleu : la consommation quand A ne fait que du blé, B que des vêtements, et qu'ils échangent 20 tonnes contre 20 lots. A garde 60 − 20 = 40 t ; B garde 40 − 20 = 20 lots. Lecture : avec l'échange, chaque pays consomme au-delà de ce qu'il pourrait produire seul. Question : qui gagne le plus ? Transition : pourquoi ce prix d'échange convient aux deux.
+0 h 37 – 0 h 41. Point bleu : la consommation quand A ne fait que du blé, B que des vêtements, et qu'ils échangent 20 tonnes contre 20 lots. A garde 60 − 20 = 40 t ; B garde 40 − 20 = 20 lots. Lecture : avec l'échange, chaque pays consomme au-delà de ce qu'il pourrait produire seul. Question : qui gagne le plus ? Transition : pourquoi ce prix d'échange convient aux deux.
 :::
 
 ## Le prix d'échange se situe entre les deux coûts d'opportunité
@@ -206,7 +233,7 @@ A vend 20 t de blé à B contre 20 lots. A consomme 40 t et 20 lots (au lieu de 
 :::
 
 ::: {.notes}
-0 h 43 – 0 h 46. Dans B, une tonne de blé coûte 12 h, le temps de produire 2 lots. Question : et si le prix était de 3 t de blé par lot ? (A n'aurait plus intérêt à acheter : il produit un lot pour 2 t.) Transition : une objection fréquente.
+0 h 41 – 0 h 44. Dans B, une tonne de blé coûte 12 h, le temps de produire 2 lots. Question : et si le prix était de 3 t de blé par lot ? (A n'aurait plus intérêt à acheter : il produit un lot pour 2 t.) Transition : une objection fréquente.
 :::
 
 ## Point d'attention : moins productif partout, et pourtant gagnant
@@ -221,7 +248,7 @@ A vend 20 t de blé à B contre 20 lots. A consomme 40 t et 20 lots (au lieu de 
 - Sa faible productivité se paie dans ses **salaires**, plus bas, pas dans l'absence d'échange.
 
 ::: {.notes}
-0 h 46 – 0 h 49. Sondage à main levée avant le clic : « B a-t-il intérêt à échanger ? » Transition : Ricardo dit que le pays gagne ; tous ses habitants gagnent-ils ?
+0 h 44 – 0 h 47. Sondage à main levée avant le clic : « B a-t-il intérêt à échanger ? » Transition : Ricardo dit que le pays gagne ; tous ses habitants gagnent-ils ?
 :::
 
 ## Heckscher (1919) et Ohlin (1933) : gagnants et perdants dans chaque pays
@@ -245,7 +272,7 @@ A vend 20 t de blé à B contre 20 lots. A consomme 40 t et 20 lots (au lieu de 
 **Stolper et Samuelson** (1941) : l'ouverture enrichit les détenteurs du facteur abondant et appauvrit ceux du facteur rare.
 
 ::: {.notes}
-0 h 49 – 0 h 54. Heckscher, « Utrikeshandelns verkan på inkomstfördelningen », *Ekonomisk Tidskrift* ; Ohlin, *Interregional and International Trade*, Harvard University Press. Stolper et Samuelson, « Protection and Real Wages », 1941, en tirent la conséquence. Question : quel est le facteur abondant de la France ? Le facteur rare ? Transition : ce que cela change au message de Ricardo.
+0 h 47 – 0 h 51. Heckscher, « Utrikeshandelns verkan på inkomstfördelningen », *Ekonomisk Tidskrift* ; Ohlin, *Interregional and International Trade*, Harvard University Press. Stolper et Samuelson, « Protection and Real Wages », 1941, en tirent la conséquence. Question : quel est le facteur abondant de la France ? Le facteur rare ? Transition : ce que cela change au message de Ricardo.
 :::
 
 ## Le pays gagne à l'ouverture, pas tous ses habitants
@@ -258,7 +285,7 @@ A vend 20 t de blé à B contre 20 lots. A consomme 40 t et 20 lots (au lieu de 
 :::
 
 ::: {.notes}
-0 h 54 – 0 h 57. Ce point prépare les effets de répartition : les perdants de l'ouverture sont concentrés, donc audibles. Question à l'amphi : qui sont les perdants de l'ouverture dans un pays comme la France ? Transition : on passe à l'outil qui mesure ces déplacements, le droit de douane.
+0 h 51 – 0 h 54. Ce point prépare les effets de répartition : les perdants de l'ouverture sont concentrés, donc audibles. Question à l'amphi : qui sont les perdants de l'ouverture dans un pays comme la France ? Transition : on passe à l'outil qui mesure ces déplacements, le droit de douane.
 :::
 
 ## Droit de douane : une taxe sur un bien importé
@@ -273,7 +300,7 @@ Un **droit de douane** (ou tarif douanier) est une taxe prélevée sur un bien i
 Le droit **NPF** (« nation la plus favorisée ») est le droit de base qu'un membre de l'Organisation mondiale du commerce (OMC) applique à tous ses partenaires, sauf accord particulier.
 
 ::: {.notes}
-0 h 57 – 1 h 01. Définition mot pour mot, en deux temps. Les droits américains de 2025 sont surtout ad valorem ; l'exemple chiffré utilisera un droit spécifique, plus simple à dessiner. Question : un droit de 10 € par tee-shirt est-il ad valorem ou spécifique ? Transition : de quoi dépend l'effet du droit sur les prix.
+0 h 54 – 0 h 57. Définition mot pour mot, en deux temps. Les droits américains de 2025 sont surtout ad valorem ; l'exemple chiffré utilisera un droit spécifique, plus simple à dessiner. Question : un droit de 10 € par tee-shirt est-il ad valorem ou spécifique ? Transition : de quoi dépend l'effet du droit sur les prix.
 :::
 
 ## Petit pays : le prix mondial Pw est donné
@@ -289,7 +316,7 @@ Un pays est **petit** sur un marché quand ses achats sont trop faibles pour mod
 - « Qui paie ? » est une question d'**incidence** : elle ne se règle pas en regardant qui remplit la déclaration en douane.
 
 ::: {.notes}
-1 h 01 – 1 h 04. Sur un bien importé, un droit de douane fonctionne comme n'importe quelle taxe. On commence par le petit pays, plus simple ; on reviendra au grand pays ensuite. Question : la France est-elle petite sur le marché mondial des tee-shirts ? Transition : on construit le graphique pas à pas.
+0 h 57 – 1 h 00. Sur un bien importé, un droit de douane fonctionne comme n'importe quelle taxe. On commence par le petit pays, plus simple ; on reviendra au grand pays ensuite. Question : la France est-elle petite sur le marché mondial des tee-shirts ? Transition : on construit le graphique pas à pas.
 :::
 
 ## Droit de douane (1/4) : sans droit, le prix intérieur est Pw
@@ -314,7 +341,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 1)
 ::::
 
 ::: {.notes}
-1 h 04 – 1 h 07. Graphique théorique. O est l'offre intérieure : les producteurs du pays. Sans commerce, le prix serait au croisement de O et D, plus haut. Question : pourquoi les producteurs du pays ne vendent-ils pas plus que Q₁ ? (Au-delà, leur Cm dépasse Pw.) Transition : l'État impose un droit t.
+1 h 00 – 1 h 03. Graphique théorique. O est l'offre intérieure : les producteurs du pays. Sans commerce, le prix serait au croisement de O et D, plus haut. Question : pourquoi les producteurs du pays ne vendent-ils pas plus que Q₁ ? (Au-delà, leur Cm dépasse Pw.) Transition : l'État impose un droit t.
 :::
 
 ## Droit de douane (2/4) : le prix intérieur monte à Pw + t
@@ -339,7 +366,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 2)
 ::::
 
 ::: {.notes}
-1 h 07 – 1 h 11. Le prix monte de t y compris pour les biens produits dans le pays : les producteurs protégés vendent aussi à Pw + t. Question : pourquoi les importations baissent-elles deux fois ? (Plus de production intérieure, moins de consommation.) Transition : qui gagne ?
+1 h 03 – 1 h 06. Le prix monte de t y compris pour les biens produits dans le pays : les producteurs protégés vendent aussi à Pw + t. Question : pourquoi les importations baissent-elles deux fois ? (Plus de production intérieure, moins de consommation.) Transition : qui gagne ?
 :::
 
 ## Droit de douane (3/4) : les producteurs gagnent a, l'État encaisse c
@@ -364,7 +391,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 ::::
 
 ::: {.notes}
-1 h 11 – 1 h 14. Aire c : hauteur t, largeur les importations avec droit. Aire a : entre Pw et Pw + t, à gauche de l'offre. Question : qui finance a et c ? (Les consommateurs, qui paient t de plus.) Transition : ce que personne ne récupère.
+1 h 06 – 1 h 09. Aire c : hauteur t, largeur les importations avec droit. Aire a : entre Pw et Pw + t, à gauche de l'offre. Question : qui finance a et c ? (Les consommateurs, qui paient t de plus.) Transition : ce que personne ne récupère.
 :::
 
 ## Droit de douane (4/4) : b + d, la perte sèche
@@ -389,7 +416,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 4)
 ::::
 
 ::: {.notes}
-1 h 14 – 1 h 18. Une partie de la perte des consommateurs va aux producteurs protégés (a), une partie à l'État (c) ; le reste (b et d) n'est récupéré par personne. b : production plus coûteuse que l'importation ; d : achats qui n'ont plus lieu. Question : quelle aire disparaîtrait si l'offre intérieure était verticale ? (b.) Transition : on chiffre.
+1 h 09 – 1 h 13. Une partie de la perte des consommateurs va aux producteurs protégés (a), une partie à l'État (c) ; le reste (b et d) n'est récupéré par personne. b : production plus coûteuse que l'importation ; d : achats qui n'ont plus lieu. Question : quelle aire disparaîtrait si l'offre intérieure était verticale ? (b.) Transition : on chiffre.
 :::
 
 ## Exemple chiffré : un droit de 10 € sur les tee-shirts
@@ -404,7 +431,7 @@ Marché fictif : Q en millions de tee-shirts par an, P en euros.
 :::
 
 ::: {.notes}
-1 h 18 – 1 h 21. Faire calculer chaque ligne avant le clic : 100 − 20 = 80, 80 − 20 = 60 ; 100 − 30 = 70, 70 − 30 = 40. Le tableau complet est dans la page. Question : de combien les importations baissent-elles, et pour quelles deux raisons ? Transition : sur le graphique.
+1 h 13 – 1 h 16. Faire calculer chaque ligne avant le clic : 100 − 20 = 80, 80 − 20 = 60 ; 100 − 30 = 70, 70 − 30 = 40. Le tableau complet est dans la page. Question : de combien les importations baissent-elles, et pour quelles deux raisons ? Transition : sur le graphique.
 :::
 
 ## Exemple chiffré (1/3) : les importations passent de 60 à 40 millions
@@ -430,7 +457,7 @@ graphe_tarif(chiffres = TRUE, base_size = 24, etape = 2)
 ::::
 
 ::: {.notes}
-1 h 21 – 1 h 25. Les 20 millions d'importations en moins se décomposent en 10 millions produits dans le pays et 10 millions d'achats abandonnés. Question : sur ces 20 millions, combien sont désormais produits dans le pays ? Transition : chiffrer les aires.
+1 h 16 – 1 h 20. Les 20 millions d'importations en moins se décomposent en 10 millions produits dans le pays et 10 millions d'achats abandonnés. Question : sur ces 20 millions, combien sont désormais produits dans le pays ? Transition : chiffrer les aires.
 :::
 
 ## Exemple chiffré (2/3) : producteurs + 250 M€, État + 400 M€
@@ -455,7 +482,7 @@ graphe_tarif(chiffres = TRUE, base_size = 24, etape = 3)
 ::::
 
 ::: {.notes}
-1 h 25 – 1 h 29. Aire a : un trapèze, bases 20 et 30 millions, hauteur 10 €. Les producteurs vendent plus cher et plus. Aire c : un rectangle, 40 millions de tee-shirts importés fois 10 €. Faire calculer à main levée avant chaque clic. Transition : ce que perdent les consommateurs.
+1 h 20 – 1 h 24. Aire a : un trapèze, bases 20 et 30 millions, hauteur 10 €. Les producteurs vendent plus cher et plus. Aire c : un rectangle, 40 millions de tee-shirts importés fois 10 €. Faire calculer à main levée avant chaque clic. Transition : ce que perdent les consommateurs.
 :::
 
 ## Exemple chiffré (3/3) : consommateurs − 750 M€, perte sèche 100 M€
@@ -479,7 +506,7 @@ graphe_tarif(chiffres = TRUE, base_size = 24, etape = 4)
 ::::
 
 ::: {.notes}
-1 h 29 – 1 h 33. Les consommateurs paient 10 € de plus : sur les 70 millions qu'ils achètent encore, ils perdent 700 M€ par an ; sur les 10 millions auxquels ils renoncent, ils perdent en moyenne 5 €, soit 50 M€. Les aires valent a = 250, b = 50, c = 400 et d = 50 M€. Question : qui récupère les 100 M€ ? (Personne.) Transition : d'où vient cette perte.
+1 h 24 – 1 h 28. Les consommateurs paient 10 € de plus : sur les 70 millions qu'ils achètent encore, ils perdent 700 M€ par an ; sur les 10 millions auxquels ils renoncent, ils perdent en moyenne 5 €, soit 50 M€. Les aires valent a = 250, b = 50, c = 400 et d = 50 M€. Question : qui récupère les 100 M€ ? (Personne.) Transition : d'où vient cette perte.
 :::
 
 ## Perte sèche : produire trop cher, acheter moins
@@ -491,7 +518,7 @@ graphe_tarif(chiffres = TRUE, base_size = 24, etape = 4)
 :::
 
 ::: {.notes}
-1 h 33 – 1 h 37. 650 = 250 + 400 : des consommateurs vers les producteurs et l'État. b : le coût marginal des producteurs du pays dépasse Pw ; d : surplus d'acheteurs qui renoncent. Question : pourquoi le transfert est-il politiquement plus visible que la perte sèche ? Transition : une erreur fréquente sur « qui paie ».
+1 h 28 – 1 h 32. 650 = 250 + 400 : des consommateurs vers les producteurs et l'État. b : le coût marginal des producteurs du pays dépasse Pw ; d : surplus d'acheteurs qui renoncent. Question : pourquoi le transfert est-il politiquement plus visible que la perte sèche ? Transition : une erreur fréquente sur « qui paie ».
 :::
 
 ## Point d'attention : dans un petit pays, l'étranger ne paie pas le droit
@@ -519,7 +546,7 @@ L'exportateur reçoit toujours 20 € : il vend moins, au même prix. Les achete
 ::::
 
 ::: {.notes}
-1 h 37 – 1 h 40. Sondage avant le clic : qui paie les 10 € ? Il faut regarder qui voit son prix changer, pas qui est nommé dans la loi. Question à l'amphi : dans quel cas l'étranger paierait-il une partie ? (Si le pays est grand et que les exportateurs baissent leur prix hors droit.) Transition : le grand pays.
+1 h 32 – 1 h 35. Sondage avant le clic : qui paie les 10 € ? Il faut regarder qui voit son prix changer, pas qui est nommé dans la loi. Question à l'amphi : dans quel cas l'étranger paierait-il une partie ? (Si le pays est grand et que les exportateurs baissent leur prix hors droit.) Transition : le grand pays.
 :::
 
 ## Grand pays : la part payée par l'étranger, exemple chiffré
@@ -533,7 +560,7 @@ Même droit de 10 € par tee-shirt, dans un **grand pays** : s'il achète moins
 :::
 
 ::: {.notes}
-1 h 40 – 1 h 44. Formule à retenir : part payée par l'étranger = baisse de son prix hors droit ÷ droit. Faire calculer avant chaque clic. Question : quelle part paierait l'étranger s'il baissait son prix de 5 € ? (50 %.) Transition : le pays gagne-t-il pour autant ?
+1 h 35 – 1 h 39. Formule à retenir : part payée par l'étranger = baisse de son prix hors droit ÷ droit. Faire calculer avant chaque clic. Question : quelle part paierait l'étranger s'il baissait son prix de 5 € ? (50 %.) Transition : le pays gagne-t-il pour autant ?
 :::
 
 ## Grand pays : 42 M€ payés par l'étranger, 81 M€ de perte sèche
@@ -550,7 +577,7 @@ Même droit de 10 € par tee-shirt, dans un **grand pays** : s'il achète moins
 Un grand pays gagne à un droit modéré si l'étranger paie plus que la perte sèche, sans représailles.
 
 ::: {.notes}
-1 h 44 – 1 h 48. Encore faut-il que les fournisseurs baissent vraiment leurs prix et que leurs gouvernements ne répliquent pas : c'est ce que mesurent les études empiriques. Question : les États-Unis sont-ils un grand pays ? Pariez avant de voir les données. Transition : les droits américains de 2025-2026.
+1 h 39 – 1 h 43. Encore faut-il que les fournisseurs baissent vraiment leurs prix et que leurs gouvernements ne répliquent pas : c'est ce que mesurent les études empiriques. Question : les États-Unis sont-ils un grand pays ? Pariez avant de voir les données. Transition : les droits américains de 2025-2026.
 :::
 
 ## Droits américains 2025-2026 : des taux qui changent vite
@@ -569,7 +596,7 @@ Le droit sert aussi de **menace** : il a aidé à conclure plusieurs accords, do
 [Sources : Maison-Blanche, 21/08/2025 ; Deysine, 23/02/2026 ; DG Trésor, 06/08/2026 ; Guimbard, 22/07/2026.]{.wp-source}
 
 ::: {.notes}
-1 h 48 – 1 h 52. Repères arrêtés au 21/10/2026. Accord du 21/08/2025 : le droit NPF s'applique s'il est plus élevé ; l'UE annonce supprimer ses droits sur les produits industriels américains. Le 30/07/2026, l'UE suspend sans limite de durée ses contre-mesures (jusqu'à 30 % sur 93 Md€), jamais entrées en vigueur, réactivables à tout moment (DG Trésor, 06/08/2026). Droits annulés à rembourser : environ 165 Md\$ à 330 566 importateurs (Bouët, 27/03/2026). Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer. Transition : qui a payé ?
+1 h 43 – 1 h 46. Repères arrêtés au 21/10/2026. Accord du 21/08/2025 : le droit NPF s'applique s'il est plus élevé ; l'UE annonce supprimer ses droits sur les produits industriels américains. Le 30/07/2026, l'UE suspend sans limite de durée ses contre-mesures (jusqu'à 30 % sur 93 Md€), jamais entrées en vigueur, réactivables à tout moment (DG Trésor, 06/08/2026). Droits annulés à rembourser : environ 165 Md\$ à 330 566 importateurs (Bouët, 27/03/2026). Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer. Transition : qui a payé ?
 :::
 
 ## En 2025, près de 90 % des droits payés aux États-Unis
@@ -586,7 +613,7 @@ Le droit sert aussi de **menace** : il a aidé à conclure plusieurs accords, do
 [Source : Amiti, Flanagan, Heise et Weinstein, *Liberty Street Economics*, 12/02/2026.]{.wp-source}
 
 ::: {.notes}
-1 h 52 – 1 h 56. Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Près de 90 % du fardeau retombe sur les entreprises et les consommateurs américains. Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s'est passé. Question : qui avait parié « grand pays » ? Transition : ce que montrent les indices de prix.
+1 h 46 – 1 h 49. Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Près de 90 % du fardeau retombe sur les entreprises et les consommateurs américains. Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s'est passé. Question : qui avait parié « grand pays » ? Transition : ce que montrent les indices de prix.
 :::
 
 ## Prix américains : importations hors droit stables, biens de consommation en hausse
@@ -610,7 +637,7 @@ graphe_prix_import(base_size = 24)
 ::::
 
 ::: {.notes}
-1 h 56 – 2 h 00. Lecture : si l'étranger payait le droit, la courbe bleue baisserait après le 2 avril 2025 ; elle reste plate, tandis que la courbe ambre monte. Bleu : prix des biens importés hors carburants, mesurés sans le droit, donc ce que reçoit l'exportateur ; ambre : biens hors alimentation et énergie. L'indice couvre tous les biens importés, taxés ou non. Pas de relevé en octobre 2025 (fermeture de l'administration fédérale). De décembre 2025 à septembre 2026, prix hors droit +5,2 % : la figure ne dit pas pourquoi, mais elle ne montre toujours pas d'exportateurs qui baissent leurs prix. Calculs de l'auteur sur le BLS. Transition : à quelle vitesse le droit passe-t-il dans les prix de détail ?
+1 h 49 – 1 h 53. Lecture : si l'étranger payait le droit, la courbe bleue baisserait après le 2 avril 2025 ; elle reste plate, tandis que la courbe ambre monte. Bleu : prix des biens importés hors carburants, mesurés sans le droit, donc ce que reçoit l'exportateur ; ambre : biens hors alimentation et énergie. L'indice couvre tous les biens importés, taxés ou non. Pas de relevé en octobre 2025 (fermeture de l'administration fédérale). De décembre 2025 à septembre 2026, prix hors droit +5,2 % : la figure ne dit pas pourquoi, mais elle ne montre toujours pas d'exportateurs qui baissent leurs prix. Calculs de l'auteur sur le BLS. Transition : à quelle vitesse le droit passe-t-il dans les prix de détail ?
 :::
 
 ## Du droit aux prix à la consommation : un passage en un an
@@ -625,7 +652,7 @@ graphe_prix_import(base_size = 24)
 [Source : Amiti, Heise et Weinstein, *Liberty Street Economics*, 06/10/2026.]{.wp-source}
 
 ::: {.notes}
-2 h 00 – 2 h 03. Sans les droits, les prix de ces biens auraient légèrement baissé en février 2026. Question : un droit de 10 points, combien sur les prix des biens au bout d'un an ? (Environ 2,5 %.) Transition : combien cela coûte-t-il au pays ?
+1 h 53 – 1 h 56. Sans les droits, les prix de ces biens auraient légèrement baissé en février 2026. Question : un droit de 10 points, combien sur les prix des biens au bout d'un an ? (Environ 2,5 %.) Transition : combien cela coûte-t-il au pays ?
 :::
 
 ## Droits de 2018 : transferts importants, perte nette faible
@@ -649,7 +676,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 03 – 2 h 06. Estimation de Fajgelbaum et al. (2020) sur les droits de 2018. Acheteurs : consommateurs et entreprises. C'est l'exemple du tee-shirt en grand : un transfert massif, une perte sèche faible (b + d). Question : quelle aire correspond aux 7,2 Md\$ ? Transition : la recette, aire c, en données.
+1 h 56 – 1 h 59. Estimation de Fajgelbaum et al. (2020) sur les droits de 2018. Acheteurs : consommateurs et entreprises. C'est l'exemple du tee-shirt en grand : un transfert massif, une perte sèche faible (b + d). Question : quelle aire correspond aux 7,2 Md\$ ? Transition : la recette, aire c, en données.
 :::
 
 ## Recettes douanières américaines : quadruplées, puis amputées par les remboursements
@@ -673,7 +700,34 @@ graphe_recettes_douane(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 06 – 2 h 09. Bleu : recettes brutes ; ambre : recettes nettes des remboursements. 7,9 Md\$ en octobre 2024, 33,1 Md\$ en octobre 2025 ; recettes nettes autour de zéro en mai 2026, de −26 Md\$ en juin et −9 Md\$ en juillet. Question : quelle aire du graphique théorique ces recettes représentent-elles ? (c.) Transition : à qui va l'argent rendu ?
+1 h 59 – 2 h 02. Bleu : recettes brutes ; ambre : recettes nettes des remboursements. 7,9 Md\$ en octobre 2024, 33,1 Md\$ en octobre 2025 ; recettes nettes autour de zéro en mai 2026, de −26 Md\$ en juin et −9 Md\$ en juillet. Question : quelle aire du graphique théorique ces recettes représentent-elles ? (c.) Transition : que pèsent ces recettes dans les impôts fédéraux ?
+:::
+
+## Droits de douane : moins d'un dixième des impôts fédéraux en 2025
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Graphique en lignes, un point par année de 1929 à 2025 : droits de douane en pourcentage des impôts de l'État fédéral américain. La courbe bleue culmine à 19,8 % en 1931, chute sous 2 % au début des années 1940, reste entre 1 et 4 % jusqu'en 2024 (2,7 %), puis remonte à 7,5 % en 2025, point rouge."
+graphe_part_douane(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- Part des droits dans les impôts fédéraux : **2,7 %** en 2024, **7,5 %** en 2025, la plus haute depuis 1938.
+- Début des années 1930 : près d'un cinquième (**19,8 %** en 1931).
+- Objectif « recettes » : l'ordre de grandeur compte autant que la hausse.
+:::
+:::
+::::
+
+[Source : BEA, comptes nationaux, via FRED, consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+
+::: {.notes}
+2 h 02 – 2 h 04. Les droits perçus ont plus que triplé, mais restent une petite part des impôts fédéraux (impôts courants, cotisations sociales non comprises). Le pic de 1931 vient aussi de l'effondrement des autres impôts pendant la crise. Années civiles : ne pas comparer directement aux exercices budgétaires du graphique précédent. Question : les droits de douane peuvent-ils financer l'État fédéral ? Transition : à qui va l'argent rendu ?
 :::
 
 ## Remboursements : l'argent rendu va aux importateurs
@@ -689,7 +743,7 @@ graphe_recettes_douane(base_size = 24)
 Qui a supporté le droit : question **positive**. Qui doit être remboursé : question **normative**, que tranchent le droit et les tribunaux.
 
 ::: {.notes}
-2 h 09 – 2 h 12. Calcul de l'auteur sur le *Monthly Treasury Statement* (21/10/2026) ; Bouët, Blog du CEPII, 27/03/2026 ; Deysine, *The Conversation*, 23/02/2026. Environ 165 Md\$ à rembourser à 330 566 importateurs. Les importateurs ont pu répercuter une partie du droit sur leurs clients. Question : un consommateur qui a payé plus cher sera-t-il remboursé ? Transition : qui gagne et qui perd, groupe par groupe.
+2 h 04 – 2 h 07. Calcul de l'auteur sur le *Monthly Treasury Statement* (21/10/2026) ; Bouët, Blog du CEPII, 27/03/2026 ; Deysine, *The Conversation*, 23/02/2026. Environ 165 Md\$ à rembourser à 330 566 importateurs. Les importateurs ont pu répercuter une partie du droit sur leurs clients. Question : un consommateur qui a payé plus cher sera-t-il remboursé ? Transition : qui gagne et qui perd, groupe par groupe.
 :::
 
 ## Effets de répartition par revenu : un droit pèse sur les ménages modestes
@@ -701,7 +755,7 @@ Qui a supporté le droit : question **positive**. Qui doit être remboursé : qu
 :::
 
 ::: {.notes}
-2 h 12 – 2 h 14. Les ménages qui épargnent une partie de leur revenu sont moins touchés en proportion. Question : un étudiant qui dépense tout ce qu'il gagne est-il plus ou moins touché, en part de son revenu ? Transition : les entreprises qui achètent des biens importés.
+2 h 07 – 2 h 09. Les ménages qui épargnent une partie de leur revenu sont moins touchés en proportion. Question : un étudiant qui dépense tout ce qu'il gagne est-il plus ou moins touché, en part de son revenu ? Transition : les entreprises qui achètent des biens importés.
 :::
 
 ## Chaîne de valeur : un bien franchit plusieurs frontières
@@ -722,7 +776,7 @@ Une **chaîne de valeur** est la suite des étapes de production d'un bien, de l
 ::::
 
 ::: {.notes}
-2 h 14 – 2 h 16. Le droit de douane se perçoit à ce type de frontière ; une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Question : combien de frontières franchit un téléphone avant d'arriver en magasin ? Transition : l'exemple de l'acier.
+2 h 09 – 2 h 11. Le droit de douane se perçoit à ce type de frontière ; une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Question : combien de frontières franchit un téléphone avant d'arriver en magasin ? Transition : l'exemple de l'acier.
 :::
 
 ## Droit sur l'acier : les aciéries gagnent a, leurs clients paient
@@ -749,7 +803,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 ::::
 
 ::: {.notes}
-2 h 16 – 2 h 19. Chaîne de causalité d'un droit sur un bien intermédiaire. Étape 4 : les entreprises relèvent leur prix ou réduisent leur production. Étape 5 : le droit censé protéger l'industrie en pénalise une partie ; c'est un raisonnement, que les sources de cette séance ne chiffrent pas. En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme ceux des biens finals, et les chaînes d'approvisionnement ont été réorganisées (Amiti et al., 2019). Question : qui, dans l'automobile, réclamerait la suppression du droit ? Transition : les territoires.
+2 h 11 – 2 h 14. Chaîne de causalité d'un droit sur un bien intermédiaire. Étape 4 : les entreprises relèvent leur prix ou réduisent leur production. Étape 5 : le droit censé protéger l'industrie en pénalise une partie ; c'est un raisonnement, que les sources de cette séance ne chiffrent pas. En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme ceux des biens finals, et les chaînes d'approvisionnement ont été réorganisées (Amiti et al., 2019). Question : qui, dans l'automobile, réclamerait la suppression du droit ? Transition : les territoires.
 :::
 
 ## Effets de répartition par territoire : des pertes concentrées
@@ -761,7 +815,34 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 :::
 
 ::: {.notes}
-2 h 19 – 2 h 22. Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles de 2018 ont frappé les travailleurs des secteurs exposés au commerce. Question : pourquoi des perdants concentrés pèsent-ils plus en politique que des gagnants dispersés ? Transition : les générations et l'étranger.
+2 h 14 – 2 h 17. Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles de 2018 ont frappé les travailleurs des secteurs exposés au commerce. Question : pourquoi des perdants concentrés pèsent-ils plus en politique que des gagnants dispersés ? Transition : la concurrence chinoise et l'emploi industriel, en données.
+:::
+
+## 2000-2010 : la part de la Chine double, l'emploi industriel recule d'un tiers
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Deux graphiques en lignes superposés, 1990 à 2025, ligne verticale fin 2001 (entrée de la Chine à l'OMC). En haut, en rouge, la part de la Chine dans les importations américaines passe de 3,1 % en 1990 à 19,1 % en 2010, puis redescend à 9,0 % en 2025. En bas, en bleu, l'emploi industriel passe de 17,7 millions en 1990 à 11,5 millions en 2010, puis 12,6 millions en 2025."
+graphe_chine_emploi(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- 2000 → 2010 : part de la Chine de **8,2 %** à **19,1 %** ; emploi industriel de **17,3** à **11,5 millions**.
+- Simultanéité n'est pas causalité : la concurrence chinoise explique environ **un quart** du recul (1990-2007).
+- 2025 : part de la Chine **9,0 %**, emploi 12,6 millions.
+:::
+:::
+::::
+
+[Sources : Census Bureau via FRED ; Bureau of Labor Statistics ; consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+
+::: {.notes}
+2 h 17 – 2 h 20. La ligne verticale marque l'entrée de la Chine à l'OMC, en décembre 2001. Un quart du recul de 1990 à 2007 selon Autor, Dorn et Hanson (2013) ; le reste tient à d'autres causes, que le graphique ne distingue pas. Depuis 2018, la part de la Chine baisse sans que l'emploi industriel remonte. Question à l'amphi : les droits de 2018 et de 2025 ont-ils fait revenir les emplois ? (Le graphique seul ne permet pas de le dire.) Transition : les générations et l'étranger.
 :::
 
 ## Effets de répartition entre générations et à l'étranger
@@ -775,7 +856,34 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 [Source : Eurostat, `ext_lt_maineu`, téléchargé le 21/10/2026.]{.wp-source}
 
 ::: {.notes}
-2 h 22 – 2 h 24. L'industrie naissante revient dans la controverse avec List. Question : qui décide qu'une protection doit être retirée, et quand ? Transition : un droit de douane d'un autre type, pour le climat.
+2 h 20 – 2 h 22. L'industrie naissante revient dans la controverse avec List. Question : qui décide qu'une protection doit être retirée, et quand ? Transition : les exportations européennes, mois par mois.
+:::
+
+## Exportations de l'UE aux États-Unis : anticipation en mars 2025, puis repli
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Graphique en lignes, un point par mois de janvier 2023 à août 2026 : exportations de biens de l'UE vers les États-Unis, en milliards d'euros, corrigées des variations saisonnières. La courbe bleue tourne autour de la moyenne de 2024 en tirets, grimpe à 67,6 milliards en mars 2025, juste avant la ligne verticale du 2 avril, puis reste sous la moyenne de juin 2025 à juin 2026, sauf en septembre 2025, et remonte à 45 milliards en août 2026."
+graphe_export_ue_usa(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- Mars 2025 : **67,6 Md€**, contre 44,5 Md€ par mois en 2024 : on livre avant le droit.
+- Octobre 2025-février 2026 : **38,8 Md€** par mois.
+- D'avril à décembre : 382,9 Md€ en 2025, contre 407,7 Md€ en 2024.
+:::
+:::
+::::
+
+[Source : Eurostat, `ext_st_eu27_2020sitc`, consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+
+::: {.notes}
+2 h 22 – 2 h 24. Données corrigées des variations saisonnières et des jours ouvrables. Le total annuel de 2025 (554,7 Md€) dépasse celui de 2024 (535,6 Md€) parce qu'il est gonflé par les livraisons anticipées du premier trimestre ; la baisse n'apparaît qu'en mensuel (les 382,9 et 407,7 Md€ sont des valeurs brutes). Une chronologie, pas l'effet du seul droit : le taux de change de l'euro et la conjoncture américaine jouent aussi. Septembre 2025 (51,4 Md€) est un mois atypique, que ces données n'expliquent pas. Question : pourquoi un exportateur livre-t-il en mars ce qu'il aurait vendu en mai ? Transition : un droit de douane d'un autre type, pour le climat.
 :::
 
 ## MACF : un droit de douane pour le climat
@@ -798,10 +906,10 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 
 . . .
 
-- Ses perdants sont souvent loin : le **Mozambique** tire près d'un cinquième de ses exportations totales de l'aluminium vendu à l'UE.
+- Ses perdants sont souvent loin : le **Mozambique** tire de l'aluminium environ **un sixième** de ses exportations totales (2023), vendu presque tout à l'UE.
 - Deux économistes de l'Agence française de développement proposent d'en exempter les pays les moins avancés et de les aider autrement.
 
-[Source : Godin et Riccioppo Magacho, *The Conversation*, 10/01/2023.]{.wp-source}
+[Sources : Godin et Riccioppo Magacho, *The Conversation*, 10/01/2023 ; ONU, Comtrade ; Eurostat, Comext (consultés le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 27 – 2 h 29. On retrouve l'incidence : qui supporte le MACF dépend de qui voit son prix changer, ici les producteurs d'aluminium du Mozambique. Question : exempter les pays les moins avancés, est-ce une question positive ou normative ? Transition : la controverse.

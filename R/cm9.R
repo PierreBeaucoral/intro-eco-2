@@ -306,7 +306,201 @@ graphe_prix_import <- function(base_size = 16) {
 }
 
 # ---------------------------------------------------------------------------
-# 7. Vérifications : chaque chiffre annoncé dans cours/cm9.qmd
+# 7. Graphiques de données sur longue période (BEA, comptes nationaux, via FRED),
+#    1929-2025, années civiles : droit de douane effectif (7 a) et part des droits
+#    de douane dans les impôts de l'État fédéral (7 b). Même tracé pour les deux.
+# ---------------------------------------------------------------------------
+virgule_cm9 <- function(x, n = 1) formatC(x, format = "f", digits = n, decimal.mark = ",")
+
+#' Série annuelle en %, 1929-2025, avec quelques années étiquetées
+#' (« année : valeur % ») ; la dernière année (2025) en rouge.
+#' @param d données (colonne `annee` et colonne `col`)
+#' @param reperes années étiquetées ; dx, dy : décalage des étiquettes
+#'   (en années, en points de %) ; hj : alignement horizontal
+#' @param y_lab, source_txt titre de l'axe vertical et source (sous le graphique)
+serie_longue_cm9 <- function(d, col, reperes, dx, dy, hj, y_lab, source_txt, base_size = 16) {
+  r <- d[d$annee %in% reperes, ]
+  derniere <- r$annee == max(d$annee)
+  ggplot(d, aes(annee, .data[[col]])) +
+    geom_line(colour = couleurs_eco[["demande"]], linewidth = 1.1) +
+    geom_point(data = r, size = 2.4,
+               colour = ifelse(derniere, couleurs_eco[["alerte"]], couleurs_eco[["demande"]])) +
+    annotate("text", x = r$annee + dx, y = r[[col]] + dy, hjust = hj,
+             label = paste0(r$annee, " : ", virgule_cm9(r[[col]]), " %"),
+             colour = ifelse(derniere, couleurs_eco[["alerte"]], couleurs_eco[["neutre"]]),
+             family = police_cours, size = base_size / 3.6) +
+    scale_x_continuous(breaks = seq(1930, 2020, if (base_size > 16) 20 else 10),
+                       expand = expansion(mult = c(0.01, 0.04))) +
+    scale_y_continuous(breaks = seq(0, 20, 5), labels = function(x) paste(x, "%")) +
+    coord_cartesian(ylim = c(0, 21)) +
+    labs(x = NULL, y = y_lab, caption = source_txt) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# 7 a. Droit de douane effectif des États-Unis : droits de douane perçus par l'État
+#      fédéral (NIPA table 3.5) ÷ importations de biens (NIPA table 1.1.5), en %.
+#      Ce « droit effectif » n'est pas le droit moyen cité dans la page (Guimbard :
+#      4,9 %, 24,2 %, 15 %) : il est plus bas, car les achats se détournent des
+#      produits les plus taxés, certains produits sont exemptés et les droits sont
+#      versés avec retard.
+#      Fichier et provenance : data/cm9/droit_effectif_us_1929_2025.csv et data/cm9/SOURCES.md
+effectif_cm9 <- utils::read.csv(here::here("data/cm9/droit_effectif_us_1929_2025.csv"))
+taux_effectif_cm9 <- function(an) effectif_cm9$taux_effectif_pct[effectif_cm9$annee == an]
+
+#' Droit de douane effectif des États-Unis, 1929-2025 ; repères : 1933 (pic),
+#' 1946, 2024 et 2025 (en rouge).
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_droit_effectif <- function(base_size = 16) {
+  diapo <- base_size > 16   # diapos : titre d'axe et source plus courts
+  serie_longue_cm9(
+    effectif_cm9, "taux_effectif_pct", reperes = c(1933, 1946, 2024, 2025),
+    dx = c(2, 2, -2, -2), dy = c(0.3, 1.4, -1.6, 0.6), hj = c(0, 0, 1, 1),
+    y_lab = if (diapo) "% des importations de biens" else "Droits perçus, en % des importations de biens",
+    source_txt = if (diapo) "Source : BEA, comptes nationaux, via FRED (22/10/2026)." else
+      paste0("Source : BEA, comptes nationaux, tables 3.5 et 1.1.5 (via FRED, séries\n",
+             "B235RC1A027NBEA et A255RC1A027NBEA, consulté le 22/10/2026) ; calcul de l'auteur."),
+    base_size = base_size)
+}
+
+# 7 b. Part des droits de douane dans les impôts courants de l'État fédéral
+#      (sans les cotisations sociales), en %.
+#      Fichier et provenance : data/cm9/part_douane_impots_federaux_1929_2025.csv et data/cm9/SOURCES.md
+part_douane_cm9 <- utils::read.csv(here::here("data/cm9/part_douane_impots_federaux_1929_2025.csv"))
+part_douane_an_cm9 <- function(an) part_douane_cm9$part_douane_pct[part_douane_cm9$annee == an]
+
+#' Droits de douane en % des impôts de l'État fédéral américain, 1929-2025 ;
+#' repères : 1931 (pic), 2024 et 2025 (en rouge).
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_part_douane <- function(base_size = 16) {
+  diapo <- base_size > 16
+  serie_longue_cm9(
+    part_douane_cm9, "part_douane_pct", reperes = c(1931, 2024, 2025),
+    dx = c(2, -2, -2), dy = c(0.3, -1.4, 0.6), hj = c(0, 1, 1),
+    y_lab = if (diapo) "% des impôts fédéraux" else "Droits de douane, en % des impôts fédéraux",
+    source_txt = if (diapo) "Source : BEA, comptes nationaux, via FRED (22/10/2026)." else
+      paste0("Source : BEA, comptes nationaux (via FRED, séries B235RC1A027NBEA\n",
+             "et W006RC1A027NBEA, consulté le 22/10/2026) ; calcul de l'auteur."),
+    base_size = base_size)
+}
+
+# ---------------------------------------------------------------------------
+# 8. Graphique de données : exportations mensuelles de biens de l'UE à 27 vers
+#    les États-Unis, janv. 2023 - août 2026, Md€, corrigées des variations
+#    saisonnières et des jours ouvrables (CVS-CJO). Eurostat, ext_st_eu27_2020sitc.
+#    Les sommes annuelles des valeurs brutes redonnent le tableau de la page
+#    (commerce_cm9, jeu annuel ext_lt_maineu) : vérifié en fin de fichier.
+#    Fichier et provenance : data/cm9/export_ue_usa_mensuel_2023_2026.csv et data/cm9/SOURCES.md
+# ---------------------------------------------------------------------------
+export_cm9 <- utils::read.csv(here::here("data/cm9/export_ue_usa_mensuel_2023_2026.csv"))
+export_cm9$date <- as.Date(export_cm9$date)
+# moyenne mensuelle CVS-CJO, ou somme des valeurs brutes, entre deux mois (AAAA-MM-01)
+periode_export_cm9 <- function(de, a) export_cm9$date >= as.Date(de) & export_cm9$date <= as.Date(a)
+moy_export_cm9 <- function(de, a) mean(export_cm9$export_cvs_md[periode_export_cm9(de, a)])
+somme_brut_cm9 <- function(de, a) sum(export_cm9$export_brut_md[periode_export_cm9(de, a)])
+moy2024_export_cm9 <- moy_export_cm9("2024-01-01", "2024-12-01")
+
+#' Exportations mensuelles de biens de l'UE vers les États-Unis (CVS-CJO, Md€).
+#' Repères : moyenne de 2024 (tirets horizontaux), 2 avril 2025, pic de mars 2025.
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_export_ue_usa <- function(base_size = 16) {
+  diapo <- base_size > 16   # diapos : étiquettes, titre d'axe et source plus courts
+  neutre <- couleurs_eco[["neutre"]]; bleu <- couleurs_eco[["demande"]]
+  taille <- base_size / 3.6
+  pic <- export_cm9[which.max(export_cm9$export_cvs_md), ]
+  ticks <- as.Date(paste0(rep(2023:2026, each = 2), c("-01-01", "-07-01")))
+  noms <- c("janv.\n2023", "juil.", "janv.\n2024", "juil.", "janv.\n2025", "juil.", "janv.\n2026", "juil.")
+  if (diapo) noms[c(2, 4, 6, 8)] <- ""
+  ggplot(export_cm9, aes(date, export_cvs_md)) +
+    geom_hline(yintercept = moy2024_export_cm9, linetype = "22", colour = neutre) +
+    geom_vline(xintercept = as.Date("2025-04-02"), linetype = "22", colour = neutre) +
+    geom_line(colour = bleu, linewidth = 1.1) +
+    geom_point(colour = bleu, size = 1.3) +
+    annotate("text", x = as.Date("2025-04-02") + 10, y = 64, hjust = 0, lineheight = 0.9,
+             label = if (diapo) "2 avril 2025" else "2 avril 2025 :\n« Jour de la libération »",
+             family = police_cours, size = taille, colour = neutre) +
+    annotate("text", x = pic$date - 12, y = pic$export_cvs_md, hjust = 1, lineheight = 0.9,
+             label = paste0("mars 2025 :\n", virgule_cm9(pic$export_cvs_md), " Md€"),
+             family = police_cours, size = taille, colour = bleu) +
+    # diapos : « moyenne 2024 » seul (la valeur est dans le texte), pour ne pas toucher la courbe
+    annotate("text", x = as.Date("2023-01-01"), y = moy2024_export_cm9 + if (diapo) 1.9 else 1.6, hjust = 0,
+             label = if (diapo) "moyenne 2024" else
+               paste0("moyenne 2024 : ", virgule_cm9(moy2024_export_cm9), " Md€"),
+             family = police_cours, size = taille, colour = neutre) +
+    scale_x_date(breaks = ticks, labels = noms) +
+    scale_y_continuous(breaks = seq(30, 70, 10)) +
+    coord_cartesian(ylim = c(30, 70)) +
+    labs(x = NULL, y = if (diapo) "Md€ par mois (CVS-CJO)" else "Milliards d'euros par mois (CVS-CJO)",
+         caption = if (diapo) "Source : Eurostat, ext_st_eu27_2020sitc (22/10/2026)." else
+           paste0("Source : Eurostat, ext_st_eu27_2020sitc, exportations de l'UE à 27 vers les États-Unis,\n",
+                  "corrigées des variations saisonnières et des jours ouvrables (consulté le 22/10/2026).")) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 9. Graphique de données : part de la Chine dans les importations de biens des
+#    États-Unis (Census Bureau, base douanière, via FRED) et emploi salarié de
+#    l'industrie manufacturière (BLS, CES3000000001, moyenne annuelle), 1990-2025.
+#    Deux panneaux superposés, même axe des années ; repère : la Chine entre à
+#    l'OMC en décembre 2001. La simultanéité ne prouve pas la cause.
+#    Fichier et provenance : data/cm9/chine_emploi_industriel_us_1990_2025.csv et data/cm9/SOURCES.md
+# ---------------------------------------------------------------------------
+chine_cm9 <- utils::read.csv(here::here("data/cm9/chine_emploi_industriel_us_1990_2025.csv"))
+chine_an_cm9 <- function(col, an) chine_cm9[[col]][match(an, chine_cm9$annee)]
+
+#' Part de la Chine dans les importations américaines (en haut, rouge) et
+#' emploi industriel américain (en bas, bleu), 1990-2025, quelques années étiquetées.
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_chine_emploi <- function(base_size = 16) {
+  diapo <- base_size > 16   # diapos : titres de panneaux et source plus courts
+  pas <- if (diapo) 2 else 1
+  cols <- c("part_chine_pct", "emploi_industrie_millions")
+  panneaux <- if (diapo) c("Part de la Chine dans les importations (%)", "Emploi industriel (millions)") else
+    c("Part de la Chine dans les importations de biens des États-Unis (%)",
+      "Emploi salarié de l'industrie manufacturière (millions)")
+  en_facteur <- function(i) factor(panneaux[i], levels = panneaux)
+  d <- rbind(data.frame(annee = chine_cm9$annee, v = chine_cm9[[cols[1]]], panneau = en_facteur(1)),
+             data.frame(annee = chine_cm9$annee, v = chine_cm9[[cols[2]]], panneau = en_facteur(2)))
+  # années étiquetées et décalage des étiquettes (en années, en unités du panneau)
+  pts <- rbind(data.frame(i = 1, annee = c(1990, 2010, 2025), dx = 0, dy = c(3.4, -2.8, -2.6), hj = c(0, 0.5, 0.5)),
+               data.frame(i = 2, annee = c(1990, 2000, 2010, 2025), dx = c(0, -0.6, 0, 0),
+                          dy = c(0.8, -0.8, -0.8, 0.8), hj = c(0, 1, 0.5, 0.5)))
+  if (diapo) pts$dy <- pts$dy * 1.5   # texte plus grand : étiquettes plus loin de la courbe
+  pts$v <- mapply(chine_an_cm9, cols[pts$i], pts$annee)
+  pts$lab <- paste0(virgule_cm9(pts$v), ifelse(pts$i == 1, " %", ""))
+  pts$panneau <- en_facteur(pts$i)
+  bornes <- data.frame(annee = 1990, v = c(0, 26, 10, 19.5), panneau = en_facteur(c(1, 1, 2, 2)))
+  # repère OMC : à droite du trait (page) ; à gauche en diapo, où il toucherait la courbe
+  omc <- data.frame(annee = if (diapo) 2001.5 else 2002.4, v = 25, panneau = en_facteur(1))
+  ggplot(d, aes(annee, v, colour = panneau)) +
+    geom_blank(data = bornes) +   # même étendue verticale que le prototype validé
+    geom_vline(xintercept = 2001.95, linetype = "22", colour = couleurs_eco[["neutre"]]) +
+    geom_text(data = omc, label = "Chine à l'OMC\n(déc. 2001)", hjust = if (diapo) 1 else 0, vjust = 1, lineheight = 0.9,
+              family = police_cours, size = base_size / 3.6, colour = couleurs_eco[["neutre"]]) +
+    geom_line(linewidth = 1.1) +
+    geom_point(data = pts, size = 2) +
+    geom_text(data = pts, aes(x = annee + dx, y = v + dy, label = lab, hjust = hj),
+              family = police_cours, size = base_size / 3.6) +
+    scale_colour_manual(values = setNames(unname(couleurs_eco[c("alerte", "demande")]), panneaux)) +
+    scale_x_continuous(breaks = seq(1990, 2025, if (diapo) 10 else 5)) +
+    # graduations entières : 0 à 25 % (panneau du haut), 10 à 18 millions (panneau du bas) ;
+    # une sur deux en diapo
+    scale_y_continuous(breaks = function(l) if (l[2] > 22) seq(0, 25, 5 * pas) else seq(10, 18, 2 * pas)) +
+    facet_wrap(~panneau, ncol = 1, scales = "free_y") +
+    labs(x = NULL, y = NULL,
+         caption = if (diapo) "Sources : Census Bureau via FRED ; BLS (22/10/2026)." else
+           paste0("Sources : Census Bureau via FRED (IMPCH et IMP0015, importations de biens, base douanière) ;\n",
+                  "BLS, CES3000000001 (moyenne annuelle) ; consulté le 22/10/2026 ; calcul de l'auteur.")) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none",
+          strip.text = element_text(family = police_cours, hjust = 0, size = rel(0.85)),
+          panel.spacing = grid::unit(1.2, "lines"),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 10. Vérifications : chaque chiffre annoncé dans cours/cm9.qmd
 # ---------------------------------------------------------------------------
 # Exemple 1 : avantage comparatif
 stopifnot(
@@ -374,4 +568,49 @@ stopifnot(
   proche(round(variation_cm9("prix_conso_biens", "2024-01-01", "2024-09-01"), 1), -0.6), # -0,6 %
   proche(round(variation_cm9("prix_import", "2025-12-01", "2026-09-01"), 1), 5.2),    # +5,2 %
   max(prix_cm9$import_100, na.rm = TRUE) < 106.5, min(prix_cm9$import_100, na.rm = TRUE) > 97.5  # dans l'axe
+)
+# Données du BEA : droit effectif et part des droits dans les impôts fédéraux (%)
+stopifnot(
+  nrow(effectif_cm9) == 97, !anyNA(effectif_cm9), proche(effectif_cm9$annee, 1929:2025),
+  proche(round(taux_effectif_cm9(2024), 1), 2.6), proche(round(taux_effectif_cm9(2025), 1), 8.0),
+  proche(round(taux_effectif_cm9(1946), 1), 9.7), proche(round(taux_effectif_cm9(1933), 1), 18.7),
+  proche(effectif_cm9$annee[which.max(effectif_cm9$taux_effectif_pct)], 1933),          # pic : 1933
+  # 2025 : le plus haut depuis 1946 (plus haut qu'en 1947-2024, plus bas qu'en 1946)
+  max(effectif_cm9$taux_effectif_pct[effectif_cm9$annee %in% 1947:2024]) < taux_effectif_cm9(2025),
+  taux_effectif_cm9(1946) > taux_effectif_cm9(2025),
+  nrow(part_douane_cm9) == 97, !anyNA(part_douane_cm9),
+  proche(part_douane_cm9$droits_md, effectif_cm9$droits_md),                             # mêmes droits perçus
+  proche(round(part_douane_an_cm9(1931), 1), 19.8), proche(round(part_douane_an_cm9(2024), 1), 2.7),
+  proche(round(part_douane_an_cm9(2025), 1), 7.5), part_douane_an_cm9(2025) < 10,       # moins d'un dixième
+  proche(part_douane_cm9$annee[which.max(part_douane_cm9$part_douane_pct)], 1931),
+  # 2025 : la part la plus haute depuis 1938
+  max(part_douane_cm9$part_douane_pct[part_douane_cm9$annee %in% 1939:2024]) < part_douane_an_cm9(2025),
+  part_douane_an_cm9(1938) > part_douane_an_cm9(2025)
+)
+# Données Eurostat mensuelles (Md€) : recoupement avec le tableau annuel de la page
+stopifnot(
+  nrow(export_cm9) == 44, !anyNA(export_cm9),
+  proche(round(sapply(2023:2025, function(a) somme_brut_cm9(paste0(a, "-01-01"), paste0(a, "-12-01"))), 1),
+         commerce_cm9$exportations),                                                    # 505,9 ; 535,6 ; 554,7
+  proche(round(moy2024_export_cm9, 1), 44.5),
+  export_cm9$date[which.max(export_cm9$export_cvs_md)] == as.Date("2025-03-01"),
+  proche(round(max(export_cm9$export_cvs_md), 1), 67.6),
+  proche(round(moy_export_cm9("2025-10-01", "2026-02-01"), 1), 38.8),
+  proche(round(export_cm9$export_cvs_md[export_cm9$date == as.Date("2026-08-01")], 1), 45.0),
+  # avril-décembre : 382,9 Md€ en 2025 contre 407,7 Md€ en 2024 (valeurs brutes)
+  proche(round(somme_brut_cm9("2025-04-01", "2025-12-01"), 1), 382.9),
+  proche(round(somme_brut_cm9("2024-04-01", "2024-12-01"), 1), 407.7),
+  min(export_cm9$export_cvs_md) > 30, max(export_cm9$export_cvs_md) < 70                # dans l'axe
+)
+# Census Bureau et BLS : part de la Chine (%) et emploi industriel (millions)
+stopifnot(
+  nrow(chine_cm9) == 36, !anyNA(chine_cm9), proche(chine_cm9$annee, 1990:2025),
+  proche(round(chine_an_cm9("part_chine_pct", c(2000, 2010, 2025)), 1), c(8.2, 19.1, 9.0)),
+  proche(chine_cm9$annee[which.max(chine_cm9$part_chine_pct)], 2017),
+  proche(round(chine_an_cm9("emploi_industrie_millions", c(2000, 2010, 2025)), 1), c(17.3, 11.5, 12.6)),
+  # 2000-2010 : la part de la Chine fait plus que doubler, l'emploi industriel perd un tiers
+  chine_an_cm9("part_chine_pct", 2010) > 2 * chine_an_cm9("part_chine_pct", 2000),
+  proche(round(100 * (1 - chine_an_cm9("emploi_industrie_millions", 2010) /
+                        chine_an_cm9("emploi_industrie_millions", 2000))), 33),
+  max(chine_cm9$part_chine_pct) < 26, min(chine_cm9$emploi_industrie_millions) > 10      # dans les axes
 )

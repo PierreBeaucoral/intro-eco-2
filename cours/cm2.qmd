@@ -24,7 +24,7 @@ source(here::here("R/cm2.R"))
 
 En février 2026, un paquet type de 20 cigarettes coûte **13,50 €** en France métropolitaine (C. Hill, *Impact de l'augmentation des prix sur la consommation de tabac*, 2026, tableau 5.2). Le prix moyen d'un paquet était de 3,20 € en 2000 et de 13 € en 2025 (I. Obradovic, *The Conversation*, 25/07/2026). Au 1^er^ novembre 2026, 59 références sur 4 999 changent de prix (37 hausses, 22 baisses) : le Marlboro Red en paquet souple passe de 13,50 € à 14,00 €, le paquet rigide reste à 13,50 € (*Bourse Inside*, 08/10/2026, d'après l'arrêté d'homologation du 29/09/2026).
 
-Dans le même temps, la consommation recule. En 2025, le réseau des buralistes de métropole a vendu 30 165 tonnes de tabac, contre 32 846 tonnes en 2024, soit **−8,2 %** (OFDT, cité par l'AFP, *CB News*, 28/05/2026). La part des fumeurs quotidiens chez les 18-75 ans passe d'environ 25 % en 2014 à 18 % en 2024 (Santé publique France, citée par *La finance pour tous*, 24/07/2026). Le tabac reste pourtant meurtrier : 68 000 décès prématurés lui sont attribués en France en 2023 (*ibid.*).
+Dans le même temps, la consommation recule. En 2025, le réseau des buralistes de métropole a vendu 30 165 tonnes de tabac, contre 32 846 tonnes en 2024, soit **−8,2 %** (OFDT, cité par l'AFP, *CB News*, 28/05/2026). La part des fumeurs quotidiens chez les 18-75 ans passe d'environ 25 % en 2021 à 18 % en 2024 (Santé publique France, citée par Douchet, OFDT, 2026, p. 13). Le tabac reste pourtant meurtrier : 68 000 décès prématurés lui sont attribués en France en 2023 (Santé publique France, citée par *La finance pour tous*, 24/07/2026).
 
 **La question de la séance : augmenter le prix du tabac fait-il arrêter de fumer ?** Elle en contient trois.
 
@@ -233,6 +233,28 @@ Les comptes nationaux de l'Insee confirment cette image (@fig-conso-tabac) : de 
 **Les fuites.** Les ventes des buralistes ne sont pas la consommation. Une hausse limitée aux cigarettes pousse vers le **tabac à rouler**, moins cher : jusqu'en 2013, 10 % de hausse du prix des seules cigarettes faisaient monter de 4,2 % ses ventes (Hill, 2026, chapitre 4). S'y ajoutent les achats à l'étranger et la contrebande : selon l'étude TAFE des douanes et de la Mission interministérielle de lutte contre les drogues et les conduites addictives (MILDECA), citée par le ministère de l'Action et des Comptes publics, **17,7 %** des produits du tabac échappent en moyenne aux buralistes, soit 8 081 tonnes et 4,3 milliards d'euros de taxes (*JO Sénat*, 26/02/2026, réponse à la question écrite n° 04515). En 2025, les volumes de cigarettes saisis par les douanes augmentent de 24,5 % (AFP, *CB News*, 28/05/2026).
 
 ```{r}
+#| label: fig-cigarettes-rouler
+#| fig-cap: "Ventes de cigarettes et de tabac à rouler des buralistes, France métropolitaine, 2000-2025, en tonnes, indices base 100 en 2000. Lecture : de 2000 à 2016, les ventes de cigarettes tombent à l'indice 54 (elles sont presque divisées par deux) pendant que celles de tabac à rouler montent à 161 (+61 %) ; le tabac à rouler recule ensuite, jusqu'à l'indice 79 en 2025, contre 28 pour les cigarettes. Précautions : ce sont des ventes, pas la consommation ; les tonnages de cigarettes sont calculés par l'auteure avec 0,8 g de tabac par cigarette ; l'année 2023 n'est pas représentée, car la ligne du tableau source y montre un rebond que les autres sources ne confirment pas (probable coquille). Source : C. Hill (2026), Impact de l'augmentation des prix sur la consommation de tabac, tableau 1.1 (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 2000 à 2025, deux indices valant 100 en 2000. Le tabac à rouler, en orange, monte jusqu'à 161 en 2015 et 2016, puis redescend, à 79 en 2025. Les cigarettes, en bleu, tombent à 66 en 2004, puis baissent lentement jusqu'à 28 en 2025. Les deux lignes s'interrompent en 2023, année non représentée. Une ligne horizontale en tirets marque le niveau 100."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_cigarettes_rouler()
+```
+
+La @fig-cigarettes-rouler montre ce report. De 2000 à 2016, les ventes de cigarettes, en tonnes, sont presque divisées par deux (indice 54), quand celles de tabac à rouler augmentent de 61 % (indice 161). Le tabac à rouler recule ensuite à son tour, hormis un rebond en 2020 (frontières fermées), jusqu'à l'indice 79 en 2025 contre 28 pour les cigarettes, au moment où son prix rattrape celui des cigarettes : en 2000, 20 cigarettes coûtaient 2,7 fois plus cher que 16 grammes de tabac à rouler ; en 2025, 1,3 fois seulement (Hill, 2026).
+
+```{r}
+#| label: fig-prix-europe
+#| fig-cap: "Niveau des prix du tabac en 2025 dans neuf pays européens, moyenne de l'Union européenne à 27 = 100. Lecture : l'indice vaut 191 en France, presque deux fois la moyenne de l'UE ; seule l'Irlande est plus chère (262). Il vaut 144 en Belgique, 116 en Allemagne, 88 au Luxembourg, 82 en Italie et 81 en Espagne : le tabac coûte 2,35 fois plus cher en France qu'en Espagne. Précautions : c'est un indice de niveau des prix de l'ensemble des produits du tabac, pas le prix d'un paquet ; il compare des prix en euros (convertis au taux de change pour la Suisse), sans correction du pouvoir d'achat. Source : Eurostat, prc_ppp_ind_1, indices de niveau des prix, poste « Tabac », 2025, mise à jour du 09/07/2026 (consulté le 22/10/2026)."
+#| fig-alt: "Diagramme en barres horizontales, de la plus longue à la plus courte : Irlande 262, France 191 en bleu, Pays-Bas 172, Belgique 144, Suisse 130, Allemagne 116, Union européenne à 27 égale 100 en noir, Luxembourg 88, Italie 82, Espagne 81."
+#| fig-width: 7.5
+#| fig-height: 4.8
+graphe_prix_europe()
+```
+
+Acheter à l'étranger rapporte d'autant plus que l'écart de prix est grand (@fig-prix-europe). En 2025, l'indice de niveau des prix du tabac vaut 191 en France pour une moyenne de 100 dans l'Union européenne : seule l'Irlande est plus chère (262). Il vaut 144 en Belgique, 88 au Luxembourg, 82 en Italie et 81 en Espagne : le tabac coûte en France plus du double de ce qu'il coûte chez ces trois derniers voisins (Eurostat, consulté le 22/10/2026).
+
+```{r}
 #| label: fig-recettes
 #| fig-cap: "Recettes du droit de consommation sur les tabacs (accise proportionnelle et accise spécifique, hors TVA), France continentale, 1991-2025, en milliards d'euros courants et en milliards d'euros constants (prix de 2001). Lecture : la recette augmente fortement, avec quelques reculs, jusqu'en 2020 (14,35 Md€), puis baisse de 11 % en euros courants et d'environ 23 % en euros constants jusqu'en 2025 (12,74 Md€). Le sommet de 2020 est en partie dû à la fermeture des frontières pendant le Covid ; par rapport à 2019, la recette de 2025 est stable en euros courants et baisse d'environ 13 % en euros constants. Source : C. Hill (2026), Impact de l'augmentation des prix sur la consommation de tabac, tableau 6 ; euros constants calculés avec l'indice des prix de ce tableau."
 #| fig-alt: "Graphique en lignes de 1991 à 2025. La recette en euros courants, en bleu, passe de 3,3 milliards en 1991 à 8 milliards en 2000, 10,5 milliards en 2010, puis culmine à 14,4 milliards en 2020 avant de redescendre à 12,7 milliards en 2025. La recette en euros constants, en orange, suit la même allure mais monte moins : environ 8 à 10 milliards de 2000 à 2019, 11 milliards en 2020, puis 8,5 milliards en 2025. Une ligne verticale en tirets marque l'année 2020, sommet atteint quand les frontières étaient fermées."
@@ -257,7 +279,29 @@ graphe_recettes_tabac()
 
 **Par territoire.** Près des frontières, le paquet est moins cher de l'autre côté. Les buralistes des départements frontaliers perdent des ventes ; l'État les a compensés par des aides (Hill, 2026, § 7.6). Les hausses de taxes en Belgique et au Luxembourg ont réduit l'avantage d'y aller acheter (AFP, *CB News*, 28/05/2026).
 
-**Par genre.** L'écart entre hommes et femmes s'est beaucoup réduit. En 1953, 72 % des hommes et 17 % des femmes fumaient régulièrement ; en 2024, 20,4 % des hommes et 16,2 % des femmes (sondages Seita, Insee, Inpes puis Santé publique France, Hill, 2026, tableau 2.1).
+```{r}
+#| label: fig-ventes-frontaliers
+#| fig-cap: "Volumes de tabac vendus par les buralistes dans les départements frontaliers et non frontaliers, France continentale, 2017-2025, indices base 100 en 2017. Lecture : en 2025, les départements frontaliers vendent 49,7 % des volumes de 2017 (−50,3 %), les autres 56,4 % (−43,6 %). En 2020 seulement, quand les frontières étaient fermées (Covid), les ventes frontalières remontent (de 80,2 à 81,2). Précautions : ce sont des ventes enregistrées, pas la consommation ; l'OFDT publie ces variations, pas les tonnages par groupe de départements. Source : DGDDI, exploitation OFDT, M.-A. Douchet, Tabagisme et arrêt du tabac en 2025, OFDT, mai 2026, graphique 2 (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 2017 à 2025, deux indices valant 100 en 2017. Les départements non frontaliers, en bleu, baissent régulièrement jusqu'à 56,4 en 2025. Les départements frontaliers, en orange, baissent plus vite jusqu'à 49,7, sauf entre 2019 et 2020, où la ligne remonte légèrement, de 80,2 à 81,2. Une ligne verticale en tirets marque 2020, année où les frontières étaient fermées."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_ventes_frontaliers()
+```
+
+La @fig-ventes-frontaliers le montre sur les ventes. De 2017 à 2025, les volumes vendus par les buralistes baissent de 50,3 % dans les départements frontaliers, contre 43,6 % ailleurs. En 2020 seulement, quand les frontières étaient fermées, les ventes frontalières remontent (indice 80,2 puis 81,2) : c'est le signe qu'une partie de la baisse est une fuite vers l'étranger, et non un arrêt du tabac. En 2025, la baisse sur un an est presque la même des deux côtés, ce que l'OFDT attribue aux hausses de taxes belges et luxembourgeoises de 2025 (Douchet, OFDT, 2026). De 2024 à 2025, l'indice de niveau des prix du tabac, qui mesure le prix par rapport à la moyenne de l'UE, passe de 135,7 à 144,4 en Belgique et de 84,0 à 87,5 au Luxembourg, quand celui de la France recule de 194,1 à 191,1 (Eurostat ; valeurs de 2025 sur la @fig-prix-europe) : le prix français monte, mais moins vite que la moyenne de l'UE.
+
+**Par genre.** L'écart entre hommes et femmes s'est beaucoup réduit. En 1953, 72 % des hommes et 17 % des femmes fumaient régulièrement ; en 2024, 20,4 % des hommes et 16,2 % des femmes fument chaque jour (sondages Seita, Insee, Inpes puis Santé publique France, Hill, 2026, tableau 2.1).
+
+```{r}
+#| label: fig-fumeurs-sexe
+#| fig-cap: "Part des fumeurs réguliers chez les hommes et chez les femmes en France, en % des adultes, enquêtes de 1953 à 2024. Lecture : en 1953, 72 % des hommes et 17 % des femmes fument, soit 55 points d'écart ; en 2024, 20,4 % et 16,2 %, soit 4 points. La part des hommes baisse presque sans interruption ; celle des femmes monte jusqu'à 26,4 % en 2000 et 26,6 % en 2010, puis baisse. Précautions : chaque point est une enquête ; le segment en tirets de 1953 à 1980 relie deux enquêtes sans aucune entre elles ; le champ et la définition changent d'un organisme à l'autre (depuis 2017, marqué par un repère vertical en tirets : tabagisme quotidien des 18-75 ans, Santé publique France). Source : sondages SEITA, Insee, Inpes puis Santé publique France, compilés par C. Hill (2026), Impact de l'augmentation des prix sur la consommation de tabac, tableau 2.1 (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes avec points, de 1953 à 2024. Les hommes, en bleu, passent de 72 % en 1953 à 44 % en 1980 (segment en tirets), puis baissent jusqu'à 33 % environ dans les années 2000 et 2010 et à 20,4 % en 2024. Les femmes, en orange, passent de 17 % en 1953 à 16 % en 1980, montent jusqu'à environ 26 % en 2000 et 2010, puis baissent jusqu'à 16,2 % en 2024. Les deux lignes se rapprochent. Un trait vertical en tirets marque 2017."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_fumeurs_sexe()
+```
+
+La @fig-fumeurs-sexe montre tout le chemin. La part des hommes qui fument baisse presque sans interruption ; celle des femmes monte de 16 % en 1980 à 26,4 % en 2000 et 26,6 % en 2010, puis baisse. L'écart passe de 55 points en 1953 à 4 points en 2024. La chute de 2023 à 2024 est nette pour les deux sexes : de 25,4 % à 20,4 % chez les hommes, de 20,9 % à 16,2 % chez les femmes. Les enquêtes changent de champ au fil du temps : depuis 2017, il s'agit du tabagisme quotidien des 18-75 ans.
 
 ### Les vendeurs et l'État : des gains qui s'effritent
 

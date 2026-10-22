@@ -310,6 +310,144 @@ graphe_chomage_groupes <- function(base_size = 16) {
 }
 
 # ---------------------------------------------------------------------------
+# 5 ter. Données : la dette grecque par instrument, titres et prêts, 2007-2025
+#    Eurostat, gov_10q_ggdebt (dette trimestrielle des administrations publiques,
+#    S13, valeur du 4e trimestre), téléchargé le 22/10/2026.
+#    Fichier et provenance : data/cm8/grece_dette_instruments_2007_2025.csv et data/cm8/SOURCES.md.
+#    La série distingue l'instrument (titre ou prêt), pas le prêteur.
+# ---------------------------------------------------------------------------
+instruments_cm8 <- utils::read.csv(here::here("data/cm8/grece_dette_instruments_2007_2025.csv"))
+
+#' Valeur d'une colonne d'un fichier annuel du CM 8 (colonne annee) pour une année
+val_cm8 <- function(df, col, an) df[[col]][df$annee == an]
+
+#' Nombre au format français (virgule, espace des milliers, signe moins typographique)
+nombre_fr <- function(x) sub("^-", "−", format(x, decimal.mark = ",", big.mark = " ", trim = TRUE))
+
+#' Bande grise des plans d'aide, 2010-2018 (la même que dans graphe_grece())
+bande_plans_cm8 <- function() annotate("rect", xmin = 2010, xmax = 2018, ymin = -Inf, ymax = Inf,
+                                       fill = "#E5E7EB", alpha = 0.6)
+
+#' Dette publique grecque au 31 décembre (Md€), 2007-2025 : prêts (bleu) et titres de dette (ambre).
+#' Les prêts dépassent les titres à partir de 2012 (restructuration de la dette privée, plans d'aide).
+graphe_dette_instruments <- function(base_size = 16) {
+  series <- c("Prêts", "Titres de dette")
+  d <- rbind(data.frame(annee = instruments_cm8$annee, serie = series[1], md = instruments_cm8$prets),
+             data.frame(annee = instruments_cm8$annee, serie = series[2], md = instruments_cm8$titres))
+  d$serie <- factor(d$serie, levels = series)
+  fin <- d[d$annee == max(d$annee), ]
+  taille <- base_size / 3.4
+  ggplot(d, aes(annee, md, colour = serie)) +
+    bande_plans_cm8() +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 1.4) +
+    geom_text(data = fin, aes(label = serie), hjust = 0, nudge_x = 0.4,
+              family = police_cours, size = taille) +
+    annotate("text", x = 2012.3, y = 150, hjust = 0, family = police_cours, size = taille * 0.85,
+             colour = couleurs_eco[["neutre"]],
+             label = "2012 : restructuration de la dette\ndétenue par le secteur privé") +
+    scale_colour_manual(values = unname(couleurs_eco[c("demande", "offre")])) +
+    # diapos (base_size = 24) : moins d'années sur l'axe, sinon 2007, 2010 et 2012 se chevauchent
+    scale_x_continuous(breaks = if (base_size > 16) c(2007, 2012, 2018, 2025) else c(2007, 2010, 2012, 2018, 2025)) +
+    scale_y_continuous(breaks = seq(0, 300, 100), limits = c(0, 300)) +
+    coord_cartesian(clip = "off") +
+    labs(x = NULL, y = "Dette publique (Md€)",
+         caption = paste0("Encours au 31 décembre. Bande grise : plans d'aide, 2010-2018.\nSource : Eurostat (gov_10q_ggdebt, 4e trimestre),",
+                          if (base_size > 16) "\n" else " ", "téléchargé le 22/10/2026.")) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption.position = "plot",
+          plot.margin = margin(10, if (base_size > 16) 170 else 115, 8, 8))
+}
+
+# ---------------------------------------------------------------------------
+# 5 quater. Données : solde primaire observé et corrigé de la conjoncture, 2006-2025
+#    Commission européenne, AMECO, prévisions du printemps 2026 (UBLGIE, UBLGBP,
+#    UBLGBPS), téléchargé le 22/10/2026. 2026 et 2027 (prévisions) exclues.
+#    Fichier et provenance : data/cm8/grece_solde_primaire_corrige_2006_2025.csv et data/cm8/SOURCES.md.
+#    Le solde corrigé dépend d'une estimation du PIB potentiel : une mesure, pas une observation.
+# ---------------------------------------------------------------------------
+solde_corrige_cm8 <- utils::read.csv(here::here("data/cm8/grece_solde_primaire_corrige_2006_2025.csv"))
+
+#' Solde primaire grec, 2006-2025 : corrigé de la conjoncture (rouge, % du PIB potentiel)
+#' et observé (gris, % du PIB) ; ligne zéro ; bande grise = plans d'aide 2010-2018.
+graphe_solde_corrige <- function(base_size = 16) {
+  series <- c("Corrigé de\nla conjoncture", "Observé")
+  d <- rbind(data.frame(annee = solde_corrige_cm8$annee, serie = series[1],
+                        solde = solde_corrige_cm8$solde_primaire_corrige),
+             data.frame(annee = solde_corrige_cm8$annee, serie = series[2],
+                        solde = solde_corrige_cm8$solde_primaire))
+  d$serie <- factor(d$serie, levels = series)
+  fin <- d[d$annee == max(d$annee), ]
+  fin$y <- fin$solde + c(-1.6, 1.2) * base_size / 16   # écarte les étiquettes (3,5 et 4,9)
+  taille <- base_size / 3.4
+  ggplot(d, aes(annee, solde, colour = serie)) +
+    bande_plans_cm8() +
+    geom_hline(yintercept = 0, colour = couleurs_eco[["neutre"]], linewidth = 0.4) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 1.4) +
+    geom_text(data = fin, aes(y = y, label = serie), hjust = 0, nudge_x = 0.4, lineheight = 0.85,
+              family = police_cours, size = taille) +
+    annotate("text", x = 2013.2, y = -10.6, hjust = 0, family = police_cours, size = taille * 0.85,
+             colour = couleurs_eco[["neutre"]], label = "2013 : mesures ponctuelles") +
+    scale_colour_manual(values = unname(couleurs_eco[c("alerte", "neutre")])) +
+    scale_x_continuous(breaks = if (base_size > 16) c(2006, 2012, 2018, 2025) else c(2006, 2009, 2012, 2018, 2025)) +
+    scale_y_continuous(breaks = seq(-10, 10, 5), labels = nombre_fr) +
+    coord_cartesian(ylim = c(-11.5, 11.5), clip = "off") +
+    # PIB* : le solde observé est en % du PIB, le solde corrigé en % du PIB potentiel.
+    # Version diapo : légende réduite, la source est dans la ligne .wp-source de la diapo.
+    labs(x = NULL, y = "Solde primaire (% du PIB*)",
+         caption = if (base_size > 16)
+           "Bande grise : plans d'aide, 2010-2018.\n* Corrigé de la conjoncture : en % du PIB potentiel."
+         else "Bande grise : plans d'aide, 2010-2018. * Corrigé de la conjoncture : en % du PIB potentiel.\nSource : Commission européenne, AMECO (UBLGIE, UBLGBP), printemps 2026,\ntéléchargé le 22/10/2026.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption.position = "plot",
+          plot.margin = margin(10, if (base_size > 16) 175 else 115, 8, 8))
+}
+
+# ---------------------------------------------------------------------------
+# 5 quinquies. Données : solde migratoire et solde naturel de la Grèce, 2000-2025
+#    Eurostat, demo_gind (CNMIGRAT, NATGROW), téléchargé le 22/10/2026 ; 2025 provisoire.
+#    Fichier et provenance : data/cm8/grece_soldes_demographiques_2000_2025.csv et data/cm8/SOURCES.md.
+#    Le solde migratoire est calculé par différence : il absorbe les corrections des
+#    recensements (2011, 2021).
+# ---------------------------------------------------------------------------
+demo_cm8 <- utils::read.csv(here::here("data/cm8/grece_soldes_demographiques_2000_2025.csv"))
+
+#' Solde migratoire (bleu) et solde naturel (gris), en milliers de personnes par an, 2000-2025 ;
+#' creux du solde migratoire en 2013 annoté ; bande grise = plans d'aide 2010-2018.
+graphe_soldes_demographiques <- function(base_size = 16) {
+  series <- c("Solde migratoire", "Solde naturel")
+  d <- rbind(data.frame(annee = demo_cm8$annee, serie = series[1], milliers = demo_cm8$solde_migratoire / 1000),
+             data.frame(annee = demo_cm8$annee, serie = series[2], milliers = demo_cm8$solde_naturel / 1000))
+  d$serie <- factor(d$serie, levels = series)
+  fin <- d[d$annee == max(d$annee), ]
+  creux <- val_cm8(demo_cm8, "solde_migratoire", 2013)
+  taille <- base_size / 3.4
+  ggplot(d, aes(annee, milliers, colour = serie)) +
+    bande_plans_cm8() +
+    geom_hline(yintercept = 0, colour = couleurs_eco[["neutre"]], linewidth = 0.4) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = 1.4) +
+    geom_text(data = fin, aes(label = serie), hjust = 0, nudge_x = 0.5,
+              family = police_cours, size = taille) +
+    annotate("text", x = 2013.4, y = creux / 1000 - 3, hjust = 0, vjust = 1, family = police_cours,
+             size = taille * 0.85, colour = couleurs_eco[["demande"]],
+             label = paste(nombre_fr(creux), "en 2013")) +
+    scale_colour_manual(values = unname(couleurs_eco[c("demande", "neutre")])) +
+    scale_x_continuous(breaks = if (base_size > 16) c(2000, 2010, 2017, 2025) else c(2000, 2010, 2013, 2018, 2025)) +
+    scale_y_continuous(breaks = seq(-75, 75, 25), labels = nombre_fr) +
+    coord_cartesian(ylim = c(-80, 70), clip = "off") +
+    labs(x = NULL, y = "Personnes par an (milliers)",
+         # version diapo : légende réduite, source et définitions dans .wp-source et les notes
+         caption = if (base_size > 16)
+           "Bande grise : plans d'aide, 2010-2018.\nSolde migratoire : y compris ajustement statistique."
+         else "Bande grise : plans d'aide, 2010-2018. Solde migratoire : arrivées moins départs,\ny compris ajustement statistique ; solde naturel : naissances moins décès.\nSource : Eurostat (demo_gind), téléchargé le 22/10/2026 ; 2025 provisoire.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption.position = "plot",
+          plot.margin = margin(10, if (base_size > 16) 190 else 125, 8, 8))
+}
+
+# ---------------------------------------------------------------------------
 # 6. Vérifications : chaque chiffre annoncé dans cours/cm8.qmd
 # ---------------------------------------------------------------------------
 proche <- function(x, y, tol = 1e-6) abs(x - y) < tol
@@ -420,3 +558,46 @@ stopifnot(
   with(repartition_cm8, chomage[categorie == "Macédoine-Occidentale" & annee == 2025] >
                         max(chomage[groupe == "region" & annee == 2025 & categorie != "Macédoine-Occidentale"]))
 )
+# Dette par instrument (fig-dette-instruments), solde primaire corrigé (fig-solde-corrige)
+# et soldes démographiques (fig-soldes-demographiques) : valeurs citées dans la page
+v <- function(df, col, an) val_cm8(df, col, an)
+stopifnot(
+  identical(instruments_cm8$annee, 2007:2025), identical(solde_corrige_cm8$annee, 2006:2025),
+  identical(demo_cm8$annee, 2000:2025),
+  # même dette totale, à moins de 1 Md€ près, que la série annuelle (gov_10dd_edpt1) : 330, 321 et 363 Md€
+  abs(v(instruments_cm8, "dette_totale", 2010) - dette_md(2010)) < 1,
+  abs(v(instruments_cm8, "dette_totale", 2013) - dette_md(2013)) < 1,
+  abs(v(instruments_cm8, "dette_totale", 2025) - dette_md(2025)) < 1,
+  proche(v(instruments_cm8, "titres", 2011), 251.6), proche(v(instruments_cm8, "prets", 2011), 103.5),
+  proche(v(instruments_cm8, "titres", 2012), 93.4), proche(v(instruments_cm8, "prets", 2012), 210.6),
+  proche(v(instruments_cm8, "prets", 2013), 241.0),
+  proche(v(instruments_cm8, "titres", 2018), 52.9), proche(v(instruments_cm8, "titres", 2025), 98.0),
+  proche(v(instruments_cm8, "prets", 2025), 257.2),
+  # les titres dominent jusqu'en 2011, les prêts à partir de 2012
+  all(with(instruments_cm8, titres[annee <= 2011] > prets[annee <= 2011])),
+  all(with(instruments_cm8, prets[annee >= 2012] > titres[annee >= 2012])),
+  # solde primaire 2009-2012 : +14,8 points corrigé, +6,4 points observé
+  proche(r1(v(solde_corrige_cm8, "solde_primaire_corrige", 2009)), -8.8),
+  proche(r1(v(solde_corrige_cm8, "solde_primaire_corrige", 2012)), 6.0),
+  proche(r1(v(solde_corrige_cm8, "solde_primaire_corrige", 2012) - v(solde_corrige_cm8, "solde_primaire_corrige", 2009)), 14.8),
+  proche(r1(v(solde_corrige_cm8, "solde_primaire", 2009)), -10.3),
+  proche(r1(v(solde_corrige_cm8, "solde_primaire", 2012)), -3.9),
+  proche(r1(v(solde_corrige_cm8, "solde_primaire", 2012) - v(solde_corrige_cm8, "solde_primaire", 2009)), 6.4),
+  # AMECO et Eurostat (solde + intérêts) s'accordent sur 2010 : -5,3 %
+  proche(r1(v(solde_corrige_cm8, "solde_primaire", 2010)), r1(gr("solde", 2010) + gr("interets", 2010))),
+  # mesures ponctuelles de 2013 : solde structurel moins solde corrigé, environ 8,6 points
+  proche(r1(v(solde_corrige_cm8, "solde_primaire_structurel", 2013) - v(solde_corrige_cm8, "solde_primaire_corrige", 2013)), 8.6),
+  # solde migratoire : négatif de 2010 à 2017 (-282 633 en tout), creux de -68 052 en 2013,
+  # positif en 2018-2019, négatif en 2020-2021, positif depuis 2022 (+54 135 en 2024)
+  with(demo_cm8, all(solde_migratoire[annee %in% 2010:2017] < 0)),
+  with(demo_cm8, all(solde_migratoire[annee < 2010] > 0)),
+  proche(with(demo_cm8, sum(solde_migratoire[annee %in% 2010:2017])), -282633),
+  proche(v(demo_cm8, "solde_migratoire", 2013), -68052), proche(min(demo_cm8$solde_migratoire), -68052),
+  with(demo_cm8, all(solde_migratoire[annee %in% c(2018, 2019, 2022:2025)] > 0)),
+  with(demo_cm8, all(solde_migratoire[annee %in% 2020:2021] < 0)),
+  proche(v(demo_cm8, "solde_migratoire", 2024), 54135),
+  # solde naturel : négatif chaque année depuis 2011, entre -55 000 et -64 000 depuis 2021
+  with(demo_cm8, all(solde_naturel[annee >= 2011] < 0)),
+  with(demo_cm8, all(solde_naturel[annee >= 2021] >= -64000 & solde_naturel[annee >= 2021] <= -55000))
+)
+rm(v)

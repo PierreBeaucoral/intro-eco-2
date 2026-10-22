@@ -1,0 +1,6 @@
+"code","statut","surcharge_pct"
+"RENT_MKT","Locataires, loyer au prix du marché",18.7
+"RENT_FR","Locataires, loyer réduit ou gratuit",10.7
+"TOTAL","Ensemble de la population",6.4
+"OWN_L","Propriétaires avec emprunt",1.1
+"OWN_NL","Propriétaires sans emprunt",1.6

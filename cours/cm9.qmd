@@ -24,6 +24,17 @@ source(here::here("R/cm9.R"))
 
 Le 2 avril 2025, que l'administration américaine baptise « Jour de la libération », les États-Unis relèvent leurs droits de douane sur presque tous leurs partenaires. Le droit de douane moyen américain passe de 4,9 % en janvier 2025 à 24,2 % ce jour-là. En février 2026, il est encore d'environ 15 %, trois fois son niveau de départ (H. Guimbard, CEPII, *The Conversation*, 22/07/2026).
 
+```{r}
+#| label: fig-droit-effectif
+#| fig-cap: "Droit de douane effectif des États-Unis, 1929-2025 : droits de douane perçus par l'État fédéral, en % de la valeur des biens importés (années civiles). Lecture : après des décennies de baisse, le droit effectivement perçu triple en un an, de 2,6 % en 2024 à 8,0 % en 2025 (point rouge). C'est le niveau le plus élevé depuis 1946 (9,7 %), mais loin du pic de 1933 (18,7 %), atteint après la loi Smoot-Hawley de 1930. Précautions : ce droit effectif n'est pas le droit moyen cité dans le texte (4,9 % en janvier 2025, 24,2 % le 2 avril) ; il est plus bas parce que les achats se détournent des produits les plus taxés, que certains produits sont exemptés et que les droits sont versés avec retard. C'est une moyenne annuelle, qui lisse les variations à l'intérieur de 2025. Source : Bureau of Economic Analysis, comptes nationaux, tables 3.5 et 1.1.5, via FRED, séries B235RC1A027NBEA et A255RC1A027NBEA (consulté le 22/10/2026) ; calcul de l'auteur."
+#| fig-alt: "Graphique en lignes, un point par année de 1929 à 2025, en pourcentage des importations de biens. La courbe bleue part de 13 % en 1929, culmine à 18,7 % en 1933, puis baisse : 9,7 % en 1946, entre 5 et 7 % environ dans les années 1950 et 1960, sous 4 % à partir de la fin des années 1970 et vers 1,5 % dans les années 2000. Elle remonte à 3 % vers 2019, retombe à 2,6 % en 2024, puis bondit à 8,0 % en 2025, point marqué en rouge."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_droit_effectif()
+```
+
+Mesuré autrement, par les droits effectivement perçus rapportés à la valeur des biens importés, le droit américain passe de 2,6 % en 2024 à 8,0 % en 2025 : il triple, et atteint son niveau le plus élevé depuis 1946, sans approcher le pic de 1933, 18,7 % (@fig-droit-effectif ; calcul de l'auteur). Ce droit effectif reste inférieur au droit moyen, parce que les achats se détournent des produits les plus taxés : l'écart entre les deux mesures est lui-même un effet du droit.
+
 L'argent rentre. Les douanes américaines encaissaient 7,9 milliards de dollars (Md\$) en octobre 2024 ; elles en encaissent 33,1 Md\$ en octobre 2025. Sur l'exercice budgétaire 2026 (octobre 2025 à septembre 2026), les recettes douanières brutes atteignent 317,8 Md\$, contre 202,4 Md\$ l'exercice précédent, soit +57 % (Trésor des États-Unis, *Monthly Treasury Statement*, téléchargé le 21/10/2026 ; calcul de l'auteur).
 
 Deux questions se posent.
@@ -228,6 +239,17 @@ graphe_recettes_douane()
 
 **L'argent rendu ne revient pas forcément à ceux qui ont payé.** L'écart entre recettes brutes et nettes, surtout des remboursements, passe de 7,5 Md\$ sur l'exercice 2025 à 145 Md\$ sur l'exercice 2026 (@fig-recettes-douane ; calcul de l'auteur). Ces remboursements vont aux **importateurs**, qui ont versé les droits, alors qu'ils ont pu en répercuter une partie sur leurs clients. La Cour du commerce international a ordonné de rembourser les importateurs, qui ont versé les droits (Bouët, Blog du CEPII, 27/03/2026) ; pour beaucoup, les entreprises qui ont répercuté la hausse sur leurs clients n'ont droit à aucun remboursement (Deysine, *The Conversation*, 23/02/2026). Savoir qui a supporté le droit est une question positive ; décider qui doit être remboursé est une question normative, que tranchent le droit et les tribunaux.
 
+```{r}
+#| label: fig-part-douane-impots
+#| fig-cap: "Droits de douane perçus par l'État fédéral américain, en % de ses impôts courants (cotisations sociales non comprises), 1929-2025, années civiles. Lecture : au début des années 1930, la douane finançait près d'un cinquième des impôts fédéraux (19,8 % en 1931) ; elle n'en finance plus que 2,7 % en 2024 et 7,5 % en 2025 (point rouge), la part la plus élevée depuis 1938, alors que les droits perçus ont plus que triplé. Précautions : rapportée à toutes les recettes, cotisations sociales comprises, la part serait plus faible ; le pic de 1931 vient aussi de l'effondrement des autres impôts pendant la crise (les impôts fédéraux passent de 3,5 milliards de dollars en 1929 à 1,8 milliard en 1931) ; ces années civiles ne se comparent pas directement aux exercices budgétaires de la @fig-recettes-douane. Source : Bureau of Economic Analysis, comptes nationaux, via FRED, séries B235RC1A027NBEA et W006RC1A027NBEA (consulté le 22/10/2026) ; calcul de l'auteur."
+#| fig-alt: "Graphique en lignes, un point par année de 1929 à 2025, en pourcentage des impôts fédéraux. La courbe bleue est vers 16 % en 1929 et 1930, culmine à 19,8 % en 1931, puis chute sous 2 % au début des années 1940. Elle reste ensuite entre 1 et 4 % pendant quatre-vingts ans, à 2,7 % en 2024, puis remonte à 7,5 % en 2025, point marqué en rouge."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_part_douane()
+```
+
+**Les recettes douanières restent une petite part des impôts fédéraux.** Rapportés à l'ensemble des impôts de l'État fédéral, les droits de douane pèsent 2,7 % en 2024 et 7,5 % en 2025 : c'est la part la plus élevée depuis 1938, mais moins d'un dixième des impôts, contre 19,8 % en 1931 (@fig-part-douane-impots ; calcul de l'auteur). Pour juger l'objectif « procurer des recettes à l'État », cet ordre de grandeur compte autant que la hausse.
+
 ## Effets de répartition
 
 ### Les acheteurs paient, les producteurs protégés gagnent
@@ -257,15 +279,37 @@ En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme 
 
 **Par territoire.** Les gains de l'ouverture sont diffus ; ses pertes sont concentrées. De 1990 à 2007, les zones industrielles américaines les plus exposées aux importations chinoises ont connu plus de chômage, des salaires plus bas et plus d'aides sociales ; cette concurrence explique environ un quart du recul de l'emploi industriel américain (Autor, Dorn et Hanson, 2013). Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles ont aussi leurs perdants localisés : en 2018, les représailles des partenaires ont surtout visé l'agriculture et frappé les travailleurs des secteurs exposés au commerce (Fajgelbaum et al., 2020).
 
+```{r}
+#| label: fig-chine-emploi
+#| fig-cap: "Part de la Chine dans les importations de biens des États-Unis (en haut, en %) et emploi salarié de l'industrie manufacturière américaine (en bas, en millions, moyenne annuelle), 1990-2025. La ligne verticale marque l'entrée de la Chine à l'Organisation mondiale du commerce (OMC), en décembre 2001. Lecture : de 2000 à 2010, la part de la Chine passe de 8,2 % à 19,1 % et l'emploi industriel tombe de 17,3 à 11,5 millions, un tiers de moins. Depuis 2018, la part de la Chine baisse (9,0 % en 2025) sans que l'emploi industriel remonte (12,6 millions). Précaution : deux évolutions simultanées ne prouvent pas que l'une cause l'autre ; selon Autor, Dorn et Hanson (2013), la concurrence chinoise explique environ un quart du recul de l'emploi industriel de 1990 à 2007, le reste tenant à d'autres causes, que le graphique ne distingue pas. Sources : Census Bureau, importations de biens en base douanière, via FRED, séries IMPCH et IMP0015 ; Bureau of Labor Statistics, série CES3000000001 (consulté le 22/10/2026) ; calcul de l'auteur."
+#| fig-alt: "Deux graphiques en lignes superposés, un point par année de 1990 à 2025, avec une ligne verticale en pointillés fin 2001. En haut, en rouge, la part de la Chine dans les importations américaines monte de 3,1 % en 1990 à 8,2 % en 2000, 19,1 % en 2010 et un maximum de 21,6 % en 2017, puis redescend à 9,0 % en 2025. En bas, en bleu, l'emploi industriel reste entre 16,8 et 17,7 millions de 1990 à 2000, chute à 11,5 millions en 2010, puis remonte lentement vers 12,6 millions en 2025."
+#| fig-width: 7.5
+#| fig-height: 5.6
+graphe_chine_emploi()
+```
+
+La @fig-chine-emploi met côte à côte la concurrence chinoise et l'emploi industriel américain. De 2000 à 2010, la part de la Chine dans les importations de biens des États-Unis passe de 8,2 % à 19,1 %, et l'emploi industriel tombe de 17,3 à 11,5 millions. La simultanéité ne prouve pas la cause : selon Autor, Dorn et Hanson, la concurrence chinoise n'explique qu'environ un quart du recul. Depuis 2018, la part de la Chine baisse (9,0 % en 2025) sans que l'emploi industriel remonte (12,6 millions) : les droits de 2018 et de 2025 ont-ils fait revenir les emplois ? Le graphique seul ne permet pas de le dire.
+
 **Par génération.** L'argument de l'industrie naissante (voir la controverse) est un pari entre générations : les consommateurs d'aujourd'hui paient plus cher pour qu'une industrie devienne compétitive demain. Il n'est gagnant que si ce gain existe et si la protection est retirée ensuite.
 
 **À l'étranger.** Les exportateurs qui perdent leurs ventes perdent leur surplus. En 2025, l'UE a vendu pour 554,7 milliards d'euros (Md€) de biens aux États-Unis (Eurostat, `ext_lt_maineu`, téléchargé le 21/10/2026).
+
+```{r}
+#| label: fig-export-ue-usa
+#| fig-cap: "Exportations mensuelles de biens de l'UE à 27 vers les États-Unis, janvier 2023 à août 2026, en milliards d'euros, corrigées des variations saisonnières et des jours ouvrables (CVS-CJO). Tirets horizontaux : moyenne mensuelle de 2024 (44,5 Md€) ; tirets verticaux : 2 avril 2025. Lecture : les exportateurs se pressent de livrer avant le droit (67,6 Md€ en mars 2025), puis vendent moins que leur moyenne de 2024 de juin 2025 à juin 2026, sauf en septembre 2025 (38,8 Md€ par mois en moyenne d'octobre 2025 à février 2026), avant de remonter à 45,0 Md€ en août 2026. Précautions : le graphique montre une chronologie, pas l'effet du seul droit de douane, car le taux de change de l'euro et la conjoncture américaine jouent aussi ; le pic de septembre 2025 (51,4 Md€) est un mois atypique, que ces données n'expliquent pas. Source : Eurostat, jeu ext_st_eu27_2020sitc, flux EXP, partenaire US (consulté le 22/10/2026) ; moyennes calculées par l'auteur."
+#| fig-alt: "Graphique en lignes, un point par mois de janvier 2023 à août 2026, en milliards d'euros. La courbe bleue monte doucement de 40 à 46 milliards de 2023 à fin 2024, autour d'une ligne horizontale en tirets à 44,5 milliards, la moyenne de 2024. Elle grimpe à 50, 54 puis 67,6 milliards de janvier à mars 2025, juste avant la ligne verticale du 2 avril 2025, retombe à 47 milliards en avril, puis reste entre 38 et 44 milliards de juin 2025 à juin 2026, sauf un pic isolé à 51 milliards en septembre 2025. Elle remonte à 46 puis 45 milliards en juillet et août 2026."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_export_ue_usa()
+```
+
+Mois par mois, la @fig-export-ue-usa montre la chronologie. Les exportateurs européens se pressent de livrer avant le 2 avril 2025 : 67,6 Md€ en mars 2025, contre 44,5 Md€ par mois en moyenne en 2024. Ils vendent ensuite moins : 38,8 Md€ par mois en moyenne d'octobre 2025 à février 2026, avant de revenir à 45,0 Md€ en août 2026. Le total de 2025, plus élevé que celui de 2024 (554,7 contre 535,6 Md€, @tbl-commerce-ue-usa), est gonflé par ces livraisons anticipées : d'avril à décembre, l'UE a vendu 382,9 Md€ de biens aux États-Unis en 2025, contre 407,7 Md€ en 2024 (Eurostat, `ext_st_eu27_2020sitc`, valeurs brutes, consulté le 22/10/2026 ; calcul de l'auteur).
 
 ### Le MACF : un droit de douane pour le climat ?
 
 L'Union européenne fait payer à ses industriels un prix du carbone. Produire hors de l'UE, là où émettre ne coûte rien, puis y exporter devient tentant : c'est la **fuite de carbone**. Le **mécanisme d'ajustement carbone aux frontières** (MACF) veut l'empêcher en faisant payer aux importations le carbone émis pour les produire, à un prix calculé sur celui des quotas européens (Commission européenne, page CBAM, consultée le 21/10/2026). Après une phase de simple déclaration de 2023 à 2025, son régime définitif s'applique depuis le 1^er^ janvier 2026 au ciment, au fer et à l'acier, à l'aluminium, aux engrais, à l'électricité et à l'hydrogène (*ibid.*). Il devient payant en 2027 : les certificats pour les importations de 2026 sont vendus à partir du 1^er^ février 2027 ; pour le ciment, l'acier, l'aluminium et les engrais, seuls les importateurs de plus de 50 tonnes par an sont concernés (Mayer Brown, 17/10/2025).
 
-Ce droit vise moins à protéger une industrie qu'à faire payer le même prix au carbone produit dans l'UE et au carbone importé. Ses perdants sont souvent loin : le Mozambique tire près d'un cinquième de ses exportations totales de l'aluminium vendu à l'UE. Deux économistes de l'Agence française de développement proposent d'en exempter les pays les moins avancés et de les aider autrement (Godin et Riccioppo Magacho, *The Conversation*, 10/01/2023).
+Ce droit vise moins à protéger une industrie qu'à faire payer le même prix au carbone produit dans l'UE et au carbone importé. Ses perdants sont souvent loin : le Mozambique tire de l'aluminium environ un sixième de ses exportations totales (15,4 % en 2023, ONU, base Comtrade), et l'UE en achète presque tout (Eurostat, Comext ; consultés le 22/10/2026). Deux économistes de l'Agence française de développement proposent d'en exempter les pays les moins avancés et de les aider autrement (Godin et Riccioppo Magacho, *The Conversation*, 10/01/2023).
 
 ## La controverse
 

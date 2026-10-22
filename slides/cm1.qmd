@@ -29,7 +29,7 @@ source(here::here("R/cm1.R"))   # même fichier que la page de cours
 [Sources : Insee, 24/03/2026 ; Commission européenne, *Weekly Oil Bulletin*, prix TTC, consulté le 21/10/2026.]{.wp-source}
 
 ::: {.notes}
-0 h 00 – 0 h 05. Demander à l'amphi : qui a fait le plein cette semaine ? Transition : la carte montre pourquoi ce passage se bloque si facilement.
+0 h 00 – 0 h 04. Demander à l'amphi : qui a fait le plein cette semaine ? Transition : la carte montre pourquoi ce passage se bloque si facilement.
 :::
 
 ## Le détroit d'Ormuz : un passage étroit entre l'Iran et Oman
@@ -50,7 +50,7 @@ source(here::here("R/cm1.R"))   # même fichier que la page de cours
 [Carte en anglais : Goran tek-en, CC BY-SA 4.0, Wikimedia Commons.]{.wp-source}
 
 ::: {.notes}
-0 h 05 – 0 h 08. Les flèches violettes sont les couloirs de navigation, un dans chaque sens. Question : que se passe-t-il pour l'offre mondiale si ce passage ferme ? Transition : comment la presse a raconté la flambée.
+0 h 04 – 0 h 07. Les flèches violettes sont les couloirs de navigation, un dans chaque sens. Question : que se passe-t-il pour l'offre mondiale si ce passage ferme ? Transition : comment la presse a raconté la flambée.
 :::
 
 ## Les unes de presse : un coût qui monte, des automobilistes contraints
@@ -72,7 +72,36 @@ source(here::here("R/cm1.R"))   # même fichier que la page de cours
 ::::
 
 ::: {.notes}
-0 h 08 – 0 h 12. Demander : lequel des deux titres parle de l'offre, lequel de la demande ? Le premier : le coût d'approvisionnement monte, l'offre recule. Le second : on ne renonce pas à aller travailler du jour au lendemain. Photo : en 1974, *The Oregon Journal* annonce « Gas Rationing Set Monday » (le rationnement de l'essence commence lundi), le panneau dit « Sorry no gasoline » : la pénurie s'affichait à la pompe. Autres titres dans la page de cours (*Le Figaro*, 08/03/2022 ; *Le Parisien*, 21/09/2026). Transition : trois faits à expliquer.
+0 h 07 – 0 h 10. Demander : lequel des deux titres parle de l'offre, lequel de la demande ? Le premier : le coût d'approvisionnement monte, l'offre recule. Le second : on ne renonce pas à aller travailler du jour au lendemain. Photo : en 1974, *The Oregon Journal* annonce « Gas Rationing Set Monday » (le rationnement de l'essence commence lundi), le panneau dit « Sorry no gasoline » : la pénurie s'affichait à la pompe. Autres titres dans la page de cours (*Le Figaro*, 08/03/2022 ; *Le Parisien*, 21/09/2026). Transition : 2026 et 2022 sur vingt ans de prix.
+:::
+
+## Gazole depuis 2005 : le record de 2026 dépasse celui de 2022
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Prix hebdomadaires TTC de l'Euro-super 95 et du gazole en France de 2005 à 2026, en euros courants ; deux points marquent les records du gazole, 2,14 euros en mars 2022 et 2,38 euros en septembre 2026"
+graphe_prix_pompe_long(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Record hebdomadaire du gazole en 2022 : 2,14 € (semaine du 14/03).
+- En 2026 : 2,38 € (semaine du 21/09), soit 24 centimes de plus.
+
+::: {.fragment}
+
+- Euros courants. Le gazole, d'habitude moins cher, passe au-dessus de l'essence pendant la majeure partie de 2022 et de 2026.
+:::
+:::
+::::
+
+[Source : Commission européenne, *Weekly Oil Bulletin*, prix TTC, moyennes hebdomadaires, consulté le 22/10/2026.]{.wp-source}
+
+::: {.notes}
+0 h 10 – 0 h 13. Euros courants, non corrigés de la hausse générale des prix ; le record journalier de 2,41 € du 20 septembre vient d'une autre série (*The Conversation*). Question : en 2022, le gazole coûtait-il déjà plus cher que l'essence ? (Oui, 33 semaines sur 51 à partir du 14 mars.) Transition : trois faits à expliquer.
 :::
 
 ## Trois faits à expliquer et la question de la séance
@@ -88,7 +117,7 @@ source(here::here("R/cm1.R"))   # même fichier que la page de cours
 **La question se précise** : pourquoi les carburants ont-ils flambé, et pourquoi si fort ? Deux outils s'ajoutent à l'offre et à la demande : le *déplacement* d'une courbe et l'*élasticité*.
 
 ::: {.notes}
-0 h 12 – 0 h 16. Demander lequel des trois faits les surprend le plus ; on y revient à la fin. Les chiffres sont arrêtés au 14 octobre 2026 (pétrole) et au 12 octobre 2026 (pompe) : la situation a pu évoluer, le raisonnement reste valable. Transition : on rappelle d'abord trois outils déjà connus.
+0 h 13 – 0 h 16. Demander lequel des trois faits les surprend le plus ; on y revient à la fin. Les chiffres sont arrêtés au 14 octobre 2026 (pétrole) et au 12 octobre 2026 (pompe) : la situation a pu évoluer, le raisonnement reste valable. Transition : on rappelle d'abord trois outils déjà connus.
 :::
 
 ## Rappel : équilibre, toutes choses égales par ailleurs, raisonnement à la marge
@@ -484,7 +513,7 @@ graphe_brent(base_size = 24)
 [Source : Commission européenne, *Weekly Oil Bulletin* ; calcul de l'auteur (consulté le 21/10/2026).]{.wp-source}
 
 ::: {.notes}
-1 h 45 – 1 h 51. Le hors-taxes regroupe le brut, le raffinage, le transport et la marge de distribution, que la source ne sépare pas : il revient aux producteurs, raffineurs et distributeurs. Pour le gazole, la part du hors-taxes dans la hausse est mécaniquement la même (83 %), l'accise étant fixe ; la TVA amplifie le choc de 20 %. Question : si l'État baissait l'accise, qui en profiterait ? (Renvoi au CM 2.) Transition : pourquoi le gazole a-t-il plus monté ?
+1 h 45 – 1 h 50. Le hors-taxes regroupe le brut, le raffinage, le transport et la marge de distribution, que la source ne sépare pas : il revient aux producteurs, raffineurs et distributeurs. Pour le gazole, la part du hors-taxes dans la hausse est mécaniquement la même (83 %), l'accise étant fixe ; la TVA amplifie le choc de 20 %. Question : si l'État baissait l'accise, qui en profiterait ? (Renvoi au CM 2.) Transition : pourquoi le gazole a-t-il plus monté ?
 :::
 
 ## Gazole : un second choc d'offre, sur le raffinage
@@ -500,7 +529,36 @@ graphe_brent(base_size = 24)
 Deux déplacements de l'offre, le brut puis le raffinage : gazole **+41 %**, essence **+29 %**, du 23/02 au 12/10/2026.
 
 ::: {.notes}
-1 h 51 – 1 h 55. Le prix du diesel augmente plus que l'effet mécanique du brut. Troisième fait de l'ouverture résolu. Question : sur le graphique théorique, combien de fois O se déplace-t-il pour le gazole ? (Deux fois.) Transition : et la quantité, a-t-elle beaucoup baissé ?
+1 h 50 – 1 h 53. Le prix du diesel augmente plus que l'effet mécanique du brut. Troisième fait de l'ouverture résolu. Question : sur le graphique théorique, combien de fois O se déplace-t-il pour le gazole ? (Deux fois.) Transition : le second choc se voit mieux sans les taxes.
+:::
+
+## Gazole hors taxes : l'écart au brut s'ouvre après le 28 février
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Prix hebdomadaires en euros par litre en 2026 : pétrole brut en noir, essence hors taxes en bleu, gazole hors taxes en ambre ; avant le 28 février, essence et gazole sont confondus, ensuite le gazole s'écarte nettement de l'essence et du brut"
+graphe_gazole_brut(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Avant le 28/02 : essence et gazole hors taxes coûtent 0,35 à 0,42 € de plus que le litre de brut.
+- Semaine du 13/04 : écart de 0,34 € pour l'essence, de 0,65 € pour le gazole.
+
+::: {.fragment}
+
+- Un écart, pas une marge de raffinage : il comprend aussi transport, stocks et distribution.
+:::
+:::
+::::
+
+[Sources : Commission européenne, *Weekly Oil Bulletin* (hors taxes) ; EIA (Brent) ; BCE (euro-dollar) ; calcul de l'auteur, consulté le 22/10/2026.]{.wp-source}
+
+::: {.notes}
+1 h 53 – 1 h 56. On retire les taxes pour comparer au brut, converti en euros par litre. En août, l'écart du gazole s'ouvre encore (0,75 € la semaine du 31 août) : moratoire russe, raffineries endommagées. En juillet, l'écart de l'essence gonfle aussi (0,53 €) : le prix ne baisse pas aussi vite qu'il monte (S. Ruel, *The Conversation*). Question : où voit-on le second choc d'offre ? (Dans l'écart entre le gazole et l'essence après le 28 février.) Transition : et la quantité, a-t-elle beaucoup baissé ?
 :::
 
 ## Demande peu élastique : presque autant de litres, beaucoup plus cher
@@ -517,7 +575,7 @@ Deux déplacements de l'offre, le brut puis le raffinage : gazole **+41 %**, ess
 Première approximation : l'élasticité de court terme est appliquée à une hausse étalée sur huit mois.
 
 ::: {.notes}
-1 h 55 – 1 h 59. Faire calculer chaque étape avant le clic. Deuxième fait de l'ouverture : on paie beaucoup plus, on roule à peine moins. Question : pourquoi la facture augmente-t-elle presque autant que le prix ? Transition : les données de livraisons confirment-elles ?
+1 h 56 – 1 h 59. Faire calculer chaque étape avant le clic. Deuxième fait de l'ouverture : on paie beaucoup plus, on roule à peine moins. Question : pourquoi la facture augmente-t-elle presque autant que le prix ? Transition : les données de livraisons confirment-elles ?
 :::
 
 ## Livraisons de carburants routiers : un recul modeste en 2026
@@ -597,7 +655,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 ::::
 
 ::: {.notes}
-2 h 09 – 2 h 12. Plafond appliqué par intermittence depuis mars 2026, en France hexagonale (communiqués du 22/07 et du 12/10/2026 ; AFP, 24/09/2026). Le 12/10/2026, l'entreprise maintient son plafond de 2,25 € sur le gazole au-delà de fin janvier 2027. Même mécanisme que la pénurie du choc d'offre : prix maintenu au-dessous de l'équilibre. Question : au prix plafonné, qui veut acheter chez Total ? Transition : les clients affluent.
+2 h 09 – 2 h 11. Plafond appliqué par intermittence depuis mars 2026, en France hexagonale (communiqués du 22/07 et du 12/10/2026 ; AFP, 24/09/2026). Le 12/10/2026, l'entreprise maintient son plafond de 2,25 € sur le gazole au-delà de fin janvier 2027. Même mécanisme que la pénurie du choc d'offre : prix maintenu au-dessous de l'équilibre. Question : au prix plafonné, qui veut acheter chez Total ? Transition : les clients affluent.
 :::
 
 ## Plafond TotalEnergies : report de clientèle et ruptures d'approvisionnement
@@ -608,7 +666,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.notes}
-2 h 12 – 2 h 15. Sources : AFP, *Connaissance des Énergies*, 24/09/2026 ; AFP, 29/08/2026 ; communiqué TotalEnergies, 12/10/2026 (23 % en 2025) ; AFP, 21/09/2026. La pénurie se concentre là où le prix est bloqué. Question : pourquoi les ruptures touchent-elles surtout Total ? Transition : qui rationne, si ce n'est plus le prix ?
+2 h 11 – 2 h 13. Sources : AFP, *Connaissance des Énergies*, 24/09/2026 ; AFP, 29/08/2026 ; communiqué TotalEnergies, 12/10/2026 (23 % en 2025) ; AFP, 21/09/2026. La pénurie se concentre là où le prix est bloqué. Question : pourquoi les ruptures touchent-elles surtout Total ? Transition : qui rationne, si ce n'est plus le prix ?
 :::
 
 ## Plafond TotalEnergies : la file d'attente rationne à la place du prix
@@ -620,7 +678,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.notes}
-2 h 15 – 2 h 17. Le prix payé n'est pas seulement 1,99 € : il faut y ajouter le temps de file et le risque. Les CM 3 et 4 chiffreront ce mécanisme. Question : un étudiant qui a du temps et un artisan qui n'en a pas paient-ils le même prix ? Transition : qui gagne et qui perd dans cette crise ?
+2 h 13 – 2 h 15. Le prix payé n'est pas seulement 1,99 € : il faut y ajouter le temps de file et le risque. Les CM 3 et 4 chiffreront ce mécanisme. Question : un étudiant qui a du temps et un artisan qui n'en a pas paient-ils le même prix ? Transition : qui gagne et qui perd dans cette crise ?
 :::
 
 ## Effets de répartition : les vendeurs gagnent, l'effet sur l'État est ambigu
@@ -632,7 +690,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.notes}
-2 h 17 – 2 h 20. En 2026, la perte d'accise l'emporte. Le CM 2 dira qui paie vraiment un impôt. Question : l'État s'enrichit-il de la crise ? (Non, au total : −383 M€.) Transition : du côté des ménages, qui paie le plus ?
+2 h 15 – 2 h 17. En 2026, la perte d'accise l'emporte. Le CM 2 dira qui paie vraiment un impôt. Question : l'État s'enrichit-il de la crise ? (Non, au total : −383 M€.) Transition : du côté des ménages, qui paie le plus ?
 :::
 
 ## Effets de répartition : les ménages captifs de la voiture paient le plus
@@ -644,7 +702,66 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.notes}
-2 h 20 – 2 h 24. Estimation à revenus et kilomètres inchangés. Les ruraux ne sont pas moins sensibles au prix, ils consomment plus de litres. Génération : aucune source consultée ne chiffre l'effet par âge. Question : qui, dans l'amphi, ne peut pas se passer de sa voiture ? Transition : faut-il alors bloquer les prix ?
+2 h 17 – 2 h 19. Estimation à revenus et kilomètres inchangés. Les ruraux ne sont pas moins sensibles au prix, ils consomment plus de litres. Génération : aucune source consultée ne chiffre l'effet par âge. Question : qui, dans l'amphi, ne peut pas se passer de sa voiture ? Transition : les chiffres de l'Insee, territoire par territoire.
+:::
+
+## Ménages très exposés : près de deux fois plus nombreux à la campagne
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Pour chaque type de territoire, un point gris aux prix de 2021 et un point rouge aux prix de 2026 : 8,4 puis 17,4 % dans les pôles urbains, 16,7 puis 32,9 % dans le rural non périurbain, 10,6 puis 22,4 % pour l'ensemble"
+graphe_menages_exposes(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Ménages motorisés qui consacrent au carburant plus d'un mois de revenu par an.
+- Pôles urbains : 8,4 % → 17,4 %.
+- Rural non périurbain : 16,7 % → 32,9 %.
+
+::: {.fragment}
+
+- Simulation : revenus et kilomètres de 2021, litre à 2,0 € (essence) et 2,2 € (gazole).
+:::
+:::
+::::
+
+[Source : Insee Première n° 2125, 08/09/2026, tableau complémentaire 3.]{.wp-source}
+
+::: {.notes}
+2 h 19 – 2 h 22. Point gris : prix de 2021 ; point rouge : 2,0 € et 2,2 € le litre, niveaux que l'Insee présente comme ceux du printemps 2026. Ensemble : 10,6 % puis 22,4 %. La part double environ partout ; c'est le niveau qui est près de deux fois plus haut à la campagne. Question : pourquoi les ruraux sont-ils plus exposés, s'ils ne sont pas moins sensibles au prix ? (Ils consomment plus de litres.) Transition : qui réagit le moins au prix ?
+:::
+
+## Élasticité selon l'usage : les gros rouleurs réagissent trois fois moins
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Élasticité-prix par quart de consommation passée, avec intervalles de confiance : −1,06 pour le premier quart, −0,52, −0,43, puis −0,32 pour le quatrième ; ensemble à −0,40 en tirets"
+graphe_elasticite_usage(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- 1er quart, les plus petits consommateurs : e = −1,06, demande élastique.
+- 4e quart, les plus gros : e = −0,32.
+
+::: {.fragment}
+
+- Traits verticaux : intervalle de confiance à 95 %. Seul l'écart entre le 1er et le 4e quart est net.
+:::
+:::
+::::
+
+[Source : Insee Analyses n° 86, 06/07/2023, figure 3c ; paiements par carte, septembre 2021 à janvier 2023.]{.wp-source}
+
+::: {.notes}
+2 h 22 – 2 h 25. Tirets : ensemble des consommateurs, −0,40, même méthode. L'intervalle de confiance est la marge d'incertitude de l'estimation : ne pas départager les quarts voisins. Données d'avant 2026. Question : pourquoi les gros rouleurs réduisent-ils si peu ? (Ils dépendent de la voiture, par exemple pour aller travailler.) Transition : faut-il alors bloquer les prix ?
 :::
 
 ## Analyse positive : remise générale et aide ciblée
@@ -655,7 +772,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.notes}
-2 h 24 – 2 h 27. Analyse positive : ce qui est, mécanismes et effets vérifiables. Remise de 2022 supprimée au 1^er^ janvier 2023. Aide ciblée : ministère de la Transition écologique, 22/09/2026, cité par l'AFP le 23/09/2026. Question : pourquoi une remise profite-t-elle plus, en euros, aux gros rouleurs ? Transition : deux instruments qui agissent sur l'offre et sur le financement.
+2 h 25 – 2 h 28. Analyse positive : ce qui est, mécanismes et effets vérifiables. Remise de 2022 supprimée au 1^er^ janvier 2023. Aide ciblée : ministère de la Transition écologique, 22/09/2026, cité par l'AFP le 23/09/2026. Question : pourquoi une remise profite-t-elle plus, en euros, aux gros rouleurs ? Transition : deux instruments qui agissent sur l'offre et sur le financement.
 :::
 
 ## Analyse positive : stocks stratégiques et taxe sur les profits exceptionnels
@@ -666,7 +783,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.notes}
-2 h 27 – 2 h 29. Stocks : communiqué TotalEnergies, 12/10/2026. Taxe : « contribution de solidarité temporaire » sur le pétrole brut, le gaz, le charbon et le raffinage, règlement du Conseil du 6 octobre 2022. Question : sur le graphique, dans quel sens se déplace O′ quand on libère des stocks ? Transition : l'analyse positive ne dit pas quoi choisir.
+2 h 28 – 2 h 30. Stocks : communiqué TotalEnergies, 12/10/2026. Taxe : « contribution de solidarité temporaire » sur le pétrole brut, le gaz, le charbon et le raffinage, règlement du Conseil du 6 octobre 2022. Question : sur le graphique, dans quel sens se déplace O′ quand on libère des stocks ? Transition : l'analyse positive ne dit pas quoi choisir.
 :::
 
 ## Analyse normative : cinq objectifs en balance
@@ -680,7 +797,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.notes}
-2 h 29 – 2 h 31. Analyse normative : ce qui devrait être, dépend de jugements de valeur. Climat : hausse prévue pour 2019 gelée (Banque des Territoires, *Localtis*, 19/12/2018). Concurrence : des distributeurs parlent de « concurrence déloyale » ; une fédération de stations indépendantes a saisi l'Autorité de la concurrence mi-juillet 2026 (AFP, 15/09/2026). Question : lequel de ces objectifs placez-vous en premier ? Transition : les écoles en présence.
+2 h 30 – 2 h 32. Analyse normative : ce qui devrait être, dépend de jugements de valeur. Climat : hausse prévue pour 2019 gelée (Banque des Territoires, *Localtis*, 19/12/2018). Concurrence : des distributeurs parlent de « concurrence déloyale » ; une fédération de stations indépendantes a saisi l'Autorité de la concurrence mi-juillet 2026 (AFP, 15/09/2026). Question : lequel de ces objectifs placez-vous en premier ? Transition : les écoles en présence.
 :::
 
 ## Les écoles en présence : néoclassiques et post-keynésiens
@@ -696,7 +813,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 Le débat porte moins sur le mécanisme que sur ce qu'on accepte de payer, en pénurie ou en argent public.
 
 ::: {.notes}
-2 h 31 – 2 h 33. Les deux écoles acceptent le mécanisme du choc d'offre. Question : à quelle école correspond le plafond de TotalEnergies, à quelle école l'aide aux grands rouleurs ? Transition : la synthèse de la controverse, et le débat.
+2 h 32 – 2 h 34. Les deux écoles acceptent le mécanisme du choc d'offre. Question : à quelle école correspond le plafond de TotalEnergies, à quelle école l'aide aux grands rouleurs ? Transition : la synthèse de la controverse, et le débat.
 :::
 
 ## Controverse : bloquer les prix ou aider les automobilistes
@@ -715,7 +832,7 @@ Le débat porte moins sur le mécanisme que sur ce qu'on accepte de payer, en p�
 - Néoclassiques : prix libre et transferts ciblés (Tinbergen, 1952) ; post-keynésiens : contenir quelques prix clés (Weber et Wasner, 2023).
 
 ::: {.notes}
-2 h 33 – 2 h 38. Débat en amphi, 3 minutes, après le clic. Les écoles divergent sur ce qu'on accepte de payer, en pénurie ou en argent public, pas sur le mécanisme. Exemple de 2026 : le plafond de TotalEnergies. Transition : que permet le droit ?
+2 h 34 – 2 h 38. Débat en amphi, 3 minutes, après le clic. Les écoles divergent sur ce qu'on accepte de payer, en pénurie ou en argent public, pas sur le mécanisme. Exemple de 2026 : le plafond de TotalEnergies. Transition : que permet le droit ?
 :::
 
 ## Droit : la liberté des prix et ses exceptions temporaires

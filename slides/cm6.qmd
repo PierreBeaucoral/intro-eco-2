@@ -314,7 +314,7 @@ L'erreur inverse : « la banque crée de l'argent sans limite ».
 :::
 
 ::: {.notes}
-1 h 01 – 1 h 05. Un prêt non remboursé est une perte : la banque a intérêt à choisir ses emprunteurs. Question : « Laquelle de ces limites la BCE contrôle-t-elle ? » (La troisième.) Transition : la troisième limite se voit dans les chiffres de la zone euro.
+1 h 01 – 1 h 04. Un prêt non remboursé est une perte : la banque a intérêt à choisir ses emprunteurs. Question : « Laquelle de ces limites la BCE contrôle-t-elle ? » (La troisième.) Transition : la troisième limite se voit dans les chiffres de la zone euro.
 :::
 
 ## Croissance de M3 en zone euro, 2019-2026 : accélération puis recul
@@ -340,7 +340,7 @@ graphe_m3_credits(base_size = 24, etape = 1) + source_m3
 ::::
 
 ::: {.notes}
-1 h 05 – 1 h 08. Lire l'axe : il s'agit de la croissance sur un an, pas du niveau. Une croissance négative veut dire que la monnaie a diminué. Question : « Que faut-il pour que la monnaie diminue ? » (Plus de remboursements que de crédits nouveaux.) Transition : on ajoute les crédits.
+1 h 04 – 1 h 07. Lire l'axe : il s'agit de la croissance sur un an, pas du niveau. Une croissance négative veut dire que la monnaie a diminué. Question : « Que faut-il pour que la monnaie diminue ? » (Plus de remboursements que de crédits nouveaux.) Transition : on ajoute les crédits.
 :::
 
 ## Crédits et monnaie évoluent ensemble depuis 2019
@@ -366,7 +366,7 @@ graphe_m3_credits(base_size = 24, etape = 2) + source_m3
 ::::
 
 ::: {.notes}
-1 h 08 – 1 h 11. Entreprises = sociétés non financières. Faire repérer à l'amphi le moment où les trois courbes plongent ensemble. Transition : qu'est-ce qui s'est passé à l'été 2022 ?
+1 h 07 – 1 h 10. Entreprises = sociétés non financières. Faire repérer à l'amphi le moment où les trois courbes plongent ensemble. Transition : qu'est-ce qui s'est passé à l'été 2022 ?
 :::
 
 ## Après la hausse des taux de juillet 2022, crédit et monnaie ralentissent
@@ -392,7 +392,7 @@ graphe_m3_credits(base_size = 24) + source_m3
 ::::
 
 ::: {.notes}
-1 h 11 – 1 h 15. Hausse décidée le 21 juillet, effective le 27. M3 recule de −1,3 % sur un an en août 2023 ; août 2026 provisoire (communiqué BCE du 25/09/2026). Question : « Pourquoi des taux plus élevés réduisent-ils la demande de crédit ? » Transition : peut-on parler de preuve ?
+1 h 10 – 1 h 13. Hausse décidée le 21 juillet, effective le 27. M3 recule de −1,3 % sur un an en août 2023 ; août 2026 provisoire (communiqué BCE du 25/09/2026). Question : « Pourquoi des taux plus élevés réduisent-ils la demande de crédit ? » Transition : peut-on parler de preuve ?
 :::
 
 ## Lecture du graphique : un mouvement commun, pas une preuve
@@ -408,7 +408,35 @@ graphe_m3_credits(base_size = 24) + source_m3
 - Mais le mouvement commun du crédit et de la monnaie est celui que prévoit la théorie : **quand le crédit cale, la création monétaire cale**.
 
 ::: {.notes}
-1 h 15 – 1 h 18. Distinguer corrélation et causalité : la théorie prévoit le mouvement, le graphique ne le prouve pas seul. Question : « Quelle autre cause pourrait faire baisser M3 en même temps ? » Transition : première énigme résolue ; reste la seconde, la chute d'une banque.
+1 h 13 – 1 h 15. Distinguer corrélation et causalité : la théorie prévoit le mouvement, le graphique ne le prouve pas seul. Question : « Quelle autre cause pourrait faire baisser M3 en même temps ? » Transition : l'autre source de monnaie, les achats de titres par la BCE.
+:::
+
+## Achats de titres par la BCE (2015-2022) : les réserves des banques montent avec eux
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Trois lignes, 2007 à 2026, en milliards d'euros : titres achetés par la BCE, en bleu, de près de zéro à près de 5 000 milliards à la mi-2022, puis 3 311 en octobre 2026 ; réserves des banques, en orange, de 300 milliards fin 2014 à 4 799 fin 2022, puis 2 291 ; billets, en gris, en lente hausse jusqu'à 1 633 milliards."
+graphe_bce_titres(base_size = 24) + labs(caption = NULL)
+```
+:::
+
+::: {.column width="40%"}
+- Fin 2014 → juin 2022 : titres détenus de 217 à **4 964 Md€**.
+- Réserves des banques : de 300 à **4 799 Md€** (octobre 2022).
+
+::: {.fragment}
+- Depuis, les deux reculent : 3 311 et 2 291 Md€ au 16/10/2026.
+:::
+:::
+::::
+
+[Source : BCE, Data Portal, bilan hebdomadaire de l'Eurosystème (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+1 h 15 – 1 h 18. Les réserves sont la monnaie de banque centrale de la définition (billets et réserves). Titres et réserves vont ensemble sans bouger à l'euro près : comme en 2011-2012 (prêts à trois ans), en 2020-2022 la BCE prête aussi beaucoup aux banques, et les réserves baissent quand celles-ci remboursent. Le dépôt créé chez le vendeur non bancaire du titre n'est pas sur ce graphique. Les billets sont tous ceux qu'émet l'Eurosystème (1 633 Md€), pas les billets et pièces de M3. Question : « Quand la BCE achète une obligation à une banque, avec quoi la paie-t-elle ? » (Des réserves.) Transition : première énigme résolue ; reste la seconde, la chute d'une banque.
 :::
 
 ## Diamond et Dybvig (1983) : dépôts courts, prêts longs, risque de panique
@@ -657,7 +685,7 @@ La **garantie des dépôts** est la promesse, faite par un fonds ou par l'État,
 :::
 
 ::: {.notes}
-1 h 55 – 1 h 59. C'est le résultat central de Diamond et Dybvig : une promesse crédible empêche la panique qu'elle est censée réparer. Sur le graphique, la garantie supprime la raison de passer sous le seuil de 18. Question : « Pourquoi la promesse doit-elle être crédible ? » Transition : à quoi ressemble une panique réelle.
+1 h 55 – 1 h 58. C'est le résultat central de Diamond et Dybvig : une promesse crédible empêche la panique qu'elle est censée réparer. Sur le graphique, la garantie supprime la raison de passer sous le seuil de 18. Question : « Pourquoi la promesse doit-elle être crédible ? » Transition : à quoi ressemble une panique réelle.
 :::
 
 ## Le cercle de la panique : Northern Rock, Brighton, septembre 2007
@@ -680,7 +708,7 @@ La **garantie des dépôts** est la promesse, faite par un fonds ou par l'État,
 ::::
 
 ::: {.notes}
-1 h 59 – 2 h 02. Photo : file devant une agence de Northern Rock, banque britannique spécialisée dans le crédit immobilier, le 14 septembre 2007, au moment des retraits massifs. Les déposants font la queue parce que chacun craint que les autres retirent avant lui : c'est le comportement que le jeu met en chiffres. Le tableau « Le cercle de la panique bancaire » est dans la page. Transition : SVB, une panique en quarante-huit heures.
+1 h 58 – 2 h 00. Photo : file devant une agence de Northern Rock, banque britannique spécialisée dans le crédit immobilier, le 14 septembre 2007, au moment des retraits massifs. Les déposants font la queue parce que chacun craint que les autres retirent avant lui : c'est le comportement que le jeu met en chiffres. Le tableau « Le cercle de la panique bancaire » est dans la page. Transition : SVB, une panique en quarante-huit heures.
 :::
 
 ## SVB fin 2022 (1/2) : un actif fait surtout de titres
@@ -706,7 +734,7 @@ graphe_svb(base_size = 24, etape = 1)
 ::::
 
 ::: {.notes}
-2 h 02 – 2 h 05. Sources : Réserve fédérale, 28/04/2023 ; The Conversation, 13/03/2023. Quand les taux montent, les nouvelles obligations rapportent plus que les anciennes : celles-ci perdent de la valeur si on doit les vendre avant l'échéance. Environ 17 milliards de dollars de moins-values latentes. Grandes banques : moyenne pondérée des banques américaines de plus de 100 milliards de dollars d'actifs, hors les plus grandes. Transition : et le passif ?
+2 h 00 – 2 h 03. Sources : Réserve fédérale, 28/04/2023 ; The Conversation, 13/03/2023. Quand les taux montent, les nouvelles obligations rapportent plus que les anciennes : celles-ci perdent de la valeur si on doit les vendre avant l'échéance. Environ 17 milliards de dollars de moins-values latentes. Grandes banques : moyenne pondérée des banques américaines de plus de 100 milliards de dollars d'actifs, hors les plus grandes. Transition : et le passif ?
 :::
 
 ## SVB fin 2022 (2/2) : 94 % des dépôts non garantis
@@ -731,7 +759,7 @@ graphe_svb(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 05 – 2 h 08. Garantie américaine : The Conversation, 13/03/2023. Faire le lien avec le jeu : des dépôts prompts à partir et un actif peu liquide, deux ingrédients de la panique. Question : « Qui, chez SVB, avait le plus intérêt à retirer le premier ? » Transition : le troisième ingrédient, la rumeur.
+2 h 03 – 2 h 06. Garantie américaine : The Conversation, 13/03/2023. Faire le lien avec le jeu : des dépôts prompts à partir et un actif peu liquide, deux ingrédients de la panique. Question : « Qui, chez SVB, avait le plus intérêt à retirer le premier ? » Transition : le troisième ingrédient, la rumeur.
 :::
 
 ## SVB, mars 2023 : une rumeur rapide, une garantie étendue après coup
@@ -746,7 +774,35 @@ graphe_svb(base_size = 24)
 [Sources : Réserve fédérale, 28/04/2023, notre traduction ; *The Conversation*, 13/03/2023 et 23/03/2023.]{.wp-source}
 
 ::: {.notes}
-2 h 08 – 2 h 11. SVB n'était donc pas une banque parfaitement saine. La garantie a été étendue après coup, pour éviter que la panique ne gagne d'autres banques. Question : « Selon Diamond et Dybvig, une garantie annoncée avant le 9 mars aurait-elle changé quelque chose ? » Transition : un autre argent sans banque, le mobile money.
+2 h 06 – 2 h 08. SVB n'était donc pas une banque parfaitement saine. La garantie a été étendue après coup, pour éviter que la panique ne gagne d'autres banques. Question : « Selon Diamond et Dybvig, une garantie annoncée avant le 9 mars aurait-elle changé quelque chose ? » Transition : la panique a-t-elle gagné d'autres banques ?
+:::
+
+## Mars 2023 : les dépôts quittent les petites banques américaines, pas les grandes
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Deux lignes hebdomadaires, janvier à juin 2023, indice 100 le 8 mars : les 25 plus grandes banques, en bleu, passent à 100,5 le 15 mars puis oscillent autour de 99,5 ; les autres banques, en rouge, chutent à 97,1 le 15 mars et 96,3 le 29 mars, puis remontent lentement vers 97,5. Tirets le 10 mars, fermeture de SVB."
+graphe_depots_us(base_size = 24) + labs(caption = NULL)
+```
+:::
+
+::: {.column width="40%"}
+- Du 8 au 15 mars 2023, banques hors des 25 plus grandes : **−2,9 %** de dépôts (149 Md$).
+- 25 plus grandes : +0,5 %.
+
+::: {.fragment}
+- Une partie des déposants semble se replier vers les plus grandes banques.
+:::
+:::
+::::
+
+[Source : Réserve fédérale, H.8, via FRED, données corrigées des variations saisonnières (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 08 – 2 h 11. Indice 100 le mercredi 8 mars, veille des retraits chez SVB. Creux des petites banques le 29 mars (96,3) ; fin juin, encore 2,5 % sous le niveau du 8 mars. Les grandes banques perdaient déjà des dépôts avant (101,9 début janvier). Séries révisées : le communiqué du 24/03/2023 donnait −2,2 % et +0,6 % pour la même semaine. Les banques-relais de SVB et de Signature sont comptées parmi les autres banques (H.8, 31/03/2023) : une partie de la baisse vient des deux banques en faillite elles-mêmes. Lien avec Pichet (controverse) : les grandes banques ont peu souffert. Question : « Pourquoi un déposant inquiet va-t-il vers une très grande banque ? » Transition : un autre argent sans banque, le mobile money.
 :::
 
 ## Point d'attention : le mobile money n'est pas une création monétaire
@@ -763,7 +819,7 @@ graphe_svb(base_size = 24)
 - Création monétaire seulement si une banque, commerciale ou centrale, accorde un **prêt** ou achète un titre.
 
 ::: {.notes}
-2 h 11 – 2 h 14. Question avant le clic : « Recharger son compte de mobile money avec des billets change-t-il la quantité de monnaie ? » (Non.) Plus de 2 100 milliards de dollars ont circulé sur ces comptes en 2025. En général, la réglementation oblige l'opérateur à placer un montant égal sur des comptes bancaires à part, pour que les clients récupèrent leur argent même s'il fait faillite (GSMA, 2026, glossaire). Le crédit arrive pourtant par le téléphone : à Abidjan, Tik Tak (Orange) ou MoMo Kash (MTN) accordent de petits prêts de un à trois mois, sur décision d'un algorithme qui lit l'historique du compte (Ducourant et al., The Conversation, 01/09/2026). Transition : qui gagne, qui perd ?
+2 h 11 – 2 h 13. Question avant le clic : « Recharger son compte de mobile money avec des billets change-t-il la quantité de monnaie ? » (Non.) Plus de 2 100 milliards de dollars ont circulé sur ces comptes en 2025. En général, la réglementation oblige l'opérateur à placer un montant égal sur des comptes bancaires à part, pour que les clients récupèrent leur argent même s'il fait faillite (GSMA, 2026, glossaire). Le crédit arrive pourtant par le téléphone : à Abidjan, Tik Tak (Orange) ou MoMo Kash (MTN) accordent de petits prêts de un à trois mois, sur décision d'un algorithme qui lit l'historique du compte (Ducourant et al., The Conversation, 01/09/2026). Transition : qui gagne, qui perd ?
 :::
 
 ## Effets de répartition : petits déposants couverts, gros déposants exposés
@@ -776,7 +832,7 @@ graphe_svb(base_size = 24)
 :::
 
 ::: {.notes}
-2 h 14 – 2 h 17. Les petits déposants étaient déjà protégés. Le crédit digital dépanne des ménages aux revenus irréguliers, mais à des taux annuels très élevés selon l'offre. Question : « Qui, dans l'amphi, a plus de 100 000 € sur un compte ? » Transition : territoire, génération, genre.
+2 h 13 – 2 h 15. Les petits déposants étaient déjà protégés. Le crédit digital dépanne des ménages aux revenus irréguliers, mais à des taux annuels très élevés selon l'offre. Question : « Qui, dans l'amphi, a plus de 100 000 € sur un compte ? » Transition : territoire, génération, genre.
 :::
 
 ## Effets de répartition : territoire, génération et genre
@@ -784,11 +840,67 @@ graphe_svb(base_size = 24)
 ::: {.incremental}
 - **Territoire** : l'essentiel des nouveaux comptes vient d'Afrique subsaharienne (GSMA, 2026). Au Sénégal, une taxe de 0,5 % adoptée en septembre 2025 pèse proportionnellement plus sur les ménages pauvres (Diouf, 2025).
 - **Génération** : à Abidjan, de jeunes adultes sans accès au crédit bancaire empruntent sur leur historique de mobile money ; l'enquête ne compare pas les âges.
-- **Genre** : dans les pays à revenu faible ou intermédiaire, en 2024, les femmes avaient **36 %** de chances en moins que les hommes d'avoir un compte de mobile money (30 % en 2021 ; GSMA, 2026).
+- **Genre** : dans les pays à revenu faible ou intermédiaire, en 2024, les femmes avaient **34 %** de chances en moins que les hommes d'avoir un compte de mobile money (30 % en 2021 ; Banque mondiale, Global Findex 2025).
 :::
 
 ::: {.notes}
-2 h 17 – 2 h 20. Sénégal : taxe sur les paiements, transferts et retraits en mobile money ; elle peut ramener les ménages pauvres vers l'argent liquide (A. Diouf, The Conversation, 10/10/2025). En France, le Fonds de garantie des dépôts est né d'une crise locale, le Crédit martiniquais (1999). Génération : enquête qualitative de mai 2025, dont des enquêtés de 21 ans ; bien rembourser fait monter le plafond, un retard le fait baisser (Ducourant et al., 01/09/2026). Genre : pays à revenu faible ou intermédiaire, GSMA (2026) d'après la Banque mondiale ; l'écart se creuse. Transition : qui profite de la création monétaire ?
+2 h 15 – 2 h 17. Sénégal : taxe sur les paiements, transferts et retraits en mobile money ; elle peut ramener les ménages pauvres vers l'argent liquide (A. Diouf, The Conversation, 10/10/2025). En France, le Fonds de garantie des dépôts est né d'une crise locale, le Crédit martiniquais (1999). Génération : enquête qualitative de mai 2025, dont des enquêtés de 21 ans ; bien rembourser fait monter le plafond, un retard le fait baisser (Ducourant et al., 01/09/2026). Genre : pays à revenu faible ou intermédiaire, Global Findex 2025 ; l'écart se creuse. Transition : les chiffres de la Banque mondiale, région par région.
+:::
+
+## Mobile money, 2014-2024 : 40 % des adultes en Afrique subsaharienne
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Deux lignes avec points, 2014, 2017, 2021 et 2024. Afrique subsaharienne, en orange : 11,4 %, 20,5 %, 27,3 % et 40,0 % des adultes. Monde, en gris : 2,1 %, 4,5 %, 10,5 % et 16,0 %."
+graphe_findex_regions(base_size = 24) + labs(caption = NULL)
+```
+:::
+
+::: {.column width="40%"}
+- Adultes ayant un compte de mobile money, Afrique subsaharienne : de 11 % (2014) à **40 %** (2024).
+
+::: {.fragment}
+- Monde : 16 % en 2024, soit 2,5 fois moins.
+- Une part d'adultes, pas un nombre de comptes.
+:::
+:::
+::::
+
+[Source : Banque mondiale, Global Findex 2025, 15 ans et plus (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 17 – 2 h 20. Afrique subsaharienne hors pays à revenu élevé. La figure ne dit pas à elle seule d'où viennent les nouveaux comptes (chiffre GSMA). L'indicateur compte aussi des portefeuilles numériques hors d'Afrique (Corée 60 %, Brésil 58 % en 2024) : prudence sur la ligne « monde ». Question : « Pourquoi le mobile money s'est-il diffusé là où les agences bancaires sont rares ? » Transition : et selon le genre ?
+:::
+
+## Mobile money et genre : l'écart passe de 4,5 à 7,5 points
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Deux haltères, pays à revenu faible ou intermédiaire. 2021 : femmes 10,5 %, hommes 15,0 %, écart de 4,5 points. 2024 : femmes 14,6 %, hommes 22,1 %, écart de 7,5 points."
+graphe_findex_genre(base_size = 24) + labs(caption = NULL)
+```
+:::
+
+::: {.column width="40%"}
+- 2024 : **14,6 %** des femmes, **22,1 %** des hommes (10,5 et 15,0 % en 2021).
+
+::: {.fragment}
+- Les deux progressent, les hommes plus vite.
+- Écart relatif : 30 % en 2021, 34 % en 2024.
+:::
+:::
+::::
+
+[Source : Banque mondiale, Global Findex 2025, pays à revenu faible ou intermédiaire (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 20 – 2 h 22. Écart relatif = 1 − part des femmes ÷ part des hommes : 1 − 14,6 ÷ 22,1 ≈ 33,9 % en 2024. Si un étudiant cite les 36 % de la GSMA (2026) : autre champ ou autre pondération, non vérifiés ; le Findex donne 30 % en 2021 et 34 % en 2024. Question : « Pourquoi l'écart en points peut-il se creuser alors que les femmes progressent aussi ? » Transition : qui profite de la création monétaire ?
 :::
 
 ## Création monétaire : un gain pour les banques et pour leurs emprunteurs
@@ -805,7 +917,7 @@ graphe_svb(base_size = 24)
 - Les emprunteurs peuvent acheter tout de suite un logement, une machine ou un scooter, sans attendre d'avoir épargné.
 
 ::: {.notes}
-2 h 20 – 2 h 23. Revenir sur Léa : le scooter tout de suite, plutôt qu'après un été d'épargne. Question : « Pourquoi le gain de la banque n'est-il pas égal aux intérêts ? » Transition : ce privilège est-il juste ?
+2 h 22 – 2 h 24. Revenir sur Léa : le scooter tout de suite, plutôt qu'après un été d'épargne. Question : « Pourquoi le gain de la banque n'est-il pas égal aux intérêts ? » Transition : ce privilège est-il juste ?
 :::
 
 ## Controverse : création monétaire bancaire et privilège des banques
@@ -823,7 +935,7 @@ graphe_svb(base_size = 24)
 - Qui doit choisir qui reçoit du crédit : les banques, la banque centrale, l'État ?
 
 ::: {.notes}
-2 h 23 – 2 h 27. Sources : Banque d'Angleterre, 2014 ; La finance pour tous, 2026. Réserver la création monétaire à la puissance publique, ou laisser la concurrence et la réglementation encadrer ce privilège ? L'analyse ne tranche pas : la réponse dépend de valeurs. Faire voter l'amphi après le clic. Transition : deux écoles s'opposent sur la description elle-même.
+2 h 24 – 2 h 27. Sources : Banque d'Angleterre, 2014 ; La finance pour tous, 2026. Réserver la création monétaire à la puissance publique, ou laisser la concurrence et la réglementation encadrer ce privilège ? L'analyse ne tranche pas : la réponse dépend de valeurs. Faire voter l'amphi après le clic. Transition : deux écoles s'opposent sur la description elle-même.
 :::
 
 ## Deux écoles : monnaie exogène ou monnaie endogène

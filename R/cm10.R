@@ -221,6 +221,144 @@ graphe_flux_co2 <- function(base_size = 16) {
 }
 
 # ---------------------------------------------------------------------------
+# 5. Graphique de données : empreinte carbone et émissions des résidents, France, 1990-2025
+#    Insee et SDES, Insee Première n° 2130 (13/10/2026), tableau complémentaire 2 et figure 3,
+#    téléchargé le 22/10/2026 (data/cm10/SOURCES.md). Tous gaz à effet de serre, en tonnes
+#    équivalent CO2 par habitant : ne se compare pas au CO2 seul de la section 4.
+#    Série révisée : 2023 y vaut 8,6 t et 6,0 t, pas les 9,4 t et 5,9 t du Rapport ODD 2024.
+# ---------------------------------------------------------------------------
+empreinte_cm10 <- utils::read.csv(here::here("data/cm10/empreinte_carbone_france_1990_2025.csv"),
+                                  encoding = "UTF-8")
+
+#' Deux courbes : empreinte carbone et émissions des résidents par habitant, 1990-2025,
+#' écart grisé (émissions importées moins émissions exportées), étiquettes en bout de trait.
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_empreinte_france <- function(base_size = 16) {
+  e <- empreinte_cm10
+  series <- c("Empreinte", "Émissions")
+  d <- rbind(data.frame(annee = e$annee, serie = series[1], t = e$empreinte_t_hab),
+             data.frame(annee = e$annee, serie = series[2], t = e$emissions_t_hab))
+  d$serie <- factor(d$serie, levels = series)
+  fin <- d[d$annee == max(d$annee), ]
+  fin$etiquette <- paste0(fin$serie, " : ", format(fin$t, decimal.mark = ",", nsmall = 1), " t")
+  taille <- base_size / 3.4
+  ggplot(d, aes(annee, t, colour = serie)) +
+    geom_ribbon(data = e, aes(x = annee, ymin = emissions_t_hab, ymax = empreinte_t_hab),
+                inherit.aes = FALSE, fill = "#E5E7EB") +
+    geom_line(linewidth = 1.2) +
+    geom_point(data = fin, size = base_size / 6.5) +
+    geom_text(data = fin, aes(label = etiquette), x = max(d$annee) + 1, hjust = 0,
+              family = police_cours, size = taille) +
+    annotate("text", x = 1991, y = 3.2, hjust = 0, lineheight = 0.9,
+             label = "Zone grisée : émissions importées\nmoins émissions exportées",
+             family = police_cours, size = taille * 0.85, colour = couleurs_eco[["neutre"]]) +
+    scale_colour_manual(values = unname(couleurs_eco[c("demande", "offre")])) +
+    scale_x_continuous(breaks = c(1990, 2000, 2010, 2025), expand = expansion(mult = c(0, 0))) +
+    scale_y_continuous(breaks = seq(0, 14, 2), labels = function(v) paste0(v, " t")) +
+    coord_cartesian(xlim = c(1990, 2025), ylim = c(0, 14), clip = "off") +
+    labs(x = NULL, y = "Tonnes éq. CO₂ par habitant",
+         caption = if (base_size > 16) "Tous gaz à effet de serre ; 2025 provisoire." else   # diapo : source sur la ligne .wp-source
+           "Tous gaz à effet de serre. Source : Insee et SDES,\nInsee Première n° 2130 (13/10/2026) ; 2025 provisoire\n(téléchargé le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none",
+          plot.margin = margin(10, base_size * 7.5, 8, 8),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 6. Graphique de données : CO2 émis dans le monde et CO2 resté dans l'atmosphère,
+#    moyennes annuelles par décennie, 1965-2024.
+#    Global Carbon Project, Global Carbon Budget 2025 (v1.0, ICOS), téléchargé le 22/10/2026
+#    (data/cm10/SOURCES.md). Émissions = CO2 fossile et industriel net de la carbonatation
+#    du ciment + usage des sols : c'est cette définition qui redonne les 29 % et 21 % des puits
+#    cités dans la page. Décennies plutôt qu'années : la hausse annuelle du stock varie avec
+#    El Niño (69 % des émissions en 2024), une courbe annuelle brouillerait le message.
+# ---------------------------------------------------------------------------
+budget_cm10 <- utils::read.csv(here::here("data/cm10/budget_carbone_mondial_1960_2024.csv"),
+                               encoding = "UTF-8")
+debuts_cm10 <- seq(1965, 2015, by = 10)
+moyenne_decennie <- function(x, y) mean(x[budget_cm10$annee %in% y:(y + 9)])
+decennies_cm10 <- data.frame(
+  debut = debuts_cm10,
+  emis = vapply(debuts_cm10, moyenne_decennie, numeric(1), x = budget_cm10$emissions_gtco2),
+  air  = vapply(debuts_cm10, moyenne_decennie, numeric(1), x = budget_cm10$hausse_atmosphere_gtco2)
+)
+decennies_cm10$part <- 100 * decennies_cm10$air / decennies_cm10$emis
+
+#' Barres par décennie : CO2 émis (gris) et part restée dans l'atmosphère (rouge, en %).
+#' @param base_size 16 (page) ou 24 (diapos ; décennies abrégées « 1965-74 », sauf « 1995-2004 »)
+graphe_co2_reste_air <- function(base_size = 16) {
+  d <- decennies_cm10
+  meme_siecle <- (d$debut + 9) %/% 100 == d$debut %/% 100   # « 1995-04 » se lirait à rebours
+  fin_dec <- ifelse(base_size > 16 & meme_siecle, substr(d$debut + 9, 3, 4), d$debut + 9)
+  d$periode <- factor(paste0(d$debut, "-", fin_dec), levels = paste0(d$debut, "-", fin_dec))
+  series <- c("CO₂ émis", "dont : resté dans l’atmosphère")
+  long <- rbind(data.frame(periode = d$periode, serie = series[1], v = d$emis),
+                data.frame(periode = d$periode, serie = series[2], v = d$air))
+  long$serie <- factor(long$serie, levels = series)
+  virgule0 <- function(v) format(round(v), trim = TRUE)
+  taille <- base_size / 3.4
+  ggplot(long, aes(periode, v, fill = serie)) +
+    geom_col(position = "identity", width = 0.72) +   # rouge dessiné par-dessus le gris
+    geom_text(data = d, aes(periode, emis, label = virgule0(emis)), inherit.aes = FALSE,
+              vjust = -0.4, family = police_cours, size = taille, colour = couleurs_eco[["neutre"]]) +
+    geom_text(data = d, aes(periode, air / 2, label = paste0(virgule0(part), " %")),
+              inherit.aes = FALSE, family = police_cours, size = taille, colour = "white") +
+    scale_fill_manual(values = c("#D1D5DB", couleurs_eco[["alerte"]])) +
+    scale_y_continuous(breaks = seq(0, 40, 10), limits = c(0, 46),
+                       expand = expansion(mult = c(0, 0))) +
+    labs(x = "Moyenne annuelle par décennie", y = "Milliards de tonnes de CO₂",
+         caption = paste0("Le reste est absorbé par les océans et la végétation,\naux incertitudes de mesure près.",
+                          if (base_size > 16) "" else   # diapo : source sur la ligne .wp-source
+                            "\nSource : Global Carbon Project, Global Carbon Budget\n2025 (téléchargé le 22/10/2026).")) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(axis.text.x = element_text(size = rel(0.8)),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 7. Graphique de données : financement climat fourni et mobilisé par les pays développés
+#    pour les pays en développement, 2016-2024, en milliards de dollars courants.
+#    OCDE (21/05/2026), Table 1, ligne « Grand Total », lue le 22/10/2026 (data/cm10/SOURCES.md).
+#    2013-2015 écartés : rupture de série sur la finance privée en 2015.
+#    La ligne à 300 Md$ (Bakou) donne un ordre de grandeur : son périmètre comptable exact
+#    n'est pas décrit dans la source.
+# ---------------------------------------------------------------------------
+finance_cm10 <- utils::read.csv(here::here("data/cm10/financement_climat_2016_2024.csv"),
+                                encoding = "UTF-8")
+
+#' Barres annuelles du financement climat, repères tiretés à 100 et 300 milliards de dollars.
+#' @param base_size 16 (page) ou 24 (diapos ; montants arrondis au milliard dans les barres)
+graphe_financement_climat <- function(base_size = 16) {
+  chiffres <- if (base_size > 16) 0 else 1
+  d <- finance_cm10
+  arrondi <- floor(d$total_mds_usd * 10^chiffres + 0.5) / 10^chiffres   # 58,5 -> 59, pas 58
+  d$etiquette <- format(arrondi, nsmall = chiffres, decimal.mark = ",", trim = TRUE)
+  cibles <- data.frame(y = c(100, 300),
+                       couleur = c(couleurs_eco[["neutre"]], couleurs_eco[["alerte"]]),
+                       etiquette = c("Objectif de 2020 : 100 Md$",
+                                     "Objectif de Bakou pour 2035 : 300 Md$"))
+  taille <- base_size / 3.4
+  ggplot(d, aes(annee, total_mds_usd)) +
+    geom_col(fill = couleurs_eco[["demande"]], width = 0.7) +
+    geom_text(aes(y = total_mds_usd / 2, label = etiquette), family = police_cours,   # sous le tireté de 100
+              size = taille * 0.85, colour = "white") +
+    geom_hline(yintercept = cibles$y, colour = cibles$couleur, linetype = "22", linewidth = 0.8) +
+    annotate("text", x = 2015.6, y = cibles$y, vjust = -0.4, hjust = 0, label = cibles$etiquette,
+             colour = cibles$couleur, family = police_cours, size = taille) +
+    scale_x_continuous(breaks = 2016:2024) +
+    scale_y_continuous(breaks = seq(0, 300, 50), limits = c(0, 330),
+                       expand = expansion(mult = c(0, 0))) +
+    labs(x = NULL, y = "Milliards de dollars courants",
+         caption = if (base_size > 16) "Public et privé mobilisé, dollars courants." else   # diapo : source sur la ligne .wp-source
+           "Public et privé mobilisé. Source : OCDE, Climate Finance\nProvided and Mobilised by Developed Countries in\n2013-2024 (21/05/2026), tab. 1 (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none",
+          axis.text.x = element_text(size = rel(0.8)),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
 # Vérifications : chiffres annoncés dans cours/cm10.qmd
 # ---------------------------------------------------------------------------
 proche <- function(x, y, tol = 0.01) abs(x - y) < tol
@@ -305,3 +443,38 @@ stopifnot(
   # Afrique : autour de 1 t sur toute la période
   all(abs(flux_cm10$co2_par_hab_t[flux_cm10$entite == "Afrique"] - 1) < 0.2)
 )
+
+# Empreinte carbone, budget carbone mondial, financement climat (@fig-empreinte-france,
+# @fig-co2-reste-air, @fig-financement-climat et leurs phrases de lecture)
+emp <- function(a) empreinte_cm10[empreinte_cm10$annee == a, ]
+fin_cm10 <- function(a) finance_cm10$total_mds_usd[finance_cm10$annee == a]
+budget_2015_2024 <- colMeans(budget_cm10[budget_cm10$annee %in% 2015:2024, -1])
+stopifnot(
+  nrow(empreinte_cm10) == 36,
+  # 2025 (Insee Première n° 2130) : empreinte 8,3 t et 571 Mt, émissions 5,8 t et 398 Mt
+  proche(emp(2025)$empreinte_t_hab, 8.3), proche(emp(2025)$emissions_t_hab, 5.8),
+  proche(round(emp(2025)$empreinte_mt), 571), proche(round(emp(2025)$emissions_mt), 398),
+  # écart d'environ 2,5 t ; importations « pour moitié » : 296 / 571 = 52 %
+  proche(emp(2025)$empreinte_t_hab - emp(2025)$emissions_t_hab, 2.5),
+  emp(2025)$importees_mt == 296, proche(round(100 * emp(2025)$importees_mt / emp(2025)$empreinte_mt), 52),
+  # 2023 dans cette série (légende) : 8,6 t et 6,0 t ; 1990 : 12,1 t et 10,1 t
+  proche(emp(2023)$empreinte_t_hab, 8.6), proche(emp(2023)$emissions_t_hab, 6.0),
+  proche(emp(1990)$empreinte_t_hab, 12.1), proche(emp(1990)$emissions_t_hab, 10.1),
+  # budget carbone : six décennies complètes ; puits 2015-2024 = 29 % (océans) et 21 % (terres)
+  nrow(budget_cm10) == 65,
+  all(vapply(debuts_cm10, function(y) sum(budget_cm10$annee %in% y:(y + 9)), integer(1)) == 10L),
+  proche(round(100 * budget_2015_2024[["puits_ocean_gtco2"]] / budget_2015_2024[["emissions_gtco2"]]), 29),
+  proche(round(100 * budget_2015_2024[["puits_terres_gtco2"]] / budget_2015_2024[["emissions_gtco2"]]), 21),
+  # émissions moyennes : 21 puis 41 milliards de tonnes ; part restée dans l'air entre 40 et 50 %
+  proche(round(decennies_cm10$emis[c(1, 6)]), c(21, 41)),
+  all(decennies_cm10$part >= 40 & decennies_cm10$part <= 50),
+  proche(round(decennies_cm10$part[6]), 50),
+  # financement climat : moins de 100 Md$ jusqu'en 2021 ; 115,9 en 2022 ; 136,7 en 2024 ; × 2,2
+  nrow(finance_cm10) == 9,
+  all(finance_cm10$total_mds_usd[finance_cm10$annee <= 2021] < 100),
+  proche(fin_cm10(2016), 58.5), proche(fin_cm10(2022), 115.9), proche(fin_cm10(2024), 136.7),
+  proche(round(300 / fin_cm10(2024), 1), 2.2)
+)
+# Légende de @fig-co2-reste-air : en 2024, la hausse du stock fait 69 % des émissions de l'année
+stopifnot(proche(round(100 * budget_cm10$hausse_atmosphere_gtco2[budget_cm10$annee == 2024] /
+                         budget_cm10$emissions_gtco2[budget_cm10$annee == 2024]), 69))

@@ -238,6 +238,17 @@ Le CO₂ s'accumule : ce qui réchauffe la planète aujourd'hui, c'est le **stoc
 
 Même si les flux annuels baissaient demain, la concentration continuerait de monter (@fig-keeling) tant que les émissions dépassent ce qu'absorbent les océans et la végétation. De 2015 à 2024, ces puits naturels ont absorbé environ la moitié des émissions : 29 % pour les océans et 21 % pour les terres (Global Carbon Budget 2025, *Earth System Science Data*, 13/05/2026). C'est ce stock qui cause les dommages futurs que le taux d'actualisation pèse.
 
+```{r}
+#| label: fig-co2-reste-air
+#| fig-cap: "CO₂ émis dans le monde (barres grises) et part restée dans l'atmosphère (en rouge), en milliards de tonnes de CO₂ par an, moyennes annuelles par décennie, de 1965-1974 à 2015-2024. CO₂ fossile et industriel, plus CO₂ lié au changement d'usage des sols. Lecture : en 2015-2024, il s'est émis en moyenne 41 milliards de tonnes de CO₂ par an, dont la moitié (50 %) est restée dans l'atmosphère et s'est ajoutée au stock. Le reste est absorbé par les océans et la végétation, aux incertitudes de mesure près : l'écart entre les émissions et la hausse du stock contient aussi une part non expliquée, notable dans les années 1960 et quasi nulle en 2015-2024. Moyennes par décennie, car la hausse annuelle du stock varie beaucoup d'une année à l'autre (69 % des émissions en 2024). Source : Global Carbon Project, Global Carbon Budget 2025, données v1.0, ICOS, CC BY 4.0 (consulté le 22/10/2026)."
+#| fig-alt: "Diagramme en barres, une par décennie, de 1965-1974 à 2015-2024. Chaque barre grise donne le CO2 émis en moyenne par an : 21, 25, 28, 32, 39 et 41 milliards de tonnes. La partie rouge, en bas de chaque barre, montre ce qui est resté dans l'atmosphère : 40 %, 46 %, 40 %, 45 %, 42 % et 50 % des émissions."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_co2_reste_air()
+```
+
+La @fig-co2-reste-air relie le flux au stock : de 1965-1974 à 2015-2024, les émissions mondiales de CO₂ ont doublé, de 21 à 41 milliards de tonnes par an en moyenne, et à chaque décennie 40 à 50 % de ce CO₂ est resté dans l'atmosphère. Plus le flux est grand, plus le stock monte vite.
+
 Le flux, lui, a changé. En 2024, un habitant des États-Unis émet 14,2 tonnes de CO₂, un Chinois 8,7, un Européen de l'UE 5,4, un Français 4,0, un Indien 2,2 et un Nigérian 0,6, pour une moyenne mondiale de 4,7 (Global Carbon Budget 2025, traitement Our World in Data, téléchargé le 21/10/2026). En 1990, un Chinois émettait 2,2 tonnes : la Chine a dépassé l'UE par habitant, et son cumul (15,4 % du total) rattrape celui de l'UE (16,3 %).
 
 ```{r}
@@ -251,7 +262,18 @@ graphe_flux_co2()
 
 De 1990 à 2024, l'émission par habitant a baissé d'environ 30 % aux États-Unis et de plus de 40 % dans l'UE ; elle a été multipliée par 4 en Chine, qui dépasse l'UE chaque année depuis 2017 (@fig-flux-co2). L'Afrique reste autour d'une tonne par habitant sur toute la période.
 
-Pour la France, il faut aussi compter ce qu'elle importe. Son **empreinte carbone** (tous gaz à effet de serre, importations comprises) est de 9,4 tonnes équivalent CO₂ par personne en 2023, contre 5,9 tonnes pour les émissions des seuls acteurs installés en France ; les importations font 56 % de l'empreinte (Insee, indicateurs ODD, Rapport 2024, données provisoires). Ils ne se comparent pas aux 4,0 tonnes ci-dessus (CO₂ seul, sans les importations).
+Pour la France, il faut aussi compter ce qu'elle importe. Son **empreinte carbone** (tous gaz à effet de serre, importations comprises) dépasse nettement les émissions des seuls acteurs installés en France (@fig-empreinte-france). Ces chiffres ne se comparent pas aux 4,0 tonnes ci-dessus (CO₂ seul, sans les importations).
+
+```{r}
+#| label: fig-empreinte-france
+#| fig-cap: "Empreinte carbone (en bleu) et émissions des résidents (en ambre) de la France, en tonnes équivalent CO₂ par habitant, de 1990 à 2025. Tous gaz à effet de serre (CO₂, méthane, protoxyde d'azote, gaz fluorés). L'empreinte compte les émissions liées à ce que consomment les Français, importations comprises ; les émissions sont celles des acteurs résidents, y compris une partie des transports aériens et maritimes à l'étranger (ce n'est pas l'inventaire du territoire). Lecture : en 2025, l'empreinte d'un Français est de 8,3 tonnes, contre 5,8 tonnes émises par les résidents ; la zone grisée (2,5 tonnes en 2025) correspond aux émissions importées moins les émissions exportées. Précautions : ces chiffres ne se comparent pas au CO₂ seul de la @fig-flux-co2 ; 2025 est provisoire et 1990-2009 est reconstitué à partir de 2010 ; la série a été révisée : 2023 y vaut 8,6 et 6,0 tonnes, contre 9,4 et 5,9 tonnes dans le Rapport ODD 2024 de l'Insee, et la part importée de l'empreinte y est de 51,5 %, contre 56 % dans ce rapport. Source : Insee et SDES, *Insee Première* n° 2130, 13/10/2026, tableau complémentaire 2 et figure 3 (consulté le 22/10/2026)."
+#| fig-alt: "Deux courbes de 1990 à 2025. La courbe bleue de l'empreinte carbone part de 12,1 tonnes par habitant, fluctue entre 10,7 et 12,1 tonnes jusqu'en 2002, monte jusqu'à 12,8 tonnes en 2008, puis baisse jusqu'à 8,3 tonnes en 2025. La courbe ambre des émissions des résidents part de 10,1 tonnes, oscille autour de 10 tonnes jusqu'à la fin des années 1990, puis baisse jusqu'à 5,8 tonnes. L'espace entre les deux courbes est grisé ; il est le plus large vers 2008."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_empreinte_france()
+```
+
+La @fig-empreinte-france suit les deux mesures dans la série publiée par l'Insee et le SDES le 13/10/2026 : en 2025, l'empreinte d'un Français atteint 8,3 tonnes équivalent CO₂, contre 5,8 tonnes émises par les résidents. Les deux courbes baissent depuis 1990, mais l'écart est encore de 2,5 tonnes en 2025 : une partie des émissions de la France a lieu dans les pays qui produisent ce qu'elle importe, et les émissions importées font environ la moitié de l'empreinte (296 millions de tonnes sur 571).
 
 ### Le Nord doit-il payer ?
 
@@ -260,6 +282,17 @@ La règle de Ramsey éclaire aussi cette question. Son second terme dit qu'un eu
 La convention-cadre des Nations unies sur les changements climatiques (CCNUCC, 1992) pose le principe : les pays agissent « en fonction de leurs responsabilités communes mais différenciées et de leurs capacités respectives », et les pays développés doivent être « à l'avant-garde » (art. 3.1). Deux critères se mêlent : la responsabilité (le stock émis) et la capacité à payer (le revenu). La liste des pays développés qui financent les autres date de 1992 (art. 4.3 et annexe II).
 
 Les négociations traduisent ce débat en milliards. À Bakou, l'objectif de 300 milliards de dollars par an d'ici 2035 doit financer la transition énergétique et l'adaptation des pays en développement. La Chine a refusé de figurer parmi les contributeurs obligés : les contributions des pays non « développés » restent volontaires (AFP, *Connaissance des Énergies*, 24/11/2024). À Belém, l'aide à l'adaptation devrait passer d'environ 40 à 120 milliards de dollars par an d'ici 2035, mais l'enveloppe totale de 300 milliards n'a pas été relevée (*Connaissance des Énergies*, mis à jour le 17/03/2026).
+
+```{r}
+#| label: fig-financement-climat
+#| fig-cap: "Financement climat fourni et mobilisé par les pays développés pour les pays en développement, en milliards de dollars courants, de 2016 à 2024 : financement public (bilatéral, multilatéral, crédits à l'exportation) et financement privé mobilisé. Tiretés : l'objectif de 100 milliards par an, fixé pour 2020, et celui de Bakou, 300 milliards par an d'ici 2035. Lecture : l'objectif de 100 milliards n'est dépassé qu'en 2022 (115,9 milliards) ; en 2024, le montant atteint 136,7 milliards. Précautions : dollars courants, non corrigés de l'inflation ; la part multilatérale et la finance privée sont attribuées aux pays développés par l'OCDE ; la série mesure l'objectif de 100 milliards, et le périmètre exact de l'objectif de Bakou n'est pas décrit dans cette source : la ligne à 300 milliards donne un ordre de grandeur. Les années 2013 à 2015 sont écartées (rupture de série). Source : OCDE, *Climate Finance Provided and Mobilised by Developed Countries in 2013-2024*, 21/05/2026, tableau 1 (consulté le 22/10/2026)."
+#| fig-alt: "Diagramme en barres bleues, une par année de 2016 à 2024 : 58,5 ; 71,6 ; 79,9 ; 80,4 ; 83,3 ; 89,6 ; 115,9 ; 132,8 et 136,7 milliards de dollars. Une ligne grise en tirets marque 100 milliards : les barres la dépassent à partir de 2022. Une ligne rouge en tirets, beaucoup plus haut, marque 300 milliards."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_financement_climat()
+```
+
+La @fig-financement-climat situe ces montants. Selon l'OCDE, les financements climat fournis et mobilisés par les pays développés n'ont dépassé 100 milliards de dollars qu'en 2022 (115,9 milliards), deux ans après l'année visée ; en 2024, ils atteignent 136,7 milliards. Pour arriver à 300 milliards en 2035, il faudrait multiplier ce montant par 2,2 environ (en dollars courants).
 
 **À l'intérieur d'un pays**, la question se pose comme pour toute taxe : qui supporte le prix du carbone dépend de la part de l'énergie dans le budget et des possibilités de s'en passer (CM 2 et 5).
 
@@ -332,6 +365,9 @@ Dessine-moi l'éco · « C'est vrai ça – Changement climatique : c'est vraime
 - OFCE, blog, L. Sequeira et F. Reynès, « Quels leviers comptent pour la valeur de l'action climatique ? », 18/11/2025. [Lien](https://www.ofce.fr/blog2024/fr/2025/20251113_LSFR/index.html)
 - W. Nordhaus, « Comments on the Stern Review » (conférence de Yale sur le rapport Stern, 2007, en anglais). [Lien](https://ycsg.yale.edu/sites/default/files/files/chapter5.pdf)
 - Insee, « Empreinte carbone », indicateurs des objectifs de développement durable, Rapport 2024 (données 2023). [Lien](https://www.insee.fr/fr/statistiques/fichier/3281683/09-Empreinte_Carbone_Rapport2024.pdf)
+- Insee et SDES, M. Grenier, S. Larrieu et M. Baude, « Émissions de gaz à effet de serre et empreinte carbone de la France en 2025 – Après deux années de baisse, l'empreinte diminue à peine », *Insee Première* n° 2130, 13/10/2026. [Lien](https://www.insee.fr/fr/statistiques/9074153?sommaire=8071406)
+- OCDE, *Climate Finance Provided and Mobilised by Developed Countries in 2013-2024*, 21/05/2026 (en anglais). [Lien](https://www.oecd.org/en/publications/2026/05/climate-finance-provided-and-mobilised-by-developed-countries-in-2013-2024_532c847f/full-report/component-2.html)
+- Global Carbon Project, *Global Carbon Budget 2025*, données v1.0, ICOS Carbon Portal, CC BY 4.0, consulté le 22/10/2026 (en anglais). [Lien](https://meta.icos-cp.eu/objects/qSjPBsV1drZnYdH-yCJMmkGn)
 - Our World in Data, « Cumulative CO₂ emissions » (Global Carbon Budget 2025), consulté le 21/10/2026. [Lien](https://ourworldindata.org/grapher/cumulative-co-emissions)
 - P. Friedlingstein et al., « Global Carbon Budget 2025 », *Earth System Science Data*, 18, p. 3211-3288, 13/05/2026 (en anglais). [Lien](https://essd.copernicus.org/articles/18/3211/2026/)
 - UNRIC, « UNFCCC: COP31 - der Weg nach Antalya », 02/03/2026 (en allemand). [Lien](https://unric.org/de/unfccc-cop31-der-weg-nach-antalya/)

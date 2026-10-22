@@ -268,6 +268,194 @@ graphe_composition_m3 <- function(base_size = 16, etape = 2) {
           plot.caption = element_text(margin = margin(t = 10)))
 }
 
+#' Nombre au format français : espace des milliers, virgule décimale. Nom propre
+#' au CM 6 pour ne pas écraser nombre_fr() de R/cm8.R (à fusionner dans theme_cours.R).
+nombre_fr_cm6 <- function(x, decimales = 0) {
+  formatC(x, format = "f", digits = decimales, big.mark = " ", decimal.mark = ",")
+}
+
+# ---------------------------------------------------------------------------
+# 4 bis. Données : titres achetés par la BCE, réserves des banques, billets
+#    BCE, Data Portal, bilan hebdomadaire consolidé de l'Eurosystème (ILM),
+#    dernière situation de chaque mois, janvier 2007 - 16/10/2026, en Md€.
+#    Réserves = comptes courants + facilité de dépôt. Titres : depuis juillet
+#    2009 (création du poste). Fichier et provenance : data/cm6/bce_titres_reserves.csv,
+#    data/cm6/SOURCES.md. Les billets du bilan (tous les billets émis) ne sont
+#    pas les « billets et pièces » de M3 (section 4).
+# ---------------------------------------------------------------------------
+bce_cm6 <- utils::read.csv(here::here("data/cm6/bce_titres_reserves.csv"))
+bce_cm6$date <- as.Date(bce_cm6$date)
+
+#' Valeur d'une série de bce_cm6 à une date « AAAA-MM-JJ » (fin de mois)
+valeur_bce <- function(serie, date) bce_cm6[[serie]][bce_cm6$date == as.Date(date)]
+
+#' Lignes : titres détenus par l'Eurosystème pour la politique monétaire (azur),
+#' réserves des banques (ambre) et billets en circulation (gris, contexte),
+#' fin de chaque mois, 2007-2026, en Md€. Étiquettes en bout de trait.
+graphe_bce_titres <- function(base_size = 16) {
+  noms <- c(titres_md = "Titres achetés\npar la BCE", reserves_md = "Réserves\ndes banques",
+            billets_md = "Billets")
+  d <- do.call(rbind, lapply(names(noms), function(s)
+    data.frame(date = bce_cm6$date, serie = noms[[s]], valeur = bce_cm6[[s]])))
+  d <- d[!is.na(d$valeur), ]
+  d$serie <- factor(d$serie, levels = unname(noms))
+  fin <- d[d$date == max(d$date), ]
+  fin$y <- fin$valeur + c(250, -100, -330)       # réserves et billets proches en bout de trait
+  ggplot(d, aes(date, valeur, colour = serie)) +
+    geom_line(linewidth = 1.1) +
+    geom_text(data = fin, aes(y = y, label = serie), hjust = 0, nudge_x = 120, lineheight = 0.85,
+              family = police_cours, size = base_size / 3.4) +
+    scale_colour_manual(values = unname(couleurs_eco[c("demande", "offre", "neutre")])) +
+    scale_x_date(breaks = as.Date(paste0(seq(2008, 2026, if (base_size > 16) 6 else 3), "-01-01")),
+                 date_labels = "%Y",
+                 expand = expansion(mult = c(0.01, if (base_size > 16) 0.4 else 0.22))) +
+    scale_y_continuous(breaks = seq(0, 5000, 1000), labels = nombre_fr_cm6, limits = c(0, 5200)) +
+    labs(x = NULL, y = "Encours (Md€)",
+         caption = "Source : BCE, Data Portal, bilan hebdomadaire de l'Eurosystème (ILM),\nfin de chaque mois (consulté le 22/10/2026). Réserves = comptes courants\n+ facilité de dépôt.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption.position = "plot",
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 4 ter. Données : dépôts des banques américaines, janvier-juin 2023
+#    Réserve fédérale, statistique H.8, via FRED : 25 plus grandes banques
+#    commerciales de droit américain (DPSLCBW027SBOG) et toutes les autres
+#    (DPSSCBW027SBOG), Md$, CVS, chaque mercredi. Indice 100 = mercredi
+#    8 mars 2023, veille des retraits massifs chez SVB. Séries révisées depuis
+#    2023 : voir data/cm6/SOURCES.md. Fichier : data/cm6/depots_banques_us_2023.csv.
+# ---------------------------------------------------------------------------
+depots_us_cm6 <- utils::read.csv(here::here("data/cm6/depots_banques_us_2023.csv"))
+depots_us_cm6$date <- as.Date(depots_us_cm6$date)
+base_depots_us <- depots_us_cm6[depots_us_cm6$date == as.Date("2023-03-08"), ]
+depots_us_cm6$indice_grandes <- 100 * depots_us_cm6$grandes_md_usd / base_depots_us$grandes_md_usd
+depots_us_cm6$indice_petites <- 100 * depots_us_cm6$petites_md_usd / base_depots_us$petites_md_usd
+
+#' Valeur d'une série de depots_us_cm6 un mercredi « AAAA-MM-JJ »
+valeur_depots_us <- function(serie, date) depots_us_cm6[[serie]][depots_us_cm6$date == as.Date(date)]
+
+#' Lignes hebdomadaires : dépôts des 25 plus grandes banques (azur) et des
+#' autres banques (rouge), indice 100 = 8 mars 2023 ; tirets le 10 mars
+#' (fermeture de SVB).
+graphe_depots_us <- function(base_size = 16) {
+  noms <- c(indice_grandes = "25 plus grandes\nbanques", indice_petites = "Autres banques\n(plus petites)")
+  d <- do.call(rbind, lapply(names(noms), function(s)
+    data.frame(date = depots_us_cm6$date, serie = noms[[s]], indice = depots_us_cm6[[s]])))
+  d$serie <- factor(d$serie, levels = unname(noms))
+  fin <- d[d$date == max(d$date), ]
+  neutre <- couleurs_eco[["neutre"]]
+  noms_mois <- c("janv.", "févr.", "mars", "avril", "mai", "juin")
+  if (base_size > 16) noms_mois[c(FALSE, TRUE)] <- ""   # diapos : un mois sur deux
+  ggplot(d, aes(date, indice, colour = serie)) +
+    geom_hline(yintercept = 100, colour = neutre, linewidth = 0.3) +
+    annotate("segment", x = as.Date("2023-03-10"), xend = as.Date("2023-03-10"), y = 96, yend = 101.6,
+             linetype = "22", colour = neutre) +
+    annotate("text", x = as.Date("2023-03-13"), y = 101.75, label = "10 mars : fermeture de SVB",
+             hjust = 0, vjust = 1, family = police_cours, size = base_size / 3.6, colour = neutre) +
+    geom_line(linewidth = 1.1) +
+    geom_point(size = base_size / 11) +
+    geom_text(data = fin, aes(label = serie), hjust = 0, nudge_x = 4, lineheight = 0.85,
+              family = police_cours, size = base_size / 3.4) +
+    scale_colour_manual(values = unname(couleurs_eco[c("demande", "alerte")])) +
+    scale_x_date(breaks = as.Date(sprintf("2023-%02d-01", 1:6)),
+                 labels = noms_mois,
+                 expand = expansion(mult = c(0.02, if (base_size > 16) 0.42 else 0.28))) +
+    scale_y_continuous(breaks = 96:102) +
+    coord_cartesian(ylim = c(96, 102)) +
+    labs(x = "2023 (chaque mercredi)", y = "Dépôts (100 = 8 mars 2023)",
+         caption = "Source : Réserve fédérale, H.8, via FRED (consulté le 22/10/2026). Banques\ncommerciales de droit américain, données corrigées des variations saisonnières.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption.position = "plot",
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 4 quater. Données : comptes de mobile money, Afrique subsaharienne et monde
+#    Banque mondiale, Global Findex 2025, indicateur mobileaccount.t.d (% des
+#    15 ans et plus), années d'enquête 2014, 2017, 2021, 2024. SSA = Afrique
+#    subsaharienne hors pays à revenu élevé. Une part d'adultes, pas un nombre
+#    de comptes. KOR et BRA (2024 seulement) servent au contrôle de la légende
+#    (portefeuilles numériques hors d'Afrique) et ne sont pas tracés.
+#    Fichier : data/cm6/findex_mobile_money_regions.csv.
+# ---------------------------------------------------------------------------
+findex_regions_cm6 <- utils::read.csv(here::here("data/cm6/findex_mobile_money_regions.csv"))
+
+#' Part des adultes ayant un compte de mobile money, pour une zone et une année
+part_findex <- function(z, a) {
+  findex_regions_cm6$part_adultes_pct[findex_regions_cm6$zone == z & findex_regions_cm6$annee == a]
+}
+
+#' Lignes avec points et valeurs : Afrique subsaharienne (ambre) et monde
+#' (gris), 2014-2024, en % des adultes.
+graphe_findex_regions <- function(base_size = 16) {
+  d <- findex_regions_cm6[findex_regions_cm6$zone %in% c("SSA", "WLD"), ]
+  d$zone <- factor(d$zone, levels = c("SSA", "WLD"), labels = c("Afrique\nsubsaharienne", "Monde"))
+  fin <- d[d$annee == max(d$annee), ]
+  fin$y <- fin$part_adultes_pct - c(4, 0)        # étiquette « Afrique » sous la valeur 40,0 %
+  ggplot(d, aes(annee, part_adultes_pct, colour = zone)) +
+    geom_line(linewidth = 1.1) +
+    geom_point(size = base_size / 6.5) +
+    # Afrique : étiquettes en haut à gauche du point, hors de la ligne qui monte
+    # (2014 moins décalée, sinon coupée au bord gauche sur la diapo) ;
+    # fond blanc sans bordure par sécurité.
+    geom_label(aes(label = paste0(nombre_fr_cm6(part_adultes_pct, 1), " %"),
+                   hjust = ifelse(zone == "Monde", 0.5, ifelse(annee == 2014, 0.6, 0.85)), vjust = ifelse(zone == "Monde", -0.6, -1)),
+               family = police_cours, size = base_size / 4, fill = "white",
+               linewidth = 0, label.padding = unit(0.08, "lines")) +
+    geom_text(data = fin, aes(y = y, label = zone), hjust = 0, nudge_x = 0.9, lineheight = 0.85,
+              family = police_cours, size = base_size / 3.4) +
+    scale_colour_manual(values = unname(couleurs_eco[c("offre", "neutre")])) +
+    scale_x_continuous(breaks = c(2014, 2017, 2021, 2024),
+                       limits = c(2013.5, if (base_size > 16) 2029 else 2027.5)) +
+    scale_y_continuous(breaks = seq(0, 40, 10), labels = function(x) paste0(x, " %"), limits = c(0, 45)) +
+    labs(x = "Année d'enquête", y = "Adultes ayant un compte\nde mobile money",
+         caption = "Source : Banque mondiale, Global Findex 2025, adultes de 15 ans et plus ;\nAfrique subsaharienne hors pays à revenu élevé (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption.position = "plot",
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 4 quinquies. Données : mobile money, femmes et hommes, 2021 et 2024
+#    Banque mondiale, Global Findex 2025, indicateurs mobileaccount.t.d.1
+#    (femmes) et .2 (hommes), pays à revenu faible ou intermédiaire (LMY).
+#    Écart relatif 2024 : 33,9 %, arrondi à 34 % sur la page ; la GSMA (2026)
+#    donne 36 % (champ non vérifié) ; voir data/cm6/SOURCES.md. Fichier : data/cm6/findex_mobile_money_genre.csv.
+# ---------------------------------------------------------------------------
+findex_genre_cm6 <- utils::read.csv(here::here("data/cm6/findex_mobile_money_genre.csv"))
+findex_genre_cm6$ecart_points <- findex_genre_cm6$hommes_pct - findex_genre_cm6$femmes_pct
+findex_genre_cm6$ecart_relatif <- 100 * (1 - findex_genre_cm6$femmes_pct / findex_genre_cm6$hommes_pct)
+
+#' Haltères : part des femmes (rouge) et des hommes (azur) ayant un compte de
+#' mobile money, 2021 en haut, 2024 en bas, avec l'écart en points.
+graphe_findex_genre <- function(base_size = 16) {
+  g <- findex_genre_cm6
+  g$annee <- factor(g$annee, levels = c(2024, 2021))
+  d <- rbind(data.frame(annee = g$annee, sexe = "Femmes", valeur = g$femmes_pct),
+             data.frame(annee = g$annee, sexe = "Hommes", valeur = g$hommes_pct))
+  taille <- base_size / 3.4
+  ggplot(d, aes(valeur, annee)) +
+    geom_segment(data = g, aes(x = femmes_pct, xend = hommes_pct, y = annee, yend = annee),
+                 colour = "#D1D5DB", linewidth = 3, inherit.aes = FALSE) +
+    geom_point(aes(colour = sexe), size = base_size / 3.5) +
+    geom_text(aes(label = paste0(sexe, "\n", nombre_fr_cm6(valeur, 1), " %"), colour = sexe,
+                  hjust = ifelse(sexe == "Femmes", 1.25, -0.25)),
+              lineheight = 0.85, family = police_cours, size = taille * 0.9) +
+    geom_text(data = g, aes(x = (femmes_pct + hommes_pct) / 2, y = annee,
+                            label = paste0("écart : ", nombre_fr_cm6(ecart_points, 1), " points")),
+              vjust = -1.6, family = police_cours, size = taille * 0.85,
+              colour = couleurs_eco[["neutre"]], inherit.aes = FALSE) +
+    scale_colour_manual(values = c(Femmes = couleurs_eco[["alerte"]], Hommes = couleurs_eco[["demande"]])) +
+    scale_x_continuous(limits = c(0, 30), breaks = seq(0, 30, 10), labels = function(x) paste0(x, " %")) +
+    labs(x = "Adultes ayant un compte de mobile money", y = NULL,
+         caption = "Source : Banque mondiale, Global Findex 2025, pays à revenu faible\nou intermédiaire, 15 ans et plus (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(colour = "#D1D5DB", linewidth = 0.4),
+          axis.line.x = element_blank(), plot.caption.position = "plot",
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
 # ---------------------------------------------------------------------------
 # 5. Vérifications : chaque chiffre annoncé dans cours/cm6.qmd
 # ---------------------------------------------------------------------------
@@ -329,3 +517,37 @@ stopifnot(encours("m2") == 16447,
 stopifnot(all(m3_cm6$m3[m3_cm6$mois %in% sprintf("2023-%02d", 7:11)] < 0),
           valeur_mois("m3", "2023-12") > 0, valeur_mois("m3", "2023-06") > 0,
           proche(round(100 * (76 - 91) / 91), -16))
+# BCE (fig-bce-titres) : 238 fins de mois ; titres 216,9 Md€ fin 2014, pic 4 963,7
+# (24/06/2022), 3 310,9 au 16/10/2026 ; réserves 300,0 fin 2014, pic 4 798,5
+# (28/10/2022), 2 291,0 au 16/10/2026 ; billets 1 632,5 (communiqué BCE du 20/10/2026).
+stopifnot(nrow(bce_cm6) == 238, max(bce_cm6$date) == as.Date("2026-10-16"),
+          proche(valeur_bce("titres_md", "2014-12-26"), 216.9), proche(valeur_bce("reserves_md", "2014-12-26"), 300),
+          proche(max(bce_cm6$titres_md, na.rm = TRUE), 4963.7), proche(valeur_bce("titres_md", "2022-06-24"), 4963.7),
+          proche(max(bce_cm6$reserves_md), 4798.5), proche(valeur_bce("reserves_md", "2022-10-28"), 4798.5),
+          proche(valeur_bce("titres_md", "2026-10-16"), 3310.9), proche(valeur_bce("reserves_md", "2026-10-16"), 2291),
+          proche(valeur_bce("billets_md", "2026-10-16"), 1632.5))
+# Dépôts américains (fig-depots-us) : semaine du 8 au 15 mars 2023, autres banques
+# −149,3 Md$ (−2,9 %), 25 plus grandes +0,5 % ; creux le 29/03 (indice 96,3) ;
+# fin juin 97,5 ; grandes banques à 101,9 début janvier.
+stopifnot(nrow(depots_us_cm6) == 26,
+          proche(round(valeur_depots_us("petites_md_usd", "2023-03-08") - valeur_depots_us("petites_md_usd", "2023-03-15"), 1), 149.3),
+          proche(round(valeur_depots_us("indice_petites", "2023-03-15") - 100, 1), -2.9),
+          proche(round(valeur_depots_us("indice_grandes", "2023-03-15") - 100, 1), 0.5),
+          proche(round(min(depots_us_cm6$indice_petites), 1), 96.3),
+          proche(valeur_depots_us("indice_petites", "2023-03-29"), min(depots_us_cm6$indice_petites)),
+          proche(round(valeur_depots_us("indice_petites", "2023-06-28"), 1), 97.5),
+          proche(round(valeur_depots_us("indice_grandes", "2023-01-04"), 1), 101.9))
+# Findex (fig-findex-regions) : Afrique subsaharienne 11,4 → 40,0 %, monde 2,1 → 16,0 %,
+# soit 2,5 fois plus en 2024.
+# Légende : portefeuilles numériques hors d'Afrique, Corée 60 % et Brésil 58 % en 2024.
+stopifnot(nrow(findex_regions_cm6) == 10,
+          round(part_findex("KOR", 2024)) == 60, round(part_findex("BRA", 2024)) == 58,
+          proche(part_findex("SSA", 2014), 11.4), proche(part_findex("SSA", 2024), 40),
+          proche(part_findex("WLD", 2014), 2.1), proche(part_findex("WLD", 2024), 16),
+          proche(part_findex("SSA", 2024) / part_findex("WLD", 2024), 2.5))
+# Findex (fig-findex-genre) : femmes 10,5 / hommes 15,0 % en 2021, 14,6 / 22,1 % en 2024 ;
+# écart 4,5 puis 7,5 points ; écart relatif 30 % puis 34 %.
+stopifnot(identical(findex_genre_cm6$annee, c(2021L, 2024L)),
+          proche(findex_genre_cm6$ecart_points, c(4.5, 7.5)),
+          identical(round(findex_genre_cm6$ecart_relatif), c(30, 34)),
+          proche(round(findex_genre_cm6$ecart_relatif[2], 1), 33.9))

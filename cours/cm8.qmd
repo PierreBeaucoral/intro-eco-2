@@ -46,6 +46,17 @@ Le résultat déroute (@fig-grece). De 2008 à 2013, le PIB réel recule de 27 %
 Politique qui réduit le déficit public en **baissant les dépenses** publiques, en **augmentant les impôts**, ou les deux. On la mesure par l'amélioration du solde public **hors effet de la conjoncture**, en points de PIB : une récession creuse le déficit d'elle-même, sans que la politique change.
 :::
 
+```{r}
+#| label: fig-solde-corrige
+#| fig-cap: "Solde primaire des administrations publiques grecques, 2006-2025 : observé, en % du PIB (gris), et corrigé de la conjoncture, en % du PIB potentiel (rouge). La bande grise couvre les trois plans d'aide (2010-2018). Lecture : de 2009 à 2012, le solde corrigé gagne 14,8 points (de −8,8 % à +6,0 %), le solde observé 6,4 points seulement (de −10,3 % à −3,9 %) : la récession a creusé le déficit pendant que l'État le réduisait. Précautions : le solde corrigé repose sur une estimation du PIB potentiel, révisée et discutée ; les deux séries n'ont pas le même dénominateur ; le creux de 2013 vient de mesures ponctuelles, d'environ 8,6 points de PIB potentiel, dont la base ne donne pas la nature. Édition du printemps 2026 : les valeurs peuvent différer de quelques dixièmes de celles d'Eurostat utilisées ailleurs dans la page. Source : Commission européenne, base AMECO (UBLGIE, UBLGBP, UBLGBPS), prévisions du printemps 2026 (téléchargé le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 2006 à 2025, avec une bande grise de 2010 à 2018 et une ligne horizontale à zéro. La courbe grise du solde observé descend de −1,6 pour cent du PIB en 2006 à −10,3 en 2009, remonte à −2,8 en 2011, redescend à −3,9 en 2012 puis −9,4 en 2013, devient positive en 2014 (0,2), puis de 2016 à 2019, autour de 4, chute à −7,0 en 2020, puis remonte à 4,9 en 2025. La courbe rouge du solde corrigé de la conjoncture suit la grise jusqu'en 2009, à −8,8, puis monte bien plus vite : +6,0 en 2012, un creux à 0,2 en 2013, environ +10 en 2016 et 2017 ; elle redescend près de zéro en 2020-2022 et finit à 3,5 en 2025."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_solde_corrige()
+```
+
+La @fig-solde-corrige applique cette mesure à la Grèce. Le solde corrigé de la conjoncture se rapporte au **PIB potentiel**, la production qu'on obtiendrait si les capacités de production étaient utilisées normalement : c'est une estimation, pas une observation. De 2009 à 2012, ce solde s'améliore de 14,8 points, alors que le solde observé ne gagne que 6,4 points (Commission européenne, AMECO, téléchargé le 22/10/2026)  : selon cette estimation, la récession a effacé dans les comptes plus de la moitié de l'effort budgétaire.
+
 ::: {#def-multiplicateur}
 ## Multiplicateur budgétaire
 Le **multiplicateur** (k) mesure la variation du PIB provoquée par une variation de la dépense publique : ΔPIB = k × Δ(dépense publique). Dans le cas le plus simple, il ne dépend que de la propension marginale à consommer : **k = 1 / (1 − c)**. Avec c = 0,5, k = 2 ; avec c = 0,8, k = 5. À ne pas confondre avec le multiplicateur de crédit du CM 6, qui relie la monnaie de banque centrale à la masse monétaire.
@@ -217,6 +228,17 @@ graphe_grece()
 En 2011, l'essentiel de la hausse vient de l'effet boule de neige, pas du déficit primaire, déjà réduit à 2,8 % du PIB. L'écart restant (27,3 contre 23,1) vient en partie de l'approximation, qui sous-estime l'effet quand la croissance est très négative, et d'opérations hors solde. De 2012 à 2016, les prix baissent même (déflateur du PIB : −2,0 % en 2013, Eurostat, calculs du cours) : le taux réel r ≈ i − π dépasse alors le taux nominal. En 2023, tout s'inverse : la croissance en valeur, gonflée par l'inflation, dépasse largement un taux apparent resté bas. Une grande partie de la dette est en effet due à des prêteurs publics européens, qui ont réduit les taux et allongé les durées de remboursement dès novembre 2012 (MES).
 
 ```{r}
+#| label: fig-dette-instruments
+#| fig-cap: "Dette publique de la Grèce selon l'instrument, en Md€ au 31 décembre, 2007-2025 : titres de dette (obligations et bons du Trésor, émis sur les marchés) en ambre, prêts en bleu. La bande grise couvre les trois plans d'aide (2010-2018). Lecture : fin 2011, l'État grec doit encore 251,6 Md€ de titres contre 103,5 Md€ de prêts ; fin 2012, les prêts dominent (210,6 Md€) et les titres ne pèsent plus que 93,4 Md€. Depuis 2018, les titres remontent, de 52,9 à 98,0 Md€ en 2025. Précautions : la série distingue l'instrument, pas le prêteur ; les prêts comprennent quelques crédits bancaires, mais en 2025, 252,7 des 257,2 Md€ de prêts sont dus à des non-résidents (Eurostat, gov_10dd_ggd). La chute des titres en 2012 mêle la décote, l'échange contre de nouveaux titres et le rachat de décembre 2012 : ce n'est pas le seul montant annulé. Les dépôts (1 à 8 Md€) ne sont pas tracés. Source : Eurostat, gov_10q_ggdebt, valeur du 4e trimestre (téléchargé le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 2007 à 2025, en milliards d'euros, avec une bande grise de 2010 à 2018. La courbe ambre des titres de dette monte de 201 en 2007 à 263 en 2009-2010, tombe de 252 en 2011 à 93 en 2012, descend jusqu'à 53 en 2018, puis remonte à 98 en 2025. La courbe bleue des prêts reste vers 37 à 39 jusqu'en 2009, monte à 104 en 2011, 211 en 2012, 282 en 2018, puis redescend à 257 en 2025. Les deux courbes se croisent en 2012, année annotée : restructuration de la dette détenue par le secteur privé."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_dette_instruments()
+```
+
+La @fig-dette-instruments montre ce basculement, instrument par instrument : fin 2011, l'État grec doit surtout des titres de dette émis sur les marchés (251,6 Md€) ; dès fin 2012, il doit surtout des prêts (210,6 Md€, puis 241,0 Md€ fin 2013), et les titres ne pèsent plus que 93,4 Md€ (Eurostat, gov_10q_ggdebt, téléchargé le 22/10/2026).
+
+```{r}
 #| label: fig-taux-longs
 #| fig-cap: "Taux d'intérêt des emprunts d'État à dix ans, Grèce et Allemagne, 2008-2025 (moyenne annuelle, en %). La bande grise couvre les trois plans d'aide (2010-2018). Lecture : l'écart entre les deux courbes mesure la méfiance des prêteurs envers l'État grec ; il atteint 21 points en 2012 (22,5 % contre 1,5 %), remonte en 2015, puis tombe à 0,8 point en 2025. Source : Eurostat (irt_lt_mcby_a), série téléchargée le 21/10/2026."
 #| fig-alt: "Graphique en lignes de 2008 à 2025, avec une bande grise de 2010 à 2018. La courbe rouge de la Grèce part de 4,8 pour cent en 2008, monte à 22,5 pour cent en 2012, retombe à 7 pour cent en 2014, remonte à près de 10 pour cent en 2015, puis descend jusqu'à environ 1 pour cent en 2021 et finit à 3,4 pour cent en 2025. La courbe grise de l'Allemagne descend de 4 pour cent en 2008 à un peu moins de zéro en 2019-2021, puis remonte à 2,6 pour cent en 2025."
@@ -225,7 +247,7 @@ En 2011, l'essentiel de la hausse vient de l'effet boule de neige, pas du défic
 graphe_taux_longs()
 ```
 
-**Le taux du marché n'est pas le taux apparent.** Sur les marchés, le taux des emprunts grecs à dix ans atteint 22,5 % en moyenne en 2012, contre 1,5 % pour l'Allemagne (@fig-taux-longs). Mais l'État grec n'emprunte presque plus sur les marchés : son taux apparent ne dépasse jamais 4,7 % de 2009 à 2025 (Eurostat, calculs du cours). En 2025, il emprunte à dix ans à 3,4 %, à 0,8 point de l'Allemagne (2,6 %) : la confiance des prêteurs est revenue, mais après la fin des plans.
+**Le taux du marché n'est pas le taux apparent.** Sur les marchés, le taux des emprunts grecs à dix ans atteint 22,5 % en moyenne en 2012, contre 1,5 % pour l'Allemagne (@fig-taux-longs). Mais depuis 2012, l'État grec doit surtout des prêts, venus en grande partie des plans d'aide et à taux réduits (257 Md€ sur 363 Md€ fin 2025) ; ses titres de marché ne remontent qu'après 2018 (@fig-dette-instruments). Son taux apparent ne dépasse jamais 4,7 % de 2009 à 2025 (Eurostat, calculs du cours). En 2025, il emprunte à dix ans à 3,4 %, à 0,8 point de l'Allemagne (2,6 %) : la confiance des prêteurs est revenue, mais après la fin des plans.
 
 **La règle k × d appliquée à la Grèce.** En 2010, d ≈ 1,5 (147,8 %). Avec le multiplicateur supposé par les prévisions, k × d ≈ 0,5 × 1,5 = 0,75 : l'austérité devait alléger la dette. Avec un multiplicateur proche de 1,5, k × d ≈ 1,5 × 1,5 = 2,25 : elle l'alourdissait à court terme. C'est ce qu'on observe jusqu'en 2013, même si l'austérité n'est pas la seule cause de la récession (crédit bloqué, crainte d'une sortie de l'euro).
 
@@ -244,7 +266,18 @@ graphe_chomage_groupes()
 
 En 2013, le chômage dépasse 20 % dans tous les groupes de la @fig-chomage-groupes, et il monte le plus haut chez les jeunes. En 2025, il a beaucoup baissé partout, mais reste plus élevé chez les femmes, chez les moins diplômés et en Macédoine-Occidentale.
 
-**Par génération.** Chez les 15-24 ans actifs, le chômage passe de 26,1 % en 2009 à **59,2 %** en 2013, puis redescend à 19,1 % en 2025 (Eurostat, une_rt_a ; toutes les séries Eurostat de cette partie sont téléchargées le 21/10/2026). Beaucoup partent : depuis 2010, le solde migratoire de la Grèce est « largement négatif », et la population vieillit (DG Trésor, 03/11/2025).
+**Par génération.** Chez les 15-24 ans actifs, le chômage passe de 26,1 % en 2009 à **59,2 %** en 2013, puis redescend à 19,1 % en 2025 (Eurostat, une_rt_a ; toutes les séries Eurostat de cette partie sont téléchargées le 21/10/2026). Beaucoup partent : de 2010 à 2017, le solde migratoire de la Grèce est « largement négatif », et la population vieillit (DG Trésor, 03/11/2025) ; il redevient positif depuis 2022 (@fig-soldes-demographiques).
+
+```{r}
+#| label: fig-soldes-demographiques
+#| fig-cap: "Solde migratoire (arrivées moins départs, en bleu) et solde naturel (naissances moins décès, en gris) de la Grèce, en milliers de personnes par an, 2000-2025. La bande grise couvre les trois plans d'aide (2010-2018). Lecture : le solde migratoire, positif avant la crise, est négatif chaque année de 2010 à 2017, jusqu'à −68 052 personnes en 2013 ; il est positif en 2018-2019, négatif en 2020-2021, de nouveau positif depuis 2022 (+54 135 en 2024). Les décès dépassent les naissances chaque année depuis 2011, de 55 000 à 64 000 par an depuis 2021 : la population vieillit. Précautions : le solde migratoire est calculé par différence (variation de la population moins solde naturel) et absorbe les corrections des recensements de 2011 et 2021 ; 2025 est provisoire. Source : Eurostat, demo_gind (téléchargé le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 2000 à 2025, en milliers de personnes par an, avec une bande grise de 2010 à 2018 et une ligne horizontale à zéro. La courbe bleue du solde migratoire part de 62 en 2000, descend à 26 en 2003, reste entre 15 et 32 de 2003 à 2009, plonge sous zéro en 2010 jusqu'à −68 en 2013, annoté moins 68 052 en 2013, remonte près de zéro en 2016-2017, passe à 19 en 2019, retombe à −35 en 2021, puis monte à 54 en 2024 et 50 en 2025. La courbe grise du solde naturel, proche de zéro jusqu'en 2010, descend régulièrement jusqu'à −64 en 2022 et reste entre −55 et −58 ensuite."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_soldes_demographiques()
+```
+
+La @fig-soldes-demographiques détaille ces départs (Eurostat, demo_gind, téléchargé le 22/10/2026) : de 2010 à 2017, 282 633 personnes de plus sont parties qu'arrivées, dont 68 052 pour la seule année 2013. Le solde migratoire est redevenu positif depuis 2022 ; mais depuis 2011, les décès dépassent chaque année les naissances.
 
 **Par revenu.** La part de la population en risque de pauvreté ou d'exclusion sociale passe de 28,1 % en 2008 à **36,0 %** en 2014 (Eurostat, ilc_peps01, définition « Europe 2020 »). Elle vaut 27,5 % en 2025, selon une définition plus récente qui ne se compare pas directement (ilc_peps01n). Dix ans après le référendum de juillet 2015 sur les conditions posées par les créanciers, *Le Temps* (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ».
 

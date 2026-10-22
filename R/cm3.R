@@ -265,6 +265,210 @@ graphe_prix_ozempic <- function(base_size = 16) {
     theme(plot.caption = element_text(margin = margin(t = 10)))
 }
 
+#' Nombre en français : virgule décimale, espace pour les milliers (sections 5 ter à 5 septies)
+virgule_cm3 <- function(x, n = 0) formatC(x, format = "f", digits = n, decimal.mark = ",", big.mark = " ")
+
+#' Légende de source sous le graphique, sur la page seulement : dans les diapos
+#' (base_size > 16), la source est donnée par la ligne .wp-source de la diapo,
+#' pour ne pas la répéter et garder la hauteur du graphique
+legende_cm3 <- function(lignes, base_size = 16) {
+  if (base_size > 16) NULL else paste(lignes, collapse = "\n")
+}
+
+# ---------------------------------------------------------------------------
+# 5 ter. Graphique de données : boîtes d'aGLP-1 du diabète remboursées chaque mois,
+#    janvier 2022 à juin 2026 (dernier mois du fichier semestriel 2026-01-a-06).
+#    Assurance Maladie, Medic'AM mensuel, pharmacies de ville, tous prescripteurs.
+#    Fichier et provenance : data/cm3/boites_aglp1_mensuel_2022_2026.csv et
+#    data/cm3/SOURCES.md (téléchargé le 22/10/2026). Wegovy (obésité) et Mounjaro
+#    (obésité et diabète de type 2), remboursés depuis le 15/06/2026, sont exclus :
+#    même champ que fig-boites.
+# ---------------------------------------------------------------------------
+mensuel_cm3 <- utils::read.csv(here::here("data/cm3/boites_aglp1_mensuel_2022_2026.csv"))
+mensuel_cm3 <- aggregate(boites ~ mois, mensuel_cm3[!grepl("^(WEGOVY|MOUNJARO)", mensuel_cm3$produit), ], sum)
+mensuel_cm3$date <- as.Date(paste0(mensuel_cm3$mois, "-01"))
+
+#' Somme des boîtes mensuelles du mois `debut` au mois `fin` inclus (AAAA-MM)
+boites_periode <- function(debut, fin) sum(mensuel_cm3$boites[mensuel_cm3$mois >= debut & mensuel_cm3$mois <= fin])
+
+#' Courbe mensuelle du total, avec une bande rouge pâle pour la pénurie
+#' (de décembre 2023 au 05/06/2025, d'après l'ANSM) ; dernier point étiqueté.
+graphe_boites_mois <- function(base_size = 16) {
+  taille <- base_size / 3.4
+  fin <- mensuel_cm3[nrow(mensuel_cm3), ]
+  ggplot(mensuel_cm3, aes(date, boites / 1e3)) +
+    annotate("rect", xmin = as.Date("2023-12-01"), xmax = as.Date("2025-06-05"), ymin = 0, ymax = Inf,
+             fill = couleurs_eco[["alerte"]], alpha = 0.08) +
+    annotate("text", x = as.Date("2024-09-01"), y = 1040, label = "pénurie : nouveaux traitements\nlimités par l'ANSM",
+             family = police_cours, size = taille, colour = couleurs_eco[["alerte"]], lineheight = 0.9) +
+    geom_line(colour = couleurs_eco[["demande"]], linewidth = 0.9) +
+    annotate("text", x = fin$date + 25, y = fin$boites / 1e3, label = virgule_cm3(fin$boites / 1e3),
+             hjust = 0, family = police_cours, size = taille, colour = couleurs_eco[["demande"]]) +
+    scale_x_date(date_breaks = "1 year", date_labels = "%Y",
+                 expand = expansion(mult = c(0.01, if (base_size > 16) 0.1 else 0.07))) +
+    scale_y_continuous(limits = c(0, if (base_size > 16) 1180 else 1120), breaks = seq(0, 1000, 200), labels = virgule_cm3, expand = c(0, 0)) +
+    labs(x = NULL, y = if (base_size > 16) "Boîtes par mois (milliers)" else "Boîtes remboursées par mois (milliers)",
+         caption = legende_cm3(c("Source : Assurance Maladie, Medic'AM mensuel (téléchargé le 22/10/2026).",
+                         "Analogues du GLP-1 du diabète, pharmacies de ville.",
+                         "Zone rouge : de décembre 2023 au 05/06/2025 (ANSM)."), base_size)) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 5 quater. Graphique de données : part de la base de remboursement payée par
+#    l'Assurance maladie, Ozempic, Trulicity et Victoza, année 2025 (somme des 12 mois).
+#    Medic'AM mensuel : « Montant remboursé » / « Base de remboursement ».
+#    Fichier et provenance : data/cm3/part_remboursee_aglp1_2025.csv et data/cm3/SOURCES.md.
+# ---------------------------------------------------------------------------
+part_cm3 <- utils::read.csv(here::here("data/cm3/part_remboursee_aglp1_2025.csv"))
+part_cm3$part <- 100 * part_cm3$montant_rembourse / part_cm3$base_remboursement
+part_cm3$produit <- factor(tools::toTitleCase(tolower(part_cm3$produit)), levels = c("Victoza", "Trulicity", "Ozempic"))
+
+#' Barres horizontales empilées : part payée par l'Assurance maladie (azur) et reste (gris)
+graphe_part_remboursee <- function(base_size = 16) {
+  taille <- base_size / 3.4
+  d <- rbind(data.frame(produit = part_cm3$produit, qui = "am", part = part_cm3$part),
+             data.frame(produit = part_cm3$produit, qui = "reste", part = 100 - part_cm3$part))
+  d$qui <- factor(d$qui, levels = c("reste", "am"))
+  ggplot(d, aes(part, produit, fill = qui)) +
+    geom_col(width = 0.6) +
+    geom_text(data = part_cm3, aes(x = part / 2, y = produit, label = paste(virgule_cm3(part, 1), "%")),
+              inherit.aes = FALSE, family = police_cours, size = taille, colour = "white") +
+    annotate("text", x = 50, y = 3.48, label = "payé par l'Assurance maladie", family = police_cours,
+             size = taille, colour = couleurs_eco[["demande"]]) +
+    annotate("text", x = 100.5, y = 3.48, label = "reste", hjust = 1, family = police_cours,
+             size = taille, colour = couleurs_eco[["neutre"]]) +
+    scale_fill_manual(values = c(am = couleurs_eco[["demande"]], reste = "#D1D5DB")) +
+    scale_x_continuous(limits = c(0, 101), breaks = seq(0, 100, 25), expand = c(0, 0)) +
+    labs(x = "Part de la base de remboursement (%)", y = NULL,
+         caption = legende_cm3(c("Source : Assurance Maladie, Medic'AM mensuel, année 2025",
+                         "(téléchargé le 22/10/2026). Montant remboursé / base de remboursement."), base_size)) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(colour = "#D1D5DB", linewidth = 0.4),
+          axis.line.x = element_blank(), plot.margin = margin(10, 22, 8, 8),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 5 quinquies. Graphique de données : patients sous Ozempic, France et États-Unis
+#    (Medicare Part D), 2020-2024, en indice (2020 = 100).
+#    France : Open Medic (A10BJ06, nombre de consommants) ; États-Unis : CMS,
+#    Medicare Part D Spending by Drug (Tot_Benes). Champs différents : on compare
+#    des croissances, pas des niveaux.
+#    Fichier et provenance : data/cm3/patients_ozempic_fr_us_2020_2024.csv et data/cm3/SOURCES.md.
+# ---------------------------------------------------------------------------
+patients_fr_us_cm3 <- utils::read.csv(here::here("data/cm3/patients_ozempic_fr_us_2020_2024.csv"), encoding = "UTF-8")
+base_2020_cm3 <- with(patients_fr_us_cm3[patients_fr_us_cm3$annee == 2020, ], setNames(patients, pays))
+patients_fr_us_cm3$indice <- 100 * patients_fr_us_cm3$patients / base_2020_cm3[patients_fr_us_cm3$pays]
+
+#' Deux courbes en indice, étiquetées en bout de trait avec le coefficient multiplicateur
+graphe_patients_fr_us <- function(base_size = 16) {
+  taille <- base_size / 3.4
+  fins <- patients_fr_us_cm3[patients_fr_us_cm3$annee == 2024, ]
+  fins$label <- paste0(ifelse(fins$pays == "France", "France", "États-Unis\n(Medicare)"),
+                       " : × ", virgule_cm3(fins$indice / 100, 1))
+  ggplot(patients_fr_us_cm3, aes(annee, indice, colour = pays)) +
+    geom_hline(yintercept = 100, colour = couleurs_eco[["neutre"]], linetype = "22", linewidth = 0.4) +
+    geom_line(linewidth = 1) +
+    geom_point(size = base_size / 7) +
+    geom_text(data = fins, aes(label = label), hjust = 0, nudge_x = 0.12, family = police_cours,
+              size = taille, lineheight = 0.9) +
+    scale_colour_manual(values = c(France = couleurs_eco[["demande"]], `États-Unis (Medicare)` = couleurs_eco[["offre"]])) +
+    scale_x_continuous(breaks = 2020:2024, limits = c(2020, if (base_size > 16) 2026.2 else 2025.4)) +
+    scale_y_continuous(limits = c(0, 800), breaks = seq(0, 800, 200), labels = virgule_cm3, expand = c(0, 0)) +
+    labs(x = NULL, y = if (base_size > 16) "Patients (indice, 2020 = 100)" else "Patients sous Ozempic (indice, 2020 = 100)",
+         caption = legende_cm3(c("Sources : Assurance Maladie, Open Medic (patients remboursés) ;",
+                         "CMS, Medicare Part D Spending by Drug (bénéficiaires).",
+                         "Téléchargé le 22/10/2026. États-Unis : Medicare Part D seulement."), base_size)) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 5 sexies. Graphique de données (encadré méthode) : prix d'une boîte de Wegovy,
+#    en euros TTC hors honoraire. Indemnité d'accès précoce fixée par le
+#    laboratoire (HAS, avis CEESP du 15/07/2025) contre prix fixés par l'État à
+#    compter du 15/06/2026 (avis de prix, JORF du 28/05/2026 ; BDPM du 22/10/2026),
+#    et Ozempic 1 mg pour rappel.
+#    Fichier et provenance : data/cm3/prix_boite_wegovy.csv et data/cm3/SOURCES.md.
+# ---------------------------------------------------------------------------
+prix_wegovy_cm3 <- utils::read.csv(here::here("data/cm3/prix_boite_wegovy.csv"), fileEncoding = "UTF-8")
+# Étiquettes et couleurs associées par présentation (pas par rang de ligne du CSV)
+etiquettes_wegovy <- c(`Wegovy, accès précoce` = "Wegovy, accès précoce\n(laboratoire, 2022-2023)",
+                       `Wegovy 2,4 mg` = "Wegovy 2,4 mg\n(État, 15/06/2026)",
+                       `Wegovy 0,25 à 1 mg` = "Wegovy 0,25 à 1 mg\n(État, 15/06/2026)",
+                       `Ozempic 1 mg` = "Ozempic 1 mg\n(État, rappel)")
+couleurs_wegovy <- c(`Wegovy, accès précoce` = "alerte", `Wegovy 2,4 mg` = "demande",
+                     `Wegovy 0,25 à 1 mg` = "demande", `Ozempic 1 mg` = "neutre")
+stopifnot(setequal(prix_wegovy_cm3$presentation, names(etiquettes_wegovy)))
+prix_wegovy_cm3$etiquette <- factor(etiquettes_wegovy[prix_wegovy_cm3$presentation], levels = rev(etiquettes_wegovy))
+prix_wegovy_cm3$couleur <- unname(couleurs_eco[couleurs_wegovy[prix_wegovy_cm3$presentation]])
+prix_w <- setNames(prix_wegovy_cm3$prix, prix_wegovy_cm3$presentation)
+
+#' Barres horizontales : un prix par boîte, valeur en bout de barre ; rouge = prix
+#' du laboratoire, azur = prix fixés par l'État, gris = rappel d'Ozempic
+graphe_prix_wegovy <- function(base_size = 16) {
+  ggplot(prix_wegovy_cm3, aes(prix, etiquette)) +
+    geom_col(aes(fill = I(couleur)), width = 0.6) +
+    geom_text(aes(label = paste(virgule_cm3(prix, 2), "€")), hjust = -0.1,
+              family = police_cours, size = base_size / 3.4, colour = couleurs_eco[["equilibre"]]) +
+    scale_x_continuous(limits = c(0, 500), breaks = seq(0, 500, 100), expand = c(0, 0)) +
+    coord_cartesian(clip = "off") +
+    labs(x = "Prix d'une boîte (€ TTC)", y = NULL,
+         caption = legende_cm3(c("Sources : JORF du 28/05/2026 (avis de prix) ; BDPM (22/10/2026) ;",
+                         "HAS, avis CEESP du 15/07/2025 (indemnité d'accès précoce)."), base_size)) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(colour = "#D1D5DB", linewidth = 0.4),
+          axis.line.x = element_blank(), axis.line.y = element_blank(),
+          plot.caption.position = "plot", plot.margin = margin(10, 60, 8, 8),
+          plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 5 septies. Graphique de données (encadré méthode) : boîtes de Wegovy et de
+#    Mounjaro remboursées chaque mois, janvier à août 2026 (dernier mois publié).
+#    Medic'AM mensuel. Le zéro de janvier à mai n'est pas une absence de ventes :
+#    les ventes sans remboursement (possibles depuis 2024) n'y figurent pas.
+#    Mounjaro mêle obésité et diabète de type 2 (arrêté du 10/06/2026).
+#    Ozempic n'est pas tracé (il écraserait l'échelle) : cité dans le fig-cap.
+#    Fichier et provenance : data/cm3/boites_wegovy_mounjaro_ozempic_mensuel.csv et data/cm3/SOURCES.md.
+# ---------------------------------------------------------------------------
+glp1_2026_cm3 <- utils::read.csv(here::here("data/cm3/boites_wegovy_mounjaro_ozempic_mensuel.csv"))
+wegovy_cm3 <- glp1_2026_cm3[glp1_2026_cm3$produit %in% c("Wegovy", "Mounjaro") & glp1_2026_cm3$mois >= "2026-01", ]
+wegovy_cm3$date <- as.Date(paste0(wegovy_cm3$mois, "-15"))   # milieu du mois : le point de juin tombe sur le 15/06
+remboursement_wegovy <- as.Date("2026-06-15")
+
+#' Boîtes remboursées par mois, en milliers : zéro jusqu'en mai, puis hausse après le 15 juin.
+#' Le trait est coupé entre mai et juin : un segment du 15/05 au 15/06 suggérerait
+#' des boîtes remboursées fin mai.
+graphe_boites_wegovy <- function(base_size = 16) {
+  taille <- base_size / 3.4
+  fin <- wegovy_cm3[wegovy_cm3$mois == max(wegovy_cm3$mois), ]
+  ggplot(wegovy_cm3, aes(date, boites / 1e3, colour = produit)) +
+    geom_vline(xintercept = remboursement_wegovy, linetype = "dashed", colour = couleurs_eco[["neutre"]]) +
+    annotate("text", x = remboursement_wegovy - 6, y = 78, label = "remboursement\nà 65 % (15/06)", hjust = 1,
+             lineheight = 0.9, family = police_cours, size = taille, colour = couleurs_eco[["neutre"]]) +
+    geom_line(aes(group = interaction(produit, mois >= "2026-06")), linewidth = 0.9) +
+    geom_point(size = base_size / 8) +
+    geom_text(data = fin, aes(label = paste0(produit, "\n", virgule_cm3(boites / 1e3, 1))),
+              hjust = 0, nudge_x = 7, lineheight = 0.9, family = police_cours, size = taille) +
+    scale_colour_manual(values = c(Mounjaro = couleurs_eco[["offre"]], Wegovy = couleurs_eco[["demande"]])) +
+    scale_x_date(breaks = seq(as.Date("2026-01-15"), as.Date("2026-08-15"), "month"),
+                 labels = c("janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août"),
+                 expand = expansion(mult = c(0.02, if (base_size > 16) 0.27 else 0.16))) +
+    scale_y_continuous(limits = c(0, 85), breaks = seq(0, 80, 20), labels = virgule_cm3, expand = c(0, 0)) +
+    labs(x = "Mois de remboursement (2026)",
+         y = if (base_size > 16) "Boîtes (milliers par mois)" else "Boîtes remboursées (milliers par mois)",
+         caption = legende_cm3(c("Source : Assurance Maladie, Medic'AM mensuel (téléchargé le 22/10/2026).",
+                         "Pharmacies de ville, tous prescripteurs. Juin : 15 jours de remboursement."), base_size)) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)),
+          axis.text.x = element_text(size = rel(if (base_size > 16) 0.8 else 1)))
+}
+
 # ---------------------------------------------------------------------------
 # 6. Vérifications : chaque chiffre annoncé dans cours/cm3.qmd
 # ---------------------------------------------------------------------------
@@ -322,3 +526,43 @@ stopifnot(
 )
 # Recette mensuelle du vendeur dans l'exemple 1 (milliers de boîtes x € = milliers d'euros)
 stopifnot(proche(eq_initial$q * marche_cm3$prix_fixe, 7500), proche(eq_libre_ct$q * eq_libre_ct$p, 33000))
+# Medic'AM mensuel (fig-boites-mois) : valeurs du texte et du fig-cap
+mois_cm3 <- setNames(mensuel_cm3$boites, mensuel_cm3$mois)
+plateau_cm3 <- mensuel_cm3$boites[mensuel_cm3$mois >= "2023-10" & mensuel_cm3$mois <= "2024-09"]
+stopifnot(
+  nrow(mensuel_cm3) == 54,
+  mois_cm3[["2023-10"]] == 682314, mois_cm3[["2024-09"]] == 593468, mois_cm3[["2026-06"]] == 959502,
+  min(plateau_cm3) == 556910, max(plateau_cm3) == 682314,                      # « entre 557 000 et 682 000 »
+  boites_periode("2024-01", "2024-12") == total_cm3[["2024"]],                # mensuel = annuel (7 488 154)
+  proche(round(boites_periode("2022-10", "2023-09") / 1e6, 2), 7.18),
+  proche(round(boites_periode("2023-10", "2024-09") / 1e6, 2), 7.46),
+  proche(round(boites_periode("2024-10", "2025-09") / 1e6, 2), 8.43),
+  proche(round(var_pct_cm3(boites_periode("2022-10", "2023-09"), boites_periode("2023-10", "2024-09")), 1), 3.8),
+  proche(round(var_pct_cm3(boites_periode("2023-10", "2024-09"), boites_periode("2024-10", "2025-09")), 1), 13.1)
+)
+# Medic'AM 2025 (fig-part-remboursee) : part payée par l'Assurance maladie
+part_oz <- setNames(part_cm3$part, as.character(part_cm3$produit))
+stopifnot(
+  proche(round(part_oz[["Ozempic"]], 1), 95.7), proche(round(part_oz[["Trulicity"]], 1), 98.4),
+  proche(round(part_oz[["Ozempic"]], 2), 95.74),                              # fig-cap : 95,74 € et 4,26 €
+  proche(round(part_oz[["Victoza"]], 1), 98.2)
+)
+# Open Medic et CMS (fig-patients-fr-us) : coefficients multiplicateurs 2020-2024
+indice_2024 <- setNames(patients_fr_us_cm3$indice[patients_fr_us_cm3$annee == 2024],
+                        patients_fr_us_cm3$pays[patients_fr_us_cm3$annee == 2024])
+stopifnot(
+  nrow(patients_fr_us_cm3) == 10, !anyNA(patients_fr_us_cm3$patients),
+  proche(round(indice_2024[["France"]] / 100, 1), 4.5), proche(round(indice_2024[["États-Unis (Medicare)"]] / 100, 1), 7.2)
+)
+# Encadré méthode (fig-prix-wegovy, fig-boites-wegovy) : prix et boîtes de 2026
+stopifnot(
+  nrow(prix_wegovy_cm3) == 4, nrow(wegovy_cm3) == 16,
+  proche(prix_w[["Wegovy, accès précoce"]], 431.41), proche(prix_w[["Wegovy 2,4 mg"]], 195.10),
+  proche(prix_w[["Wegovy 0,25 à 1 mg"]], 146.91), proche(prix_w[["Ozempic 1 mg"]], 76.58),
+  proche(round(prix_w[["Wegovy, accès précoce"]] / prix_w[["Wegovy 2,4 mg"]], 1), 2.2),       # « 2,2 à 2,9 fois »
+  proche(round(prix_w[["Wegovy, accès précoce"]] / prix_w[["Wegovy 0,25 à 1 mg"]], 1), 2.9),
+  all(wegovy_cm3$boites[wegovy_cm3$mois < "2026-06"] == 0),                   # zéro de janvier à mai
+  wegovy_cm3$boites[wegovy_cm3$produit == "Wegovy" & wegovy_cm3$mois == "2026-08"] == 20416,
+  wegovy_cm3$boites[wegovy_cm3$produit == "Mounjaro" & wegovy_cm3$mois == "2026-08"] == 70996,
+  glp1_2026_cm3$boites[glp1_2026_cm3$produit == "Ozempic" & glp1_2026_cm3$mois == "2026-08"] == 483620
+)

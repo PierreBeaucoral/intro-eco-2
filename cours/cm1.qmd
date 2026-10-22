@@ -40,6 +40,17 @@ Le 28 février 2026, la guerre entre les États-Unis et Israël d'un côté et l
 
 Les titres de 2026 (@tbl-unes) donnent les deux moitiés du raisonnement de la séance : le coût d'approvisionnement monte, donc l'offre recule (un choc d'offre) ; et l'on ne renonce pas à aller travailler du jour au lendemain, donc la demande est peu élastique à court terme. En 1974, aux États-Unis, la presse annonçait un rationnement : la pénurie s'affichait à la pompe.
 
+La @fig-pompe-2005 replace 2026 dans la durée : en moyenne hebdomadaire, le gazole culmine à 2,38 € le litre la semaine du 21 septembre 2026, 24 centimes au-dessus de son record de 2022 (2,14 €, semaine du 14 mars). Sur vingt ans, moins cher presque toute la période, il passe au-dessus de l'Euro-super 95 lors des flambées : la majeure partie de 2022 et, en 2026, 27 des 32 semaines depuis début mars.
+
+```{r}
+#| label: fig-pompe-2005
+#| fig-cap: "Prix à la pompe en France de 2005 à 2026, en euros courants par litre, toutes taxes comprises, chaque semaine du 3 janvier 2005 au 12 octobre 2026. Points : les deux records hebdomadaires du gazole, 2,14 € la semaine du 14 mars 2022 et 2,38 € celle du 21 septembre 2026. Lecture : le gazole, moins cher que l'Euro-super 95 presque toute la période, le dépasse 3 semaines en 2018, puis 33 semaines en 2022, 9 en 2023 et 27 des 41 semaines de 2026. Précautions : ce sont des euros courants, non corrigés de la hausse générale des prix ; ce sont des moyennes hebdomadaires, plus basses que le record journalier de 2,41 € cité plus bas ; quelques semaines manquent autour du 1er janvier. Les chutes brusques des semaines du 4 avril et du 5 septembre 2022 tombent aux dates des paliers de la remise à la pompe. Source : Commission européenne, Weekly Oil Bulletin, moyennes nationales (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes des prix à la pompe en France, une valeur par semaine, de 2005 à octobre 2026. L'Euro-super 95 en bleu part d'environ 1 euro en 2005 ; le gazole en ambre est presque toujours en dessous. Les deux montent en 2008, l'essence jusqu'à 1,50 euro, retombent en 2009, remontent jusqu'en 2012, l'essence jusqu'à 1,67 euro, reculent jusqu'en 2016, puis grimpent fortement en 2022. Le gazole y passe au-dessus de l'essence et atteint 2,14 euros la semaine du 14 mars 2022, point marqué. Après une baisse en 2023-2025, les deux bondissent en 2026 ; le gazole atteint 2,38 euros la semaine du 21 septembre 2026, second point marqué, au-dessus de son record de 2022."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_prix_pompe_long()
+```
+
 Trois faits intriguent.
 
 1. Un détroit lointain fait bondir un prix payé chaque semaine par des millions de ménages.
@@ -221,6 +232,17 @@ Pour le gazole, la part du hors-taxes dans la hausse est mécaniquement la même
 
 **Un second choc d'offre, sur le gazole.** L'Europe importe une partie de son gazole raffiné dans le Golfe : le prix du diesel augmente donc plus que l'effet mécanique du brut (Insee, Note de conjoncture, juin 2026). Fin juillet, la Russie décide un moratoire sur ses exportations de diesel, puis le prolonge ; fin août, les hostilités reprennent entre l'Iran et les États-Unis et des raffineries sont endommagées (AFP, *Connaissance des Énergies*, 10/09/2026). Le gazole subit **deux** déplacements de l'offre : celui du brut, sa matière première, et celui du raffinage. D'où sa hausse de 41 % contre 29 % pour l'essence entre le 23 février et le 12 octobre (@fig-prix-pompe).
 
+```{r}
+#| label: fig-gazole-brut
+#| fig-cap: "Prix hors taxes de l'Euro-super 95 et du gazole en France, et prix du pétrole brut (Brent) converti en euros par litre, chaque semaine du 5 janvier au 12 octobre 2026. Lecture : avant le 28 février, les deux carburants hors taxes coûtent de 0,35 à 0,42 € de plus que le litre de brut. Ensuite, l'écart de l'essence bouge peu en mars-avril (0,34 € la semaine du 13 avril), tandis que celui du gazole s'ouvre (0,65 €), puis s'ouvre encore en août (0,75 € la semaine du 31 août) : c'est la marque du second choc d'offre, sur le raffinage. Précautions : cet écart n'est pas la marge des raffineurs. Il regroupe raffinage, biocarburants incorporés, transport, stocks et marge de distribution, et un litre de brut ne donne pas un litre de gazole : c'est un ordre de grandeur. En juillet, l'écart de l'essence gonfle aussi (0,53 € la semaine du 6 juillet), parce que le brut baisse plus vite que le prix hors taxes : le prix « ne baisse pas aussi vite qu'il monte » (article de S. Ruel, dans « Pour aller plus loin »). Le brut est converti en euros avec le cours euro-dollar (un baril = 159 litres) et moyenné sur la semaine qui précède chaque bulletin. Sources : Commission européenne, Weekly Oil Bulletin (prix hors taxes) ; EIA (Brent) ; BCE (euro-dollar) ; calcul de l'auteur (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes, une valeur par semaine de janvier à mi-octobre 2026, en euros par litre. En bas, le pétrole brut en noir, entre 0,33 et 0,38 euro jusqu'à fin février, monte à 0,68 euro début avril, redescend à 0,38 euro début juillet, puis remonte à 0,72 euro le 12 octobre. Au-dessus, l'essence hors taxes en bleu et le gazole hors taxes en ambre sont presque confondus jusqu'à la ligne verticale du 28 février, fermeture d'Ormuz, environ 0,4 euro au-dessus du brut. Ensuite, le gazole s'écarte nettement de l'essence : 1,32 euro contre 1,01 euro la semaine du 13 avril. Les deux carburants baissent jusqu'à début juillet, où ils se rapprochent, puis remontent ; le gazole finit à 1,33 euro et l'essence à 1,15 euro le 12 octobre."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_gazole_brut()
+```
+
+La @fig-gazole-brut isole ce second choc en retirant les taxes : jusqu'au 28 février, l'essence et le gazole hors taxes suivent le brut à distance presque constante ; ensuite, le gazole s'en écarte beaucoup plus que l'essence (0,65 € au-dessus du brut la semaine du 13 avril, contre 0,34 €).
+
 **Une demande peu élastique.** Avec e ≈ −0,3 et une hausse de prix d'environ 40 %, comme pour le gazole, la quantité ne baisse que d'environ 0,3 × 40 = 12 %. C'est une première approximation : l'élasticité de court terme est appliquée à une hausse étalée sur huit mois. La facture est alors multipliée par 1,40 × 0,88 ≈ 1,23 : elle augmente d'environ **23 %**. Les ménages achètent presque autant de litres, beaucoup plus cher.
 
 ```{r}
@@ -257,7 +279,29 @@ Depuis mars 2026, par intermittence, TotalEnergies plafonne ses prix. Depuis le 
 
 **Par territoire.** Près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains (Insee Première n° 2125, 08/09/2026). Ils ne sont pas moins sensibles au prix : l'élasticité varie peu selon le lieu de vie (−0,47 en zone rurale, −0,41 en zone urbaine). Chaque valeur par groupe est estimée à part : elle peut sortir de la fourchette de l'ensemble. Mais ils consomment plus de litres, donc la hausse leur coûte plus en euros (Insee Analyses n° 86).
 
+La @fig-menages-exposes croise les deux : aux prix de 2,0 € le litre d'essence et 2,2 € le litre de gazole, la part des ménages motorisés qui dépensent en carburant plus d'un mois de revenu par an doublerait environ partout, mais atteindrait 32,9 % dans le rural non périurbain, contre 17,4 % dans les pôles urbains.
+
+```{r}
+#| label: fig-menages-exposes
+#| fig-cap: "Part des ménages motorisés qui consacrent au carburant plus d'un mois de revenu par an, selon le type de territoire, en % : aux prix de 2021 (point gris) et si le litre coûtait 2,0 € pour l'essence et 2,2 € pour le gazole (point rouge), niveaux que l'Insee présente comme ceux du printemps 2026. Lecture : la part double environ partout, mais elle passe de 8,4 % à 17,4 % dans les pôles urbains et de 16,7 % à 32,9 % dans le rural non périurbain ; le même choc de prix y expose près de deux fois plus de ménages que dans les pôles urbains. Précautions : c'est une simulation ; les ménages gardent les revenus et les kilomètres de 2021, seuls les prix changent. Champ : France hors Mayotte, ménages ayant un véhicule, à revenu positif. Source : Insee Première n° 2125 (08/09/2026), tableau complémentaire 3 (consulté le 22/10/2026)."
+#| fig-alt: "Diagramme à points reliés, une ligne par territoire. Pour chaque ligne, un point gris donne la part aux prix de 2021 et un point rouge la part aux prix de 2026, reliés par un trait. Pôles urbains : 8,4 % puis 17,4 %. Couronnes urbaines : 10,8 % puis 22,7 %. Rural périurbain : 13,1 % puis 28,6 %. Rural non périurbain : 16,7 % puis 32,9 %. Ensemble : 10,6 % puis 22,4 %. Les points rouges sont d'autant plus à droite que le territoire est rural."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_menages_exposes()
+```
+
 **Par usage.** Les gros rouleurs sont les moins sensibles au prix : l'élasticité vaut −0,32 pour le quart qui consomme le plus, contre −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86).
+
+La @fig-elasticite-usage montre l'écart : seul le quart des plus petits consommateurs a une demande élastique (e proche de −1) ; plus on dépend de la voiture, moins on réduit sa consommation quand le prix monte.
+
+```{r}
+#| label: fig-elasticite-usage
+#| fig-cap: "Élasticité-prix du carburant à court terme selon la consommation passée. Les consommateurs sont rangés en quatre quarts, du quart qui consommait le moins (1er quart) au quart qui consommait le plus (4e quart). Tirets : ensemble des consommateurs, −0,40, même méthode. Lecture : quand le prix monte de 1 %, le quart des plus petits consommateurs réduit sa consommation de 1,06 %, le quart des plus gros de 0,32 % seulement : les gros rouleurs réagissent trois fois moins. Précautions : les traits verticaux donnent l'intervalle de confiance à 95 %, la marge d'incertitude de chaque estimation. Seuls ceux du 1er et du 4e quart ne se chevauchent pas : on ne peut pas départager les quarts voisins. Paiements par carte bancaire de septembre 2021 à janvier 2023, pas de 2026. Source : Insee Analyses n° 86 (06/07/2023), figure 3c et tableau complémentaire 2 (consulté le 22/10/2026)."
+#| fig-alt: "Quatre points bleus avec des barres verticales, un par quart de consommateurs. Premier quart, les petits rouleurs : −1,06, barre de −1,53 à −0,59. Deuxième quart : −0,52. Troisième quart : −0,43. Quatrième quart, les gros rouleurs : −0,32, barre de −0,46 à −0,18. Une ligne horizontale en tirets marque l'ensemble, à −0,40. Les points remontent vers zéro de gauche à droite : plus on consomme, moins on réagit au prix."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_elasticite_usage()
+```
 
 **Par génération.** Aucune source ouverte pour cette séance ne chiffre l'effet par âge. Le mécanisme passerait par l'usage : un actif qui va au travail en voiture peut difficilement supprimer ce trajet.
 

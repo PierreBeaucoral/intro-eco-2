@@ -1,6 +1,6 @@
 # Données du CM 7
 
-Téléchargées le **21/10/2026** par curl. À rafraîchir après le flash d'octobre (04/11/2026), après la réunion de la BCE des 28-29/10/2026, puis en janvier 2027.
+Téléchargées le **21/10/2026** par curl (les quatre derniers fichiers le 22/10/2026). À rafraîchir après le flash d'octobre (04/11/2026), après la réunion de la BCE des 28-29/10/2026, puis en janvier 2027.
 
 ## `taux_bce_2019_2026.csv`
 
@@ -41,3 +41,64 @@ Téléchargées le **21/10/2026** par curl. À rafraîchir après le flash d'oct
 - **Traitement** : colonnes `TIME_PERIOD` et `OBS_VALUE` seulement, renommées `mois` et `taux` ; toutes les observations ont le statut `A` (normal).
 - **Attention** : la série « entreprises » correspondante (`MIR.M.FR.B.A2I.AM.R.A.2240.EUR.N`) donne 1,40 % en juillet 2021 et 4,58 % en juillet 2023, et non les 1,08 % et 4,42 % que la page cite d'après Picault et Burietz (*The Conversation*, 04/10/2026), qui utilisent une autre mesure : ne pas mêler les deux.
 - **Utilisé par** : `R/cm7.R` (`credit_habitat_cm7`, `graphe_credit_habitat()`), donc `cours/cm7.qmd`.
+
+## `prix_petrole_gaz_2021_2026.csv`
+
+- **Contenu** : prix mensuels moyens du pétrole et du gaz européen, de janvier 2021 à septembre 2026 (69 lignes).
+  - `mois` : AAAA-MM ;
+  - `brent_usd_baril` : pétrole Brent, en dollars par baril ;
+  - `gaz_usd_mmbtu` : gaz naturel, Europe (TTF), en dollars par million de BTU ;
+  - `usd_par_eur` : dollars pour un euro, moyenne du mois ;
+  - `brent_eur_baril` = `brent_usd_baril / usd_par_eur`, arrondi à 0,1 ;
+  - `gaz_eur_mwh` = `gaz_usd_mmbtu / 0,293071 / usd_par_eur` (1 MMBtu = 0,293071 MWh), arrondi à 0,1.
+- **Sources** (téléchargées le **22/10/2026** par curl) :
+  - Banque mondiale, *Commodity Price Data (Pink Sheet)*, « Monthly prices », mis à jour le 02/10/2026 ; page : https://www.worldbank.org/en/research/commodity-markets ; fichier : https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx (SHA-256 : `ea1c350827878ea3bbe30e3cda16a13fd3bd5b409b8458940dc94a36b5a33154`). Séries « Crude oil, Brent » ($/bbl) et « Natural gas, Europe » ($/mmbtu) ; onglet « Description » : gaz Europe « from April 2015, Netherlands Title Transfer Facility (TTF) ».
+  - BCE, Data Portal, taux de change `EXR.M.USD.EUR.SP00.A` (moyenne mensuelle) : https://data-api.ecb.europa.eu/service/data/EXR/M.USD.EUR.SP00.A?startPeriod=2021-01&format=csvdata (SHA-256 : `f234cbd022945c6821bbae9cff53825f13f8ddfe9695b23396bd827a75ad676c`).
+  - Contrôle (Brent) : EIA, « Europe Brent Spot Price FOB », série `RBRTE`, https://www.eia.gov/dnav/pet/hist_xls/RBRTEm.xls (SHA-256 : `5881bc058aa7d641dc41ef254f6991e101c952e112284f0eb5a994514b401cb7`) : 122,71 $ (juin 2022), 117,29 $ (avril 2026), 114,16 $ (septembre 2026), contre 120,1 $, 120,4 $ et 116,8 $ ici ; écarts de 1 à 3 % (fournisseurs de cotation différents), même profil.
+  - Contrôle (gaz et conversion) : Insee, *Note de conjoncture*, « Énergie et matières premières », 24/03/2026 (SHA-256 du PDF : `2e027b3bb8a3045c0b198786b9b77831301bfdeae19f01e7ebda0643e27a05d9`) : « 46,8 €/MWh au premier trimestre » 2025, retrouvé ici.
+- **Traitement** : colonnes Brent et gaz de l'onglet « Monthly Prices », fusionnées par mois avec le taux de change, par `data/cm7/preparer_2026-10-22.R` (à relancer depuis la racine du projet ; vérifié le 22/10/2026 : sortie identique octet pour octet au CSV).
+- **Attention** : une édition antérieure du fichier (`…-0050012025/…`) s'arrête à décembre 2025 ; c'est l'édition `0050012026`, liée depuis la page de la Banque mondiale, qui couvre 2026. Ce sont des prix de gros, pas des prix payés par les ménages. À rafraîchir à la mise à jour de début novembre du Pink Sheet.
+- **Utilisé par** : `R/cm7.R` (`petrole_gaz_cm7`, `graphe_petrole_gaz()`), donc `cours/cm7.qmd` et `slides/cm7.qmd`.
+
+## `salaires_negocies_inflation_2021_2026.csv`
+
+- **Contenu** : par trimestre, du premier trimestre 2021 au deuxième trimestre 2026 (22 lignes).
+  - `trimestre` : AAAA-QN ;
+  - `salaires_negocies` : croissance sur un an de l'indicateur des salaires négociés, zone euro, en % ;
+  - `inflation` : moyenne des trois taux mensuels d'inflation IPCH sur un an du trimestre, zone euro, en %, arrondie à 0,01.
+- **Sources** (téléchargées le **22/10/2026** par curl) :
+  - BCE, Data Portal, `INW.Q.U2.N.INWR.000000.4F0.GY.IX` (« Negotiated wages », zone euro à composition changeante, taux de variation annuel, ni CVS ni CJO) : https://data-api.ecb.europa.eu/service/data/INW/Q.U2.N.INWR.000000.4F0.GY.IX?startPeriod=2019-Q1&format=csvdata (SHA-256 : `30d45e793b8718596c48e4da6dc850729d353ba8353357f8d2ec8bc9c981cd7f`) ; toutes les observations au statut `A`.
+  - Eurostat, `prc_hicp_minr` (`EA`, `TOTAL`, `RCH_A`) : https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?geo=EA&coicop18=TOTAL&unit=RCH_A&sinceTimePeriod=2021-01 (SHA-256 : `5ccce9a562fd2e6263889e53a3e5140f70d6260a780258842e0dcbe5a50f90ca`) ; les 69 mois sont identiques à ceux de `ipch_2021_2026.csv`.
+  - Contrôle : BCE, déclaration de politique monétaire du 10/09/2026, « Wages do not show a material response to the energy shock at this stage » (SHA-256 de la page enregistrée : `ed871e79278e7de6c99431bfa392b68fa4cb8f48f5464d35af45f08cf0334ff5`).
+- **Traitement** : seuls les trimestres complets (trois mois d'IPCH) sont gardés ; le troisième trimestre 2026 manque côté salaires ; construit par `data/cm7/preparer_2026-10-22.R` (à relancer depuis la racine du projet ; vérifié le 22/10/2026 : sortie identique octet pour octet au CSV). `R/cm7.R` recoupe la colonne `inflation` avec la moyenne trimestrielle de `ipch_2021_2026.csv`.
+- **Attention** : la série des salaires négociés est heurtée en 2024-2025 (primes ponctuelles, notamment en Allemagne). À rafraîchir à la publication du troisième trimestre 2026.
+- **Utilisé par** : `R/cm7.R` (`salaires_cm7`, `graphe_salaires_inflation()`), donc `cours/cm7.qmd` et `slides/cm7.qmd`.
+
+## `anticipations_inflation_2022_2026.csv`
+
+- **Contenu** : anticipations d'inflation dans la zone euro, format long (124 lignes).
+  - `date` : AAAA-MM-15 (mois de l'enquête ; pour le SPF, premier mois du trimestre, quand le questionnaire est envoyé) ;
+  - `serie` : `menages_12_mois`, `menages_3_ans` (enquête sur les anticipations des consommateurs, CES, médiane pondérée, d'avril 2022 à août 2026) ; `previsionnistes_long_terme` (enquête auprès des prévisionnistes professionnels, SPF, moyenne des prévisions ponctuelles à cinq ans, arrondie à 0,01, du deuxième trimestre 2022 au troisième trimestre 2026) ;
+  - `valeur` : en %.
+- **Sources** (téléchargées le **22/10/2026** par curl) :
+  - BCE, Data Portal, Consumer Expectations Survey, `CES.M.Z18.ALL.T.C1120.NUM_VAR.WM` (12 mois) et `CES.M.Z18.ALL.T.C1220.NUM_VAR.WM` (3 ans) : https://data-api.ecb.europa.eu/service/data/CES/M.Z18.ALL.T.C1120+C1220.NUM_VAR.WM?startPeriod=2020-01&format=csvdata (SHA-256 : `28acf677263d2728ef09e6cd4961a67992ebfb93fb49354ab1260e2fbfbe2846`). `Z18` = 11 pays (DE, IT, ES, FR, NL, BE, FI, AT, GR, PT, IE) ; codes vérifiés dans la liste `CL_CES_VARIABLE`.
+  - BCE, Data Portal, Survey of Professional Forecasters, `SPF.Q.U2.HICP.POINT.LT.Q.AVG` : https://data-api.ecb.europa.eu/service/data/SPF/Q.U2.HICP.POINT.LT.Q.AVG?startPeriod=2019-Q1&format=csvdata (SHA-256 : `2b9130df66b52933d53ac77f23172c80bf15e968a5468ec5b494bf356b49f6ae`).
+  - Contrôle : BCE, déclaration de politique monétaire du 10/09/2026, « most measures of longer-term inflation expectations stand at around 2 per cent » (SHA-256 de la page enregistrée : `ed871e79278e7de6c99431bfa392b68fa4cb8f48f5464d35af45f08cf0334ff5`).
+- **Traitement** : CES : colonnes `TIME_PERIOD`, `CES_VARIABLE` et `OBS_VALUE` ; SPF : à partir du deuxième trimestre 2022, date au 15 du premier mois du trimestre ; construit par `data/cm7/preparer_2026-10-22.R` (à relancer depuis la racine du projet ; vérifié le 22/10/2026 : sortie identique octet pour octet au CSV).
+- **Attention** : la série CES zone euro commence en avril 2022 ; les horizons SPF à 12 et 24 mois glissants ne sont pas publiés dans le Data Portal (erreur 404). Les ménages attendent 2,9 % à trois ans en août 2026 : l'ancrage « autour de 2 % » de la BCE ne vaut pas pour eux. À rafraîchir après le SPF du quatrième trimestre 2026 et la CES de septembre.
+- **Utilisé par** : `R/cm7.R` (`anticipations_cm7`, `anticipation_mois()`, `graphe_anticipations()`), donc `cours/cm7.qmd` et `slides/cm7.qmd`.
+
+## `inflation_pays_2026-09.csv`
+
+- **Contenu** : inflation IPCH sur un an en septembre 2026 dans les 21 pays de la zone euro et dans la zone euro (22 lignes), triée par inflation croissante.
+  - `geo` : code Eurostat (`EL` pour la Grèce ; `EA` pour la zone euro à composition changeante, 21 pays depuis le 01/01/2026) ;
+  - `pays` : nom en français ;
+  - `inflation` : en % ;
+  - `taux_depot` : 2,50 %, taux de la facilité de dépôt en vigueur depuis le 16/09/2026 (repris de `taux_bce_2019_2026.csv`) ;
+  - `taux_reel` : `taux_depot − inflation`, arrondi à 0,1 (taux réel ex post).
+- **Source** : Eurostat, jeu de données `prc_hicp_minr`, unité `RCH_A`, `coicop18=TOTAL`, mis à jour le 16/10/2026, téléchargé le **22/10/2026** par curl.
+  - https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/prc_hicp_minr?coicop18=TOTAL&unit=RCH_A&time=2026-09&geo=EA&geo=AT&geo=BE&geo=BG&geo=CY&geo=DE&geo=EE&geo=EL&geo=ES&geo=FI&geo=FR&geo=HR&geo=IE&geo=IT&geo=LT&geo=LU&geo=LV&geo=MT&geo=NL&geo=PT&geo=SI&geo=SK (SHA-256 de la réponse JSON : `6238da22e87c93706364a8b3adee9859d622d6fdb16b856e092e50c9fb9653c1`)
+  - Contrôle : communiqué Eurostat du 16/10/2026, https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-16102026-ap ; zone euro, Allemagne, France, Espagne et Italie identiques à `ipch_2021_2026.csv` (vérifié dans `R/cm7.R`).
+- **Traitement** : lecture JSON-stat ; aucune valeur signalée provisoire ou estimée (`status` vide) ; construit par `data/cm7/preparer_2026-10-22.R` (à relancer depuis la racine du projet ; vérifié le 22/10/2026 : sortie identique octet pour octet au CSV).
+- **Attention** : à rafraîchir après l'IPCH d'octobre (flash le 04/11/2026, chiffres définitifs mi-novembre).
+- **Utilisé par** : `R/cm7.R` (`inflation_pays_cm7`, `graphe_inflation_pays()`), donc `cours/cm7.qmd` et `slides/cm7.qmd`.

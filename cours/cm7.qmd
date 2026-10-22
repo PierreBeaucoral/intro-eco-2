@@ -25,6 +25,17 @@ source(here::here("R/cm7.R"))
 
 En septembre 2026, les prix à la consommation de la zone euro augmentent de **3,8 %** sur un an, contre 2,2 % un an plus tôt. Les prix de l'énergie bondissent de 18,9 % ; hors énergie, la hausse n'est que de 2,3 % (Eurostat, communiqué du 16/10/2026). La guerre déclenchée le 28/02/2026, qui a fermé de fait le détroit d'Ormuz dans les heures suivantes (Insee, *Note de conjoncture*, 24/03/2026), en est la principale cause : l'énergie apporte à elle seule 1,7 point des 3,8 % (Eurostat, 16/10/2026).
 
+```{r}
+#| label: fig-petrole-gaz
+#| fig-cap: "Prix du pétrole (Brent, en euros par baril) et du gaz européen (TTF, en euros par mégawattheure, MWh), en moyenne de chaque mois, de janvier 2021 à septembre 2026. Chaque panneau a sa propre échelle. Pointillés : invasion de l'Ukraine (24/02/2022) et guerre au Moyen-Orient (28/02/2026) ; points rouges : pic de 2022 et septembre 2026. Lecture : en septembre 2026, le baril coûte 101 €, presque autant qu'au pic de juin 2022 (114 €) ; le gaz coûte 75 € le MWh, environ trois fois moins qu'en août 2022 (236 €). C'est surtout le gaz qui distingue les deux chocs. Précautions : ce sont des prix de gros (le Brent est un pétrole brut de référence, le TTF le prix du gaz aux Pays-Bas, référence en Europe), pas les prix payés par les ménages ; les prix publiés en dollars sont convertis au taux de change moyen du mois. Sources : Banque mondiale, Commodity Price Data (Pink Sheet), mise à jour du 02/10/2026 ; BCE, Data Portal, taux de change euro-dollar (consultés le 22/10/2026)."
+#| fig-alt: "Deux graphiques en lignes côte à côte, de janvier 2021 à septembre 2026, avec deux lignes verticales pointillées fin février 2022 et fin février 2026. À gauche, le prix du baril de Brent en euros : environ 45 € début 2021, un pic à 114 € en juin 2022, une baisse vers 55 à 60 € fin 2025 et début 2026, puis une remontée brutale à 103 € en avril 2026, une retombée vers 73 € en juillet et 101 € en septembre 2026. À droite, le prix du gaz européen en euros par mégawattheure : environ 20 € début 2021, un pic à 236 € en août 2022, une chute sous 50 € dès 2023, puis une hausse modérée jusqu'à 75 € en septembre 2026, trois fois moins que le pic de 2022."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_petrole_gaz()
+```
+
+La @fig-petrole-gaz montre ce choc sur les prix de marché. Le baril de Brent passe de 60 € en moyenne en février 2026 à 103 € en avril, puis 101 € en septembre, presque autant qu'au pic de juin 2022 (114 €). Le gaz européen, lui, coûte 75 € le mégawattheure (MWh) en septembre 2026, environ trois fois moins qu'en août 2022 (236 €) (Banque mondiale ; BCE ; consultés le 22/10/2026).
+
 La Banque centrale européenne (BCE) a réagi deux fois. Son taux de dépôt, à 2,00 % depuis le 11/06/2025, passe à **2,25 %** le 17/06/2026, puis à **2,50 %** le 16/09/2026 (décisions des 11/06 et 10/09, en vigueur quelques jours plus tard ; BCE, tableau des taux directeurs, consulté le 21/10/2026). Ce sont ses premières hausses depuis 2023.
 
 Le précédent est récent. Après l'invasion de l'Ukraine, l'inflation de la zone euro atteint **10,6 %** en octobre 2022 (Eurostat). La BCE relève alors ses taux **dix fois** entre juillet 2022 et septembre 2023 : son taux de dépôt passe de −0,50 % à **4,00 %** (BCE).
@@ -182,6 +193,28 @@ On parle d'**effets de second tour** quand une hausse de prix initiale (ici l'é
 
 La BCE l'écrit ainsi le 10 septembre 2026 : « plus les prix de l'énergie restent élevés, plus ils risquent de faire monter l'inflation au-delà » de l'énergie. Elle note aussi que, « à ce stade », les salaires ne réagissent pas de façon notable au choc, et que la plupart des mesures des anticipations d'inflation à long terme se situent « autour de 2 % », même si les anticipations à court terme restent élevées (BCE, déclaration de politique monétaire, 10/09/2026, notre traduction).
 
+```{r}
+#| label: fig-salaires-inflation
+#| fig-cap: "Croissance sur un an des salaires négociés et des prix (inflation IPCH) dans la zone euro, par trimestre, du premier trimestre 2021 au deuxième trimestre 2026 (dernier trimestre publié pour les salaires). Les salaires négociés sont les hausses prévues par les accords collectifs ; l'inflation du trimestre est la moyenne des trois taux mensuels. Lecture : quand la courbe bleue passe au-dessus de l'ambre, les salaires rattrapent les prix (effet de second tour) ; c'est le cas de la fin de 2023 à 2025 (sauf au troisième trimestre 2025). En 2026, les salaires augmentent de 2,6 % puis de 2,4 %, pendant que l'inflation remonte à 3,0 % : ils n'accélèrent pas (2,9 % fin 2025), alors qu'un effet de second tour se verrait à une accélération des salaires après le choc ; être au-dessus des prix ne suffit pas. Précautions : la série des salaires est heurtée en 2024-2025 (primes ponctuelles, notamment en Allemagne) ; deux trimestres seulement ont suivi le choc de 2026, d'où « pas encore ». Sources : BCE, Data Portal, indicateur des salaires négociés (INW) ; Eurostat, jeu de données prc_hicp_minr (consultés le 22/10/2026)."
+#| fig-alt: "Graphique en lignes, par trimestre, de 2021 au deuxième trimestre 2026, avec une ligne pointillée à la cible de 2 %. L'inflation, en ambre, monte d'environ 1 % début 2021 à près de 10 % fin 2022, redescend sous 3 % fin 2023, reste vers 2 % en 2024 et 2025, puis remonte à 3,0 % au deuxième trimestre 2026. Les salaires négociés, en bleu, restent entre 1 et 3 % en 2021 et 2022, bien sous l'inflation, montent vers 4,5 % en 2023 et restent au-dessus de l'inflation de la fin de 2023 à 2025, sauf au troisième trimestre 2025, avec des à-coups (jusqu'à 5,5 %). En 2026, 2,6 % au premier trimestre, au-dessus de l'inflation (2,1 %), puis 2,4 % au deuxième, sous l'inflation (3,0 %)."
+#| fig-width: 7.5
+#| fig-height: 4.8
+graphe_salaires_inflation()
+```
+
+La @fig-salaires-inflation compare salaires et prix. En 2022, les salaires négociés augmentent bien moins vite que les prix (3,2 % sur un an au quatrième trimestre, pour une inflation proche de 10 %) ; du quatrième trimestre 2023 à 2025 (sauf au troisième trimestre 2025), ils augmentent plus vite : c'est le rattrapage, un effet de second tour. En 2026, ils augmentent de 2,6 % au premier trimestre et de 2,4 % au deuxième, alors que l'inflation remonte de 2,1 % à 3,0 % (BCE ; Eurostat ; consultés le 22/10/2026). En 2026, les salaires n'accélèrent pas (2,6 % puis 2,4 %, contre 2,9 % fin 2025), alors qu'un effet de second tour se verrait à une accélération des salaires après le choc ; le seul fait d'être au-dessus des prix ne suffit pas. Deux trimestres seulement ont suivi le choc : les salaires n'ont pas encore réagi.
+
+```{r}
+#| label: fig-anticipations
+#| fig-cap: "Inflation attendue dans la zone euro, d'avril 2022 à août 2026 : par les ménages, dans 12 mois et dans 3 ans (médiane des réponses à l'enquête mensuelle de la BCE auprès des consommateurs de 11 pays) ; par les prévisionnistes professionnels, dans cinq ans (moyenne, enquête trimestrielle, jusqu'au troisième trimestre 2026). Pointillés : cible de 2 % et 28/02/2026. Lecture : après le 28/02/2026, les ménages attendent 4,0 % d'inflation à un an en mars, contre 2,5 % en février, puis 3,0 % en août ; les prévisionnistes attendent toujours 2,0 % dans cinq ans. Précautions : à trois ans, les ménages attendent 2,9 % en août 2026, contre 2,5 % en février, donc nettement plus de 2 % ; la série des ménages commence en avril 2022 et ne couvre pas le début de l'épisode de 2021-2022. Sources : BCE, Data Portal, enquête sur les anticipations des consommateurs (CES) et enquête auprès des prévisionnistes professionnels (SPF) (consultés le 22/10/2026)."
+#| fig-alt: "Graphique en lignes d'avril 2022 à août 2026, avec une ligne pointillée horizontale à 2 % et une ligne pointillée verticale au 28 février 2026. L'inflation attendue par les ménages dans 12 mois, en ambre, part de 5 % en 2022, culmine près de 6 % fin 2022, descend vers 2,5 à 3 % en 2024 et 2025, bondit à 4,0 % en mars 2026 puis redescend à 3,0 % en août. L'inflation attendue par les ménages dans 3 ans, en bleu, reste entre 2 et 3 % environ (au plus 3,1 %) ; elle passe de 2,5 % en février 2026 à 3,0 % en mars et vaut 2,9 % en août. L'inflation attendue par les prévisionnistes dans cinq ans, en noir, reste presque plate, à peine au-dessus de 2 %, à 2,0 % en 2026."
+#| fig-width: 7.5
+#| fig-height: 4.8
+graphe_anticipations()
+```
+
+La @fig-anticipations distingue les horizons. Les ménages attendent 4,0 % d'inflation à un an en mars 2026, contre 2,5 % en février, puis 3,0 % en août : à court terme, les anticipations restent élevées. Les prévisionnistes professionnels attendent toujours 2,0 % dans cinq ans (2,04 % au troisième trimestre 2026). Les ménages, eux, attendent 2,9 % à trois ans en août 2026, contre 2,5 % en février : l'ancrage « autour de 2 % » vaut pour la plupart des mesures, pas pour toutes (BCE, consulté le 22/10/2026).
+
 ### La règle de Taylor donne un ordre de grandeur
 
 Taylor résume la conduite d'une banque centrale en une formule :
@@ -259,6 +292,17 @@ La @fig-inflation-diffusion montre cette diffusion. L'inflation d'ensemble culmi
 ### Un seul taux pour vingt et un pays
 
 **Par territoire.** Depuis l'entrée de la Bulgarie le 01/01/2026, la zone euro compte 21 pays (Eurostat), et la BCE fixe un taux unique pour tous. Or l'inflation diffère. En septembre 2026, avec un taux de dépôt de 2,50 %, le taux réel ex post vaut environ 2,50 − 5,0 = **−2,5 %** en Espagne, −1,7 % en Italie (4,2 % d'inflation), −0,9 % en France (3,4 %) et −0,8 % en Allemagne (3,3 %) (Eurostat, 16/10/2026). La même décision freine moins les pays où l'inflation est la plus forte : c'est le prix d'une monnaie unique.
+
+```{r}
+#| label: fig-inflation-pays
+#| fig-cap: "Inflation sur un an (IPCH) en septembre 2026 dans les 21 pays de la zone euro et dans l'ensemble de la zone (barre noire), et taux de dépôt de la BCE (trait bleu, 2,50 % depuis le 16/09/2026). Lecture : à droite du trait, le taux réel ex post est négatif ; plus la barre dépasse le trait, moins la hausse des taux freine la dépense dans le pays. Seule Malte (2,4 %) est à gauche, avec un taux réel d'environ +0,1 % ; le taux réel descend à environ −3,6 % en Lituanie (6,1 %). Précaution : le taux réel est calculé avec l'inflation observée d'un seul mois, pas avec l'inflation anticipée. Sources : Eurostat, jeu de données prc_hicp_minr, mis à jour le 16/10/2026 ; BCE, Data Portal (taux directeurs) (consultés le 22/10/2026)."
+#| fig-alt: "Graphique en barres horizontales, triées de la plus courte à la plus longue : l'inflation de septembre 2026 dans chacun des 21 pays de la zone euro et dans la zone euro. Un trait vertical bleu marque le taux de dépôt de la BCE, 2,50 %. Seule la barre de Malte, 2,4 %, s'arrête avant le trait. Viennent ensuite la Finlande, 2,7 %, la Lettonie, les Pays-Bas et la Slovaquie, 3,0 %, l'Estonie, 3,1 %, l'Allemagne, 3,3 %, la France, 3,4 %, l'Autriche et le Portugal, 3,6 %, la Slovénie, 3,7 %, la zone euro, en noir, et l'Irlande, 3,8 %, l'Italie, 4,2 %, la Croatie, 4,3 %, la Belgique, 4,5 %, l'Espagne, 5,0 %, la Grèce, 5,1 %, Chypre et le Luxembourg, 5,2 %, la Bulgarie, 5,6 %, et la Lituanie, 6,1 %, la plus longue."
+#| fig-width: 7.5
+#| fig-height: 6.4
+graphe_inflation_pays()
+```
+
+La @fig-inflation-pays montre les 21 pays : le taux de dépôt est inférieur à l'inflation dans vingt d'entre eux. Seule Malte (2,4 % d'inflation) a un taux réel ex post positif, d'environ +0,1 % ; à l'autre extrême, la Lituanie (6,1 %) a un taux réel d'environ −3,6 % et la Bulgarie (5,6 %) d'environ −3,1 % (Eurostat, consulté le 22/10/2026).
 
 ## La controverse
 

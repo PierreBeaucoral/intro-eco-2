@@ -21,7 +21,7 @@ source(here::here("R/cm2.R"))   # même fichier que la page de cours
 
 . . .
 
-- Conséquences : ventes des buralistes **−8,2 %** en 2025 (OFDT) ; fumeurs quotidiens chez les 18-75 ans : 25 % en 2014, 18 % en 2024 (Santé publique France).
+- Conséquences : ventes des buralistes **−8,2 %** en 2025 (OFDT) ; fumeurs quotidiens chez les 18-75 ans : 25 % en 2021, 18 % en 2024 (Santé publique France).
 
 . . .
 
@@ -685,7 +685,7 @@ graphe_court_long(base_size = 24)
 :::
 
 ::: {.notes}
-2 h 06 – 2 h 09. « Selon la plupart des experts » (Hill, 2026, § 4.3). Question : pourquoi une corrélation ne suffit-elle pas à prouver l'effet du prix ? Transition : les comptes nationaux de l'Insee.
+2 h 06 – 2 h 08. « Selon la plupart des experts » (Hill, 2026, § 4.3). Question : pourquoi une corrélation ne suffit-elle pas à prouver l'effet du prix ? Transition : les comptes nationaux de l'Insee.
 :::
 
 ## Tabac, 2000-2025 : prix multiplié par 4,6, quantités divisées par 2,8
@@ -711,7 +711,7 @@ graphe_conso_tabac(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 09 – 2 h 13. La dépense est le prix multiplié par la quantité : P × Q sur une même figure. En 2020, frontières fermées, les quantités ne baissent presque pas (−0,2 %). Les quantités baissent presque autant que le prix réel monte : à long terme, la réaction est bien plus forte que d'une année sur l'autre, mais elle mêle l'effet du prix et celui des autres mesures. Transition : ventes ou consommation ?
+2 h 08 – 2 h 11. La dépense est le prix multiplié par la quantité : P × Q sur une même figure. En 2020, frontières fermées, les quantités ne baissent presque pas (−0,2 %). Les quantités baissent presque autant que le prix réel monte : à long terme, la réaction est bien plus forte que d'une année sur l'autre, mais elle mêle l'effet du prix et celui des autres mesures. Transition : ventes ou consommation ?
 :::
 
 ## Fuites : les ventes des buralistes ne sont pas la consommation
@@ -723,7 +723,63 @@ graphe_conso_tabac(base_size = 24)
 :::
 
 ::: {.notes}
-2 h 13 – 2 h 16. Le 17,7 % vient de l'étude TAFE des douanes et de la MILDECA, citée par le ministère de l'Action et des Comptes publics (réponse à la question écrite n° 04515). Question : le tabac à rouler est-il un substitut ? Transition : ce que ces fuites font à la recette.
+2 h 11 – 2 h 13. Le 17,7 % vient de l'étude TAFE des douanes et de la MILDECA, citée par le ministère de l'Action et des Comptes publics (réponse à la question écrite n° 04515). Question : le tabac à rouler est-il un substitut ? Transition : les ventes de tabac à rouler.
+:::
+
+## Tabac à rouler : ventes en hausse jusqu'en 2016, puis en recul
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Ventes de cigarettes et de tabac à rouler, indices base 100 en 2000. Le tabac à rouler monte jusqu'à 161 en 2016 puis redescend à 79 en 2025 ; les cigarettes tombent à 28. Les lignes s'interrompent en 2023."
+graphe_cigarettes_rouler(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- 2000-2016 : cigarettes à l'indice **54**, tabac à rouler à **161** (+61 %).
+
+::: {.fragment}
+
+- Puis le tabac à rouler recule : **79** en 2025, contre 28 pour les cigarettes. Son prix a rattrapé celui des cigarettes.
+:::
+:::
+::::
+
+[Source : C. Hill (2026), tableau 1.1, ventes en tonnes, France métropolitaine (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 13 – 2 h 15. Rapport de prix entre 20 cigarettes et 16 grammes de tabac à rouler : 2,7 en 2000, 1,3 en 2025 (Hill, 2026). Petit rebond en 2020, frontières fermées. L'année 2023 n'est pas tracée : la ligne du tableau source montre un rebond que les autres sources ne confirment pas (probable coquille). Question : pourquoi le tabac à rouler recule-t-il à son tour ? (Son prix rattrape celui des cigarettes.) Transition : l'autre substitut, acheter à l'étranger.
+:::
+
+## Prix du tabac en 2025 : France 191, moyenne de l'UE 100
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Barres horizontales du niveau des prix du tabac en 2025, UE à 27 égale 100 : Irlande 262, France 191 en bleu, Pays-Bas 172, Belgique 144, Suisse 130, Allemagne 116, UE 100 en noir, Luxembourg 88, Italie 82, Espagne 81."
+graphe_prix_europe(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Niveau des prix du tabac : France **191** pour une moyenne de l'UE à 100 ; seule l'Irlande est plus chère (262).
+
+::: {.fragment}
+
+- Belgique 144, Luxembourg 88, Italie 82, Espagne 81 : en France, plus du double de ces trois derniers voisins.
+:::
+:::
+::::
+
+[Source : Eurostat, prc_ppp_ind_1, poste « Tabac », 2025 (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 15 – 2 h 17. Indice de l'ensemble des produits du tabac, pas le prix d'un paquet ; prix en euros, sans correction du pouvoir d'achat. France 2,35 fois plus chère que l'Espagne. Question : quels fumeurs ont intérêt à acheter de l'autre côté de la frontière ? Transition : ce que ces fuites font à la recette.
 :::
 
 ## Droit de consommation : sommet en 2020, puis recul en euros constants
@@ -749,7 +805,7 @@ graphe_recettes_tabac(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 16 – 2 h 20. Une demande peu élastique est une bonne assiette. Deux lectures, qui peuvent se cumuler : moins de fumeurs (le but sanitaire) ou plus d'achats hors réseau (une fuite). Les données ne permettent pas de trancher : Hill reproche à l'État de ne pas s'être donné les moyens de mesurer ces achats de façon indépendante. Transition : une erreur de mesure fréquente.
+2 h 17 – 2 h 21. Une demande peu élastique est une bonne assiette. Deux lectures, qui peuvent se cumuler : moins de fumeurs (le but sanitaire) ou plus d'achats hors réseau (une fuite). Les données ne permettent pas de trancher : Hill reproche à l'État de ne pas s'être donné les moyens de mesurer ces achats de façon indépendante. Transition : une erreur de mesure fréquente.
 :::
 
 ## Point d'attention : ne pas calculer une élasticité sur les seules ventes légales
@@ -765,7 +821,7 @@ Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes des
 - L'élasticité mesurée par Hill est celle des ventes enregistrées, pas de la consommation.
 
 ::: {.notes}
-2 h 20 – 2 h 23. Question : avec quelles données mesurerait-on la consommation ? (Enquêtes auprès des fumeurs.) Transition : qui gagne, qui perd ?
+2 h 21 – 2 h 23. Question : avec quelles données mesurerait-on la consommation ? (Enquêtes auprès des fumeurs.) Transition : qui gagne, qui perd ?
 :::
 
 ## Par génération : les jeunes sont plus sensibles au prix
@@ -776,7 +832,7 @@ Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes des
 :::
 
 ::: {.notes}
-2 h 23 – 2 h 26. Ce sont sans doute les jeunes qui gagnent le plus en santé. Les chiffres ESCAPAD ne se comparent pas aux 5,6 % : autre enquête, autre année, un seul âge au lieu de tous les lycéens. Transition : par revenu.
+2 h 23 – 2 h 25. Ce sont sans doute les jeunes qui gagnent le plus en santé. Les chiffres ESCAPAD ne se comparent pas aux 5,6 % : autre enquête, autre année, un seul âge au lieu de tous les lycéens. Transition : par revenu.
 :::
 
 ## Par revenu : une taxe régressive, une réaction non démontrée
@@ -789,23 +845,64 @@ Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes des
 :::
 
 ::: {.notes}
-2 h 26 – 2 h 29. Chômeurs : Hill, 2026, § 2.4. Question : régressive veut-elle dire injuste ? (Non : c'est un constat positif ; le jugement vient dans la controverse.) Transition : territoires et genre.
+2 h 25 – 2 h 27. Chômeurs : Hill, 2026, § 2.4. Question : régressive veut-elle dire injuste ? (Non : c'est un constat positif ; le jugement vient dans la controverse.) Transition : par territoire, les ventes près des frontières.
 :::
 
-## Par territoire et par genre : frontières et écart hommes-femmes
+## Ventes frontalières : baisse plus forte depuis 2017, sauf en 2020
 
-- **Territoire** : près des frontières, le paquet est moins cher de l'autre côté ; les buralistes frontaliers perdent des ventes, compensés par des aides (Hill, 2026, § 7.6).
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Volumes vendus par les buralistes, indices base 100 en 2017 : départements non frontaliers à 56,4 en 2025, départements frontaliers à 49,7. Les ventes frontalières remontent seulement en 2020, année marquée par une ligne en tirets."
+graphe_ventes_frontaliers(base_size = 24)
+```
+:::
 
-. . .
+::: {.column width="40%"}
+- 2017-2025 : **−50,3 %** dans les départements frontaliers, **−43,6 %** ailleurs.
 
-- Les hausses de taxes en Belgique et au Luxembourg réduisent l'avantage d'y acheter (AFP, 28/05/2026).
+::: {.fragment}
 
-. . .
+- 2020, frontières fermées : seule année où les ventes frontalières remontent (80,2 puis 81,2).
+:::
+:::
+::::
 
-- **Genre** : en 1953, 72 % des hommes et 17 % des femmes fumaient régulièrement ; en 2024, 20,4 % et 16,2 % (Hill, 2026, tableau 2.1).
+[Source : DGDDI, exploitation OFDT (Douchet, 2026, graphique 2), France continentale (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
-2 h 29 – 2 h 31. Sondages Seita, Insee, Inpes puis Santé publique France. L'écart entre hommes et femmes s'est beaucoup réduit. Transition : l'État et les vendeurs.
+2 h 27 – 2 h 29. Ventes enregistrées, pas consommation : une partie de la baisse est une fuite, non un arrêt du tabac. Près des frontières, le paquet est moins cher de l'autre côté ; les buralistes frontaliers perdent des ventes, compensés par des aides (Hill, 2026, § 7.6). En 2025, la baisse sur un an est presque la même des deux côtés, ce que l'OFDT attribue aux hausses de taxes belges et luxembourgeoises (Douchet, 2026) : de 2024 à 2025, l'indice de niveau des prix du tabac par rapport à la moyenne de l'UE passe de 135,7 à 144,4 en Belgique, de 84,0 à 87,5 au Luxembourg (Eurostat). Question : pourquoi 2020 ressemble-t-il à une expérience ? Transition : l'écart entre hommes et femmes.
+:::
+
+## Tabagisme par sexe : un écart de 55 points en 1953, 4 en 2024
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Part des fumeurs réguliers par sexe, de 1953 à 2024 : les hommes passent de 72 % à 20,4 %, les femmes de 17 % à 16,2 % après un sommet d'environ 26 % en 2000 et 2010. Segment en tirets entre 1953 et 1980, trait vertical en tirets en 2017."
+graphe_fumeurs_sexe(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Hommes : baisse presque continue, de 72 % en 1953 à **20,4 %** en 2024.
+
+::: {.fragment}
+
+- Femmes : 16 % en 1980, 26,6 % en 2010, puis **16,2 %** en 2024.
+- 2023-2024 : chute nette pour les deux sexes.
+:::
+:::
+::::
+
+[Source : sondages SEITA, Insee, Inpes puis Santé publique France, compilés par C. Hill (2026), tableau 2.1 (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 29 – 2 h 31. Sondages Seita, Insee, Inpes puis Santé publique France. Chaque point est une enquête ; aucune entre 1953 et 1980 (tirets). Le champ change : depuis 2017 (trait vertical), tabagisme quotidien des 18-75 ans. 2023 → 2024 : 25,4 → 20,4 % chez les hommes, 20,9 → 16,2 % chez les femmes. Question : pourquoi les femmes ont-elles commencé à fumer plus tard ? Transition : l'État et les vendeurs.
 :::
 
 ## Vendeurs et État : des gains qui s'effritent

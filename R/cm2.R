@@ -380,6 +380,176 @@ graphe_conso_tabac <- function(base_size = 16) {
     theme(plot.caption = element_text(margin = margin(t = 10)))
 }
 
+#' Nombre écrit à la française, avec `d` décimales (ex. 49,7)
+virgule <- function(x, d = 0) formatC(x, format = "f", digits = d, decimal.mark = ",")
+
+# ---------------------------------------------------------------------------
+# 7c. Graphique de données : ventes de cigarettes et de tabac à rouler,
+#     France métropolitaine, 2000-2025 (Hill, 2026, tableau 1.1), en tonnes.
+#     Fichier et provenance : data/cm2/cigarettes_tabac_rouler_hill.csv et data/cm2/SOURCES.md
+#     La ligne 2023 du tableau (rebond invraisemblable, probable coquille,
+#     colonne `suspect`) n'est pas tracée : les courbes s'interrompent en 2023.
+# ---------------------------------------------------------------------------
+rouler_cm2 <- utils::read.csv(here::here("data/cm2/cigarettes_tabac_rouler_hill.csv"))
+
+#' Indice base 100 en 2000 d'une colonne de rouler_cm2, pour une année
+indice_rouler <- function(serie, annee) {
+  100 * rouler_cm2[[serie]][rouler_cm2$annee == annee] / rouler_cm2[[serie]][rouler_cm2$annee == 2000]
+}
+
+#' Ventes de cigarettes et de tabac à rouler, en indices base 100 en 2000 ;
+#' étiquettes en bout de trait (2025) et repère du sommet du tabac à rouler (2016).
+graphe_cigarettes_rouler <- function(base_size = 16) {
+  r <- rouler_cm2[!rouler_cm2$suspect, ]
+  series <- c("Tabac à rouler", "Cigarettes")
+  d <- rbind(
+    data.frame(annee = r$annee, serie = series[1], indice = 100 * r$tabac_rouler_kt / r$tabac_rouler_kt[r$annee == 2000]),
+    data.frame(annee = r$annee, serie = series[2], indice = 100 * r$cigarettes_kt / r$cigarettes_kt[r$annee == 2000])
+  )
+  d$segment <- ifelse(d$annee < 2023, "avant", "apres")   # une ligne par segment continu
+  fin <- d[d$annee == 2025, ]
+  taille <- base_size / 3.4
+  ggplot(d, aes(annee, indice, colour = serie, group = interaction(serie, segment))) +
+    geom_hline(yintercept = 100, linetype = "22", colour = couleurs_eco[["neutre"]]) +
+    geom_line(linewidth = 1.2) +
+    geom_text(data = fin, aes(label = paste0(serie, " : ", virgule(indice))), hjust = 0, nudge_x = 0.4,
+              family = police_cours, size = taille) +
+    annotate("text", x = 2016, y = 172, label = paste0("2016 : ", virgule(indice_rouler("tabac_rouler_kt", 2016))),
+             family = police_cours, size = taille, colour = couleurs_eco[["offre"]]) +
+    scale_colour_manual(values = c(Cigarettes = couleurs_eco[["demande"]], `Tabac à rouler` = couleurs_eco[["offre"]])) +
+    scale_x_continuous(breaks = seq(2000, 2025, 5), expand = expansion(mult = c(0.02, 0))) +
+    scale_y_continuous(breaks = seq(0, 175, if (base_size > 16) 50 else 25)) +
+    coord_cartesian(xlim = c(2000, if (base_size > 16) 2038.5 else 2033), ylim = c(0, 180), clip = "off") +
+    labs(x = NULL, y = "Ventes en tonnes (indice 2000 = 100)",
+         caption = if (base_size > 16) "Source : C. Hill (2026), tableau 1.1, France\nmétropolitaine ; 2023 non représenté\n(consulté le 22/10/2026)." else
+           "Source : C. Hill (2026), tableau 1.1, France métropolitaine ;\n2023 non représenté (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 7d. Graphique de données : niveau des prix du tabac en Europe, 2025
+#     Eurostat, prc_ppp_ind_1 (COICOP 2018), poste A010203 « Tabac »,
+#     indicateur PLI_EU27_2020 (UE à 27 = 100), mise à jour du 09/07/2026.
+#     Fichier et provenance : data/cm2/prix_tabac_europe_eurostat.csv et data/cm2/SOURCES.md
+#     Indice de niveau des prix de l'ensemble des produits du tabac, pas le prix d'un paquet.
+# ---------------------------------------------------------------------------
+prix_europe_cm2 <- utils::read.csv(here::here("data/cm2/prix_tabac_europe_eurostat.csv"))
+
+#' Indice de niveau des prix du tabac (UE à 27 = 100) d'un pays, en 2025 ou en 2024
+pli_tabac <- function(code, annee = 2025) {
+  prix_europe_cm2[[paste0("pli_tabac_", annee)]][prix_europe_cm2$code == code]
+}
+
+#' Barres horizontales triées : France en azur, moyenne de l'UE en encre,
+#' autres pays en gris ; valeur arrondie en bout de barre.
+graphe_prix_europe <- function(base_size = 16) {
+  d <- prix_europe_cm2
+  d$pays[d$code == "EU27_2020"] <- "UE à 27"
+  d$pays <- factor(d$pays, levels = d$pays[order(d$pli_tabac_2025)])
+  d$role <- ifelse(d$code == "FR", "France", ifelse(d$code == "EU27_2020", "UE", "Autre"))
+  ggplot(d, aes(pli_tabac_2025, pays, fill = role)) +
+    geom_col(width = 0.7) +
+    geom_text(aes(label = virgule(pli_tabac_2025)), hjust = 0, nudge_x = 4,
+              family = police_cours, size = base_size / 3.4, colour = couleurs_eco[["equilibre"]]) +
+    scale_fill_manual(values = c(France = couleurs_eco[["demande"]], UE = couleurs_eco[["equilibre"]],
+                                 Autre = couleurs_eco[["neutre"]])) +
+    scale_x_continuous(breaks = seq(0, 250, if (base_size > 16) 100 else 50), expand = expansion(mult = c(0, 0.1))) +
+    labs(x = "Niveau des prix du tabac (UE à 27 = 100)", y = NULL,
+         caption = if (base_size > 16) "Source : Eurostat, prc_ppp_ind_1, 2025\n(consulté le 22/10/2026)." else
+           "Source : Eurostat, prc_ppp_ind_1 (indices de niveau des prix), 2025\n(consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)),
+          panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(colour = "#D1D5DB", linewidth = 0.4),
+          axis.line.x = element_blank())
+}
+
+# ---------------------------------------------------------------------------
+# 7e. Graphique de données : ventes des buralistes dans les départements
+#     frontaliers et non frontaliers, France continentale, 2017-2025.
+#     DGDDI, exploitation OFDT (Douchet, 2026, graphique 2) : variation cumulée
+#     depuis 2017, en %. Indice 2017 = 100 : 100 + variation.
+#     Fichier et provenance : data/cm2/ventes_frontaliers_ofdt.csv et data/cm2/SOURCES.md
+# ---------------------------------------------------------------------------
+frontaliers_cm2 <- utils::read.csv(here::here("data/cm2/ventes_frontaliers_ofdt.csv"))
+frontaliers_cm2$indice_front  <- 100 + frontaliers_cm2$frontaliers
+frontaliers_cm2$indice_autres <- 100 + frontaliers_cm2$non_frontaliers
+
+#' Deux indices base 100 en 2017 ; repère en tirets en 2020 (frontières fermées).
+graphe_ventes_frontaliers <- function(base_size = 16) {
+  f <- frontaliers_cm2
+  noms <- if (base_size > 16) c("Frontaliers", "Non frontaliers") else
+    c("Départements\nfrontaliers", "Départements\nnon frontaliers")
+  d <- rbind(data.frame(annee = f$annee, serie = noms[1], indice = f$indice_front),
+             data.frame(annee = f$annee, serie = noms[2], indice = f$indice_autres))
+  d$serie <- factor(d$serie, levels = noms)
+  fin <- d[d$annee == 2025, ]
+  fin$y <- fin$indice + c(-4, 4)                 # sépare les deux étiquettes
+  taille <- base_size / 3.4
+  neutre <- couleurs_eco[["neutre"]]
+  ggplot(d, aes(annee, indice, colour = serie)) +
+    annotate("segment", x = 2020, xend = 2020, y = 40, yend = 100, linetype = "22", colour = neutre) +
+    annotate("text", x = 2020.15, y = 100, label = "2020 : frontières\nfermées (Covid)", hjust = 0, vjust = 1,
+             family = police_cours, size = taille, colour = neutre, lineheight = 0.9) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = base_size / 8) +
+    geom_text(data = fin, aes(y = y, label = paste0(serie, " : ", virgule(indice, 1))), hjust = 0, nudge_x = 0.2,
+              family = police_cours, size = taille, lineheight = 0.9) +
+    scale_colour_manual(values = unname(couleurs_eco[c("offre", "demande")])) +
+    scale_x_continuous(breaks = seq(2017, 2025, if (base_size > 16) 2 else 1), expand = expansion(mult = c(0.02, 0))) +
+    scale_y_continuous(breaks = seq(40, 100, 20)) +
+    coord_cartesian(xlim = c(2017, if (base_size > 16) 2030.6 else 2028.3), ylim = c(40, 102), clip = "off") +
+    labs(x = NULL, y = "Volumes vendus (indice 2017 = 100)",
+         caption = if (base_size > 16) "Source : DGDDI, exploitation OFDT (Douchet, 2026,\ngraphique 2), réseau des buralistes\n(consulté le 22/10/2026)." else
+           "Source : DGDDI, exploitation OFDT (Douchet, 2026, graphique 2),\nréseau des buralistes (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)))
+}
+
+# ---------------------------------------------------------------------------
+# 7f. Graphique de données : part de fumeurs réguliers par sexe, 1953-2024
+#     Sondages SEITA, Insee, Inpes puis Santé publique France, compilés par
+#     C. Hill (2026), tableau 2.1. Pas d'enquête entre 1953 et 1980 (tirets).
+#     Fichier et provenance : data/cm2/fumeurs_par_sexe_hill.csv et data/cm2/SOURCES.md
+# ---------------------------------------------------------------------------
+fumeurs_cm2 <- utils::read.csv(here::here("data/cm2/fumeurs_par_sexe_hill.csv"))
+
+#' Part de fumeurs (%) d'un sexe (« hommes_pct » ou « femmes_pct ») une année d'enquête
+fumeurs_annee <- function(serie, annee) fumeurs_cm2[[serie]][fumeurs_cm2$annee == annee]
+
+#' Deux séries de points d'enquête ; segment 1953-1980 en tirets (aucune enquête) ;
+#' repère vertical en 2017 : début de la série de Santé publique France (tabagisme quotidien des 18-75 ans).
+graphe_fumeurs_sexe <- function(base_size = 16) {
+  s <- fumeurs_cm2
+  d <- rbind(data.frame(annee = s$annee, serie = "Hommes", pct = s$hommes_pct),
+             data.frame(annee = s$annee, serie = "Femmes", pct = s$femmes_pct))
+  fin <- d[d$annee == 2024, ]
+  ecart <- if (base_size > 16) 3.5 else 2.5
+  fin$y <- fin$pct + ifelse(fin$serie == "Hommes", ecart, -ecart)   # sépare les étiquettes
+  deb <- d[d$annee == 1953, ]
+  taille <- base_size / 3.4
+  ggplot(d, aes(annee, pct, colour = serie)) +
+    geom_vline(xintercept = 2017, linetype = "22", colour = "grey55", linewidth = 0.4) +
+    geom_line(data = d[d$annee <= 1980, ], linetype = "22", linewidth = 0.8) +
+    geom_line(data = d[d$annee >= 1980, ], linewidth = 1.2) +
+    geom_point(size = base_size / 9) +
+    geom_text(data = deb, aes(label = paste0(virgule(pct), " %")), hjust = 0, nudge_x = 0.8, nudge_y = 4,
+              family = police_cours, size = taille) +
+    geom_text(data = fin, aes(y = y, label = paste0(serie, " : ", virgule(pct, 1), " %")), hjust = 0, nudge_x = 1.2,
+              family = police_cours, size = taille) +
+    scale_colour_manual(values = c(Hommes = couleurs_eco[["demande"]], Femmes = couleurs_eco[["offre"]])) +
+    scale_x_continuous(breaks = if (base_size > 16) c(1953, 1980, 1995, 2010, 2024) else c(1953, 1980, 1990, 2000, 2010, 2017, 2024),
+                       expand = expansion(mult = c(0.02, 0))) +
+    scale_y_continuous(breaks = seq(0, 80, 20), labels = function(x) paste0(x, " %")) +
+    coord_cartesian(xlim = c(1953, if (base_size > 16) 2060 else 2046), ylim = c(0, 80), clip = "off") +
+    labs(x = NULL, y = "Fumeurs réguliers (% des adultes)",
+         caption = if (base_size > 16) "Source : sondages SEITA, Insee, Inpes puis Santé\npublique France, compilés par C. Hill (2026),\ntableau 2.1 (consulté le 22/10/2026)." else
+           "Source : sondages SEITA, Insee, Inpes puis Santé publique France,\ncompilés par C. Hill (2026), tableau 2.1 (consulté le 22/10/2026).") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)))
+}
+
 # ---------------------------------------------------------------------------
 # 8. Vérifications : chaque chiffre annoncé dans cours/cm2.qmd
 # ---------------------------------------------------------------------------
@@ -489,4 +659,55 @@ stopifnot(
   # 2020 : le volume ne baisse presque pas (frontières fermées), 24 772 -> 24 726 M€ de 2020
   proche(round(var_pct(conso_cm2$volume_meur2020[conso_cm2$annee == 2019],
                        conso_cm2$volume_meur2020[conso_cm2$annee == 2020]), 1), -0.2)
+)
+# Données : cigarettes et tabac à rouler (Hill, 2026, tableau 1.1), indices base 100 en 2000.
+# 2016 : cigarettes 54 (presque divisées par deux), tabac à rouler 161 (+61 %) ; 2025 : 28 et 79.
+# Recoupement 2025 (OFDT, 2026) : 18,7 kt x 1,25 (0,8 g -> 1 g par cigarette) = 23,4 kt (OFDT : 23 326 t).
+stopifnot(
+  nrow(rouler_cm2) == 26, !anyNA(rouler_cm2), sum(rouler_cm2$suspect) == 1,
+  rouler_cm2$annee[rouler_cm2$suspect] == 2023,
+  round(indice_rouler("cigarettes_kt", 2016)) == 54, round(indice_rouler("tabac_rouler_kt", 2016)) == 161,
+  round(indice_rouler("cigarettes_kt", 2025)) == 28, round(indice_rouler("tabac_rouler_kt", 2025)) == 79,
+  # le sommet du tabac à rouler (hors 2023) est atteint en 2015-2016
+  proche(max(rouler_cm2$tabac_rouler_kt[!rouler_cm2$suspect]), rouler_cm2$tabac_rouler_kt[rouler_cm2$annee == 2016]),
+  proche(round(rouler_cm2$cigarettes_kt[rouler_cm2$annee == 2025] * 1.25, 1), 23.4)
+)
+# Données : niveau des prix du tabac en Europe (Eurostat, UE à 27 = 100).
+# 2025 : France 191, Irlande 262 (seule plus chère), Belgique 144, Luxembourg 88, Italie 82, Espagne 81 ;
+# France / Espagne = 2,35 ; Belgique 135,7 -> 144,4 et Luxembourg 84,0 -> 87,5 de 2024 à 2025 ; France 194,1 -> 191,1.
+stopifnot(
+  nrow(prix_europe_cm2) == 10, !anyNA(prix_europe_cm2),
+  proche(pli_tabac("EU27_2020"), 100), proche(pli_tabac("EU27_2020", 2024), 100),
+  round(pli_tabac("FR")) == 191, round(pli_tabac("IE")) == 262, round(pli_tabac("BE")) == 144,
+  round(pli_tabac("LU")) == 88, round(pli_tabac("IT")) == 82, round(pli_tabac("ES")) == 81,
+  identical(prix_europe_cm2$code[order(-prix_europe_cm2$pli_tabac_2025)][1:2], c("IE", "FR")),
+  proche(round(pli_tabac("FR") / pli_tabac("ES"), 2), 2.35),
+  proche(pli_tabac("BE", 2024), 135.7), proche(pli_tabac("LU", 2024), 84.0), proche(pli_tabac("FR", 2024), 194.1)
+)
+# Données : ventes des buralistes, départements frontaliers / non frontaliers (OFDT, 2026).
+# 2025 : 49,7 contre 56,4 (texte de l'OFDT : -50,3 % et -43,6 % depuis 2017) ;
+# 2020 est la seule année où les ventes frontalières remontent (80,2 -> 81,2) ;
+# 2025 : la baisse sur un an est un peu moins forte près des frontières (OFDT : -7,3 % contre -8,3 %).
+stopifnot(
+  nrow(frontaliers_cm2) == 9, !anyNA(frontaliers_cm2),
+  proche(frontaliers_cm2$indice_front[frontaliers_cm2$annee == 2025], 49.7),
+  proche(frontaliers_cm2$indice_autres[frontaliers_cm2$annee == 2025], 56.4),
+  identical(frontaliers_cm2$annee[-1][diff(frontaliers_cm2$indice_front) > 0], 2020L),
+  proche(frontaliers_cm2$indice_front[frontaliers_cm2$annee == 2019], 80.2),
+  proche(frontaliers_cm2$indice_front[frontaliers_cm2$annee == 2020], 81.2),
+  with(frontaliers_cm2, var_pct(indice_front[annee == 2024], indice_front[annee == 2025]) >
+                          var_pct(indice_autres[annee == 2024], indice_autres[annee == 2025])),
+  proche(round(with(frontaliers_cm2, var_pct(indice_front[annee == 2024], indice_front[annee == 2025])), 1), -7.3)
+)
+# Données : fumeurs réguliers par sexe (Hill, 2026, tableau 2.1).
+# 1953 : 72 % et 17 % (écart 55 points) ; 2024 : 20,4 % et 16,2 % (écart 4,2 points) ;
+# femmes : 26,4 % en 2000 et 26,6 % en 2010 (sommet) ; 2023 -> 2024 : 25,4 -> 20,4 et 20,9 -> 16,2.
+stopifnot(
+  nrow(fumeurs_cm2) == 19, !anyNA(fumeurs_cm2),
+  proche(fumeurs_annee("hommes_pct", 1953) - fumeurs_annee("femmes_pct", 1953), 55),
+  proche(round(fumeurs_annee("hommes_pct", 2024) - fumeurs_annee("femmes_pct", 2024), 1), 4.2),
+  proche(fumeurs_annee("hommes_pct", 2024), 20.4), proche(fumeurs_annee("femmes_pct", 2024), 16.2),
+  proche(max(fumeurs_cm2$femmes_pct), fumeurs_annee("femmes_pct", 2010)), proche(fumeurs_annee("femmes_pct", 2010), 26.6),
+  proche(fumeurs_annee("femmes_pct", 2000), 26.4),
+  proche(fumeurs_annee("hommes_pct", 2023), 25.4), proche(fumeurs_annee("femmes_pct", 2023), 20.9)
 )

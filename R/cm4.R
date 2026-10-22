@@ -300,6 +300,160 @@ graphe_taux_effort <- function(base_size = 16) {
           axis.text.x = element_text(size = rel(0.8)))
 }
 
+#' Nombre au format français (virgule décimale, espace des milliers)
+virgule_cm4 <- function(x, d = 1) formatC(x, format = "f", digits = d, decimal.mark = ",", big.mark = " ")
+
+# ---------------------------------------------------------------------------
+# 6 bis. Graphique de données : logements mis en chantier en % du parc
+#    Insee, BDM : logements commencés (série 001718270, données SDES) et parc
+#    au 1er janvier (série 001791241), France hors Mayotte, 2000-2025.
+#    Fichier et provenance : data/cm4/construction_parc_insee_2000_2025.csv et
+#    data/cm4/SOURCES.md. Un ordre de grandeur flux / stock, pas l'offre
+#    locative privée (le parc comprend résidences secondaires et logements vacants).
+# ---------------------------------------------------------------------------
+construction_cm4 <- utils::read.csv(here::here("data/cm4/construction_parc_insee_2000_2025.csv"))
+
+#' Logements commencés dans l'année, en % du parc au 1er janvier, 2000-2025 ;
+#' étiquettes sur le maximum (2006) et la dernière année (2025).
+graphe_construction_parc <- function(base_size = 16) {
+  d <- construction_cm4
+  reperes <- d[d$annee %in% c(2006, 2025), ]
+  ggplot(d, aes(annee, commences_pct_parc)) +
+    geom_line(linewidth = 1.2, colour = couleurs_eco[["offre"]]) +
+    geom_point(size = base_size / 9, colour = couleurs_eco[["offre"]]) +
+    geom_text(data = reperes, aes(label = paste0(virgule_cm4(commences_pct_parc, 2), " %\nen ", annee)),
+              vjust = c(-0.35, 1.35), family = police_cours, size = base_size / 3.4,
+              lineheight = 0.9, colour = couleurs_eco[["equilibre"]]) +
+    scale_x_continuous(breaks = seq(2000, 2025, 5)) +
+    scale_y_continuous(breaks = seq(0, 2, 0.5), labels = function(x) paste0(virgule_cm4(x), " %")) +
+    coord_cartesian(ylim = c(0, 2.05), clip = "off") +
+    labs(x = NULL, y = "Logements mis en chantier,\nen % du parc existant",
+         caption = "Source : Insee, BDM, logements commencés (données SDES)\net parc de logements ; consulté le 22/10/2026.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)), plot.caption.position = "plot",
+          plot.margin = margin(10, 24, 8, 8))   # place pour l'étiquette de 2025
+}
+
+# ---------------------------------------------------------------------------
+# 6 ter. Graphique de données : salaire minimum en % du salaire médian
+#    OCDE, DSD_EARNINGS@MIN2AVE, MR_WG_FT, agrégation MEDIAN : France,
+#    Allemagne (depuis 2015) et États-Unis (minimum fédéral), 2000-2025.
+#    Fichier et provenance : data/cm4/salaire_minimum_median_ocde_2000_2025.csv
+#    et data/cm4/SOURCES.md.
+# ---------------------------------------------------------------------------
+smic_median_cm4 <- utils::read.csv(here::here("data/cm4/salaire_minimum_median_ocde_2000_2025.csv"))
+
+#' Salaire minimum relatif (%) d'un pays une année donnée
+smic_median <- function(pays, annee) smic_median_cm4[[pays]][smic_median_cm4$annee == annee]
+
+#' Trois courbes, étiquetées en bout de trait avec la valeur de 2025
+graphe_salaire_minimum <- function(base_size = 16) {
+  noms <- c(France = "France", Allemagne = "Allemagne", Etats_Unis = "États-Unis")
+  d <- do.call(rbind, lapply(names(noms), function(n)
+    data.frame(annee = smic_median_cm4$annee, serie = noms[[n]], ratio = smic_median_cm4[[n]])))
+  d <- d[!is.na(d$ratio), ]
+  d$serie <- factor(d$serie, levels = unname(noms))
+  fin <- d[d$annee == 2025, ]
+  ggplot(d, aes(annee, ratio, colour = serie)) +
+    geom_line(linewidth = 1.2) +
+    geom_point(size = base_size / 10) +
+    geom_text(data = fin, aes(label = paste0(serie, " : ", virgule_cm4(ratio), " %")),
+              hjust = 0, nudge_x = 0.7, family = police_cours, size = base_size / 3.4) +
+    scale_colour_manual(values = unname(couleurs_eco[c("demande", "offre", "neutre")])) +
+    scale_x_continuous(breaks = seq(2000, 2025, if (base_size > 16) 10 else 5), expand = expansion(mult = c(0.02, 0))) +
+    scale_y_continuous(breaks = seq(0, 70, 10), labels = function(x) paste0(x, " %")) +
+    coord_cartesian(xlim = c(2000, 2025.5), ylim = c(0, 72), clip = "off") +
+    labs(x = NULL, y = "Salaire minimum brut,\nen % du salaire médian",
+         caption = "Source : OCDE, salaire minimum relatif au salaire médian\ndes salariés à temps plein ; consulté le 22/10/2026.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)),
+          plot.caption.position = "plot",
+          # marge droite pour les étiquettes de fin de trait (≈ « États-Unis : 24,1 % »)
+          plot.margin = margin(10, base_size * 9, 8, 8))
+}
+
+# ---------------------------------------------------------------------------
+# 6 quater. Graphique de données : part de la population locataire, 2025
+#    Eurostat, EU-SILC, ilc_lvho02 : Allemagne, UE à 27, France, en % des
+#    personnes. Fichier et provenance : data/cm4/locataires_eurostat_2025.csv et
+#    data/cm4/SOURCES.md. Catégories d'Eurostat, pas secteur libre / social de l'Insee.
+# ---------------------------------------------------------------------------
+locataires_cm4 <- utils::read.csv(here::here("data/cm4/locataires_eurostat_2025.csv"))
+
+#' Barres horizontales empilées : loyer au prix du marché (bleu) et loyer
+#' réduit ou gratuit (gris), total en bout de barre.
+graphe_locataires <- function(base_size = 16) {
+  loc <- locataires_cm4
+  loc$zone <- factor(loc$zone, levels = rev(loc$zone))
+  d <- rbind(
+    data.frame(zone = loc$zone, type = "marche", part = loc$locataires_prix_marche, debut = 0),
+    data.frame(zone = loc$zone, type = "reduit", part = loc$locataires_prix_reduit,
+               debut = loc$locataires_prix_marche)
+  )
+  d$type <- factor(d$type, levels = c("reduit", "marche"))
+  taille <- base_size / 3.4
+  # diapos : pas d'étiquette dans un segment trop court (6,0 % en Allemagne, 10,7 % dans l'UE),
+  # le total la donne
+  d$etiquette <- ifelse(base_size <= 16 | d$part >= 12, virgule_cm4(d$part), "")
+  haut <- locataires_cm4[1, ]  # barre du haut : les annotations de légende se placent au-dessus
+  ggplot(d, aes(part, zone, fill = type)) +
+    geom_col(width = 0.65) +
+    geom_text(aes(x = debut + part / 2, label = etiquette), family = police_cours,
+              size = taille, colour = "white") +
+    geom_text(data = loc, aes(x = locataires_total + 2.5, y = zone,
+                              label = paste0("total ", virgule_cm4(locataires_total), " %")),
+              inherit.aes = FALSE, hjust = 0, family = police_cours, size = taille) +
+    annotate("text", x = c(haut$locataires_prix_marche / 2,
+                           haut$locataires_prix_marche + haut$locataires_prix_reduit / 2), y = 3.48, label = c("loyer au prix du marché", "loyer réduit"),
+             hjust = c(1, 0.5), vjust = 0, family = police_cours, size = taille,
+             colour = unname(couleurs_eco[c("demande", "neutre")])) +
+    scale_fill_manual(values = unname(couleurs_eco[c("neutre", "demande")])) +
+    scale_x_continuous(breaks = seq(0, 60, if (base_size > 16) 20 else 10), labels = function(x) paste0(x, " %")) +
+    coord_cartesian(xlim = c(0, if (base_size > 16) 76 else 68), ylim = c(0.6, 3.6), clip = "off") +
+    labs(x = "Part de la population qui loue son logement (2025)", y = NULL,
+         caption = "Source : Eurostat, EU-SILC, statut d'occupation (ilc_lvho02),\n2025 ; consulté le 22/10/2026.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)),
+          plot.caption.position = "plot", panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(colour = "#D1D5DB", linewidth = 0.4),
+          axis.line.x = element_blank())
+}
+
+# ---------------------------------------------------------------------------
+# 6 quinquies. Graphique de données : surcharge des coûts du logement selon
+#    le statut d'occupation, France, 2025
+#    Eurostat, EU-SILC, ilc_lvho07c : part des personnes dont les coûts du
+#    logement, nets des aides, dépassent 40 % du revenu disponible du ménage.
+#    Fichier et provenance : data/cm4/surcharge_logement_france_eurostat_2025.csv
+#    et data/cm4/SOURCES.md. Indicateur différent du taux d'effort médian (section 6).
+# ---------------------------------------------------------------------------
+surcharge_cm4 <- utils::read.csv(here::here("data/cm4/surcharge_logement_france_eurostat_2025.csv"))
+
+#' Taux de surcharge (%) pour un code de statut Eurostat
+surcharge <- function(code) surcharge_cm4$surcharge_pct[surcharge_cm4$code == code]
+
+#' Barres horizontales, une par statut ; locataires au prix du marché en rouge
+graphe_surcharge <- function(base_size = 16) {
+  d <- surcharge_cm4
+  d$statut <- factor(d$statut, levels = rev(d$statut))
+  d$couleur <- ifelse(d$code == "RENT_MKT", couleurs_eco[["alerte"]], couleurs_eco[["neutre"]])
+  ggplot(d, aes(surcharge_pct, statut)) +
+    geom_col(aes(fill = couleur), width = 0.65) +
+    geom_text(aes(label = paste0(virgule_cm4(surcharge_pct), " %")), hjust = 0, nudge_x = 0.4,
+              family = police_cours, size = base_size / 3.4) +
+    scale_fill_identity() +
+    scale_x_continuous(breaks = seq(0, 20, if (base_size > 16) 10 else 5), labels = function(x) paste0(x, " %")) +
+    coord_cartesian(xlim = c(0, 23)) +
+    labs(x = "Part des personnes dont le logement coûte\nplus de 40 % du revenu disponible", y = NULL,
+         caption = "Source : Eurostat, EU-SILC (ilc_lvho07c), France, 2025 ;\nconsulté le 22/10/2026.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)), plot.caption.position = "plot",
+          panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(colour = "#D1D5DB", linewidth = 0.4),
+          axis.line.x = element_blank(), axis.title.x = element_text(size = rel(0.8)),
+          axis.text.y = element_text(size = rel(0.8)))
+}
+
 # ---------------------------------------------------------------------------
 # 7. Vérifications : chaque chiffre annoncé dans cours/cm4.qmd
 # ---------------------------------------------------------------------------
@@ -351,4 +505,37 @@ stopifnot(
   proche(round(taux_effort("Secteur libre", 1) / taux_effort("Secteur libre", 4), 1), 2),
   proche(taux_effort("Secteur social", 1), 30.3),
   proche(taux_effort_ensemble_cm4[["libre"]], 29.6)                 # accroche : 29,6 %
+)
+# Insee : mises en chantier en % du parc (maximum en 2006, 2025 ; parc 2025 recoupé
+# par Insee Focus n° 359 : 38,4 millions de logements)
+stopifnot(
+  nrow(construction_cm4) == 26, !anyNA(construction_cm4),
+  proche(max(construction_cm4$commences_pct_parc), 1.55),
+  construction_cm4$annee[which.max(construction_cm4$commences_pct_parc)] == 2006,
+  proche(construction_cm4$commences_pct_parc[construction_cm4$annee == 2025], 0.69),
+  proche(min(construction_cm4$commences_pct_parc), 0.68),
+  proche(round(construction_cm4$parc_milliers[construction_cm4$annee == 2025] / 1000, 1), 38.4),
+  proche(round(100 * construction_cm4$logements_commences / (1000 * construction_cm4$parc_milliers), 2),
+         construction_cm4$commences_pct_parc)
+)
+# OCDE : salaire minimum en % du médian, 2025 (États-Unis recoupé par le BLS : 24,09 %)
+stopifnot(
+  proche(smic_median("France", 2025), 62.5), proche(smic_median("Allemagne", 2025), 49.6),
+  proche(smic_median("Etats_Unis", 2025), 24.1), is.na(smic_median("Allemagne", 2014)),
+  proche(round(smic_median("France", 2025) / smic_median("Etats_Unis", 2025), 1), 2.6)  # environ deux fois et demie
+)
+# Eurostat : locataires 2025 (marché + réduit = total ; Allemagne 52,8 % recoupé)
+stopifnot(
+  all(abs(locataires_cm4$locataires_prix_marche + locataires_cm4$locataires_prix_reduit -
+            locataires_cm4$locataires_total) < 0.11),
+  proche(locataires_cm4$locataires_prix_marche[locataires_cm4$code == "DE"], 46.8),
+  proche(locataires_cm4$locataires_total[locataires_cm4$code == "DE"], 52.8),
+  proche(locataires_cm4$locataires_prix_marche[locataires_cm4$code == "FR"], 16.4),
+  proche(locataires_cm4$locataires_prix_reduit[locataires_cm4$code == "FR"], 22.2)
+)
+# Eurostat : surcharge des coûts du logement, France 2025
+stopifnot(
+  nrow(surcharge_cm4) == 5,
+  proche(surcharge("RENT_MKT"), 18.7), proche(surcharge("TOTAL"), 6.4),
+  proche(surcharge("OWN_L"), 1.1), proche(surcharge("OWN_NL"), 1.6)
 )

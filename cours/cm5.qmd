@@ -57,6 +57,17 @@ Un automobiliste décide de prendre sa voiture en comparant ce que le trajet lui
 Le **dommage marginal** (Dm) est le coût que la dernière unité produite ou consommée impose aux autres, sans compensation : ici, le coût pour la santé des riverains d'un trajet de plus en voiture polluante.
 :::
 
+Le dommage total de la pollution de l'air n'est pas un détail. Selon les estimations de l'Agence européenne pour l'environnement (AEE), 14 741 décès prématurés sont attribuables en France, en 2023, à l'exposition de long terme aux particules fines (PM2,5), contre 38 447 en 2005 (@fig-deces-pm25). Ces décès ont pour origine toutes les sources de particules fines, pas seulement les voitures : ils donnent l'ordre de grandeur de l'enjeu, pas le dommage d'un trajet.
+
+```{r}
+#| label: fig-deces-pm25
+#| fig-cap: "Décès prématurés attribuables à l'exposition de long terme aux particules fines (PM2,5) en France, en milliers, de 2005 à 2023 (pas d'estimation pour 2006). En rouge, la dernière année publiée. Lecture : en 2023, 14 741 décès prématurés sont attribuables aux particules fines, contre 38 447 en 2005. Précautions : toutes sources de particules fines confondues, pas seulement l'automobile ; série heurtée (22 279 en 2014, 27 834 en 2015), sensible à la météorologie et aux révisions de méthode ; estimations non comparables à celles de Santé publique France, qui suivent une autre méthode. Source : Eurostat, sdg_11_52, estimations de l'Agence européenne pour l'environnement (AEE) (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en barres annuelles grises de 2005 à 2023, sans barre en 2006. Les barres valent environ 38 milliers en 2005, montent jusqu'à environ 40 milliers en 2010, tombent à 22 milliers en 2014, puis descendent par paliers jusqu'à 16 milliers en 2020 et remontent à 20 milliers en 2022. La dernière barre, en rouge, vaut 14 741 en 2023 ; la première est marquée 38 447."
+#| fig-width: 8
+#| fig-height: 4.4
+graphe_deces_pm25()
+```
+
 ::: {#def-cout-marginal-social}
 ## Coût marginal social
 Le **coût marginal social** (Cms) est le coût d'une unité de plus pour l'ensemble de la société : Cms = Cm + Dm. Quand il y a une externalité négative, Cms est au-dessus de Cm.
@@ -224,6 +235,17 @@ graphe_parc_zfe()
 
 Pour chaque vignette sauf les Crit'Air 2, dont le parc baisse alors qu'il aurait augmenté sans ZFE, la barre bleue est proche de la barre grise : l'essentiel du verdissement du parc se serait produit sans ZFE. Pour les Crit'Air 5 et non classées, la baisse observée (−64,1 %) reste dans l'intervalle de confiance du contrefactuel : on ne peut pas dire que la ZFE y soit pour quelque chose.
 
+La baisse « sans ZFE » estimée par l'Insee prolonge une tendance de trente ans (@fig-emissions-voitures). En France, les émissions d'oxydes d'azote des voitures, à l'échappement, ont baissé de 80 % entre 1990 et 2024, celles de particules fines de 87 %. En 2019, année de l'annonce des ZFE, elles avaient déjà baissé de 71 % et de 76 % : le parc se renouvelle depuis longtemps.
+
+```{r}
+#| label: fig-emissions-voitures
+#| fig-cap: "Émissions polluantes des voitures particulières en France, à l'échappement, de 1990 à 2024, en indice 100 en 1990 : oxydes d'azote (NOx) en bleu, particules fines (PM2,5) en ambre. La ligne pointillée marque 2019, année de l'annonce des ZFE. Lecture : en 2024, les voitures émettent 20,2 % des oxydes d'azote de 1990, soit 80 % de moins ; pour les particules fines, 12,8 %, soit 87 % de moins. Précautions : France entière, agglomérations à ZFE comprises ; émissions à l'échappement seulement (l'usure des pneus, des freins et des routes n'est pas comptée), un champ qui n'est pas forcément celui de l'Insee dans la @fig-effet-zfe : les deux sources ne se comparent pas chiffre à chiffre. Source : Eurostat, env_air_emis, inventaire national de la France (Citepa) (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 1990 à 2024, en indice 100 en 1990. La ligne bleue des oxydes d'azote descend régulièrement de 100 à environ 36 en 2010, reste à ce niveau jusqu'en 2016, puis tombe à 20,2 en 2024. La ligne ambre des particules fines monte d'abord jusqu'à 118 en 1996, puis descend jusqu'à 12,8 en 2024. Une ligne verticale pointillée marque 2019, annonce des ZFE : les deux courbes sont déjà sous 30 à cette date."
+#| fig-width: 8
+#| fig-height: 4.6
+graphe_emissions_voitures()
+```
+
 ::: {.piege}
 « Les émissions d'oxydes d'azote ont baissé de 38,9 % grâce aux ZFE. » C'est faux. Elles auraient baissé de 34,3 % sans ZFE, parce que le parc se renouvelle de toute façon. La ZFE n'explique que **4,6 points** sur 38,9. À l'inverse, « la ZFE ne sert à rien » est faux aussi : l'effet est petit, mais il est mesuré et différent de zéro. Comparer un avant et un après ne suffit jamais : il faut un contrefactuel.
 :::
@@ -233,6 +255,17 @@ Pour chaque vignette sauf les Crit'Air 2, dont le parc baisse alors qu'il aurait
 - *La norme vise la vignette, pas le kilomètre.* Deux ans après, les voitures des résidents ne roulent pas significativement moins, et les trajets domicile-travail en voiture ne baissent pas. La ZFE change **quelle** voiture on conduit, pas **combien** on roule. Une taxe par kilomètre pollué jouerait sur les deux.
 - *Elle frappe des voitures qui partaient déjà.* Les Crit'Air 5 et non classées baissent de 64,1 %, mais l'effet de la ZFE n'est pas significatif : elles ne pesaient qu'environ 6 % du parc des ZFE trois ans avant leur mise en place (223 400 voitures sur 3,6 millions), et moins de 5 % à leur mise en place.
 - *Elle est peu contrôlée.* Environ 12 600 contraventions liées aux ZFE en 2019 et 2 300 en 2024, sur plus de 24 millions de contraventions routières par an. Les ménages réagissent pourtant dès l'annonce de 2019 : la norme agit surtout par les **anticipations**, à l'achat d'une occasion.
+
+À l'échelle de la France, ZFE ou non, les vieilles vignettes disparaissent d'elles-mêmes (@fig-parc-critair). La part des voitures Crit'Air 3, 4, 5 et non classées, celles que le panneau de Lyon n'autorise pas (@fig-panneau-zfe), passe de 87,7 % du parc au 1^er^ janvier 2011 à 24,3 % au 1^er^ janvier 2026 ; celle des électriques et Crit'Air 1 passe de 1,6 % à 41,5 %.
+
+```{r}
+#| label: fig-parc-critair
+#| fig-cap: "Parc de voitures en circulation en France au 1er janvier, de 2011 à 2026, par groupe de vignettes Crit'Air, en % du parc : électriques et Crit'Air 1 en bleu, Crit'Air 2 en gris, Crit'Air 3, 4, 5 et non classées en rouge. Lecture : au 1er janvier 2026, 24,3 % des voitures sont Crit'Air 3 ou plus anciennes, contre 87,7 % en 2011. Précautions : France entière, agglomérations à ZFE comprises, ce n'est donc pas un contrefactuel ; la vignette est attribuée après coup, selon la motorisation et la date de première immatriculation, y compris avant la création de Crit'Air en 2016 ; données 2026 provisoires. Source : SDES, parc de véhicules routiers au 1er janvier (millésime 2026-06), somme nationale des données communales par l'auteur (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 2011 à 2026. La ligne rouge des Crit'Air 3, 4, 5 et non classées descend de 87,7 % à 24,3 %. La ligne bleue des électriques et Crit'Air 1 monte de 1,6 % à 41,5 % et croise la ligne rouge entre 2022 et 2023. La ligne grise des Crit'Air 2 monte de 10,7 % à environ 37 % en 2022, puis redescend à 34,2 %."
+#| fig-width: 8
+#| fig-height: 4.6
+graphe_parc_critair()
+```
 
 ## Effets de répartition
 
@@ -256,6 +289,17 @@ graphe_carburant()
 ```
 
 Quand le prix du carburant monte, la part des ménages très exposés double à peu près partout. L'écart entre rural et urbain passe de 4,5 à 10,2 points, mais le rapport entre les deux parts reste voisin de 1,5 : l'Insee parle d'un « léger creusement » de l'écart (Insee Première n° 2125, 08/09/2026). Une taxe sur le carburant pèserait donc plus souvent sur les ménages ruraux, en proportion ; en nombre, les ménages très exposés restent plus nombreux dans les intercommunalités urbaines (Insee Première n° 2125, tableau complémentaire 3).
+
+Les prix du scénario de l'Insee sont proches de ceux du printemps 2026 (@fig-prix-carburants) : du 23 mars au 15 juin 2026, le litre de sans plomb 95 coûte en moyenne 2,04 € et celui de gazole 2,14 € (Commission européenne, *Weekly Oil Bulletin*). Mais les prix ont encore monté depuis : la semaine du 19 octobre 2026, le litre de gazole coûte 2,35 € et celui de sans plomb 95, 2,23 €. À revenus et kilomètres inchangés, des prix plus élevés ne peuvent qu'accroître la part des ménages très exposés : les parts du scénario 2026 de la @fig-carburant sont un plancher, pas un plafond.
+
+```{r}
+#| label: fig-prix-carburants
+#| fig-cap: "Prix moyens à la pompe en France, toutes taxes comprises, en euros par litre, chaque semaine du 7 janvier 2019 au 19 octobre 2026 : gazole en bleu, sans plomb 95 en ambre. La bande grise marque le printemps 2026 (20 mars-21 juin), dont l'Insee reprend les prix dans le scénario de la @fig-carburant (2,0 € l'essence, 2,2 € le gazole). Lecture : au printemps 2026, le litre coûte en moyenne 2,04 € (sans plomb 95) et 2,14 € (gazole) ; la semaine du 19 octobre 2026, 2,23 € et 2,35 €. Précautions : moyennes nationales pondérées, communiquées par l'État à la Commission, pas des relevés de station. Source : Commission européenne, Weekly Oil Bulletin, prix toutes taxes (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes hebdomadaires de 2019 à octobre 2026. Les deux prix partent d'environ 1,40 € en 2019, tombent vers 1,20 € au printemps 2020, montent jusqu'à environ 2,10 € en 2022, puis oscillent entre 1,50 et 2,00 € jusqu'à début 2026. Ils bondissent en mars 2026, dans la bande grise du printemps 2026, redescendent nettement en juin et début juillet (gazole vers 1,86 €), puis remontent : la semaine du 19 octobre 2026, le gazole est à 2,35 € et le sans plomb 95 à 2,23 €, près de leur plus haut de la période."
+#| fig-width: 8
+#| fig-height: 4.6
+graphe_prix_carburants()
+```
 
 **Par génération.** Parmi les ménages très exposés au prix du carburant, 77,9 % ont au moins un membre en emploi, contre 70,9 % pour l'ensemble des ménages motorisés ; les ménages sans emploi de 65 ans ou plus (personne de référence) n'en représentent que 10,2 %, contre 24,3 % (Insee Première n° 2125, données 2021). Une taxe sur le carburant pèserait donc surtout sur les actifs qui roulent loin pour travailler.
 

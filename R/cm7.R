@@ -3,7 +3,9 @@
 # Dépend de R/theme_cours.R (couleurs_eco, police_cours, theme_cours).
 #
 # Les valeurs de cours/cm7.qmd issues des données de data/cm7/ (taux de la BCE,
-# IPCH, crédits à l'habitat) et les calculs qui en découlent sont lus ou calculés
+# IPCH, crédits à l'habitat ; depuis le 22/10/2026, prix du pétrole et du gaz,
+# salaires négociés, anticipations d'inflation, inflation des 21 pays) et les
+# calculs qui en découlent sont lus ou calculés
 # ici, puis vérifiés par les stopifnot() en fin de fichier. Les chiffres cités
 # d'après d'autres sources (contribution de l'énergie, projections de la BCE,
 # Insee, livret A, The Conversation) ne sont pas dans ces données : leur source
@@ -174,6 +176,194 @@ graphe_inflation_diffusion <- function(base_size = 16, etape = 2) {
     theme_cours(base_size = base_size, donnees = TRUE) +
     theme(plot.caption = element_text(margin = margin(t = 10)),
           legend.direction = "vertical")
+}
+
+# ---------------------------------------------------------------------------
+# 2 quater. Graphique de données : prix du pétrole et du gaz, 2021-2026
+#    Banque mondiale, Pink Sheet (mise à jour du 02/10/2026) : Brent ($/baril) et
+#    gaz naturel Europe, TTF ($/MMBtu) ; convertis en euros avec le taux de change
+#    euro-dollar de la BCE (moyenne du mois). Moyennes mensuelles.
+#    Fichier et provenance : data/cm7/prix_petrole_gaz_2021_2026.csv et data/cm7/SOURCES.md.
+# ---------------------------------------------------------------------------
+petrole_gaz_cm7 <- utils::read.csv(here::here("data/cm7/prix_petrole_gaz_2021_2026.csv"))
+petrole_gaz_cm7$date <- as.Date(paste0(petrole_gaz_cm7$mois, "-15"))   # point au milieu du mois
+
+#' Nombre à virgule décimale, `chiffres` décimales (101,4 ; 2,0).
+virgule_cm7 <- function(x, chiffres = 1) formatC(x, format = "f", digits = chiffres, decimal.mark = ",")
+
+#' Deux panneaux côte à côte, chacun avec sa propre échelle : Brent en € par baril,
+#' gaz européen (TTF) en € par MWh, de janvier 2021 à septembre 2026. Pointillés
+#' au 24/02/2022 (invasion de l'Ukraine) et au 28/02/2026 (guerre au Moyen-Orient) ;
+#' points rouges au pic de 2022 et au dernier mois connu.
+graphe_petrole_gaz <- function(base_size = 16) {
+  p <- petrole_gaz_cm7
+  panneaux <- if (base_size > 16) c(brent = "Brent, € par baril", gaz = "Gaz (TTF), € par MWh") else
+    c(brent = "Pétrole (Brent), en € par baril", gaz = "Gaz (TTF), en € par MWh")
+  d <- rbind(data.frame(date = p$date, prix = p$brent_eur_baril, panneau = panneaux[["brent"]]),
+             data.frame(date = p$date, prix = p$gaz_eur_mwh, panneau = panneaux[["gaz"]]))
+  d$panneau <- factor(d$panneau, levels = unname(panneaux))
+  dernier <- nrow(p)
+  reperes <- data.frame(
+    date = p$date[c(which.max(p$brent_eur_baril), dernier, which.max(p$gaz_eur_mwh), dernier)],
+    prix = c(max(p$brent_eur_baril), p$brent_eur_baril[dernier], max(p$gaz_eur_mwh), p$gaz_eur_mwh[dernier]),
+    panneau = factor(unname(panneaux[c("brent", "brent", "gaz", "gaz")]), levels = unname(panneaux)))
+  reperes$lab <- virgule_cm7(reperes$prix, 0)
+  taille <- base_size / 3.4
+  note_x <- if (base_size > 16) "Pointillés : 24/02/2022 et 28/02/2026" else
+    "Pointillés : invasion de l'Ukraine (24/02/2022) et guerre au Moyen-Orient (28/02/2026)"
+  ggplot(d, aes(date, prix)) +
+    geom_vline(xintercept = as.Date(c("2022-02-24", "2026-02-28")), linetype = "22",
+               colour = couleurs_eco[["neutre"]]) +
+    geom_line(colour = couleurs_eco[["offre"]], linewidth = 1.1) +
+    geom_point(data = reperes, colour = couleurs_eco[["alerte"]], size = base_size / 6.5) +
+    geom_text(data = reperes, aes(label = lab), vjust = -0.8, family = police_cours, size = taille * 0.85,
+              colour = couleurs_eco[["alerte"]]) +
+    facet_wrap(~panneau, ncol = 2, scales = "free_y") +
+    scale_x_date(breaks = as.Date(paste0(c(2021, 2023, 2025), "-01-01")), date_labels = "%Y") +
+    scale_y_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.15))) +
+    labs(x = note_x, y = if (base_size > 16) NULL else "Prix moyen du mois (en euros)",
+         caption = paste0("Sources : Banque mondiale, Pink Sheet (Brent, gaz TTF) ;\n",
+                          "BCE (taux de change euro-dollar). Consultés le 22/10/2026.")) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)),
+          strip.text = element_text(family = police_cours, size = rel(0.85), hjust = 0),
+          axis.title.x = element_text(size = rel(0.7), hjust = 0),
+          panel.spacing = grid::unit(1.2, "lines"))
+}
+
+# ---------------------------------------------------------------------------
+# 2 quinquies. Graphique de données : salaires négociés et inflation, 2021-2026
+#    BCE, indicateur des salaires négociés (INW, zone euro, variation sur un an) ;
+#    inflation : moyenne des trois taux mensuels de l'IPCH du trimestre (Eurostat).
+#    Fichier et provenance : data/cm7/salaires_negocies_inflation_2021_2026.csv et
+#    data/cm7/SOURCES.md. La colonne inflation est recoupée en section 5 avec ipch_cm7.
+# ---------------------------------------------------------------------------
+salaires_cm7 <- utils::read.csv(here::here("data/cm7/salaires_negocies_inflation_2021_2026.csv"))
+# point au milieu du trimestre (15 du deuxième mois)
+salaires_cm7$date <- as.Date(paste0(substr(salaires_cm7$trimestre, 1, 4), "-",
+                                    c(Q1 = "02", Q2 = "05", Q3 = "08", Q4 = "11")[substr(salaires_cm7$trimestre, 6, 7)], "-15"))
+
+#' Croissance sur un an des salaires négociés (azur) et inflation (ambre), par
+#' trimestre, de 2021-T1 à 2026-T2 ; étiquettes en bout de trait, cible de 2 % en pointillé.
+graphe_salaires_inflation <- function(base_size = 16) {
+  s <- salaires_cm7
+  noms <- c(inflation = "Prix (inflation)", salaires_negocies = "Salaires négociés")
+  d <- rbind(data.frame(date = s$date, val = s$inflation, serie = noms[["inflation"]]),
+             data.frame(date = s$date, val = s$salaires_negocies, serie = noms[["salaires_negocies"]]))
+  couleurs <- stats::setNames(unname(couleurs_eco[c("offre", "demande")]), unname(noms))
+  fin <- d[d$date == max(d$date), ]
+  # étiquettes écartées (3,0 et 2,4) ; en diapo, celle des salaires passe sous le pointillé de 2 %
+  fin$y_lab <- ifelse(fin$serie == noms[["inflation"]], 3.9, if (base_size > 16) 1.1 else 1.4)
+  taille <- base_size / 3.4
+  ggplot(d, aes(date, val, colour = serie)) +
+    geom_hline(yintercept = 2, linetype = "22", colour = couleurs_eco[["neutre"]]) +
+    annotate("text", x = as.Date("2024-03-01"), y = 1.45, label = "cible : 2 %", hjust = 0,
+             family = police_cours, size = taille, colour = couleurs_eco[["neutre"]]) +
+    geom_line(linewidth = 1.2) +
+    geom_text(data = fin, aes(y = y_lab, label = paste0(serie, "\n", virgule_cm7(val), " %")),
+              hjust = 0, nudge_x = 40, family = police_cours, size = taille * 0.85, lineheight = 0.9) +
+    scale_colour_manual(values = couleurs) +
+    scale_x_date(breaks = as.Date(paste0(2021:2026, "-01-01")), date_labels = "%Y",
+                 limits = as.Date(c("2021-01-01", NA)),
+                 expand = expansion(mult = c(0.02, if (base_size > 16) 0.36 else 0.28))) +
+    scale_y_continuous(breaks = seq(0, 10, 2), labels = function(x) paste0(x, " %")) +
+    coord_cartesian(ylim = c(0, 10.5), clip = "off") +
+    labs(x = NULL, y = "Variation sur un an",
+         caption = paste0("Sources : BCE, salaires négociés (INW) ; Eurostat, IPCH\n",
+                          "(moyenne des trois mois du trimestre). Zone euro.\nConsultés le 22/10/2026.")) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)), legend.position = "none")
+}
+
+# ---------------------------------------------------------------------------
+# 2 sexies. Graphique de données : anticipations d'inflation, 2022-2026
+#    BCE : enquête sur les anticipations des consommateurs (CES, médiane pondérée,
+#    11 pays de la zone euro), à 12 mois et à 3 ans ; enquête auprès des
+#    prévisionnistes professionnels (SPF, moyenne), à long terme (cinq ans).
+#    Fichier et provenance : data/cm7/anticipations_inflation_2022_2026.csv et data/cm7/SOURCES.md.
+# ---------------------------------------------------------------------------
+anticipations_cm7 <- utils::read.csv(here::here("data/cm7/anticipations_inflation_2022_2026.csv"))
+anticipations_cm7$date <- as.Date(anticipations_cm7$date)
+
+#' Valeur d'une série d'anticipations (`menages_12_mois`, `menages_3_ans`,
+#' `previsionnistes_long_terme`) pour un mois « AAAA-MM ».
+anticipation_mois <- function(serie, mois) {
+  x <- anticipations_cm7$valeur[anticipations_cm7$serie == serie & format(anticipations_cm7$date, "%Y-%m") == mois]
+  stopifnot(length(x) == 1)
+  x
+}
+
+#' Trois courbes : ménages à 12 mois (ambre), ménages à 3 ans (azur),
+#' prévisionnistes à cinq ans (encre) ; pointillés à 2 % et au 28/02/2026 ;
+#' étiquettes en bout de trait.
+graphe_anticipations <- function(base_size = 16) {
+  noms <- c(menages_12_mois = "Ménages,\ndans 12 mois", menages_3_ans = "Ménages,\ndans 3 ans",
+            previsionnistes_long_terme = "Prévisionnistes,\ndans 5 ans")
+  d <- anticipations_cm7
+  d$serie <- factor(noms[d$serie], levels = unname(noms))
+  couleurs <- stats::setNames(unname(couleurs_eco[c("offre", "demande", "equilibre")]), unname(noms))
+  fin <- do.call(rbind, lapply(split(d, d$serie), function(x) x[which.max(x$date), ]))
+  fin$y_lab <- c(3.85, 2.85, 1.45)   # écarte les étiquettes (3,0 ; 2,9 ; 2,0)
+  taille <- base_size / 3.4
+  ggplot(d, aes(date, valeur, colour = serie)) +
+    geom_hline(yintercept = 2, linetype = "22", colour = couleurs_eco[["neutre"]]) +
+    geom_vline(xintercept = as.Date("2026-02-28"), linetype = "22", colour = couleurs_eco[["neutre"]]) +
+    annotate("text", x = as.Date("2026-02-15"), y = 6.1, label = "28/02/2026", hjust = 1,
+             family = police_cours, size = taille * 0.85, colour = couleurs_eco[["neutre"]]) +
+    geom_line(linewidth = 1.2) +
+    geom_text(data = fin, aes(y = y_lab, label = paste0(serie, " : ", virgule_cm7(valeur), " %")),
+              hjust = 0, nudge_x = 40, family = police_cours, size = taille * 0.85, lineheight = 0.9) +
+    scale_colour_manual(values = couleurs) +
+    scale_x_date(breaks = as.Date(paste0(2023:2026, "-01-01")), date_labels = "%Y",
+                 expand = expansion(mult = c(0.02, 0.42))) +
+    scale_y_continuous(breaks = 0:6, labels = function(x) paste0(x, " %")) +
+    coord_cartesian(ylim = c(0, 6.3), clip = "off") +
+    labs(x = NULL, y = "Inflation attendue",
+         caption = paste0("Sources : BCE, enquête sur les anticipations des consommateurs\n",
+                          "(CES, médiane, 11 pays) et enquête auprès des prévisionnistes\n",
+                          "professionnels (SPF, moyenne). Consultées le 22/10/2026.")) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)), legend.position = "none")
+}
+
+# ---------------------------------------------------------------------------
+# 2 septies. Graphique de données : inflation des 21 pays, septembre 2026
+#    Eurostat, prc_hicp_minr (IPCH, variation sur un an), mis à jour le 16/10/2026 ;
+#    taux de dépôt de la BCE (2,50 % depuis le 16/09/2026, data/cm7/taux_bce_2019_2026.csv).
+#    Fichier et provenance : data/cm7/inflation_pays_2026-09.csv et data/cm7/SOURCES.md.
+# ---------------------------------------------------------------------------
+inflation_pays_cm7 <- utils::read.csv(here::here("data/cm7/inflation_pays_2026-09.csv"))   # trié par inflation croissante
+
+#' Barres horizontales triées : inflation de septembre 2026 dans chaque pays
+#' (ambre) et dans la zone euro (encre) ; trait vertical bleu au taux de dépôt.
+#' À droite du trait, le taux réel ex post est négatif.
+graphe_inflation_pays <- function(base_size = 16) {
+  d <- inflation_pays_cm7
+  d$pays <- factor(d$pays, levels = d$pays)
+  d$couleur <- ifelse(d$geo == "EA", couleurs_eco[["equilibre"]], couleurs_eco[["offre"]])
+  depot <- unique(d$taux_depot)
+  taille <- base_size / 3.4
+  ggplot(d, aes(inflation, pays)) +
+    geom_col(aes(fill = couleur), width = 0.7) +
+    geom_vline(xintercept = depot, colour = couleurs_eco[["demande"]], linewidth = 1.1) +
+    # étiquette après le trait bleu quand la barre s'arrête juste avant (Malte, 2,4 %)
+    geom_text(aes(x = ifelse(inflation < depot, depot + 0.05, inflation), label = virgule_cm7(inflation)),
+              hjust = -0.15, family = police_cours,
+              size = taille * 0.85, colour = couleurs_eco[["equilibre"]]) +
+    annotate("text", x = depot + 0.08, y = nrow(d) + 1.1, hjust = 0, family = police_cours, size = taille,
+             colour = couleurs_eco[["demande"]],
+             label = paste0("taux de dépôt de la BCE : ", virgule_cm7(depot, 2), " %")) +
+    scale_y_discrete(expand = expansion(add = c(0.6, 1.8))) +
+    scale_fill_identity() +
+    scale_x_continuous(breaks = 0:6, labels = function(x) paste0(x, " %"), expand = expansion(mult = c(0, 0.08))) +
+    labs(x = if (base_size > 16) NULL else "Inflation sur un an, septembre 2026 (IPCH)", y = NULL,   # diapos : titre de la diapo
+         caption = "Sources : Eurostat, IPCH (prc_hicp_minr) ;\nBCE, taux directeurs. Consultés le 22/10/2026.") +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(plot.caption = element_text(margin = margin(t = 10)),
+          panel.grid.major.y = element_blank(),
+          panel.grid.major.x = element_line(colour = "#D1D5DB", linewidth = 0.4),
+          axis.line.x = element_blank(),
+          axis.text.y = element_text(size = rel(if (base_size > 16) 0.75 else 0.8)))   # diapos : 22 barres serrées
 }
 
 # ---------------------------------------------------------------------------
@@ -393,4 +583,69 @@ stopifnot(
   proche(12 - eq_cm7$E1[["q"]], eq_cm7$E1[["p"]]), proche(eq_cm7$E1[["q"]] + 4, eq_cm7$E1[["p"]]),
   proche(10 - eq_cm7$E2[["q"]], eq_cm7$E2[["p"]]), proche(eq_cm7$E2[["q"]] + 4, eq_cm7$E2[["p"]]),
   eq_cm7$E2[["p"]] < eq_cm7$E1[["p"]], eq_cm7$E2[["q"]] < eq_cm7$E1[["q"]]
+)
+# Prix du pétrole et du gaz (@fig-petrole-gaz), en euros : Brent 60,1 €/baril en
+# février 2026, 102,8 en avril, 101,4 en septembre ; pic de 2022 : 113,7 en juin.
+# Gaz TTF : pic de 236,0 €/MWh en août 2022, 75,3 en septembre 2026 (environ trois fois moins).
+pg_mois <- function(m, col) petrole_gaz_cm7[[col]][petrole_gaz_cm7$mois == m]
+stopifnot(
+  nrow(petrole_gaz_cm7) == 69, !anyNA(petrole_gaz_cm7), utils::tail(petrole_gaz_cm7$mois, 1) == "2026-09",
+  petrole_gaz_cm7$mois[which.max(petrole_gaz_cm7$brent_eur_baril)] == "2022-06",
+  proche(max(petrole_gaz_cm7$brent_eur_baril), 113.7),
+  proche(pg_mois("2026-02", "brent_eur_baril"), 60.1), proche(pg_mois("2026-04", "brent_eur_baril"), 102.8),
+  proche(pg_mois("2026-09", "brent_eur_baril"), 101.4),
+  petrole_gaz_cm7$mois[which.max(petrole_gaz_cm7$gaz_eur_mwh)] == "2022-08",
+  proche(max(petrole_gaz_cm7$gaz_eur_mwh), 236), proche(pg_mois("2026-09", "gaz_eur_mwh"), 75.3),
+  proche(round(236 / 75.3), 3),
+  # conversion recalculée : $/baril ÷ dollars par euro ; $/MMBtu ÷ 0,293071 MWh ÷ dollars par euro
+  # (tolérance 0,1 : les colonnes du fichier sont arrondies, celles en dollars comprises)
+  all(abs(petrole_gaz_cm7$brent_eur_baril - petrole_gaz_cm7$brent_usd_baril / petrole_gaz_cm7$usd_par_eur) < 0.1),
+  all(abs(petrole_gaz_cm7$gaz_eur_mwh - petrole_gaz_cm7$gaz_usd_mmbtu / 0.293071 / petrole_gaz_cm7$usd_par_eur) < 0.1)
+)
+# Salaires négociés et inflation (@fig-salaires-inflation). L'inflation trimestrielle
+# du fichier est recoupée avec la moyenne des trois mois de ipch_cm7 (zone euro).
+infl_trim <- tapply(infl_ea$inflation,
+                    paste0(substr(infl_ea$mois, 1, 4), "-Q", (as.integer(substr(infl_ea$mois, 6, 7)) + 2) %/% 3), mean)
+sal_trim <- function(t, col = "salaires_negocies") salaires_cm7[[col]][salaires_cm7$trimestre == t]
+stopifnot(
+  nrow(salaires_cm7) == 22, !anyNA(salaires_cm7), utils::tail(salaires_cm7$trimestre, 1) == "2026-Q2",
+  all(abs(salaires_cm7$inflation - infl_trim[salaires_cm7$trimestre]) < 0.006),
+  proche(sal_trim("2022-Q4"), 3.16), proche(round(sal_trim("2022-Q4", "inflation")), 10),
+  # salaires au-dessus des prix de 2023-T4 à 2026-T1, sauf en 2025-T3 ; au-dessous avant 2023-T4
+  # (depuis 2021-T3) et en 2026-T2
+  all(with(subset(salaires_cm7, trimestre >= "2023-Q4" & trimestre <= "2026-Q1" & trimestre != "2025-Q3"),
+           salaires_negocies > inflation)),
+  sal_trim("2025-Q3") < sal_trim("2025-Q3", "inflation"), sal_trim("2026-Q2") < sal_trim("2026-Q2", "inflation"),
+  # pas d'accélération en 2026 : 2,6 % puis 2,4 %, contre 2,9 % en 2025-T4
+  proche(round(sal_trim("2025-Q4"), 1), 2.9), sal_trim("2026-Q1") < sal_trim("2025-Q4"),
+  sal_trim("2026-Q2") < sal_trim("2026-Q1"),
+  all(with(subset(salaires_cm7, trimestre >= "2021-Q3" & trimestre <= "2023-Q3"), salaires_negocies < inflation)),
+  proche(round(sal_trim("2026-Q1"), 1), 2.6), proche(round(sal_trim("2026-Q2"), 1), 2.4),
+  proche(sal_trim("2026-Q2", "inflation"), 3.0), proche(round(sal_trim("2026-Q1", "inflation"), 1), 2.1)
+)
+# Anticipations (@fig-anticipations) : ménages à 12 mois 2,5 % (févr. 2026), 4,0 % (mars),
+# 3,0 % (août) ; à 3 ans 2,5 % puis 2,9 % ; prévisionnistes à cinq ans 2,04 % (2026-T3),
+# entre 2,00 et 2,05 % depuis 2024-T1.
+stopifnot(
+  length(unique(anticipations_cm7$serie)) == 3, !anyNA(anticipations_cm7),
+  proche(anticipation_mois("menages_12_mois", "2026-02"), 2.5), proche(anticipation_mois("menages_12_mois", "2026-03"), 4.0),
+  proche(anticipation_mois("menages_12_mois", "2026-08"), 3.0),
+  proche(anticipation_mois("menages_3_ans", "2026-02"), 2.5), proche(anticipation_mois("menages_3_ans", "2026-08"), 2.9),
+  proche(anticipation_mois("previsionnistes_long_terme", "2026-07"), 2.04),
+  max(anticipations_cm7$date[anticipations_cm7$serie == "menages_12_mois"]) == as.Date("2026-08-15"),
+  all(range(subset(anticipations_cm7, serie == "previsionnistes_long_terme" & date >= as.Date("2024-01-01"))$valeur) >= 2.0),
+  all(range(subset(anticipations_cm7, serie == "previsionnistes_long_terme" & date >= as.Date("2024-01-01"))$valeur) <= 2.05)
+)
+# Inflation des 21 pays (@fig-inflation-pays) : mêmes chiffres que ipch_cm7 pour la zone
+# euro et les quatre grands pays ; taux de dépôt en vigueur fin septembre 2026 ; taux réel
+# ex post négatif partout sauf à Malte (+0,1 %) ; extrême : Lituanie (6,1 %, −3,6 %).
+ip <- inflation_pays_cm7
+stopifnot(
+  nrow(ip) == 22, sum(ip$geo != "EA") == 21, !anyNA(ip), !is.unsorted(ip$inflation),
+  all(proche(ip$taux_depot, taux_en_vigueur("2026-09-30"))),
+  all(proche(ip$taux_reel, arrondi1(taux_reel(ip$taux_depot, ip$inflation)))),
+  all(vapply(c("EA", "DE", "FR", "ES", "IT"), function(z) proche(ip$inflation[ip$geo == z], inflation_mois("2026-09", z)), logical(1))),
+  sum(ip$geo != "EA" & ip$inflation > ip$taux_depot) == 20,
+  ip$pays[ip$taux_reel > 0] == "Malte", proche(ip$taux_reel[ip$geo == "MT"], 0.1), proche(ip$inflation[ip$geo == "MT"], 2.4),
+  ip$pays[which.max(ip$inflation)] == "Lituanie", proche(max(ip$inflation), 6.1), proche(min(ip$taux_reel), -3.6)
 )

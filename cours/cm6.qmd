@@ -164,11 +164,22 @@ graphe_m3_credits()
 
 La @fig-m3-credits se lit en trois temps.
 
-- **En 2020**, l'année de la crise sanitaire, les crédits aux entreprises s'accélèrent, et M3 avec eux, jusqu'à **+12,5 %** sur un an en janvier 2021. La banque centrale crée aussi des dépôts quand elle achète des titres sur les marchés (Banque d'Angleterre, 2014) : c'est une autre source de monnaie, qui n'apparaît pas sur le graphique.
+- **En 2020**, l'année de la crise sanitaire, les crédits aux entreprises s'accélèrent, et M3 avec eux, jusqu'à **+12,5 %** sur un an en janvier 2021. La banque centrale crée aussi des dépôts quand elle achète des titres sur les marchés (Banque d'Angleterre, 2014) : c'est une autre source de monnaie, qui n'apparaît pas sur ce graphique, voir @fig-bce-titres pour sa trace dans le bilan de la BCE.
 - **À partir de l'été 2022**, la BCE relève ses taux, pour des raisons que le CM 7 explique. Les crédits ralentissent, puis les crédits aux entreprises baissent légèrement en octobre 2023 (−0,2 %). M3 recule même : **−1,3 %** sur un an en août 2023. Moins de crédits nouveaux et des remboursements qui continuent : de la monnaie est détruite.
 - **En août 2026**, M3 croît de **3,5 %** sur un an, les crédits aux ménages de 3,1 % et aux entreprises de 4,2 % (BCE, communiqué du 25/09/2026).
 
 Ce n'est pas une preuve au sens strict, car d'autres causes jouent en même temps. Mais le mouvement commun du crédit et de la monnaie est celui que prévoit la théorie : quand le crédit cale, la création monétaire cale.
+
+Ces achats laissent une trace dans le bilan de la BCE : la @fig-bce-titres montre les titres achetés et les réserves (monnaie de banque centrale) qu'elle crée pour les payer ; les dépôts créés chez les vendeurs non bancaires n'y figurent pas. De fin 2014 à juin 2022, les titres que l'Eurosystème détient pour sa politique monétaire passent de 217 à 4 964 milliards d'euros, et les réserves des banques de 300 milliards à un sommet de 4 799 milliards en octobre 2022. Depuis, les deux reculent : au 16 octobre 2026, 3 311 milliards de titres et 2 291 milliards de réserves (BCE, consulté le 22/10/2026).
+
+```{r}
+#| label: fig-bce-titres
+#| fig-cap: "Titres détenus par l'Eurosystème pour sa politique monétaire (bleu), réserves des banques à la banque centrale (orange) et billets en circulation (gris), fin de chaque mois de janvier 2007 au 16 octobre 2026, en milliards d'euros. Lecture : de 2015 à 2022, quand la BCE achète des titres, les réserves des banques montent avec eux ; au 16 octobre 2026, la BCE détient 3 311 milliards de titres et les banques 2 291 milliards de réserves. Les deux séries vont ensemble sans bouger à l'euro près : les réserves montent aussi en 2011-2012 (prêts à trois ans) et en 2020-2022 parce que la BCE prête beaucoup aux banques, et baissent quand celles-ci remboursent. Le graphique montre la monnaie de banque centrale ; le dépôt créé chez le vendeur du titre, quand ce n'est pas une banque, n'y figure pas. Les billets sont tous ceux qu'émet l'Eurosystème (1 633 milliards), un champ différent des billets et pièces de M3 (@fig-composition-m3). Réserves = comptes courants + facilité de dépôt ; titres : poste créé en juillet 2009. Source : BCE, Data Portal, bilan hebdomadaire consolidé de l'Eurosystème (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes de 2007 à 2026, en milliards d'euros. La ligne bleue des titres achetés par la BCE part de zéro en 2009, reste sous 300 milliards jusqu'en 2014, monte à environ 2 600 milliards en 2018, puis à près de 5 000 milliards à la mi-2022, et redescend à 3 311 milliards en octobre 2026. La ligne orange des réserves des banques suit à peu près le même chemin : 300 milliards fin 2014, environ 2 000 milliards en 2018-2019, un sommet à 4 799 milliards en octobre 2022, puis 2 291 milliards en 2026. La ligne grise des billets monte lentement et régulièrement, d'environ 600 à 1 633 milliards."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_bce_titres()
+```
 
 ### Une rumeur peut faire tomber une banque saine
 
@@ -232,6 +243,17 @@ On retrouve les ingrédients du jeu de la panique.
 
 Le 12 mars 2023, les autorités américaines annoncent que tous les déposants de SVB, garantis ou non, récupéreront l'intégralité de leurs dépôts (*The Conversation*, 13/03/2023 et 23/03/2023). La garantie a été étendue après coup, pour éviter que la panique ne gagne d'autres banques.
 
+La @fig-depots-us suit les dépôts des autres banques américaines. Entre le mercredi 8 et le mercredi 15 mars 2023, les dépôts des banques américaines qui ne sont pas parmi les 25 plus grandes baissent de 2,9 %, soit 149 milliards de dollars ; ceux des 25 plus grandes augmentent de 0,5 %. Une partie des déposants semble se replier vers les plus grandes banques, mais la baisse des autres banques comprend aussi les deux banques en faillite : leurs banques-relais y sont comptées. Fin juin, les dépôts des petites banques restent 2,5 % sous leur niveau du 8 mars (Réserve fédérale, H.8, consulté le 22/10/2026).
+
+```{r}
+#| label: fig-depots-us
+#| fig-cap: "Dépôts des banques commerciales de droit américain, chaque mercredi de janvier à juin 2023, indice 100 le 8 mars 2023 : les 25 plus grandes (bleu) et toutes les autres (rouge). Lecture : du 8 au 15 mars 2023, les dépôts des autres banques passent de 100 à 97,1, soit −2,9 % (149 milliards de dollars) ; ceux des 25 plus grandes passent à 100,5. Le creux est atteint le 29 mars (96,3). Les grandes banques perdaient déjà des dépôts avant la faillite (101,9 début janvier). Le graphique ne mesure que les dépôts, pas les autres financements des banques. Les banques-relais créées par la FDIC pour SVB et Signature Bank sont comptées parmi les autres banques (avis aux utilisateurs du communiqué H.8 du 31/03/2023) : une partie de la baisse vient donc des deux banques en faillite elles-mêmes. Séries révisées depuis 2023 : le communiqué du 24/03/2023 donnait −2,2 % et +0,6 % pour la même semaine. Données corrigées des variations saisonnières. Source : Réserve fédérale, statistique H.8, séries DPSLCBW027SBOG et DPSSCBW027SBOG, via FRED (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes, chaque mercredi de janvier à juin 2023, indice 100 le 8 mars. La ligne bleue des 25 plus grandes banques descend lentement de 102 en janvier à 100 le 8 mars, remonte à 100,5 le 15 mars, puis oscille autour de 99,5. La ligne rouge des autres banques reste autour de 100,4 jusqu'au 8 mars, chute à 97,1 le 15 mars et à 96,3 le 29 mars, puis remonte lentement vers 97,5 fin juin. Une ligne verticale en tirets marque la fermeture de SVB le 10 mars."
+#| fig-width: 7.5
+#| fig-height: 4.6
+graphe_depots_us()
+```
+
 ### Le mobile money : payer sans banque, ce n'est pas créer de la monnaie
 
 En 2025, on compte **2,3 milliards** de comptes de mobile money dans le monde, et plus de 2 100 milliards de dollars y ont circulé (GSMA, *State of the Industry Report on Mobile Money 2026*).
@@ -250,9 +272,31 @@ Le crédit arrive pourtant par le téléphone. À Abidjan, des offres comme Tik 
 
 **Par territoire.** Le mobile money donne accès au paiement là où les banques sont rares : c'est d'Afrique subsaharienne que vient l'essentiel des nouveaux comptes (GSMA, 2026). En septembre 2025, le Sénégal a adopté une taxe de 0,5 % sur les paiements, transferts et retraits en mobile money ; selon Awa Diouf (*The Conversation*, 10/10/2025), ce type de taxe pèse proportionnellement plus sur les ménages pauvres et peut les ramener vers l'argent liquide. En France, le Fonds de garantie des dépôts est né d'une crise locale : la défaillance du Crédit martiniquais, en 1999 (FGDR).
 
+La @fig-findex-regions donne un ordre de grandeur de l'avance africaine : en 2024, 40 % des adultes d'Afrique subsaharienne ont un compte de mobile money, 2,5 fois plus que dans le monde (16 %) ; ils n'étaient que 11 % en 2014 (Banque mondiale, Global Findex 2025).
+
+```{r}
+#| label: fig-findex-regions
+#| fig-cap: "Part des adultes (15 ans et plus) ayant un compte de mobile money en Afrique subsaharienne (orange) et dans le monde (gris), années d'enquête 2014, 2017, 2021 et 2024, en %. Lecture : en 2024, 40,0 % des adultes d'Afrique subsaharienne ont un compte de mobile money, contre 11,4 % en 2014 ; dans le monde, 16,0 % contre 2,1 %. C'est une part d'adultes, pas un nombre de comptes : la figure ne dit pas à elle seule d'où viennent les nouveaux comptes. L'indicateur compte aussi certains portefeuilles numériques hors d'Afrique (60 % en Corée, 58 % au Brésil en 2024), d'où la prudence sur la ligne « monde ». Afrique subsaharienne : hors pays à revenu élevé. Source : Banque mondiale, Global Findex Database 2025, indicateur mobileaccount.t.d (consulté le 22/10/2026)."
+#| fig-alt: "Graphique en lignes avec quatre points par ligne, en 2014, 2017, 2021 et 2024. Ligne orange, Afrique subsaharienne : 11,4 %, 20,5 %, 27,3 % et 40,0 %. Ligne grise, monde : 2,1 %, 4,5 %, 10,5 % et 16,0 %. La ligne orange reste toujours au-dessus et l'écart s'élargit."
+#| fig-width: 7.5
+#| fig-height: 4.4
+graphe_findex_regions()
+```
+
 **Par génération.** À Abidjan, une enquête qualitative menée en mai 2025 auprès d'usagers du crédit digital, dont de jeunes adultes de 21 ans, montre que la plupart n'ont jamais eu accès au crédit bancaire : leur historique de mobile money tient lieu de dossier ; bien rembourser fait monter leur plafond, un retard le fait baisser (Ducourant et al., 01/09/2026). L'enquête ne compare pas les âges.
 
-**Par genre.** Dans les pays à revenu faible ou intermédiaire, les femmes avaient en 2024 **36 %** de chances en moins que les hommes de posséder un compte de mobile money, contre 30 % en 2021 : l'écart se creuse (GSMA, 2026, d'après la Banque mondiale).
+**Par genre.** Dans les pays à revenu faible ou intermédiaire, les femmes avaient en 2024 **34 %** de chances en moins que les hommes de posséder un compte de mobile money, contre 30 % en 2021 : l'écart se creuse (Banque mondiale, Global Findex 2025).
+
+La @fig-findex-genre reprend les données de la Banque mondiale : 14,6 % des femmes et 22,1 % des hommes ont un compte de mobile money en 2024, contre 10,5 % et 15,0 % en 2021. Les deux progressent, mais les hommes plus vite : l'écart passe de 4,5 à 7,5 points (Global Findex 2025).
+
+```{r}
+#| label: fig-findex-genre
+#| fig-cap: "Part des femmes (rouge) et des hommes (bleu) de 15 ans et plus ayant un compte de mobile money dans les pays à revenu faible ou intermédiaire, en 2021 et en 2024, en %. Lecture : en 2024, 14,6 % des femmes ont un compte, contre 22,1 % des hommes ; l'écart passe de 4,5 points en 2021 à 7,5 points en 2024. En termes relatifs, les femmes ont 30 % de chances en moins que les hommes en 2021 et 33,9 % en moins en 2024 (34 % dans le texte). La GSMA (2026), sur un champ et une pondération non vérifiés ici, cite 36 % pour 2024. Source : Banque mondiale, Global Findex Database 2025, indicateurs mobileaccount.t.d.1 et mobileaccount.t.d.2 (consulté le 22/10/2026)."
+#| fig-alt: "Deux haltères horizontales, une par année. En 2021, un point rouge à 10,5 % pour les femmes et un point bleu à 15,0 % pour les hommes, écart de 4,5 points. En 2024, femmes à 14,6 % et hommes à 22,1 %, écart de 7,5 points. L'haltère de 2024 est plus à droite et plus longue."
+#| fig-width: 7.5
+#| fig-height: 3.8
+graphe_findex_genre()
+```
 
 ### Les banques et leurs emprunteurs profitent de la création monétaire
 

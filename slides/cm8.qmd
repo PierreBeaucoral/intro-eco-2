@@ -187,7 +187,36 @@ Politique qui réduit le déficit public en **baissant les dépenses** publiques
 - Pourquoi corriger de la conjoncture : une récession creuse le déficit d'elle-même, sans que la politique change.
 
 ::: {.notes}
-0 h 27 – 0 h 31. En récession, les recettes fiscales baissent avec le PIB : le déficit se creuse sans décision nouvelle. Mesurer l'austérité sur le solde brut confondrait la politique et la conjoncture. Question : un déficit qui se creuse prouve-t-il que l'État dépense plus ? Transition : de combien une coupe réduit-elle le PIB ?
+0 h 27 – 0 h 29. En récession, les recettes fiscales baissent avec le PIB : le déficit se creuse sans décision nouvelle. Mesurer l'austérité sur le solde brut confondrait la politique et la conjoncture. Question : un déficit qui se creuse prouve-t-il que l'État dépense plus ? Transition : appliquons cette mesure à la Grèce.
+:::
+
+## Grèce, 2009-2012 : hors conjoncture, le solde primaire gagne 14,8 points
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Solde primaire grec de 2006 à 2025, avec une bande grise de 2010 à 2018 et une ligne à zéro. La courbe grise du solde observé tombe à −10,3 pour cent du PIB en 2009, remonte à −2,8 en 2011, puis −3,9 en 2012, et finit à 4,9 en 2025. La courbe rouge du solde corrigé de la conjoncture part de −8,8 en 2009 et monte bien plus vite, à +6,0 en 2012, avec un creux en 2013 annoté mesures ponctuelles ; elle finit à 3,5 en 2025."
+graphe_solde_corrige(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Rouge : solde primaire **corrigé de la conjoncture**, en % du PIB potentiel ; gris : solde observé.
+- De 2009 à 2012, le solde corrigé gagne **14,8 points**.
+
+::: {.fragment}
+
+- Le solde observé ne gagne que 6,4 points : selon cette estimation, la récession a effacé plus de la moitié de l'effort.
+:::
+:::
+::::
+
+[Source : Commission européenne, AMECO (UBLGIE, UBLGBP), printemps 2026, téléchargé le 22/10/2026.]{.wp-source}
+
+::: {.notes}
+0 h 29 – 0 h 32. PIB potentiel : la production qu'on obtiendrait si les capacités de production étaient utilisées normalement ; c'est une estimation, révisée et discutée, pas une observation. Les deux séries n'ont pas le même dénominateur (PIB et PIB potentiel). Le creux de 2013 vient de mesures ponctuelles, environ 8,6 points de PIB potentiel, dont la base ne donne pas la nature : ne pas le commenter davantage. Question : pourquoi le solde observé s'améliore-t-il moins vite que le solde corrigé ? (La récession fait baisser les recettes.) Transition : de combien une coupe réduit-elle le PIB ?
 :::
 
 ## Multiplicateur budgétaire : définition et cas le plus simple
@@ -204,7 +233,7 @@ Le **multiplicateur** (k) mesure la variation du PIB provoquée par une variatio
 - À ne pas confondre avec le multiplicateur de crédit du CM 6.
 
 ::: {.notes}
-0 h 31 – 0 h 35. Le multiplicateur est noté k, la propension à consommer c. Pas de dérivée : on le construit à la main, vague par vague, sur les trois diapos suivantes. Le multiplicateur de crédit du CM 6 relie la monnaie de banque centrale à la masse monétaire : rien à voir. Question : faire calculer k pour c = 0,8 avant le clic. Transition : les vagues.
+0 h 32 – 0 h 35. Le multiplicateur est noté k, la propension à consommer c. Pas de dérivée : on le construit à la main, vague par vague, sur les trois diapos suivantes. Le multiplicateur de crédit du CM 6 relie la monnaie de banque centrale à la masse monétaire : rien à voir. Question : faire calculer k pour c = 0,8 avant le clic. Transition : les vagues.
 :::
 
 ## Vagues du multiplicateur (1/3) : la première vague
@@ -669,7 +698,7 @@ Taux apparent i = intérêts versés / dette de l'année précédente, comparé 
 [Source : Eurostat (gov_10dd_edpt1, nama_10_gdp), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
 
 ::: {.notes}
-2 h 03 – 2 h 08. Appliquer la méthode en trois questions. L'essentiel de la hausse vient de l'effet boule de neige, pas du déficit primaire, déjà réduit à 2,8 % du PIB. L'écart restant (27,3 contre 23,1) vient en partie de l'approximation, qui sous-estime l'effet quand la croissance est très négative, et d'opérations hors solde. De 2012 à 2016, les prix baissent même (déflateur du PIB : −2,0 % en 2013) : le taux réel r ≈ i − π dépasse alors le taux nominal. Question : la hausse vient-elle surtout du déficit primaire ou de la boule de neige ? Transition : la même formule en 2023.
+2 h 03 – 2 h 07. Appliquer la méthode en trois questions. L'essentiel de la hausse vient de l'effet boule de neige, pas du déficit primaire, déjà réduit à 2,8 % du PIB. L'écart restant (27,3 contre 23,1) vient en partie de l'approximation, qui sous-estime l'effet quand la croissance est très négative, et d'opérations hors solde. De 2012 à 2016, les prix baissent même (déflateur du PIB : −2,0 % en 2013) : le taux réel r ≈ i − π dépasse alors le taux nominal. Question : la hausse vient-elle surtout du déficit primaire ou de la boule de neige ? Transition : la même formule en 2023.
 :::
 
 ## Décomposition 2023 : la croissance en valeur renverse la boule de neige
@@ -690,7 +719,35 @@ La croissance en valeur, gonflée par l'inflation, dépasse un taux apparent res
 [Source : Eurostat (gov_10dd_edpt1, nama_10_gdp), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
 
 ::: {.notes}
-2 h 08 – 2 h 12. Écarts et effets calculés sur les valeurs non arrondies (i = 2,08 %, croissance = 8,74 %, écart = −6,66 points) : d'où −6,7 et non 2,1 − 8,7 = −6,6. Pourquoi un taux apparent si bas ? Une grande partie de la dette est due à des prêteurs publics européens, qui ont réduit les taux et allongé les durées de remboursement dès novembre 2012 (MES). Transition : le taux du marché, lui, a explosé.
+2 h 07 – 2 h 10. Écarts et effets calculés sur les valeurs non arrondies (i = 2,08 %, croissance = 8,74 %, écart = −6,66 points) : d'où −6,7 et non 2,1 − 8,7 = −6,6. Pourquoi un taux apparent si bas ? Une grande partie de la dette est due à des prêteurs publics européens, qui ont réduit les taux et allongé les durées de remboursement dès novembre 2012 (MES). Transition : la dette a changé de nature.
+:::
+
+## Dette grecque : à partir de 2012, des prêts plutôt que des titres
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Dette publique grecque en milliards d'euros au 31 décembre, de 2007 à 2025, avec une bande grise de 2010 à 2018. La courbe ambre des titres de dette tombe de 252 en 2011 à 93 en 2012, descend à 53 en 2018, puis remonte à 98 en 2025. La courbe bleue des prêts monte de 104 en 2011 à 211 en 2012 et 282 en 2018, puis redescend à 257 en 2025. Les deux courbes se croisent en 2012."
+graphe_dette_instruments(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Fin 2011 : surtout des titres de dette émis sur les marchés, **251,6 Md€**.
+
+::: {.fragment}
+
+- Fin 2012 : surtout des prêts, **210,6 Md€** (241,0 Md€ fin 2013) ; les titres tombent à 93,4 Md€.
+:::
+:::
+::::
+
+[Source : Eurostat (gov_10q_ggdebt, 4e trimestre), téléchargé le 22/10/2026.]{.wp-source}
+
+::: {.notes}
+2 h 10 – 2 h 13. Précaution : la série distingue l'instrument, pas le prêteur ; mais en 2025, 252,7 des 257,2 Md€ de prêts sont dus à des non-résidents (Eurostat, gov_10dd_ggd). La chute des titres en 2012 mêle la décote, l'échange contre de nouveaux titres et le rachat de décembre 2012 : ce n'est pas le seul montant annulé. Depuis 2018, les titres remontent, de 52,9 à 98,0 Md€ en 2025. Question : pourquoi un prêteur public peut-il prêter moins cher que le marché ? Transition : le taux du marché, lui, a explosé.
 :::
 
 ## Taux à dix ans en 2012 : Grèce 22,5 %, Allemagne 1,5 %
@@ -710,13 +767,13 @@ graphe_taux_longs(base_size = 24)
 
 ::: {.fragment}
 
-- Le taux du marché n'est pas le taux apparent : l'État grec n'emprunte presque plus sur les marchés ; son taux apparent ne dépasse jamais 4,7 %.
+- Le taux du marché n'est pas le taux apparent : depuis 2012, l'État doit surtout des prêts des plans d'aide, à taux réduits (257 Md€ sur 363 Md€ fin 2025) ; ses titres ne remontent qu'après 2018. Son taux apparent ne dépasse jamais 4,7 %.
 :::
 :::
 ::::
 
 ::: {.notes}
-2 h 12 – 2 h 15. L'écart remonte en 2015, puis tombe à 0,8 point en 2025 : 3,4 % pour la Grèce, 2,6 % pour l'Allemagne. La confiance des prêteurs est revenue, mais après la fin des plans. Taux apparent de 2009 à 2025 (Eurostat, calculs du cours). Question : un des trois objectifs de l'austérité est-il atteint ? Transition : la règle k × d appliquée à la Grèce.
+2 h 13 – 2 h 15. L'écart remonte en 2015, puis tombe à 0,8 point en 2025 : 3,4 % pour la Grèce, 2,6 % pour l'Allemagne. La confiance des prêteurs est revenue, mais après la fin des plans. Taux apparent de 2009 à 2025 (Eurostat, calculs du cours). Question : un des trois objectifs de l'austérité est-il atteint ? Transition : la règle k × d appliquée à la Grèce.
 :::
 
 ## La règle k × d appliquée à la Grèce en 2010
@@ -743,7 +800,7 @@ graphe_ratio_coupe(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 15 – 2 h 18. C'est ce qu'on observe jusqu'en 2013. Question : pourquoi une dette lourde rend-elle la coupe plus risquée pour le ratio ? (d multiplie l'effet de k.) Réserve : l'austérité n'est pas la seule cause de la récession (crédit bloqué, crainte d'une sortie de l'euro). Transition : qui a supporté le coût ?
+2 h 15 – 2 h 17. C'est ce qu'on observe jusqu'en 2013. Question : pourquoi une dette lourde rend-elle la coupe plus risquée pour le ratio ? (d multiplie l'effet de k.) Réserve : l'austérité n'est pas la seule cause de la récession (crédit bloqué, crainte d'une sortie de l'euro). Transition : qui a supporté le coût ?
 :::
 
 ## Effets de répartition : en 2013, chômage supérieur à 20 % partout
@@ -772,18 +829,47 @@ graphe_chomage_groupes(base_size = 24) +
 ::::
 
 ::: {.notes}
-2 h 18 – 2 h 21. Plus le segment gris est long, plus le chômage du groupe a baissé depuis 2013 ; un point bleu loin à droite signale un groupe encore touché. Les taux par diplôme viennent d'un autre tableau, dont le total diffère un peu (27,5 % en 2013, au lieu de 27,8 %). Question : quel groupe a connu la plus forte hausse, puis la plus forte décrue ? (Les 15-24 ans.) Transition : détail par génération et par revenu.
+2 h 17 – 2 h 20. Plus le segment gris est long, plus le chômage du groupe a baissé depuis 2013 ; un point bleu loin à droite signale un groupe encore touché. Les taux par diplôme viennent d'un autre tableau, dont le total diffère un peu (27,5 % en 2013, au lieu de 27,8 %). Question : quel groupe a connu la plus forte hausse, puis la plus forte décrue ? (Les 15-24 ans.) Transition : détail par génération et par revenu.
 :::
 
 ## Répartition par génération et par revenu : chômage des jeunes et pauvreté
 
 ::: {.incremental}
-- **Par génération** : chez les 15-24 ans actifs, le chômage passe de 26,1 % en 2009 à **59,2 %** en 2013, puis 19,1 % en 2025 (Eurostat). Depuis 2010, le solde migratoire est « largement négatif » (DG Trésor, 03/11/2025).
+- **Par génération** : chez les 15-24 ans actifs, le chômage passe de 26,1 % en 2009 à **59,2 %** en 2013, puis 19,1 % en 2025 (Eurostat). De 2010 à 2017, le solde migratoire est « largement négatif » (DG Trésor, 03/11/2025) ; il redevient positif depuis 2022.
 - **Par revenu** : risque de pauvreté ou d'exclusion sociale de 28,1 % en 2008 à **36,0 %** en 2014 (Eurostat, définition « Europe 2020 »).
 :::
 
 ::: {.notes}
-2 h 21 – 2 h 24. Beaucoup de jeunes partent, et la population vieillit (DG Trésor). Pauvreté : 27,5 % en 2025 selon une définition plus récente (ilc_peps01n), qui ne se compare pas directement. Dix ans après le référendum de juillet 2015, Le Temps (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ». Question : pourquoi ne pas comparer 2014 et 2025 pour la pauvreté ? (Définitions différentes.) Transition : diplôme, genre, territoire.
+2 h 20 – 2 h 22. Beaucoup de jeunes partent, et la population vieillit (DG Trésor). Pauvreté : 27,5 % en 2025 selon une définition plus récente (ilc_peps01n), qui ne se compare pas directement. Dix ans après le référendum de juillet 2015, Le Temps (19/08/2025) note que l'économie « va mieux, mais une grande partie des habitants sont encore dans une situation difficile ». Question : pourquoi ne pas comparer 2014 et 2025 pour la pauvreté ? (Définitions différentes.) Transition : les départs, chiffrés.
+:::
+
+## Solde migratoire : négatif de 2010 à 2017, au plus bas en 2013
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Solde migratoire et solde naturel de la Grèce, en milliers de personnes par an, de 2000 à 2025, avec une bande grise de 2010 à 2018. La courbe bleue du solde migratoire, positive avant 2010, plonge jusqu'à −68 milliers (−68 052 personnes) en 2013, remonte près de zéro en 2016-2017, retombe en 2020-2021, puis monte à 54 en 2024. La courbe grise du solde naturel descend sous zéro à partir de 2011, jusqu'à −64 en 2022."
+graphe_soldes_demographiques(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- De 2010 à 2017, **282 633** personnes de plus sont parties qu'arrivées ; **68 052** en 2013.
+
+::: {.fragment}
+
+- Solde redevenu positif depuis 2022.
+- Depuis 2011, les décès dépassent chaque année les naissances.
+:::
+:::
+::::
+
+[Source : Eurostat (demo_gind), téléchargé le 22/10/2026 ; 2025 provisoire.]{.wp-source}
+
+::: {.notes}
+2 h 22 – 2 h 25. Solde migratoire : arrivées moins départs ; solde naturel : naissances moins décès. Le solde migratoire est calculé par différence et absorbe les corrections des recensements de 2011 et 2021 : ne pas commenter 2021. La citation de la DG Trésor (« largement négatif » depuis 2010) vaut pour la crise, pas pour les années récentes. Question : quel lien faire avec le chômage des 15-24 ans, à 59,2 % en 2013 ? Transition : diplôme, genre, territoire.
 :::
 
 ## Répartition par diplôme, genre et territoire : des écarts qui demeurent
@@ -797,7 +883,7 @@ graphe_chomage_groupes(base_size = 24) +
 [Source : Eurostat (lfsa_urgaed, une_rt_a, lfst_r_lfu3rt), séries téléchargées le 21/10/2026.]{.wp-source}
 
 ::: {.notes}
-2 h 24 – 2 h 26. Source : Eurostat (lfsa_urgaed, une_rt_a, lfst_r_lfu3rt), séries téléchargées le 21/10/2026. Le chômage des femmes était déjà plus élevé avant la crise ; l'écart demeure. Attique = Athènes ; Égée méridionale = îles touristiques ; Macédoine-Occidentale = nord-ouest. Toutes les régions plongent, inégalement. Question : quelle région reste la plus touchée en 2025 ? (Macédoine-Occidentale, 15,3 %.) Transition : le coût social se voit aussi dans la rue.
+2 h 25 – 2 h 27. Source : Eurostat (lfsa_urgaed, une_rt_a, lfst_r_lfu3rt), séries téléchargées le 21/10/2026. Le chômage des femmes était déjà plus élevé avant la crise ; l'écart demeure. Attique = Athènes ; Égée méridionale = îles touristiques ; Macédoine-Occidentale = nord-ouest. Toutes les régions plongent, inégalement. Question : quelle région reste la plus touchée en 2025 ? (Macédoine-Occidentale, 15,3 %.) Transition : le coût social se voit aussi dans la rue.
 :::
 
 ## Athènes, 21 juin 2015 : le coût politique et social de l'austérité
@@ -816,7 +902,7 @@ graphe_chomage_groupes(base_size = 24) +
 ::::
 
 ::: {.notes}
-2 h 26 – 2 h 27. Les mesures de l'austérité et la conditionnalité de l'aide ont un coût politique et social visible. Question : ce coût apparaît-il dans le ratio dette / PIB ? Transition : les créanciers aussi ont perdu, mais pas tous autant.
+2 h 27 – 2 h 28. Les mesures de l'austérité et la conditionnalité de l'aide ont un coût politique et social visible. Question : ce coût apparaît-il dans le ratio dette / PIB ? Transition : les créanciers aussi ont perdu, mais pas tous autant.
 :::
 
 ## Les créanciers ont partagé la perte, inégalement
@@ -830,7 +916,7 @@ graphe_chomage_groupes(base_size = 24) +
 [Sources : MES, consulté le 21/10/2026 ; Eurostat, calculs du cours.]{.wp-source}
 
 ::: {.notes}
-2 h 27 – 2 h 30. Détail des 289 Md€ (MES, consulté le 21/10/2026) : 52,9 Md€ de prêts des pays de la zone euro, 141,8 Md€ du Fonds européen de stabilité financière, 32,1 Md€ du FMI, 61,9 Md€ du MES. Reprise : Eurostat, calculs du cours ; la DG Trésor avance 3,9 % par an en retirant 2020, mais pas le rebond de 2021 (03/11/2025). Question : qui, des trois, a le plus perdu ? Laisser répondre, sans trancher. Transition : fallait-il un ajustement aussi rapide ?
+2 h 28 – 2 h 30. Détail des 289 Md€ (MES, consulté le 21/10/2026) : 52,9 Md€ de prêts des pays de la zone euro, 141,8 Md€ du Fonds européen de stabilité financière, 32,1 Md€ du FMI, 61,9 Md€ du MES. Reprise : Eurostat, calculs du cours ; la DG Trésor avance 3,9 % par an en retirant 2020, mais pas le rebond de 2021 (03/11/2025). Question : qui, des trois, a le plus perdu ? Laisser répondre, sans trancher. Transition : fallait-il un ajustement aussi rapide ?
 :::
 
 ## Analyse positive : il n'existait pas de scénario « sans austérité » simple

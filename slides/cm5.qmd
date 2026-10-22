@@ -78,7 +78,7 @@ source(here::here("R/cm5.R"))   # même fichier que la page de cours
 :::
 
 ::: {.notes}
-0 h 12 – 0 h 16. Rappel rapide, sans redévelopper. Question : « Le riverain qui respire la pollution reçoit-il une compensation ? » Transition : trois autres notions.
+0 h 12 – 0 h 15. Rappel rapide, sans redévelopper. Question : « Le riverain qui respire la pollution reçoit-il une compensation ? » Transition : trois autres notions.
 :::
 
 ## Rappel : surplus, perte sèche, incidence, positif et normatif
@@ -90,7 +90,7 @@ source(here::here("R/cm5.R"))   # même fichier que la page de cours
 :::
 
 ::: {.notes}
-0 h 16 – 0 h 19. Question : « Un impôt sur l'essence est-il payé par les vendeurs ou par les automobilistes ? » L'incidence servira pour le leasing social, le positif et le normatif pour la controverse. Transition : le premier auteur, Pigou.
+0 h 15 – 0 h 18. Question : « Un impôt sur l'essence est-il payé par les vendeurs ou par les automobilistes ? » L'incidence servira pour le leasing social, le positif et le normatif pour la controverse. Transition : le premier auteur, Pigou.
 :::
 
 ## Pigou (1920) : le coût privé est inférieur au coût social
@@ -109,7 +109,7 @@ source(here::here("R/cm5.R"))   # même fichier que la page de cours
 L'automobiliste compte le carburant, l'usure et le temps, pas les oxydes d'azote et les particules fines que respirent les riverains.
 
 ::: {.notes}
-0 h 19 – 0 h 24. Un automobiliste décide de prendre sa voiture en comparant ce que le trajet lui apporte à ce qu'il lui coûte. Pour la société, ce trajet coûte pourtant davantage. Question : que manque-t-il dans le calcul du conducteur ? Transition : nommer ce coût oublié.
+0 h 18 – 0 h 22. Un automobiliste décide de prendre sa voiture en comparant ce que le trajet lui apporte à ce qu'il lui coûte. Pour la société, ce trajet coûte pourtant davantage. Question : que manque-t-il dans le calcul du conducteur ? Transition : nommer ce coût oublié.
 :::
 
 ## Dommage marginal et coût marginal social : Cms = Cm + Dm
@@ -127,7 +127,35 @@ Le **coût marginal social** (Cms) est le coût d'une unité de plus pour l'ense
 :::
 
 ::: {.notes}
-0 h 24 – 0 h 28. Écrire au tableau : coût pour la société = coût pour le conducteur + coût pour les autres. Question : avec une externalité négative, Cms est-il au-dessus ou au-dessous de Cm ? Transition : où la société voudrait-elle s'arrêter ?
+0 h 22 – 0 h 25. Écrire au tableau : coût pour la société = coût pour le conducteur + coût pour les autres. Question : avec une externalité négative, Cms est-il au-dessus ou au-dessous de Cm ? Transition : ce dommage est-il important ?
+:::
+
+## Pollution de l'air : 14 741 décès prématurés attribuables aux PM2,5 en 2023
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Barres annuelles grises des décès prématurés attribuables aux particules fines en France, de 2005 à 2023 : 38 447 en 2005, environ 40 milliers en 2010, puis une baisse heurtée jusqu'à la dernière barre, en rouge, 14 741 en 2023."
+graphe_deces_pm25(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Estimations de l'Agence européenne pour l'environnement, France : 38 447 décès prématurés en 2005, **14 741** en 2023.
+
+::: {.fragment}
+
+- Toutes sources de particules fines, pas seulement les voitures : l'ordre de grandeur de l'enjeu, pas le dommage d'un trajet.
+:::
+:::
+::::
+
+[Source : Eurostat, sdg_11_52, estimations de l'AEE (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+0 h 25 – 0 h 28. Exposition de long terme aux particules fines (PM2,5). Série heurtée (22 279 en 2014, 27 834 en 2015), sensible à la météorologie et aux révisions de méthode ; ne pas comparer avec les estimations de Santé publique France, qui suivent une autre méthode. Question : ce chiffre est-il le dommage marginal d'un trajet ? (Non : toutes sources, tous trajets confondus.) Transition : où la société voudrait-elle s'arrêter ?
 :::
 
 ## Optimum social : la demande coupe le coût marginal social en Q°
@@ -487,7 +515,7 @@ L'État paie 2 € par trajet évité.
 Avec les trois instruments, les riverains subissent encore 2 × 6 000 = 12 000 € de pollution par jour.
 
 ::: {.notes}
-1 h 30 – 1 h 34. L'optimum n'est pas zéro pollution. Question à l'amphi : quel instrument choisiriez-vous, et pourquoi ? Noter les réponses, on y revient dans la controverse. Transition : lire le tableau.
+1 h 30 – 1 h 33. L'optimum n'est pas zéro pollution. Question à l'amphi : quel instrument choisiriez-vous, et pourquoi ? Noter les réponses, on y revient dans la controverse. Transition : lire le tableau.
 :::
 
 ## Lecture du tableau : chaque instrument désigne un payeur différent
@@ -503,7 +531,7 @@ Avec les trois instruments, les riverains subissent encore 2 × 6 000 = 12 000 �
 C'est l'idée de Coase : le choix de l'instrument est d'abord un choix de répartition.
 
 ::: {.notes}
-1 h 34 – 1 h 38. Les 12 000 € de taxe égalent exactement le dommage restant : l'État pourrait les rendre aux riverains. Transition : jusqu'ici, la ville connaissait la demande ; et si elle la connaît mal ?
+1 h 33 – 1 h 36. Les 12 000 € de taxe égalent exactement le dommage restant : l'État pourrait les rendre aux riverains. Transition : jusqu'ici, la ville connaissait la demande ; et si elle la connaît mal ?
 :::
 
 ## Prix ou quantité (1/3) : la ville connaît mal la demande
@@ -526,7 +554,7 @@ graphe_weitzman(base_size = 24, etape = 1)
 ::::
 
 ::: {.notes}
-1 h 38 – 1 h 41. Ici, l'effort de dépollution consiste à renoncer à des trajets : ne pas connaître la demande, c'est ne pas savoir ce que coûtera cet effort. Chiffres fictifs. Question : si la demande est haute, la ville vise-t-elle trop haut ou trop bas ? Transition : premier instrument, la taxe.
+1 h 36 – 1 h 39. Ici, l'effort de dépollution consiste à renoncer à des trajets : ne pas connaître la demande, c'est ne pas savoir ce que coûtera cet effort. Chiffres fictifs. Question : si la demande est haute, la ville vise-t-elle trop haut ou trop bas ? Transition : premier instrument, la taxe.
 :::
 
 ## Prix ou quantité (2/3) : avec une taxe, la quantité est incertaine
@@ -551,7 +579,7 @@ graphe_weitzman(base_size = 24, etape = 2)
 ::::
 
 ::: {.notes}
-1 h 41 – 1 h 44. Faire calculer les deux quantités avant le clic. Question : la taxe garantit-elle les 6 000 trajets visés ? Transition : second instrument, la norme.
+1 h 39 – 1 h 42. Faire calculer les deux quantités avant le clic. Question : la taxe garantit-elle les 6 000 trajets visés ? Transition : second instrument, la norme.
 :::
 
 ## Prix ou quantité (3/3) : avec une norme, le coût est incertain
@@ -576,7 +604,7 @@ graphe_weitzman(base_size = 24)
 ::::
 
 ::: {.notes}
-1 h 44 – 1 h 47. 11 − 4 = 7 et 13 − 4 = 9 : la norme s'applique dans les deux cas. Le 1 € ou les 3 € sont ce que la norme coûte au dernier conducteur. Question : lequel des deux instruments préférez-vous ? Transition : la réponse dépend du dommage.
+1 h 42 – 1 h 45. 11 − 4 = 7 et 13 − 4 = 9 : la norme s'applique dans les deux cas. Le 1 € ou les 3 € sont ce que la norme coûte au dernier conducteur. Question : lequel des deux instruments préférez-vous ? Transition : la réponse dépend du dommage.
 :::
 
 ## Weitzman : la taxe si le dommage est constant, la norme s'il grimpe
@@ -588,7 +616,7 @@ graphe_weitzman(base_size = 24)
 :::
 
 ::: {.notes}
-1 h 47 – 1 h 51. Avec la norme : trop de trajets si la demande est basse, trop peu si elle est haute. Exemple de dommage qui grimpe : dépasser un seuil légal entraîne une sanction. C'est le résultat de Weitzman. Question : pour un dommage constant, pourquoi la taxe tombe-t-elle juste quelle que soit la demande ? Transition : une application, le dioxyde d'azote.
+1 h 45 – 1 h 48. Avec la norme : trop de trajets si la demande est basse, trop peu si elle est haute. Exemple de dommage qui grimpe : dépasser un seuil légal entraîne une sanction. C'est le résultat de Weitzman. Question : pour un dommage constant, pourquoi la taxe tombe-t-elle juste quelle que soit la demande ? Transition : une application, le dioxyde d'azote.
 :::
 
 ## Application : le NO₂ appelle une norme, le CO₂ un prix
@@ -600,7 +628,7 @@ graphe_weitzman(base_size = 24)
 :::
 
 ::: {.notes}
-1 h 51 – 1 h 54. Une ZFE n'est qu'une approximation de cet instrument : elle interdit des vignettes sans plafonner les émissions. Question : pourquoi une tonne de CO₂ émise à Lyon fait-elle le même dommage qu'à Pékin ? Transition : les ZFE marchent-elles ? Il faut savoir mesurer.
+1 h 48 – 1 h 50. Une ZFE n'est qu'une approximation de cet instrument : elle interdit des vignettes sans plafonner les émissions. Question : pourquoi une tonne de CO₂ émise à Lyon fait-elle le même dommage qu'à Pékin ? Transition : les ZFE marchent-elles ? Il faut savoir mesurer.
 :::
 
 ## Contrefactuel et effet propre : comparer avec la situation sans politique
@@ -615,7 +643,7 @@ Le **contrefactuel** est ce qui se serait passé sans la politique. On ne l'obse
 C'est la méthode de l'évaluation de l'encadrement des loyers (CM 4), qui compare les communes encadrées à des communes semblables.
 
 ::: {.notes}
-1 h 54 – 1 h 57. Question : pourquoi ne peut-on jamais observer le contrefactuel ? (On ne peut pas vivre deux fois la même année, avec et sans ZFE.) Transition : un exemple chiffré.
+1 h 50 – 1 h 52. Question : pourquoi ne peut-on jamais observer le contrefactuel ? (On ne peut pas vivre deux fois la même année, avec et sans ZFE.) Transition : un exemple chiffré.
 :::
 
 ## Exemple chiffré : deux différences isolent l'effet propre d'une ZFE
@@ -629,7 +657,7 @@ Chiffres fictifs. Émissions des villes à ZFE : de 100 à 61 en cinq ans. Ville
 :::
 
 ::: {.notes}
-1 h 57 – 2 h 01. Un point de pourcentage est l'écart entre deux pourcentages : passer de −34 % à −39 %, c'est 5 points de plus. Les villes témoins servent de contrefactuel. Question : pourquoi les villes témoins doivent-elles être comparables ? Faire calculer avant chaque clic. Transition : la même méthode sur les vraies données de l'Insee.
+1 h 52 – 1 h 55. Un point de pourcentage est l'écart entre deux pourcentages : passer de −34 % à −39 %, c'est 5 points de plus. Les villes témoins servent de contrefactuel. Question : pourquoi les villes témoins doivent-elles être comparables ? Faire calculer avant chaque clic. Transition : la même méthode sur les vraies données de l'Insee.
 :::
 
 ## Émissions des voitures : −38,9 % d'oxydes d'azote en cinq ans
@@ -651,7 +679,7 @@ graphe_effet_zfe(base_size = 24, etape = 1)
 ::::
 
 ::: {.notes}
-2 h 01 – 2 h 03. Insee Analyses n° 124, 27/08/2026. Le graphique porte sur six de ces neuf ZFE : celles de Nice, Grenoble et Toulouse, mises en place en 2023, n'y figurent pas. Question : peut-on attribuer ces baisses aux ZFE ? Transition : ajoutons le contrefactuel.
+1 h 55 – 1 h 57. Insee Analyses n° 124, 27/08/2026. Le graphique porte sur six de ces neuf ZFE : celles de Nice, Grenoble et Toulouse, mises en place en 2023, n'y figurent pas. Question : peut-on attribuer ces baisses aux ZFE ? Transition : ajoutons le contrefactuel.
 :::
 
 ## Effet propre des ZFE : 4,6 points sur une baisse de 38,9 %
@@ -677,7 +705,7 @@ graphe_effet_zfe(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 03 – 2 h 06. L'intervalle de confiance est la fourchette dans laquelle le contrefactuel se situe très probablement. Pour les trois polluants, la barre bleue sort de la fourchette grise : l'effet est mesuré. Question : quelle part de la baisse des oxydes d'azote revient à la ZFE ? Transition : même logique sur le parc automobile.
+1 h 57 – 2 h 00. L'intervalle de confiance est la fourchette dans laquelle le contrefactuel se situe très probablement. Pour les trois polluants, la barre bleue sort de la fourchette grise : l'effet est mesuré. Question : quelle part de la baisse des oxydes d'azote revient à la ZFE ? Transition : même logique sur le parc automobile.
 :::
 
 ## Parc automobile : l'essentiel du verdissement se serait produit sans ZFE
@@ -704,7 +732,36 @@ graphe_parc_zfe(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 06 – 2 h 09. Exception : les Crit'Air 2, dont le parc baisse alors qu'il aurait augmenté sans ZFE. Effets : +5,8 points pour les Crit'Air 1 et électriques, −4,5 points pour les Crit'Air 3. Question : pourquoi les plus vieilles voitures disparaissent-elles même sans ZFE ? Transition : une erreur de lecture fréquente.
+2 h 00 – 2 h 03. Exception : les Crit'Air 2, dont le parc baisse alors qu'il aurait augmenté sans ZFE. Effets : +5,8 points pour les Crit'Air 1 et électriques, −4,5 points pour les Crit'Air 3. Question : pourquoi les plus vieilles voitures disparaissent-elles même sans ZFE ? Transition : la baisse des émissions a-t-elle commencé avec les ZFE ?
+:::
+
+## Émissions des voitures : une baisse continue depuis 1990, avant les ZFE
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Émissions des voitures en France en indice 100 en 1990 : la ligne bleue des oxydes d'azote descend jusqu'à 20,2 en 2024, la ligne ambre des particules fines jusqu'à 12,8 ; la ligne pointillée de 2019, annonce des ZFE, arrive quand les deux courbes sont déjà sous 30."
+graphe_emissions_voitures(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- France, voitures, échappement, de 1990 à 2024 : oxydes d'azote **−80 %**, particules fines **−87 %**.
+- En 2019, année de l'annonce des ZFE : déjà −71 % et −76 %.
+
+::: {.fragment}
+
+- La baisse « sans ZFE » estimée par l'Insee prolonge cette tendance de trente ans.
+:::
+:::
+::::
+
+[Source : Eurostat, env_air_emis, inventaire national de la France (Citepa) (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 03 – 2 h 05. Champ : France entière, ZFE comprises, émissions à l'échappement seulement (l'usure des pneus, des freins et des routes n'est pas comptée) : ce n'est pas forcément le champ de l'Insee, ne pas comparer les deux sources chiffre à chiffre. Le parc se renouvelle depuis longtemps. Question : que montrerait un simple avant-après autour de 2019 ? Transition : une erreur de lecture fréquente.
 :::
 
 ## Point d'attention : un avant-après ne mesure pas l'effet d'une politique
@@ -719,7 +776,7 @@ graphe_parc_zfe(base_size = 24)
 - « La ZFE ne sert à rien » est faux aussi : l'effet est petit, mais mesuré et différent de zéro.
 
 ::: {.notes}
-2 h 09 – 2 h 11. Question à l'amphi avant le clic : que répondre à quelqu'un qui dit « les émissions ont baissé grâce aux ZFE » ? Comparer un avant et un après ne suffit jamais : il faut un contrefactuel. Transition : pourquoi un effet si modeste ?
+2 h 05 – 2 h 07. Question à l'amphi avant le clic : que répondre à quelqu'un qui dit « les émissions ont baissé grâce aux ZFE » ? Comparer un avant et un après ne suffit jamais : il faut un contrefactuel. Transition : pourquoi un effet si modeste ?
 :::
 
 ## Un effet modeste : la norme vise la vignette, pas le kilomètre
@@ -733,7 +790,36 @@ D'après l'Insee (Insee Analyses n° 124, 27/08/2026) :
 :::
 
 ::: {.notes}
-2 h 11 – 2 h 14. Une taxe par kilomètre pollué jouerait sur les deux : quelle voiture et combien de kilomètres. Les Crit'Air 5 pèsent moins de 5 % du parc à la mise en place. Plus de 24 millions de contraventions routières par an au total. Les ménages réagissent pourtant dès l'annonce de 2019 : la norme agit surtout par les anticipations, à l'achat d'une occasion. Transition : qui supporte l'effort ?
+2 h 07 – 2 h 10. Une taxe par kilomètre pollué jouerait sur les deux : quelle voiture et combien de kilomètres. Les Crit'Air 5 pèsent moins de 5 % du parc à la mise en place. Plus de 24 millions de contraventions routières par an au total. Les ménages réagissent pourtant dès l'annonce de 2019 : la norme agit surtout par les anticipations, à l'achat d'une occasion. Transition : le même mouvement à l'échelle de la France.
+:::
+
+## Parc national : les Crit'Air 3 et plus passent de 87,7 % à 24,3 %
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Parts du parc de voitures en France au 1er janvier, de 2011 à 2026 : la ligne rouge des Crit'Air 3, 4, 5 et non classées descend de 87,7 % à 24,3 %, la ligne bleue des électriques et Crit'Air 1 monte de 1,6 % à 41,5 %, la ligne grise des Crit'Air 2 finit à 34,2 %."
+graphe_parc_critair(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- France entière, ZFE ou non, parc au 1^er^ janvier.
+- Crit'Air 3, 4, 5 et non classées : 87,7 % en 2011, **24,3 %** en 2026.
+
+::: {.fragment}
+
+- Électriques et Crit'Air 1 : de 1,6 % à **41,5 %**. Les vieilles vignettes disparaissent d'elles-mêmes.
+:::
+:::
+::::
+
+[Source : SDES, parc de véhicules routiers (millésime 2026-06), somme nationale par l'auteur (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 10 – 2 h 12. Ce n'est pas un contrefactuel : les agglomérations à ZFE sont comprises. Vignette attribuée après coup, y compris avant la création de Crit'Air en 2016 ; données 2026 provisoires. Les Crit'Air 3 et plus sont celles que le panneau de Lyon n'autorise pas. Le parc verdit fortement même sans ZFE : on y reviendra avec l'effet d'aubaine du leasing social. Question : qui possède encore ces 24,3 % de voitures ? Transition : qui supporte l'effort ?
 :::
 
 ## Par revenu : l'effort pèse sur les ménages modestes, qui polluent peu
@@ -745,7 +831,7 @@ D'après l'Insee (Insee Analyses n° 124, 27/08/2026) :
 :::
 
 ::: {.notes}
-2 h 14 – 2 h 17. C'est l'exemple chiffré 5/6 (étape 7 de l'exemple de la page) : la norme demande l'effort selon l'âge de la voiture, pas selon la pollution émise. Liotta : une ZFE visant les Crit'Air 3 à 5 ferait perdre à certaines catégories plus de 20 % des emplois accessibles dans quatre villes sur huit. Gains de santé : surtout aux plus riches à Paris, l'inverse à Bruxelles, selon Liotta ; « également répartis » en région parisienne, selon une étude citée par Poulhès ; la question reste ouverte. Transition : et selon le territoire ?
+2 h 12 – 2 h 15. C'est l'exemple chiffré 5/6 (étape 7 de l'exemple de la page) : la norme demande l'effort selon l'âge de la voiture, pas selon la pollution émise. Liotta : une ZFE visant les Crit'Air 3 à 5 ferait perdre à certaines catégories plus de 20 % des emplois accessibles dans quatre villes sur huit. Gains de santé : surtout aux plus riches à Paris, l'inverse à Bruxelles, selon Liotta ; « également répartis » en région parisienne, selon une étude citée par Poulhès ; la question reste ouverte. Transition : et selon le territoire ?
 :::
 
 ## Par territoire : les vieilles voitures partent vers des territoires éloignés
@@ -762,7 +848,7 @@ D'après l'Insee (Insee Analyses n° 124, 27/08/2026) :
 **Changer d'instrument, c'est changer de perdants.**
 
 ::: {.notes}
-2 h 17 – 2 h 19. Le centre respire, des territoires éloignés héritent des vieilles voitures. Question : quels ménages une taxe sur le carburant toucherait-elle ? Transition : les données de l'Insee sur le carburant.
+2 h 15 – 2 h 17. Le centre respire, des territoires éloignés héritent des vieilles voitures. Question : quels ménages une taxe sur le carburant toucherait-elle ? Transition : les données de l'Insee sur le carburant.
 :::
 
 ## Exposition au prix du carburant : les ménages ruraux plus souvent touchés
@@ -784,7 +870,7 @@ graphe_carburant(base_size = 24, etape = 1)
 ::::
 
 ::: {.notes}
-2 h 19 – 2 h 21. Insee Première n° 2125, 08/09/2026. Question : pourquoi les ruraux sont-ils plus exposés ? (Plus de kilomètres, moins de transports en commun.) Transition : et aux prix de 2026 ?
+2 h 17 – 2 h 19. Insee Première n° 2125, 08/09/2026. Question : pourquoi les ruraux sont-ils plus exposés ? (Plus de kilomètres, moins de transports en commun.) Transition : et aux prix de 2026 ?
 :::
 
 ## Aux prix du printemps 2026, la part exposée doublerait à peu près
@@ -808,7 +894,36 @@ graphe_carburant(base_size = 24)
 ::::
 
 ::: {.notes}
-2 h 21 – 2 h 23. Question : pourquoi parler de scénario et non d'observation ? L'Insee parle d'un « léger creusement » de l'écart. Une taxe sur le carburant pèserait donc plus souvent sur les ménages ruraux, en proportion ; en nombre, les ménages très exposés restent plus nombreux dans les intercommunalités urbaines (tableau complémentaire 3). Transition : et selon l'âge ?
+2 h 19 – 2 h 21. Question : pourquoi parler de scénario et non d'observation ? L'Insee parle d'un « léger creusement » de l'écart. Une taxe sur le carburant pèserait donc plus souvent sur les ménages ruraux, en proportion ; en nombre, les ménages très exposés restent plus nombreux dans les intercommunalités urbaines (tableau complémentaire 3). Transition : ces prix sont-ils encore ceux d'aujourd'hui ?
+:::
+
+## Prix à la pompe : en octobre 2026, au-dessus du scénario de l'Insee
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Prix hebdomadaires à la pompe en France de 2019 à octobre 2026, gazole en bleu et sans plomb 95 en ambre : bond en mars 2026, dans la bande grise du printemps 2026, puis nouvelle hausse jusqu'à 2,35 € pour le gazole et 2,23 € pour le sans plomb 95 la semaine du 19 octobre."
+graphe_prix_carburants(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Printemps 2026, en gris : en moyenne 2,04 € le litre de sans plomb 95, 2,14 € le gazole, proche du scénario.
+
+::: {.fragment}
+
+- Semaine du 19 octobre : gazole **2,35 €**, sans plomb 95 **2,23 €**.
+- Les parts du scénario 2026 de l'Insee sont un plancher, pas un plafond.
+:::
+:::
+::::
+
+[Source : Commission européenne, *Weekly Oil Bulletin*, prix toutes taxes (consulté le 22/10/2026).]{.wp-source}
+
+::: {.notes}
+2 h 21 – 2 h 23. Moyennes nationales pondérées, toutes taxes, pas des relevés de station. Scénario de l'Insee : 2,0 € le litre d'essence, 2,2 € le gazole. À revenus et kilomètres inchangés, des prix plus élevés ne peuvent qu'accroître la part des ménages très exposés. Question : quels ménages ces nouvelles hausses touchent-elles le plus ? Transition : et selon l'âge ?
 :::
 
 ## Par génération : une taxe sur le carburant pèserait surtout sur les actifs
