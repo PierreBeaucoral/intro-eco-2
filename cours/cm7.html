@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pierre Beaucoral">
+<meta name="description" content="Inflation, taux d’intérêt réel, politique monétaire.">
+
+<title>Pourquoi la BCE relève-t-elle ses taux ? – Introduction à l’économie 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ce2a859f655fb0fc50a4bad14b2f71a0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-981ce10d1f6a1c0f379cc73fef8bdf9b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+
+
+</head>
+
+<body class="nav-fixed wp-cours quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo light-content">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Introduction à l’économie 2</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../programme.html"> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cours.html"> 
+<span class="menu-text">Cours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../td.html"> 
+<span class="menu-text">TD</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../methodo/index.html"> 
+<span class="menu-text">Méthodo</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#la-question" id="toc-la-question" class="nav-link active" data-scroll-target="#la-question"><span class="header-section-number">1</span> La question</a></li>
+  <li><a href="#ce-que-dit-la-théorie" id="toc-ce-que-dit-la-théorie" class="nav-link" data-scroll-target="#ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</a></li>
+  <li><a href="#les-outils" id="toc-les-outils" class="nav-link" data-scroll-target="#les-outils"><span class="header-section-number">3</span> Les outils</a></li>
+  <li><a href="#effets-de-répartition" id="toc-effets-de-répartition" class="nav-link" data-scroll-target="#effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</a></li>
+  <li><a href="#la-controverse" id="toc-la-controverse" class="nav-link" data-scroll-target="#la-controverse"><span class="header-section-number">5</span> La controverse</a></li>
+  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir"><span class="header-section-number">6</span> À retenir</a></li>
+  <li><a href="#pour-aller-plus-loin" id="toc-pour-aller-plus-loin" class="nav-link" data-scroll-target="#pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="cm7.pdf"><i class="bi bi-file-pdf"></i>Télécharger le PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pourquoi la BCE relève-t-elle ses taux ?</h1>
+<p class="subtitle lead">CM 7 · Partie II · La monnaie, l’État, le monde</p>
+</div>
+
+<div>
+  <div class="description">
+    Inflation, taux d’intérêt réel, politique monétaire.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Auteur</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="rappel">
+<ul>
+<li><strong>Inflation</strong> : hausse générale et durable des prix. On la mesure par la variation, sur un an, d’un indice des prix à la consommation.</li>
+<li><strong>Nominal et réel</strong> : une grandeur <strong>nominale</strong> est mesurée en euros courants ; une grandeur <strong>réelle</strong> est corrigée de la hausse des prix et mesure ce que l’on peut acheter.</li>
+<li><strong>Taux d’intérêt</strong> : prix du crédit, en pourcentage par an de la somme prêtée.</li>
+<li><strong>Création monétaire</strong> : les banques créent de la monnaie quand elles accordent des crédits ; la banque centrale fournit aux banques la monnaie dont elles ont besoin entre elles (CM 6).</li>
+<li><strong>Choc d’offre</strong> : événement qui déplace la courbe d’offre (O → O′) ; un choc négatif fait monter le prix et baisser la quantité (CM 1).</li>
+<li><strong>Positif et normatif</strong> : ce qui est (on peut le vérifier) et ce qui devrait être (cela dépend d’un jugement).</li>
+</ul>
+</div>
+<section id="la-question" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="la-question"><span class="header-section-number">1</span> La question</h2>
+<p>En septembre 2026, les prix à la consommation de la zone euro augmentent de <strong>3,8&nbsp;%</strong> sur un an, contre 2,2&nbsp;% un an plus tôt. Les prix de l’énergie bondissent de 18,9&nbsp;% ; hors énergie, la hausse n’est que de 2,3&nbsp;% (Eurostat, communiqué du 16/10/2026). La guerre déclenchée le 28/02/2026, qui a fermé de fait le détroit d’Ormuz dès ce jour-là (Insee, <em>Note de conjoncture</em>, 24/03/2026), en est la principale cause : l’énergie apporte à elle seule 1,7 point des 3,8&nbsp;% (Eurostat, 16/10/2026).</p>
+<p>La Banque centrale européenne (BCE) a réagi deux fois. Son taux de dépôt, à 2,00&nbsp;% depuis le 11/06/2025, passe à <strong>2,25&nbsp;%</strong> le 17/06/2026, puis à <strong>2,50&nbsp;%</strong> le 16/09/2026 (décisions des 11/06 et 10/09, en vigueur quelques jours plus tard ; BCE, tableau des taux directeurs, consulté le 21/10/2026). Ce sont ses premières hausses depuis 2023.</p>
+<p>Le précédent est récent. Après l’invasion de l’Ukraine, l’inflation de la zone euro atteint <strong>10,6&nbsp;%</strong> en octobre 2022 (Eurostat). La BCE relève alors ses taux <strong>dix fois</strong> entre juillet 2022 et septembre 2023 : son taux de dépôt passe de −0,50&nbsp;% à <strong>4,00&nbsp;%</strong> (BCE).</p>
+<p>Trois faits intriguent.</p>
+<ol type="1">
+<li>La BCE ne produit pas de pétrole : relever un taux d’intérêt ne rouvre pas un détroit.</li>
+<li>En 2026, elle agit dès que l’inflation atteint 3,2&nbsp;% (mai 2026) ; en 2022, sa première hausse intervient quand l’inflation est déjà à 8,6&nbsp;% (juin 2022) (Eurostat).</li>
+<li>En 2026, elle relève son taux de 0,50 point ; en 2022-2023, de 4,50 points.</li>
+</ol>
+<div id="fig-ormuz" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Carte en couleurs du détroit d'Ormuz. Le golfe Persique, à gauche, communique avec le golfe d'Oman, à droite, par un passage étroit entre la côte iranienne au nord et la péninsule omanaise de Musandam au sud. Deux couloirs de navigation, l'un dans chaque sens, sont tracés en violet et suivent ce passage. Les Émirats arabes unis bordent le golfe Persique au sud.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ormuz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/cm7/detroit-ormuz.png" class="img-fluid figure-img" alt="Carte en couleurs du détroit d'Ormuz. Le golfe Persique, à gauche, communique avec le golfe d'Oman, à droite, par un passage étroit entre la côte iranienne au nord et la péninsule omanaise de Musandam au sud. Deux couloirs de navigation, l'un dans chaque sens, sont tracés en violet et suivent ce passage. Les Émirats arabes unis bordent le golfe Persique au sud.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ormuz-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Le détroit d’Ormuz, entre le golfe Persique et le golfe d’Oman. Les flèches violettes sont les couloirs de navigation : tout le trafic maritime entre le golfe Persique et l’océan passe par ce passage étroit, entre l’Iran au nord et Oman au sud. Lecture : l’obstacle qui fait monter le prix de l’énergie est physique (un passage bloqué), et non monétaire ; c’est pourquoi une hausse des taux ne le lève pas. Carte : Goran tek-en, CC BY-SA 4.0, Wikimedia Commons (d’après des données OpenStreetMap).
+</figcaption>
+</figure>
+</div>
+<p><strong>La question de la séance : pourquoi la BCE relève-t-elle ses taux face à un choc d’énergie, et pourquoi pas de la même façon en 2022 et en 2026 ?</strong> Deux outils y répondent : le <em>taux d’intérêt réel</em> et la <em>règle de Taylor</em>.</p>
+<p>Faits arrêtés au 21/10/2026. La BCE se réunit de nouveau les 28-29/10 et les 16-17/12/2026 (BCE, calendrier) : si les taux ont changé, le raisonnement reste valable.</p>
+</section>
+<section id="ce-que-dit-la-théorie" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</h2>
+<section id="une-inflation-durable-suppose-trop-de-monnaie-pour-trop-peu-de-biens" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="une-inflation-durable-suppose-trop-de-monnaie-pour-trop-peu-de-biens"><span class="header-section-number">2.1</span> Une inflation durable suppose trop de monnaie pour trop peu de biens</h3>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/friedman-milton.jpg" class="img-fluid" alt="Portrait photographique de Milton Friedman en 1976, homme âgé à lunettes, en buste."> <span class="wp-credit">1976 · UPI, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Irving Fisher</strong> (1911), <em>The Purchasing Power of Money</em>, New York, Macmillan ; <strong>Milton Friedman et Anna J. Schwartz</strong> (1963), <em>A Monetary History of the United States, 1867-1960</em>, Princeton University Press · théorie quantitative, puis école monétariste. Si la quantité de monnaie augmente plus vite que la production, les prix finissent par monter. Friedman et Schwartz l’illustrent sur près d’un siècle d’histoire américaine : les grands mouvements de la monnaie accompagnent ceux des prix.</p>
+</div>
+<p>Fisher écrit l’<strong>équation des échanges</strong> : M × V = P × T. M est la quantité de monnaie, V sa vitesse de circulation (combien de fois un euro sert dans l’année), P le niveau des prix et T le volume des transactions. En taux de variation, et de façon approchée : variation de M + variation de V ≈ variation de P + variation de T. Si la monnaie augmente de 10&nbsp;% par an, que sa vitesse ne change pas et que le volume des transactions (en gros, la production) augmente de 2&nbsp;%, les prix augmentent d’environ 10 + 0 − 2 = <strong>8&nbsp;%</strong> par an.</p>
+<p>Appliquée à 2022 et 2026, cette théorie n’explique pas le départ de la hausse, qui vient d’un choc d’offre sur l’énergie ; elle éclaire ce qui pourrait la faire durer. Le choc ne devient une inflation durable que s’il se diffuse aux autres prix et aux salaires. En rendant le crédit plus cher, la banque centrale freine la création de monnaie et la dépense.</p>
+<div id="def-inflation" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (IPCH et inflation hors énergie)</strong></span> L’<strong>indice des prix à la consommation harmonisé</strong> (IPCH) mesure les prix de la même façon dans tous les pays de l’Union européenne ; c’est celui que suit la BCE. L’Insee publie aussi l’IPC, propre à la France : en septembre 2026, l’inflation française est de 3,1&nbsp;% selon l’IPC et de 3,4&nbsp;% selon l’IPCH (Insee, Informations rapides n°&nbsp;247, 15/10/2026). L’<strong>inflation hors énergie</strong> retire de l’indice les prix de l’énergie, qui varient beaucoup, mais garde l’alimentation : elle montre si la hausse s’est diffusée au reste des prix. L’inflation <strong>hors énergie et alimentation</strong> retire aussi l’alimentation, l’alcool et le tabac.</p>
+</div>
+</section>
+<section id="pour-lemprunteur-ce-qui-compte-est-le-taux-réel" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="pour-lemprunteur-ce-qui-compte-est-le-taux-réel"><span class="header-section-number">2.2</span> Pour l’emprunteur, ce qui compte est le taux réel</h3>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/irving-fisher.jpg" class="img-fluid" alt="Portrait photographique d'Irving Fisher en 1927, homme à moustache et lunettes, en buste."> <span class="wp-credit">1927 · Bain News Service, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Irving Fisher</strong> (1930), <em>The Theory of Interest</em>, New York, Macmillan · école néoclassique. Le taux d’intérêt affiché (nominal) mélange deux choses : la rémunération du prêteur et la compensation de la hausse des prix. Ce qui guide les décisions d’emprunt et d’épargne est le taux <strong>réel</strong>, à peu près égal au taux nominal moins l’inflation anticipée.</p>
+</div>
+<div id="def-taux-reel" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 2 (Taux d’intérêt réel et relation de Fisher)</strong></span> Le <strong>taux d’intérêt réel</strong> r mesure ce que rapporte vraiment un prêt, en pouvoir d’achat. De façon approchée : r ≈ i − inflation anticipée, où i est le taux d’intérêt nominal. Avec l’inflation observée π au lieu de l’inflation anticipée, on obtient le taux réel <strong>ex post</strong> (« après coup ») : r ≈ i − π. Un taux réel négatif signifie que le prêteur perd du pouvoir d’achat et que l’emprunteur en gagne.</p>
+</div>
+</section>
+<section id="une-banque-centrale-doit-relever-son-taux-plus-que-linflation" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="une-banque-centrale-doit-relever-son-taux-plus-que-linflation"><span class="header-section-number">2.3</span> Une banque centrale doit relever son taux plus que l’inflation</h3>
+<div class="auteur">
+<p><strong>John B. Taylor</strong> (1993), « Discretion versus policy rules in practice », <em>Carnegie-Rochester Conference Series on Public Policy</em>, 39, p.&nbsp;195-214 · nouvelle synthèse. Taylor propose une règle simple qui décrit bien la politique de la banque centrale des États-Unis de 1987 à 1992 : le taux directeur monte avec l’inflation et avec l’activité. Quand l’inflation augmente de 1 point, le taux doit monter de <strong>plus</strong> de 1 point, pour que le taux réel augmente et freine la dépense.</p>
+</div>
+<div id="def-taux-directeur" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 3 (Taux directeurs et points de base)</strong></span> Les <strong>taux directeurs</strong> sont les trois taux que la BCE fixe pour les banques ; ils bougent en général ensemble. Le taux de la <strong>facilité de dépôt</strong> rémunère l’argent que les banques laissent chez elle au jour le jour ; le taux de <strong>refinancement</strong> est le coût d’un prêt de la BCE à une semaine ; le taux de la <strong>facilité de prêt marginal</strong> est ce que coûte un prêt de la BCE au jour le jour. En septembre 2026, ils valent 2,50&nbsp;% et 2,65&nbsp;% (BCE). Un <strong>point de base</strong> vaut un centième de point : 0,25 point = 25 points de base.</p>
+</div>
+<div id="def-ecart-production" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 4 (Écart de production)</strong></span> L’<strong>écart de production</strong> est la différence, en pourcentage, entre la production effective et la production que l’économie peut réaliser sans tension sur les prix. Il est négatif en récession, positif en surchauffe. On ne l’observe pas directement : on l’estime.</p>
+</div>
+<p>La cible de la BCE est fixée par sa stratégie de 2021 : « viser une inflation de 2&nbsp;% à moyen terme est le meilleur moyen de maintenir la stabilité des prix », avec un engagement « symétrique » (une inflation trop basse est aussi indésirable) (BCE, <em>Déclaration relative à la stratégie de politique monétaire</em>, 2021).</p>
+</section>
+</section>
+<section id="les-outils" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="les-outils"><span class="header-section-number">3</span> Les outils</h2>
+<section id="le-taux-réel-se-calcule-en-retirant-linflation" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="le-taux-réel-se-calcule-en-retirant-linflation"><span class="header-section-number">3.1</span> Le taux réel se calcule en retirant l’inflation</h3>
+<div id="exm-fisher" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 1 (Prêter à 4 % quand les prix montent de 10 %)</strong></span> Vous prêtez 10&nbsp;000&nbsp;€ pour un an, au taux nominal i = 4&nbsp;%.</p>
+<ol type="1">
+<li><em>Ce que vous recevez.</em> Dans un an, l’emprunteur vous rend 10&nbsp;000 × 1,04 = <strong>10&nbsp;400&nbsp;€</strong>.</li>
+<li><em>Ce qu’il faudrait pour garder votre pouvoir d’achat.</em> Si les prix montent de π = 10&nbsp;%, il vous faut 10&nbsp;000 × 1,10 = <strong>11&nbsp;000&nbsp;€</strong> pour acheter ce que 10&nbsp;000&nbsp;€ achetaient.</li>
+<li><em>Le gain réel.</em> Il vous manque 11&nbsp;000 − 10&nbsp;400 = 600&nbsp;€, soit 6&nbsp;% de la somme prêtée. Le taux réel vaut environ r ≈ 4 − 10 = <strong>−6&nbsp;%</strong>.</li>
+<li><em>Avec une inflation de 2&nbsp;%.</em> Il vous faut 10&nbsp;200&nbsp;€ ; vous en recevez 10&nbsp;400. Vous gagnez 200&nbsp;€, soit r ≈ 4 − 2 = <strong>+2&nbsp;%</strong>.</li>
+<li><em>Conclusion.</em> Le même taux nominal de 4&nbsp;% avantage l’emprunteur quand l’inflation est de 10&nbsp;%, le prêteur quand elle est de 2&nbsp;%.</li>
+</ol>
+<p>La relation est approchée : le calcul exact donne −5,5&nbsp;% au lieu de −6&nbsp;%. L’écart est faible tant que les taux restent de quelques points.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-taux-inflation" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique en lignes de 2021 à fin 2026. Le taux de dépôt de la BCE, en bleu et en escalier, reste à moins 0,5&nbsp;% jusqu'en juillet 2022, monte par marches jusqu'à 4&nbsp;% en septembre 2023, reste à 4&nbsp;% jusqu'en juin 2024, redescend à 2&nbsp;% en juin 2025, puis remonte à 2,25&nbsp;% en juin 2026 et 2,5&nbsp;% en septembre 2026. L'inflation de la zone euro, en ambre, monte de moins de 1&nbsp;% début 2021 à 10,6&nbsp;% en octobre 2022, redescend sous 3&nbsp;% fin 2023, oscille autour de 2&nbsp;% en 2024 et 2025, puis remonte à 3,8&nbsp;% en septembre 2026. Une ligne pointillée marque la cible de 2&nbsp;%. Deux traits verticaux rouges relient le taux de dépôt à l'inflation : en octobre 2022, de 0,75&nbsp;% à 10,6&nbsp;%, soit un taux réel d'environ moins 9,9 points, le plus bas de la période ; en septembre 2026, de 2,5&nbsp;% à 3,8&nbsp;%, soit environ moins 1,3 point.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-taux-inflation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm7_files/figure-html/fig-taux-inflation-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique en lignes de 2021 à fin 2026. Le taux de dépôt de la BCE, en bleu et en escalier, reste à moins 0,5&nbsp;% jusqu'en juillet 2022, monte par marches jusqu'à 4&nbsp;% en septembre 2023, reste à 4&nbsp;% jusqu'en juin 2024, redescend à 2&nbsp;% en juin 2025, puis remonte à 2,25&nbsp;% en juin 2026 et 2,5&nbsp;% en septembre 2026. L'inflation de la zone euro, en ambre, monte de moins de 1&nbsp;% début 2021 à 10,6&nbsp;% en octobre 2022, redescend sous 3&nbsp;% fin 2023, oscille autour de 2&nbsp;% en 2024 et 2025, puis remonte à 3,8&nbsp;% en septembre 2026. Une ligne pointillée marque la cible de 2&nbsp;%. Deux traits verticaux rouges relient le taux de dépôt à l'inflation : en octobre 2022, de 0,75&nbsp;% à 10,6&nbsp;%, soit un taux réel d'environ moins 9,9 points, le plus bas de la période ; en septembre 2026, de 2,5&nbsp;% à 3,8&nbsp;%, soit environ moins 1,3 point." width="1125">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-taux-inflation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Taux de dépôt de la BCE et inflation de la zone euro, de janvier 2021 au 21 octobre 2026. Le taux de dépôt est en escalier : il ne change qu’aux décisions de la BCE. L’inflation est la variation des prix sur un an (IPCH), chaque mois. Lecture : l’écart vertical entre les deux courbes (traits rouges) est le taux réel ex post ; il est au plus bas en octobre 2022 (environ −9,9 points) et vaut −1,3 point en septembre 2026. Sources : BCE, Data Portal (séries des taux directeurs) ; Eurostat, jeu de données prc_hicp_minr ; consultés le 21/10/2026.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Appliquons la relation au taux de dépôt de la BCE (<a href="#fig-taux-inflation" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<ul>
+<li><strong>Octobre 2022</strong> : taux de dépôt 0,75&nbsp;%, inflation 10,6&nbsp;%, donc r ≈ 0,75 − 10,6, soit environ <strong>−9,9&nbsp;%</strong>, le plus bas de la période. Malgré deux hausses, emprunter reste très avantageux.</li>
+<li><strong>Octobre 2023</strong> : 4,00&nbsp;% et 2,9&nbsp;%, donc r ≈ <strong>+1,1&nbsp;%</strong>. Il faut attendre octobre 2023, quinze mois après la première hausse, pour que le taux réel devienne positif.</li>
+<li><strong>Septembre 2026</strong> : 2,50&nbsp;% et 3,8&nbsp;%, donc r ≈ <strong>−1,3&nbsp;%</strong>. Le taux réel reste négatif.</li>
+</ul>
+<div class="piege">
+<p><strong>Quel taux, et quelle inflation ?</strong> « Le taux directeur est passé de 0&nbsp;% à 4&nbsp;% » est vrai pour le taux de refinancement (0&nbsp;% jusqu’en juillet 2022, 4&nbsp;% en juin 2023), faux pour le taux de dépôt (−0,50&nbsp;%, puis 4&nbsp;% en septembre 2023) (BCE). Il faut dire de quel taux on parle.</p>
+</div>
+</section>
+<section id="une-hausse-des-taux-freine-la-demande-pas-loffre-dénergie" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="une-hausse-des-taux-freine-la-demande-pas-loffre-dénergie"><span class="header-section-number">3.2</span> Une hausse des taux freine la demande, pas l’offre d’énergie</h3>
+<p>Une décision de la BCE agit sur les prix par une chaîne de réactions, la <strong>transmission de la politique monétaire</strong> :</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Étape</th>
+<th>Ce qui se passe quand la BCE relève ses taux</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Les banques</td>
+<td>Se refinancer leur coûte plus cher : elles relèvent les taux de leurs crédits.</td>
+</tr>
+<tr class="even">
+<td>2. Ménages et entreprises</td>
+<td>Emprunter coûte plus, épargner rapporte plus : on emprunte et on dépense moins.</td>
+</tr>
+<tr class="odd">
+<td>3. La monnaie</td>
+<td>Moins de crédits, c’est moins de monnaie créée.</td>
+</tr>
+<tr class="even">
+<td>4. La demande</td>
+<td>La dépense ralentit : les prix et les salaires accélèrent moins.</td>
+</tr>
+<tr class="odd">
+<td>5. Les anticipations</td>
+<td>Si l’on croit au retour à 2&nbsp;%, prix et salaires se fixent en conséquence.</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-credit-habitat" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique en lignes de 2021 à fin 2026. Le taux de dépôt de la BCE, en bleu et en escalier, reste à moins 0,5&nbsp;% jusqu'en juillet 2022, monte à 4&nbsp;% en septembre 2023, redescend à 2&nbsp;% en juin 2025, puis remonte à 2,5&nbsp;% en septembre 2026. Le taux des nouveaux crédits à l'habitat en France, en ambre, est d'environ 1,1&nbsp;% en 2021, monte à partir du printemps 2022 jusqu'à 3,6&nbsp;% en décembre 2023, redescend lentement vers 3&nbsp;% en 2025, puis remonte à 3,2&nbsp;% en août 2026. Il reste sous le taux de dépôt de février 2023 à la fin de 2024, puis repasse au-dessus.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-credit-habitat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm7_files/figure-html/fig-credit-habitat-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique en lignes de 2021 à fin 2026. Le taux de dépôt de la BCE, en bleu et en escalier, reste à moins 0,5&nbsp;% jusqu'en juillet 2022, monte à 4&nbsp;% en septembre 2023, redescend à 2&nbsp;% en juin 2025, puis remonte à 2,5&nbsp;% en septembre 2026. Le taux des nouveaux crédits à l'habitat en France, en ambre, est d'environ 1,1&nbsp;% en 2021, monte à partir du printemps 2022 jusqu'à 3,6&nbsp;% en décembre 2023, redescend lentement vers 3&nbsp;% en 2025, puis remonte à 3,2&nbsp;% en août 2026. Il reste sous le taux de dépôt de février 2023 à la fin de 2024, puis repasse au-dessus." width="1125">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-credit-habitat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Taux de dépôt de la BCE et taux moyen des nouveaux crédits à l’habitat des ménages en France, de janvier 2021 au 21 octobre 2026. Le taux de dépôt est en escalier ; le taux des crédits est une moyenne mensuelle (coût des crédits accordés dans le mois), connue jusqu’en août 2026. Lecture : les banques répercutent la hausse des taux de la BCE (étape 1 de la transmission) avec retard et en partie, et la baisse de 2024-2025 encore moins. Sources : BCE, Data Portal (taux directeurs ; statistiques des taux d’intérêt bancaires, série MIR.M.FR.B.A2C.AM.R.A.2250.EUR.N), consultés le 21/10/2026.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>L’étape 1 se voit dans les chiffres (<a href="#fig-credit-habitat" class="quarto-xref">Figure&nbsp;3</a>) : en France, le taux moyen des nouveaux crédits à l’habitat passe de 1,1&nbsp;% en décembre 2021 à <strong>3,6&nbsp;%</strong> en décembre 2023, trois mois après la dernière hausse de la BCE. Il redescend moins que le taux de dépôt : 3,0&nbsp;% en décembre 2025, quand celui-ci est revenu à 2&nbsp;%, puis 3,2&nbsp;% en août 2026 (BCE, consulté le 21/10/2026).</p>
+<p>Cette chaîne agit sur la <strong>demande</strong>. Face à un choc d’énergie, on reprend l’offre et la demande du CM 1 pour l’ensemble des biens : l’<strong>offre agrégée</strong> O (ce que les entreprises produisent) et la <strong>demande agrégée</strong> D (ce que ménages, entreprises et État achètent ; elle baisse quand les prix montent, car la même monnaie achète moins), avec P le niveau général des prix et Q la production totale.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-transmission" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique offre-demande avec, en abscisse, la production Q et, en ordonnée, le niveau général des prix P. La demande D est une droite décroissante bleue, l'offre O une droite croissante ambre. L'offre O prime, en tirets, est décalée vers la gauche, avec une flèche ; la demande D prime, en tirets bleus, est décalée vers la gauche, avec une flèche. L'équilibre initial E est en P étoile, Q étoile. Après le choc d'offre, E prime a un prix plus haut, P étoile prime, et une production plus faible, Q étoile prime. Après la hausse des taux, E seconde a un prix intermédiaire, P étoile seconde, entre P étoile et P étoile prime, et la production la plus faible, Q étoile seconde.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-transmission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm7_files/figure-html/fig-transmission-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique offre-demande avec, en abscisse, la production Q et, en ordonnée, le niveau général des prix P. La demande D est une droite décroissante bleue, l'offre O une droite croissante ambre. L'offre O prime, en tirets, est décalée vers la gauche, avec une flèche ; la demande D prime, en tirets bleus, est décalée vers la gauche, avec une flèche. L'équilibre initial E est en P étoile, Q étoile. Après le choc d'offre, E prime a un prix plus haut, P étoile prime, et une production plus faible, Q étoile prime. Après la hausse des taux, E seconde a un prix intermédiaire, P étoile seconde, entre P étoile et P étoile prime, et la production la plus faible, Q étoile seconde." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-transmission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Un choc d’énergie, puis une hausse des taux, dans un schéma d’offre et de demande agrégées. Le choc énergétique déplace l’offre vers la gauche (O → O′) : on passe de E à E′, les prix montent (P* → P*′) et la production baisse (Q* → Q*′). La hausse des taux déplace la demande vers la gauche (D → D′) : on passe de E′ à E″, les prix montent moins (P*″ au lieu de P*′), mais la production baisse encore (Q*″). Graphique théorique.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><strong>Le choc.</strong> L’énergie renchérit, produire coûte plus cher : l’offre passe de O à O′ et l’économie de E à E′. Les prix montent, la production baisse.</li>
+<li><strong>La hausse des taux.</strong> La demande passe de D à D′, et l’économie de E′ à E″ : les prix montent moins, mais la production baisse encore.</li>
+<li><strong>Le dilemme.</strong> Face à un choc d’offre, la banque centrale choisit entre plus d’inflation (E′) et moins d’activité (E″). Face à un choc de demande, il n’y a pas de dilemme : freiner une demande qui s’emballe réduit à la fois l’inflation et la surchauffe.</li>
+</ol>
+<p>Pourquoi agir quand même ? Parce que le danger est la diffusion de la hausse.</p>
+<div id="def-second-tour" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 5 (Effets de second tour)</strong></span> On parle d’<strong>effets de second tour</strong> quand une hausse de prix initiale (ici l’énergie) se diffuse aux autres prix et aux salaires : les entreprises répercutent leurs coûts, les salariés demandent des hausses pour compenser, ce qui relève encore les coûts. Le choc devient alors une inflation durable.</p>
+</div>
+<p>La BCE l’écrit ainsi le 10 septembre 2026 : « plus les prix de l’énergie restent élevés, plus ils risquent de faire monter l’inflation au-delà » de l’énergie. Elle note aussi que, « à ce stade », les salaires ne réagissent pas de façon notable au choc, et que les anticipations d’inflation à long terme se situent « autour de 2&nbsp;% » (BCE, déclaration de politique monétaire, 10/09/2026, traduction du cours).</p>
+</section>
+<section id="la-règle-de-taylor-donne-un-ordre-de-grandeur" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="la-règle-de-taylor-donne-un-ordre-de-grandeur"><span class="header-section-number">3.3</span> La règle de Taylor donne un ordre de grandeur</h3>
+<p>Taylor résume la conduite d’une banque centrale en une formule :</p>
+<p>i = 2&nbsp;% + π + 0,5 × (π − 2&nbsp;%) + 0,5 × écart de production.</p>
+<p>Le premier terme est le taux réel « normal » retenu par Taylor (2&nbsp;%), le deuxième compense l’inflation, le troisième corrige l’écart à la cible de 2&nbsp;%, le dernier tient compte de l’activité. Avec un écart de production nul, la formule se simplifie en <strong>i = 1 + 1,5 × π</strong>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-taylor" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique avec, en abscisse, l'inflation de 0 à 11&nbsp;% et, en ordonnée, le taux directeur de 0 à 18&nbsp;%. Une droite bleue, la règle de Taylor, part de 1&nbsp;% et monte plus vite que la droite pointillée grise i égale pi, qui part de 0. Deux points noirs sur la droite bleue : 4&nbsp;% de taux pour 2&nbsp;% d'inflation et 7&nbsp;% de taux pour 4&nbsp;% d'inflation. Deux triangles rouges, sous la droite pointillée : BCE en septembre 2026, à 3,8&nbsp;% d'inflation et 2,5&nbsp;% de taux, et BCE en octobre 2022, à 10,6&nbsp;% d'inflation et 0,75&nbsp;% de taux.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-taylor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm7_files/figure-html/fig-taylor-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique avec, en abscisse, l'inflation de 0 à 11&nbsp;% et, en ordonnée, le taux directeur de 0 à 18&nbsp;%. Une droite bleue, la règle de Taylor, part de 1&nbsp;% et monte plus vite que la droite pointillée grise i égale pi, qui part de 0. Deux points noirs sur la droite bleue : 4&nbsp;% de taux pour 2&nbsp;% d'inflation et 7&nbsp;% de taux pour 4&nbsp;% d'inflation. Deux triangles rouges, sous la droite pointillée : BCE en septembre 2026, à 3,8&nbsp;% d'inflation et 2,5&nbsp;% de taux, et BCE en octobre 2022, à 10,6&nbsp;% d'inflation et 0,75&nbsp;% de taux." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-taylor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: La règle de Taylor (écart de production nul) et la droite du taux réel nul (i = π). Points noirs : l’exemple chiffré (2&nbsp;% d’inflation, taux de 4&nbsp;% ; 4&nbsp;% d’inflation, taux de 7&nbsp;%). Triangles rouges : le taux de dépôt de la BCE et l’inflation de la zone euro en octobre 2022 (0,75&nbsp;% et 10,6&nbsp;%) et en septembre 2026 (2,50&nbsp;% et 3,8&nbsp;%). Lecture : au-dessus de la droite pointillée, le taux réel est positif ; les deux points de la BCE sont au-dessous. Sources des points : BCE ; Eurostat (consultés le 21/10/2026).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="exm-taylor" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 2 (Que conseille la règle quand l’inflation passe de 2 % à 4 % ?)</strong></span> On suppose un écart de production nul (<a href="#fig-taylor" class="quarto-xref">Figure&nbsp;5</a>).</p>
+<ol type="1">
+<li><em>Inflation à la cible.</em> Avec π = 2&nbsp;% : i = 2 + 2 + 0,5 × (2 − 2) + 0 = <strong>4&nbsp;%</strong>. Le taux réel vaut 4 − 2 = 2&nbsp;% : c’est le taux « normal ».</li>
+<li><em>Inflation à 4&nbsp;%.</em> i = 2 + 4 + 0,5 × (4 − 2) + 0 = 2 + 4 + 1 = <strong>7&nbsp;%</strong>.</li>
+<li><em>La comparaison.</em> L’inflation a monté de 2 points, le taux conseillé de 3 points (de 4&nbsp;% à 7&nbsp;%). Le taux réel passe de 2&nbsp;% à 7 − 4 = <strong>3&nbsp;%</strong> : la politique devient plus restrictive.</li>
+<li><em>Avec une récession.</em> Si l’écart de production vaut −2&nbsp;%, on retire 0,5 × 2 = 1 point : i = 7 − 1 = <strong>6&nbsp;%</strong>. La règle demande moins de rigueur quand l’activité est faible.</li>
+</ol>
+</div>
+<p>Appliquée telle quelle, la règle donne un repère, pas une prescription.</p>
+<ul>
+<li><strong>Octobre 2022</strong> : avec l’inflation totale (10,6&nbsp;%), 1 + 1,5 × 10,6 ≈ <strong>17&nbsp;%</strong> ; avec l’inflation hors énergie (6,9&nbsp;%, Eurostat, arrondie à 7&nbsp;%), 1 + 1,5 × 7 = <strong>11,5&nbsp;%</strong>. Le taux de dépôt est de 0,75&nbsp;%.</li>
+<li><strong>Septembre 2026</strong> : environ <strong>6,7&nbsp;%</strong> avec l’inflation totale (3,8&nbsp;%), <strong>4,5&nbsp;%</strong> hors énergie (2,3&nbsp;%). Le taux de dépôt est de 2,50&nbsp;%.</li>
+</ul>
+<p>Ces chiffres reposent sur trois hypothèses fortes : un taux réel « normal » de 2&nbsp;% (calculé par Taylor pour les États-Unis), un écart de production nul (alors que la BCE ne prévoit que 0,9&nbsp;% de croissance en 2026 : BCE, 10/09/2026), et le choix de l’inflation. Surtout, la règle ne distingue pas l’origine de l’inflation : elle réagit de la même façon à un choc d’offre et à un choc de demande.</p>
+</section>
+<section id="application-2022-et-2026-deux-chocs-dénergie-deux-réponses" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="application-2022-et-2026-deux-chocs-dénergie-deux-réponses"><span class="header-section-number">3.4</span> Application : 2022 et 2026, deux chocs d’énergie, deux réponses</h3>
+<table class="caption-top table">
+<caption>Deux épisodes de hausse des taux de la BCE. Sources : BCE (décisions et taux) ; Eurostat, prc_hicp_minr (inflation, consulté le 21/10/2026).</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>2022-2023</th>
+<th>2026</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Première décision de hausse</td>
+<td>21/07/2022</td>
+<td>11/06/2026</td>
+</tr>
+<tr class="even">
+<td>Inflation du mois précédent</td>
+<td>8,6&nbsp;% (juin 2022)</td>
+<td>3,2&nbsp;% (mai 2026)</td>
+</tr>
+<tr class="odd">
+<td>Hausse des prix de l’énergie sur un an</td>
+<td>41,5&nbsp;% (oct. 2022)</td>
+<td>18,9&nbsp;% (sept. 2026)</td>
+</tr>
+<tr class="even">
+<td>Inflation hors énergie</td>
+<td>6,9&nbsp;% (oct. 2022)</td>
+<td>2,3&nbsp;% (sept. 2026)</td>
+</tr>
+<tr class="odd">
+<td>Inflation hors énergie et alimentation</td>
+<td>5,0&nbsp;% (oct. 2022)</td>
+<td>2,5&nbsp;% (sept. 2026)</td>
+</tr>
+<tr class="even">
+<td>Taux de dépôt</td>
+<td>de −0,50&nbsp;% à 4,00&nbsp;%, en 10 hausses</td>
+<td>de 2,00&nbsp;% à 2,50&nbsp;%, en 2 hausses</td>
+</tr>
+</tbody>
+</table>
+<p><strong>L’inflation s’était diffusée en 2022, pas encore en 2026</strong>. En octobre 2022, les prix hors énergie montent de 6,9&nbsp;%, dont une part vient de l’alimentation (13,1&nbsp;%), autre choc d’offre. Même hors énergie et alimentation, ils montent de 5,0&nbsp;% : le choc s’est doublé d’effets de second tour. En septembre 2026, les prix hors énergie montent de 2,3&nbsp;% (2,5&nbsp;% hors énergie et alimentation), à peine au-dessus de la cible.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-inflation-diffusion" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique en lignes de 2021 à septembre 2026, avec une ligne pointillée à la cible de 2&nbsp;%. L'inflation d'ensemble, en ambre, culmine à 10,6&nbsp;% en octobre 2022. L'inflation hors énergie, en bleu, culmine plus tard, à 7,9&nbsp;% en mars 2023 ; l'inflation hors énergie et alimentation, en noir, culmine aussi en mars 2023, à 5,7&nbsp;%. Toutes redescendent vers 2 à 3&nbsp;% en 2024 et 2025. En 2026, seule l'inflation d'ensemble remonte, à 3,8&nbsp;% en septembre ; les deux autres restent entre 2 et 2,6&nbsp;%.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-inflation-diffusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm7_files/figure-html/fig-inflation-diffusion-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique en lignes de 2021 à septembre 2026, avec une ligne pointillée à la cible de 2&nbsp;%. L'inflation d'ensemble, en ambre, culmine à 10,6&nbsp;% en octobre 2022. L'inflation hors énergie, en bleu, culmine plus tard, à 7,9&nbsp;% en mars 2023 ; l'inflation hors énergie et alimentation, en noir, culmine aussi en mars 2023, à 5,7&nbsp;%. Toutes redescendent vers 2 à 3&nbsp;% en 2024 et 2025. En 2026, seule l'inflation d'ensemble remonte, à 3,8&nbsp;% en septembre ; les deux autres restent entre 2 et 2,6&nbsp;%." width="1125">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-inflation-diffusion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Inflation de la zone euro, ensemble des prix et prix hors énergie, de janvier 2021 à septembre 2026 (variation sur un an de l’IPCH, chaque mois). « Hors énergie et alimentation » retire aussi l’alimentation, l’alcool et le tabac. Lecture : si les courbes « hors énergie » montent, le choc d’énergie s’est diffusé au reste des prix ; c’est le cas en 2022-2023, pas en 2026. Source : Eurostat, jeu de données prc_hicp_minr, consulté le 21/10/2026.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>La <a href="#fig-inflation-diffusion" class="quarto-xref">Figure&nbsp;6</a> montre cette diffusion. L’inflation d’ensemble culmine en octobre 2022 (10,6&nbsp;%) ; hors énergie et alimentation, elle culmine cinq mois plus tard, à <strong>5,7&nbsp;%</strong> en mars 2023 : le choc a gagné le reste des prix. En 2026, la courbe d’ensemble remonte seule ; hors énergie et alimentation, l’inflation reste entre 2,2&nbsp;% et 2,6&nbsp;% de janvier à septembre (Eurostat).</p>
+<p><strong>La BCE de 2026 agit plus tôt.</strong> La dépêche AFP du 11/06/2026 rappelle que sa réaction de 2022 avait été « jugée tardive » (<em>La Libre</em>). Agir tôt et peu vise les anticipations (étape 5 de la transmission) : montrer que la cible de 2&nbsp;% tient avant que les salaires ne s’ajustent.</p>
+<p><strong>Elle reste prudente.</strong> Le 10/09/2026, la BCE prévoit une inflation de 3,0&nbsp;% en 2026, 2,5&nbsp;% en 2027 et 2,1&nbsp;% en 2028, pour une croissance de 0,9&nbsp;%, 1,4&nbsp;% et 1,5&nbsp;% ; elle décide « réunion par réunion » et ne s’engage sur aucune trajectoire de taux (BCE, 10/09/2026, traduction du cours). Elle arbitre ainsi entre les deux risques de la <a href="#fig-transmission" class="quarto-xref">Figure&nbsp;4</a> : plus d’inflation si elle attend, moins d’activité si elle monte fort.</p>
+<p><strong>L’écart entre la France et l’Allemagne s’est refermé.</strong> En octobre 2022, l’inflation (IPCH) atteint 11,6&nbsp;% en Allemagne contre 7,1&nbsp;% en France (Eurostat). En France, le « bouclier tarifaire » a divisé par deux l’effet de l’énergie : de mi-2021 à mi-2022, l’inflation est de 5,3&nbsp;%, contre 8,4&nbsp;% sans bouclier (Insee Analyses n°&nbsp;75, 01/09/2022). En septembre 2026, l’écart a disparu : 3,4&nbsp;% en France, 3,3&nbsp;% en Allemagne (Eurostat, 16/10/2026).</p>
+</section>
+</section>
+<section id="effets-de-répartition" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</h2>
+<section id="les-ménages-modestes-subissent-linflation-et-profitent-peu-et-tard-de-la-hausse-des-taux" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="les-ménages-modestes-subissent-linflation-et-profitent-peu-et-tard-de-la-hausse-des-taux"><span class="header-section-number">4.1</span> Les ménages modestes subissent l’inflation et profitent peu, et tard, de la hausse des taux</h3>
+<p><strong>Par revenu.</strong> L’énergie pèse plus lourd pour les ménages modestes : même avec le bouclier, entre mi-2021 et mi-2022, elle ajoute 3,3 points d’inflation aux 10&nbsp;% de ménages les plus modestes, contre 2,7 points aux 10&nbsp;% les plus aisés (Insee Analyses n°&nbsp;75). La hausse des taux, elle, rémunère mieux l’épargne de ceux qui en ont. Selon M. Picault et A. Burietz, les 30&nbsp;% de ménages les moins dotés possèdent moins de 40&nbsp;000&nbsp;€ de patrimoine, presque uniquement en livrets d’épargne réglementée (<em>The Conversation</em>, 04/10/2026). Or leur taux est fixé par l’État, et il ne suit les taux de la BCE qu’en partie et avec retard : 1,7&nbsp;% pour le livret A depuis le 01/08/2026 (Service-public.fr), soit un taux réel d’environ 1,7&nbsp;−&nbsp;3,1&nbsp;=&nbsp;−1,4&nbsp;% avec l’inflation française de septembre 2026 (IPC, Insee).</p>
+<p><strong>Emprunteurs, prêteurs et générations.</strong> La relation de Fisher dit qui gagne quand l’inflation surprend : l’emprunteur à taux fixe rembourse en euros qui valent moins, son prêteur perd. Quand la BCE relève ses taux, ce sont les <strong>nouveaux</strong> emprunteurs qui paient : le taux d’emprunt des entreprises françaises passe de 1,08&nbsp;% à 4,42&nbsp;% entre juillet 2021 et juillet 2023 (Picault et Burietz, <em>The Conversation</em>, 04/10/2026). Le mécanisme touche les générations différemment : un jeune ménage qui emprunte pour acheter un premier logement paie le nouveau taux ; un ménage qui a fini de rembourser et place son épargne en profite, tant que l’inflation ne dépasse pas ce taux.</p>
+</section>
+<section id="un-seul-taux-pour-vingt-et-un-pays" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="un-seul-taux-pour-vingt-et-un-pays"><span class="header-section-number">4.2</span> Un seul taux pour vingt et un pays</h3>
+<p><strong>Par territoire.</strong> Depuis l’entrée de la Bulgarie le 01/01/2026, la zone euro compte 21 pays (Eurostat), et la BCE fixe un taux unique pour tous. Or l’inflation diffère. En septembre 2026, avec un taux de dépôt de 2,50&nbsp;%, le taux réel ex post vaut environ 2,50 − 5,0 = <strong>−2,5&nbsp;%</strong> en Espagne, −1,7&nbsp;% en Italie (4,2&nbsp;% d’inflation), −0,9&nbsp;% en France (3,4&nbsp;%) et −0,8&nbsp;% en Allemagne (3,3&nbsp;%) (Eurostat, 16/10/2026). La même décision freine moins les pays où l’inflation est la plus forte : c’est le prix d’une monnaie unique.</p>
+</section>
+</section>
+<section id="la-controverse" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="la-controverse"><span class="header-section-number">5</span> La controverse</h2>
+<section id="fallait-il-relever-les-taux-face-à-un-choc-dénergie" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="fallait-il-relever-les-taux-face-à-un-choc-dénergie"><span class="header-section-number">5.1</span> Fallait-il relever les taux face à un choc d’énergie ?</h3>
+<p><strong>Ce que l’analyse établit (positif).</strong></p>
+<ul>
+<li>Une hausse des taux ne réduit pas le prix de l’énergie : elle agit sur la demande, avec retard, et sur les anticipations. Face à un choc d’offre, elle limite la hausse des prix au prix d’une baisse de l’activité (<a href="#fig-transmission" class="quarto-xref">Figure&nbsp;4</a>).</li>
+<li>En 2022, le taux réel est resté très négatif pendant plus d’un an et l’inflation s’est diffusée ; en 2026, l’inflation hors énergie reste proche de 2&nbsp;%.</li>
+</ul>
+<p><strong>Ce qui relève d’un jugement (normatif).</strong> Combien d’activité et d’emplois accepte-t-on de perdre pour ramener l’inflation à 2&nbsp;% un an plus tôt ? Qui doit porter le coût : les emprunteurs, par des taux plus élevés, ou les contribuables, par des aides publiques comme le bouclier tarifaire ? Et faut-il qu’une institution non élue fasse ce choix ?</p>
+<p><strong>Les écoles en présence.</strong></p>
+<ul>
+<li>Dans la tradition <strong>monétariste</strong> de Friedman, l’inflation durable est un phénomène monétaire. La <strong>nouvelle synthèse</strong>, celle de Taylor, y ajoute la crédibilité : la banque centrale doit être crue. Attendre est dangereux : si les anticipations décrochent, il faudra monter les taux beaucoup plus haut. Dans le même esprit, en juin 2026, l’économiste D. Schumacher (KfW, banque publique allemande) juge que la BCE devait « envoyer le signal aux marchés financiers, mais aussi aux entreprises et aux ménages » (<em>La Libre</em>/AFP, 11/06/2026).</li>
+<li>Dans la tradition <strong>keynésienne</strong>, une inflation venue de l’énergie ne se combat pas par la demande : relever les taux ajoute une récession au choc. Mieux vaut des aides budgétaires ciblées, qui protègent les ménages et limitent la diffusion. Dans le même esprit, le même jour, l’économiste É. Dor (IÉSEG, école de commerce) juge que la hausse « risque d’amplifier la contraction de l’activité » (<em>La Libre</em>/AFP, 11/06/2026).</li>
+</ul>
+<p>Les deux écoles admettent le mécanisme de la <a href="#fig-transmission" class="quarto-xref">Figure&nbsp;4</a> ; elles divergent sur le risque de diffusion, le coût d’une récession et le meilleur outil.</p>
+<div class="droit">
+<p>L’objectif principal de la BCE, la <strong>stabilité des prix</strong>, et son <strong>indépendance</strong> sont fixés par le traité sur le fonctionnement de l’Union européenne (articles 127 et 130) : ni la BCE ni les banques centrales nationales ne peuvent « solliciter ni accepter des instructions » des institutions européennes ou des gouvernements, qui s’engagent à ne pas chercher à les influencer (BCE, page « Indépendance »). Les taux sont décidés par le Conseil des gouverneurs (les six membres du directoire et les gouverneurs des banques centrales nationales de la zone euro). Changer ce mandat suppose de réviser les traités : aucun gouvernement ne peut le faire seul.</p>
+</div>
+</section>
+</section>
+<section id="à-retenir" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="à-retenir"><span class="header-section-number">6</span> À retenir</h2>
+<div class="retenir">
+<ul>
+<li>À long terme, une inflation durable suppose que la monnaie augmente plus vite que la production (théorie quantitative, Fisher, Friedman et Schwartz).</li>
+<li>Ce qui guide l’emprunt et l’épargne est le taux réel, à peu près égal au taux nominal moins l’inflation anticipée (relation de Fisher) : r ≈ i − π.</li>
+<li>Pour freiner l’inflation, une banque centrale doit relever son taux plus que l’inflation, pour que le taux réel monte (règle de Taylor).</li>
+<li>La hausse des taux freine la demande, pas l’offre d’énergie : face à un choc d’offre, elle réduit l’inflation au prix d’une activité plus faible.</li>
+<li>En 2022, la BCE a monté ses taux de 4,50 points après la diffusion de l’inflation ; en 2026, elle les a montés de 0,50 point, tôt, en visant les anticipations.</li>
+<li>Choisir entre inflation et activité, et confier ce choix à une banque centrale indépendante, relève d’un jugement normatif.</li>
+</ul>
+</div>
+</section>
+<section id="pour-aller-plus-loin" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</h2>
+<div class="wp-video">
+<iframe src="https://www.youtube-nocookie.com/embed/o2u7Xa57y8A" title="Dessine-moi l'éco : La création monétaire, un taux d'inflation à contrôler" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Dessine-moi l’éco · « La création monétaire, un taux d’inflation à contrôler » · 4 min · 2012 : les exemples datent, le mécanisme reste juste</p>
+</div>
+<div class="wp-video">
+<iframe src="https://www.youtube-nocookie.com/embed/6D9RONzXwds" title="Taux d'intérêt nominal et réel | Banque de France" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Banque de France · « Taux d’intérêt nominal et réel » · 3 min 33 · mis en ligne le 30/01/2023</p>
+</div>
+<ul>
+<li><p>Banque de France, « La transmission de la politique monétaire », 3 min 12, 02/06/2020. <a href="https://www.youtube.com/watch?v=_CKg4Io-e80">Lien</a> <strong>Articles</strong></p></li>
+<li><p><em>The Conversation</em>, M. Picault et A. Burietz, « Quel est l’impact des décisions de la Banque centrale européenne sur les ménages modestes ? », 04/10/2026, mis à jour le 05/10/2026. <a href="https://theconversation.com/quel-est-limpact-des-decisions-de-la-banque-centrale-europeenne-sur-les-menages-modestes-284478">Lien</a></p></li>
+<li><p>AFP, <em>La Libre</em>, « La BCE relève ses taux de 0,25 point face à l’inflation liée à la guerre en Iran », 11/06/2026. <a href="https://www.lalibre.be/economie/2026/06/11/la-bce-releve-ses-taux-de-025-point-face-a-linflation-liee-a-la-guerre-en-iran-QEZSADHVDNBKFHIHL4PXHGVTGM/">Lien</a></p></li>
+<li><p>OFCE, M. Plane, C. Briodeau et P. Madec, « Inflation en hausse, pouvoir d’achat en baisse », 08/04/2026, modifié le 04/08/2026. <a href="https://www.ofce.fr/prev/prev2603/france/menages.html">Lien</a></p></li>
+</ul>
+<p><strong>Sources institutionnelles</strong></p>
+<ul>
+<li>BCE, « Key ECB interest rates » (tableau des taux directeurs), consulté le 21/10/2026. <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html">Lien</a></li>
+<li>BCE, « Décisions de politique monétaire », communiqué du 21/07/2022. <a href="https://www.ecb.europa.eu/press/pr/date/2022/html/ecb.mp220721~53e5bdd317.fr.html">Lien</a></li>
+<li>BCE, « Monetary policy statement », 10/09/2026 (en anglais). <a href="https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html">Lien</a></li>
+<li>BCE, « Déclaration relative à la stratégie de politique monétaire de la BCE » (2021). <a href="https://www.ecb.europa.eu/home/search/review/html/ecb.strategyreview_monpol_strategy_statement.fr.html">Lien</a></li>
+<li>BCE, « Indépendance ». <a href="https://www.ecb.europa.eu/ecb/orga/independence/html/index.fr.html">Lien</a></li>
+<li>BCE, « Meeting calendars of the Governing Council » (calendrier des réunions), consulté le 21/10/2026. <a href="https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html">Lien</a></li>
+<li>Eurostat, « Annual inflation up to 3.8% in the euro area », communiqué du 16/10/2026 (en anglais). <a href="https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-16102026-ap">Lien</a></li>
+<li>Insee, A. Bourgeois et R. Lafrogne-Joussier, « La flambée des prix de l’énergie : un effet sur l’inflation réduit de moitié par le “bouclier tarifaire” », <em>Insee Analyses</em> n°&nbsp;75, 01/09/2022. <a href="https://www.insee.fr/fr/statistiques/6524161">Lien</a></li>
+<li>Insee, « En septembre 2026, les prix à la consommation augmentent de 3,1&nbsp;% sur un an », <em>Informations rapides</em> n°&nbsp;247, 15/10/2026. <a href="https://www.insee.fr/fr/statistiques/9080209">Lien</a></li>
+<li>Insee, « Énergie et matières premières », <em>Note de conjoncture</em>, 24/03/2026. <a href="https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf">Lien</a></li>
+<li>Service-public.fr, « Livret A », page vérifiée le 01/08/2026. <a href="https://www.service-public.fr/particuliers/vosdroits/F2365">Lien</a></li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Introduction à l’économie 2 · L1 AES et Droit · <a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2 · 2026-2027</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

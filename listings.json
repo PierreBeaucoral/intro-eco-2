@@ -1,0 +1,45 @@
+[
+  {
+    "listing": "/cours.html",
+    "items": [
+      "/cours/cm1.html",
+      "/cours/cm2.html",
+      "/cours/cm3.html",
+      "/cours/cm4.html",
+      "/cours/cm5.html",
+      "/cours/cm6.html",
+      "/cours/cm7.html",
+      "/cours/cm8.html",
+      "/cours/cm9.html",
+      "/cours/cm10.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/cours/cm1.html",
+      "/cours/cm2.html",
+      "/cours/cm3.html",
+      "/cours/cm4.html",
+      "/cours/cm5.html",
+      "/cours/cm6.html",
+      "/cours/cm7.html",
+      "/cours/cm8.html",
+      "/cours/cm9.html",
+      "/cours/cm10.html"
+    ]
+  },
+  {
+    "listing": "/td.html",
+    "items": [
+      "/td/td1.html",
+      "/td/td2.html",
+      "/td/td3.html",
+      "/td/td4.html",
+      "/td/td5.html",
+      "/td/td6.html",
+      "/td/td7.html",
+      "/td/td8.html"
+    ]
+  }
+]

@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Pierre Beaucoral">
+  <title>Introduction à l'économie 2 – Pourquoi des diabétiques ont-ils manqué d’Ozempic (2023-2025) ?</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f8ff5e1e7a9f42b47124dbc496ea69e2.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-kicker="Introduction à l’économie 2 · CM 3" class="quarto-title-block center">
+  <h1 class="title">Pourquoi des diabétiques ont-ils manqué d’Ozempic (2023-2025) ?</h1>
+  <p class="subtitle">CM 3 · Partie I · Marchés, prix et régulations</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> 
+</div>
+        <p class="quarto-title-affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="en-décembre-2023-des-médecins-doivent-cesser-de-démarrer-des-traitements-par-ozempic" class="slide level2">
+<h2>En décembre 2023, des médecins doivent cesser de démarrer des traitements par Ozempic</h2>
+<p>Déc. 2023 : l’ANSM gèle les nouveaux traitements par Ozempic, Victoza, Trulicity. 5 juin 2025 : reprise pour tous</p>
+<p>Cause officielle : « une augmentation importante de la demande mondiale » (ministère de la Santé, 21/05/2024).</p>
+<aside class="notes">
+<p>0 h 00 – 0 h 05. Accroche : qui connaît quelqu’un sous Ozempic ou Wegovy ? Faits arrêtés au 21/10/2026 : la pénurie est terminée.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pourtant-son-prix-nest-pas-fixé-par-un-marché-mais-par-létat" class="slide level2">
+<h2>Pourtant, son prix n’est pas fixé par un marché mais par l’État</h2>
+
+<img data-src="../cours/img/cm3/ozempic-stylo-3ml.jpg" style="width:45.0%" alt="Photographie d'un stylo injecteur bleu clair posé sur un fond de carton gris, avec une étiquette verte portant le nom Ozempic et des caractères chinois." class="r-stretch quarto-figure-center"><p class="caption">Photo : HualinXMN, CC BY-SA 4.0, Wikimedia Commons</p><p>Une boîte d’Ozempic 1 mg : 76,58 € ; remboursement de 30 % (Base de données publique des médicaments, 21/10/2026).</p>
+<aside class="notes">
+<p>0 h 05 – 0 h 09. Un stylo, un seul laboratoire pour le monde entier. Question : sur un marché ordinaire, que ferait le prix ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trois-outils-expliquent-pourquoi-le-prix-na-pas-réglé-la-pénurie" class="slide level2">
+<h2>Trois outils expliquent pourquoi le prix n’a pas réglé la pénurie</h2>
+<ol type="1">
+<li>Le <strong>prix administré</strong></li>
+<li>Le <strong>rationnement hors prix</strong></li>
+<li>La <strong>rigidité de l’offre</strong></li>
+</ol>
+<aside class="notes">
+<p>0 h 09 – 0 h 12. Question de séance : pourquoi des diabétiques ont-ils manqué d’Ozempic, et pourquoi le prix n’a-t-il pas réglé la pénurie ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rappel-cinq-notions-suffisent-pour-la-séance" class="slide level2">
+<h2>Rappel : cinq notions suffisent pour la séance</h2>
+<div class="rappel">
+<ul>
+<li><strong>Équilibre</strong> : à P*, offre et demande égales (Q*)</li>
+<li><strong>Déplacer</strong> une courbe : D → D′</li>
+<li><strong>Élasticité</strong> e : ΔQ (%) ÷ ΔP (%) ; |e| &lt; 1, demande peu élastique</li>
+<li><strong>Brevet</strong> : droit exclusif pendant 20 ans</li>
+<li><strong>Asymétrie d’information</strong></li>
+</ul>
+</div>
+<aside class="notes">
+<p>0 h 12 – 0 h 17. Lire la page, ne pas redévelopper. Question : une hausse de prix du bien déplace-t-elle la demande ou glisse-t-elle dessus ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-prix-fixé-par-létat-ne-sajuste-pas-à-la-demande" class="slide level2">
+<h2>Un prix fixé par l’État ne s’ajuste pas à la demande</h2>
+<div id="def-prix-administre" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (Prix administré)</strong></span> Prix fixé par une autorité publique, et non par l’offre et la demande ; il ne change que par une nouvelle décision. En France : « fixé par le CEPS » (M. Coris et B. Bégaud, <em>The Conversation</em>, 02/06/2024).</p>
+</div>
+<aside class="notes">
+<p>0 h 17 – 0 h 21. Un prix administré n’est pas forcément trop bas : tant que la demande est stable, il peut servir tous les patients.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-choc-de-demande-déplace-la-courbe-vers-la-droite" class="slide level2">
+<h2>Un choc de demande déplace la courbe vers la droite</h2>
+<div id="def-choc-demande" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 2 (Choc de demande)</strong></span> La quantité voulue <em>à chaque prix</em> change : D → D′. Choc <strong>positif</strong> : vers la droite.</p>
+</div>
+<p>Pour Ozempic : demande mondiale en hausse, dont des non-diabétiques qui veulent maigrir, un <strong>mésusage</strong> (ANSM).</p>
+<aside class="notes">
+<p>0 h 21 – 0 h 25. Mésusage : usage hors des indications autorisées.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="il-y-a-pénurie-quand-au-prix-en-vigueur-la-demande-dépasse-loffre" class="slide level2">
+<h2>Il y a pénurie quand, au prix en vigueur, la demande dépasse l’offre</h2>
+<div id="def-penurie" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 3 (Pénurie)</strong></span> Au prix en vigueur, quantité demandée &gt; quantité offerte. Marché libre : le prix monte, l’écart se referme. Prix administré : l’écart demeure.</p>
+</div>
+<aside class="notes">
+<p>0 h 25 – 0 h 29. Écart = quantité demandée − quantité offerte.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quand-le-prix-ne-départage-plus-une-autre-règle-décide-qui-est-servi" class="slide level2">
+<h2>Quand le prix ne départage plus, une autre règle décide qui est servi</h2>
+<div id="def-rationnement" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 4 (Rationnement hors prix)</strong></span> &nbsp;</p>
+<ul>
+<li><strong>File d’attente</strong> : premier arrivé, premier servi</li>
+<li><strong>Critère</strong> : une condition, par exemple médicale</li>
+<li><strong>Quota</strong> : quantité limitée par vendeur ou acheteur</li>
+</ul>
+</div>
+<aside class="notes">
+<p>0 h 29 – 0 h 34. L’ANSM combine critère et quota : « distribution fractionnée (contingentement quantitatif) » en octobre 2024 (ANSM, 03/10/2024).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-court-terme-loffre-dun-médicament-est-rigide" class="slide level2">
+<h2>À court terme, l’offre d’un médicament est rigide</h2>
+<div id="def-offre-rigide" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 5 (Offre rigide)</strong></span> La quantité offerte varie très peu avec le prix. Produire plus exige des usines et des autorisations, qui prennent des mois ou des années. À long terme, l’offre devient plus élastique.</p>
+</div>
+<aside class="notes">
+<p>0 h 34 – 0 h 38. Question : pourquoi payer plus cher ne fait-il pas apparaître des stylos demain ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="arrow-la-santé-nest-pas-un-marché-comme-les-autres" class="slide level2">
+<h2>Arrow : la santé n’est pas un marché comme les autres</h2>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img data-src="../cours/img/portraits/arrow-kenneth.jpg" alt="Portrait photographique de Kenneth J. Arrow en 1996, homme âgé aux cheveux blancs, en buste."> <span class="wp-credit">1996 · Linda A. Cicero, CC BY 3.0, Wikimedia Commons</span></p>
+</div>
+<p><strong>Kenneth J. Arrow</strong> (1963), « Uncertainty and the Welfare Economics of Medical Care » · école néoclassique. Maladie imprévisible, patient moins informé que son médecin : la santé repose sur l’assurance, la confiance et des règles collectives.</p>
+</div>
+<aside class="notes">
+<p>0 h 38 – 0 h 46. Trois traits. HAS : service médical rendu « modéré » (27/08/2025), remboursement à 30 % ; « important » en cas de maladie rénale chronique (16/09/2026), taux inchangé.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-choc-de-demande-sous-un-prix-fixé-crée-une-pénurie" class="slide level2">
+<h2>Un choc de demande sous un prix fixé crée une pénurie</h2>
+
+<img data-src="cm3_files/figure-revealjs/unnamed-chunk-2-1.png" alt="Graphique offre-demande. La demande D est une droite décroissante bleue, l'offre O une droite croissante ambre très raide. Une seconde demande D prime, en tirets bleus, est décalée vers la droite. L'équilibre initial E se situe au prix P étoile, marqué prix fixé. Au prix P étoile, un trait rouge marqué pénurie va de l'offre jusqu'à D prime. Plus haut, un point creux E prime, marqué prix libre, se trouve à l'intersection de l'offre et de D prime." width="1600" class="r-stretch"><aside class="notes">
+<p>0 h 46 – 0 h 55. Suivre la flèche D → D′. Le prix reste à P* : la pénurie est le trait rouge. E′ : ce qu’un prix libre donnerait. Graphique théorique.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="chaque-étape-de-la-chaîne-explique-la-suivante" class="slide level2">
+<h2>Chaque étape de la chaîne explique la suivante</h2>
+<ol type="1">
+<li><strong>Choc</strong> : D → D′ à chaque prix</li>
+<li><strong>Prix fixé</strong> : il ne signale plus la rareté</li>
+<li><strong>Offre rigide</strong> : quantité offerte proche de Q*</li>
+<li><strong>Pénurie</strong>, donc rationnement</li>
+<li><strong>Règle médicale</strong> : le dossier décide, pas le revenu</li>
+</ol>
+<aside class="notes">
+<p>0 h 55 – 1 h 01. Tableau de la page. Demander à l’amphi de refaire la chaîne sans le support.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pénurie-nest-pas-rareté" class="slide level2">
+<h2>Pénurie n’est pas rareté</h2>
+<div class="piege">
+<p>Tout médicament est rare. Il y a pénurie seulement quand, <em>au prix fixé</em>, la demande dépasse l’offre, comme entre fin 2023 et juin 2025. Seule la pénurie oblige à rationner autrement que par le prix.</p>
+</div>
+<aside class="notes">
+<p>1 h 01 – 1 h 05. Erreur très fréquente en copie.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exemple-à-75-loffre-et-la-demande-sont-égales-à-100" class="slide level2">
+<h2>Exemple : à 75 €, l’offre et la demande sont égales à 100</h2>
+<p>Marché fictif : Q en milliers de boîtes par mois, P en euros.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>P (€)</th>
+<th>75</th>
+<th>125</th>
+<th>175</th>
+<th>225</th>
+<th>275</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D</td>
+<td>100</td>
+<td>90</td>
+<td>80</td>
+<td>70</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td>D′</td>
+<td>160</td>
+<td>150</td>
+<td>140</td>
+<td>130</td>
+<td>120</td>
+</tr>
+<tr class="odd">
+<td>O</td>
+<td>100</td>
+<td>105</td>
+<td>110</td>
+<td>115</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p>P* = 75 €, Q* = 100. e = −10 ÷ 66,7 ≈ <strong>−0,15</strong>.</p>
+<aside class="notes">
+<p>1 h 05 – 1 h 11. De 75 à 125 € : prix +66,7 %, quantité −10 %. Prix fixé de 75 €, arrondi des 76,58 € réels.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="après-le-choc-il-manque-60-000-boîtes-au-prix-fixé" class="slide level2">
+<h2>Après le choc, il manque 60 000 boîtes au prix fixé</h2>
+<ul>
+<li>D′ = D + 60 à chaque prix</li>
+<li>À 75 € : on demande 160, on offre 100</li>
+<li>Il manque <strong>60</strong> milliers de boîtes, soit 60 ÷ 160 = <strong>37,5 %</strong> des demandes</li>
+</ul>
+<aside class="notes">
+<p>1 h 11 – 1 h 17. Calcul à faire à la main avec l’amphi.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-prix-libre-loffre-rigide-fait-surtout-monter-le-prix" class="slide level2">
+<h2>À prix libre, l’offre rigide fait surtout monter le prix</h2>
+<ul>
+<li>À 275 € : 120 demandés, 120 offerts</li>
+<li>Prix : <strong>+267 %</strong> ; quantité : <strong>+20 %</strong></li>
+<li>Sur 60 000 boîtes manquantes, 20 000 produites en plus ; 40 000 patients renoncent</li>
+<li>Recette : 7,5 → 33 millions d’euros par mois</li>
+</ul>
+<aside class="notes">
+<p>1 h 17 – 1 h 24. 100 000 × 75 € = 7,5 M€ ; 120 000 × 275 € = 33 M€. La hausse paie surtout la pénurie, pas un effort de production.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="avec-une-offre-rigide-libérer-le-prix-change-surtout-qui-est-servi" class="slide level2">
+<h2>Avec une offre rigide, libérer le prix change surtout qui est servi</h2>
+
+<img data-src="cm3_files/figure-revealjs/unnamed-chunk-3-1.png" alt="Deux graphiques côte à côte, avec la même demande D, la même demande déplacée D prime en tirets et le même prix fixé de 75 euros. Dans chacun, un trait rouge horizontal à 75 euros va de 100 à 160 milliers de boîtes. À gauche, panneau A, l'offre est très raide : elle coupe D prime au point creux de 275 euros et 120 milliers de boîtes. À droite, panneau B, l'offre est plus plate : elle coupe D prime au point creux de 150 euros et 145 milliers de boîtes." width="1600" class="r-stretch"><p>À 75 €, les deux offres valent 100 : à prix fixé, seul le déplacement d’une courbe (O → O′, ou une demande qui recule) referme la pénurie.</p>
+<aside class="notes">
+<p>1 h 24 – 1 h 30. Panneau B, long terme : prix +100 %, quantité +45 %, 15 000 demandes abandonnées seulement. Exemple fictif.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pause" class="slide level2">
+<h2>Pause</h2>
+<p>15 minutes.</p>
+<aside class="notes">
+<p>1 h 30 – 1 h 45. Pause.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="même-pénurie-mais-la-règle-de-rationnement-change-les-perdants" class="slide level2">
+<h2>Même pénurie, mais la règle de rationnement change les perdants</h2>
+<p>Exemple fictif : 100 000 boîtes pour 160 000 demandes.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Groupe</th>
+<th>Demandes (milliers)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diabétiques déjà traités</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td>Nouveaux, maladie des artères</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>Autres nouveaux diabétiques</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>Pour maigrir</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p>1 h 45 – 1 h 52. Une boîte par patient. Chiffres fictifs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="la-file-dattente-interrompt-30-000-traitements-le-critère-médical-aucun" class="slide level2">
+<h2>La file d’attente interrompt 30 000 traitements, le critère médical aucun</h2>
+<ul>
+<li><strong>File</strong> : 62,5 % de chances d’être servi ; 30 000 traitements interrompus</li>
+<li><strong>Critère de l’ANSM</strong> : 80 000 + 20 000 = 100 000, aucun traitement interrompu</li>
+<li><strong>Prix libre</strong> : 120 000 boîtes à 275 €, sans garantie que ce soient les plus malades</li>
+</ul>
+<aside class="notes">
+<p>1 h 52 – 2 h 00. Piège : « le critère a supprimé la pénurie » est faux. Il manque toujours 60 000 boîtes : la règle décide seulement qui subit la pénurie. Le quota par pharmacie doit être combiné avec une autre règle.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="entre-2023-et-2025-létat-a-rationné-puis-freiné-la-demande-remboursée" class="slide level2">
+<h2>Entre 2023 et 2025, l’État a rationné puis freiné la demande remboursée</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Décision</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Déc. 2023</td>
+<td>Ne plus commencer de traitement</td>
+</tr>
+<tr class="even">
+<td>14/03/2024</td>
+<td>Réservé aux diabétiques de type 2 avec maladie des artères</td>
+</tr>
+<tr class="odd">
+<td>01/02/2025</td>
+<td>Formulaire du médecin pour le remboursement</td>
+</tr>
+<tr class="even">
+<td>05/06/2025</td>
+<td>Ozempic et Victoza de nouveau disponibles</td>
+</tr>
+</tbody>
+</table>
+<p>Sources : ANSM ; Vidal, 16/01/2025</p>
+<aside class="notes">
+<p>2 h 00 – 2 h 06. Sources : ANSM, Vidal 16/01/2025. Septembre-octobre 2024 : reprise progressive sous contingentement. En juin 2025 : « la fin des tensions d’approvisionnement », sans que le prix ait servi à les résorber.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-boîtes-remboursées-cessent-de-croître-en-2024-année-du-rationnement" class="slide level2">
+<h2>Les boîtes remboursées cessent de croître en 2024, année du rationnement</h2>
+
+<img data-src="cm3_files/figure-revealjs/unnamed-chunk-4-1.png" alt="Diagramme en barres empilées, une barre par année de 2020 à 2024. Le total passe de 4,29 millions de boîtes en 2020 à 5,12 en 2021, 6,25 en 2022, 7,48 en 2023 et 7,49 en 2024. La part bleue d'Ozempic grossit chaque année. La part ambre de Trulicity augmente jusqu'en 2023 puis diminue en 2024. La part rouge de Victoza diminue chaque année." width="1600" class="r-stretch"><p>Compatible avec une quantité bloquée par l’offre, sans le prouver : une baisse de la demande donnerait le même chiffre. Source : Assurance Maladie, Medic’AM (21/10/2026).</p>
+<aside class="notes">
+<p>2 h 06 – 2 h 13. +19,7 % en 2023, +0,1 % en 2024. Ozempic +24,6 %, Trulicity −7,7 %, Victoza −49,8 %. On observe la quantité vendue, la plus petite des deux. Les boîtes non remboursées n’y figurent pas.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-prix-dozempic-na-pas-répondu-au-choc-de-demande" class="slide level2">
+<h2>Le prix d’Ozempic n’a pas répondu au choc de demande</h2>
+
+<img data-src="cm3_files/figure-revealjs/unnamed-chunk-5-1.png" alt="Graphique à points reliés. En abscisse, les boîtes d'Ozempic remboursées, en millions, de 0 à 4 ; en ordonnée, le prix moyen d'une boîte, en euros, de 0 à 100. Cinq points bleus, de 2020 à 2024, vont de gauche à droite à une hauteur proche de 80 euros, avec une légère baisse à 77,8 euros en 2024 : la ligne est presque horizontale." width="1600" class="r-stretch"><p>Boîtes ×4,9 ; prix moyen de 80,0 € à 77,8 € (−2,7 %). Source : Assurance Maladie, Medic’AM (21/10/2026).</p>
+<aside class="notes">
+<p>2 h 13 – 2 h 20. Les points ne tracent ni une offre ni une demande : ce sont les couples quantité-prix observés chaque année.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ozempic-sécarte-du-prix-plafond-sur-quatre-points" class="slide level2">
+<h2>Ozempic s’écarte du prix plafond sur quatre points</h2>
+<ol type="1">
+<li>Un prix <strong>négocié</strong> avec un seul fabricant, Novo Nordisk</li>
+<li>Une offre <strong>mondiale et rigide</strong></li>
+<li>Une demande qui passe par le <strong>médecin et l’assurance</strong></li>
+<li>Pour l’État, un <strong>choc de demande</strong> mondiale</li>
+</ol>
+<aside class="notes">
+<p>2 h 20 – 2 h 24. Brevet : un seul fabricant. Un prix français plus élevé aurait peut-être attiré des stylos aux dépens d’autres pays : déduction du modèle, non fait observé.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-modèle-éclaire-le-mécanisme-pas-la-cause" class="slide level2">
+<h2>Le modèle éclaire le mécanisme, pas la cause</h2>
+<p>Il explique <strong>pourquoi</strong> une pénurie dure à prix fixe et pourquoi il faut alors rationner autrement.</p>
+<p>Il ne permet pas de conclure qu’un prix plus élevé aurait évité la pénurie d’Ozempic.</p>
+<aside class="notes">
+<p>2 h 24 – 2 h 27. Le ministère invoque un choc de demande mondiale ; le député auteur de la question écrite voyait un médicament « vendu en France à un prix d’achat très bas » (JO du 20/02/2024) (sa question visait surtout le Trulicity).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-vous-refaire-le-raisonnement-sur-wegovy-et-mounjaro-en-2026" class="slide level2">
+<h2>À vous : refaire le raisonnement sur Wegovy et Mounjaro en 2026</h2>
+<p>Depuis le 15 juin 2026, remboursés à 65 % dans l’obésité sévère (Caducée.net, 29/05/2026).</p>
+<ol type="1">
+<li>Le <strong>choc</strong> : le remboursement baisse le prix payé ; la demande, en fonction du prix public, se déplace-t-elle vers la droite ?</li>
+<li>L’<strong>offre</strong> : peut-elle suivre ?</li>
+<li>Le <strong>rationnement</strong> : quelle règle ?</li>
+</ol>
+<aside class="notes">
+<p>2 h 27 – 2 h 31. IMC d’au moins 40, ou d’au moins 35 avec maladie associée. Population visée : environ un million de personnes (Vidal, 28/05/2026). Laisser 2 minutes de réflexion.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-critère-médical-protège-les-patients-déjà-traités-pas-les-nouveaux" class="slide level2">
+<h2>Le critère médical protège les patients déjà traités, pas les nouveaux</h2>
+<ul>
+<li><strong>Santé</strong> : les nouveaux patients sans maladie des artères perdent</li>
+<li><strong>Revenu</strong> : à 275 €, un patient modeste renonce avant un patient aisé</li>
+<li><strong>Territoire, génération</strong> : effet non chiffré par les sources de la séance</li>
+<li><strong>Fabricant</strong> : il ne profite pas de la rente de pénurie</li>
+</ul>
+<aside class="notes">
+<p>2 h 31 – 2 h 37. Le reste à charge dépend de la complémentaire santé. Contingentement : un patient peut trouver son traitement dans une officine et pas dans une autre. Par déduction, non chiffrée : le critère protège les patients installés depuis plus longtemps dans la maladie.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-court-terme-un-prix-plus-élevé-fait-peu-produire" class="slide level2">
+<h2>À court terme, un prix plus élevé fait peu produire</h2>
+<ul>
+<li><strong>Court terme</strong>, offre rigide : un prix plus élevé rationne surtout par la capacité à payer</li>
+<li><strong>Long terme</strong>, médicaments anciens : « la politique du prix toujours plus bas prévaut » (Coris et Bégaud, 02/06/2024)</li>
+</ul>
+<aside class="notes">
+<p>2 h 37 – 2 h 42. L’article ne porte pas sur Ozempic, médicament récent. Elle pousse à produire dans des pays à bas coûts, ce qui « accentue la dépendance et le risque de pénuries ».</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-prix-ne-suffit-pas-et-la-responsabilité-du-fabricant-est-discutée" class="slide level2">
+<h2>Le prix ne suffit pas, et la responsabilité du fabricant est discutée</h2>
+<ul>
+<li>Suisse et Allemagne, prix supérieurs, « sont aussi touchés » (Public Sénat, 06/07/2023)</li>
+<li>Test-Achats : « principalement la faute » de Novo Nordisk (14/11/2023)</li>
+</ul>
+<aside class="notes">
+<p>2 h 42 – 2 h 47. Industriels : prix français trop faibles sur les médicaments anciens ; la rapporteure du Sénat juge l’analyse trop courte. Le Sénat appelle à un « pilotage public », tout en envisageant des hausses de prix « sous certaines conditions ».</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trois-jugements-restent-ouverts-qui-servir-combien-payer-quelle-liberté" class="slide level2">
+<h2>Trois jugements restent ouverts : qui servir, combien payer, quelle liberté</h2>
+<ul>
+<li><strong>Qui servir d’abord ?</strong> Les plus malades, les premiers arrivés, ou ceux qui paient le plus ?</li>
+<li><strong>Combien payer ?</strong> Coût pour l’Assurance maladie, effet incertain à court terme</li>
+<li><strong>Quelle liberté</strong> pour le médecin ?</li>
+</ul>
+<aside class="notes">
+<p>2 h 47 – 2 h 52. Normatif : l’analyse ne tranche pas. Vote à main levée : qui servir d’abord ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-écoles-divergent-sur-le-poids-de-loffre-de-demain-et-de-laccès-aux-soins" class="slide level2">
+<h2>Les écoles divergent sur le poids de l’offre de demain et de l’accès aux soins</h2>
+<ul>
+<li><strong>Approche par le marché</strong> : le prix est un signal ; un prix bas prépare les pénuries de demain</li>
+<li><strong>Économie de la santé</strong> (Arrow) : des priorités médicales collectives servent mieux qu’un prix libre</li>
+</ul>
+<aside class="notes">
+<p>2 h 52 – 2 h 56. Les deux camps partent du même cadre néoclassique. Le débat porte moins sur le mécanisme, admis par tous, que sur le poids donné à l’offre de demain et à l’accès de chacun aux soins aujourd’hui.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-droit-agit-ici-sur-la-demande-remboursée-non-sur-le-prix" class="slide level2">
+<h2>Le droit agit ici sur la demande remboursée, non sur le prix</h2>
+<div class="droit">
+<p>Code de la sécurité sociale, art. L162-19-1 : remboursement « subordonné au renseignement par le prescripteur d’éléments relatifs aux circonstances et indications ». Appliqué à Ozempic depuis le 1<sup>er</sup> février 2025 (Vidal, 16/01/2025).</p>
+</div>
+<aside class="notes">
+<p>2 h 56 – 2 h 58. Loi de financement de la sécurité sociale pour 2024, art. 73 ; décret n° 2024-968 du 30 octobre 2024.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-prix-fixé-ne-règle-pas-une-pénurie-il-faut-choisir-qui-servir" class="slide level2">
+<h2>Un prix fixé ne règle pas une pénurie : il faut choisir qui servir</h2>
+<div class="retenir">
+<ul>
+<li>Prix administré : si D → D′, la pénurie demeure</li>
+<li>Sans prix, il faut rationner : file, critère ou quota</li>
+<li>La règle décide <strong>qui</strong> subit la pénurie</li>
+<li>À prix fixé, seul le déplacement d’une courbe (O → O′, ou une demande qui recule) referme la pénurie</li>
+<li>La santé n’est pas un marché ordinaire (Arrow, 1963)</li>
+</ul>
+</div>
+<aside class="notes">
+<p>2 h 58 – 3 h 00. Revenir au pari du début : le prix pouvait-il régler la pénurie ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-plan-de-dissertation-ce-que-dit-loutil-ce-quil-ne-tranche-pas" class="slide level2">
+<h2>Le plan de dissertation : ce que dit l’outil, ce qu’il ne tranche pas</h2>
+<p><strong>I. Ce que dit l’outil</strong> : D → D′ au prix fixé donne une pénurie, qu’il faut rationner.</p>
+<p><strong>II. Ce qu’il ne tranche pas</strong> : un prix plus élevé aurait-il évité la pénurie ? Qui servir d’abord ?</p>
+<aside class="notes">
+<p>3 h 00. Fin de séance. TD 3 : prix bloqués.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>CM 3 · Ozempic</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

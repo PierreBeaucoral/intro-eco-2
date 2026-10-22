@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pierre Beaucoral">
+<meta name="description" content="Élasticité-prix, incidence d’une taxe, addiction rationnelle.">
+
+<title>Augmenter le prix du tabac fait-il arrêter de fumer ? – Introduction à l’économie 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ce2a859f655fb0fc50a4bad14b2f71a0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-981ce10d1f6a1c0f379cc73fef8bdf9b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+
+
+</head>
+
+<body class="nav-fixed wp-cours quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo light-content">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Introduction à l’économie 2</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../programme.html"> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cours.html"> 
+<span class="menu-text">Cours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../td.html"> 
+<span class="menu-text">TD</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../methodo/index.html"> 
+<span class="menu-text">Méthodo</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#la-question" id="toc-la-question" class="nav-link active" data-scroll-target="#la-question"><span class="header-section-number">1</span> La question</a></li>
+  <li><a href="#ce-que-dit-la-théorie" id="toc-ce-que-dit-la-théorie" class="nav-link" data-scroll-target="#ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</a></li>
+  <li><a href="#les-outils" id="toc-les-outils" class="nav-link" data-scroll-target="#les-outils"><span class="header-section-number">3</span> Les outils</a></li>
+  <li><a href="#effets-de-répartition" id="toc-effets-de-répartition" class="nav-link" data-scroll-target="#effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</a></li>
+  <li><a href="#la-controverse" id="toc-la-controverse" class="nav-link" data-scroll-target="#la-controverse"><span class="header-section-number">5</span> La controverse</a></li>
+  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir"><span class="header-section-number">6</span> À retenir</a></li>
+  <li><a href="#pour-aller-plus-loin" id="toc-pour-aller-plus-loin" class="nav-link" data-scroll-target="#pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="cm2.pdf"><i class="bi bi-file-pdf"></i>Télécharger le PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Augmenter le prix du tabac fait-il arrêter de fumer ?</h1>
+<p class="subtitle lead">CM 2 · Partie I · Marchés, prix et régulations</p>
+</div>
+
+<div>
+  <div class="description">
+    Élasticité-prix, incidence d’une taxe, addiction rationnelle.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Auteur</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="rappel">
+<ul>
+<li><strong>Offre et demande</strong> : la quantité demandée baisse quand le prix monte, la quantité offerte augmente ; à l’équilibre (P*, Q*), elles sont égales. Une variation du prix fait glisser <em>le long</em> des courbes ; une autre cause (coût, goûts, taxe) <em>déplace</em> une courbe : O → O′.</li>
+<li><strong>Élasticité-prix de la demande</strong> : e = variation de Q (en %) ÷ variation de P (en %). Elle est négative. Si |e| est inférieur à 1, la demande est <strong>peu élastique</strong>.</li>
+<li><strong>Impôt indirect</strong> : impôt inclus dans le prix d’un bien, versé à l’État par le vendeur. La <strong>TVA</strong> est un pourcentage du prix ; une <strong>accise</strong> frappe un produit précis (tabac, alcool, carburant), par unité ou en pourcentage.</li>
+<li><strong>Externalité</strong> : effet d’un agent sur d’autres, sans compensation par le marché (le tabagisme passif). Une <strong>taxe correctrice</strong>, au sens de Pigou, fait payer ce coût à celui qui le cause.</li>
+<li><strong>Positif et normatif</strong> : l’analyse positive décrit ce qui est ; l’analyse normative dit ce qui devrait être, à partir d’un jugement de valeur.</li>
+</ul>
+</div>
+<section id="la-question" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="la-question"><span class="header-section-number">1</span> La question</h2>
+<p>En février 2026, un paquet type de 20 cigarettes coûte <strong>13,50 €</strong> en France métropolitaine (C. Hill, <em>Impact de l’augmentation des prix sur la consommation de tabac</em>, 2026, tableau 5.2). Le prix moyen d’un paquet était de 3,20 € en 2000 et de 13 € en 2025 (I. Obradovic, <em>The Conversation</em>, 25/07/2026). Au 1<sup>er</sup> novembre 2026, 59 références sur 4 999 changent de prix (37 hausses, 22 baisses) : le Marlboro Red en paquet souple passe de 13,50 € à 14,00 €, le paquet rigide reste à 13,50 € (<em>Bourse Inside</em>, 08/10/2026, d’après l’arrêté d’homologation du 29/09/2026).</p>
+<p>Dans le même temps, la consommation recule. En 2025, le réseau des buralistes a vendu 30 165 tonnes de tabac, contre 32 846 tonnes en 2024, soit <strong>−8,2 %</strong> (OFDT, cité par l’AFP, <em>CB News</em>, 28/05/2026). La part des fumeurs quotidiens chez les 18-75 ans passe d’environ 25 % en 2014 à 18 % en 2024 (Santé publique France, citée par <em>La finance pour tous</em>, 24/07/2026). Le tabac reste pourtant meurtrier : 68 000 décès prématurés lui sont attribués en France en 2023 (<em>ibid.</em>).</p>
+<p><strong>La question de la séance : augmenter le prix du tabac fait-il arrêter de fumer ?</strong> Elle en contient trois.</p>
+<ol type="1">
+<li><strong>De combien</strong> les ventes baissent-elles quand le prix monte ? C’est l’élasticité.</li>
+<li><strong>Qui paie</strong> vraiment la taxe : le fumeur, le fabricant, le buraliste ? C’est l’incidence fiscale.</li>
+<li>Un fumeur dépendant <strong>réagit-il</strong> au prix comme un acheteur ordinaire ? C’est l’économie de l’addiction.</li>
+</ol>
+</section>
+<section id="ce-que-dit-la-théorie" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</h2>
+<section id="lélasticité-mesure-la-force-de-la-réaction-au-prix" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="lélasticité-mesure-la-force-de-la-réaction-au-prix"><span class="header-section-number">2.1</span> L’élasticité mesure la force de la réaction au prix</h3>
+<p>Marshall, qui a fait de l’élasticité l’outil de mesure de la réaction au prix, note qu’elle dépend des substituts et du temps laissé aux acheteurs (1890).</p>
+<div id="def-depense" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (Dépense totale et élasticité)</strong></span> La <strong>dépense totale</strong> des acheteurs est P × Q ; c’est aussi la recette des vendeurs. Quand le prix monte :</p>
+<ul>
+<li>si la demande est <strong>peu élastique</strong> (|e| &lt; 1), la quantité baisse moins vite que le prix ne monte : la dépense <strong>augmente</strong> ;</li>
+<li>si la demande est <strong>élastique</strong> (|e| &gt; 1), la quantité baisse plus vite : la dépense <strong>diminue</strong>.</li>
+</ul>
+<p>On définit de même l’<strong>élasticité de l’offre</strong> : variation de la quantité offerte (en %) ÷ variation du prix (en %). Elle est positive.</p>
+</div>
+<p>Pour le tabac, les estimations sont nettement inférieures à 1 en valeur absolue. Santé publique France retient e ≈ −0,4 pour 2000-2015, et des études récentes donnent entre −0,3 et −0,4 (<em>La finance pour tous</em>, 24/07/2026). Sur 1950-2025, le rapport moyen entre la variation des ventes et celle du prix vaut environ −0,50 (Hill, 2026, figure 4.2). Retenons une fourchette : <strong>e est compris entre −0,5 et −0,3</strong>. Une hausse de 10 % du prix fait baisser les ventes de 3 à 5 %.</p>
+</section>
+<section id="ce-nest-pas-celui-qui-verse-la-taxe-qui-la-paie" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="ce-nest-pas-celui-qui-verse-la-taxe-qui-la-paie"><span class="header-section-number">2.2</span> Ce n’est pas celui qui verse la taxe qui la paie</h3>
+<p>L’accise sur le tabac est versée à l’État par les vendeurs, en amont du buraliste : celui-ci achète des paquets taxes comprises. Mais un vendeur peut répercuter la taxe dans le prix. La vraie question est donc : qui supporte la charge ?</p>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/jenkin-fleeming.jpg" class="img-fluid" alt="Portrait de Fleeming Jenkin, ingénieur et économiste britannique, en buste."> <span class="wp-credit">Avant 1885 · Robert Louis Stevenson, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Fleeming Jenkin</strong> (1872), « On the Principles which Regulate the Incidence of Taxes », <em>Proceedings of the Royal Society of Edinburgh</em> · précurseur de l’analyse néoclassique. Jenkin est l’un des premiers à tracer des courbes d’offre et de demande. Il s’en sert pour montrer que la charge d’une taxe dépend de la forme des deux courbes, et non de celui qui la verse.</p>
+</div>
+<div id="def-incidence" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 2 (Incidence fiscale)</strong></span> L’<strong>incidence fiscale</strong> est la répartition réelle de la charge d’une taxe entre acheteurs et vendeurs. L’incidence <strong>légale</strong> dit qui verse la taxe à l’État. L’incidence <strong>économique</strong> dit qui la supporte : les acheteurs, par la hausse du prix qu’ils paient ; les vendeurs, par la baisse du prix qu’ils gardent. Elle dépend des élasticités de l’offre et de la demande, et non de celui qui verse la taxe.</p>
+</div>
+<p>Le principe se résume en une phrase : <strong>la charge retombe sur le côté du marché le moins élastique</strong>, celui qui peut le moins se dérober. Un fumeur dépendant a peu de substituts à court terme ; il est donc en mauvaise position pour échapper à la taxe.</p>
+</section>
+<section id="un-fumeur-qui-anticipe-laddiction-rationnelle" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="un-fumeur-qui-anticipe-laddiction-rationnelle"><span class="header-section-number">2.3</span> Un fumeur qui anticipe : l’addiction rationnelle</h3>
+<p>On pourrait croire qu’un produit addictif échappe à la logique du prix. Deux théories orthodoxes disent le contraire, mais n’en tirent pas les mêmes conclusions.</p>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/becker-gary.jpg" class="img-fluid" alt="Portrait photographique de Gary S. Becker en 2004, en buste."> <span class="wp-credit">2004 · National Cancer Institute, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Gary S. Becker et Kevin M. Murphy</strong> (1988), « A Theory of Rational Addiction », <em>Journal of Political Economy</em>, 96(4), 675-700 · école de Chicago. Fumer aujourd’hui augmente l’envie de fumer demain : c’est ce qui définit l’addiction. Un fumeur rationnel le sait et tient compte des prix futurs ; une hausse de prix durable et annoncée réduit donc la consommation, un peu tout de suite et davantage à long terme.</p>
+</div>
+<div id="def-addiction" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 3 (Addiction rationnelle)</strong></span> Une consommation est <strong>addictive</strong> quand la quantité consommée aujourd’hui augmente l’envie de consommer demain. Elle est <strong>rationnelle</strong>, au sens de Becker et Murphy, quand le consommateur prend en compte cet effet et les prix futurs dans ses choix. Conséquence : la demande est plus élastique à long terme qu’à court terme.</p>
+</div>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/gruber-jonathan.jpg" class="img-fluid" alt="Portrait photographique de Jonathan Gruber en 2014, en buste."> <span class="wp-credit">2014 · Commission de surveillance de la Chambre des représentants des États-Unis, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Jonathan Gruber et Botond Kőszegi</strong> (2001), « Is Addiction “Rational”? Theory and Evidence », <em>Quarterly Journal of Economics</em>, 116(4), 1261-1303 · économie comportementale. Aux États-Unis, la consommation de cigarettes baisse dès qu’une hausse de taxe est votée, avant même qu’elle s’applique : les fumeurs anticipent bien. Mais beaucoup voudraient arrêter et n’y arrivent pas ; la taxe les aide alors à tenir leurs propres résolutions.</p>
+</div>
+<div id="def-internalite" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 4 (Internalité)</strong></span> Une <strong>internalité</strong> est un coût qu’une personne s’impose à elle-même, dans le futur, sans en tenir compte au moment de choisir : le fumeur qui voulait arrêter et n’y arrive pas. Une externalité pèse sur les autres ; une internalité pèse sur son propre « moi futur ».</p>
+</div>
+<p>La différence entre les deux théories n’est pas dans la prédiction, mais dans la politique. Chez Becker et Murphy, le fumeur choisit en connaissance de cause : une taxe ne se justifie que par le coût imposé aux <strong>autres</strong>. Chez Gruber et Kőszegi, la taxe doit aussi tenir compte de l’internalité ; ils estiment qu’elle devrait être plus élevée d’au moins un dollar par paquet aux États-Unis que dans le modèle de Becker et Murphy (Gruber et Kőszegi, NBER Working Paper n° 7507, 2000).</p>
+</section>
+</section>
+<section id="les-outils" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="les-outils"><span class="header-section-number">3</span> Les outils</h2>
+<section id="plus-la-demande-est-inélastique-plus-la-dépense-monte-avec-le-prix" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="plus-la-demande-est-inélastique-plus-la-dépense-monte-avec-le-prix"><span class="header-section-number">3.1</span> Plus la demande est inélastique, plus la dépense monte avec le prix</h3>
+<p>La dépense P × Q est l’aire d’un rectangle sous la demande : quand le prix monte, on gagne un rectangle (les paquets encore achetés coûtent plus cher) et on en perd un (les paquets abandonnés).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-depense" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique avec une droite de demande bleue, raide et décroissante. Au prix de 10 euros, on achète 100 millions de paquets ; au prix de 12 euros, 92 millions. Un rectangle bleu, entre 10 et 12 euros et de 0 à 92 millions de paquets, est marqué plus 184. Un rectangle rouge, entre 0 et 10 euros et de 92 à 100 millions de paquets, est marqué moins 80.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-depense-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm2_files/figure-html/fig-depense-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique avec une droite de demande bleue, raide et décroissante. Au prix de 10 euros, on achète 100 millions de paquets ; au prix de 12 euros, 92 millions. Un rectangle bleu, entre 10 et 12 euros et de 0 à 92 millions de paquets, est marqué plus 184. Un rectangle rouge, entre 0 et 10 euros et de 92 à 100 millions de paquets, est marqué moins 80." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-depense-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: La dépense des fumeurs quand le prix passe de 10 € à 12 € (exemple fictif de l’<a href="#exm-depense" class="quarto-xref">Exemple&nbsp;1</a>, demande peu élastique, e = −0,4). La quantité passe de 100 à 92 millions de paquets. Lecture : le rectangle bleu est la dépense en plus sur les 92 millions de paquets encore achetés, (12 − 10) × 92 = 184 millions d’euros ; le rectangle rouge est la dépense perdue sur les 8 millions de paquets abandonnés, 10 × 8 = 80 millions d’euros. Le gain l’emporte : la dépense augmente de 104 millions d’euros.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="exm-depense" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 1 (Élasticité et dépense des fumeurs)</strong></span> Sur un marché fictif, le paquet coûte 10 € et il s’en vend 100 millions par an. Le prix passe à 12 €.</p>
+<ol type="1">
+<li><em>La variation du prix.</em> (12 − 10) ÷ 10 = 0,20 : le prix monte de <strong>20 %</strong>.</li>
+<li><em>Avec e = −0,4</em> (demande peu élastique, comme celle du tabac). La quantité varie de −0,4 × 20 = <strong>−8 %</strong>. On vend 100 × 0,92 = <strong>92 millions</strong> de paquets.</li>
+<li><em>La dépense.</em> Avant : 10 × 100 = 1 000 millions d’euros. Après : 12 × 92 = <strong>1 104 millions</strong>, soit <strong>+10,4 %</strong>. Les fumeurs achètent moins de paquets, mais dépensent plus. Sur la <a href="#fig-depense" class="quarto-xref">Figure&nbsp;1</a> : 184 millions gagnés, 80 millions perdus, 184 − 80 = 104 millions de plus.</li>
+<li><em>Avec e = −1,5</em> (demande élastique, pour comparer). La quantité varie de −1,5 × 20 = −30 % : on vend 70 millions de paquets. La dépense tombe à 12 × 70 = <strong>840 millions</strong>, soit <strong>−16 %</strong>.</li>
+</ol>
+<p>Même hausse de prix, deux histoires. Avec une demande peu élastique, la hausse frappe surtout le budget des fumeurs ; avec une demande élastique, elle réduit surtout la consommation.</p>
+</div>
+</section>
+<section id="une-taxe-crée-un-coin-entre-le-prix-payé-et-le-prix-gardé" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="une-taxe-crée-un-coin-entre-le-prix-payé-et-le-prix-gardé"><span class="header-section-number">3.2</span> Une taxe crée un coin entre le prix payé et le prix gardé</h3>
+<p>Une taxe t par paquet, versée par le vendeur, agit comme une hausse de son coût : pour accepter de vendre une quantité donnée, il demande désormais t euros de plus. La courbe d’offre se déplace <strong>vers le haut de t</strong> : O → O′ = O + t.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-incidence" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique offre-demande. La demande D est une droite décroissante bleue et raide, l'offre O une droite croissante ambre. L'offre O prime égale O plus t, en tirets, est parallèle à O et plus haute. L'équilibre initial E est en P étoile, Q étoile. Le nouvel équilibre E prime a une quantité Q étoile prime plus faible et un prix P étoile prime plus élevé. Un trait rouge vertical marqué t relie, à la quantité Q étoile prime, le prix P étoile prime moins t sur l'offre O au prix P étoile prime. À gauche, un grand rectangle bleu entre P étoile et P étoile prime est marqué payé par les acheteurs ; un rectangle orangé plus mince entre P étoile prime moins t et P étoile est marqué payé par les vendeurs.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-incidence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm2_files/figure-html/fig-incidence-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique offre-demande. La demande D est une droite décroissante bleue et raide, l'offre O une droite croissante ambre. L'offre O prime égale O plus t, en tirets, est parallèle à O et plus haute. L'équilibre initial E est en P étoile, Q étoile. Le nouvel équilibre E prime a une quantité Q étoile prime plus faible et un prix P étoile prime plus élevé. Un trait rouge vertical marqué t relie, à la quantité Q étoile prime, le prix P étoile prime moins t sur l'offre O au prix P étoile prime. À gauche, un grand rectangle bleu entre P étoile et P étoile prime est marqué payé par les acheteurs ; un rectangle orangé plus mince entre P étoile prime moins t et P étoile est marqué payé par les vendeurs." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-incidence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: L’incidence d’une taxe unitaire t versée par le vendeur. L’offre monte de t (O → O′, en tirets). Le nouvel équilibre est E′ : l’acheteur paie P*′, le vendeur garde P*′ − t, et l’écart entre les deux est la taxe (trait rouge). La recette fiscale est le rectangle t × Q*′. Lecture : la partie bleue est payée par les acheteurs (hausse du prix de P* à P*′), la partie orangée par les vendeurs (baisse de P* à P*′ − t). La demande étant ici peu élastique, les acheteurs paient la plus grande part. Graphique théorique.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Au prix P*, les vendeurs, qui doivent maintenant reverser t, offrent moins : le prix payé monte jusqu’à E′ et la quantité baisse de Q* à Q*′ (on glisse <strong>le long</strong> de D). L’acheteur paie P*′ au lieu de P* ; le vendeur reçoit P*′, reverse t et garde P*′ − t, moins que P*. Chacun supporte une partie de la taxe.</p>
+<div id="exm-incidence" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 2 (Qui paie une taxe de 5 € par paquet ?)</strong></span> Sur un marché fictif, Q est en millions de paquets et P en euros. L’offre s’écrit Q = 16 P − 60. On compare deux demandes qui passent toutes deux par 100 millions de paquets à 10 € (<a href="#fig-incidence-elasticite" class="quarto-xref">Figure&nbsp;3</a>) : <strong>A</strong>, Q = 140 − 4 P (peu élastique), et <strong>B</strong>, Q = 260 − 16 P (plus élastique). On crée une taxe t = 5 € par paquet, versée par le vendeur.</p>
+<ol type="1">
+<li><em>L’équilibre sans taxe.</em> Pour A comme pour B, à 10 € la demande vaut 100 et l’offre 16 × 10 − 60 = 100 : P* = 10 € et Q* = 100.</li>
+<li><em>Les élasticités au départ.</em> Si le prix monte de 1 € (+10 %), la demande A perd 4 millions de paquets (−4 %) : e = −4 ÷ 10 = <strong>−0,4</strong>. La demande B perd 16 millions (−16 %) : e = <strong>−1,6</strong>. L’offre gagne 16 millions (+16 %) : son élasticité vaut <strong>1,6</strong>.</li>
+<li><em>La taxe.</em> Le vendeur garde P − 5. L’offre devient Q = 16 (P − 5) − 60 = 16 P − 140.</li>
+<li><em>Le nouvel équilibre, cas A.</em> On cherche le prix où 140 − 4 P = 16 P − 140, soit 20 P = 280 : <strong>P*′ = 14 €</strong>. On vend 140 − 4 × 14 = <strong>84 millions</strong> de paquets. Le vendeur garde 14 − 5 = <strong>9 €</strong>.</li>
+<li><em>Le partage, cas A.</em> L’acheteur paie 4 € de plus (10 → 14), le vendeur garde 1 € de moins (10 → 9). Sur les 5 € de taxe, <strong>4 € (80 %) pèsent sur les acheteurs</strong> et 1 € (20 %) sur les vendeurs.</li>
+<li><em>La recette fiscale, cas A.</em> 5 × 84 = <strong>420 millions d’euros</strong>, dont 4 × 84 = 336 millions payés par les acheteurs et 1 × 84 = 84 millions par les vendeurs. La dépense des acheteurs passe de 1 000 à 14 × 84 = 1 176 millions.</li>
+<li><em>Le cas B.</em> 260 − 16 P = 16 P − 140 donne 32 P = 400 : P*′ = <strong>12,50 €</strong>, Q*′ = <strong>60 millions</strong>, le vendeur garde <strong>7,50 €</strong>. La taxe est partagée <strong>moitié-moitié</strong> (2,50 € chacun). La recette n’est que de 5 × 60 = <strong>300 millions</strong> : la quantité a baissé de 40 %.</li>
+</ol>
+<p><em>La règle.</em> La part payée par les acheteurs vaut : élasticité de l’offre ÷ (élasticité de l’offre + |e|). Cas A : 1,6 ÷ (1,6 + 0,4) = 0,8. Cas B : 1,6 ÷ (1,6 + 1,6) = 0,5.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-incidence-elasticite" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Deux graphiques côte à côte, avec la même offre O ambre et la même offre taxée O prime en tirets, plus haute de 5 euros. À gauche, panneau A, la demande bleue est raide : l'équilibre passe de 10 euros et 100 millions à 14 euros et 84 millions, et le trait rouge de la taxe va de 9 à 14 euros. À droite, panneau B, la demande est plus plate : l'équilibre passe à 12,50 euros et 60 millions, et le trait rouge va de 7,50 à 12,50 euros.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-incidence-elasticite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm2_files/figure-html/fig-incidence-elasticite-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Deux graphiques côte à côte, avec la même offre O ambre et la même offre taxée O prime en tirets, plus haute de 5 euros. À gauche, panneau A, la demande bleue est raide : l'équilibre passe de 10 euros et 100 millions à 14 euros et 84 millions, et le trait rouge de la taxe va de 9 à 14 euros. À droite, panneau B, la demande est plus plate : l'équilibre passe à 12,50 euros et 60 millions, et le trait rouge va de 7,50 à 12,50 euros." width="1200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-incidence-elasticite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Même taxe de 5 € par paquet, deux demandes (exemple fictif de l’<a href="#exm-incidence" class="quarto-xref">Exemple&nbsp;2</a>). Panneau A : demande peu élastique (e = −0,4) ; le prix payé passe de 10 € à 14 €, le prix gardé par le vendeur tombe à 9 €, la quantité passe de 100 à 84 millions. Panneau B : demande plus élastique (e = −1,6) ; le prix payé monte à 12,50 €, le prix gardé tombe à 7,50 €, la quantité à 60 millions. Lecture : le trait rouge mesure la taxe ; la part au-dessus de 10 € est payée par les acheteurs, la part au-dessous par les vendeurs.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="piege">
+<p>« Le buraliste encaisse la taxe, donc c’est lui qui la paie. » C’est faux. Refaites l’<a href="#exm-incidence" class="quarto-xref">Exemple&nbsp;2</a> en faisant verser la taxe par l’acheteur. C’est alors la demande qui se déplace, vers le bas de 5 € : pour chaque quantité, l’acheteur n’accepte plus de payer au vendeur que 5 € de moins qu’avant. On trouve le même équilibre : le vendeur reçoit 9 €, l’acheteur paie 9 + 5 = 14 € en tout. Seules les élasticités décident du partage.</p>
+</div>
+<p>Une demande peu élastique est donc une <strong>bonne assiette fiscale</strong> : la recette est plus élevée (420 contre 300 millions), parce que la quantité baisse peu. Mais la taxe rapporte d’autant plus qu’elle change peu les comportements : faire baisser la consommation et financer l’État sont <strong>deux objectifs en partie contradictoires</strong>.</p>
+</section>
+<section id="sur-un-paquet-à-1350-létat-prend-825" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="sur-un-paquet-à-1350-létat-prend-825"><span class="header-section-number">3.3</span> Sur un paquet à 13,50 €, l’État prend 82,5 %</h3>
+<p>En France, ce sont les fabricants qui proposent le prix de vente de chaque produit ; l’administration des douanes l’homologue et le publie au <em>Journal officiel</em> (Hill, 2026, § 3.1). L’État fixe les taxes, les fabricants fixent les prix. Les taxes se calculent sur le prix de vente.</p>
+<div id="exm-paquet" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 3 (La composition du prix d’un paquet de cigarettes)</strong></span> Taux en vigueur au 1<sup>er</sup> janvier 2026, pour un paquet de 20 cigarettes à 13,50 € (Hill, 2026, § 5.1 et tableau 5.2).</p>
+<ol type="1">
+<li><em>L’accise proportionnelle</em> : 55 % du prix de vente, soit 0,55 × 13,50 ≈ <strong>7,43 €</strong>.</li>
+<li><em>L’accise spécifique</em> : un montant fixe de 73,30 € pour 1 000 cigarettes, soit <strong>1,466 €</strong> par paquet. Les deux accises font 7,43 + 1,466 ≈ <strong>8,89 €</strong>.</li>
+<li><em>La TVA</em> : 20 % du prix hors TVA, soit 20 ÷ 120 = un sixième du prix de vente : 13,50 ÷ 6 = <strong>2,25 €</strong>.</li>
+<li><em>Le total des taxes</em> : 8,89 + 2,25 ≈ <strong>11,14 €</strong>, soit 11,14 ÷ 13,50 ≈ <strong>82,5 %</strong> du prix.</li>
+<li><em>Le reste</em> : 13,50 − 11,14 = <strong>2,36 €</strong>. Le buraliste touche une remise brute de 10,29 % du prix (taux de 2025, Hill, 2026, tableau 6), soit environ <strong>1,39 €</strong>. Il reste environ <strong>0,97 €</strong> au fabricant (7,2 % du prix).</li>
+<li><em>Si le prix de vente monte de 1 €.</em> L’accise proportionnelle en prend 0,55 €, la TVA un sixième d’euro, soit environ 0,17 €, et le buraliste environ 0,10 € (10,29 %). Il reste environ <strong>0,18 €</strong> au fabricant. L’État reçoit donc <strong>0,72 €</strong> de cet euro.</li>
+</ol>
+</div>
+<p>Le raisonnement de la séance enchaîne trois étapes, que le tableau résume.</p>
+<div id="tbl-chaine" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chaine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tableau&nbsp;1: De la hausse de la taxe à la consommation de tabac.
+</figcaption>
+<div aria-describedby="tbl-chaine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Étape</th>
+<th>Ce qui se passe</th>
+<th>Outil</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. La taxe</td>
+<td>L’État relève l’accise ; le prix de vente monte de tout ou partie de la taxe (incidence)</td>
+<td><a href="#fig-incidence" class="quarto-xref">Figure&nbsp;2</a></td>
+</tr>
+<tr class="even">
+<td>2. La réaction</td>
+<td>La quantité achetée baisse de e × la hausse en % ; peu au début, plus à long terme (addiction)</td>
+<td><a href="#fig-court-long" class="quarto-xref">Figure&nbsp;4</a></td>
+</tr>
+<tr class="odd">
+<td>3. Le bilan</td>
+<td>La dépense des fumeurs et la recette de l’État montent si |e| &lt; 1, mais la consommation baisse moins que le prix ne monte</td>
+<td><a href="#fig-depense" class="quarto-xref">Figure&nbsp;1</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="laddiction-rend-la-demande-plus-élastique-à-long-terme" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="laddiction-rend-la-demande-plus-élastique-à-long-terme"><span class="header-section-number">3.4</span> L’addiction rend la demande plus élastique à long terme</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-court-long" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique avec deux droites de demande bleues qui se croisent au point P étoile, Q étoile. La demande de court terme, en trait épais, est raide ; la demande de long terme, en trait fin, est plus plate. Au prix plus élevé P étoile prime, la demande de court terme donne une quantité Q étoile CT un peu inférieure à Q étoile, et la demande de long terme une quantité Q étoile LT nettement plus faible.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-court-long-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm2_files/figure-html/fig-court-long-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique avec deux droites de demande bleues qui se croisent au point P étoile, Q étoile. La demande de court terme, en trait épais, est raide ; la demande de long terme, en trait fin, est plus plate. Au prix plus élevé P étoile prime, la demande de court terme donne une quantité Q étoile CT un peu inférieure à Q étoile, et la demande de long terme une quantité Q étoile LT nettement plus faible." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-court-long-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Demande de court terme et demande de long terme d’un bien addictif. Les deux demandes passent par le même point (P*, Q*). Après une hausse durable du prix de P* à P*′, la quantité baisse peu la première année (Q*CT, sur la demande de court terme, trait épais) et davantage au bout de plusieurs années (Q*LT, sur la demande de long terme, trait fin). Lecture : la demande de long terme est plus plate, donc plus élastique, car chaque cigarette en moins aujourd’hui réduit l’envie de fumer demain. Graphique théorique.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Avec des valeurs fictives : si e vaut −0,3 la première année et −0,6 au bout de plusieurs années, une hausse durable de 20 % réduit la consommation de 6 % la première année, puis de 12 %. Becker et Murphy expliquent cet écart par l’addiction elle-même : celui qui fume moins aujourd’hui aura moins envie de fumer demain.</p>
+</section>
+<section id="en-france-le-prix-a-fait-baisser-les-ventes-mais-avec-des-fuites" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="en-france-le-prix-a-fait-baisser-les-ventes-mais-avec-des-fuites"><span class="header-section-number">3.5</span> En France, le prix a fait baisser les ventes, mais avec des fuites</h3>
+<p><strong>L’effet sur les ventes.</strong> De 2006 à 2025, le prix réel du tabac (corrigé de l’inflation) a été multiplié par 2,1 et les ventes de cigarettes des buralistes divisées par 2,6 (Hill, 2026, chapitre 4). Selon la plupart des experts, une hausse de prix agit pour moitié sur le <strong>nombre de fumeurs</strong> (surtout des adultes qui arrêtent) et pour moitié sur la <strong>quantité fumée</strong> par chacun (OMS, 2012, et Hill, 2026, § 4.3). La réponse est donc oui, en partie : d’autres mesures ont joué en même temps (campagnes, interdiction de vente aux mineurs, <em>ibid.</em>), et ce « oui » repose sur une corrélation, pas sur une expérience.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-conso-tabac" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique en lignes de 2000 à 2025, trois indices valant 100 en 2000. Le prix du tabac, en bleu, monte par paliers : environ 160 en 2004, 240 en 2014, 350 en 2020 et 459 en 2025. Les quantités achetées, en orange, baissent : environ 70 en 2004, 60 en 2014, 51 en 2020 et 36 en 2025. La dépense en euros courants, en rouge, monte doucement jusqu'à 180 en 2020 puis redescend à 164 en 2025. Une ligne horizontale en tirets marque le niveau 100.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-conso-tabac-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm2_files/figure-html/fig-conso-tabac-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique en lignes de 2000 à 2025, trois indices valant 100 en 2000. Le prix du tabac, en bleu, monte par paliers : environ 160 en 2004, 240 en 2014, 350 en 2020 et 459 en 2025. Les quantités achetées, en orange, baissent : environ 70 en 2004, 60 en 2014, 51 en 2020 et 36 en 2025. La dépense en euros courants, en rouge, monte doucement jusqu'à 180 en 2020 puis redescend à 164 en 2025. Une ligne horizontale en tirets marque le niveau 100." width="1125">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conso-tabac-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Prix, quantités et dépense de tabac des ménages en France, 2000-2025, en indices base 100 en 2000. Lecture : en 2025, l’indice du prix vaut 459 (le prix est multiplié par 4,6 depuis 2000) ; celui des quantités achetées, mesurées en volume, vaut 36 (elles sont divisées par 2,8) ; celui de la dépense en euros courants, égale au prix multiplié par la quantité, vaut 164 (+64 %). En 2020, année de fermeture des frontières, les quantités ne baissent presque pas (−0,2 %). Champ : ensemble des produits du tabac ; prix en euros courants, non corrigés de l’inflation. Source : Insee, comptes nationaux annuels base 2020, dépense de consommation finale des ménages en produits à base de tabac (séries 011782481, 011782482 et 011782483, mise à jour du 29/05/2026).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Les comptes nationaux de l’Insee confirment cette image (<a href="#fig-conso-tabac" class="quarto-xref">Figure&nbsp;5</a>) : de 2000 à 2025, le prix est multiplié par 4,6, les quantités sont divisées par 2,8 et la dépense augmente de 64 % en euros courants. Les prix en général ayant monté de 59 % (Eurostat, indice des prix à la consommation harmonisé, février 2026), le prix réel du tabac est multiplié par 2,9 et la dépense corrigée de l’inflation est presque stable (+3 %). Les quantités baissent donc presque autant que le prix réel monte : à long terme, la réaction est bien plus forte que d’une année sur l’autre (<a href="#fig-court-long" class="quarto-xref">Figure&nbsp;4</a>), mais elle mêle l’effet du prix et celui des autres mesures.</p>
+<p><strong>Les fuites.</strong> Les ventes des buralistes ne sont pas la consommation. Une hausse limitée aux cigarettes pousse vers le <strong>tabac à rouler</strong>, moins cher : jusqu’en 2013, 10 % de hausse du prix des seules cigarettes faisaient monter de 4,2 % ses ventes (Hill, 2026, chapitre 4). S’y ajoutent les achats à l’étranger et la contrebande : selon une étude citée par le ministère des Comptes publics, <strong>17,7 %</strong> des produits du tabac échappent en moyenne aux buralistes, soit 8 081 tonnes et 4,3 milliards d’euros de taxes (<em>JO Sénat</em>, 26/02/2026, réponse à la question écrite n° 04515). En 2025, les volumes de cigarettes saisis par les douanes augmentent de 24,5 % (AFP, <em>CB News</em>, 28/05/2026).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-recettes" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique en lignes de 1991 à 2025. La recette en euros courants, en bleu, passe de 3,3 milliards en 1991 à 8 milliards en 2000, 10,5 milliards en 2010, puis culmine à 14,4 milliards en 2020 avant de redescendre à 12,7 milliards en 2025. La recette en euros constants, en orange, suit la même allure mais monte moins : environ 8 à 10 milliards de 2000 à 2019, 11 milliards en 2020, puis 8,5 milliards en 2025. Une ligne verticale en tirets marque l'année 2020, sommet atteint quand les frontières étaient fermées.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-recettes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm2_files/figure-html/fig-recettes-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique en lignes de 1991 à 2025. La recette en euros courants, en bleu, passe de 3,3 milliards en 1991 à 8 milliards en 2000, 10,5 milliards en 2010, puis culmine à 14,4 milliards en 2020 avant de redescendre à 12,7 milliards en 2025. La recette en euros constants, en orange, suit la même allure mais monte moins : environ 8 à 10 milliards de 2000 à 2019, 11 milliards en 2020, puis 8,5 milliards en 2025. Une ligne verticale en tirets marque l'année 2020, sommet atteint quand les frontières étaient fermées." width="1125">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-recettes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Recettes du droit de consommation sur les tabacs (accise proportionnelle et accise spécifique, hors TVA), France continentale, 1991-2025, en milliards d’euros courants et en milliards d’euros constants (prix de 2001). Lecture : la recette augmente presque sans interruption jusqu’en 2020 (14,35 Md€), puis baisse de 11 % en euros courants et d’environ 23 % en euros constants jusqu’en 2025 (12,74 Md€). Le sommet de 2020 est en partie dû à la fermeture des frontières pendant le Covid ; par rapport à 2019, la recette de 2025 est stable en euros courants et baisse d’environ 13 % en euros constants. Source : C. Hill (2026), Impact de l’augmentation des prix sur la consommation de tabac, tableau 6 ; euros constants calculés avec l’indice des prix de ce tableau.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>La recette fiscale.</strong> Une demande peu élastique est une bonne assiette (<a href="#exm-incidence" class="quarto-xref">Exemple&nbsp;2</a>) : de 1991 à 2020, la recette du droit de consommation est multipliée par 4,4 en euros courants (<a href="#fig-recettes" class="quarto-xref">Figure&nbsp;6</a>). Le pic de 2020 tient en partie aux frontières fermées pendant le Covid, qui ont ramené chez les buralistes des achats faits d’ordinaire à l’étranger (Hill, 2026, § 1.2). Par rapport à 2019, la recette de 2025 est stable en euros courants (12,60 puis 12,74 Md€) et baisse d’environ 13 % en euros constants, alors que le prix monte toujours. Moins de fumeurs, ce qui est le but sanitaire, ou plus d’achats hors réseau, ce qui est une fuite ? Les deux peuvent se cumuler, et les données ne permettent pas de trancher : l’auteure du rapport reproche à l’État de ne pas s’être donné les moyens de mesurer ces achats de façon indépendante (Hill, 2026, conclusion).</p>
+<div class="piege">
+<p><strong>Ne pas calculer une élasticité sur les seules ventes légales.</strong> Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes des buralistes baissent plus que la consommation. On surestime alors l’effet du prix sur la santé, et l’on prend pour un arrêt du tabac ce qui est en partie une fuite, dont le coût pour les recettes passe inaperçu. L’élasticité mesurée par Hill est celle des ventes enregistrées, pas de la consommation.</p>
+</div>
+</section>
+</section>
+<section id="effets-de-répartition" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</h2>
+<section id="les-plus-jeunes-et-les-plus-modestes-sont-les-plus-touchés-pour-le-meilleur-et-pour-le-pire" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="les-plus-jeunes-et-les-plus-modestes-sont-les-plus-touchés-pour-le-meilleur-et-pour-le-pire"><span class="header-section-number">4.1</span> Les plus jeunes et les plus modestes sont les plus touchés, pour le meilleur et pour le pire</h3>
+<p><strong>Par génération.</strong> Les jeunes sont plus sensibles au prix que leurs aînés (Hill, 2026, § 4.3), sans doute parce que leur budget est plus petit et leur dépendance moins installée. Le tabagisme quotidien des lycéens passe de 30,8 % en 2010 à 5,6 % en 2024 (AFP, <em>CB News</em>, 28/05/2026). Ce sont sans doute eux qui <strong>gagnent</strong> le plus en santé. Mais l’écart entre filières reste fort. Selon l’enquête ESCAPAD de l’OFDT, menée en mars 2022 auprès des jeunes de 17 ans et citée par I. Obradovic (<em>The Conversation</em>, 25/07/2026), 22,1 % des élèves de lycée professionnel fument tous les jours, contre 10,1 % en lycée général ou technologique, et 38,4 % des apprentis. Ces chiffres ne se comparent pas aux 5,6 % des lycéens : autre enquête, autre année, et un seul âge au lieu de tous les lycéens.</p>
+<p><strong>Par revenu.</strong> Une taxe sur le tabac est <strong>régressive</strong> : un paquet à 13,50 € pèse plus lourd dans un petit budget. En théorie, les ménages modestes devraient aussi réagir davantage au prix et gagner le plus en santé ; mais les données françaises disponibles ne le montrent pas (Hill, 2026, § 4.3). La part de fumeurs chez les chômeurs a même augmenté jusqu’en 2016, quand elle baissait chez les actifs occupés et les étudiants (Hill, 2026, § 2.4). Pour les fumeurs qui n’arrivent pas à arrêter, la hausse est une <strong>perte de pouvoir d’achat</strong>.</p>
+<p><strong>Par territoire.</strong> Près des frontières, le paquet est moins cher de l’autre côté. Les buralistes des départements frontaliers perdent des ventes ; l’État les a compensés par des aides (Hill, 2026, § 7.6). Les hausses de taxes en Belgique et au Luxembourg ont réduit l’avantage d’y aller acheter (AFP, <em>CB News</em>, 28/05/2026).</p>
+<p><strong>Par genre.</strong> L’écart entre hommes et femmes s’est beaucoup réduit. En 1953, 72 % des hommes et 17 % des femmes fumaient régulièrement ; en 2024, 20,4 % des hommes et 16,2 % des femmes (sondages Seita, Insee, Inpes puis Santé publique France, Hill, 2026, tableau 2.1).</p>
+</section>
+<section id="les-vendeurs-et-létat-des-gains-qui-seffritent" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="les-vendeurs-et-létat-des-gains-qui-seffritent"><span class="header-section-number">4.2</span> Les vendeurs et l’État : des gains qui s’effritent</h3>
+<p><strong>L’État</strong> perçoit 82,5 % du prix du paquet (<a href="#exm-paquet" class="quarto-xref">Exemple&nbsp;3</a>) : 12,74 milliards d’euros de droit de consommation en 2025, hors TVA (<a href="#fig-recettes" class="quarto-xref">Figure&nbsp;6</a>). <strong>Les buralistes</strong> voient leur remise suivre le prix, mais leur nombre baisse, de 32 850 en 2002 à 22 800 en 2025 (Hill, 2026, tableau 6). <strong>Les fabricants</strong> gardent moins de 1 € par paquet de 13,50 €, mais fixent les prix. <strong>Les non-fumeurs</strong> gagnent : moins de tabagisme passif. Dans le monde, l’OMS attribue au tabac plus de 7 millions de morts par an, dont 1,6 million de non-fumeurs exposés à la fumée des autres (<em>La finance pour tous</em>, 24/07/2026).</p>
+<div id="fig-lineaire" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Photographie du rayon tabac d'un kiosque Relay à Paris : sous des enseignes rouges Tabac et E-cigarettes, des rangées de paquets de cigarettes neutres et de tabac à rouler, et un comptoir en bois au premier plan.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-lineaire-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/cm2/paquets-neutres-paris-2026.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Photographie du rayon tabac d'un kiosque Relay à Paris : sous des enseignes rouges Tabac et E-cigarettes, des rangées de paquets de cigarettes neutres et de tabac à rouler, et un comptoir en bois au premier plan.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lineaire-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Linéaire de tabac d’un kiosque Relay à Paris, 2026. Lecture : le buraliste vend un très grand nombre de références (4 999 au catalogue des douanes en 2026) dont les prix sont homologués par les douanes ; il touche une remise proportionnelle au prix (environ 1,39 € sur un paquet à 13,50 €, <a href="#exm-paquet" class="quarto-xref">Exemple&nbsp;3</a>), alors que la taxe, elle, part à l’État. Photo : Jacques Jeorges Anton, CC0, Wikimedia Commons.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="la-controverse" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="la-controverse"><span class="header-section-number">5</span> La controverse</h2>
+<section id="faut-il-continuer-à-augmenter-le-prix-du-tabac" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="faut-il-continuer-à-augmenter-le-prix-du-tabac"><span class="header-section-number">5.1</span> Faut-il continuer à augmenter le prix du tabac ?</h3>
+<p><strong>Ce que l’analyse établit (positif).</strong></p>
+<ul>
+<li>Une hausse de prix réduit les ventes, moins que proportionnellement (e entre −0,5 et −0,3), davantage à long terme et chez les jeunes.</li>
+<li>La taxe pèse surtout sur les <strong>fumeurs</strong>, et en proportion davantage sur les fumeurs modestes.</li>
+<li>Elle nourrit des <strong>fuites</strong> (tabac à rouler, achats à l’étranger, contrebande), dont l’ampleur est mal mesurée.</li>
+</ul>
+<p><strong>Ce qui relève d’un jugement (normatif).</strong></p>
+<ul>
+<li><strong>Faut-il protéger le fumeur contre lui-même ?</strong> Si l’on juge le fumeur pleinement rationnel, la taxe ne doit couvrir que le coût imposé aux autres. Si l’on juge qu’il n’arrive pas à tenir ses résolutions, une taxe plus forte se défend. C’est la question du <strong>paternalisme</strong> : jusqu’où l’État peut-il orienter les choix privés ?</li>
+<li><strong>Comment peser santé et pouvoir d’achat ?</strong> La taxe améliore la santé de ceux qui arrêtent et appauvrit ceux qui continuent. L’OMS juge qu’elle peut devenir « un outil de politique publique favorable aux pauvres » si une partie des recettes finance l’aide au sevrage des ménages modestes (OMS, 2012, citée par Hill, 2026, § 7.6). Vue sous l’angle du pouvoir d’achat, c’est d’abord un impôt régressif.</li>
+</ul>
+<p><strong>Les positions en présence.</strong></p>
+<ul>
+<li><em>L’école de Chicago</em> (Becker et Murphy, 1988) : le fumeur informé choisit en connaissance de cause ; l’État doit l’informer et taxer les seuls dommages causés aux autres.</li>
+<li><em>L’économie comportementale</em> (Gruber et Kőszegi, 2001) : les mêmes données s’accordent avec des fumeurs qui regrettent leurs choix ; la taxe optimale est plus élevée, car elle corrige aussi l’internalité.</li>
+<li><em>La santé publique</em> (OMS ; Hill, 2026) : pour les experts de la Banque mondiale et de l’OMS, la hausse des prix est « de loin le moyen le plus efficace » de faire baisser les ventes (Hill, 2026, § 4.3). Ce rapport, engagé dans la lutte antitabac, reproche aux douanes, aux buralistes et à l’industrie d’avoir entretenu la confusion entre achats frontaliers licites et contrebande.</li>
+<li><em>Les buralistes</em> : la profession, « fragilisée par l’ampleur croissante du marché parallèle », demande de limiter la hausse des accises à l’inflation (question écrite n° 04515 au Sénat, qui relaie ses demandes, <em>JO Sénat</em>, 08/05/2025). Le gouvernement répond que la lutte contre la contrebande est « une priorité majeure de la douane » (<em>JO Sénat</em>, 26/02/2026).</li>
+</ul>
+<p>Le débat porte moins sur le sens de l’effet, admis par tous, que sur la <strong>taille des fuites</strong> (une question positive, mal mesurée) et sur le <strong>droit de l’État à orienter des choix privés</strong> (une question normative).</p>
+<div class="droit">
+<p>Les prix du tabac ne sont pas libres au sens ordinaire : chaque fabricant propose ses prix, que l’administration des douanes homologue et publie au <em>Journal officiel</em> ; d’après <em>Bourse Inside</em> (08/10/2026), l’arrêté du 29 septembre 2026 fixe les prix au 1<sup>er</sup> novembre 2026 (Hill, 2026, § 3.1, pour la procédure). La France a aussi ratifié la Convention-cadre de l’OMS pour la lutte antitabac, dont l’article 6 recommande d’augmenter les taxes sur le tabac (Hill, 2026, introduction).</p>
+</div>
+</section>
+</section>
+<section id="à-retenir" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="à-retenir"><span class="header-section-number">6</span> À retenir</h2>
+<div class="retenir">
+<ul>
+<li>L’élasticité-prix mesure de combien la quantité réagit au prix ; pour le tabac, e est compris entre −0,5 et −0,3 : une hausse de 10 % réduit les ventes de 3 à 5 %.</li>
+<li>Quand la demande est peu élastique, une hausse de prix augmente la dépense des acheteurs et la recette fiscale.</li>
+<li>La charge d’une taxe retombe sur le côté du marché le moins élastique, quel que soit celui qui la verse à l’État : pour le tabac, surtout sur les fumeurs.</li>
+<li>L’addiction n’annule pas l’effet du prix : la demande est plus élastique à long terme (Becker et Murphy) et chez les jeunes.</li>
+<li>Les ventes légales ne sont pas la consommation : tabac à rouler, achats à l’étranger et contrebande réduisent l’effet sanitaire et la recette.</li>
+<li>Faut-il taxer pour protéger le fumeur contre lui-même (internalité) ou seulement pour protéger les autres (externalité) ? C’est un jugement normatif.</li>
+</ul>
+</div>
+</section>
+<section id="pour-aller-plus-loin" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</h2>
+<div class="wp-video">
+<iframe src="https://www.youtube-nocookie.com/embed/fh2Uy5M1NS4" title="Dessine-moi l'éco : TVA collectée, TVA déductible... Qui paye réellement ?" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Dessine-moi l’éco · « TVA collectée, TVA déductible… Qui paye réellement ? » · 3 min 38 · 2015 : la vidéo porte sur la TVA, pas sur le tabac, mais pose la même question de l’incidence</p>
+</div>
+<p><strong>Articles</strong></p>
+<ul>
+<li><em>La finance pour tous</em>, « Augmenter le prix des cigarettes est-il un bon moyen de réduire la consommation de tabac ? », mis à jour le 24/07/2026. <a href="https://www.lafinancepourtous.com/juniors/lyceens/boite-a-outils-de-leconomiste/augmenter-le-prix-des-cigarettes-est-il-un-bon-moyen-de-reduire-la-consommation-de-tabac">Lien</a></li>
+<li><em>The Conversation</em>, I. Obradovic, « Alcool, tabac, cannabis : les jeunes se sont-ils vraiment détournés des drogues ? », 25/07/2026, mis à jour le 31/07/2026. <a href="https://theconversation.com/alcool-tabac-cannabis-les-jeunes-se-sont-ils-vraiment-detournes-des-drogues-286189">Lien</a></li>
+<li>AFP, <em>CB News</em>, « Tabagisme à des niveaux “toujours plus bas” en France, chute des ventes chez les buralistes », 28/05/2026. <a href="https://www.cbnews.fr/node/101206">Lien</a></li>
+<li><em>Bourse Inside</em>, « Prix du tabac au 1er novembre : pourquoi il ne s’agit pas d’une hausse générale et ce qui change vraiment pour votre budget », 08/10/2026. <a href="https://bourseinside.fr/?p=13529">Lien</a></li>
+</ul>
+<p><strong>Sources institutionnelles et rapports</strong></p>
+<ul>
+<li>C. Hill, <em>Impact de l’augmentation des prix sur la consommation de tabac</em>, ex-Institut Gustave Roussy, 2026. <a href="https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf">Lien</a></li>
+<li>Sénat, question écrite n° 04515, « Lutte contre la contrebande de tabac », <em>JO Sénat</em> du 08/05/2025, et réponse du ministère de l’Action et des Comptes publics, <em>JO Sénat</em> du 26/02/2026. <a href="https://www.senat.fr/questions/base/2025/qSEQ250504515.html">Lien</a></li>
+<li>J. Gruber et B. Kőszegi, « Is Addiction “Rational”? Theory and Evidence », NBER Working Paper n° 7507, 2000 (version publiée : <em>Quarterly Journal of Economics</em>, 2001). <a href="https://www.nber.org/papers/w7507">Lien</a></li>
+<li>G. S. Becker et K. M. Murphy, « A Theory of Rational Addiction », <em>Journal of Political Economy</em>, 1988. <a href="https://doi.org/10.1086/261558">DOI</a></li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Introduction à l’économie 2 · L1 AES et Droit · <a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2 · 2026-2027</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

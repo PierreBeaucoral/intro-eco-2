@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="CM 3 et 4">
+
+<title>TD 3 · Les prix bloqués : Ozempic et loyers – Introduction à l’économie 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ce2a859f655fb0fc50a4bad14b2f71a0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-981ce10d1f6a1c0f379cc73fef8bdf9b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+
+
+</head>
+
+<body class="nav-fixed wp-td quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo light-content">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Introduction à l’économie 2</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../programme.html"> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cours.html"> 
+<span class="menu-text">Cours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../td.html"> 
+<span class="menu-text">TD</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../methodo/index.html"> 
+<span class="menu-text">Méthodo</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#objectifs" id="toc-objectifs" class="nav-link active" data-scroll-target="#objectifs">Objectifs</a></li>
+  <li><a href="#à-préparer-avant-la-séance" id="toc-à-préparer-avant-la-séance" class="nav-link" data-scroll-target="#à-préparer-avant-la-séance">À préparer avant la séance</a></li>
+  <li><a href="#les-documents" id="toc-les-documents" class="nav-link" data-scroll-target="#les-documents">Les documents</a></li>
+  <li><a href="#questions-sur-les-documents" id="toc-questions-sur-les-documents" class="nav-link" data-scroll-target="#questions-sur-les-documents">Questions sur les documents</a></li>
+  <li><a href="#exercice" id="toc-exercice" class="nav-link" data-scroll-target="#exercice">Exercice</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="td3.pdf"><i class="bi bi-file-pdf"></i>Télécharger le PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">TD 3 · Les prix bloqués : Ozempic et loyers</h1>
+</div>
+
+<div>
+  <div class="description">
+    CM 3 et 4
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="wp-entete">
+<p>Séance 3 sur 8</p>
+<p>Durée : 2 h</p>
+<p>Porte sur : CM 3 et 4</p>
+</div>
+<section id="objectifs" class="level2">
+<h2 class="anchored" data-anchor-id="objectifs">Objectifs</h2>
+<ul>
+<li><strong>Expliquer</strong> pourquoi un prix bloqué crée une pénurie quand la demande se déplace, et pourquoi il faut alors répartir le bien autrement que par le prix.</li>
+<li><strong>Calculer</strong> une pénurie, un transfert et une perte sèche à partir d’un tableau, à court et à long terme.</li>
+<li><strong>Argumenter</strong> sur l’encadrement des loyers en séparant ce que l’analyse établit (positif) de ce qui relève d’un jugement (normatif).</li>
+</ul>
+</section>
+<section id="à-préparer-avant-la-séance" class="level2">
+<h2 class="anchored" data-anchor-id="à-préparer-avant-la-séance">À préparer avant la séance</h2>
+<ul>
+<li>Relire les pages du <a href="../cours/cm3.html">CM 3</a> et du <a href="../cours/cm4.html">CM 4</a>, en particulier les définitions et les exemples chiffrés.</li>
+<li>Lire les documents 1 à 4 et répondre par écrit aux questions 1 à 7. La question 8 et l’exercice se traitent en séance ; la question 9 se prépare en plan détaillé en séance, puis se rédige à la maison.</li>
+<li>Tous les calculs du TD sont faisables à la main, en nombres ronds.</li>
+</ul>
+<div class="methode">
+<p>La question 9 demande un court paragraphe argumenté qui sépare le positif du normatif. La démarche (définir les termes, annoncer l’idée, l’appuyer sur un mécanisme et un exemple, conclure) est décrite dans la fiche <a href="../methodo/dissertation.html">La dissertation économique</a> de la rubrique Méthodo.</p>
+</div>
+</section>
+<section id="les-documents" class="level2">
+<h2 class="anchored" data-anchor-id="les-documents">Les documents</h2>
+<div class="wp-document" data-label="Document 1">
+<p><strong>Ozempic : une pénurie sans hausse de prix</strong></p>
+<p>En France, le prix d’un médicament remboursé est « négocié avec l’industriel », puis « fixé par le CEPS&nbsp;», le Comité économique des produits de santé. Une boîte d’Ozempic 1 mg coûte 76,58&nbsp;€ hors honoraire du pharmacien, et l’Assurance maladie en rembourse 30&nbsp;% ; un seul laboratoire, Novo Nordisk, le fabrique.</p>
+<p>Pour le ministère de la Santé, les tensions viennent d’« une augmentation importante de la demande mondiale », que les industriels ne peuvent pas suivre « dans un temps restreint » ; des personnes non diabétiques le demandent pour maigrir. Le député qui l’interrogeait, surtout sur le Trulicity, de la même famille, y voyait un médicament « vendu en France à un prix d’achat très bas ».</p>
+<p>L’Agence nationale de sécurité du médicament (ANSM) organise la répartition :</p>
+<ul>
+<li><strong>décembre 2023</strong> : ne plus commencer de traitement par Ozempic, Victoza ou Trulicity ;</li>
+<li><strong>14 mars 2024</strong> : nouveaux traitements réservés aux diabétiques de type 2 malades des artères ;</li>
+<li><strong>septembre 2024</strong> : reprise progressive, sous « distribution fractionnée (contingentement quantitatif) » ; dès le 1<sup>er</sup> février 2025, le remboursement exige un formulaire du médecin ;</li>
+<li><strong>5 juin 2025</strong> : « les initiations de traitement peuvent reprendre pour tous les patients ».</li>
+</ul>
+<p><span class="wp-source">Source : texte rédigé par l’enseignant d’après ANSM, « Analogues du GLP-1 et diabète de type 2 », mis à jour le 21/04/2026, <a href="https://ansm.sante.fr/actualites/analogues-du-glp-1-et-diabete-de-type-2-reprise-progressive-des-initiations-de-traitement-pour-ozempic-et-victoza" class="uri">https://ansm.sante.fr/actualites/analogues-du-glp-1-et-diabete-de-type-2-reprise-progressive-des-initiations-de-traitement-pour-ozempic-et-victoza</a> ; Base de données publique des médicaments, fiche OZEMPIC 1 mg, consultée le 21/10/2026, <a href="https://base-donnees-publique.medicaments.gouv.fr/medicament/63210923/extrait" class="uri">https://base-donnees-publique.medicaments.gouv.fr/medicament/63210923/extrait</a> ; autres sources (Assemblée nationale, réponse du ministère au JO du 21/05/2024 ; <em>The Conversation</em> ; <em>Vidal</em>) : voir le corrigé.</span></p>
+</div>
+<div class="wp-document" data-label="Document 2">
+<p><strong>Boîtes d’analogues du GLP-1 remboursées en France, 2020-2024</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>2020</th>
+<th>2021</th>
+<th>2022</th>
+<th>2023</th>
+<th>2024</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Famille, millions de boîtes</td>
+<td>4,29</td>
+<td>5,12</td>
+<td>6,25</td>
+<td>7,48</td>
+<td>7,49</td>
+</tr>
+<tr class="even">
+<td>dont Ozempic</td>
+<td>0,75</td>
+<td>1,39</td>
+<td>2,03</td>
+<td>2,92</td>
+<td>3,64</td>
+</tr>
+<tr class="odd">
+<td>Prix moyen Ozempic (€)</td>
+<td>80</td>
+<td>80</td>
+<td>81</td>
+<td>79</td>
+<td>78</td>
+</tr>
+</tbody>
+</table>
+<p>Boîtes délivrées en pharmacie de ville et remboursées, tous prescripteurs ; les boîtes non remboursées n’y figurent pas. La famille comprend notamment Ozempic, Trulicity et Victoza. Le prix moyen est la base de remboursement (le tarif sur lequel l’Assurance maladie calcule son remboursement) divisée par le nombre de boîtes, toutes doses confondues, arrondi à l’euro. Une boîte d’Ozempic 1 mg correspond à environ un mois de traitement.</p>
+<p><span class="wp-source">Source : Assurance Maladie, « Medic’AM : médicaments remboursés par l’Assurance Maladie, par type de prescripteur (données interrégimes) », data.gouv.fr, fichiers 2020 à 2024 téléchargés le 21/10/2026, <a href="https://www.data.gouv.fr/datasets/536999d3a3a729239d20533a" class="uri">https://www.data.gouv.fr/datasets/536999d3a3a729239d20533a</a> ; totaux et prix moyens calculés par l’enseignant ; durée de traitement : HAS, avis de la Commission de la transparence sur OZEMPIC, 27/08/2025, <a href="https://www.has-sante.fr/upload/docs/evamed/CT-21501_OZEMPIC_PIS_INS_AvisDef_CT21501.pdf" class="uri">https://www.has-sante.fr/upload/docs/evamed/CT-21501_OZEMPIC_PIS_INS_AvisDef_CT21501.pdf</a>.</span></p>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="wp-document" data-label="Document 3">
+<p><strong>Encadrement des loyers : ce que mesure l’évaluation de mai 2026</strong></p>
+<p>Chaque année, le préfet fixe un loyer de référence par mètre carré, égal au loyer médian des logements comparables (même secteur, même nombre de pièces, même époque de construction, vide ou meublé). Le loyer d’un nouveau bail ne peut pas dépasser ce loyer de référence <strong>majoré de 20&nbsp;%</strong>. Sur environ 270&nbsp;000 baux signés entre 2020 et 2024, plus d’un tiers dépassent pourtant le plafond : 35,6&nbsp;% à Paris, 43,5&nbsp;% à Bordeaux.</p>
+<p>La mission compare l’évolution des loyers dans les communes encadrées et dans des communes semblables mais non encadrées, avant et après. Hors Île-de-France, les loyers des annonces baissent de 2 à 3&nbsp;% par rapport aux communes témoins, et d’environ 5&nbsp;% après deux ans ; de 3 à 4&nbsp;% en Seine-Saint-Denis. À Paris, une autre équipe estime l’effet à −5,2&nbsp;% entre juillet 2019 et juin 2024.</p>
+<p>Les transferts vers les locataires atteignent environ 700 millions d’euros par an, payés pour deux tiers par les bailleurs et pour un tiers par l’État : « pour un euro de baisse de loyer, environ un tiers est financé par l’État », car un loyer plus bas réduit l’impôt du bailleur. Hors Île-de-France, « pour deux euros distribués aux 10&nbsp;% les plus modestes, un euro est redistribué aux 10&nbsp;% les plus aisés ». À Paris, une part importante des gains va à des locataires aisés ; en Seine-Saint-Denis, surtout à des ménages modestes.</p>
+<p>Pour comparaison, en 2023, la moitié des locataires du secteur libre qui font partie des 25&nbsp;% de ménages les plus modestes consacrent plus de 42,3&nbsp;% de leur revenu à leur logement, aides au logement déduites, contre 21,6&nbsp;% pour ceux des 25&nbsp;% les plus aisés.</p>
+<p><span class="wp-source">Source : texte rédigé par l’enseignant d’après G. Chapelle et G. Fack, <em>L’encadrement des loyers : effets économiques et redistributifs. Rapport de la mission d’évaluation</em>, mai 2026, § 1.1.1, 2.2.4, 3.4, 4.4.1, 4.4.3 et 5.1 (les citations en sont extraites), <a href="https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf" class="uri">https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf</a> ; dernier paragraphe : Insee, <em>France, portrait social</em>, édition 2025, fiche « Logement », 18/11/2025 (enquête SRCV 2024), <a href="https://www.insee.fr/fr/statistiques/8612550" class="uri">https://www.insee.fr/fr/statistiques/8612550</a>.</span></p>
+</div>
+<div class="wp-document" data-label="Document 4">
+<p><strong>Un même rapport, deux lectures</strong></p>
+<p>Hors Île-de-France, le nombre de nouvelles annonces de location, rapporté au nombre de logements, baisse d’environ 8&nbsp;% dans les communes encadrées ; à Paris, il évolue en sens inverse. Selon la mission d’évaluation, cette baisse peut venir d’une offre réduite, de locataires qui restent plus longtemps dans leur logement ou d’annonces passées par d’autres canaux : les données ne permettent pas de trancher.</p>
+<p>La rapporteure de la commission des affaires économiques du Sénat en tire une première lecture : « Les conditions pour pérenniser cette expérimentation ne sont pas réunies : aucune étude empirique n’a permis d’écarter l’incidence négative sur l’offre locative de ce dispositif […] ». La Ville de Paris, qui applique l’encadrement, retient au contraire « une absence d’effet de l’encadrement des loyers sur l’offre locative parisienne ».</p>
+<p>L’expérimentation, créée par la loi Élan de 2018 et prolongée par la loi 3DS de 2022, arrive à son terme fin novembre 2026. Le 11 décembre 2025, l’Assemblée nationale a voté une proposition de loi qui la pérennise et l’étend ; le 14 octobre 2026, la commission du Sénat l’a réduite à une prolongation de deux ans dans les mêmes territoires. Le Sénat a adopté le texte en séance le 21 octobre 2026 ; il n’est pas encore définitif.</p>
+<p><span class="wp-source">Source : texte rédigé par l’enseignant d’après G. Chapelle et G. Fack, rapport cité au document 3, § 3.5 ; MoneyVox avec l’AFP, « Encadrement des loyers : le Sénat opte pour une prolongation de l’expérimentation », 14/10/2026, <a href="https://www.moneyvox.fr/immobilier/actualites/110804/encadrement-des-loyers-le-senat-opte-pour-une-prolongation-de-experimentation" class="uri">https://www.moneyvox.fr/immobilier/actualites/110804/encadrement-des-loyers-le-senat-opte-pour-une-prolongation-de-experimentation</a> ; Ville de Paris, « Encadrement des loyers : les résultats sont là ! », mis à jour le 11/09/2026 (source partie prenante), <a href="https://www.paris.fr/pages/encadrement-des-loyers-les-resultats-sont-la-31465" class="uri">https://www.paris.fr/pages/encadrement-des-loyers-les-resultats-sont-la-31465</a> ; LCP, « Encadrement des loyers : l’Assemblée vote en faveur d’une pérennisation du dispositif », 11/12/2025, <a href="https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-vote-en-faveur-d-une-perennisation-du-dispositif" class="uri">https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-vote-en-faveur-d-une-perennisation-du-dispositif</a> ; Sénat, « Proposition de loi pour retrouver la confiance et l’équilibre dans les rapports locatifs », <em>La loi en clair</em>, octobre 2026, <a href="https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-retrouver-la-confiance-et-lequilibre-dans-les-rapports-locatifs.html" class="uri">https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-retrouver-la-confiance-et-lequilibre-dans-les-rapports-locatifs.html</a>. État du droit au 21/10/2026.</span></p>
+</div>
+</section>
+<section id="questions-sur-les-documents" class="level2">
+<h2 class="anchored" data-anchor-id="questions-sur-les-documents">Questions sur les documents</h2>
+<section id="comprendre-les-documents" class="level3">
+<h3 class="anchored" data-anchor-id="comprendre-les-documents">Comprendre les documents</h3>
+<ol type="1">
+<li><strong>(Document 1)</strong> Qui fixe le prix d’Ozempic ? A-t-il augmenté avec la demande ? Relevez deux règles que l’ANSM a utilisées pour répartir les boîtes et nommez-les avec le vocabulaire du cours. Le formulaire de février 2025 agit-il sur le prix, sur l’offre ou sur la demande ?</li>
+<li><strong>(Document 2)</strong> Calculez, à un point près, la variation en pourcentage du nombre total de boîtes entre 2022 et 2023, puis entre 2023 et 2024. Par combien le nombre de boîtes d’Ozempic est-il environ multiplié de 2020 à 2024 ? Comment évolue son prix moyen sur la même période ?</li>
+<li><strong>(Document 3)</strong> Comment le plafond d’un loyer est-il fixé ? De combien l’encadrement a-t-il fait baisser les loyers, et à quoi la mission compare-t-elle les communes encadrées pour le savoir ?</li>
+</ol>
+</section>
+<section id="mobiliser-le-cours" class="level3">
+<h3 class="anchored" data-anchor-id="mobiliser-le-cours">Mobiliser le cours</h3>
+<ol start="4" type="1">
+<li><strong>(Documents 1 et 2)</strong> Les tensions que décrit le ministère viennent-elles d’un choc d’offre ou d’un choc de demande ? Tracez le graphique du marché d’Ozempic : la courbe qui se déplace, le prix fixé P*, l’équilibre initial E et la pénurie au prix fixé. Placez aussi l’équilibre E′ qu’atteindrait un prix libre. Le document 2 montre-t-il que le prix a servi à répartir le médicament ?</li>
+<li><strong>(Document 2)</strong> Un camarade affirme : « En 2024, le nombre total de boîtes n’augmente plus que de 0,1&nbsp;% : la demande a donc cessé d’augmenter. » Discutez ce raisonnement en quelques lignes.</li>
+<li><strong>(Document 1)</strong> Un député juge « très bas » le prix français de ces antidiabétiques. Si l’État avait relevé le prix d’Ozempic en 2023, la pénurie aurait-elle disparu rapidement ? Appuyez-vous sur la notion d’offre rigide et sur le fait qu’un seul laboratoire sert le monde entier.</li>
+<li><strong>(Document 3)</strong>
+<ol type="a">
+<li>Le plafond français est-il contraignant pour tous les logements ? Expliquez pourquoi les effets mesurés sur les loyers sont modestes.</li>
+<li>Qui paie la baisse des loyers ? L’encadrement vise-t-il en priorité les locataires pour qui le logement pèse le plus lourd dans le budget ?</li>
+</ol></li>
+</ol>
+</section>
+<section id="argumenter" class="level3">
+<h3 class="anchored" data-anchor-id="argumenter">Argumenter</h3>
+<ol start="8" type="1">
+<li><strong>(Document 4)</strong> Que constate le rapport sur l’offre de logements ? Montrez que la rapporteure du Sénat et la Ville de Paris retiennent chacune une moitié de ce constat. Leur désaccord porte-t-il sur un fait ou sur un jugement ?</li>
+<li><strong>(Ensemble des documents)</strong> « Ozempic et les loyers le prouvent : bloquer un prix crée une pénurie, il faut donc laisser les prix libres. » En une quinzaine de lignes (plan détaillé en séance, rédaction à la maison), montrez d’abord ce que l’analyse du cours établit dans chacun des deux cas, puis ce qui relève d’un jugement.</li>
+</ol>
+</section>
+</section>
+<section id="exercice" class="level2">
+<h2 class="anchored" data-anchor-id="exercice">Exercice</h2>
+<p>Les deux parties portent sur des marchés <strong>fictifs</strong>, en nombres ronds. Tous les calculs se font à la main.</p>
+<section id="a.-un-médicament-à-prix-fixé" class="level3">
+<h3 class="anchored" data-anchor-id="a.-un-médicament-à-prix-fixé">A. Un médicament à prix fixé</h3>
+<p>Sur le marché fictif d’un médicament, Q est en milliers de boîtes par mois et P en euros par boîte. L’État a fixé le prix à 50&nbsp;€.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Prix P (€ par boîte)</th>
+<th>50</th>
+<th>100</th>
+<th>150</th>
+<th>200</th>
+<th>250</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quantité demandée avant le choc (D)</td>
+<td>80</td>
+<td>76</td>
+<td>72</td>
+<td>68</td>
+<td>64</td>
+</tr>
+<tr class="even">
+<td>Quantité demandée après le choc (D′)</td>
+<td>120</td>
+<td>116</td>
+<td>112</td>
+<td>108</td>
+<td>104</td>
+</tr>
+<tr class="odd">
+<td>Quantité offerte à court terme (O)</td>
+<td>80</td>
+<td>86</td>
+<td>92</td>
+<td>98</td>
+<td>104</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li>Quel est l’équilibre initial (P*, Q*) ? Calculez l’élasticité-prix de la demande e entre 50&nbsp;€ et 100&nbsp;€, avant le choc. Commentez.</li>
+<li>De combien la demande augmente-t-elle à chaque prix ? Quelle courbe se déplace ? Au prix fixé de 50&nbsp;€, calculez la pénurie, en milliers de boîtes puis en pourcentage des demandes.</li>
+<li>Supposez que le prix devienne libre, à court terme.
+<ol type="a">
+<li>Quel est le nouvel équilibre ? Calculez la variation en pourcentage du prix et de la quantité.</li>
+<li>Sur les 40&nbsp;000 boîtes qui manquaient, combien sont produites en plus ? Combien de demandes disparaissent, faute de pouvoir payer ?</li>
+<li>Calculez la recette mensuelle du vendeur au prix fixé, puis au prix libre. Comment s’appelle le gain dû au seul manque ?</li>
+</ol></li>
+<li>Le prix reste fixé à 50&nbsp;€ : il y a 80&nbsp;000 boîtes pour 120&nbsp;000 demandes, une boîte par patient. Les demandes se répartissent ainsi (en milliers) : patients déjà traités, 60 ; nouveaux patients avec une complication grave, 20 ; autres nouveaux patients, 20 ; demandes hors indication (pour maigrir), 20.
+<ol type="a">
+<li><em>File d’attente</em> : les patients arrivent au hasard. Quelle est la chance d’être servi ? Combien de patients déjà traités voient leur traitement interrompu ? Combien de boîtes vont aux demandes hors indication ?</li>
+<li><em>Critère médical</em> : on sert d’abord les patients déjà traités, puis les nouveaux patients avec une complication grave. Qui est servi, qui ne l’est pas ?</li>
+<li>Le critère médical a-t-il réduit la pénurie ?</li>
+</ol></li>
+<li>Le laboratoire ouvre une nouvelle usine : à chaque prix, la quantité offerte augmente de 40. Comment note-t-on ce changement ? Que devient la pénurie au prix fixé de 50&nbsp;€ ?</li>
+</ol>
+</section>
+<section id="b.-un-plafond-de-loyer" class="level3">
+<h3 class="anchored" data-anchor-id="b.-un-plafond-de-loyer">B. Un plafond de loyer</h3>
+<p>Dans une ville fictive, Q est en milliers de logements et P est le loyer mensuel, en euros. L’offre de long terme est plus élastique que l’offre de court terme.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Loyer P (€ par mois)</th>
+<th>400</th>
+<th>500</th>
+<th>600</th>
+<th>700</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quantité demandée</td>
+<td>80</td>
+<td>70</td>
+<td>60</td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td>Quantité offerte à court terme</td>
+<td>56</td>
+<td>58</td>
+<td>60</td>
+<td>62</td>
+</tr>
+<tr class="odd">
+<td>Quantité offerte à long terme</td>
+<td>40</td>
+<td>50</td>
+<td>60</td>
+<td>70</td>
+</tr>
+</tbody>
+</table>
+<p>La loi fixe un plafond Pmax = 500&nbsp;€.</p>
+<ol type="1">
+<li>Quel est l’équilibre (P*, Q*) ? Le plafond est-il contraignant ?</li>
+<li><em>À long terme.</em> Au loyer de 500&nbsp;€, combien de logements sont demandés, offerts, loués ? Quelle est la pénurie ? Pourquoi la quantité louée est-elle la quantité offerte ?</li>
+<li><em>À long terme, toujours.</em>
+<ol type="a">
+<li>D’après la ligne de la demande, combien le 50&nbsp;000<sup>e</sup> ménage logé était-il prêt à payer ?</li>
+<li>Calculez le transfert des bailleurs vers les locataires logés, puis la perte sèche, en euros par mois.</li>
+<li>Représentez la demande, l’offre de long terme et le plafond sur un graphique, et hachurez le transfert et la perte sèche.</li>
+</ol></li>
+<li><em>À court terme.</em> Au loyer de 500&nbsp;€, combien de logements sont offerts ? Quelle est la pénurie ? Sur la demande, chaque millier de logements en moins fait monter de 10&nbsp;€ le loyer que le dernier ménage logé est prêt à payer : combien le 58&nbsp;000<sup>e</sup> ménage était-il prêt à payer ? Calculez la perte sèche et comparez-la à celle de la question 3.</li>
+<li>Le plafond est finalement fixé à 650&nbsp;€. Quels sont ses effets ? Quel lien faites-vous avec le document 3 ?</li>
+<li><em>Pour aller plus loin (non noté).</em> Le SMIC est un prix plancher. Tracez un marché du travail avec un plancher Pmin au-dessus de P* et montrez l’excès d’offre. Pourquoi un monopsone change-t-il la conclusion ?</li>
+</ol>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Introduction à l’économie 2 · L1 AES et Droit · <a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2 · 2026-2027</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pierre Beaucoral">
+<meta name="description" content="Avantage comparatif, tarif douanier, chaînes de valeur.">
+
+<title>À quoi servent les droits de douane ? – Introduction à l’économie 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ce2a859f655fb0fc50a4bad14b2f71a0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-981ce10d1f6a1c0f379cc73fef8bdf9b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+
+
+</head>
+
+<body class="nav-fixed wp-cours quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo light-content">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Introduction à l’économie 2</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../programme.html"> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cours.html"> 
+<span class="menu-text">Cours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../td.html"> 
+<span class="menu-text">TD</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../methodo/index.html"> 
+<span class="menu-text">Méthodo</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#la-question" id="toc-la-question" class="nav-link active" data-scroll-target="#la-question"><span class="header-section-number">1</span> La question</a></li>
+  <li><a href="#ce-que-dit-la-théorie" id="toc-ce-que-dit-la-théorie" class="nav-link" data-scroll-target="#ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</a></li>
+  <li><a href="#les-outils" id="toc-les-outils" class="nav-link" data-scroll-target="#les-outils"><span class="header-section-number">3</span> Les outils</a></li>
+  <li><a href="#effets-de-répartition" id="toc-effets-de-répartition" class="nav-link" data-scroll-target="#effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</a></li>
+  <li><a href="#la-controverse" id="toc-la-controverse" class="nav-link" data-scroll-target="#la-controverse"><span class="header-section-number">5</span> La controverse</a></li>
+  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir"><span class="header-section-number">6</span> À retenir</a></li>
+  <li><a href="#pour-aller-plus-loin" id="toc-pour-aller-plus-loin" class="nav-link" data-scroll-target="#pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="cm9.pdf"><i class="bi bi-file-pdf"></i>Télécharger le PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">À quoi servent les droits de douane ?</h1>
+<p class="subtitle lead">CM 9 · Partie II · La monnaie, l’État, le monde</p>
+</div>
+
+<div>
+  <div class="description">
+    Avantage comparatif, tarif douanier, chaînes de valeur.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Auteur</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="rappel">
+<ul>
+<li><strong>Coût d’opportunité</strong> : ce à quoi on renonce pour obtenir quelque chose. Une heure passée à produire du blé est une heure qui ne produit pas de vêtements.</li>
+<li><strong>Surplus</strong> : le surplus du consommateur est l’écart entre ce qu’un acheteur était prêt à payer et le prix qu’il paie ; le surplus du producteur, l’écart entre le prix reçu et le coût marginal (Cm). Sur un graphique, ce sont des aires entre les courbes et la droite de prix (CM 4).</li>
+<li><strong>Perte sèche</strong> (CM 4) : surplus perdu par rapport à la meilleure quantité (échanges qui n’ont plus lieu, ou production plus coûteuse que l’importation).</li>
+<li><strong>Incidence d’une taxe</strong> : celui qui verse la taxe à l’État n’est pas forcément celui qui la supporte. Tout dépend de la réaction des prix et des quantités (CM 2).</li>
+<li><strong>Importations et exportations</strong> : achats de biens à l’étranger et ventes à l’étranger. Le solde commercial est la différence entre les deux.</li>
+</ul>
+</div>
+<section id="la-question" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="la-question"><span class="header-section-number">1</span> La question</h2>
+<p>Le 2 avril 2025, que l’administration américaine baptise « Jour de la libération », les États-Unis relèvent leurs droits de douane sur presque tous leurs partenaires. Le droit de douane moyen américain passe de 4,9 % en janvier 2025 à 24,2 % ce jour-là. En février 2026, il est encore d’environ 15 %, trois fois son niveau de départ (H. Guimbard, CEPII, <em>The Conversation</em>, 22/07/2026).</p>
+<p>L’argent rentre. Les douanes américaines encaissaient 7,9 milliards de dollars (Md$) en octobre 2024 ; elles en encaissent 33,1 Md$ en octobre 2025. Sur l’exercice budgétaire 2026 (octobre 2025 à septembre 2026), les recettes douanières brutes atteignent 317,8 Md$, contre 202,4 Md$ l’exercice précédent, soit +57 % (Trésor des États-Unis, <em>Monthly Treasury Statement</em>, téléchargé le 21/10/2026 ; calcul de l’auteur).</p>
+<p>Deux questions se posent.</p>
+<ol type="1">
+<li>Un droit de douane est versé à la frontière par l’importateur. Mais qui le paie <strong>vraiment</strong> : l’exportateur étranger, l’importateur, le consommateur ?</li>
+<li>Les économistes répètent depuis deux siècles que l’échange enrichit les deux partenaires. Pourquoi un pays taxerait-il alors ses propres achats ?</li>
+</ol>
+<p><strong>La question de la séance : à quoi servent les droits de douane ?</strong> Un gouvernement qui les relève leur donne des objectifs : procurer des recettes à l’État, protéger une industrie naissante ou en difficulté, peser dans une négociation commerciale, réduire la dépendance envers un fournisseur étranger (la sécurité économique, la souveraineté), ou encore, avec le mécanisme d’ajustement carbone aux frontières (MACF) européen, faire payer le carbone importé. On confronte ces objectifs affichés à ce que les droits coûtent, et à qui. Deux outils le mesurent : l’avantage comparatif, qui dit d’où viennent les gains de l’échange, et l’analyse d’un droit de douane en surplus, qui dit qui paie le droit, qui en profite et ce qui est perdu pour tous. Savoir si un objectif vaut ce qu’il coûte relève d’un jugement : la controverse expose les positions sans trancher. Cette séance est la dernière du programme du CC2 ; elle n’a pas de TD et n’est évaluée que dans la partie cours.</p>
+</section>
+<section id="ce-que-dit-la-théorie" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</h2>
+<section id="léchange-enrichit-même-le-pays-le-moins-productif" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="léchange-enrichit-même-le-pays-le-moins-productif"><span class="header-section-number">2.1</span> L’échange enrichit même le pays le moins productif</h3>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/david-ricardo.jpg" class="img-fluid" alt="Portrait peint de David Ricardo en 1821, homme en buste, habit sombre."> <span class="wp-credit">1821 · Thomas Phillips, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>David Ricardo</strong> (1817), <em>On the Principles of Political Economy and Taxation</em>, Londres, John Murray, chap.&nbsp;7 · école classique. Un pays gagne à se spécialiser dans les biens où son désavantage est le plus faible, même s’il est moins productif que son partenaire pour tous les biens. Ce qui compte n’est pas la productivité comparée des pays, mais le coût d’un bien mesuré en l’autre bien, à l’intérieur de chaque pays.</p>
+</div>
+<div id="def-avantage-comparatif" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (Avantage absolu, avantage comparatif)</strong></span> Un pays a un <strong>avantage absolu</strong> dans un bien s’il le produit avec moins de travail que son partenaire. Il a un <strong>avantage comparatif</strong> dans un bien si son <strong>coût d’opportunité</strong> y est plus faible : il renonce à moins d’autres biens pour en produire une unité. Un pays peut n’avoir aucun avantage absolu ; il a toujours un avantage comparatif dès que ses coûts d’opportunité diffèrent de ceux de son partenaire.</p>
+</div>
+<p>Une avocate tape plus vite que son assistant ; elle a pourtant intérêt à lui confier la frappe. Chaque heure qu’elle y passerait est une heure de plaidoirie perdue, beaucoup plus coûteuse. Le gain de l’échange vient des <strong>écarts de coûts d’opportunité</strong>, pas des écarts de productivité.</p>
+</section>
+<section id="louverture-fait-des-gagnants-et-des-perdants-à-lintérieur-de-chaque-pays" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="louverture-fait-des-gagnants-et-des-perdants-à-lintérieur-de-chaque-pays"><span class="header-section-number">2.2</span> L’ouverture fait des gagnants et des perdants à l’intérieur de chaque pays</h3>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/eli-heckscher.jpg" class="img-fluid" alt="Portrait photographique d'Eli Heckscher, homme en costume, en buste."> <span class="wp-credit">Eli Heckscher · photographe inconnu, domaine public, Wikimedia Commons</span></p>
+</div>
+<div class="wp-portrait">
+<p><img src="img/portraits/bertil-ohlin.jpg" class="img-fluid" alt="Portrait photographique de Bertil Ohlin en 1950, homme en costume, en buste."> <span class="wp-credit">1950 · photographe inconnu, CC BY-SA 4.0, Wikimedia Commons</span></p>
+</div>
+<p><strong>Eli Heckscher</strong> (1919), « Utrikeshandelns verkan på inkomstfördelningen », <em>Ekonomisk Tidskrift</em>, et <strong>Bertil Ohlin</strong> (1933), <em>Interregional and International Trade</em>, Harvard University Press · école néoclassique. Un pays exporte les biens qui utilisent beaucoup le facteur de production dont il est bien doté (travail qualifié, terres, capital) et importe ceux qui utilisent le facteur qui lui manque. Wolfgang Stolper et Paul Samuelson en tirent la conséquence (1941, « Protection and Real Wages ») : l’ouverture enrichit les détenteurs du facteur abondant et appauvrit ceux du facteur rare.</p>
+</div>
+<p>Ricardo dit que <strong>le pays</strong> gagne ; Heckscher et Ohlin, que <strong>tous ses habitants</strong> ne gagnent pas. Dans un pays riche en travail qualifié, l’ouverture profite aux ingénieurs et pèse sur les ouvriers des industries concurrencées. Un droit de douane, de même, déplace des gains et des pertes entre des groupes.</p>
+</section>
+<section id="un-droit-de-douane-est-une-taxe-sur-un-bien-importé" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="un-droit-de-douane-est-une-taxe-sur-un-bien-importé"><span class="header-section-number">2.3</span> Un droit de douane est une taxe sur un bien importé</h3>
+<div id="def-droit-douane" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 2 (Droit de douane)</strong></span> Un <strong>droit de douane</strong> (ou tarif douanier) est une taxe prélevée sur un bien importé, au passage de la frontière. Il est <strong>ad valorem</strong> quand il représente un pourcentage de la valeur du bien (15 %), <strong>spécifique</strong> quand c’est un montant par unité, noté t (10 € par tee-shirt). Le droit <strong>NPF</strong> (« nation la plus favorisée ») est le droit de base qu’un membre de l’Organisation mondiale du commerce (OMC) applique à tous ses partenaires, sauf accord particulier.</p>
+</div>
+<div id="def-petit-pays" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 3 (Petit pays, prix mondial)</strong></span> Un pays est <strong>petit</strong> sur un marché quand ses achats sont trop faibles pour modifier le prix mondial, noté <strong>Pm</strong>. Il prend ce prix comme donné : sans droit de douane, le prix intérieur est égal à Pm ; avec un droit t, il devient Pm + t. Un <strong>grand pays</strong>, au contraire, achète assez pour que ses décisions fassent bouger le prix que fixent les exportateurs.</p>
+</div>
+<p>Sur un bien importé, un droit de douane fonctionne comme n’importe quelle taxe : « qui le paie ? » est une question d’<strong>incidence</strong>, qui ne se règle pas en regardant qui remplit la déclaration en douane.</p>
+</section>
+</section>
+<section id="les-outils" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="les-outils"><span class="header-section-number">3</span> Les outils</h2>
+<section id="se-spécialiser-puis-échanger-donne-plus-de-chaque-bien" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="se-spécialiser-puis-échanger-donne-plus-de-chaque-bien"><span class="header-section-number">3.1</span> Se spécialiser puis échanger donne plus de chaque bien</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-ricardo" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Deux graphiques côte à côte, vêtements en abscisse et blé en ordonnée. À gauche, pays A : frontière de production allant de 60 tonnes de blé à 30 lots de vêtements ; le point d'autarcie est à 15 lots et 30 tonnes ; une flèche bleue mène au point avec échange, 20 lots et 40 tonnes, au-dessus de la frontière. À droite, pays B : frontière allant de 20 tonnes de blé à 40 lots ; autarcie à 20 lots et 10 tonnes ; une flèche verticale mène au point avec échange, 20 lots et 20 tonnes, au-dessus de la frontière.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ricardo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm9_files/figure-html/fig-ricardo-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Deux graphiques côte à côte, vêtements en abscisse et blé en ordonnée. À gauche, pays A : frontière de production allant de 60 tonnes de blé à 30 lots de vêtements ; le point d'autarcie est à 15 lots et 30 tonnes ; une flèche bleue mène au point avec échange, 20 lots et 40 tonnes, au-dessus de la frontière. À droite, pays B : frontière allant de 20 tonnes de blé à 40 lots ; autarcie à 20 lots et 10 tonnes ; une flèche verticale mène au point avec échange, 20 lots et 20 tonnes, au-dessus de la frontière." width="1200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ricardo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Gains de la spécialisation et de l’échange (<a href="#exm-ricardo" class="quarto-xref">Exemple&nbsp;1</a>, pays fictifs). Chaque droite grise est la frontière de production d’un pays : tout ce qu’il peut produire seul avec ses heures de travail. Cercle vide : la consommation en autarcie, quand chaque pays partage ses heures entre les deux biens. Point bleu : la consommation quand A ne fait que du blé, B que des vêtements, et qu’ils échangent 20 tonnes de blé contre 20 lots de vêtements. Lecture : avec l’échange, chaque pays consomme au-delà de ce qu’il pourrait produire seul.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="exm-ricardo" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 1 (Deux pays, deux biens, un avantage comparatif)</strong></span> Deux pays fictifs produisent du blé (en tonnes) et des vêtements (en lots) avec leur seul travail. Le tableau donne les heures nécessaires pour une unité.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Blé (1 tonne)</th>
+<th>Vêtements (1 lot)</th>
+<th>Heures disponibles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pays A</td>
+<td>2 h</td>
+<td>4 h</td>
+<td>120 h</td>
+</tr>
+<tr class="even">
+<td>Pays B</td>
+<td>12 h</td>
+<td>6 h</td>
+<td>240 h</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li><em>Avantage absolu.</em> A produit les deux biens avec moins d’heures que B (2 h contre 12 h, 4 h contre 6 h). A a un avantage absolu partout.</li>
+<li><em>Coûts d’opportunité.</em> Dans A, un lot de vêtements prend 4 h, le temps de produire 4 ÷ 2 = <strong>2 tonnes de blé</strong>. Dans B, il prend 6 h, le temps de produire 6 ÷ 12 = <strong>0,5 tonne</strong>. Les vêtements coûtent moins de blé dans B : B a un avantage comparatif dans les vêtements, A dans le blé.</li>
+<li><em>Autarcie.</em> Chaque pays consacre la moitié de ses heures à chaque bien. A produit 60 ÷ 2 = 30 t de blé et 60 ÷ 4 = 15 lots ; B produit 120 ÷ 12 = 10 t et 120 ÷ 6 = 20 lots. À deux : <strong>40 t et 35 lots</strong>.</li>
+<li><em>Spécialisation.</em> A ne fait que du blé : 120 ÷ 2 = 60 t. B ne fait que des vêtements : 240 ÷ 6 = 40 lots. À deux : <strong>60 t et 40 lots</strong>. Il y a plus des deux biens, avec les mêmes heures.</li>
+<li><em>L’échange.</em> A vend 20 t de blé à B contre 20 lots de vêtements (un lot pour une tonne). A consomme 40 t et 20 lots, au lieu de 30 et 15. B consomme 20 t et 20 lots, au lieu de 10 et 20.</li>
+<li><em>Pourquoi les deux y gagnent.</em> A obtient un lot pour 1 t de blé, alors qu’il lui en coûterait 2 t de le produire. B obtient 1 t pour un lot, alors qu’il lui en coûterait 2 lots. Le prix d’échange tombe <strong>entre</strong> les deux coûts d’opportunité : c’est la condition pour que chacun gagne.</li>
+</ol>
+</div>
+<div class="piege">
+<p>« Un pays moins productif en tout n’a rien à vendre, il sera envahi. » C’est confondre avantage absolu et avantage comparatif. Le pays B de l’exemple est moins productif pour les deux biens, et il gagne pourtant à l’échange. Sa faible productivité se paie dans ses <strong>salaires</strong>, plus bas, pas dans l’absence d’échange.</p>
+</div>
+</section>
+<section id="un-droit-de-douane-coûte-aux-consommateurs-plus-quil-ne-rapporte-aux-autres" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="un-droit-de-douane-coûte-aux-consommateurs-plus-quil-ne-rapporte-aux-autres"><span class="header-section-number">3.2</span> Un droit de douane coûte aux consommateurs plus qu’il ne rapporte aux autres</h3>
+<p>On passe à un seul marché, celui d’un bien importé, dans un petit pays.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-tarif" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique offre-demande d'un bien importé. La demande D, bleue, est décroissante ; l'offre intérieure O, ambre, est croissante. Deux droites horizontales marquent le prix mondial Pm et, plus haut, Pm plus t. Entre ces deux droites, de gauche à droite, quatre aires : a, un trapèze ambre à gauche de l'offre ; b, un petit triangle rouge entre l'offre et la verticale Q2 ; c, un rectangle gris entre Q2 et Q3 ; d, un petit triangle rouge entre Q3 et la demande. Deux flèches horizontales montrent les importations, plus longues sans droit (de Q1 à Q4) qu'avec droit (de Q2 à Q3).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tarif-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm9_files/figure-html/fig-tarif-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique offre-demande d'un bien importé. La demande D, bleue, est décroissante ; l'offre intérieure O, ambre, est croissante. Deux droites horizontales marquent le prix mondial Pm et, plus haut, Pm plus t. Entre ces deux droites, de gauche à droite, quatre aires : a, un trapèze ambre à gauche de l'offre ; b, un petit triangle rouge entre l'offre et la verticale Q2 ; c, un rectangle gris entre Q2 et Q3 ; d, un petit triangle rouge entre Q3 et la demande. Deux flèches horizontales montrent les importations, plus longues sans droit (de Q1 à Q4) qu'avec droit (de Q2 à Q3)." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tarif-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Un droit de douane t dans un petit pays. Sans droit, le prix intérieur est le prix mondial Pm ; on produit Q₁, on consomme Q₄ et on importe la différence. Avec le droit, le prix monte à Pm + t ; la production passe à Q₂, la consommation à Q₃, et les importations se réduisent. Lecture : les consommateurs perdent a + b + c + d ; les producteurs du pays gagnent a ; l’État encaisse c ; b + d (en rouge) est la perte sèche. Graphique théorique.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Le pays est petit : les exportateurs vendent toujours à Pm, et le prix intérieur monte de tout le droit, y compris pour les biens produits dans le pays. Une partie de la perte des consommateurs va aux producteurs protégés (a), une partie à l’État (c) ; le reste (b et d) n’est récupéré par personne.</p>
+<div id="exm-tarif" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 2 (Un droit de 10 € sur les tee-shirts)</strong></span> Sur un marché fictif, Q est en millions de tee-shirts par an et P en euros. La demande intérieure est D : Q = 100 − P, l’offre intérieure O : Q = P. Le prix mondial est Pm = 20 €. L’État impose un droit t = 10 € par tee-shirt, soit 50 % du prix mondial.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Prix intérieur</th>
+<th>Demande</th>
+<th>Production du pays</th>
+<th>Importations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sans droit</td>
+<td>20 €</td>
+<td>80</td>
+<td>20</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td>Avec droit</td>
+<td>30 €</td>
+<td>70</td>
+<td>30</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-tarif-chiffre" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique offre-demande des tee-shirts. Demande D, bleue : Q = 100 moins P ; offre intérieure O, ambre : Q = P. Deux droites horizontales : prix mondial Pm = 20 euros et prix avec droit 30 euros. Quantités marquées en abscisse : 20, 30, 70 et 80 millions. Entre les deux prix, les aires a, b, c et d. Deux flèches horizontales : importations sans droit, de 20 à 80 millions, soit 60 millions ; importations avec droit, de 30 à 70 millions, soit 40 millions.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tarif-chiffre-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm9_files/figure-html/fig-tarif-chiffre-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique offre-demande des tee-shirts. Demande D, bleue : Q = 100 moins P ; offre intérieure O, ambre : Q = P. Deux droites horizontales : prix mondial Pm = 20 euros et prix avec droit 30 euros. Quantités marquées en abscisse : 20, 30, 70 et 80 millions. Entre les deux prix, les aires a, b, c et d. Deux flèches horizontales : importations sans droit, de 20 à 80 millions, soit 60 millions ; importations avec droit, de 30 à 70 millions, soit 40 millions." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tarif-chiffre-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Le droit de 10 € sur les tee-shirts de l’<a href="#exm-tarif" class="quarto-xref">Exemple&nbsp;2</a> (marché fictif). Demande D : Q = 100 − P ; offre intérieure O : Q = P ; prix mondial Pm = 20 €, prix avec droit Pm + t = 30 €. Lecture : sans droit, le pays produit 20 millions de tee-shirts, en consomme 80 et en importe 60 ; avec le droit, il en produit 30, en consomme 70 et en importe 40. Les aires valent a = 250 M€, b = 50 M€, c = 400 M€ et d = 50 M€.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><em>Les consommateurs.</em> Ils paient 10 € de plus. Sur les 70 millions qu’ils achètent encore, ils perdent 700 M€ ; sur les 10 millions auxquels ils renoncent, ils perdent en moyenne 5 €, soit 50 M€. Au total : (80 + 70) ÷ 2 × 10 = <strong>750 M€</strong> (a + b + c + d).</li>
+<li><em>Les producteurs du pays.</em> Ils vendent plus cher et plus : leur surplus augmente de (20 + 30) ÷ 2 × 10 = <strong>250 M€</strong> (aire a).</li>
+<li><em>L’État.</em> Il perçoit 10 € sur chacun des 40 millions de tee-shirts importés : <strong>400 M€</strong> (aire c).</li>
+<li><em>Le bilan.</em> 750 − 250 − 400 = <strong>100 M€</strong> perdus par l’ensemble du pays : c’est la perte sèche.</li>
+<li><em>D’où vient-elle ?</em> Aire b, (30 − 20) × 10 ÷ 2 = <strong>50 M€</strong> : le pays produit lui-même 10 millions de tee-shirts qui lui coûtent entre 20 et 30 €, alors qu’il pourrait les importer à 20 €. Aire d, (80 − 70) × 10 ÷ 2 = <strong>50 M€</strong> : 10 millions d’achats n’ont plus lieu, alors que les acheteurs étaient prêts à payer plus que le prix mondial.</li>
+<li><em>La lecture.</em> Le droit <strong>transfère</strong> 650 M€ des consommateurs vers les producteurs et l’État, et en <strong>détruit</strong> 100. Le transfert est plus de six fois plus gros que la perte.</li>
+</ol>
+</div>
+<div class="piege">
+<p>« Le droit de douane est payé par l’étranger, puisque c’est son produit qui est taxé. » Dans un petit pays, l’exportateur étranger reçoit toujours 20 € : il vend moins, mais au même prix. Ce sont les acheteurs du pays qui paient les 10 €. Il faut regarder <strong>qui voit son prix changer</strong>, pas qui est nommé dans la loi.</p>
+</div>
+</section>
+<section id="qui-paie-le-droit-dépend-du-prix-que-fixe-lexportateur" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="qui-paie-le-droit-dépend-du-prix-que-fixe-lexportateur"><span class="header-section-number">3.3</span> Qui paie le droit dépend du prix que fixe l’exportateur</h3>
+<p>Un grand pays peut faire baisser le prix de ses fournisseurs : s’il achète moins, des exportateurs étrangers acceptent de baisser leur prix hors droit pour garder leurs ventes. Une partie du droit est alors payée par l’étranger.</p>
+<div id="exm-incidence" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 3 (Calculer la part payée par l’étranger)</strong></span> Reprenons le droit de 10 € par tee-shirt, mais dans un grand pays. Les exportateurs étrangers baissent leur prix hors droit de 20 € à 19 €.</p>
+<ol type="1">
+<li><em>Le prix intérieur.</em> 19 + 10 = 29 €, au lieu de 20 € sans droit : les acheteurs paient <strong>9 €</strong> de plus.</li>
+<li><em>La part des exportateurs.</em> Ils reçoivent 1 € de moins par tee-shirt : ils paient <strong>1 €</strong> du droit.</li>
+<li><em>L’incidence.</em> Part payée par l’étranger = baisse du prix hors droit ÷ droit = 1 ÷ 10 = <strong>10 %</strong>. Part payée dans le pays : <strong>90 %</strong>.</li>
+<li><em>Le bilan pour le pays.</em> À 29 €, on demande 100 − 29 = 71 millions de tee-shirts et on en produit 29 : on importe 71 − 29 = 42 millions. L’étranger paie donc 1 € × 42 millions = <strong>42 M€</strong>. La perte sèche vaut b + d = 9 × 9 ÷ 2 + 9 × 9 ÷ 2 = <strong>81 M€</strong>. Le pays reste perdant : une baisse de 1 € du prix étranger ne suffit pas.</li>
+</ol>
+</div>
+<p>Un grand pays peut donc gagner à un droit modéré si ce que paie l’étranger (la baisse de son prix hors droit multipliée par les importations) dépasse la perte sèche. Encore faut-il que ses fournisseurs baissent vraiment leurs prix et que leurs gouvernements ne répliquent pas : c’est ce que mesurent les études empiriques.</p>
+</section>
+<section id="application-les-droits-de-douane-américains-de-2025-2026" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="application-les-droits-de-douane-américains-de-2025-2026"><span class="header-section-number">3.4</span> Application : les droits de douane américains de 2025-2026</h3>
+<p>Les droits relevés en 2018 donnent un premier repère : les prix hors droit des exportateurs étrangers n’avaient pas baissé, et le droit était passé en entier dans les prix payés aux États-Unis (Amiti, Redding et Weinstein, 2019 ; Fajgelbaum et al., 2020).</p>
+<div id="tbl-reperes" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[20,55,25]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-reperes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tableau&nbsp;1: Repères datés, arrêtés au 21/10/2026.
+</figcaption>
+<div aria-describedby="tbl-reperes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 55%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Mesure</th>
+<th style="text-align: left;">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">01/2025 → 04/2025 → 02/2026</td>
+<td style="text-align: left;">Droit moyen américain : 4,9 %, 24,2&nbsp;%, puis environ 15 %</td>
+<td style="text-align: left;">Guimbard, 22/07/2026</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">21/08/2025</td>
+<td style="text-align: left;">Accord UE-États-Unis : droit américain unique de 15 %, NPF compris (le droit NPF s’il est plus élevé) ; l’UE annonce supprimer ses droits sur les produits industriels américains</td>
+<td style="text-align: left;">Maison-Blanche, 21/08/2025</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20/02/2026</td>
+<td style="text-align: left;">La Cour suprême annule les droits fondés sur une loi d’urgence (IEEPA)</td>
+<td style="text-align: left;">Deysine, 23/02/2026</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">24/02 → 24/07/2026</td>
+<td style="text-align: left;">Surtaxe temporaire de 10 % (section 122)</td>
+<td style="text-align: left;">DG Trésor, 06/08/2026</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Depuis le 24/07/2026</td>
+<td style="text-align: left;">Droit permanent de 10 % (NPF compris) pour l’UE (section 301) ; automobiles européennes à 15 % (section 232)</td>
+<td style="text-align: left;">DG Trésor, 06/08/2026</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30/07/2026</td>
+<td style="text-align: left;">L’UE suspend ses contre-mesures (jusqu’à 30 % sur 93 Md€), réactivables à tout moment</td>
+<td style="text-align: left;">DG Trésor, 06/08/2026</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2026</td>
+<td style="text-align: left;">Droits annulés à rembourser : environ 165 Md$ à 330 566 importateurs</td>
+<td style="text-align: left;">Bouët, 27/03/2026</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer.</p>
+<p><strong>Le droit est payé aux États-Unis.</strong> Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Les exportateurs étrangers ont supporté 6 % des droits de janvier à août 2025, 8 % en septembre-octobre et 14 % en novembre. Le reste, 94 %, 92 % puis 86 %, est payé par les importateurs américains : « près de 90 % » du fardeau (Amiti, Flanagan, Heise et Weinstein, <em>Liberty Street Economics</em>, 12/02/2026). Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s’est passé.</p>
+<p><strong>Puis il passe dans les prix à la consommation.</strong> Les prix à l’importation réagissent presque un pour un dès le premier mois ; un point de droit en plus fait monter les prix des biens de consommation d’environ 0,25 % au bout d’un an. L’effet est plus faible que le droit : les biens importés ne sont qu’une partie de ce que l’on consomme, et un tee-shirt vendu en magasin contient aussi du transport, des loyers et des salaires du pays. En février 2026, les droits ajoutaient 2,9 points à l’inflation des biens, dont les prix auraient sinon légèrement baissé (Amiti, Heise et Weinstein, <em>Liberty Street Economics</em>, 06/10/2026).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-prix-import" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique en lignes, un point par mois de janvier 2024 à septembre 2026, indices base 100 en janvier 2025. Les prix des importations hors droit, en bleu, montent de 98 à 100 en 2024, puis restent à 100 de janvier à septembre 2025, malgré la ligne verticale en pointillés du 2 avril 2025 ; ils remontent ensuite jusqu'à 106 en septembre 2026. Les prix à la consommation des biens, en ambre, baissent légèrement en 2024, autour de 99,5, puis montent à 101 en septembre 2025 et à 101,7 en septembre 2026. Les deux courbes sont coupées en octobre 2025, mois sans données.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-prix-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm9_files/figure-html/fig-prix-import-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique en lignes, un point par mois de janvier 2024 à septembre 2026, indices base 100 en janvier 2025. Les prix des importations hors droit, en bleu, montent de 98 à 100 en 2024, puis restent à 100 de janvier à septembre 2025, malgré la ligne verticale en pointillés du 2 avril 2025 ; ils remontent ensuite jusqu'à 106 en septembre 2026. Les prix à la consommation des biens, en ambre, baissent légèrement en 2024, autour de 99,5, puis montent à 101 en septembre 2025 et à 101,7 en septembre 2026. Les deux courbes sont coupées en octobre 2025, mois sans données." width="1125">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prix-import-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Prix des importations hors droit et prix à la consommation des biens aux États-Unis, janvier 2024 à septembre 2026, indices base 100 en janvier 2025. Bleu : prix des biens importés (hors carburants), mesurés sans le droit de douane, donc ce que reçoit l’exportateur étranger ; ambre : prix à la consommation des biens hors alimentation et énergie. Lecture : si l’étranger payait le droit, la courbe bleue baisserait après le 2 avril 2025 ; elle reste plate, tandis que la courbe ambre monte. L’indice couvre tous les biens importés, taxés ou non. Pas de relevé en octobre 2025 (fermeture de l’administration fédérale). Source : Bureau of Labor Statistics, séries EIUIREXFUELS et CUSR0000SACL1E (téléchargées le 21/10/2026) ; base 100 calculée par l’auteur.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>De janvier à septembre 2025, les prix hors droit des biens importés ne bougent pas (indice de 129,8 aux deux dates) : en moyenne, les exportateurs étrangers n’ont pas baissé leurs prix (<a href="#fig-prix-import" class="quarto-xref">Figure&nbsp;4</a>). Les prix à la consommation des biens hors alimentation et énergie montent de 1,0 %, contre une baisse de 0,6 % sur la même période de 2024 (Bureau of Labor Statistics, téléchargé le 21/10/2026 ; calcul de l’auteur). De décembre 2025 à septembre 2026, les prix hors droit des importations augmentent de 5,2 % : la figure ne dit pas pourquoi, mais elle ne montre toujours pas d’exportateurs qui baissent leurs prix.</p>
+<p><strong>Selon une estimation, les transferts sont gros et la perte nette petite.</strong> Sur les droits de 2018, Fajgelbaum et al.&nbsp;(2020) estiment la perte des acheteurs de biens importés, consommateurs et entreprises, à 51 Md$, soit 0,27 % du PIB américain. Une fois comptés la recette douanière et le gain des producteurs protégés, la perte nette tombe à 7,2 Md$, 0,04 % du PIB : c’est l’<a href="#exm-tarif" class="quarto-xref">Exemple&nbsp;2</a> en grand.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-recettes-douane" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center" alt="Graphique en lignes, un point par mois d'octobre 2024 à septembre 2026. Les recettes brutes, en bleu, restent vers 8 milliards de dollars jusqu'en mars 2025, montent après le 2 avril 2025 jusqu'à 33 milliards en octobre 2025, puis redescendent vers 27 milliards au début de 2026, puis vers 22 à 25 milliards à partir de mars. Les recettes nettes, en ambre, suivent les brutes jusqu'en avril 2026, puis plongent à zéro en mai, à moins 26 milliards en juin et moins 9 milliards en juillet 2026, avant de remonter à 13 puis 6 milliards. Deux lignes verticales en pointillés marquent le 2 avril 2025 et le 20 février 2026.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-recettes-douane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm9_files/figure-html/fig-recettes-douane-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique en lignes, un point par mois d'octobre 2024 à septembre 2026. Les recettes brutes, en bleu, restent vers 8 milliards de dollars jusqu'en mars 2025, montent après le 2 avril 2025 jusqu'à 33 milliards en octobre 2025, puis redescendent vers 27 milliards au début de 2026, puis vers 22 à 25 milliards à partir de mars. Les recettes nettes, en ambre, suivent les brutes jusqu'en avril 2026, puis plongent à zéro en mai, à moins 26 milliards en juin et moins 9 milliards en juillet 2026, avant de remonter à 13 puis 6 milliards. Deux lignes verticales en pointillés marquent le 2 avril 2025 et le 20 février 2026." width="1125">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-recettes-douane-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Recettes douanières des États-Unis, en milliards de dollars par mois, d’octobre 2024 à septembre 2026. Bleu : recettes brutes ; ambre : recettes nettes des remboursements. Lecture : les recettes brutes sont multipliées par quatre entre l’automne 2024 et l’automne 2025. Après l’arrêt de la Cour suprême, les remboursements des droits annulés rendent les recettes nettes négatives de mai à juillet 2026. Source : Trésor des États-Unis, Monthly Treasury Statement, table 4, ligne « Customs Duties » (téléchargé le 21/10/2026).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>L’argent rendu ne revient pas forcément à ceux qui ont payé.</strong> L’écart entre recettes brutes et nettes, surtout des remboursements, passe de 7,5 Md$ sur l’exercice 2025 à 145 Md$ sur l’exercice 2026 (<a href="#fig-recettes-douane" class="quarto-xref">Figure&nbsp;5</a> ; calcul de l’auteur). Ces remboursements vont aux <strong>importateurs</strong>, qui ont versé les droits, alors qu’ils ont pu en répercuter une partie sur leurs clients. Pour les uns, une taxe annulée doit être rendue au contribuable légal ; pour d’autres, l’importateur qui a fait payer ses clients n’a droit à rien (Deysine, <em>The Conversation</em>, 23/02/2026). Savoir qui a supporté le droit est une question positive ; décider qui doit être remboursé est une question normative, que tranchent le droit et les tribunaux.</p>
+</section>
+</section>
+<section id="effets-de-répartition" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</h2>
+<section id="les-acheteurs-paient-les-producteurs-protégés-gagnent" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="les-acheteurs-paient-les-producteurs-protégés-gagnent"><span class="header-section-number">4.1</span> Les acheteurs paient, les producteurs protégés gagnent</h3>
+<p><strong>Par revenu.</strong> Les droits relevés en 2018 et en 2019 devaient coûter 831 $ par an à un ménage américain typique, hors représailles (Amiti, Redding et Weinstein, <em>Liberty Street Economics</em>, 23/05/2019). Comme une taxe sur les biens de consommation, un tel droit pèse plus, en part du revenu, sur les ménages qui dépensent tout leur revenu que sur ceux qui en épargnent une partie. C’est un raisonnement : les sources de cette séance ne chiffrent pas l’écart par niveau de revenu.</p>
+<p><strong>Entre entreprises : les chaînes de valeur.</strong></p>
+<div id="def-chaine-valeur" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 4 (Chaîne de valeur)</strong></span> Une <strong>chaîne de valeur</strong> est la suite des étapes de production d’un bien, de la matière première au produit fini. Quand ces étapes sont réparties entre plusieurs pays, un bien franchit plusieurs frontières avant d’être vendu.</p>
+</div>
+<p>En 2018, les prix des biens intermédiaires, comme l’acier, ont augmenté comme ceux des biens finals, et les chaînes d’approvisionnement ont été réorganisées (Amiti et al., 2019).</p>
+<div id="tbl-chaine-acier" class="quarto-float quarto-figure quarto-figure-center anchored" data-tbl-colwidths="[10,90]">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chaine-acier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tableau&nbsp;2: Chaîne de causalité d’un droit sur un bien intermédiaire (l’acier). Lecture : on suit le droit de l’étape 1 à l’étape 5 ; l’étape 5 est un raisonnement, que les sources de cette séance ne chiffrent pas.
+</figcaption>
+<div aria-describedby="tbl-chaine-acier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 90%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Étape</th>
+<th style="text-align: left;">Ce qui se passe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Le droit de douane t renchérit l’acier importé.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Les aciéries du pays peuvent relever leur prix : elles gagnent (le rectangle a de la <a href="#fig-tarif" class="quarto-xref">Figure&nbsp;2</a>).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Les entreprises qui achètent de l’acier (automobile, machines) voient leur coût marginal (Cm) monter.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">Elles relèvent leur prix ou réduisent leur production : les acheteurs de voitures et de machines paient plus.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Ces entreprises vendent moins, y compris à l’exportation : le droit censé protéger l’industrie en pénalise une partie.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-port-los-angeles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Photographie d'un grand porte-conteneurs chargé de conteneurs colorés, amarré à un quai équipé de hautes grues, sous un ciel clair.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-port-los-angeles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/cm9/port-los-angeles.jpg" class="img-fluid figure-img" alt="Photographie d'un grand porte-conteneurs chargé de conteneurs colorés, amarré à un quai équipé de hautes grues, sous un ciel clair.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-port-los-angeles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Un porte-conteneurs à quai au port de Los Angeles. Lecture : le droit de douane se perçoit à ce type de frontière ; dans une chaîne de valeur, une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Photo : Downtowngal, CC BY-SA 4.0, Wikimedia Commons.
+</figcaption>
+</figure>
+</div>
+<p><strong>Par territoire.</strong> Les gains de l’ouverture sont diffus ; ses pertes sont concentrées. De 1990 à 2007, les zones industrielles américaines les plus exposées aux importations chinoises ont connu plus de chômage, des salaires plus bas et plus d’aides sociales ; cette concurrence explique environ un quart du recul de l’emploi industriel américain (Autor, Dorn et Hanson, 2013). Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles ont aussi leurs perdants localisés : en 2018, les droits des partenaires ont surtout frappé les travailleurs des secteurs exportateurs, notamment agricoles (Fajgelbaum et al., 2020).</p>
+<p><strong>Par génération.</strong> L’argument de l’industrie naissante (voir la controverse) est un pari entre générations : les consommateurs d’aujourd’hui paient plus cher pour qu’une industrie devienne compétitive demain. Il n’est gagnant que si ce gain existe et si la protection est retirée ensuite.</p>
+<p><strong>À l’étranger.</strong> Les exportateurs qui perdent leurs ventes perdent leur surplus. En 2025, l’UE a vendu pour 554,7 milliards d’euros (Md€) de biens aux États-Unis (Eurostat, <code>ext_lt_maineu</code>, téléchargé le 21/10/2026).</p>
+</section>
+<section id="le-macf-un-droit-de-douane-pour-le-climat" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="le-macf-un-droit-de-douane-pour-le-climat"><span class="header-section-number">4.2</span> Le MACF : un droit de douane pour le climat ?</h3>
+<p>L’Union européenne fait payer à ses industriels un prix du carbone. Produire hors de l’UE, là où émettre ne coûte rien, puis y exporter devient tentant : c’est la <strong>fuite de carbone</strong>. Le <strong>mécanisme d’ajustement carbone aux frontières</strong> (MACF) veut l’empêcher en faisant payer aux importations le carbone émis pour les produire, à un prix calculé sur celui des quotas européens (Commission européenne, page CBAM, consultée le 21/10/2026). Il s’applique depuis le 1<sup>er</sup> janvier 2026 au ciment, au fer et à l’acier, à l’aluminium, aux engrais, à l’électricité et à l’hydrogène (<em>ibid.</em>). Il devient payant en 2027 : les certificats pour les importations de 2026 sont vendus à partir du 1<sup>er</sup> février 2027, et seuls les importateurs de plus de 50 tonnes par an sont concernés (Mayer Brown, 17/10/2025).</p>
+<p>Ce droit vise moins à protéger une industrie qu’à faire payer le même prix au carbone produit dans l’UE et au carbone importé. Ses perdants sont souvent loin : le Mozambique tire près d’un cinquième de ses exportations totales de l’aluminium vendu à l’UE. Deux économistes de l’Agence française de développement proposent d’en exempter les pays les moins avancés et de les aider autrement (Godin et Riccioppo Magacho, <em>The Conversation</em>, 10/01/2023).</p>
+</section>
+</section>
+<section id="la-controverse" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="la-controverse"><span class="header-section-number">5</span> La controverse</h2>
+<section id="faut-il-protéger-ses-producteurs" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="faut-il-protéger-ses-producteurs"><span class="header-section-number">5.1</span> Faut-il protéger ses producteurs ?</h3>
+<p><strong>Ce que l’analyse établit (positif).</strong></p>
+<ul>
+<li><strong>Qui paie.</strong> Les droits américains de 2018 et de 2025 ont été payés à 86 % ou plus par les importateurs et les consommateurs américains (Amiti et al., 2019 ; <em>Liberty Street Economics</em>, 12/02/2026).</li>
+<li><strong>Combien.</strong> Un droit transfère du revenu des acheteurs vers les producteurs protégés et l’État, et en détruit une partie (la perte sèche), dont l’ampleur varie selon les estimations.</li>
+<li><strong>Un déficit bilatéral n’est pas une perte.</strong> L’administration américaine a justifié ses droits par le déficit commercial (Deysine, 23/02/2026) : les États-Unis achètent à l’UE bien plus de biens qu’ils ne lui en vendent (<a href="#tbl-commerce-ue-usa" class="quarto-xref">Table&nbsp;3</a>). Mais dans l’<a href="#exm-ricardo" class="quarto-xref">Exemple&nbsp;1</a>, le gain de chaque pays vient de ce qu’il <strong>importe</strong> à bon prix, pas d’un solde positif. Et un solde bilatéral ne dit rien des échanges avec les autres pays ni des services, qui ne figurent pas ici.</li>
+</ul>
+<div id="tbl-commerce-ue-usa" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-commerce-ue-usa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tableau&nbsp;3: Échanges de biens entre l’UE à 27 et les États-Unis. Source : Eurostat, jeu <code>ext_lt_maineu</code>, mis à jour le 16/10/2026, téléchargé le 21/10/2026 ; solde calculé par l’auteur.
+</figcaption>
+<div aria-describedby="tbl-commerce-ue-usa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Milliards d’euros</th>
+<th>2023</th>
+<th>2024</th>
+<th>2025</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exportations de biens de l’UE vers les États-Unis</td>
+<td>505,9</td>
+<td>535,6</td>
+<td>554,7</td>
+</tr>
+<tr class="even">
+<td>Importations de biens de l’UE depuis les États-Unis</td>
+<td>347,8</td>
+<td>337,4</td>
+<td>356,7</td>
+</tr>
+<tr class="odd">
+<td>Solde, vu de l’UE</td>
+<td>+158,1</td>
+<td>+198,2</td>
+<td>+198,0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Ce qui relève d’un jugement (normatif).</strong> Savoir qui paie ne dit pas si l’objectif affiché vaut ce qu’il coûte. Tout dépend du poids que l’on donne :</p>
+<ul>
+<li>au <strong>pouvoir d’achat</strong> de tous les consommateurs ;</li>
+<li>aux <strong>emplois</strong> et aux <strong>territoires</strong> concentrés qui perdent à l’ouverture ;</li>
+<li>à la <strong>dépendance</strong> envers un fournisseur étranger en cas de crise ;</li>
+<li>au <strong>climat</strong>, quand le droit porte sur le carbone importé.</li>
+</ul>
+<p><strong>Les écoles en présence.</strong></p>
+<ul>
+<li><strong>Le libre-échange.</strong> Dans la tradition de Ricardo, puis des néoclassiques, l’échange enrichit les pays : mieux vaut compenser les perdants (aides, formation, politiques régionales) que taxer tout le monde. Frédéric Bastiat, au XIX<sup>e</sup> siècle, refusait même de répondre à la protection par la protection, selon une phrase qu’on lui attribue : « Ce n’est pas parce que les étrangers ont des côtes rocheuses que nous devons mettre des rochers dans nos ports » (cité par La finance pour tous, « Le protectionnisme », mis à jour le 07/04/2025).</li>
+<li><strong>Le protectionnisme éducateur.</strong> L’économiste allemand Friedrich List, au XIX<sup>e</sup> siècle, défend une protection <strong>temporaire</strong> des « industries naissantes », retirée une fois qu’elles sont compétitives (<em>ibid.</em>).</li>
+<li><strong>Les limites de chaque camp, selon ses critiques.</strong> Côté libre-échange, la compensation des perdants, promise en théorie, reste partielle en pratique (Autor et al., 2013). Côté protection : les représailles, le choix des secteurs protégés, qui revient souvent aux mieux organisés, et le risque de protéger des rentes plutôt que des industries d’avenir (La finance pour tous, 07/04/2025).</li>
+</ul>
+<p>Le désaccord porte moins sur le mécanisme de la <a href="#fig-tarif" class="quarto-xref">Figure&nbsp;2</a>, largement admis, que sur ce que vaut un emploi industriel préservé, comparé au surcoût payé par des millions d’acheteurs.</p>
+<div class="droit">
+<p>Aux États-Unis, la Constitution donne au Congrès, et à lui seul, le pouvoir de lever l’impôt et les droits de douane. Le 20 février 2026, dans l’arrêt <em>Learning Resources, Inc.&nbsp;v. Trump</em>, la Cour suprême a jugé par six voix contre trois que la loi sur les pouvoirs d’urgence (IEEPA) ne permettait pas au président de créer des droits de douane sans le Congrès (Deysine, <em>The Conversation</em>, 23/02/2026). Dans l’Union européenne, la politique commerciale est une compétence exclusive de l’Union (traité sur le fonctionnement de l’UE, art. 3 et 207) : la France ne fixe pas seule ses droits de douane, et c’est la Commission qui négocie pour les 27.</p>
+</div>
+</section>
+</section>
+<section id="à-retenir" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="à-retenir"><span class="header-section-number">6</span> À retenir</h2>
+<div class="retenir">
+<ul>
+<li>Un pays gagne à l’échange dès que ses coûts d’opportunité diffèrent de ceux de son partenaire, même s’il est moins productif partout (Ricardo).</li>
+<li>L’ouverture fait gagner le pays mais pas tous ses habitants : les détenteurs du facteur rare y perdent (Heckscher-Ohlin, Stolper-Samuelson), et ces pertes se concentrent sur les territoires concurrencés.</li>
+<li>Dans un petit pays, un droit t fait monter le prix intérieur de Pm à Pm + t : il transfère du revenu des acheteurs vers les producteurs protégés et l’État, et en détruit une partie, la perte sèche.</li>
+<li>La part d’un droit payée par l’étranger est la baisse de son prix hors droit divisée par le droit ; pour les droits américains de 2018 et de 2025, elle a été faible, de 0 à 14 %.</li>
+<li>Un droit de douane peut viser des recettes, la protection d’une industrie, un rapport de force, la sécurité des approvisionnements ou le climat ; juger si cet objectif vaut son coût est une question normative, qui oppose le libre-échange au protectionnisme éducateur de List.</li>
+</ul>
+</div>
+</section>
+<section id="pour-aller-plus-loin" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</h2>
+<div class="wp-video">
+<iframe src="https://www.youtube-nocookie.com/embed/ip9d1UJ4RYg" title="Dessine-moi l'éco : Qu'est-ce que l'avantage comparatif ?" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Dessine-moi l’éco · « Qu’est-ce que l’avantage comparatif ? » · 3 min 01 · mis en ligne le 27/03/2013</p>
+</div>
+<div class="wp-video">
+<iframe src="https://www.youtube-nocookie.com/embed/F1KalwwHwTk" title="Taxes Trump : la politique de l'incertitude | L'Essentiel du Dessous des Cartes" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Arte, <em>Le Dessous des cartes</em> · « Taxes Trump : la politique de l’incertitude » · 3 min 32 · mis en ligne le 24/02/2026</p>
+</div>
+<p><strong>Articles</strong></p>
+<ul>
+<li><em>The Conversation</em>, H. Guimbard (CEPII), « Le mur tarifaire de Donald Trump, brique après brique », 22/07/2026. <a href="https://theconversation.com/le-mur-tarifaire-de-donald-trump-brique-apres-brique-288065">Lien</a></li>
+<li><em>The Conversation</em>, A. E. Deysine, « Trump désavoué par la Cour suprême sur les droits de douane : et maintenant ? », 23/02/2026. <a href="https://theconversation.com/trump-desavoue-par-la-cour-supreme-sur-les-droits-de-douane-et-maintenant-276613">Lien</a></li>
+<li>Le Blog du CEPII, A. Bouët, « Droits de douane américains : encore plus de chaos et 10 milliards d’intérêts à payer », 27/03/2026. <a href="https://www.cepii.fr/BLOG/bi/post.asp?IDcommunique=1186">Lien</a></li>
+<li><em>The Conversation</em>, A. Godin et G. Riccioppo Magacho (AFD), « Un ajustement carbone aux frontières de l’UE n’est pas sans risque pour les pays les plus pauvres », 10/01/2023. <a href="https://theconversation.com/un-ajustement-carbone-aux-frontieres-de-lue-nest-pas-sans-risque-pour-les-pays-les-plus-pauvres-197218">Lien</a></li>
+</ul>
+<p><strong>Sources institutionnelles</strong></p>
+<ul>
+<li>DG Trésor, « Droits de douane américains et position européenne : informations pour les entreprises », publié le 06/08/2026. <a href="https://www.tresor.economie.gouv.fr/services-aux-entreprises/droits-de-douane-americains-et-reponse-europeenne-informations-pour-les-entreprises">Lien</a></li>
+<li>Maison-Blanche, « Joint Statement on a United States-European Union Framework on an Agreement on Reciprocal, Fair, and Balanced Trade », 21/08/2025 (en anglais). <a href="https://www.whitehouse.gov/briefings-statements/2025/08/joint-statement-on-a-united-states-european-union-framework-on-an-agreement-on-reciprocal-fair-and-balanced-trade/">Lien</a></li>
+<li>Réserve fédérale de New York, <em>Liberty Street Economics</em>, M. Amiti, C. Flanagan, S. Heise et D. E. Weinstein, « Who Is Paying for the 2025 U.S. Tariffs? », 12/02/2026 (en anglais). <a href="https://libertystreeteconomics.newyorkfed.org/2026/02/who-is-paying-for-the-2025-u-s-tariffs/">Lien</a></li>
+<li>Réserve fédérale de New York, <em>Liberty Street Economics</em>, M. Amiti, S. Heise et D. E. Weinstein, « How Fast Do Tariffs Pass Through into Consumer Prices? », 06/10/2026 (en anglais). <a href="https://libertystreeteconomics.newyorkfed.org/2026/10/how-fast-do-tariffs-pass-through-into-consumer-prices/">Lien</a></li>
+<li>Réserve fédérale de New York, <em>Liberty Street Economics</em>, M. Amiti, S. Redding et D. E. Weinstein, « New China Tariffs Increase Costs to U.S. Households », 23/05/2019 (en anglais). <a href="https://libertystreeteconomics.newyorkfed.org/2019/05/new-china-tariffs-increase-costs-to-us-households/">Lien</a></li>
+<li>Commission européenne, « Carbon Border Adjustment Mechanism », consulté le 21/10/2026 (en anglais). <a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en">Lien</a></li>
+<li>Mayer Brown, « EU Adopts CBAM Simplification Regulation: 10 Key Amendments and Challenges Ahead », 17/10/2025 (en anglais ; calendrier du règlement (UE) 2025/2083). <a href="https://www.mayerbrown.com/en/insights/publications/2025/10/eu-adopts-cbam-simplification-regulation-10-key-amendments-and-challenges-ahead">Lien</a></li>
+<li>La finance pour tous, « Le protectionnisme », mis à jour le 07/04/2025. <a href="https://www.lafinancepourtous.com/decryptages/politiques-economiques/economie-mondiale/le-protectionnisme/">Lien</a></li>
+<li>Eurostat, « Commerce extra-UE par partenaire » (jeu <code>ext_lt_maineu</code>), navigateur de données. <a href="https://ec.europa.eu/eurostat/databrowser/view/ext_lt_maineu/default/table?lang=fr">Lien</a></li>
+<li>Trésor des États-Unis, Fiscal Data, <em>Monthly Treasury Statement (MTS)</em>, table 4, ligne « Customs Duties » (en anglais). <a href="https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/">Lien</a></li>
+</ul>
+<p><strong>Références académiques</strong></p>
+<ul>
+<li>Amiti, M., Redding, S. J. et Weinstein, D. E. (2019), « The Impact of the 2018 Tariffs on Prices and Welfare », <em>Journal of Economic Perspectives</em>, 33(4), 187-210. <a href="https://doi.org/10.1257/jep.33.4.187">DOI</a></li>
+<li>Autor, D. H., Dorn, D. et Hanson, G. H. (2013), « The China Syndrome: Local Labor Market Effects of Import Competition in the United States », <em>American Economic Review</em>, 103(6), 2121-2168. <a href="https://doi.org/10.1257/aer.103.6.2121">DOI</a></li>
+<li>Fajgelbaum, P. D., Goldberg, P. K., Kennedy, P. J. et Khandelwal, A. K. (2020), « The Return to Protectionism », <em>Quarterly Journal of Economics</em>, 135(1), 1-55. <a href="https://doi.org/10.1093/qje/qjz036">DOI</a></li>
+<li>Stolper, W. F. et Samuelson, P. A. (1941), « Protection and Real Wages », <em>Review of Economic Studies</em>, 9(1), 58-73. <a href="https://doi.org/10.2307/2967638">DOI</a></li>
+<li>Ricardo, D. (1817), <em>On the Principles of Political Economy and Taxation</em>, Londres, John Murray, chap.&nbsp;7.</li>
+<li>Heckscher, E. F. (1919), « Utrikeshandelns verkan på inkomstfördelningen. Några teoretiska grundlinjer », <em>Ekonomisk Tidskrift</em>, 21, 1-32 (en suédois).</li>
+<li>Ohlin, B. (1933), <em>Interregional and International Trade</em>, Cambridge (Mass.), Harvard University Press.</li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Introduction à l’économie 2 · L1 AES et Droit · <a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2 · 2026-2027</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

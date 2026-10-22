@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Pierre Beaucoral">
+  <title>Introduction à l'économie 2 – Augmenter le prix du tabac fait-il arrêter de fumer ?</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f8ff5e1e7a9f42b47124dbc496ea69e2.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-kicker="Introduction à l’économie 2 · CM 2" class="quarto-title-block center">
+  <h1 class="title">Augmenter le prix du tabac fait-il arrêter de fumer ?</h1>
+  <p class="subtitle">CM 2 · Partie I · Marchés, prix et régulations</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> 
+</div>
+        <p class="quarto-title-affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="un-paquet-de-cigarettes-coûte-1350-en-février-2026" class="slide level2">
+<h2>Un paquet de cigarettes coûte 13,50 € en février 2026</h2>
+<p>Le prix moyen était de 3,20 € en 2000 et de 13 € en 2025.</p>
+<p>(C. Hill, 2026 ; I. Obradovic, <em>The Conversation</em>, 25/07/2026)</p>
+<aside class="notes">
+<p>0 h 00 – 0 h 04. Accroche : qui connaît le prix d’un paquet ? Main levée.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pourtant-les-ventes-des-buralistes-reculent-de-82-en-2025" class="slide level2">
+<h2>Pourtant, les ventes des buralistes reculent de 8,2 % en 2025</h2>
+<ul>
+<li>30 165 tonnes vendues, contre 32 846 en 2024</li>
+<li>Fumeurs quotidiens : environ 25 % des 18-75 ans en 2014, 18 % en 2024</li>
+<li>Décès prématurés attribués au tabac : 68 000 en 2023</li>
+</ul>
+<p>(OFDT, AFP, 28/05/2026 ; Santé publique France, citée par La finance pour tous, 24/07/2026)</p>
+<aside class="notes">
+<p>0 h 04 – 0 h 08. Le tabac reste meurtrier malgré la baisse.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="augmenter-le-prix-fait-il-arrêter-de-fumer-trois-questions-en-une" class="slide level2">
+<h2>Augmenter le prix fait-il arrêter de fumer ? Trois questions en une</h2>
+<ol type="1">
+<li><strong>De combien</strong> les ventes baissent-elles ? L’élasticité.</li>
+<li><strong>Qui paie</strong> la taxe ? L’incidence fiscale.</li>
+<li>Un fumeur dépendant <strong>réagit-il</strong> au prix ? L’addiction.</li>
+</ol>
+<aside class="notes">
+<p>0 h 08 – 0 h 12. Demander à l’amphi de parier : le fumeur réagit-il, oui ou non ? On y revient à la fin.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rappel-cinq-notions-suffisent-pour-la-séance" class="slide level2">
+<h2>Rappel : cinq notions suffisent pour la séance</h2>
+<div class="rappel">
+<ul>
+<li><strong>Élasticité</strong> e = ΔQ (%) ÷ ΔP (%), négative ; |e| &lt; 1 : peu élastique</li>
+<li><strong>Déplacer</strong> une courbe : O → O′</li>
+<li><strong>Accise</strong> : impôt indirect sur un produit précis</li>
+<li><strong>Externalité</strong> : effet sur les autres, non compensé</li>
+<li><strong>Positif</strong> décrit, <strong>normatif</strong> juge</li>
+</ul>
+</div>
+<aside class="notes">
+<p>0 h 12 – 0 h 20. Lire la page ; ne pas redévelopper. Question : une hausse de taxe glisse-t-elle le long de la demande, ou la déplace-t-elle ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="marshall-lélasticité-mesure-la-sensibilité-de-la-demande-au-prix" class="slide level2">
+<h2>Marshall : l’élasticité mesure la sensibilité de la demande au prix</h2>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img data-src="../cours/img/portraits/alfred-marshall.jpg" alt="Portrait photographique d'Alfred Marshall vers 1891, homme âgé à barbe blanche, en buste."> <span class="wp-credit">Vers 1891 · Elliott and Fry, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Alfred Marshall</strong> (1890), <em>Principles of Economics</em> · école néoclassique. Elle dépend de l’existence de substituts et du temps laissé aux acheteurs pour s’adapter.</p>
+</div>
+<aside class="notes">
+<p>0 h 20 – 0 h 24. Pour le tabac : peu de substituts à court terme.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="si-la-demande-est-peu-élastique-la-dépense-monte-avec-le-prix" class="slide level2">
+<h2>Si la demande est peu élastique, la dépense monte avec le prix</h2>
+<div id="def-depense" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (Dépense totale)</strong></span> Dépense = P × Q, aussi la recette des vendeurs. Prix en hausse : |e| &lt; 1, la dépense <strong>augmente</strong> ; |e| &gt; 1, elle <strong>diminue</strong>.</p>
+</div>
+<aside class="notes">
+<p>0 h 24 – 0 h 28. Écrire P × Q au tableau ; deux rectangles à la diapo suivante.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pour-le-tabac-e-est-compris-entre-05-et-03" class="slide level2">
+<h2>Pour le tabac, e est compris entre −0,5 et −0,3</h2>
+<p>Une hausse de 10 % du prix fait baisser les ventes de 3 à 5 %.</p>
+<p>(Santé publique France ; <em>La finance pour tous</em>, 24/07/2026 ; Hill, 2026)</p>
+<aside class="notes">
+<p>0 h 28 – 0 h 32. Trois estimations : −0,4 ; entre −0,3 et −0,4 ; −0,50 sur 1950-2025.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quand-le-prix-monte-on-gagne-un-rectangle-et-on-en-perd-un" class="slide level2">
+<h2>Quand le prix monte, on gagne un rectangle et on en perd un</h2>
+
+<img data-src="cm2_files/figure-revealjs/fig-depense-1.png" id="fig-depense" alt="Demande bleue décroissante. De 10 à 12 euros, la quantité passe de 100 à 92 millions de paquets. Rectangle bleu gagné, plus 184 ; rectangle rouge perdu, moins 80." width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;1
+</p><aside class="notes">
+<p>0 h 32 – 0 h 36. Exemple fictif. Bleu : +184 M€ ; rouge : −80 M€.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="même-hausse-de-20-deux-histoires-selon-lélasticité" class="slide level2">
+<h2>Même hausse de 20 %, deux histoires selon l’élasticité</h2>
+<ol type="1">
+<li>e = −0,4 : Q −8 %, 92 millions ; dépense 1 000 → <strong>1 104</strong> M€ (+10,4 %)</li>
+<li>e = −1,5 : Q −30 %, 70 millions ; dépense → <strong>840</strong> M€ (−16 %)</li>
+</ol>
+<p>Peu élastique : la hausse frappe surtout le budget. Élastique : elle réduit surtout la consommation.</p>
+<aside class="notes">
+<p>0 h 36 – 0 h 44. Faire calculer à la main, étape par étape, avant de montrer le résultat.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="jenkin-celui-qui-verse-la-taxe-nest-pas-celui-qui-la-paie" class="slide level2">
+<h2>Jenkin : celui qui verse la taxe n’est pas celui qui la paie</h2>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img data-src="../cours/img/portraits/jenkin-fleeming.jpg" alt="Portrait de Fleeming Jenkin, ingénieur et économiste britannique, en buste."> <span class="wp-credit">Avant 1885 · Robert Louis Stevenson, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Fleeming Jenkin</strong> (1872), <em>Proceedings of the Royal Society of Edinburgh</em> · précurseur de l’analyse néoclassique. La charge dépend de la forme des deux courbes, non de celui qui verse.</p>
+</div>
+<p><strong>Incidence fiscale</strong> : répartition réelle de la charge entre acheteurs et vendeurs.</p>
+<aside class="notes">
+<p>0 h 44 – 0 h 50. Distinguer incidence légale et incidence économique. Le buraliste achète taxes comprises.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="une-taxe-t-déplace-loffre-vers-le-haut-o-devient-o-o-t" class="slide level2">
+<h2>Une taxe t déplace l’offre vers le haut : O devient O′ = O + t</h2>
+
+<img data-src="cm2_files/figure-revealjs/fig-incidence-1.png" id="fig-incidence" alt="Offre-demande : l'offre monte de t, de O à O prime, en tirets. Le nouvel équilibre E prime a un prix plus élevé P étoile prime et une quantité plus faible. L'acheteur paie P étoile prime, le vendeur garde P étoile prime moins t." width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;2
+</p><aside class="notes">
+<p>0 h 50 – 0 h 56. Suivre la flèche : on glisse le long de D. L’acheteur paie P<em>′, le vendeur garde P</em>′ − t.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="la-charge-retombe-sur-le-côté-du-marché-le-moins-élastique" class="slide level2">
+<h2>La charge retombe sur le côté du marché le moins élastique</h2>
+<p>Le fumeur dépendant a peu de substituts à court terme : il est en mauvaise position pour échapper à la taxe.</p>
+<aside class="notes">
+<p>0 h 56 – 1 h 00. Question : et si le vendeur était le moins élastique ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="une-taxe-de-5-les-acheteurs-en-paient-4-les-vendeurs-1" class="slide level2">
+<h2>Une taxe de 5 € : les acheteurs en paient 4, les vendeurs 1</h2>
+<ul>
+<li>Offre Q = 16 P − 60 ; demande A : Q = 140 − 4 P ; P* = 10 €, Q* = 100</li>
+<li>Offre taxée : Q = 16 P − 140</li>
+<li>P*′ = 14 €, Q*′ = 84, vendeur : 9 €</li>
+<li>Recette : 5 × 84 = <strong>420</strong> M€</li>
+</ul>
+<aside class="notes">
+<p>1 h 00 – 1 h 10. Résoudre 140 − 4P = 16P − 140 au tableau. Part des acheteurs : 1,6 ÷ (1,6 + 0,4) = 0,8.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="avec-une-demande-plus-élastique-la-taxe-est-partagée-moitié-moitié" class="slide level2">
+<h2>Avec une demande plus élastique, la taxe est partagée moitié-moitié</h2>
+
+<img data-src="cm2_files/figure-revealjs/fig-incidence-elasticite-1.png" id="fig-incidence-elasticite" alt="Deux panneaux avec la même taxe de 5 euros. A, demande raide : prix payé 14 euros, prix gardé 9, quantité 84. B, demande plus plate : prix payé 12,50, prix gardé 7,50, quantité 60." width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;3
+</p><aside class="notes">
+<p>1 h 10 – 1 h 18. Cas B : e = −1,6 ; 12,50 € ; 60 millions ; recette 300 M€.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="piège-le-buraliste-encaisse-la-taxe-donc-cest-lui-qui-la-paie" class="slide level2">
+<h2>Piège : « le buraliste encaisse la taxe, donc c’est lui qui la paie »</h2>
+<div class="piege">
+<p>C’est faux. Si l’acheteur verse la taxe, la demande se déplace vers le bas de 5 € : même équilibre, vendeur 9 €, acheteur 14 €. Seules les élasticités décident.</p>
+</div>
+<aside class="notes">
+<p>1 h 18 – 1 h 22. Sondage : qui pensait que le buraliste paie ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pause-15-minutes" class="slide level2">
+<h2>Pause : 15 minutes</h2>
+<aside class="notes">
+<p>1 h 22 – 1 h 37. Pause. À la reprise : une demande peu élastique est une bonne assiette fiscale.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="une-demande-peu-élastique-rapporte-plus-mais-change-peu-les-comportements" class="slide level2">
+<h2>Une demande peu élastique rapporte plus, mais change peu les comportements</h2>
+<p>Recette : 420 millions (A) contre 300 millions (B). Faire baisser la consommation et financer l’État sont <strong>deux objectifs en partie contradictoires</strong>.</p>
+<aside class="notes">
+<p>1 h 37 – 1 h 41. Question : un État qui réussirait à faire arrêter tout le monde garderait-il sa recette ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sur-un-paquet-à-1350-létat-prend-825" class="slide level2">
+<h2>Sur un paquet à 13,50 €, l’État prend 82,5 %</h2>
+<ul>
+<li>Accises : 7,43 + 1,466 ≈ 8,89 €</li>
+<li>TVA : 13,50 ÷ 6 = 2,25 €</li>
+<li>Total des taxes : ≈ 11,14 €</li>
+<li>Buraliste : ≈ 1,39 € ; fabricant : ≈ 0,97 €</li>
+</ul>
+<p>(Hill, 2026, tableaux 5.2 et 6 ; taux au 1<sup>er</sup> janvier 2026)</p>
+<aside class="notes">
+<p>1 h 41 – 1 h 49. Sur 1 € de hausse du prix de vente, l’État reçoit 0,72 € et le fabricant 0,18 €.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="becker-et-murphy-un-fumeur-qui-anticipe-réagit-aux-prix-futurs" class="slide level2">
+<h2>Becker et Murphy : un fumeur qui anticipe réagit aux prix futurs</h2>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img data-src="../cours/img/portraits/becker-gary.jpg" alt="Portrait photographique de Gary S. Becker en 2004, en buste."> <span class="wp-credit">2004 · National Cancer Institute, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Gary S. Becker et Kevin M. Murphy</strong> (1988), <em>Journal of Political Economy</em>, 96(4) · école de Chicago. Fumer aujourd’hui augmente l’envie de fumer demain ; une hausse durable et annoncée réduit la consommation.</p>
+</div>
+<aside class="notes">
+<p>1 h 49 – 1 h 54. Addiction rationnelle : la demande est plus élastique à long terme.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="laddiction-rend-la-demande-plus-élastique-à-long-terme" class="slide level2">
+<h2>L’addiction rend la demande plus élastique à long terme</h2>
+
+<img data-src="cm2_files/figure-revealjs/fig-court-long-1.png" id="fig-court-long" alt="Deux demandes bleues passant par le même point. Celle de court terme est raide, celle de long terme plus plate. Au prix plus élevé, la quantité baisse peu à court terme et nettement plus à long terme." width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;4
+</p><aside class="notes">
+<p>1 h 54 – 1 h 59. Valeurs fictives : e = −0,3 puis −0,6 ; hausse de 20 % : −6 % puis −12 %.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="gruber-et-kőszegi-beaucoup-voudraient-arrêter-et-ny-arrivent-pas" class="slide level2">
+<h2>Gruber et Kőszegi : beaucoup voudraient arrêter et n’y arrivent pas</h2>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img data-src="../cours/img/portraits/gruber-jonathan.jpg" alt="Portrait photographique de Jonathan Gruber en 2014, en buste."> <span class="wp-credit">2014 · Commission de surveillance de la Chambre des représentants des États-Unis, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Jonathan Gruber et Botond Kőszegi</strong> (2001), <em>QJE</em>, 116(4) · économie comportementale. La consommation baisse dès le vote d’une taxe ; elle aide à tenir ses résolutions.</p>
+</div>
+<p><strong>Internalité</strong> : coût qu’on s’impose à soi-même dans le futur, sans en tenir compte au moment de choisir.</p>
+<aside class="notes">
+<p>1 h 59 – 2 h 04. Externalité : sur les autres ; internalité : sur son « moi futur ». Taxe plus élevée d’au moins un dollar par paquet (NBER n° 7507).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="en-2025-le-prix-du-tabac-a-été-multiplié-par-46-depuis-2000-et-les-quantités-divisées-par-28" class="slide level2">
+<h2>En 2025, le prix du tabac a été multiplié par 4,6 depuis 2000 et les quantités divisées par 2,8</h2>
+
+<img data-src="cm2_files/figure-revealjs/fig-conso-tabac-1.png" id="fig-conso-tabac" alt="Trois indices base 100 en 2000. Le prix monte à 459 en 2025, les quantités baissent à 36, la dépense en euros courants monte à 164." width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;5
+</p><p>Dépense : +64 %. Prix réel ×2,9, dépense réelle +3 % (Insee ; Eurostat, IPCH, février 2026). Corrélation, pas expérience. Source : Insee, comptes nationaux base 2020, 29/05/2026.</p>
+<aside class="notes">
+<p>2 h 04 – 2 h 14. D’autres mesures ont joué en même temps (campagnes, interdiction de vente aux mineurs). 2020 : les quantités ne baissent presque pas (−0,2 %).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-ventes-des-buralistes-ne-sont-pas-la-consommation" class="slide level2">
+<h2>Les ventes des buralistes ne sont pas la consommation</h2>
+<ul>
+<li>Tabac à rouler : +4,2 % pour +10 % sur les cigarettes (jusqu’en 2013)</li>
+<li><strong>17,7 %</strong> en moyenne, selon une étude citée par le ministère, des produits échappent aux buralistes</li>
+<li>Saisies de cigarettes : +24,5 % en 2025</li>
+</ul>
+<p>(Hill, 2026 ; <em>JO Sénat</em>, 26/02/2026 ; AFP, 28/05/2026)</p>
+<aside class="notes">
+<p>2 h 14 – 2 h 19. Étude citée par le ministère des Comptes publics : 8 081 tonnes. Achats à l’étranger et contrebande.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="depuis-2019-la-recette-stagne-en-euros-courants-et-baisse-de-13-en-euros-constants" class="slide level2">
+<h2>Depuis 2019, la recette stagne en euros courants et baisse de 13 % en euros constants</h2>
+
+<img data-src="cm2_files/figure-revealjs/fig-recettes-1.png" id="fig-recettes" alt="Recettes du droit de consommation sur les tabacs de 1991 à 2025, en euros courants et constants. Sommet en 2020 à 14,4 milliards, puis 12,7 milliards en 2025." width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;6
+</p><p>Source : C. Hill (2026), tableau 6. 2020, gonflé par la fermeture des frontières, est une mauvaise base.</p>
+<aside class="notes">
+<p>2 h 19 – 2 h 24. Deux lectures, qui peuvent se cumuler : on fume moins, ou on achète hors réseau. Les données ne permettent pas de trancher.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="piège-lélasticité-mesurée-sur-les-ventes-légales-surestime-leffet-sur-la-santé" class="slide level2">
+<h2>Piège : l’élasticité mesurée sur les ventes légales surestime l’effet sur la santé</h2>
+<div class="piege">
+<p>Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes baissent plus que la consommation. On prend pour un arrêt du tabac ce qui est en partie une fuite, dont le coût pour les recettes passe inaperçu.</p>
+</div>
+<aside class="notes">
+<p>2 h 24 – 2 h 28. L’élasticité mesurée par Hill est celle des ventes enregistrées.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-jeunes-gagnent-sans-doute-le-plus-en-santé-la-taxe-pèse-le-plus-sur-les-budgets-modestes" class="slide level2">
+<h2>Les jeunes gagnent sans doute le plus en santé, la taxe pèse le plus sur les budgets modestes</h2>
+<ul>
+<li>Lycéens fumeurs quotidiens : 30,8 % en 2010, 5,6 % en 2024</li>
+<li>À 17 ans (ESCAPAD, mars 2022 ; autre enquête) : voie professionnelle 22,1 %, générale ou technologique 10,1 %</li>
+<li>Taxe <strong>régressive</strong> ; réaction plus forte des modestes non montrée</li>
+</ul>
+<p>(AFP, 28/05/2026 ; <em>The Conversation</em>, 25/07/2026 ; Hill, 2026)</p>
+<aside class="notes">
+<p>2 h 28 – 2 h 33. Les ménages modestes devraient réagir davantage au prix, mais les données ne le montrent pas.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="territoires-genres-vendeurs-des-gains-qui-seffritent" class="slide level2">
+<h2>Territoires, genres, vendeurs : des gains qui s’effritent</h2>
+
+<img data-src="../cours/img/cm2/paquets-neutres-paris-2026.jpg" style="width:40.0%" alt="Photographie du rayon tabac d'un kiosque Relay à Paris : sous des enseignes rouges Tabac et E-cigarettes, des rangées de paquets de cigarettes neutres et de tabac à rouler, et un comptoir en bois au premier plan." class="r-stretch quarto-figure-center"><p class="caption">Kiosque Relay, Paris, 2026. Photo : Jacques Jeorges Anton, CC0, Wikimedia Commons</p><p>Fumeurs : 20,4 % des hommes, 16,2 % des femmes (2024). Buralistes : 32 850 (2002), 22 800 (2025) (Hill, 2026, tableaux 2.1 et 6).</p>
+<aside class="notes">
+<p>2 h 33 – 2 h 38. Départements frontaliers : aides aux buralistes. Fabricants : moins de 1 € par paquet, mais ils fixent les prix.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lanalyse-établit-trois-faits-peu-élastique-surtout-payé-par-les-fumeurs-des-fuites" class="slide level2">
+<h2>L’analyse établit trois faits : peu élastique, surtout payé par les fumeurs, des fuites</h2>
+<ul>
+<li>Ventes en baisse moins que proportionnelle, davantage à long terme</li>
+<li>Taxe surtout payée par les <strong>fumeurs</strong></li>
+<li><strong>Fuites</strong> mal mesurées</li>
+</ul>
+<aside class="notes">
+<p>2 h 38 – 2 h 43. Le positif : ce que l’analyse établit.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="protéger-le-fumeur-contre-lui-même-relève-dun-jugement" class="slide level2">
+<h2>Protéger le fumeur contre lui-même relève d’un jugement</h2>
+<ul>
+<li>Fumeur rationnel : taxer seulement le coût imposé aux autres</li>
+<li>Fumeur qui n’arrive pas à arrêter : une taxe plus forte se défend</li>
+<li>C’est la question du <strong>paternalisme</strong></li>
+</ul>
+<p>La santé contre le pouvoir d’achat : un impôt régressif.</p>
+<aside class="notes">
+<p>2 h 43 – 2 h 49. Le normatif. L’OMS : outil favorable aux pauvres si les recettes financent le sevrage (OMS, 2012, citée par Hill).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quatre-positions-sopposent-sans-nier-leffet-du-prix" class="slide level2">
+<h2>Quatre positions s’opposent, sans nier l’effet du prix</h2>
+<ul>
+<li><em>Chicago</em> : informer, taxer les dommages aux autres</li>
+<li><em>Comportementale</em> : taxe plus élevée, internalité</li>
+<li><em>Santé publique</em> : prix, « de loin le moyen le plus efficace »</li>
+<li><em>Buralistes</em> : marché parallèle, hausse limitée à l’inflation</li>
+</ul>
+<p>(Hill, 2026, § 4.3 ; <em>JO Sénat</em>, 08/05/2025)</p>
+<aside class="notes">
+<p>2 h 49 – 2 h 55. Le débat porte sur la taille des fuites (positif) et sur le droit d’orienter les choix privés (normatif).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="en-droit-les-prix-du-tabac-sont-homologués-par-les-douanes" class="slide level2">
+<h2>En droit, les prix du tabac sont homologués par les douanes</h2>
+<div class="droit">
+<p>La France a ratifié la Convention-cadre de l’OMS ; son article 6 recommande d’augmenter les taxes sur le tabac.</p>
+</div>
+<p>(<em>Bourse Inside</em>, 08/10/2026 ; Hill, 2026)</p>
+<aside class="notes">
+<p>2 h 55 – 2 h 56. Les fabricants proposent, les douanes homologuent, le <em>Journal officiel</em> publie.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-retenir" class="slide level2">
+<h2>À retenir</h2>
+<div class="retenir">
+<ul>
+<li>e est compris entre −0,5 et −0,3</li>
+<li>La charge retombe sur le côté le moins élastique</li>
+<li>Plus élastique à long terme et chez les jeunes</li>
+<li>Ventes légales ≠ consommation</li>
+<li>Protéger le fumeur ou les autres : normatif</li>
+</ul>
+</div>
+<aside class="notes">
+<p>2 h 56 – 2 h 58. Reprendre le pari de l’ouverture : le fumeur réagit-il ?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="plan-de-dissertation-ce-que-dit-loutil-puis-ce-quil-ne-tranche-pas" class="slide level2">
+<h2>Plan de dissertation : ce que dit l’outil, puis ce qu’il ne tranche pas</h2>
+<ol type="1">
+<li><strong>Ce que dit l’outil</strong> : élasticité, incidence, addiction</li>
+<li><strong>Ce qu’il ne tranche pas</strong> : fuites, paternalisme, santé contre pouvoir d’achat</li>
+</ol>
+<aside class="notes">
+<p>2 h 58 – 3 h 00. Annoncer le TD 2.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>CM 2 · Tabac</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

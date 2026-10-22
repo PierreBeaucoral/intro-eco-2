@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pierre Beaucoral">
+<meta name="description" content="Choc de demande sous prix administré : pénurie et rationnement.">
+
+<title>Pourquoi des diabétiques ont-ils manqué d’Ozempic (2023-2025) ? – Introduction à l'économie 2</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-ce2a859f655fb0fc50a4bad14b2f71a0.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-138a9145ecad1124718f867e5b4babdc.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-981ce10d1f6a1c0f379cc73fef8bdf9b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6bc51640b0247eb700273ac08863fd08.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Pas de résultats",
+    "search-matching-documents-text": "documents trouvés",
+    "search-copy-link-title": "Copier le lien vers la recherche",
+    "search-hide-matches-text": "Cacher les correspondances additionnelles",
+    "search-more-match-text": "correspondance de plus dans ce document",
+    "search-more-matches-text": "correspondances de plus dans ce document",
+    "search-clear-button-title": "Effacer",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Annuler",
+    "search-submit-button-title": "Envoyer",
+    "search-label": "Recherche"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+
+
+</head>
+
+<body class="nav-fixed wp-cours quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo light-content">
+    <img src="../assets/logo.svg" alt="Accueil du cours" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Introduction à l’économie 2</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Recherche"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Basculer la navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../programme.html"> 
+<span class="menu-text">Programme</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cours.html"> 
+<span class="menu-text">Cours</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../td.html"> 
+<span class="menu-text">TD</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../methodo/index.html"> 
+<span class="menu-text">Méthodo</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Sur cette page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#la-question" id="toc-la-question" class="nav-link active" data-scroll-target="#la-question"><span class="header-section-number">1</span> La question</a></li>
+  <li><a href="#ce-que-dit-la-théorie" id="toc-ce-que-dit-la-théorie" class="nav-link" data-scroll-target="#ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</a></li>
+  <li><a href="#les-outils" id="toc-les-outils" class="nav-link" data-scroll-target="#les-outils"><span class="header-section-number">3</span> Les outils</a></li>
+  <li><a href="#effets-de-répartition" id="toc-effets-de-répartition" class="nav-link" data-scroll-target="#effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</a></li>
+  <li><a href="#la-controverse" id="toc-la-controverse" class="nav-link" data-scroll-target="#la-controverse"><span class="header-section-number">5</span> La controverse</a></li>
+  <li><a href="#à-retenir" id="toc-à-retenir" class="nav-link" data-scroll-target="#à-retenir"><span class="header-section-number">6</span> À retenir</a></li>
+  <li><a href="#pour-aller-plus-loin" id="toc-pour-aller-plus-loin" class="nav-link" data-scroll-target="#pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Autres formats</h2><ul><li><a href="cm3.pdf"><i class="bi bi-file-pdf"></i>Télécharger le PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pourquoi des diabétiques ont-ils manqué d’Ozempic (2023-2025) ?</h1>
+<p class="subtitle lead">CM 3 · Partie I · Marchés, prix et régulations</p>
+</div>
+
+<div>
+  <div class="description">
+    Choc de demande sous prix administré : pénurie et rationnement.
+  </div>
+</div>
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Auteur</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author"><a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="rappel">
+<ul>
+<li><strong>Offre, demande, équilibre</strong>&nbsp;: la quantité offerte augmente avec le prix, la quantité demandée diminue&nbsp;; au prix d’équilibre P*, elles sont égales (Q*).</li>
+<li><strong>Déplacement d’une courbe</strong>&nbsp;: si le prix du bien change, on glisse le long des courbes&nbsp;; si une autre cause change (revenus, goûts, technique), la courbe entière se déplace (D → D′).</li>
+<li><strong>Élasticité-prix de la demande</strong> (e)&nbsp;: variation de Q en&nbsp;% divisée par la variation de P en&nbsp;%. Si |e| est inférieur à 1, la demande est peu élastique.</li>
+<li><strong>Brevet</strong>&nbsp;: droit exclusif d’exploiter une invention pendant 20 ans à compter du dépôt de la demande&nbsp;; son titulaire peut alors être seul vendeur (monopole).</li>
+<li><strong>Asymétrie d’information</strong>&nbsp;: l’une des parties à un échange en sait plus que l’autre.</li>
+</ul>
+</div>
+<section id="la-question" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="la-question"><span class="header-section-number">1</span> La question</h2>
+<p>En décembre 2023, l’Agence nationale de sécurité du médicament (ANSM) demande aux médecins de ne plus commencer de traitement par Ozempic, Victoza ou Trulicity, trois antidiabétiques de la même famille, les analogues du GLP-1. Le 14 mars 2024, elle réserve les nouveaux traitements aux diabétiques de type 2 qui ont déjà une maladie des artères avérée. Le 5 juin 2025 seulement, Ozempic et Victoza sont «&nbsp;de nouveau disponibles&nbsp;»&nbsp;: «&nbsp;les initiations de traitement peuvent reprendre pour tous les patients&nbsp;» (ANSM, mise à jour du 05/06/2025).</p>
+<p>La cause officielle&nbsp;: «&nbsp;une augmentation importante de la demande mondiale&nbsp;» et «&nbsp;la difficulté pour les industriels concernés de pouvoir répondre à cet accroissement de la demande dans un temps restreint&nbsp;», sur fond d’usage de ces médicaments pour maigrir (ministère de la Santé, réponse à la question écrite n°&nbsp;15498, JO du 21/05/2024).</p>
+<p>Or le prix d’Ozempic ne se forme pas sur un marché&nbsp;: il est fixé par l’État. Aujourd’hui, une boîte d’Ozempic 1 mg coûte 76,58&nbsp;€ hors honoraire du pharmacien, et l’Assurance maladie en rembourse 30&nbsp;% (Base de données publique des médicaments, consultée le 21/10/2026). Trois faits intriguent.</p>
+<ol type="1">
+<li>Sur un marché ordinaire, une demande qui explose fait monter le prix. Ici, le prix n’a pas servi à répartir le médicament.</li>
+<li>Ce sont des règles médicales qui ont décidé qui serait soigné.</li>
+<li>Même en payant plus cher, le monde n’aurait pas eu tout de suite plus de stylos&nbsp;: la France en aurait peut-être attiré davantage, au détriment d’autres pays.</li>
+</ol>
+<div id="fig-stylo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Photographie d'un stylo injecteur bleu clair posé sur un fond de carton gris, avec une étiquette verte portant le nom Ozempic et des caractères chinois.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-stylo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/cm3/ozempic-stylo-3ml.jpg" class="img-fluid figure-img" style="width:60.0%" alt="Photographie d'un stylo injecteur bleu clair posé sur un fond de carton gris, avec une étiquette verte portant le nom Ozempic et des caractères chinois.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stylo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Un stylo prérempli d’Ozempic (semaglutide, 1,34 mg par ml, 3 ml), modèle vendu en Chine. Lecture : le produit en jeu est un stylo injectable à usage hebdomadaire, fabriqué par un seul laboratoire pour le monde entier ; c’est ce petit objet, et non un bien ordinaire, qu’il a fallu rationner. Photo : HualinXMN, CC BY-SA 4.0, Wikimedia Commons.
+</figcaption>
+</figure>
+</div>
+<p><strong>La question de la séance&nbsp;: pourquoi des diabétiques ont-ils manqué d’Ozempic, et pourquoi le prix n’a-t-il pas réglé la pénurie ?</strong> Trois outils y répondent&nbsp;: le prix administré, le rationnement hors prix et la rigidité de l’offre. Les faits sont arrêtés au 21 octobre 2026&nbsp;; la pénurie est terminée, le raisonnement vaut pour toute pénurie à prix fixé.</p>
+</section>
+<section id="ce-que-dit-la-théorie" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="ce-que-dit-la-théorie"><span class="header-section-number">2</span> Ce que dit la théorie</h2>
+<section id="un-prix-fixé-par-létat-ne-sajuste-pas-à-la-demande" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="un-prix-fixé-par-létat-ne-sajuste-pas-à-la-demande"><span class="header-section-number">2.1</span> Un prix fixé par l’État ne s’ajuste pas à la demande</h3>
+<div id="def-prix-administre" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (Prix administré)</strong></span> Un <strong>prix administré</strong> est fixé par une autorité publique, et non par la rencontre de l’offre et de la demande. Il ne change que par une nouvelle décision. En France, le prix d’un médicament remboursé est «&nbsp;négocié avec l’industriel&nbsp;», puis «&nbsp;fixé par le CEPS&nbsp;», le Comité économique des produits de santé, au vu notamment de son intérêt médical, du prix des médicaments comparables et des volumes de vente prévus (M. Coris et B. Bégaud, <em>The Conversation</em>, 02/06/2024).</p>
+</div>
+<p>Un prix administré n’est pas forcément trop bas. Tant que la demande est stable, il peut servir tous les patients. Le problème naît quand la demande change et que le prix, lui, reste fixe.</p>
+<div id="def-choc-demande" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 2 (Choc de demande)</strong></span> Un <strong>choc de demande</strong> modifie la quantité que les acheteurs veulent acheter <em>à chaque prix</em>&nbsp;: la courbe de demande se déplace (D → D′). Un choc <strong>positif</strong> la déplace vers la droite.</p>
+</div>
+<p>Pour Ozempic, le choc vient d’une demande mondiale en forte hausse, dans un contexte où des personnes non diabétiques le demandent pour maigrir (ministère de la Santé, réponse du 21/05/2024). Ce second usage est un <strong>mésusage</strong> pour l’ANSM&nbsp;: un usage hors des indications pour lesquelles le médicament est autorisé.</p>
+<div id="def-penurie" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 3 (Pénurie)</strong></span> Il y a <strong>pénurie</strong> quand, au prix en vigueur, la quantité demandée dépasse la quantité offerte. Elle se mesure par l’écart&nbsp;: quantité demandée − quantité offerte. Sur un marché libre, le prix monterait et l’écart se refermerait&nbsp;; avec un prix administré, il demeure.</p>
+</div>
+<div id="def-rationnement" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 4 (Rationnement hors prix)</strong></span> Quand le prix ne départage pas les acheteurs, une autre règle décide qui sera servi&nbsp;: c’est le <strong>rationnement hors prix</strong>. Trois règles sont courantes&nbsp;:</p>
+<ul>
+<li>la <strong>file d’attente</strong>&nbsp;: premier arrivé, premier servi&nbsp;;</li>
+<li>le <strong>critère</strong>&nbsp;: on sert d’abord ceux qui remplissent une condition, par exemple médicale&nbsp;;</li>
+<li>le <strong>quota</strong>, ou contingentement&nbsp;: chaque vendeur ou acheteur reçoit une quantité limitée.</li>
+</ul>
+</div>
+<p>L’ANSM a combiné un critère (patients déjà traités, puis patients atteints d’une maladie des artères) et un quota&nbsp;: en octobre 2024, «&nbsp;une distribution fractionnée (contingentement quantitatif) est toujours en vigueur afin d’éviter de nouvelles ruptures&nbsp;» (ANSM, mise à jour du 03/10/2024).</p>
+<div id="def-offre-rigide" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 5 (Offre rigide)</strong></span> L’offre est <strong>rigide</strong> quand la quantité offerte varie très peu avec le prix. À court terme, l’offre d’un médicament est rigide&nbsp;: produire plus exige des usines et des autorisations, qui prennent des mois ou des années. À long terme, elle devient plus élastique.</p>
+</div>
+</section>
+<section id="la-santé-nest-pas-un-marché-comme-les-autres" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="la-santé-nest-pas-un-marché-comme-les-autres"><span class="header-section-number">2.2</span> La santé n’est pas un marché comme les autres</h3>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img src="img/portraits/arrow-kenneth.jpg" class="img-fluid" alt="Portrait photographique de Kenneth J. Arrow en 1996, homme âgé aux cheveux blancs, en buste."> <span class="wp-credit">1996 · Linda A. Cicero / Stanford News Service, CC BY 3.0, Wikimedia Commons</span></p>
+</div>
+<p><strong>Kenneth J. Arrow</strong> (1963), «&nbsp;Uncertainty and the Welfare Economics of Medical Care&nbsp;», <em>American Economic Review</em>, 53(5), p.&nbsp;941-973 · école néoclassique, économie de la santé. La maladie est imprévisible et le patient en sait beaucoup moins que son médecin&nbsp;: il ne choisit pas ses soins comme un bien ordinaire. La santé repose donc sur l’assurance, la confiance et des règles collectives plutôt que sur le seul prix.</p>
+</div>
+<p>On retrouve trois traits de l’analyse d’Arrow dans le cas Ozempic.</p>
+<ul>
+<li><strong>C’est le médecin qui demande.</strong> Sans ordonnance, pas de médicament&nbsp;: la demande passe par un tiers mieux informé que le patient.</li>
+<li><strong>Le patient ne paie pas tout le prix.</strong> L’Assurance maladie rembourse une partie, une complémentaire santé souvent une autre. Le patient réagit donc peu au prix public.</li>
+<li><strong>La collectivité fixe des priorités.</strong> La Haute Autorité de santé (HAS) a jugé le service médical rendu par Ozempic «&nbsp;modéré&nbsp;» dans le diabète de type 2 traité en association, d’où un remboursement à 30&nbsp;% (Commission de la transparence, avis du 27/08/2025)&nbsp;; sa réévaluation du 16/09/2026 le juge «&nbsp;important&nbsp;» en cas de maladie rénale chronique, sans changer le taux (Base de données publique des médicaments, consultée le 21/10/2026).</li>
+</ul>
+</section>
+</section>
+<section id="les-outils" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="les-outils"><span class="header-section-number">3</span> Les outils</h2>
+<section id="un-choc-de-demande-sous-un-prix-fixé-crée-une-pénurie" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="un-choc-de-demande-sous-un-prix-fixé-crée-une-pénurie"><span class="header-section-number">3.1</span> Un choc de demande sous un prix fixé crée une pénurie</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-penurie" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Graphique offre-demande. La demande D est une droite décroissante bleue, l'offre O une droite croissante ambre très raide. Une seconde demande D prime, en tirets bleus, est décalée vers la droite, avec une flèche horizontale de D vers D prime. L'équilibre initial E se situe au prix P étoile, marqué prix fixé, et à la quantité Q étoile. Au prix P étoile, un trait rouge marqué pénurie va de l'offre jusqu'à la demande D prime. Plus haut, un point creux E prime, marqué prix libre, se trouve à l'intersection de l'offre et de D prime, au prix P étoile prime, bien plus élevé." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-penurie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm3_files/figure-html/fig-penurie-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique offre-demande. La demande D est une droite décroissante bleue, l'offre O une droite croissante ambre très raide. Une seconde demande D prime, en tirets bleus, est décalée vers la droite, avec une flèche horizontale de D vers D prime. L'équilibre initial E se situe au prix P étoile, marqué prix fixé, et à la quantité Q étoile. Au prix P étoile, un trait rouge marqué pénurie va de l'offre jusqu'à la demande D prime. Plus haut, un point creux E prime, marqué prix libre, se trouve à l'intersection de l'offre et de D prime, au prix P étoile prime, bien plus élevé." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-penurie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Un choc de demande sous un prix fixé. Au départ, le prix fixé P* est le prix d’équilibre (point E). La demande se déplace vers la droite (D → D′, en tirets). Le prix reste à P*&nbsp;: la quantité demandée dépasse la quantité offerte, c’est la pénurie (trait rouge). Le point creux E′ montre l’équilibre qu’atteindrait un prix libre. L’offre O est raide&nbsp;: produire plus prend du temps. Graphique théorique.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li><strong>Le départ.</strong> Le prix fixé P* est le prix d’équilibre&nbsp;: tout patient muni d’une ordonnance est servi (point E).</li>
+<li><strong>Le choc.</strong> La demande augmente à chaque prix&nbsp;: la courbe passe de D à D′.</li>
+<li><strong>Le prix ne bouge pas.</strong> Au prix P*, les vendeurs offrent toujours Q*, mais les acheteurs demandent beaucoup plus&nbsp;: c’est la pénurie.</li>
+<li><strong>Ce qui ne se produit pas.</strong> Sur un marché libre, les acheteurs prêts à payer plus feraient monter le prix jusqu’à E′. Ici, la pénurie dure tant que l’offre ne rattrape pas la demande, ou que la demande ne recule pas.</li>
+</ol>
+<div id="tbl-chaine" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chaine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tableau&nbsp;1: Chaîne de causalité d’une pénurie à prix fixé, appliquée à Ozempic.
+</figcaption>
+<div aria-describedby="tbl-chaine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Étape</th>
+<th>Ce qui se passe</th>
+<th>Effet sur le marché</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Choc</td>
+<td>La demande mondiale augmente (usage pour maigrir)</td>
+<td>D → D′ à chaque prix</td>
+</tr>
+<tr class="even">
+<td>2. Prix fixé</td>
+<td>L’État maintient le prix à P*</td>
+<td>Le prix ne signale plus la rareté</td>
+</tr>
+<tr class="odd">
+<td>3. Offre rigide</td>
+<td>Les capacités de production ne suivent pas à court terme</td>
+<td>La quantité offerte reste proche de Q*</td>
+</tr>
+<tr class="even">
+<td>4. Pénurie</td>
+<td>Quantité demandée &gt; quantité offerte à P*</td>
+<td>Il faut rationner autrement que par le prix</td>
+</tr>
+<tr class="odd">
+<td>5. Règle médicale</td>
+<td>L’ANSM réserve les nouveaux traitements à certains patients</td>
+<td>Qui est servi dépend du dossier médical, pas du revenu</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="piege">
+<p><strong>Pénurie n’est pas rareté.</strong> Un bien est rare dès qu’on ne peut pas en avoir autant qu’on veut gratuitement&nbsp;: c’est le cas de tout médicament. Il y a pénurie seulement quand, <em>au prix fixé</em>, la demande dépasse l’offre, comme entre fin 2023 et juin 2025. Seule la pénurie oblige à rationner autrement que par le prix.</p>
+</div>
+</section>
+<section id="quand-loffre-est-rigide-libérer-le-prix-change-surtout-qui-est-servi" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="quand-loffre-est-rigide-libérer-le-prix-change-surtout-qui-est-servi"><span class="header-section-number">3.2</span> Quand l’offre est rigide, libérer le prix change surtout qui est servi</h3>
+<div id="exm-ozempic" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 1 (Un choc de demande sur un marché de médicament fictif)</strong></span> Sur un marché fictif, Q est en milliers de boîtes par mois et P en euros par boîte. Le prix fixé est de 75&nbsp;€, un arrondi des 76,58&nbsp;€ réels.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Prix P (€ par boîte)</th>
+<th>75</th>
+<th>125</th>
+<th>175</th>
+<th>225</th>
+<th>275</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quantité demandée avant le choc (D)</td>
+<td>100</td>
+<td>90</td>
+<td>80</td>
+<td>70</td>
+<td>60</td>
+</tr>
+<tr class="even">
+<td>Quantité demandée après le choc (D′)</td>
+<td>160</td>
+<td>150</td>
+<td>140</td>
+<td>130</td>
+<td>120</td>
+</tr>
+<tr class="odd">
+<td>Quantité offerte à court terme (O)</td>
+<td>100</td>
+<td>105</td>
+<td>110</td>
+<td>115</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li><em>L’équilibre initial.</em> À 75&nbsp;€, on demande 100 et on offre 100&nbsp;: P* = 75&nbsp;€ et Q* = 100.</li>
+<li><em>Une demande très peu élastique.</em> De 75&nbsp;€ à 125&nbsp;€, le prix monte de 50 ÷ 75 ≈ 66,7&nbsp;% et la quantité demandée baisse de 10&nbsp;%. e = −10 ÷ 66,7 ≈ <strong>−0,15</strong>.</li>
+<li><em>Le choc.</em> À chaque prix, la demande augmente de 60&nbsp;: D′ = D + 60.</li>
+<li><em>La pénurie.</em> Le prix reste à 75&nbsp;€. On demande 160, on offre 100&nbsp;: il manque <strong>60</strong> milliers de boîtes, soit 60 ÷ 160 = <strong>37,5&nbsp;%</strong> des demandes.</li>
+<li><em>Si le prix était libre, à court terme.</em> À 275&nbsp;€, on demande 120 et on offre 120. Le prix augmente de <strong>267&nbsp;%</strong>, la quantité de <strong>20&nbsp;%</strong> seulement. Des 60&nbsp;000 boîtes manquantes, 20&nbsp;000 sont produites en plus&nbsp;; pour les 40&nbsp;000 autres, des patients renoncent, faute de payer 275&nbsp;€.</li>
+<li><em>La recette du vendeur.</em> Au prix fixé&nbsp;: 100&nbsp;000 boîtes × 75&nbsp;€ = 7,5 millions d’euros par mois. À prix libre&nbsp;: 120&nbsp;000 × 275&nbsp;€ = 33 millions. La hausse paie surtout la pénurie, pas un effort de production.</li>
+</ol>
+<p><em>Variante de long terme.</em> Une fois de nouvelles usines construites, l’offre devient plus élastique&nbsp;: elle vaut toujours 100 à 75&nbsp;€, mais 145 à 150&nbsp;€, où elle rejoint D′. Un prix libre doublerait (+100&nbsp;%) et la quantité augmenterait de 45&nbsp;%&nbsp;: sur les 60&nbsp;000 demandes non servies, 45&nbsp;000 seraient servies et 15&nbsp;000 abandonnées, faute de payer 150&nbsp;€. Mais à 75&nbsp;€, même cette offre reste à 100. À prix fixé, seul le <strong>déplacement d’une courbe</strong> referme la pénurie&nbsp;: une offre qui augmente (O → O′) ou une demande qui recule.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-rigidite" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Deux graphiques côte à côte, avec la même demande D, la même demande déplacée D prime en tirets et le même prix fixé de 75 euros. Dans chacun, un trait rouge horizontal à 75 euros va de 100 à 160 milliers de boîtes. À gauche, panneau A, l'offre est très raide&nbsp;: elle coupe D prime au point creux de 275 euros et 120 milliers de boîtes. À droite, panneau B, l'offre est plus plate&nbsp;: elle coupe D prime au point creux de 150 euros et 145 milliers de boîtes." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rigidite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm3_files/figure-html/fig-rigidite-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Deux graphiques côte à côte, avec la même demande D, la même demande déplacée D prime en tirets et le même prix fixé de 75 euros. Dans chacun, un trait rouge horizontal à 75 euros va de 100 à 160 milliers de boîtes. À gauche, panneau A, l'offre est très raide&nbsp;: elle coupe D prime au point creux de 275 euros et 120 milliers de boîtes. À droite, panneau B, l'offre est plus plate&nbsp;: elle coupe D prime au point creux de 150 euros et 145 milliers de boîtes." width="1200">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rigidite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Même choc de demande, deux offres (exemple fictif de l’<a href="#exm-ozempic" class="quarto-xref">Exemple&nbsp;1</a>). Point plein&nbsp;: le prix fixé de 75&nbsp;€, avec la pénurie de 60 milliers de boîtes, de 100 à 160 (trait rouge). Point creux&nbsp;: l’équilibre si le prix était libre. Panneau A, offre rigide de court terme&nbsp;: le prix monterait à 275&nbsp;€ pour 120 milliers de boîtes. Panneau B, offre plus élastique de long terme&nbsp;: 150&nbsp;€ et 145 milliers de boîtes. À 75&nbsp;€, les deux offres valent 100&nbsp;: tant que le prix reste fixé, la pénurie demeure. Lecture&nbsp;: plus l’offre est rigide, plus un prix libre rationne par le prix au lieu de faire produire.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Avec une offre rigide, libérer le prix fait apparaître peu de boîtes&nbsp;: il change surtout <strong>qui</strong> les reçoit, ceux qui peuvent payer (<a href="#fig-rigidite" class="quarto-xref">Figure&nbsp;3</a>). Or la pénurie française a pris fin alors que le prix restait administré&nbsp;: elle ne pouvait se refermer que par de nouvelles capacités, qui <strong>déplacent l’offre</strong> (O → O′), ou par une demande remboursée freinée, comme avec le formulaire de 2025. Le ministère signale «&nbsp;des investissements importants&nbsp;» des laboratoires, notamment à Chartres et à Fegersheim (réponse du 21/05/2024).</p>
+</section>
+<section id="la-règle-de-rationnement-décide-qui-subit-la-pénurie" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="la-règle-de-rationnement-décide-qui-subit-la-pénurie"><span class="header-section-number">3.3</span> La règle de rationnement décide qui subit la pénurie</h3>
+<div id="exm-rationnement" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 2 (Qui reçoit les 100 000 boîtes ?)</strong></span> On reprend la pénurie de l’<a href="#exm-ozempic" class="quarto-xref">Exemple&nbsp;1</a>&nbsp;: au prix fixé, 100&nbsp;000 boîtes pour 160&nbsp;000 demandes, une boîte par patient. Les demandes se répartissent ainsi (chiffres fictifs)&nbsp;:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Groupe</th>
+<th>Demandes (milliers)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Diabétiques déjà traités (renouvellement)</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td>Nouveaux diabétiques avec une maladie des artères</td>
+<td>20</td>
+</tr>
+<tr class="odd">
+<td>Autres nouveaux diabétiques</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>Demandes pour maigrir (hors indication)</td>
+<td>30</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td><strong>160</strong></td>
+</tr>
+</tbody>
+</table>
+<ol type="1">
+<li><em>La file d’attente.</em> Les patients arrivent au hasard&nbsp;; chacun a 100 ÷ 160 = 62,5&nbsp;% de chances d’être servi. Les diabétiques déjà traités reçoivent en moyenne 80&nbsp;000 × 0,625 = <strong>50&nbsp;000</strong> boîtes&nbsp;: <strong>30&nbsp;000</strong> voient leur traitement interrompu. Les demandes pour maigrir obtiennent 30&nbsp;000 × 0,625 ≈ <strong>19&nbsp;000</strong> boîtes.</li>
+<li><em>Le critère de l’ANSM.</em> On sert d’abord les patients déjà traités (80&nbsp;000), puis les nouveaux diabétiques avec une maladie des artères (20&nbsp;000)&nbsp;: 80&nbsp;000 + 20&nbsp;000 = <strong>100&nbsp;000</strong>. Les demandes hors indication n’obtiennent rien&nbsp;; les 30&nbsp;000 autres nouveaux diabétiques reçoivent un autre antidiabétique.</li>
+<li><em>Le prix libre.</em> À 275&nbsp;€ (<a href="#exm-ozempic" class="quarto-xref">Exemple&nbsp;1</a>, étape 5), 120&nbsp;000 boîtes vont à ceux qui acceptent ce prix&nbsp;; rien ne garantit que ce soient les plus malades.</li>
+</ol>
+<p>La même pénurie interrompt le traitement de 30&nbsp;000 patients avec la file d’attente, d’aucun avec le critère médical. Le quota par pharmacie, lui, limite les livraisons sans dire qui sera servi au comptoir&nbsp;: il doit être combiné avec une autre règle.</p>
+</div>
+<div class="piege">
+<p>«&nbsp;Le critère médical a supprimé la pénurie.&nbsp;» Non&nbsp;: il manque toujours 60&nbsp;000 boîtes au prix fixé. La règle décide seulement <strong>qui</strong> subit la pénurie.</p>
+</div>
+</section>
+<section id="application-la-pénurie-de-2023-2025" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="application-la-pénurie-de-2023-2025"><span class="header-section-number">3.4</span> Application&nbsp;: la pénurie de 2023-2025</h3>
+<div id="tbl-chronologie" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-chronologie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tableau&nbsp;2: Chronologie de la pénurie d’analogues du GLP-1 en France (sources ouvertes le 21/10/2026).
+</figcaption>
+<div aria-describedby="tbl-chronologie-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Décision ou fait</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Septembre 2022</td>
+<td>Premières recommandations de l’ANSM aux médecins, actualisées en mars et décembre 2023</td>
+<td>Réponse ministérielle, JO du 21/05/2024</td>
+</tr>
+<tr class="even">
+<td>Décembre 2023</td>
+<td>Ne plus commencer de traitement par Ozempic, Victoza, Trulicity</td>
+<td>ANSM</td>
+</tr>
+<tr class="odd">
+<td>14/03/2024</td>
+<td>Nouveaux traitements réservés aux diabétiques de type 2 avec maladie des artères avérée&nbsp;; sinon, une autre classe d’antidiabétiques «&nbsp;à privilégier&nbsp;»</td>
+<td>ANSM</td>
+</tr>
+<tr class="even">
+<td>Septembre-octobre 2024</td>
+<td>Reprise progressive des nouveaux traitements, sous contingentement</td>
+<td>ANSM, 03/10/2024</td>
+</tr>
+<tr class="odd">
+<td>01/02/2025</td>
+<td>Remboursement subordonné à un formulaire du médecin (âge, diabète de type 2, traitement seul ou associé)</td>
+<td>Vidal, 16/01/2025</td>
+</tr>
+<tr class="even">
+<td>05/06/2025</td>
+<td>Ozempic et Victoza de nouveau disponibles pour tous&nbsp;; Trulicity reste en distribution fractionnée</td>
+<td>ANSM, 05/06/2025</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>La chronologie (<a href="#tbl-chronologie" class="quarto-xref">Table&nbsp;2</a>) suit les outils. Un <strong>choc de demande</strong> crée une pénurie au prix fixé. L’État <strong>rationne par critère et par quota</strong>, puis <strong>freine la demande remboursée</strong> avec le formulaire de février 2025. Enfin l’<strong>offre se déplace</strong> (O → O′) et rattrape la demande&nbsp;: en juin 2025, l’ANSM constate «&nbsp;la fin des tensions d’approvisionnement&nbsp;», sans que le prix ait servi à les résorber.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-boites" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagramme en barres empilées, une barre par année de 2020 à 2024. Le total passe de 4,29 millions de boîtes en 2020 à 5,12 en 2021, 6,25 en 2022, 7,48 en 2023 et 7,49 en 2024. La part bleue d'Ozempic grossit chaque année, de 0,75 million en 2020 à 3,64 millions en 2024. La part ambre de Trulicity augmente jusqu'en 2023 puis diminue en 2024. La part rouge de Victoza diminue chaque année. Une part grise très fine représente les autres produits." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-boites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm3_files/figure-html/fig-boites-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Diagramme en barres empilées, une barre par année de 2020 à 2024. Le total passe de 4,29 millions de boîtes en 2020 à 5,12 en 2021, 6,25 en 2022, 7,48 en 2023 et 7,49 en 2024. La part bleue d'Ozempic grossit chaque année, de 0,75 million en 2020 à 3,64 millions en 2024. La part ambre de Trulicity augmente jusqu'en 2023 puis diminue en 2024. La part rouge de Victoza diminue chaque année. Une part grise très fine représente les autres produits." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-boites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Boîtes d’analogues du GLP-1 remboursées en France, en millions, de 2020 à 2024, par produit&nbsp;; total au-dessus de chaque barre. Lecture&nbsp;: le total progresse de 19,7&nbsp;% en 2023, puis de 0,1&nbsp;% seulement en 2024, année du rationnement&nbsp;; les boîtes d’Ozempic continuent d’augmenter, celles de Trulicity et de Victoza reculent. Une boîte d’Ozempic 1 mg contient quatre doses hebdomadaires, soit environ un mois de traitement (HAS, avis du 27/08/2025). Source&nbsp;: Assurance Maladie, Medic’AM, délivrances en pharmacie de ville, tous prescripteurs (téléchargé le 21/10/2026).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>De 2022 à 2023, les boîtes remboursées de la famille passent de 6,25 à 7,48 millions (+19,7&nbsp;%)&nbsp;; en 2024, elles ne progressent plus que de 0,1&nbsp;% (<a href="#fig-boites" class="quarto-xref">Figure&nbsp;4</a>). En 2024, Ozempic progresse encore (+24,6&nbsp;%), quand Trulicity (−7,7&nbsp;%) et Victoza (−49,8&nbsp;%) reculent (Medic’AM, téléchargé le 21/10/2026). La source ne dit pas pourquoi&nbsp;; on sait que l’ANSM a laissé reprendre les nouveaux traitements par Ozempic en septembre 2024, quand Trulicity restait «&nbsp;en forte tension&nbsp;» (ANSM, 10/09/2024), ce qui est compatible avec ces écarts sans les prouver. Le total, lui, cesse de croître quand le rationnement s’applique.</p>
+<div class="piege">
+<p><strong>Les boîtes délivrées ne mesurent pas la demande.</strong> Pendant une pénurie, on observe la quantité <em>vendue</em>&nbsp;: la plus petite des deux, quantité demandée ou quantité offerte. Le plateau de 2024 est <strong>compatible</strong> avec une quantité bloquée par l’offre, sans le prouver&nbsp;: une baisse de la demande donnerait le même chiffre. Les boîtes non remboursées n’y figurent pas.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-prix-ozempic" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Graphique à points reliés. En abscisse, les boîtes d'Ozempic remboursées, en millions, de 0 à 4&nbsp;; en ordonnée, le prix moyen d'une boîte, en euros, de 0 à 100. Cinq points bleus, de 2020 à 2024, vont de gauche à droite&nbsp;: 0,75 million de boîtes en 2020, 1,39 en 2021, 2,03 en 2022, 2,92 en 2023 et 3,64 en 2024. Ils restent tous à une hauteur proche de 80 euros, avec une légère baisse à 77,8 euros en 2024&nbsp;: la ligne est presque horizontale." data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-prix-ozempic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="cm3_files/figure-html/fig-prix-ozempic-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Graphique à points reliés. En abscisse, les boîtes d'Ozempic remboursées, en millions, de 0 à 4&nbsp;; en ordonnée, le prix moyen d'une boîte, en euros, de 0 à 100. Cinq points bleus, de 2020 à 2024, vont de gauche à droite&nbsp;: 0,75 million de boîtes en 2020, 1,39 en 2021, 2,03 en 2022, 2,92 en 2023 et 3,64 en 2024. Ils restent tous à une hauteur proche de 80 euros, avec une légère baisse à 77,8 euros en 2024&nbsp;: la ligne est presque horizontale." width="1050">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-prix-ozempic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Prix moyen d’une boîte d’Ozempic et boîtes remboursées en France, de 2020 à 2024&nbsp;; un point par année. Le prix moyen est la base de remboursement (le tarif sur lequel l’Assurance maladie calcule son remboursement) divisée par le nombre de boîtes, toutes doses confondues. Lecture&nbsp;: de 2020 à 2024, les points se déplacent vers la droite sans monter&nbsp;; le nombre de boîtes est multiplié par 4,9 (de 0,75 à 3,64 millions), le prix moyen passe de 80,0 € à 77,8 € (−2,7&nbsp;%). Source&nbsp;: Assurance Maladie, Medic’AM, délivrances en pharmacie de ville, tous prescripteurs (téléchargé le 21/10/2026).
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Pendant que les boîtes d’Ozempic remboursées sont multipliées par 4,9, leur prix moyen reste entre 77 et 81 € chaque année, et baisse même de 2,7&nbsp;% de 2020 à 2024 (<a href="#fig-prix-ozempic" class="quarto-xref">Figure&nbsp;5</a>&nbsp;; Medic’AM, téléchargé le 21/10/2026). Les points ne tracent ni une offre ni une demande&nbsp;: ce sont les couples quantité-prix observés chaque année. Ils montrent que le prix administré n’a pas répondu au choc de demande, comme le prix P* de la <a href="#fig-penurie" class="quarto-xref">Figure&nbsp;2</a>.</p>
+</section>
+<section id="le-modèle-du-prix-plafond-éclaire-le-mécanisme-pas-la-cause" class="level3" data-number="3.5">
+<h3 data-number="3.5" class="anchored" data-anchor-id="le-modèle-du-prix-plafond-éclaire-le-mécanisme-pas-la-cause"><span class="header-section-number">3.5</span> Le modèle du prix plafond éclaire le mécanisme, pas la cause</h3>
+<p>La <a href="#fig-penurie" class="quarto-xref">Figure&nbsp;2</a> ressemble à celle d’un <strong>prix plafond</strong>&nbsp;: un prix maximum fixé par l’État ; il crée une pénurie quand il est fixé sous l’équilibre, sur un marché à nombreux vendeurs (CM 4). Le cas Ozempic s’en écarte sur quatre points.</p>
+<ol type="1">
+<li><strong>Un prix négocié, pas un plafond.</strong> Ozempic, médicament récent protégé par un brevet, n’a qu’un fabricant, Novo Nordisk (Base de données publique des médicaments). Son prix est négocié avec lui. Il n’est pas trop bas par décision&nbsp;: il l’est devenu quand la demande a bondi.</li>
+<li><strong>Une offre mondiale et rigide.</strong> Le fabricant sert le monde entier avec des capacités limitées. Un prix français plus élevé aurait peut-être attiré des stylos, aux dépens d’autres pays&nbsp;: la pénurie se serait déplacée sans disparaître (déduction du modèle, non fait observé).</li>
+<li><strong>Une demande qui passe par le médecin et l’assurance.</strong> Elle dépend des prescriptions et du remboursement plus que du prix public&nbsp;: le formulaire de 2025 agit sur elle sans toucher au prix.</li>
+<li><strong>Le prix n’était pas la cause principale, selon l’État.</strong> Le ministère invoque un choc de demande mondiale face à des capacités limitées. Le député auteur de la question écrite, qui visait surtout le Trulicity, y voyait aussi un médicament «&nbsp;vendu en France à un prix d’achat très bas&nbsp;», donc très accessible (JO du 20/02/2024). Pour les médicaments en général, des prix plus élevés n’évitent pas toujours les pénuries&nbsp;: la Suisse et l’Allemagne, «&nbsp;qui pratiquent des prix supérieurs, sont aussi touchés par des pénuries importantes&nbsp;», selon la rapporteure de la commission d’enquête du Sénat (Public Sénat, 06/07/2023).</li>
+</ol>
+<p>Le modèle explique <strong>pourquoi</strong> une pénurie dure à prix fixe et pourquoi il faut alors rationner autrement. Il ne permet pas de conclure qu’un prix plus élevé aurait évité la pénurie d’Ozempic.</p>
+<div class="methode">
+<p><strong>Refaire le raisonnement sur un nouveau choc de demande (2026).</strong></p>
+<p>Depuis le 15 juin 2026, Wegovy (même molécule qu’Ozempic) et Mounjaro (une molécule voisine) sont remboursés à 65&nbsp;% dans l’obésité sévère&nbsp;: indice de masse corporelle d’au moins 40, ou d’au moins 35 avec une maladie associée, après échec d’une prise en charge nutritionnelle (Caducée.net, 29/05/2026, d’après deux arrêtés publiés au JO du 28/05/2026). La ministre chargée de la Santé estime la population visée à environ un million de personnes (Vidal, 28/05/2026).</p>
+<p>On applique les trois outils, dans l’ordre&nbsp;:</p>
+<ol type="1">
+<li><em>Le choc.</em> Le remboursement baisse le prix payé par le patient&nbsp;: déplace-t-il la demande, exprimée en fonction du prix public, vers la droite&nbsp;?</li>
+<li><em>L’offre.</em> Peut-elle suivre, ou est-elle rigide&nbsp;?</li>
+<li><em>Le rationnement.</em> Sinon, quelle règle décide qui est servi&nbsp;?</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="effets-de-répartition" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="effets-de-répartition"><span class="header-section-number">4</span> Effets de répartition</h2>
+<section id="le-critère-médical-protège-les-patients-déjà-traités" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="le-critère-médical-protège-les-patients-déjà-traités"><span class="header-section-number">4.1</span> Le critère médical protège les patients déjà traités</h3>
+<p><strong>Par état de santé.</strong> Avec la règle de l’ANSM, les patients déjà traités gardent leur traitement. Les perdants sont les <strong>nouveaux</strong> patients sans maladie des artères, orientés vers une autre classe d’antidiabétiques (ANSM, 14/03/2024), et les demandes hors indication. Une file d’attente aurait interrompu des traitements en cours (<a href="#exm-rationnement" class="quarto-xref">Exemple&nbsp;2</a>).</p>
+<p><strong>Par revenu.</strong> Un rationnement par le prix sert d’abord ceux qui peuvent payer&nbsp;: à 275&nbsp;€ la boîte (<a href="#exm-ozempic" class="quarto-xref">Exemple&nbsp;1</a>), un patient modeste renonce avant un patient aisé, à besoin égal. Le prix administré et le critère médical rendent l’accès indépendant du revenu pour les patients qui y ont droit&nbsp;; le reste à charge dépend toutefois de la complémentaire santé et des exonérations de chacun.</p>
+<p><strong>Par territoire.</strong> Le contingentement répartit les boîtes entre pharmacies&nbsp;: un patient peut trouver son traitement dans une officine et pas dans une autre. Aucune source ouverte pour cette séance ne chiffre ces écarts. Les investissements à Chartres et à Fegersheim (réponse ministérielle du 21/05/2024) augmentent l’offre et l’activité de ces territoires.</p>
+<p><strong>Par génération.</strong> Aucune source ouverte pour cette séance ne chiffre l’effet de la pénurie par âge. Par déduction, non chiffrée&nbsp;: le critère protège les patients déjà traités, installés depuis plus longtemps dans la maladie, au détriment des nouveaux.</p>
+</section>
+<section id="le-prix-fixé-prive-le-vendeur-de-la-rente-de-pénurie" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="le-prix-fixé-prive-le-vendeur-de-la-rente-de-pénurie"><span class="header-section-number">4.2</span> Le prix fixé prive le vendeur de la rente de pénurie</h3>
+<p><strong>Le fabricant</strong> vend toute sa production au prix fixé&nbsp;: il ne perd pas de ventes, mais ne profite pas de la pénurie. Dans l’<a href="#exm-ozempic" class="quarto-xref">Exemple&nbsp;1</a>, un prix libre aurait fait passer sa recette de 7,5 à 33 millions d’euros par mois, pour 20&nbsp;% de boîtes en plus seulement. Ce gain dû au seul manque, la <strong>rente de pénurie</strong>, reste aux acheteurs&nbsp;: patients servis, Assurance maladie et complémentaires.</p>
+<p><strong>L’Assurance maladie</strong> rembourse un pourcentage du prix&nbsp;: un prix fixe contient sa dépense par boîte. En contrepartie, il faut organiser le rationnement, avec l’ANSM et les médecins.</p>
+</section>
+</section>
+<section id="la-controverse" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="la-controverse"><span class="header-section-number">5</span> La controverse</h2>
+<section id="faut-il-payer-les-médicaments-plus-cher-pour-éviter-les-pénuries" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="faut-il-payer-les-médicaments-plus-cher-pour-éviter-les-pénuries"><span class="header-section-number">5.1</span> Faut-il payer les médicaments plus cher pour éviter les pénuries&nbsp;?</h3>
+<p>On sépare ce que l’analyse <strong>établit</strong> (positif) de ce qui relève d’un <strong>jugement</strong> (normatif).</p>
+<p><strong>Ce que l’analyse établit (positif).</strong></p>
+<ul>
+<li><strong>À court terme</strong>, avec une offre rigide, un prix plus élevé fait peu produire&nbsp;: il rationne surtout par la capacité à payer (<a href="#exm-ozempic" class="quarto-xref">Exemple&nbsp;1</a>).</li>
+<li><strong>À long terme</strong>, le prix compte pour l’offre. Pour M. Coris et B. Bégaud, sur les médicaments anciens, dont le brevet a expiré, «&nbsp;la politique du prix toujours plus bas prévaut&nbsp;». Elle pousse à produire dans des pays à bas coûts auprès de fournisseurs moins nombreux, ce qui «&nbsp;accentue la dépendance et le risque de pénuries&nbsp;» (<em>The Conversation</em>, 02/06/2024). L’article ne porte pas sur Ozempic, médicament récent.</li>
+<li><strong>Le prix ne suffit pas.</strong> Les industriels imputent les pénuries à la faiblesse des prix français sur ces médicaments anciens&nbsp;; la rapporteure du Sénat juge l’analyse trop courte (Suisse et Allemagne, plus haut). La commission, présidée par une sénatrice centriste avec une rapporteure communiste, appelle à un «&nbsp;pilotage public&nbsp;», tout en envisageant des hausses de prix «&nbsp;sous certaines conditions&nbsp;», ciblées sur les médicaments matures (Public Sénat, 06/07/2023).</li>
+<li><strong>La responsabilité du fabricant est discutée.</strong> Pour Test-Achats, association de consommateurs belge, la pénurie est «&nbsp;principalement la faute&nbsp;» de Novo Nordisk, qui n’aurait pas anticipé la hausse de la demande liée à sa promotion de Wegovy (14/11/2023).</li>
+</ul>
+<p><strong>Ce qui relève d’un jugement (normatif).</strong></p>
+<ul>
+<li><strong>Qui servir d’abord ?</strong> Les plus malades, les premiers arrivés, ou ceux qui paient le plus&nbsp;?</li>
+<li><strong>Combien payer ?</strong> Un prix plus élevé coûte à l’Assurance maladie et aux patients, pour un effet incertain à court terme.</li>
+<li><strong>Quelle liberté pour le médecin ?</strong> Faut-il encadrer la prescription au nom du bon usage, comme le formulaire de 2025, au risque de limiter la liberté de prescrire&nbsp;?</li>
+</ul>
+<p><strong>Les écoles en présence.</strong> Les deux camps partent du même cadre néoclassique et divergent sur le poids des défaillances de marché en santé. Pour l’<strong>approche par le marché</strong>, le prix est un signal&nbsp;: un prix bas décourage l’investissement et prépare les pénuries de demain&nbsp;; on aide ensuite les plus modestes par l’assurance ou des transferts. L’<strong>économie de la santé</strong> issue d’Arrow souligne ce qui distingue la santé d’un marché ordinaire&nbsp;: un patient moins informé que son médecin, une assurance qui paie. Elle en déduit que des priorités médicales fixées collectivement servent mieux les patients qu’un prix libre. Le débat porte moins sur le mécanisme de la <a href="#fig-penurie" class="quarto-xref">Figure&nbsp;2</a>, admis par tous, que sur le poids donné à l’offre de demain et à l’accès de chacun aux soins aujourd’hui.</p>
+<div class="droit">
+<p>Le remboursement de certains médicaments peut être «&nbsp;subordonné au renseignement par le prescripteur d’éléments relatifs aux circonstances et indications&nbsp;» de la prescription (Code de la sécurité sociale, art. L162-19-1). Depuis la loi de financement de la sécurité sociale pour 2024 (art. 73, qui modifie cet article), ce renseignement peut passer par un formulaire joint à l’ordonnance (décret n°&nbsp;2024-968 du 30 octobre 2024, selon l’Ordre national des pharmaciens, 14/11/2024). Pour Ozempic, Victoza et Trulicity, la règle s’applique depuis le 1<sup>er</sup> février 2025, par des arrêtés publiés au JO du 15 janvier 2025 (Vidal, 16/01/2025, d’où vient la citation). Le droit agit ici sur la demande remboursée, non sur le prix.</p>
+</div>
+</section>
+</section>
+<section id="à-retenir" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="à-retenir"><span class="header-section-number">6</span> À retenir</h2>
+<div class="retenir">
+<ul>
+<li>Un prix administré ne s’ajuste pas&nbsp;: si la demande se déplace vers la droite (D → D′), la pénurie, écart entre quantité demandée et quantité offerte, demeure.</li>
+<li>Quand le prix ne départage plus les acheteurs, il faut un rationnement hors prix&nbsp;: file d’attente, critère médical ou quota.</li>
+<li>La règle de rationnement décide qui subit la pénurie&nbsp;: le critère de l’ANSM a protégé les patients déjà traités, au détriment des nouveaux.</li>
+<li>Avec une offre rigide, libérer le prix ferait surtout monter le prix et changerait qui est servi&nbsp;; à prix fixé, seul le déplacement d’une courbe referme la pénurie&nbsp;: une offre qui augmente (O → O′) ou une demande qui recule.</li>
+<li>La santé n’est pas un marché ordinaire (Arrow, 1963)&nbsp;: le médecin prescrit, l’assurance paie une partie, la collectivité fixe des priorités.</li>
+<li>Pour Ozempic, le modèle du prix plafond a des limites&nbsp;: prix négocié avec un seul fabricant, offre mondiale, et une pénurie que l’État attribue à un choc de demande.</li>
+</ul>
+</div>
+</section>
+<section id="pour-aller-plus-loin" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="pour-aller-plus-loin"><span class="header-section-number">7</span> Pour aller plus loin</h2>
+<div class="wp-video">
+<iframe src="https://www.youtube-nocookie.com/embed/6fxd5gIgCow" title="Médicaments : une compétition mondiale | L'Essentiel du Dessous des cartes | ARTE" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Arte, <em>Le Dessous des cartes</em> · «&nbsp;Médicaments&nbsp;: une compétition mondiale&nbsp;» · 3 min 32 · mis en ligne le 02/06/2026</p>
+</div>
+<div class="wp-video">
+<iframe src="https://www.youtube-nocookie.com/embed/MxXHwYQV8aE" title="Pénurie d'Ozempic, un médicament contre le diabète | #Investigation" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>RTBF, <em>#Investigation</em> · «&nbsp;Pénurie d’Ozempic, un médicament contre le diabète&nbsp;» · 5 min 41 · 21/12/2022 (cas belge, début de la pénurie)</p>
+</div>
+<ul>
+<li>Arte, <em>Le Dessous des cartes</em>, «&nbsp;Médicaments&nbsp;: un marché mondial&nbsp;», 12 min 31, mis en ligne le 10/10/2026. <a href="https://www.youtube.com/watch?v=2BRi__uvROQ">Lien</a></li>
+</ul>
+<p><strong>Articles</strong></p>
+<ul>
+<li><em>The Conversation</em>, M. Coris et B. Bégaud, «&nbsp;Médicaments&nbsp;: comprendre pourquoi pénuries et prix sont liés&nbsp;», 02/06/2024. <a href="https://theconversation.com/medicaments-comprendre-pourquoi-penuries-et-prix-sont-lies-231198">Lien</a></li>
+<li><em>Public Sénat</em>, L. Mollier-Sabet, «&nbsp;Pénuries de médicaments&nbsp;: la commission d’enquête du Sénat appelle à un “pilotage public”&nbsp;», 06/07/2023. <a href="https://www.publicsenat.fr/actualites/sante/penuries-de-medicaments-la-commission-denquete-du-senat-appelle-a-un-pilotage-public">Lien</a></li>
+<li><em>Vidal</em>, D. Paitraud, «&nbsp;OZEMPIC, VICTOZA, TRULICITY&nbsp;: un nouveau dispositif de prescription à partir du 1er février 2025&nbsp;», 16/01/2025. <a href="https://www.vidal.fr/actualites/31144-ozempic-victoza-trulicity-un-nouveau-dispositif-de-prescription-a-partir-du-1er-fevrier-2025.html">Lien</a></li>
+</ul>
+<p><strong>Autres sources citées</strong></p>
+<ul>
+<li><em>Vidal</em>, «&nbsp;Mounjaro et Wegovy coûteront “une centaine de millions d’euros” aux finances publiques en année pleine&nbsp;» (titre abrégé), 28/05/2026. <a href="https://www.vidal.fr/actualites/37848-mounjaro-et-wegovy-couteront-une-centaine-de-millions-d-euros-aux-finances-publiques-en-annee-pleine-stephanie-rist.html">Lien</a></li>
+<li><em>Caducée.net</em>, «&nbsp;Wegovy et Mounjaro remboursés&nbsp;: un tournant sous conditions pour l’obésité sévère&nbsp;», 29/05/2026. <a href="https://www.caducee.net/actualite-medicale/16902/wegovy-et-mounjaro-rembourses-un-tournant-sous-conditions-pour-l-obesite-severe.html">Lien</a></li>
+<li>Test-Achats, «&nbsp;La pénurie d’Ozempic est principalement la faute de son fabricant Novo Nordisk&nbsp;», 14/11/2023. <a href="https://www.test-achats.be/sante/maladies-et-medicaments/medicaments/presse/penurie-ozempic">Lien</a></li>
+<li>ANSM, «&nbsp;Analogues du GLP-1 et diabète de type 2&nbsp;: reprise progressive des initiations de traitement pour Ozempic, Victoza et Trulicity&nbsp;», 10/09/2024, mis à jour le 21/04/2026. <a href="https://ansm.sante.fr/actualites/analogues-du-glp-1-et-diabete-de-type-2-reprise-progressive-des-initiations-de-traitement-pour-ozempic-et-victoza">Lien</a></li>
+<li>Assemblée nationale, question écrite n°&nbsp;15498, «&nbsp;Pénurie critique d’antidiabétiques&nbsp;», JO du 20/02/2024, réponse au JO du 21/05/2024. <a href="https://www.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE15498.pdf">Lien</a></li>
+<li>Base de données publique des médicaments, «&nbsp;OZEMPIC 1 mg, solution injectable en stylo prérempli&nbsp;», mise à jour le 29/09/2026 (avis de la HAS du 16/09/2026, consultée le 21/10/2026). <a href="https://base-donnees-publique.medicaments.gouv.fr/medicament/63210923/extrait">Lien</a></li>
+<li>HAS, avis de la Commission de la transparence sur OZEMPIC 0,5 mg et 1 mg, 27/08/2025. <a href="https://www.has-sante.fr/upload/docs/evamed/CT-21501_OZEMPIC_PIS_INS_AvisDef_CT21501.pdf">Lien</a></li>
+<li>Ordre national des pharmaciens, «&nbsp;Renforcement de la pertinence des prescriptions médicales&nbsp;: publication du décret&nbsp;», 14/11/2024. <a href="https://www.ordre.pharmacien.fr/les-communications/focus-sur/les-actualites/renforcement-de-la-pertinence-des-prescriptions-medicales-publication-du-decret">Lien</a></li>
+<li>Assurance Maladie, «&nbsp;Medic’AM&nbsp;: médicaments remboursés par l’Assurance Maladie, par type de prescripteur (données interrégimes)&nbsp;», data.gouv.fr (fichiers 2020 à 2024 téléchargés le 21/10/2026). <a href="https://www.data.gouv.fr/datasets/536999d3a3a729239d20533a">Lien</a></li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Retour au sommet</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copié");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copié");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Introduction à l’économie 2 · L1 AES et Droit · <a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Semestre 2 · 2026-2027</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

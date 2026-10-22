@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Pierre Beaucoral">
+  <title>Introduction à l'économie 2 – Faut-il encadrer les loyers ?</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f8ff5e1e7a9f42b47124dbc496ea69e2.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-kicker="Introduction à l’économie 2 · CM 4" class="quarto-title-block center">
+  <h1 class="title">Faut-il encadrer les loyers ?</h1>
+  <p class="subtitle">CM 4 · Partie I · Marchés, prix et régulations</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> 
+</div>
+        <p class="quarto-title-affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="dans-le-secteur-libre-se-loger-pèse-environ-deux-fois-plus-sur-les-locataires-modestes-que-sur-les-aisés" class="slide level2">
+<h2>Dans le secteur libre, se loger pèse environ deux fois plus sur les locataires modestes que sur les aisés</h2>
+
+<img data-src="cm4_files/figure-revealjs/fig-taux-effort-1.png" id="fig-taux-effort" alt="Barres groupées du taux d'effort médian des locataires selon le quart de niveau de vie, secteur libre et secteur social, en 2023 : de 42,3 % pour les plus modestes du secteur libre à 21,6 % pour les plus aisés ; le secteur libre est toujours au-dessus du secteur social" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;1
+</p><p>Taux d’effort médian, France métropolitaine, 2023 (Insee, <em>France, portrait social</em>, 18/11/2025).</p>
+<aside class="notes">
+<p>0 h 00 – 0 h 05. Accroche : qui paie un loyer dans l’amphi ? Taux d’effort = part du revenu consacrée au logement, aides déduites. La moitié des locataires du secteur libre dépasse 29,6 %.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="depuis-2019-le-loyer-des-nouveaux-baux-est-plafonné-aujourdhui-dans-70-communes" class="slide level2">
+<h2>Depuis 2019, le loyer des nouveaux baux est plafonné, aujourd’hui dans 70 communes</h2>
+<ul>
+<li>Plafond fixé chaque année par le préfet, à Paris depuis le 1<sup>er</sup> juillet 2019</li>
+<li>En octobre 2026 : 9 territoires et 70 communes (Sénat)</li>
+</ul>
+<p><strong>Faut-il encadrer les loyers ?</strong></p>
+<aside class="notes">
+<p>0 h 05 – 0 h 11. La théorie prédit une pénurie. On mesure de combien, pour qui, à quel horizon, puis on confronte aux évaluations en France et aux États-Unis. L’expérimentation s’arrête fin novembre 2026.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rappel-un-plafond-fixé-sous-p-crée-une-pénurie-quil-faut-répartir-autrement" class="slide level2">
+<h2>Rappel : un plafond fixé sous P* crée une pénurie qu’il faut répartir autrement</h2>
+<div class="rappel">
+<ul>
+<li><strong>Plafond</strong> : prix maximal fixé par la loi</li>
+<li><strong>Pénurie</strong> : quantité demandée supérieure à la quantité offerte</li>
+<li><strong>Surplus</strong> : gain d’un échange</li>
+<li><strong>Offre rigide</strong> : réagit peu au prix</li>
+</ul>
+</div>
+<aside class="notes">
+<p>0 h 11 – 0 h 17. Rappel court. Quand le prix ne peut pas monter, on répartit autrement : file d’attente, dossier, relations, hasard. Aujourd’hui : mesurer ce que coûte ce rationnement.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="friedman-et-stigler-un-plafond-remplace-le-prix-par-le-hasard-et-le-favoritisme" class="slide level2">
+<h2>Friedman et Stigler : un plafond remplace le prix par le hasard et le favoritisme</h2>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img data-src="../cours/img/portraits/friedman-milton.jpg" alt="Portrait photographique de Milton Friedman en 1976, homme âgé à lunettes, en buste."> <span class="wp-credit">1976 · UPI, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Milton Friedman et George J. Stigler</strong> (1946), <em>Roofs or Ceilings?</em> · école de Chicago (néoclassique). Plafonds et pénurie se perpétuent l’un l’autre ; l’offre est découragée.</p>
+</div>
+<aside class="notes">
+<p>0 h 17 – 0 h 22. Brochure d’un think tank libéral, pas un article évalué par des pairs, mais devenue un classique. Répartition « par le hasard et le favoritisme » (notre traduction).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="en-1946-sous-plafond-375-recherches-de-logement-pour-10-offres-en-1906-une-pour-10" class="slide level2">
+<h2>En 1946 sous plafond, 375 recherches de logement pour 10 offres ; en 1906, une pour 10</h2>
+
+<img data-src="../cours/img/cm4/sf-1906-jefferson-square.jpg" style="width:55.0%" alt="Photographie en noir et blanc prise en hauteur d'un parc de San Francisco couvert de tentes blanches en rangs serrés, entre des arbres, avec des immeubles à l'arrière-plan." class="r-stretch quarto-figure-center"><p class="caption">San Francisco, vers avril 1906 : camp de tentes pour sinistrés sur Jefferson Square. Photo : auteur non identifié, domaine public, NARA, via Wikimedia Commons.</p><p>(Petites annonces, Friedman et Stigler, 1946)</p>
+<aside class="notes">
+<p>0 h 22 – 0 h 28. 1906 : ville détruite, aucun plafond. 1946 : plafond. La rareté se voit dans les files d’attente, plus dans le prix.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-plafond-nagit-que-sil-est-fixé-sous-le-prix-déquilibre" class="slide level2">
+<h2>Un plafond n’agit que s’il est fixé sous le prix d’équilibre</h2>
+<div id="def-plafond-contraignant" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (Prix plafond contraignant)</strong></span> Un plafond Pmax est <strong>contraignant</strong> s’il est fixé <strong>sous</strong> P*. Au-dessus de P*, il n’a aucun effet.</p>
+</div>
+<aside class="notes">
+<p>0 h 28 – 0 h 34. Question : un plafond à 1 500 € pour un loyer d’équilibre à 1 000 € ? Aucun effet.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-surplus-se-lit-comme-une-aire-la-perte-sèche-est-un-gain-que-personne-ne-récupère" class="slide level2">
+<h2>Le surplus se lit comme une aire ; la perte sèche est un gain que personne ne récupère</h2>
+<div id="def-surplus" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 2 (Surplus)</strong></span> <strong>Consommateur</strong> : aire entre la demande et le prix. <strong>Producteur</strong> : aire entre le prix et l’offre. <strong>Total</strong> : leur somme.</p>
+</div>
+<div id="def-perte-seche" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 3 (Perte sèche)</strong></span> Baisse du surplus total causée par une intervention : des échanges ne se font plus.</p>
+</div>
+<aside class="notes">
+<p>0 h 34 – 0 h 43. Surplus du consommateur : écart entre le prix maximal qu’on était prêt à payer et le prix payé. Perte sèche : des acheteurs prêts à payer plus que le coût du vendeur, un gain qui disparaît.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="loffre-de-logements-est-rigide-à-court-terme-souple-à-long-terme" class="slide level2">
+<h2>L’offre de logements est rigide à court terme, souple à long terme</h2>
+<ul>
+<li><strong>Court terme</strong> : le parc est donné</li>
+<li><strong>Long terme</strong> : vente, meublé de tourisme, moins d’entretien, moins de construction</li>
+</ul>
+<p>« Un instrument redistributif à court terme, mais générateur de rationnement, de pertes de bien-être et de mauvaise allocation à long terme » (Chapelle et Fack, mai 2026)</p>
+<aside class="notes">
+<p>0 h 43 – 0 h 49. Chaîne de causalité : la première ligne (le plafond baisse le loyer) est la même aux deux horizons ; ce qui change, c’est la réaction de l’offre, donc l’ampleur de la pénurie.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-san-francisco-les-locataires-protégés-restent-mais-les-bailleurs-réduisent-loffre-de-15" class="slide level2">
+<h2>À San Francisco, les locataires protégés restent, mais les bailleurs réduisent l’offre de 15 %</h2>
+<div class="auteur">
+<p><strong>Diamond, McQuade et Qian</strong> (2019), <em>American Economic Review</em> · économie empirique. Extension de 1994 : locataires protégés 20 % moins mobiles ; offre à louer réduite de 15 %, ce qui a probablement fait monter les loyers à long terme.</p>
+</div>
+<aside class="notes">
+<p>0 h 49 – 0 h 52. On compare des immeubles encadrés et d’autres qui ne l’ont pas été : la loi de 1994 ne touche qu’une partie du parc.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-cambridge-la-fin-de-lencadrement-a-valorisé-même-les-logements-voisins" class="slide level2">
+<h2>À Cambridge, la fin de l’encadrement a valorisé même les logements voisins</h2>
+<div class="auteur">
+<p><strong>Autor, Palmer et Pathak</strong> (2014), <em>Journal of Political Economy</em> · économie empirique. Suppression en 1995 : environ 1,8 Md$ ajoutés à la valeur des logements de la ville entre 1994 et 2004, dont plus de la moitié sur des logements voisins jamais encadrés (estimation du document de travail de 2012).</p>
+</div>
+<aside class="notes">
+<p>0 h 52 – 0 h 56. Chiffre tiré du résumé du document de travail de 2012. Pourquoi les voisins ? Un parc encadré mal entretenu dévalorisait le quartier (Chapelle et Fack, § 3.1.2.3).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-plafond-contraignant-fait-baisser-la-quantité-louée-et-crée-une-pénurie" class="slide level2">
+<h2>Un plafond contraignant fait baisser la quantité louée et crée une pénurie</h2>
+
+<img data-src="cm4_files/figure-revealjs/fig-plafond-penurie-1.png" id="fig-plafond-penurie" alt="Graphique offre-demande du logement avec un plafond Pmax sous le prix d'équilibre P étoile ; un trait rouge marque la pénurie entre la quantité offerte Qo et la quantité demandée Qd" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;2
+</p><aside class="notes">
+<p>0 h 56 – 1 h 07. Graphique théorique. Au loyer Pmax, les bailleurs n’offrent que Qo : la quantité échangée est la plus petite des deux. Qd − Qo ménages cherchent sans trouver.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-rectangle-passe-des-bailleurs-aux-locataires-le-triangle-est-perdu-pour-tous" class="slide level2">
+<h2>Le rectangle passe des bailleurs aux locataires, le triangle est perdu pour tous</h2>
+
+<img data-src="cm4_files/figure-revealjs/fig-plafond-aires-1.png" id="fig-plafond-aires" alt="Même graphique avec un rectangle bleu entre Pmax et P étoile, de l'axe vertical à Qo, marqué transfert, et un triangle rouge de perte sèche entre Qo et la quantité d'équilibre" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;3
+</p><p><strong>Piège</strong> : le rectangle change de poche ; seul le triangle est une perte nette.</p>
+<aside class="notes">
+<p>1 h 07 – 1 h 20. Rectangle : transfert, ce que l’un perd, l’autre le gagne. Triangle : perte nette, des logements qui ne sont plus loués. Mesurer la perte sèche est positif ; juger le transfert est normatif. Sondage : « le rectangle est-il une perte ? » Puis pause.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pause-15-minutes" class="slide level2">
+<h2>Pause : 15 minutes</h2>
+<aside class="notes">
+<p>1 h 20 – 1 h 35. Pause. À la reprise : le même plafond, chiffré dans une ville fictive.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ville-fictive-léquilibre-est-à-1-000-et-100-000-logements-le-plafond-à-800" class="slide level2">
+<h2>Ville fictive : l’équilibre est à 1 000 € et 100 000 logements, le plafond à 800 €</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Loyer (€/mois)</th>
+<th>600</th>
+<th>800</th>
+<th>1 000</th>
+<th>1 200</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Demandé</td>
+<td>140</td>
+<td>120</td>
+<td>100</td>
+<td>80</td>
+</tr>
+<tr class="even">
+<td>Offert, long terme</td>
+<td>60</td>
+<td>80</td>
+<td>100</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p>Q en milliers de logements. Plafond : 20 % sous P*.</p>
+<aside class="notes">
+<p>1 h 35 – 1 h 40. Exemple fictif. Lire le tableau ligne par ligne. L’offre de court terme (96 à 800 €) vient plus tard.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-long-terme-40-000-ménages-ne-trouvent-rien-et-la-perte-sèche-vaut-4-m-par-mois" class="slide level2">
+<h2>À long terme, 40 000 ménages ne trouvent rien, et la perte sèche vaut 4 M€ par mois</h2>
+<ul>
+<li>À 800 € : demande 120, offre 80, <strong>pénurie de 40 000</strong></li>
+<li>Transfert : 80 000 × 200 = <strong>16 M€ par mois</strong></li>
+<li>Perte sèche : ½ × 20 000 × 400 = <strong>4 M€ par mois</strong></li>
+</ul>
+<aside class="notes">
+<p>1 h 40 – 1 h 50. Faire calculer à la main. Le 80 000e ménage logé était prêt à payer 1 200 € (lu dans le tableau). Base du triangle : 100 000 − 80 000 ; hauteur : 1 200 − 800.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bilan-les-locataires-gagnent-14-m-les-bailleurs-perdent-18-m-la-société-4-m" class="slide level2">
+<h2>Bilan : les locataires gagnent 14 M€, les bailleurs perdent 18 M€, la société 4 M€</h2>
+<ul>
+<li>Locataires : 16 − 2 = <strong>14 M€</strong></li>
+<li>Bailleurs : 16 + 2 = <strong>18 M€</strong></li>
+<li>Société : 14 − 18 = <strong>−4 M€</strong>, la perte sèche</li>
+</ul>
+<aside class="notes">
+<p>1 h 50 – 1 h 55. Les 20 000 ménages non logés perdent ½ × 20 000 × 200 = 2 M€ ; les bailleurs perdent aussi ½ × 20 000 × 200 = 2 M€ sur les logements retirés.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-court-terme-la-perte-sèche-est-environ-huit-fois-plus-petite" class="slide level2">
+<h2>À court terme, la perte sèche est environ huit fois plus petite</h2>
+
+<img data-src="cm4_files/figure-revealjs/fig-court-long-1.png" id="fig-court-long" alt="Deux panneaux avec la même demande et le même plafond de 800 euros : à gauche, court terme, offre rigide, on loue 96 milliers de logements et le triangle de perte sèche est étroit ; à droite, long terme, offre élastique, on loue 80 milliers et le triangle est bien plus grand" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;4
+</p><p>Exemple fictif : 0,48 M€ par mois à court terme, contre 4 M€.</p>
+<aside class="notes">
+<p>1 h 55 – 2 h 00. À 800 €, on offre encore 96 : pénurie de 24 000 seulement. Juger un encadrement sur ses deux premières années, c’est regarder le panneau A.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="piège-rien-ne-garantit-que-les-logements-vont-à-ceux-qui-les-valorisent-le-plus" class="slide level2">
+<h2>Piège : rien ne garantit que les logements vont à ceux qui les valorisent le plus</h2>
+<div class="piege">
+<p>Avec une file d’attente ou des relations, un ménage qui tient peu à son logement le garde. La perte est alors plus grande que le triangle (Glaeser et Luttmer, 2003, cités par Chapelle et Fack, mai 2026).</p>
+</div>
+<aside class="notes">
+<p>2 h 00 – 2 h 03. L’exemple suppose que les 80 000 logements restants vont aux ménages prêts à payer le plus.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-smic-est-le-miroir-du-plafond-un-plancher-crée-un-excès-doffre" class="slide level2">
+<h2>Le SMIC est le miroir du plafond : un plancher crée un excès d’offre</h2>
+
+<img data-src="cm4_files/figure-revealjs/fig-plancher-1.png" id="fig-plancher" alt="Graphique offre-demande du travail avec un salaire plancher Pmin au-dessus de P étoile ; un trait rouge marque l'excès d'offre entre la quantité demandée Qd et la quantité offerte Qo" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;5
+</p><p>SMIC : 12,31 € brut de l’heure depuis le 1<sup>er</sup> juin 2026 (Service-public.fr, consulté le 21/10/2026).</p>
+<aside class="notes">
+<p>2 h 03 – 2 h 08. Ici les employeurs, acheteurs, fixent la quantité : Qd. Mais si un employeur est presque seul à embaucher (monopsone, Joan Robinson, 1933), un salaire minimum bien placé peut augmenter l’emploi : question empirique.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-plafond-français-est-le-loyer-médian-majoré-de-20-et-plus-dun-tiers-des-baux-le-dépassent" class="slide level2">
+<h2>Le plafond français est le loyer médian majoré de 20 %, et plus d’un tiers des baux le dépassent</h2>
+<ul>
+<li>Plafond = loyer de référence (médian) <strong>+ 20 %</strong> (Chapelle et Fack, mai 2026)</li>
+<li>35,6 % des baux dépassent le plafond à Paris, 43,5 % à Bordeaux (2020-2024)</li>
+</ul>
+<aside class="notes">
+<p>2 h 08 – 2 h 12. Les études américaines portent sur des dispositifs anciens, avec des loyers parfois très inférieurs au marché. Le dispositif français est récent, plafond au-dessus du médian, mais il couvre tous les nouveaux baux, neuf compris. Le dépassement peut être légal (complément de loyer) ou non.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="en-france-lencadrement-a-baissé-les-loyers-de-2-à-5" class="slide level2">
+<h2>En France, l’encadrement a baissé les loyers de 2 à 5 %</h2>
+<ul>
+<li>Hors Île-de-France : −2 à −3 % par rapport à des communes témoins, environ −5 % après deux ans</li>
+<li>Seine-Saint-Denis : −3 à −4 %</li>
+<li>Paris : −5,2 % (juillet 2019-juin 2024, autre équipe)</li>
+</ul>
+<p>(Chapelle et Fack, mai 2026, § 3.4 ; Paris : Breuillé, Grivault et al., 2025, cités par le rapport)</p>
+<aside class="notes">
+<p>2 h 12 – 2 h 16. Méthode : communes encadrées contre communes semblables non encadrées, avant et après. À Paris, la mission juge difficile d’attribuer toute la baisse à l’encadrement : des départs de ménages après le Covid ont aussi pesé sur la demande.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="leffet-sur-loffre-nest-ni-démontré-ni-écarté" class="slide level2">
+<h2>L’effet sur l’offre n’est ni démontré ni écarté</h2>
+<ul>
+<li>Hors Île-de-France : nouvelles annonces environ −8 % ; à Paris, sens inverse</li>
+<li>Berlin, plafond plus strict : de 1 500 à 300 annonces par semaine (2019-2020)</li>
+</ul>
+<p>(−8 % : Chapelle et Fack, mai 2026, § 3.5 ; Berlin : Hahn et al., 2024, cités par le rapport)</p>
+<aside class="notes">
+<p>2 h 16 – 2 h 20. Baisse d’offre, locataires qui restent plus longtemps, ou annonces passées par d’autres canaux : les données ne permettent pas de trancher. Court terme et plafond peu contraignant : panneau A, où la théorie prévoit des effets faibles.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="piège-les-loyers-français-montent-moins-que-les-allemands-mais-ce-nest-pas-leffet-de-lencadrement" class="slide level2">
+<h2>Piège : les loyers français montent moins que les allemands, mais ce n’est pas l’effet de l’encadrement</h2>
+
+<img data-src="cm4_files/figure-revealjs/fig-loyers-europe-1.png" id="fig-loyers-europe" alt="Indice des loyers effectivement payés de 2015 à 2025, base 100 en 2015 : la France atteint 109,7, l'Allemagne 117,9 et la zone euro 118,9" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;6
+</p><p>Source : Eurostat, IPCH, loyers effectifs, consulté le 21/10/2026.</p>
+<aside class="notes">
+<p>2 h 20 – 2 h 23. L’encadrement ne couvre que 70 communes ; l’indice mêle secteur libre et social ; bien d’autres causes séparent les pays. Pour mesurer une politique : un groupe de comparaison semblable, avant et après.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-bailleurs-paient-les-deux-tiers-létat-un-tiers-et-le-ciblage-dépend-de-la-ville" class="slide level2">
+<h2>Les bailleurs paient les deux tiers, l’État un tiers, et le ciblage dépend de la ville</h2>
+<ul>
+<li>Transferts : environ 700 M€ par an (Chapelle et Fack, mai 2026)</li>
+<li>Mal ciblé à Paris</li>
+<li>En Seine-Saint-Denis, gains surtout pour les ménages modestes</li>
+</ul>
+<aside class="notes">
+<p>2 h 23 – 2 h 28. Pourquoi l’État ? Loyer plus bas, revenu imposable du bailleur plus bas : environ un tiers de chaque euro de baisse. Hors Île-de-France, « pour deux euros distribués aux 10 % les plus modestes, un euro est redistribué aux 10 % les plus aisés ». Gain moyen : environ 500 € par an en province, 800 € à Paris. Retour sur le graphique d’ouverture : l’encadrement ne vise pas les plus modestes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-plafond-protège-les-locataires-en-place-au-détriment-des-nouveaux-arrivants" class="slide level2">
+<h2>Le plafond protège les locataires en place, au détriment des nouveaux arrivants</h2>
+<ul>
+<li><strong>Génération</strong> : les perdants potentiels sont les étudiants, jeunes actifs et ménages qui déménagent pour un emploi</li>
+<li><strong>Territoire</strong> : 70 communes, où la demande dépasse nettement l’offre</li>
+<li><strong>Genre</strong> : aucune source ouverte</li>
+</ul>
+<aside class="notes">
+<p>2 h 28 – 2 h 31. À San Francisco, les bénéficiaires sont plus âgés, mieux installés, relativement aisés. Dans l’exemple : les 40 000 ménages qui ne trouvent rien. Voisins : pas de réaction à court terme en France ; à Cambridge, les logements voisins non encadrés ont perdu de la valeur.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ce-que-lanalyse-établit-la-pénurie-la-baisse-de-2-à-5-et-un-effet-sur-loffre-ni-démontré-ni-écarté" class="slide level2">
+<h2>Ce que l’analyse établit : la pénurie, la baisse de 2 à 5 %, et un effet sur l’offre ni démontré ni écarté</h2>
+<ul>
+<li>Plafond contraignant : pénurie et perte sèche, plus grandes si l’offre est élastique</li>
+<li>Transfert d’environ 700 M€ par an, ciblage variable</li>
+<li>Effet sur l’offre ni démontré ni écarté</li>
+</ul>
+<aside class="notes">
+<p>2 h 31 – 2 h 35. Le positif. Mécanisme largement admis ; là où les plafonds sont plus durs ou plus anciens, annonces (Berlin) ou offre (San Francisco) ont reculé.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ce-qui-relève-dun-jugement-qui-protéger-qui-paie-et-sur-quelle-preuve" class="slide level2">
+<h2>Ce qui relève d’un jugement : qui protéger, qui paie, et sur quelle preuve</h2>
+<ul>
+<li>Efficacité ou équité</li>
+<li>Locataires en place ou ménages de demain</li>
+<li>Bailleurs ou contribuables</li>
+<li>Prolonger ou arrêter, tant que le doute subsiste</li>
+</ul>
+<aside class="notes">
+<p>2 h 35 – 2 h 41. Le normatif. Débat en amphi : 6 minutes, quatre groupes.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="deux-institutions-lisent-le-même-rapport-en-sens-inverse" class="slide level2">
+<h2>Deux institutions lisent le même rapport en sens inverse</h2>
+<ul>
+<li>Sénat : « les conditions pour pérenniser cette expérimentation ne sont pas réunies » (MoneyVox avec l’AFP, 14/10/2026)</li>
+<li>Ville de Paris : « une absence d’effet de l’encadrement des loyers sur l’offre locative parisienne » (paris.fr, 11/09/2026)</li>
+</ul>
+<aside class="notes">
+<p>2 h 41 – 2 h 44. La rapporteure de la commission des affaires économiques du Sénat. Le rapport constate une baisse des annonces sans pouvoir dire si l’offre recule. « Aucun effet n’est écarté » ou « aucun effet n’est démontré » : décider à qui revient la charge de la preuve est un jugement. Droit : article 140 de la loi Élan (23/11/2018), expérimentation prolongée par la loi 3DS (21/02/2022) jusqu’à fin novembre 2026 ; la commission du Sénat a réduit la proposition de loi à une prolongation de deux ans (14/10/2026), examinée en séance le 21/10/2026 : à mettre à jour avant le cours (Légifrance).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="arnott-un-encadrement-modéré-peut-rééquilibrer-bailleur-et-locataire" class="slide level2">
+<h2>Arnott : un encadrement modéré peut rééquilibrer bailleur et locataire</h2>
+<div class="auteur">
+<p><strong>Richard Arnott</strong> (1995), puis <strong>Arnott et Igarashi</strong> (2000) · économie standard. Les logements sont si différents que les bailleurs ont un pouvoir de marché ; un encadrement <strong>modéré</strong> peut améliorer l’efficacité, s’il exempte le neuf et autorise des hausses indexées.</p>
+</div>
+<aside class="notes">
+<p>2 h 44 – 2 h 47. <em>Journal of Economic Perspectives</em>, 1995 (cités par Chapelle et Fack, § 3.1.1). Le dispositif français n’exempte pas le neuf : le rapport le classe parmi les encadrements de « première génération ». Le rapport recommande de « taxer plutôt que de subventionner la rente foncière ou de réguler les prix » : position normative des auteurs, pas un résultat.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="en-france-lencadrement-repose-sur-une-expérimentation-prolongée-jusquà-fin-novembre-2026" class="slide level2">
+<h2>En France, l’encadrement repose sur une expérimentation prolongée jusqu’à fin novembre 2026</h2>
+<div class="droit">
+<p>Article 140 de la loi Élan (23/11/2018) : expérimentation d’encadrement des loyers, prolongée par la loi 3DS (21/02/2022) jusqu’à fin novembre 2026. Un texte qui la prolonge de deux ans est en navette au Parlement : adopté par le Sénat le 21/10/2026, il repart à l’Assemblée nationale (Sénat, La loi en clair, consulté le 21/10/2026).</p>
+</div>
+<aside class="notes">
+<p>2 h 47 – 2 h 49. Texte non définitif au 21/10/2026 : à mettre à jour avant le cours (Légifrance). Minutes prises sur les diapos Diamond et Autor.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-retenir" class="slide level2">
+<h2>À retenir</h2>
+<div class="retenir">
+<ul>
+<li>Un plafond n’agit que sous P*.</li>
+<li>Il crée une pénurie.</li>
+<li>Rectangle : transfert ; triangle : perte sèche.</li>
+<li>Plus l’offre est élastique, plus il coûte.</li>
+<li>France : −2 à −5 %, offre ni démontrée ni écartée.</li>
+<li>Plancher : le miroir du plafond.</li>
+</ul>
+</div>
+<aside class="notes">
+<p>2 h 49 – 2 h 54. Reprendre la question d’ouverture : faut-il encadrer les loyers ? Séparer le positif du normatif.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="plan-de-dissertation-i.-ce-que-dit-loutil-ii.-ce-quil-ne-tranche-pas" class="slide level2">
+<h2>Plan de dissertation : I. Ce que dit l’outil ; II. Ce qu’il ne tranche pas</h2>
+<p><strong>Faut-il encadrer les loyers ?</strong></p>
+<p><strong>I.</strong> Un plafond contraignant crée pénurie et perte sèche, croissantes avec l’élasticité de l’offre ; en France, loyers en baisse de 2 à 5 %.</p>
+<p><strong>II.</strong> Efficacité ou équité, locataires en place ou de demain : un jugement, et un effet sur l’offre ni démontré ni écarté.</p>
+<aside class="notes">
+<p>2 h 54 – 3 h 00. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>CM 4 · Loyers</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

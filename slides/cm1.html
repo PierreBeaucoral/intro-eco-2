@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+<link href="../assets/logo.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Pierre Beaucoral">
+  <title>Introduction à l'économie 2 – La crise d’Ormuz : pourquoi les carburants ont-ils flambé ?</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f8ff5e1e7a9f42b47124dbc496ea69e2.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-kicker="Introduction à l’économie 2 · CM 1" class="quarto-title-block center">
+  <h1 class="title">La crise d’Ormuz : pourquoi les carburants ont-ils flambé ?</h1>
+  <p class="subtitle">CM 1 · Partie I · Marchés, prix et régulations</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<a href="https://pierrebeaucoral.github.io/">Pierre Beaucoral</a> 
+</div>
+        <p class="quarto-title-affiliation">
+            ATER en économie, Université Clermont Auvergne
+          </p>
+    </div>
+</div>
+
+</section>
+<section id="le-28-février-2026-la-guerre-ferme-de-fait-le-détroit-dormuz" class="slide level2">
+<h2>Le 28 février 2026, la guerre ferme de fait le détroit d’Ormuz</h2>
+
+<img data-src="../cours/img/cm1/ormuz-carte.png" style="width:55.0%" alt="Carte du détroit d'Ormuz : un passage étroit entre l'Iran au nord et la péninsule omanaise de Musandam au sud relie le golfe Persique au golfe d'Oman." class="r-stretch quarto-figure-center"><p class="caption">Carte : Goran tek-en, CC BY-SA 4.0, Wikimedia Commons</p><p>Environ un cinquième du pétrole et du gaz liquéfié y transite (Insee, Note de conjoncture, 24/03/2026).</p>
+<aside class="notes">
+<p>0 h 00 – 0 h 05. Accroche : qui a fait le plein cette semaine ? Main levée. Les navires doivent tous franchir ce passage étroit, d’où la facilité de le bloquer.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-la-pompe-le-gazole-a-pris-41-en-huit-mois" class="slide level2">
+<h2>À la pompe, le gazole a pris 41 % en huit mois</h2>
+
+<img data-src="../cours/img/cm1/station-cusset-2026.jpg" style="width:38.0%" alt="Panneau d'une station-service affichant le SP95-E10 à 2,031 euros et le gazole à 2,274 euros le litre." class="r-stretch quarto-figure-right"><p class="caption">Cusset (Allier), 19/04/2026. Photo : Tabl-trai, CC BY-SA 4.0, Wikimedia Commons</p><ul>
+<li>Euro-super 95 : 1,71 € à 2,21 € le litre (+29,3 %)</li>
+<li>Gazole : 1,65 € à 2,33 € (+41,1 %)</li>
+</ul>
+<p>(Commission européenne, <em>Weekly Oil Bulletin</em>, TTC, du 23/02 au 12/10/2026)</p>
+<aside class="notes">
+<p>0 h 05 – 0 h 08. Prix TTC, moyennes nationales hebdomadaires. Le panneau est un relevé de station ; les chiffres de la diapo sont des moyennes nationales.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="la-presse-raconte-un-coût-qui-monte-et-des-automobilistes-qui-doivent-rouler" class="slide level2">
+<h2>La presse raconte un coût qui monte et des automobilistes qui doivent rouler</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<ul>
+<li>« La hausse des coûts d’approvisionnement en pétrole fait flamber les prix des carburants » (<em>Le Figaro</em>, 09/03/2026)</li>
+<li>« Si cela continue, je n’aurai plus les moyens d’aller travailler » (<em>Sud Ouest</em>, 30/03/2026)</li>
+</ul>
+</div><div class="column" style="width:42%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../cours/img/cm1/une-oregon-journal-1974.jpg" alt="Un homme lit un journal dont la une titre « Gas Rationing Set Monday » ; au fond, un panneau de station-service indique « Sorry no gasoline »." height="400"></p>
+<figcaption>1974. Photo : D. Falconer, domaine public, Wikimedia Commons</figcaption>
+</figure>
+</div>
+</div></div>
+<aside class="notes">
+<p>0 h 08 – 0 h 11. Demander : lequel des deux titres parle de l’offre, lequel de la demande ? Le premier : le coût monte, l’offre recule (choc d’offre). Le second : on ne renonce pas à aller travailler, la demande est peu élastique à court terme. Photo : en 1974, la une annonce le rationnement de l’essence (« Gas Rationing Set Monday »), le panneau dit « plus d’essence ». Autres titres dans la page de cours (Le Figaro 2022, Le Parisien 21/09/2026).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trois-faits-intriguent" class="slide level2">
+<h2>Trois faits intriguent</h2>
+<ol type="1">
+<li>Un détroit lointain fait bondir la pompe.</li>
+<li>On paie beaucoup plus, on roule à peine moins.</li>
+<li>Le gazole devient plus cher que l’essence.</li>
+</ol>
+<p><strong>Pourquoi si fort ?</strong> Deux outils : déplacement, élasticité.</p>
+<aside class="notes">
+<p>0 h 11 – 0 h 15. Demander lequel des trois les surprend le plus ; on y revient à la fin. Les chiffres sont arrêtés au 14 octobre 2026 (pétrole) et au 12 octobre 2026 (pompe).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rappel-offre-et-demande-se-rencontrent-en-p-et-un-seul-facteur-change-à-la-fois" class="slide level2">
+<h2>Rappel : offre et demande se rencontrent en P*, et un seul facteur change à la fois</h2>
+<div class="rappel">
+<ul>
+<li>Au prix d’équilibre P*, offre et demande valent Q*.</li>
+<li>Au-dessous de P* : <strong>pénurie</strong>. Au-dessus : <strong>surproduction</strong>.</li>
+<li><em>Toutes choses égales par ailleurs</em> : une seule cause varie.</li>
+<li>Un producteur fait une unité de plus tant qu’elle rapporte plus qu’elle ne coûte.</li>
+</ul>
+</div>
+<aside class="notes">
+<p>0 h 15 – 0 h 22. Rappel rapide, sans redéfinir. Ajouter : à court terme, le prix dépend surtout de la demande (Marshall) ; l’analyse positive décrit ce qui est, la normative ce qui devrait être. Poser : « Que se passe-t-il au-dessous de P* ? »</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="marshall-pour-expliquer-un-prix-dire-quelle-courbe-a-bougé" class="slide level2">
+<h2>Marshall : pour expliquer un prix, dire quelle courbe a bougé</h2>
+<div class="auteur">
+<div class="wp-portrait">
+<p><img data-src="../cours/img/portraits/alfred-marshall.jpg" alt="Portrait photographique d'Alfred Marshall vers 1891, homme âgé à barbe blanche, en buste."> <span class="wp-credit">Vers 1891 · Elliott and Fry, domaine public, Wikimedia Commons</span></p>
+</div>
+<p><strong>Alfred Marshall</strong> (1890), <em>Principles of Economics</em> · école néoclassique. Offre et demande sont les deux lames d’une paire de ciseaux.</p>
+</div>
+<aside class="notes">
+<p>0 h 22 – 0 h 27. Le prix monte si l’offre recule ou si la demande augmente. Insister : quelle courbe, et pourquoi.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="loffre-reflète-le-coût-du-dernier-baril-produit" class="slide level2">
+<h2>L’offre reflète le coût du dernier baril produit</h2>
+<div id="def-cout-marginal" class="theorem definition">
+<p><span class="theorem-title"><strong>Définition 1 (Coût marginal)</strong></span> Le <strong>coût marginal (Cm)</strong> est le coût de production d’une unité de plus. Au prix P, on produit toutes les unités dont le Cm est inférieur ou égal à P.</p>
+</div>
+<aside class="notes">
+<p>0 h 27 – 0 h 32. Raisonnement à la marge, côté producteur. Tous les producteurs n’ont pas les mêmes coûts : rangés du moins cher au plus cher, ils donnent une offre croissante. Tant que les capacités suffisent, le prix est le Cm du dernier producteur nécessaire.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-choc-doffre-déplace-la-courbe-le-prix-du-bien-lui-fait-glisser" class="slide level2">
+<h2>Un choc d’offre déplace la courbe ; le prix du bien, lui, fait glisser</h2>
+<ul>
+<li><strong>Choc d’offre</strong> : la quantité offerte change <em>à chaque prix</em>, O devient O′. Négatif (guerre, panne, embargo) : vers la gauche, ou vers le haut.</li>
+<li><strong>Prix du bien</strong> : on glisse le long de la courbe.</li>
+<li><strong>Autre cause</strong> : la courbe se déplace.</li>
+</ul>
+<aside class="notes">
+<p>0 h 32 – 0 h 40. Gauche ou haut : même chose, le montrer au tableau. Vers la gauche : moins de barils à chaque prix. Vers le haut : le dernier baril coûte plus cher. Question : une hausse de revenu glisse-t-elle ou déplace-t-elle ? (Elle déplace la demande.)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lélasticité-mesure-la-réaction-de-la-quantité-au-prix-faible-à-court-terme-pour-le-carburant" class="slide level2">
+<h2>L’élasticité mesure la réaction de la quantité au prix, faible à court terme pour le carburant</h2>
+<p>e = variation de Q (en %) ÷ variation de P (en %). Négative.</p>
+<p>|e| &lt; 1 : demande <strong>peu élastique</strong>. Pour le carburant, e est compris entre −0,40 et −0,21 (Insee Analyses n° 86, 06/07/2023).</p>
+<aside class="notes">
+<p>0 h 40 – 0 h 47. Une hausse de 1 % du prix réduit la consommation de 0,21 % à 0,40 % seulement à court terme (données de septembre 2021 à janvier 2023). Pourquoi ? Changer de voiture, déménager ou covoiturer prend des mois. Le CM 2 en fera un outil de calcul complet ; ne pas aller plus loin qu’une lecture.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-choc-doffre-fait-monter-le-prix-et-baisser-la-quantité" class="slide level2">
+<h2>Un choc d’offre fait monter le prix et baisser la quantité</h2>
+
+<img data-src="cm1_files/figure-revealjs/fig-choc-offre-1.png" id="fig-choc-offre" alt="Offre et demande : l'offre se déplace vers la gauche de O à O prime, avec une pénurie au prix initial ; le prix monte de P étoile à P étoile prime et la quantité baisse" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;1
+</p><aside class="notes">
+<p>0 h 47 – 0 h 57. Suivre la courbe : E, pénurie, E′. Trois temps : (1) le choc, O devient O′ ; (2) au prix P*, les acheteurs veulent toujours Q*, les vendeurs offrent beaucoup moins : pénurie ; (3) les acheteurs enchérissent, on glisse le long de D (de E vers E′) et le long de O′.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="piège-le-prix-a-monté-mais-la-demande-na-pas-baissé" class="slide level2">
+<h2>Piège : le prix a monté, mais la demande n’a pas baissé</h2>
+<div class="piege">
+<p>La hausse du prix fait baisser la <strong>quantité demandée</strong> (glissement le long de D). La <strong>demande</strong> (la courbe D) n’a pas bougé : seule l’offre s’est déplacée.</p>
+</div>
+<aside class="notes">
+<p>0 h 57 – 1 h 02. Sondage : « le prix va-t-il redescendre tout seul ? » Il ne redescendra que si l’offre revient (réouverture du détroit) ou si la demande se déplace vers la gauche.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-prix-est-fixé-par-le-producteur-le-plus-cher-dont-on-a-besoin" class="slide level2">
+<h2>Le prix est fixé par le producteur le plus cher dont on a besoin</h2>
+
+<img data-src="cm1_files/figure-revealjs/fig-cout-marginal-1.png" id="fig-cout-marginal" alt="Escalier des coûts marginaux de quatre producteurs fictifs, avec et sans le Golfe ; la demande fixe à 25 millions de barils par jour coupe l'offre à 60 dollars avant le choc et 80 dollars après" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;2
+</p><aside class="notes">
+<p>1 h 02 – 1 h 10. Chiffres fictifs : quatre producteurs de 10 Mb/j chacun, coûts marginaux Golfe 20 $, X 40 $, Y 60 $, Z 80 $ le baril ; demande fixe à 25 Mb/j.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="sans-le-golfe-le-prix-passe-de-60-à-80-33" class="slide level2">
+<h2>Sans le Golfe, le prix passe de 60 $ à 80 $ : +33 %</h2>
+<ol type="1">
+<li>Avant : Golfe, X et Y suffisent. Prix = Cm de Y = <strong>60 $</strong>.</li>
+<li>Après : il faut X, Y <strong>et Z</strong>. Prix = <strong>80 $</strong>.</li>
+<li>(80 − 60) ÷ 60 = <strong>+33 %</strong>.</li>
+<li>Producteur X : 20 $ par baril de plus que son coût, puis <strong>40 $</strong>.</li>
+</ol>
+<aside class="notes">
+<p>1 h 10 – 1 h 20. Faire calculer à la main. Aucun producteur restant n’a vu son coût augmenter, et les producteurs épargnés gagnent à la hausse. Question : et si la demande montait à 35 Mb/j ? Aucun coût ne fixe plus le prix : il rationne la demande. En 2026, on est plutôt dans ce cas : à court terme, les autres producteurs ne peuvent pas produire beaucoup plus. C’est le court terme de Marshall.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="pause-15-minutes" class="slide level2">
+<h2>Pause : 15 minutes</h2>
+<aside class="notes">
+<p>1 h 20 – 1 h 35. Pause. À la reprise : le même choc, chiffré en euros par litre.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="même-choc-chiffré-léquilibre-passe-de-170-et-100-à-220-et-90-donc-e-034" class="slide level2">
+<h2>Même choc chiffré : l’équilibre passe de 1,70 € et 100 à 2,20 € et 90, donc e ≈ −0,34</h2>
+<ul>
+<li>Le choc retire 20 millions de litres à chaque prix.</li>
+<li>Prix : +0,50 ÷ 1,70 = <strong>+29,4 %</strong>. Quantité : <strong>−10 %</strong>.</li>
+<li>e = −10 ÷ 29,4 ≈ <strong>−0,34</strong>, dans la fourchette de l’Insee.</li>
+</ul>
+<aside class="notes">
+<p>1 h 35 – 1 h 45. Marché fictif de carburant, Q en millions de litres par jour. Lire le tableau de la page : à 1,70 €, demande et offre valent 100 ; au prix de 1,70 €, après le choc, on demande 100 mais on n’offre que 80 : il manque 20. Énigme : l’offre perd 20, la quantité seulement 10 ; la hausse du prix convainc des acheteurs de renoncer à 10 et les vendeurs restants d’offrir 10 de plus le long de O′.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="même-choc-deux-demandes-le-prix-monte-plus-si-la-demande-est-peu-élastique" class="slide level2">
+<h2>Même choc, deux demandes : le prix monte plus si la demande est peu élastique</h2>
+
+<img data-src="cm1_files/figure-revealjs/fig-elasticite-1.png" id="fig-elasticite" alt="Deux panneaux avec le même choc d'offre : demande peu élastique à gauche, le prix passe de 1,70 à 2,20 euros et la quantité de 100 à 90 ; demande élastique à droite, le prix passe à 1,95 euro et la quantité à 85" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;3
+</p><aside class="notes">
+<p>1 h 45 – 1 h 50. Comparer A et B. Plus la demande est peu élastique (ici, plus raide au même point), plus le choc passe dans le prix.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="même-choc-deux-histoires-le-prix-ou-la-quantité-encaisse" class="slide level2">
+<h2>Même choc, deux histoires : le prix ou la quantité encaisse</h2>
+<ul>
+<li>Demande peu élastique (e ≈ −0,34) : prix <strong>+29,4 %</strong>, quantité <strong>−10 %</strong></li>
+<li>Demande élastique (e ≈ −1) : prix <strong>+14,7 %</strong>, quantité <strong>−15 %</strong></li>
+</ul>
+<aside class="notes">
+<p>1 h 50 – 1 h 55. Plus la demande est inélastique, plus le choc passe dans le prix et moins il passe dans la quantité. La demande élastique est Q = 202 − 60 P : nouvel équilibre à 1,95 € et 85 millions de litres.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-prix-à-la-pompe-a-suivi-le-brut-puis-les-raffineries" class="slide level2">
+<h2>Le prix à la pompe a suivi le brut, puis les raffineries</h2>
+
+<img data-src="cm1_files/figure-revealjs/fig-prix-pompe-1.png" id="fig-prix-pompe" alt="Prix hebdomadaires de l'Euro-super 95 et du gazole en France de janvier à octobre 2026, avec une ligne verticale au 28 février, fermeture du détroit d'Ormuz" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;4
+</p><aside class="notes">
+<p>1 h 55 – 2 h 00. Source sur le graphique. Le gazole, moins cher que l’Euro-super 95 avant la fermeture du détroit, le dépasse dès le 9 mars.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-brut-a-presque-doublé-en-six-semaines" class="slide level2">
+<h2>Le brut a presque doublé en six semaines</h2>
+
+<img data-src="cm1_files/figure-revealjs/fig-brent-1.png" id="fig-brent" alt="Prix du Brent en dollars par baril en 2026, avec une ligne verticale au 28 février : environ 70 dollars avant, 138 dollars le 7 avril, moins de 70 début juillet, plus de 125 en octobre" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;5
+</p><aside class="notes">
+<p>2 h 00 – 2 h 05. De 71,66 $ le 26 février à 138,21 $ le 7 avril, plus haut. Avant la guerre, l’AIE prévoyait pour 2026 un excès d’offre de 3,7 Mb/j ; le 12 mars, elle prévoit une baisse de la production de 8 Mb/j pour le mois (Insee, 24/03/2026). Brent à 126,55 $ le 14 octobre 2026 (EIA).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="du-baril-à-la-pompe-la-hausse-vient-du-prix-avant-taxes-pas-de-laccise" class="slide level2">
+<h2>Du baril à la pompe, la hausse vient du prix avant taxes, pas de l’accise</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Euro-super 95, €/L</th>
+<th>23 février</th>
+<th>12 octobre</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Prix hors taxes</td>
+<td>0,735</td>
+<td>1,153</td>
+</tr>
+<tr class="even">
+<td>Accise</td>
+<td>0,690</td>
+<td>0,690</td>
+</tr>
+<tr class="odd">
+<td>TVA à 20 %</td>
+<td>0,285</td>
+<td>0,369</td>
+</tr>
+</tbody>
+</table>
+<p>Source : Commission européenne, <em>Weekly Oil Bulletin</em> ; calcul de l’auteur (consulté le 21/10/2026).</p>
+<aside class="notes">
+<p>2 h 05 – 2 h 10. Sur les 0,502 € de hausse, 0,418 € (83 %) viennent du prix avant taxes, rien de l’accise, montant fixe par litre, et 0,084 € de la TVA, pourcentage du prix. Le hors-taxes regroupe le brut, le raffinage, le transport et la marge de distribution, que la source ne sépare pas. Pour le gazole, la part du hors-taxes est la même : le choc passe tout entier par l’amont, que l’État ne fixe pas.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-gazole-a-subi-deux-déplacements-de-loffre" class="slide level2">
+<h2>Le gazole a subi deux déplacements de l’offre</h2>
+<ol type="1">
+<li>Le <strong>brut</strong> : 71,66 $ le 26 février, 126,55 $ le 14 octobre (Brent, EIA).</li>
+<li>Le <strong>raffinage</strong> : diesel importé du Golfe, moratoire russe, raffineries endommagées.</li>
+</ol>
+<aside class="notes">
+<p>2 h 10 – 2 h 14. D’où +41 % pour le gazole, contre +29 % pour l’essence. Source : Insee, Note de conjoncture, juin 2026 ; AFP, Connaissance des Énergies, 10/09/2026.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-français-ont-payé-plus-cher-mais-nont-presque-pas-moins-roulé" class="slide level2">
+<h2>Les Français ont payé plus cher mais n’ont presque pas moins roulé</h2>
+
+<img data-src="cm1_files/figure-revealjs/fig-livraisons-1.png" id="fig-livraisons" alt="Livraisons mensuelles de carburants routiers en France en 2025 et de janvier à juillet 2026, en millions de tonnes ; l'écart de 2026 reste modeste et existait déjà en janvier et février" width="1600" class="r-stretch quarto-figure-center"><p class="caption">
+Figure&nbsp;6
+</p><aside class="notes">
+<p>2 h 14 – 2 h 18. De mars à juillet 2026, 4,9 % de carburant routier de moins qu’un an plus tôt ; mais en janvier et février, avant la guerre, l’écart était déjà de 6,0 % (Eurostat, consulté le 21/10/2026) : toutes choses égales par ailleurs, la part de la baisse due au prix est donc faible. Ce sont des livraisons, pas des litres passés à la pompe.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="avec-e-03-les-ménages-achètent-presque-autant-beaucoup-plus-cher" class="slide level2">
+<h2>Avec e ≈ −0,3, les ménages achètent presque autant, beaucoup plus cher</h2>
+<p>Prix +40 %, quantité −12 % (0,3 × 40).</p>
+<p>Facture : 1,40 × 0,88 ≈ 1,23, soit environ <strong>+23 %</strong>.</p>
+<aside class="notes">
+<p>2 h 18 – 2 h 22. C’est une première approximation : l’élasticité de court terme est appliquée à une hausse étalée sur huit mois.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="en-mars-les-anticipations-ont-déplacé-la-demande" class="slide level2">
+<h2>En mars, les anticipations ont déplacé la demande</h2>
+<p>Les 2 et 3 mars 2026, plus de 6 millions de paiements par carte dans les stations : une « ruée anticipative » (<em>The Conversation</em>, 13/10/2026).</p>
+<aside class="notes">
+<p>2 h 22 – 2 h 25. Le prix a encore peu bougé : les anticipations déplacent la demande vers la droite pendant quelques jours.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="piège-une-chute-de-30-de-la-consommation-nest-pas-une-élasticité" class="slide level2">
+<h2>Piège : une chute de 30 % de la consommation n’est pas une élasticité</h2>
+<div class="piege">
+<p>Du 11 au 20 septembre 2026 : −30 % de consommation, environ +5 % de prix (<em>The Conversation</em>, 13/10/2026 ; AFP, 10/09/2026). −30 ÷ 5 donnerait e = −6, invraisemblable. Des stations sont aussi à sec : la quantité baisse sans que la demande ait changé.</p>
+</div>
+<aside class="notes">
+<p>2 h 25 – 2 h 28. Gazole d’environ 2,30 €/L (AFP, 10/09/2026) à un record de 2,41 €/L le 20 septembre (<em>The Conversation</em>, 13/10/2026). 17 % des stations à sec le 21/09. L’élasticité se mesure toutes choses égales par ailleurs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="un-prix-plafonné-sous-léquilibre-crée-la-pénurie-le-cas-totalenergies" class="slide level2">
+<h2>Un prix plafonné sous l’équilibre crée la pénurie : le cas TotalEnergies</h2>
+<ul>
+<li>Depuis le 22 juillet : SP95-E10 à 1,99 € au plus, gazole à 2,25 € (TotalEnergies, 22/07/2026).</li>
+<li>Le 23/09, le SP95-E10 vaut 2,16 € en moyenne (AFP, 24/09/2026).</li>
+<li>Part de marché : 22 % à 25 % fin août, selon son PDG (AFP, 29/08/2026).</li>
+</ul>
+<aside class="notes">
+<p>2 h 28 – 2 h 33. C’est un plafond fixé par une entreprise, non par l’État. Le mécanisme est celui de la pénurie : prix maintenu au-dessous de l’équilibre. Le 12/10/2026, plafond de 2,25 € sur le gazole maintenu au-delà de fin janvier 2027 dans 3 300 stations ; part de marché au-dessus de 30 % en octobre selon l’entreprise.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="là-où-le-prix-est-bloqué-les-stations-sont-à-sec-et-la-file-rationne" class="slide level2">
+<h2>Là où le prix est bloqué, les stations sont à sec et la file rationne</h2>
+<ul>
+<li>21/09/2026 : 17 % des stations manquent d’un carburant, dont 91 % de stations Total (AFP).</li>
+<li>Le ministre y voit « la conséquence directe du plafonnement du prix ».</li>
+<li>Coût pour Total : 250 à 300 M€ fin août (selon son PDG, AFP, 29/08/2026), estimation non vérifiée.</li>
+</ul>
+<aside class="notes">
+<p>2 h 33 – 2 h 37. Le ministre juge aussi l’approvisionnement du pays assuré. Le temps perdu et le risque de station à sec s’ajoutent au 1,99 € : la file rationne à la place du prix. Manque à gagner à comparer à un résultat net ajusté de 11,4 milliards de dollars sur les six premiers mois de 2026 (AFP, 29/08/2026).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-ménages-captifs-de-la-voiture-paient-le-plus" class="slide level2">
+<h2>Les ménages captifs de la voiture paient le plus</h2>
+<ul>
+<li>Ménages dépensant plus d’un mois de revenu en carburant : 10,6 % en 2021, 22,4 % aux prix du printemps 2026 (Insee Première n° 2125, 08/09/2026).</li>
+<li>Actifs ruraux allant au travail en voiture : près de 90 % (AFP, 23/09/2026, d’après l’Insee).</li>
+</ul>
+<aside class="notes">
+<p>2 h 37 – 2 h 41. Estimation à revenus et usages inchangés. Gros rouleurs : e = −0,32 contre −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86). Élasticité −0,47 en zone rurale, −0,41 en zone urbaine. Génération : aucune source consultée ne chiffre l’effet par âge.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="les-vendeurs-gagnent-leffet-sur-létat-est-ambigu" class="slide level2">
+<h2>Les vendeurs gagnent ; l’effet sur l’État est ambigu</h2>
+<ul>
+<li>Producteurs épargnés et raffineurs intacts : ils vendent plus cher.</li>
+<li><strong>Accise</strong> (fixe par litre) : rapporte moins.</li>
+<li><strong>TVA</strong> (en % du prix) : rapporte plus.</li>
+</ul>
+<aside class="notes">
+<p>2 h 41 – 2 h 44. Au 30 septembre, recettes de carburant de l’État : −383 M€ sur un an, avec 798 M€ de TVA en plus et 1,18 Md€ d’accises en moins (<em>The Conversation</em>, 13/10/2026). Le CM 2 dira qui paie vraiment un impôt.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bloquer-les-prix-recrée-la-pénurie-une-remise-coûte-cher-et-profite-aux-gros-consommateurs" class="slide level2">
+<h2>Bloquer les prix recrée la pénurie ; une remise coûte cher et profite aux gros consommateurs</h2>
+<ul>
+<li><strong>Blocage</strong> sous P*′ : files, quotas, stations à sec.</li>
+<li><strong>Remise générale</strong> : coût public, moins d’incitation à économiser. En 2022, 0,18 €/L au 1<sup>er</sup> avril (Insee Analyses n° 86, 06/07/2023).</li>
+</ul>
+<aside class="notes">
+<p>2 h 44 – 2 h 48. Le plafond de TotalEnergies le montre en 2026 ; les CM 3 et 4 chiffreront ce mécanisme. Remise de 2022 : 0,30 €/L en septembre, 0,10 €/L mi-novembre, supprimée au 1<sup>er</sup> janvier 2023 ; 51 à 81 € de dépense évités par ménage automobiliste.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="une-aide-ciblée-garde-le-signal-prix-à-condition-de-savoir-cibler" class="slide level2">
+<h2>Une aide ciblée garde le signal-prix, à condition de savoir cibler</h2>
+<ul>
+<li><strong>Aide ciblée</strong> : aide aux « grands rouleurs » élargie en septembre 2026, dans un plan de 450 M€ (ministère de la Transition écologique, 22/09/2026).</li>
+<li>Le prix reste libre : les ménages gardent une raison d’économiser.</li>
+</ul>
+<aside class="notes">
+<p>2 h 48 – 2 h 49. Ce que l’analyse établit : positif. Le reste est un choix.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="stocks-stratégiques-et-taxe-sur-les-profits-agissent-sur-loffre-et-sur-le-financement" class="slide level2">
+<h2>Stocks stratégiques et taxe sur les profits agissent sur l’offre et sur le financement</h2>
+<ul>
+<li><strong>Stocks stratégiques</strong> : O′ se déplace vers la droite, le prix baisse.</li>
+<li><strong>Taxe sur les profits exceptionnels</strong> : finance les aides.</li>
+</ul>
+<aside class="notes">
+<p>2 h 49 – 2 h 51. Après la libération de stocks de diesel, TotalEnergies annonce un avantage d’environ 10 centimes par litre de gazole du 1<sup>er</sup> novembre 2026 au 31 janvier 2027. Taxe sur les profits : ne change pas le prix à court terme si l’offre n’en dépend pas ; l’Union européenne l’a fait en 2022 (règlement (UE) 2022/1854).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="le-choix-relève-dun-jugement-efficacité-équité-climat-budget-concurrence" class="slide level2">
+<h2>Le choix relève d’un jugement : efficacité, équité, climat, budget, concurrence</h2>
+<ul>
+<li><strong>Néoclassiques</strong> : laisser le prix signaler la rareté, puis transferts ciblés (Tinbergen, 1952).</li>
+<li><strong>Post-keynésiens</strong> : contenir les prix clés dès le départ (Weber et Wasner, 2023).</li>
+</ul>
+<aside class="notes">
+<p>2 h 51 – 2 h 55. Débat en amphi : 3 minutes. Les écoles divergent sur ce qu’on est prêt à payer, en pénurie ou en argent public, pas sur le mécanisme. Climat : un prix élevé pousse à la sobriété, au risque de la colère sociale ; en 2018, la hausse de la contribution climat-énergie a été gelée.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="en-droit-bloquer-les-prix-est-possible-mais-temporaire" class="slide level2">
+<h2>En droit, bloquer les prix est possible, mais temporaire</h2>
+<div class="droit">
+<p>Code de commerce, art. L410-2 : décret en Conseil d’État, mesures temporaires d’au plus six mois, en cas de crise ou de situation manifestement anormale du marché.</p>
+</div>
+<aside class="notes">
+<p>2 h 55 – 2 h 57. Principe de liberté des prix, exception encadrée et provisoire.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="à-retenir" class="slide level2">
+<h2>À retenir</h2>
+<div class="retenir">
+<ul>
+<li>Dire quelle courbe se déplace.</li>
+<li>L’offre reflète le coût marginal.</li>
+<li>Ormuz : O devient O′, P monte, Q baisse.</li>
+<li>Prix du bien : glissement ; autre cause : déplacement.</li>
+<li>Demande peu élastique : le prix encaisse.</li>
+<li>Bloquer ou aider : jugement normatif.</li>
+</ul>
+</div>
+<aside class="notes">
+<p>2 h 57 – 2 h 59. Reprendre les trois énigmes de l’ouverture une à une.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="plan-de-dissertation-i.-ce-que-dit-loutil-ii.-ce-quil-ne-tranche-pas" class="slide level2">
+<h2>Plan de dissertation : I. Ce que dit l’outil ; II. Ce qu’il ne tranche pas</h2>
+<p><strong>Faut-il bloquer les prix à la pompe ou aider les automobilistes ?</strong></p>
+<p><strong>I.</strong> Un choc d’offre fait monter le prix, la demande est peu élastique. Bloquer recrée la pénurie ; la remise coûte ; l’aide ciblée garde le signal-prix.</p>
+<p><strong>II.</strong> Efficacité, équité, climat, budget : un jugement, où les écoles s’opposent.</p>
+<aside class="notes">
+<p>2 h 59 – 3 h 00. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>CM 1 · Ormuz</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+
+        height: 720,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 6.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copié");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copié");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/pierrebeaucoral\.github\.io\/intro-eco-2\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
