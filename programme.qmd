@@ -27,7 +27,7 @@ Les dates seront ajoutées dès la publication de l'emploi du temps. Le tableau 
 | 5 | CM 5 · Les ZFE | TD 3 · Les prix bloqués |
 | 6 | CM 6 · D'où vient l'argent ? | TD 4 · **Contrôle continu 1** |
 | 7 | CM 7 · La BCE | TD 5 · Les ZFE |
-| 8 | CM 8 · La Grèce | TD 6 · Monnaie et taux, correction du CC 1 |
+| 8 | CM 8 · La Grèce | TD 6 · Monnaie et taux, correction du CC1 |
 | 9 | CM 9 · Les droits de douane | TD 7 · La Grèce |
 | 10 | CM 10 · Le climat (ouverture) | TD 8 · **Contrôle continu 2** |
 

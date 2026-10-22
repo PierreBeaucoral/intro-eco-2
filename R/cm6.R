@@ -38,15 +38,15 @@ panique_cm6 <- list(
 #' vendus en urgence).
 liquidite_max <- function(p = panique_cm6) p$reserves + p$prets * p$decote
 
-#' Somme reçue par un déposant qui retire tout de suite quand n déposants
+#' Somme reçue par un déposant qui retire tout de suite quand N déposants
 #' retirent : 100 € tant que la banque peut payer, puis la moyenne de ce
 #' qu'elle peut verser (les premiers servis ont 100 €, les derniers rien).
 gain_retirer <- function(n, p = panique_cm6) {
   ifelse(n * p$depot <= liquidite_max(p), p$depot, liquidite_max(p) / n)
 }
 
-#' Somme reçue dans un an par un déposant qui attend quand n déposants
-#' retirent tout de suite (n >= 10, nombre des impatients). Au-delà des
+#' Somme reçue dans un an par un déposant qui attend quand N déposants
+#' retirent tout de suite (N >= 10, nombre des impatients). Au-delà des
 #' réserves, la banque vend des prêts à moitié prix ; ce qui reste des prêts,
 #' intérêts compris, est partagé entre ceux qui ont attendu.
 gain_attendre <- function(n, p = panique_cm6) {
@@ -58,7 +58,7 @@ gain_attendre <- function(n, p = panique_cm6) {
 }
 
 #' Seuil de retraits au-delà duquel attendre rapporte moins que retirer :
-#' (12 100 − 220 n) / (100 − n) = 100, soit n = 17,5.
+#' (12 100 − 220 N) / (100 − N) = 100, soit N = 17,5.
 seuil_panique_cm6 <- with(panique_cm6, {
   a <- (prets + reserves / decote) * (1 + interet)          # 12 100
   b <- depot / decote * (1 + interet)                       # 220

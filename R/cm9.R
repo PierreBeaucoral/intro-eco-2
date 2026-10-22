@@ -73,7 +73,7 @@ graphe_ricardo <- function(base_size = 16) {
 # 2. Droit de douane dans un petit pays (Exemple 2 de la page)
 #    Marché intérieur fictif de tee-shirts, P en euros, Q en millions par an.
 #    Demande intérieure : Qd = 100 - P ; offre intérieure : Qo = P.
-#    Prix mondial Pm = 20 € (le pays est trop petit pour l'influencer) ;
+#    Prix mondial Pw = 20 € (le pays est trop petit pour l'influencer) ;
 #    droit de douane unitaire t = 10 € par tee-shirt.
 # ---------------------------------------------------------------------------
 tarif_cm9 <- list(d_a = 100, pm = 20, t = 10)
@@ -90,9 +90,9 @@ aire_d_cm9 <- (qd_cm9(tarif_cm9$pm) - qd_cm9(p_avec_cm9)) * tarif_cm9$t / 2   # 
 perte_conso_cm9 <- (qd_cm9(tarif_cm9$pm) + qd_cm9(p_avec_cm9)) / 2 * tarif_cm9$t   # perte des consommateurs
 
 #' Droit de douane dans un petit pays : demande et offre intérieures, prix
-#' mondial Pm et prix intérieur Pm + t, aires a, b, c, d.
+#' mondial Pw et prix intérieur Pw + t, aires a, b, c, d.
 #' @param chiffres TRUE : graduations de l'exemple chiffré ; FALSE : graphique
-#'   théorique, seuls Pm et Pm + t sont étiquetés
+#'   théorique, seuls Pw et Pw + t sont étiquetés
 #' @param base_size 16 (page) ou 24 (diapos)
 graphe_tarif <- function(chiffres = TRUE, base_size = 16) {
   pm <- tarif_cm9$pm; pt <- p_avec_cm9
@@ -124,7 +124,7 @@ graphe_tarif <- function(chiffres = TRUE, base_size = 16) {
     geom_line(data = courbes, aes(q, offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
     annotate("text", x = c(95, 52), y = c(12, 60), label = c("D", "O"),
              colour = couleurs_eco[c("demande", "offre")], family = police_cours, size = taille) +
-    # importations sans et avec droit, empilées sous Pm (zone vide du graphique)
+    # importations sans et avec droit, empilées sous Pw (zone vide du graphique)
     annotate("segment", x = c(q1, q2), xend = c(q4, q3), y = c(pm - 3, pm - 10), yend = c(pm - 3, pm - 10),
              linewidth = 0.5, colour = couleurs_eco[["neutre"]],
              arrow = grid::arrow(ends = "both", length = grid::unit(0.15, "cm"))) +
@@ -135,11 +135,11 @@ graphe_tarif <- function(chiffres = TRUE, base_size = 16) {
              fill = "white", linewidth = 0)   # sans bordure (label.size ignoré depuis ggplot2 4.0)
   if (chiffres) {
     g <- g + scale_x_continuous(breaks = c(q1, q2, q3, q4), labels = c(q1, q2, q3, q4)) +
-      scale_y_continuous(breaks = c(pm, pt), labels = c("Pm = 20", "Pm + t = 30")) +
+      scale_y_continuous(breaks = c(pm, pt), labels = c("Pw = 20", "Pw + t = 30")) +
       labs(x = "Quantité Q (millions de tee-shirts)", y = "Prix P (€)")
   } else {
     g <- g + scale_x_continuous(breaks = c(q1, q2, q3, q4), labels = c("Q₁", "Q₂", "Q₃", "Q₄")) +
-      scale_y_continuous(breaks = c(pm, pt), labels = c("Pm", "Pm + t")) +
+      scale_y_continuous(breaks = c(pm, pt), labels = c("Pw", "Pw + t")) +
       labs(x = "Quantité Q", y = "Prix P")
   }
   g + coord_cartesian(xlim = c(0, 100), ylim = c(0, 65), expand = FALSE, clip = "off") +

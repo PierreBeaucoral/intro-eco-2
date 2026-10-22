@@ -148,7 +148,7 @@ B est moins productif pour les deux biens et gagne pourtant à l'échange. Sa fa
 ## Un droit de douane est une taxe, et un petit pays subit le prix mondial
 
 - **Droit de douane** : taxe sur un bien importé, en % (ad valorem) ou en montant t par unité (spécifique)
-- **Petit pays** : prend le prix mondial **Pm** comme donné ; avec un droit, son prix intérieur devient **Pm + t**
+- **Petit pays** : prend le prix mondial **Pw** comme donné ; avec un droit, son prix intérieur devient **Pw + t**
 
 ::: {.notes}
 0 h 53 – 1 h 00. Le droit NPF (nation la plus favorisée) est le droit de base qu'un membre de l'OMC applique à tous ses partenaires, sauf accord particulier. Exemples : 15 % de la valeur, ou 10 € par tee-shirt. Un droit de douane fonctionne comme n'importe quelle taxe : la question « qui le paie ? » est une question d'incidence, qui ne se règle pas en regardant qui remplit la déclaration en douane. Un grand pays, au contraire, achète assez pour que ses décisions fassent bouger le prix que fixent les exportateurs. On commence par le petit pays.
@@ -160,14 +160,14 @@ B est moins productif pour les deux biens et gagne pourtant à l'échange. Sa fa
 #| label: fig-tarif
 #| fig-width: 8
 #| fig-height: 4.6
-#| fig-alt: "Graphique offre-demande d'un bien importé. La demande D, bleue, est décroissante ; l'offre intérieure O, ambre, est croissante. Deux droites horizontales marquent le prix mondial Pm et, plus haut, Pm plus t. Entre ces deux droites, de gauche à droite, quatre aires : a, un trapèze ambre à gauche de l'offre ; b, un petit triangle rouge entre l'offre et la verticale Q2 ; c, un rectangle gris entre Q2 et Q3 ; d, un petit triangle rouge entre Q3 et la demande. Deux flèches horizontales montrent les importations, plus longues sans droit (de Q1 à Q4) qu'avec droit (de Q2 à Q3)."
+#| fig-alt: "Graphique offre-demande d'un bien importé. La demande D, bleue, est décroissante ; l'offre intérieure O, ambre, est croissante. Deux droites horizontales marquent le prix mondial Pw et, plus haut, Pw plus t. Entre ces deux droites, de gauche à droite, quatre aires : a, un trapèze ambre à gauche de l'offre ; b, un petit triangle rouge entre l'offre et la verticale Q2 ; c, un rectangle gris entre Q2 et Q3 ; d, un petit triangle rouge entre Q3 et la demande. Deux flèches horizontales montrent les importations, plus longues sans droit (de Q1 à Q4) qu'avec droit (de Q2 à Q3)."
 graphe_tarif(chiffres = FALSE, base_size = 24)
 ```
 
 Graphique théorique. Consommateurs : −(a + b + c + d). Producteurs : +a. État : +c. Perte sèche : b + d.
 
 ::: {.notes}
-1 h 00 – 1 h 08. Lecture : sans droit, on produit Q₁, on consomme Q₄, on importe la différence. Avec le droit, la production passe à Q₂, la consommation à Q₃, les importations se réduisent. Les exportateurs vendent toujours à Pm, et le prix intérieur monte de tout le droit, y compris pour les biens produits dans le pays. Une partie de la perte des consommateurs va aux producteurs protégés (a), une partie à l'État (c) ; le reste (b et d) n'est récupéré par personne. Annoncer la pause : 15 minutes, retour à 1 h 23.
+1 h 00 – 1 h 08. Lecture : sans droit, on produit Q₁, on consomme Q₄, on importe la différence. Avec le droit, la production passe à Q₂, la consommation à Q₃, les importations se réduisent. Les exportateurs vendent toujours à Pw, et le prix intérieur monte de tout le droit, y compris pour les biens produits dans le pays. Une partie de la perte des consommateurs va aux producteurs protégés (a), une partie à l'État (c) ; le reste (b et d) n'est récupéré par personne. Annoncer la pause : 15 minutes, retour à 1 h 23.
 :::
 
 ## Pause
@@ -184,11 +184,11 @@ Reprise dans quinze minutes.
 #| label: fig-tarif-chiffre
 #| fig-width: 8
 #| fig-height: 4.6
-#| fig-alt: "Graphique offre-demande des tee-shirts. Demande D : Q = 100 moins P ; offre intérieure O : Q = P. Prix mondial Pm = 20 euros, prix avec droit 30 euros. Quantités 20, 30, 70 et 80 millions. Sans droit, on importe 60 millions de tee-shirts ; avec le droit, 40 millions."
+#| fig-alt: "Graphique offre-demande des tee-shirts. Demande D : Q = 100 moins P ; offre intérieure O : Q = P. Prix mondial Pw = 20 euros, prix avec droit 30 euros. Quantités 20, 30, 70 et 80 millions. Sans droit, on importe 60 millions de tee-shirts ; avec le droit, 40 millions."
 graphe_tarif(chiffres = TRUE, base_size = 24)
 ```
 
-D : Q = 100 − P. O : Q = P. Pm = 20 €, t = 10 €. Exemple fictif.
+D : Q = 100 − P. O : Q = P. Pw = 20 €, t = 10 €. Exemple fictif.
 
 ::: {.notes}
 1 h 23 – 1 h 28. Q en millions de tee-shirts par an, P en euros. Le droit représente 50 % du prix mondial. Sans droit : prix 20 €, demande 80, production du pays 20, importations 60. Avec droit : prix 30 €, demande 70, production 30, importations 40.
@@ -413,7 +413,7 @@ Cour suprême, 20/02/2026, **six voix contre trois** : la loi d'urgence (IEEPA) 
 ::: {.retenir}
 - Coûts d'opportunité différents : l'échange enrichit (Ricardo)
 - L'ouverture enrichit le pays, pas tous ses habitants
-- Un droit t : prix Pm + t, perte sèche
+- Un droit t : prix Pw + t, perte sèche
 - Part de l'étranger : baisse de son prix ÷ droit, faible
 - Objectif contre coût : question normative
 :::

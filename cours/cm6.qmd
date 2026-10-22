@@ -184,7 +184,7 @@ Une banque fictive a 100 déposants, qui ont chacun déposé 100 €. Elle gar
 4. *La panique.* Si tous veulent retirer, la banque peut verser au plus 1 000 + 9 000 ÷ 2 = 5 500 €. Les **55 premiers** sont servis ; les 45 suivants ne reçoivent rien. Retirer en premier devient la seule protection.
 5. *La leçon.* La banque, ses prêts et ses clients sont les mêmes dans les deux cas. Seules les **anticipations** changent. Le calcul montre qu'attendre rapporte moins que retirer dès que 18 déposants ou plus retirent (@fig-panique).
 
-Pour ceux qui aiment l'algèbre (facultatif) : notons n le nombre de déposants qui retirent tout de suite. Si n déposants retirent (entre 10 et 55), celui qui attend reçoit (12 100 − 220 n) ÷ (100 − n). Cette somme est égale à 100 € pour n = 17,5.
+Pour ceux qui aiment l'algèbre (facultatif) : notons N le nombre de déposants qui retirent tout de suite. Si N déposants retirent (entre 10 et 55), celui qui attend reçoit (12 100 − 220 N) ÷ (100 − N). Cette somme est égale à 100 € pour N = 17,5.
 :::
 
 ```{r}

@@ -270,7 +270,7 @@ Reprise dans quinze minutes.
 - Retirer rapporte 100 € : chacun retire.
 
 ::: {.notes}
-[1 h 52 – 1 h 58] Si tous veulent retirer, la banque peut verser au plus 1 000 + 9 000 ÷ 2 = 5 500 € : les 55 premiers sont servis, les 45 suivants ne reçoivent rien. La banque, ses prêts et ses clients sont les mêmes : seules les anticipations changent. Facultatif, pour ceux qui aiment l'algèbre : si n déposants retirent (entre 10 et 55), celui qui attend reçoit (12 100 − 220 n) ÷ (100 − n), égal à 100 € pour n = 17,5.
+[1 h 52 – 1 h 58] Si tous veulent retirer, la banque peut verser au plus 1 000 + 9 000 ÷ 2 = 5 500 € : les 55 premiers sont servis, les 45 suivants ne reçoivent rien. La banque, ses prêts et ses clients sont les mêmes : seules les anticipations changent. Facultatif, pour ceux qui aiment l'algèbre : si N déposants retirent (entre 10 et 55), celui qui attend reçoit (12 100 − 220 N) ÷ (100 − N), égal à 100 € pour N = 17,5.
 :::
 
 ## Il existe deux équilibres : le calme et la panique
