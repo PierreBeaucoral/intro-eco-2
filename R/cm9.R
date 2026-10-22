@@ -35,29 +35,38 @@ ricardo_cm9$con_vet <- c(echange_cm9, ricardo_cm9$max_vet[2] - echange_cm9)   # 
 #' vide) et consommation après spécialisation et échange (point plein, hors
 #' de la frontière). Graduations chiffrées assumées : la figure illustre
 #' l'exemple chiffré.
-graphe_ricardo <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = frontières seules ;
+#'   2 = ajoute l'autarcie ; 3 = figure complète (échange), identique à celle de
+#'   la page (valeur par défaut)
+graphe_ricardo <- function(base_size = 16, etape = 3) {
   r <- ricardo_cm9
   r$panneau <- factor(paste("Pays", r$pays), levels = c("Pays A", "Pays B"))
   frontiere <- data.frame(panneau = rep(r$panneau, each = 2),
                           vet = c(0, r$max_vet[1], 0, r$max_vet[2]),
                           ble = c(r$max_ble[1], 0, r$max_ble[2], 0))
   taille <- base_size / 3.2
-  ggplot() +
-    geom_line(data = frontiere, aes(vet, ble), colour = couleurs_eco[["neutre"]], linewidth = 1.3) +
+  g <- ggplot() +
+    geom_line(data = frontiere, aes(vet, ble), colour = couleurs_eco[["neutre"]], linewidth = 1.3)
+  if (etape >= 3) g <- g +
     geom_segment(data = r, aes(x = aut_vet, y = aut_ble, xend = con_vet, yend = con_ble),
                  colour = couleurs_eco[["demande"]], linewidth = 0.7,
-                 arrow = grid::arrow(length = grid::unit(0.22, "cm"), type = "closed")) +
+                 arrow = grid::arrow(length = grid::unit(0.22, "cm"), type = "closed"))
+  if (etape >= 2) g <- g +
     geom_point(data = r, aes(aut_vet, aut_ble), shape = 21, fill = "white",
-               colour = couleurs_eco[["equilibre"]], size = 3, stroke = 1.1) +
-    geom_point(data = r, aes(con_vet, con_ble), colour = couleurs_eco[["demande"]], size = 3.2) +
-    # à droite du point, pour ne pas déborder sur l'axe vertical du pays A
-    # « autarcie » à droite du point (pas de débordement sur l'axe vertical) et du côté
-    # où la frontière ne barre pas le mot : en dessous pour A (au-delà de la droite,
-    # sous la flèche), au-dessus pour B (frontière peu pentue)
+               colour = couleurs_eco[["equilibre"]], size = 3, stroke = 1.1)
+  if (etape >= 3) g <- g +
+    geom_point(data = r, aes(con_vet, con_ble), colour = couleurs_eco[["demande"]], size = 3.2)
+  # à droite du point, pour ne pas déborder sur l'axe vertical du pays A
+  # « autarcie » à droite du point (pas de débordement sur l'axe vertical) et du côté
+  # où la frontière ne barre pas le mot : en dessous pour A (au-delà de la droite,
+  # sous la flèche), au-dessus pour B (frontière peu pentue)
+  if (etape >= 2) g <- g +
     geom_text(data = r, aes(aut_vet + c(4, 1), aut_ble + c(-4, 3), label = "autarcie"),
-              hjust = 0, family = police_cours, size = taille, colour = couleurs_eco[["equilibre"]]) +
+              hjust = 0, family = police_cours, size = taille, colour = couleurs_eco[["equilibre"]])
+  if (etape >= 3) g <- g +
     geom_text(data = r, aes(con_vet, con_ble, label = "avec échange"), nudge_x = 1.2, nudge_y = 2.6,
-              hjust = 0, family = police_cours, size = taille, colour = couleurs_eco[["demande"]]) +
+              hjust = 0, family = police_cours, size = taille, colour = couleurs_eco[["demande"]])
+  g +
     facet_wrap(~panneau, nrow = 1, axes = "all") +   # axe vertical tracé dans les deux panneaux
     scale_x_continuous(breaks = c(0, 10, 20, 30, 40)) +
     scale_y_continuous(breaks = c(0, 10, 20, 30, 40, 50, 60)) +
@@ -94,9 +103,17 @@ perte_conso_cm9 <- (qd_cm9(tarif_cm9$pm) + qd_cm9(p_avec_cm9)) / 2 * tarif_cm9$t
 #' @param chiffres TRUE : graduations de l'exemple chiffré ; FALSE : graphique
 #'   théorique, seuls Pw et Pw + t sont étiquetés
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_tarif <- function(chiffres = TRUE, base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = libre-échange
+#'   (Pw, Q₁, Q₄, importations sans droit) ; 2 = ajoute le droit (Pw + t, Q₂, Q₃,
+#'   importations avec droit) ; 3 = ajoute les transferts (aires a et c) ;
+#'   4 = figure complète (pertes sèches b et d), identique à celle de la page
+#'   (valeur par défaut)
+graphe_tarif <- function(chiffres = TRUE, base_size = 16, etape = 4) {
   pm <- tarif_cm9$pm; pt <- p_avec_cm9
   q1 <- qo_cm9(pm); q2 <- qo_cm9(pt); q3 <- qd_cm9(pt); q4 <- qd_cm9(pm)
+  i_p <- if (etape >= 2) 1:2 else 1            # Pw seul, ou Pw et Pw + t
+  i_q <- if (etape >= 2) 1:4 else c(1, 4)      # Q₁, Q₄ (puis Q₂, Q₃)
+  i_aire <- if (etape >= 4) c("a", "b", "c", "d") else c("a", "c")   # transferts, puis pertes sèches
   aires <- rbind(
     data.frame(aire = "a", x = c(0, q1, q2, 0), y = c(pm, pm, pt, pt)),
     data.frame(aire = "b", x = c(q1, q2, q2), y = c(pm, pt, pm)),
@@ -108,38 +125,43 @@ graphe_tarif <- function(chiffres = TRUE, base_size = 16) {
   centres <- data.frame(aire = c("a", "b", "c", "d"),
                         x = c(q1 * 0.6, q1 + (q2 - q1) * 0.67, (q2 + q3) / 2, q3 + (q4 - q3) * 0.33),
                         y = c((pm + pt) / 2, pm + (pt - pm) * 0.33, (pm + pt) / 2, pm + (pt - pm) * 0.33))
+  aires <- aires[aires$aire %in% i_aire, ]
+  centres <- centres[centres$aire %in% i_aire, ]
   taille <- base_size / 3
   q <- seq(0, 100, length.out = 2)
   courbes <- data.frame(q = q, demande = tarif_cm9$d_a - q, offre = q)
-  g <- ggplot() +
+  g <- ggplot()
+  if (etape >= 3) g <- g +
     geom_polygon(data = aires, aes(x, y, group = aire, fill = aire), alpha = 0.35) +
     scale_fill_manual(values = remplissage) +
     geom_text(data = centres, aes(x, y, label = aire), family = police_cours,
-              fontface = "italic", size = taille) +
-    annotate("segment", x = 0, xend = 100, y = c(pm, pt), yend = c(pm, pt),
-             colour = couleurs_eco[["equilibre"]], linewidth = 0.6, linetype = c("solid", "22")) +
-    annotate("segment", x = c(q1, q2, q3, q4), xend = c(q1, q2, q3, q4), y = 0,
-             yend = c(pm, pt, pt, pm), linetype = "22", colour = couleurs_eco[["neutre"]]) +
+              fontface = "italic", size = taille)
+  g <- g +
+    annotate("segment", x = 0, xend = 100, y = c(pm, pt)[i_p], yend = c(pm, pt)[i_p],
+             colour = couleurs_eco[["equilibre"]], linewidth = 0.6, linetype = c("solid", "22")[i_p]) +
+    annotate("segment", x = c(q1, q2, q3, q4)[i_q], xend = c(q1, q2, q3, q4)[i_q], y = 0,
+             yend = c(pm, pt, pt, pm)[i_q], linetype = "22", colour = couleurs_eco[["neutre"]]) +
     geom_line(data = courbes, aes(q, demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
     geom_line(data = courbes, aes(q, offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
     annotate("text", x = c(95, 52), y = c(12, 60), label = c("D", "O"),
              colour = couleurs_eco[c("demande", "offre")], family = police_cours, size = taille) +
     # importations sans et avec droit, empilées sous Pw (zone vide du graphique)
-    annotate("segment", x = c(q1, q2), xend = c(q4, q3), y = c(pm - 3, pm - 10), yend = c(pm - 3, pm - 10),
+    annotate("segment", x = c(q1, q2)[i_p], xend = c(q4, q3)[i_p], y = c(pm - 3, pm - 10)[i_p],
+             yend = c(pm - 3, pm - 10)[i_p],
              linewidth = 0.5, colour = couleurs_eco[["neutre"]],
              arrow = grid::arrow(ends = "both", length = grid::unit(0.15, "cm"))) +
     # fond blanc : le texte n'est pas barré par les pointillés de Q₂ et Q₃
-    annotate("label", x = (q1 + q4) / 2, y = c(pm - 5.8, pm - 12.8),
-             label = c("importations sans droit", "importations avec droit"),
+    annotate("label", x = (q1 + q4) / 2, y = c(pm - 5.8, pm - 12.8)[i_p],
+             label = c("importations sans droit", "importations avec droit")[i_p],
              family = police_cours, size = taille * 0.75, colour = couleurs_eco[["neutre"]],
              fill = "white", linewidth = 0)   # sans bordure (label.size ignoré depuis ggplot2 4.0)
   if (chiffres) {
-    g <- g + scale_x_continuous(breaks = c(q1, q2, q3, q4), labels = c(q1, q2, q3, q4)) +
-      scale_y_continuous(breaks = c(pm, pt), labels = c("Pw = 20", "Pw + t = 30")) +
+    g <- g + scale_x_continuous(breaks = c(q1, q2, q3, q4)[i_q], labels = c(q1, q2, q3, q4)[i_q]) +
+      scale_y_continuous(breaks = c(pm, pt)[i_p], labels = c("Pw = 20", "Pw + t = 30")[i_p]) +
       labs(x = "Quantité Q (millions de tee-shirts)", y = "Prix P (€)")
   } else {
-    g <- g + scale_x_continuous(breaks = c(q1, q2, q3, q4), labels = c("Q₁", "Q₂", "Q₃", "Q₄")) +
-      scale_y_continuous(breaks = c(pm, pt), labels = c("Pw", "Pw + t")) +
+    g <- g + scale_x_continuous(breaks = c(q1, q2, q3, q4)[i_q], labels = c("Q₁", "Q₂", "Q₃", "Q₄")[i_q]) +
+      scale_y_continuous(breaks = c(pm, pt)[i_p], labels = c("Pw", "Pw + t")[i_p]) +
       labs(x = "Quantité Q", y = "Prix P")
   }
   g + coord_cartesian(xlim = c(0, 100), ylim = c(0, 65), expand = FALSE, clip = "off") +

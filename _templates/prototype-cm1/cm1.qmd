@@ -1,0 +1,340 @@
+---
+title: "La crise d'Ormuz : pourquoi les carburants ont-ils flambé ?"
+subtitle: "CM 1 · Partie I · Marchés, prix et régulations"
+description: "Choc d'offre, coût marginal des producteurs, demande peu élastique à court terme."
+cm: 1
+footer: "CM 1 · Ormuz"
+title-slide-attributes:
+  data-kicker: "Introduction à l'économie 2 · CM 1"
+---
+
+```{r}
+#| include: false
+# Prototype v3 : un exemple de chaque type de diapo, contenu réel du CM 1.
+# Extrait, pas le deck complet : le minutage des notes saute donc des étapes.
+# Le _quarto.yml local arrêterait here() ici : on ancre la racine du dépôt.
+here::i_am("_templates/prototype-cm1/cm1.qmd")
+source(here::here("R/theme_cours.R"))
+source(here::here("_templates/prototype-cm1/cm1.R"))   # copie de R/cm1.R + argument etape
+```
+
+## Le fait de départ : la fermeture du détroit d'Ormuz (28/02/2026)
+
+- La guerre entre les États-Unis et Israël d'un côté, l'Iran de l'autre, ferme de fait le détroit, par lequel transite environ un cinquième du pétrole et du gaz liquéfié mondiaux (Insee, *Note de conjoncture*, 24/03/2026).
+
+. . .
+
+- Conséquence à la pompe : Euro-super 95 de 1,71 € à 2,21 € le litre entre le 23/02 et le 12/10/2026 (+29,3 %), gazole de 1,65 € à 2,33 € (+41,1 %).
+
+. . .
+
+**Question de la séance** : comment la fermeture d'un détroit lointain se répercute-t-elle si vite sur les prix en France ?
+
+[Sources : Insee, 24/03/2026 ; Commission européenne, *Weekly Oil Bulletin*, prix TTC, consulté le 21/10/2026.]{.wp-source}
+
+::: {.notes}
+0 h 00 – 0 h 06. Montrer la carte de la page si besoin : tous les navires franchissent ce passage étroit. Demander à l'amphi : qui a fait le plein cette semaine ? Transition : pour répondre, on rappelle d'abord trois outils déjà connus.
+:::
+
+## Rappel : équilibre, toutes choses égales par ailleurs, raisonnement à la marge
+
+::: {.rappel}
+- **Équilibre** : au prix P\*, la quantité offerte égale la quantité demandée, Q\*. Au-dessous de P\* : **pénurie** ; au-dessus : **surproduction**.
+- **Toutes choses égales par ailleurs** : on fait varier une seule cause à la fois. Comparer l'équilibre avant et après, c'est la **statique comparative**.
+- **Raisonnement à la marge** : on produit une unité de plus tant qu'elle rapporte plus qu'elle ne coûte.
+:::
+
+::: {.notes}
+0 h 11 – 0 h 16. Rappel rapide, sans redéfinir. Question : « Que se passe-t-il au-dessous de P\* ? » Transition : Marshall a fait de ces trois idées une méthode.
+:::
+
+## Marshall (1890) : le prix, rencontre de l'offre et de la demande
+
+::: {.auteur}
+::: {.wp-portrait}
+![](../../cours/img/portraits/alfred-marshall.jpg){fig-alt="Portrait photographique d'Alfred Marshall vers 1891, debout, accoudé à une cheminée, moustache blanche."}
+[Vers 1891 · Elliott and Fry, domaine public, Wikimedia Commons]{.wp-credit}
+:::
+
+**Alfred Marshall** (1890), *Principles of Economics* · école néoclassique. Le prix se fixe là où la quantité offerte égale la quantité demandée. Marshall isole un seul marché et fait varier une seule cause à la fois.
+:::
+
+. . .
+
+Offre et demande sont les deux lames d'une paire de ciseaux : pour expliquer une hausse de prix, il faut dire **quelle courbe a bougé, et pourquoi**.
+
+::: {.notes}
+0 h 16 – 0 h 21. Le prix monte si l'offre recule *ou* si la demande augmente. Question : dans le cas d'Ormuz, quelle courbe a bougé ? Transition : pour le savoir, il faut comprendre d'où vient la courbe d'offre.
+:::
+
+## Coût marginal : l'offre reflète le coût du dernier baril produit
+
+::: {#def-cout-marginal}
+## Coût marginal du producteur
+
+Le **coût marginal** (Cm) est le coût de production d'une unité supplémentaire. Au prix P, on produit toutes les unités dont le Cm est inférieur ou égal à P.
+:::
+
+. . .
+
+- Les producteurs, rangés du moins cher au plus cher, donnent une offre croissante.
+- Tant que les capacités suffisent, le prix d'équilibre est le Cm du **dernier producteur nécessaire**.
+
+::: {.notes}
+0 h 21 – 0 h 27. Raisonnement à la marge, côté producteur. Les exportateurs à bas coût sont surtout dans l'OPEP, qui compte plusieurs pays du Golfe. Question : qui fixe le prix, le producteur le moins cher ou le plus cher ? Transition : que se passe-t-il quand un producteur disparaît ?
+:::
+
+## Choc d'offre et déplacement d'une courbe : définitions
+
+::: {.incremental}
+- **Choc d'offre** : événement qui modifie la quantité offerte *à chaque prix* ; O devient O′. Négatif (guerre, panne, embargo) : vers la gauche, ou vers le haut.
+- **Le prix du bien change** : on glisse *le long* de la courbe ; la courbe ne bouge pas.
+- **Une autre cause change** (coûts, guerre ; revenus, goûts, anticipations) : la courbe *entière* se déplace.
+:::
+
+::: {.notes}
+0 h 32 – 0 h 40. Gauche ou haut : même chose, le montrer au tableau. Vers la gauche, moins de barils à chaque prix ; vers le haut, le dernier baril coûte plus cher. Question : une hausse des revenus fait-elle glisser ou déplacer ? (Elle déplace la demande.) Transition : on construit le graphique pas à pas.
+:::
+
+## Choc d'offre (1/3) : l'équilibre initial E
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Offre et demande : la demande D décroissante et l'offre O croissante se coupent en E, au prix P étoile et à la quantité Q étoile"
+graphe_choc_offre(base_size = 24, etape = 1)
+```
+:::
+
+::: {.column width="40%"}
+- Avant le 28 février, le marché des carburants est à l'équilibre E.
+- Au prix P\*, les vendeurs offrent Q\* et les acheteurs demandent Q\*.
+- Ni pénurie, ni surproduction : rien ne pousse le prix à bouger.
+:::
+::::
+
+::: {.notes}
+0 h 47 – 0 h 49. Tracer D puis O, nommer E. Graphique théorique, sans chiffres. Transition : le détroit ferme.
+:::
+
+## Choc d'offre (2/3) : l'offre se déplace de O vers O′
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même graphique : l'offre se déplace vers la gauche de O à O prime, en tirets ; au prix P étoile, un trait rouge marque la pénurie entre O prime et D"
+graphe_choc_offre(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+1. **Le choc** : le blocage d'Ormuz retire des barils ; à chaque prix, la quantité offerte diminue.
+2. **Le déséquilibre** : au prix P\*, les acheteurs veulent toujours Q\*, les vendeurs offrent beaucoup moins : **pénurie**.
+:::
+:::
+::::
+
+::: {.notes}
+0 h 49 – 0 h 53. Insister : la courbe entière se déplace, on ne glisse pas le long de O. Question : au prix P\*, qui veut acheter sans trouver de vendeur ? Transition : que fait le prix ?
+:::
+
+## Choc d'offre (3/3) : nouvel équilibre E′, prix plus haut, quantité plus faible
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Figure complète : nouvel équilibre E prime au prix P étoile prime, plus élevé, et à la quantité Q étoile prime, plus faible"
+graphe_choc_offre(base_size = 24, etape = 3)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+3. **L'ajustement** : les acheteurs enchérissent, le prix monte.
+    - Il décourage des achats : on glisse **le long** de D, de E vers E′.
+    - Il rend rentables des barils plus coûteux : on glisse le long de O′.
+:::
+:::
+::::
+
+::: {.notes}
+0 h 53 – 0 h 57. Lecture finale : en E′, P\*′ > P\* et Q\*′ < Q\*. Transition : une erreur fréquente se glisse ici.
+:::
+
+## Point d'attention : la quantité demandée baisse, la demande ne bouge pas
+
+::: {.piege}
+« Le prix a monté, donc la demande a baissé, donc le prix va redescendre. » Ce raisonnement est faux.
+:::
+
+. . .
+
+- La hausse du prix fait baisser la **quantité demandée** : mouvement le long de D.
+- La **demande**, la courbe D, n'a pas bougé : seule l'offre s'est déplacée.
+- Le prix ne redescend que si l'offre revient (réouverture du détroit) ou si la demande se déplace vers la gauche.
+
+::: {.notes}
+0 h 57 – 1 h 02. Sondage à main levée avant le clic : « le prix va-t-il redescendre tout seul ? » Transition : chiffrer le choc avec quatre producteurs fictifs.
+:::
+
+## Offre en escalier (1/2) : avant le choc, le prix vaut 60 $
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Escalier des coûts marginaux de quatre producteurs fictifs, Golfe, X, Y et Z ; la demande fixe à 25 millions de barils par jour coupe l'offre à 60 dollars"
+graphe_cout_marginal(base_size = 24, etape = 1)
+```
+:::
+
+::: {.column width="40%"}
+- Quatre producteurs fictifs, 10 Mb/j chacun ; Cm : Golfe 20 $, X 40 $, Y 60 $, Z 80 $ le baril.
+- Demande fixe : 25 Mb/j.
+- Golfe, X et Y suffisent : prix = Cm de Y = **60 $**. Z ne produit pas.
+:::
+::::
+
+::: {.notes}
+1 h 02 – 1 h 06. Chiffres fictifs. Y ne produit que 5 Mb/j. Question : pourquoi Z ne produit-il pas ? (60 $ ne couvre pas son coût de 80 $.) Transition : le Golfe ne peut plus exporter.
+:::
+
+## Offre en escalier (2/2) : sans le Golfe, le prix passe à 80 $
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même escalier sans la marche du Golfe, en tirets, décalé vers la gauche ; la demande fixe à 25 coupe maintenant l'offre à 80 dollars"
+graphe_cout_marginal(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- L'escalier se décale de 10 Mb/j vers la gauche : O′.
+- Il faut X, Y **et Z** : prix = **80 $**, soit (80 − 60) ÷ 60 = **+33 %**.
+- Aucun coût n'a augmenté ; X gagne 40 $ par baril au lieu de 20 $.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 06 – 1 h 12. Faire calculer à la main. Question : et si la demande montait à 35 Mb/j ? Aucun coût ne fixe plus le prix : il rationne la demande. En 2026, on est probablement dans ce cas (court terme de Marshall). Transition : même choc, en euros par litre.
+:::
+
+## Exemple chiffré : le même choc sur un marché de carburant fictif
+
+Q en millions de litres par jour, P en €/L. À chaque prix, l'offre O′ vaut l'offre O moins 20.
+
+::: {.incremental}
+1. Équilibre initial : P\* = 1,70 €, Q\* = 100.
+2. Au prix de 1,70 €, on demande 100 mais on n'offre plus que 80 : il manque 20.
+3. Nouvel équilibre : P\*′ = 2,20 €, Q\*′ = 90.
+4. Prix : 0,50 ÷ 1,70 = **+29,4 %** ; quantité : **−10 %**.
+5. $e = \dfrac{-10\ \%}{+29{,}4\ \%} \approx -0{,}34$ : demande peu élastique, dans la fourchette de l'Insee (−0,40 à −0,21).
+:::
+
+::: {.notes}
+1 h 20 – 1 h 30. Faire trouver chaque étape avant le clic ; le tableau complet est dans la page. Énigme : l'offre perd 20, la quantité seulement 10 ; la hausse du prix fait renoncer des acheteurs à 10 et pousse les vendeurs restants à offrir 10 de plus le long de O′. Transition : que montrent les vrais prix ?
+:::
+
+## Prix à la pompe en 2026 : le gazole dépasse l'Euro-super 95
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Prix hebdomadaires de l'Euro-super 95 et du gazole en France de janvier à octobre 2026, avec une ligne verticale au 28 février, fermeture du détroit d'Ormuz"
+graphe_prix_pompe(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Avant le 28 février, le gazole coûte moins cher que l'Euro-super 95 ; il le dépasse dès le 9 mars.
+- Du 23/02 au 12/10 : gazole **+41,1 %**, Euro-super 95 **+29,3 %**.
+- Le gazole subit **deux** déplacements de l'offre : le brut, puis le raffinage.
+:::
+::::
+
+::: {.notes}
+1 h 40 – 1 h 45. Raffinage : diesel importé du Golfe, moratoire russe sur le diesel fin juillet, raffineries endommagées fin août (Insee, juin 2026 ; AFP, 10/09/2026). Question : pourquoi le gazole monte-t-il plus que l'essence ? Transition : qui paie cette hausse ?
+:::
+
+## Effets de répartition : les ménages captifs de la voiture paient le plus
+
+::: {.incremental}
+- **Par revenu** : ménages consacrant au carburant plus d'un mois de revenu par an : 10,6 % en 2021, 22,4 % aux prix du printemps 2026 (Insee Première n° 2125).
+- **Par territoire** : près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains (*ibid.*).
+- **Par usage** : e = −0,32 pour le quart qui consomme le plus, −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86).
+:::
+
+::: {.notes}
+2 h 22 – 2 h 26. Estimation à revenus et kilomètres inchangés. Les ruraux ne sont pas moins sensibles au prix, ils consomment plus de litres. Génération : aucune source consultée ne chiffre l'effet par âge. Question : qui, dans l'amphi, ne peut pas se passer de sa voiture ? Transition : faut-il alors bloquer les prix ?
+:::
+
+## Controverse : bloquer les prix ou aider les automobilistes
+
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+
+- Bloquer le prix sous P\*′ recrée la pénurie : files, quotas, stations à sec.
+- Une remise générale coûte de l'argent public et profite davantage aux gros consommateurs.
+- Une aide ciblée garde le signal-prix, à condition de savoir cibler.
+
+. . .
+
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+
+- Objectifs en balance : efficacité, équité, climat, coût budgétaire, concurrence.
+- Néoclassiques : prix libre et transferts ciblés (Tinbergen, 1952) ; post-keynésiens : contenir quelques prix clés (Weber et Wasner, 2023).
+
+::: {.notes}
+2 h 30 – 2 h 37. Débat en amphi, 3 minutes, après le clic. Les écoles divergent sur ce qu'on accepte de payer, en pénurie ou en argent public, pas sur le mécanisme. Exemple de 2026 : le plafond de TotalEnergies. Transition : ce qu'il faut retenir.
+:::
+
+## À retenir
+
+::: {.retenir}
+- Expliquer une hausse de prix : dire quelle courbe s'est déplacée, et pourquoi.
+- L'offre reflète le coût marginal : le prix est fixé par le dernier producteur nécessaire.
+- Ormuz : choc d'offre négatif, O → O′ ; le prix monte, la quantité baisse.
+- Prix du bien : glissement le long d'une courbe ; autre cause : déplacement.
+- Demande peu élastique (e entre −0,40 et −0,21) : le choc passe surtout dans le prix.
+- Bloquer ou aider : un jugement normatif.
+:::
+
+::: {.notes}
+2 h 40 – 2 h 43. Reprendre la question de départ : un détroit lointain, une offre mondiale qui recule, une demande française qui ne peut pas s'ajuster vite. Transition : le plan de dissertation.
+:::
+
+## Plan de dissertation : ce que dit l'outil, ce qu'il ne tranche pas
+
+**Sujet** : faut-il bloquer les prix à la pompe ou aider les automobilistes ?
+
+. . .
+
+**I. Ce que dit l'outil (positif)**
+
+- A. Choc d'offre et demande peu élastique : le prix monte fort, la quantité baisse peu.
+- B. Bloquer recrée la pénurie ; la remise coûte ; l'aide ciblée garde le signal-prix.
+
+. . .
+
+**II. Ce qu'il ne tranche pas (normatif)**
+
+- A. Efficacité, équité, climat, coût budgétaire : des objectifs en tension.
+- B. Néoclassiques et post-keynésiens : ce qu'on accepte de payer.
+
+::: {.notes}
+2 h 43 – 2 h 45. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation.
+:::

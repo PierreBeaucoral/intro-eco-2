@@ -44,7 +44,10 @@ var_pct <- function(x0, x1) 100 * (x1 - x0) / x0
 #' P*, P*', Q*, Q*' (graphique théorique, sans graduations chiffrées).
 #' @param penurie si TRUE, montre l'écart entre demande et offre au prix initial
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_choc_offre <- function(penurie = TRUE, base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = équilibre initial
+#'   (D, O, E) ; 2 = ajoute le choc (O′, flèche, pénurie) ; 3 = figure complète
+#'   (E′, P*′, Q*′), identique à celle de la page (valeur par défaut)
+graphe_choc_offre <- function(penurie = TRUE, base_size = 16, etape = 3) {
   q <- seq(70, 120, length.out = 60)
   d <- data.frame(q = q,
                   demande = (marche_cm1$d_a - q) / marche_cm1$d_b,
@@ -53,19 +56,23 @@ graphe_choc_offre <- function(penurie = TRUE, base_size = 16) {
   p0 <- eq_avant$p; q0 <- eq_avant$q; p1 <- eq_apres$p; q1 <- eq_apres$q
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
+  i_eq <- if (etape >= 3) 1:2 else 1           # E seul, ou E et E′
+  i_tir <- if (etape >= 3) 1:4 else 1:2        # tirets vers P*, Q* (puis P*′, Q*′)
+  i_lab <- if (etape >= 2) 1:3 else 1:2        # D, O (puis O′)
   g <- ggplot(d, aes(q)) +
-    annotate("segment", x = c(q0, 70, q1, 70), xend = c(q0, q0, q1, q1),
-             y = c(1.2, p0, 1.2, p1), yend = c(p0, p0, p1, p1),
+    annotate("segment", x = c(q0, 70, q1, 70)[i_tir], xend = c(q0, q0, q1, q1)[i_tir],
+             y = c(1.2, p0, 1.2, p1)[i_tir], yend = c(p0, p0, p1, p1)[i_tir],
              linetype = "22", colour = neutre) +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
+    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
     geom_line(aes(y = offre2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22") +
     # flèche du déplacement de l'offre, vers la gauche, de O vers O′ ; placée
     # au-dessus de E′ pour ne pas toucher son étiquette
     annotate("segment", x = 115, xend = 96, y = 2.45, yend = 2.45,
              colour = couleurs_eco[["offre"]], linewidth = 0.7,
              arrow = grid::arrow(length = grid::unit(0.25, "cm"), type = "closed"))
-  if (penurie) {
+  if (penurie && etape >= 2) {
     q_o2_p0 <- marche_cm1$o_a - marche_cm1$choc + marche_cm1$o_b * p0   # quantité offerte après le choc, au prix initial
     g <- g +
       annotate("segment", x = q_o2_p0, xend = q0, y = p0, yend = p0,
@@ -74,13 +81,13 @@ graphe_choc_offre <- function(penurie = TRUE, base_size = 16) {
                colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
   }
   g +
-    annotate("point", x = c(q0, q1), y = c(p0, p1), size = 3, colour = couleurs_eco[["equilibre"]]) +
-    annotate("text", x = c(q0 + 2.2, q1 + 2.4), y = c(p0 - 0.06, p1 + 0.06), label = c("E", "E′"),
+    annotate("point", x = c(q0, q1)[i_eq], y = c(p0, p1)[i_eq], size = 3, colour = couleurs_eco[["equilibre"]]) +
+    annotate("text", x = c(q0 + 2.2, q1 + 2.4)[i_eq], y = c(p0 - 0.06, p1 + 0.06)[i_eq], label = c("E", "E′")[i_eq],
              family = police_cours, size = taille) +
-    annotate("text", x = c(81, 117.5, 103), y = c(2.95, 2.75, 2.95), label = c("D", "O", "O′"),
-             colour = couleurs_eco[c("demande", "offre", "offre")], family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(q1, q0), labels = c("Q*′", "Q*")) +
-    scale_y_continuous(breaks = c(p0, p1), labels = c("P*", "P*′")) +
+    annotate("text", x = c(81, 117.5, 103)[i_lab], y = c(2.95, 2.75, 2.95)[i_lab], label = c("D", "O", "O′")[i_lab],
+             colour = couleurs_eco[c("demande", "offre", "offre")][i_lab], family = police_cours, size = taille) +
+    scale_x_continuous(breaks = c(q1, q0)[3 - rev(i_eq)], labels = c("Q*′", "Q*")[3 - rev(i_eq)]) +
+    scale_y_continuous(breaks = c(p0, p1)[i_eq], labels = c("P*", "P*′")[i_eq]) +
     coord_cartesian(xlim = c(70, 120), ylim = c(1.2, 3.1), expand = FALSE, clip = "on") +   # les courbes s'arrêtent au cadre
     labs(x = "Quantité Q", y = "Prix P") +
     theme_cours(base_size = base_size)
@@ -96,7 +103,10 @@ graphe_choc_offre <- function(penurie = TRUE, base_size = 16) {
 #' l'exemple 2. L'équilibre initial, commun aux deux panneaux (1,70 € ; 100),
 #' est gradué sur les axes ; le nouvel équilibre de chaque panneau (2,20 € et
 #' 90 ; 1,95 € et 85) est écrit dans son propre panneau, au pied des tirets.
-graphe_elasticite <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = équilibre initial
+#'   commun (D, O, E) ; 2 = figure complète (O′, nouveaux équilibres), identique
+#'   à celle de la page (valeur par défaut)
+graphe_elasticite <- function(base_size = 16, etape = 2) {
   q <- seq(70, 120, length.out = 60)
   panneaux <- c("A. Peu élastique", "B. Élastique")
   d <- rbind(
@@ -125,14 +135,21 @@ graphe_elasticite <- function(base_size = 16) {
     lab = c("D", "O", "O′", "D", "O", "O′"),
     col = unname(couleurs_eco[c("demande", "offre", "offre", "demande", "offre", "offre")])
   )
-  ggplot(d, aes(q)) +
+  if (etape < 2) {                              # ni O′, ni nouvel équilibre
+    pts <- pts[c(1, 3), ]
+    valeurs <- valeurs[0, ]
+    etiquettes <- etiquettes[etiquettes$lab != "O′", ]
+  }
+  g <- ggplot(d, aes(q)) +
     geom_segment(data = pts, aes(x = q, xend = q, y = 1.2, yend = p),
                  linetype = "22", colour = couleurs_eco[["neutre"]]) +
     geom_segment(data = pts, aes(x = 70, xend = q, y = p, yend = p),
                  linetype = "22", colour = couleurs_eco[["neutre"]]) +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
-    geom_line(aes(y = offre2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22") +
+    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
+    geom_line(aes(y = offre2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22")
+  g +
     geom_point(data = pts, aes(y = p), size = 2.6, colour = couleurs_eco[["equilibre"]]) +
     geom_text(data = etiquettes, aes(x = q, y = p, label = lab, colour = col),
               family = police_cours, size = base_size / 3) +
@@ -181,7 +198,9 @@ prix_cm_apres <- prix_cout_marginal(producteurs_cm1$cm[-1], 10, demande_fixe_cm1
 
 #' Escalier d'offre avant (trait plein) et après le blocage du producteur du
 #' Golfe (tirets) ; demande verticale à 25 Mb/j.
-graphe_cout_marginal <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = avant le choc
+#'   (O, D, prix de 60 $) ; 2 = figure complète (O′, 80 $), identique à la page
+graphe_cout_marginal <- function(base_size = 16, etape = 2) {
   escalier <- function(cm) {
     x <- c(0, cumsum(rep(10, length(cm))))
     data.frame(x = x, y = c(cm, utils::tail(cm, 1)))
@@ -189,19 +208,23 @@ graphe_cout_marginal <- function(base_size = 16) {
   avant <- escalier(producteurs_cm1$cm)
   apres <- escalier(producteurs_cm1$cm[-1])
   taille <- base_size / 3
-  ggplot() +
-    annotate("segment", x = 0, xend = demande_fixe_cm1, y = c(prix_cm_avant, prix_cm_apres),
-             yend = c(prix_cm_avant, prix_cm_apres), linetype = "22", colour = couleurs_eco[["neutre"]]) +
-    geom_step(data = avant, aes(x, y), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
-    geom_step(data = apres, aes(x, y), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22") +
+  i_px <- if (etape >= 2) 1:2 else 1           # prix avant (60 $), puis après (80 $)
+  i_lab <- if (etape >= 2) 1:3 else 1:2        # D, O (puis O′)
+  g <- ggplot() +
+    annotate("segment", x = 0, xend = demande_fixe_cm1, y = c(prix_cm_avant, prix_cm_apres)[i_px],
+             yend = c(prix_cm_avant, prix_cm_apres)[i_px], linetype = "22", colour = couleurs_eco[["neutre"]]) +
+    geom_step(data = avant, aes(x, y), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
+    geom_step(data = apres, aes(x, y), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22")
+  g +
     annotate("segment", x = demande_fixe_cm1, xend = demande_fixe_cm1, y = 0, yend = 95,
              colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    annotate("point", x = demande_fixe_cm1, y = c(prix_cm_avant, prix_cm_apres), size = 3) +
+    annotate("point", x = demande_fixe_cm1, y = c(prix_cm_avant, prix_cm_apres)[i_px], size = 3) +
     # étiquettes des courbes, puis des producteurs (sous chaque marche de O)
-    annotate("text", x = c(26.5, 41, 1),
-             y = c(95, 84, 46),
-             label = c("D", "O", "O′"),
-             colour = couleurs_eco[c("demande", "offre", "offre")],
+    annotate("text", x = c(26.5, 41, 1)[i_lab],
+             y = c(95, 84, 46)[i_lab],
+             label = c("D", "O", "O′")[i_lab],
+             colour = couleurs_eco[c("demande", "offre", "offre")][i_lab],
              family = police_cours, size = taille, hjust = 0) +
     annotate("text", x = c(1, 13.5, 20.8, 33.5), y = c(14, 34, 54, 74),
              label = producteurs_cm1$nom, colour = couleurs_eco[["neutre"]],

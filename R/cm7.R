@@ -57,7 +57,9 @@ taux_taylor <- function(infl, ecart = 0, cible = 2, neutre = 2) {
 #' 2021 au 21/10/2026. Deux segments rouges matérialisent le taux réel ex post
 #' (écart entre les deux courbes) en octobre 2022 (son point le plus bas) et en
 #' septembre 2026.
-graphe_taux_inflation <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = les deux séries seules ;
+#'   2 (défaut, figure de la page) = avec les traits rouges du taux réel ex post.
+graphe_taux_inflation <- function(base_size = 16, etape = 2) {
   debut <- as.Date("2021-01-01")
   depot <- escalier_depot(debut)   # défini plus bas, appelé seulement à l'exécution
   infl <- subset(ipch_cm7, zone == "EA" & serie == "ensemble")
@@ -81,11 +83,12 @@ graphe_taux_inflation <- function(base_size = 16) {
              linetype = "22", colour = couleurs_eco[["neutre"]]) +
     annotate("text", x = as.Date("2023-10-01"), y = 1.1, label = "cible : 2 %", hjust = 0,
              family = police_cours, size = taille, colour = couleurs_eco[["neutre"]]) +
-    geom_segment(data = ecarts, aes(x = date, xend = date, y = bas, yend = haut),
-                 colour = couleurs_eco[["alerte"]], linewidth = 1.3) +
-    geom_text(data = ecarts, aes(x = x_lab, y = y_lab, label = lab),
-              hjust = c(0, 1), vjust = 1, family = police_cours, size = taille, colour = couleurs_eco[["alerte"]],
-              lineheight = 0.9) +
+    (if (etape >= 2) list(
+      geom_segment(data = ecarts, aes(x = date, xend = date, y = bas, yend = haut),
+                   colour = couleurs_eco[["alerte"]], linewidth = 1.3),
+      geom_text(data = ecarts, aes(x = x_lab, y = y_lab, label = lab),
+                hjust = c(0, 1), vjust = 1, family = police_cours, size = taille, colour = couleurs_eco[["alerte"]],
+                lineheight = 0.9))) +
     geom_line(data = infl, aes(date, inflation, colour = serie_infl), linewidth = 1.2) +
     geom_step(data = depot, aes(date, depot, colour = serie_taux), linewidth = 1.2) +
     scale_colour_manual(values = couleurs, breaks = c(serie_infl, serie_taux)) +
@@ -144,13 +147,16 @@ graphe_credit_habitat <- function(base_size = 16) {
 #' Inflation de la zone euro (IPCH, sur un an), 2021-2026 : ensemble, hors
 #' énergie, hors énergie et alimentation. Si les courbes « hors » montent, le
 #' choc s'est diffusé au reste des prix (effets de second tour).
-graphe_inflation_diffusion <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = inflation d'ensemble seule ;
+#'   2 (défaut, figure de la page) = avec les deux séries « hors ».
+graphe_inflation_diffusion <- function(base_size = 16, etape = 2) {
   noms <- c(ensemble = "Ensemble",
             hors_energie = "Hors énergie",
             hors_energie_alimentation = "Hors énergie et alimentation")
   d <- subset(ipch_cm7, zone == "EA" & serie %in% names(noms))
   d$serie <- factor(noms[d$serie], levels = unname(noms))
   d$date <- as.Date(paste0(d$mois, "-15"))
+  if (etape < 2) d <- d[d$serie == noms[["ensemble"]], ]
   couleurs <- stats::setNames(unname(couleurs_eco[c("offre", "demande", "equilibre")]), unname(noms))
   taille <- base_size / 3.4
   ggplot(d, aes(date, inflation, colour = serie)) +
@@ -182,25 +188,28 @@ eq_cm7 <- list(
   E2  = c(q = 3, p = 7)    # 10 − Q = Q + 4
 )
 
-#' Offre et demande agrégées. etape = 1 : choc d'offre seul (O → O′) ;
-#' etape = 2 : on ajoute la hausse des taux (D → D′).
+#' Offre et demande agrégées. etape = 0 : équilibre initial E seul (diapos) ;
+#' etape = 1 : choc d'offre seul (O → O′) ; etape = 2 : on ajoute la hausse des taux (D → D′).
 graphe_offre_demande_agregees <- function(etape = 2, base_size = 16) {
   q <- seq(0, 10, length.out = 60)
   d <- data.frame(q = q, D = 12 - q, D2 = 10 - q, O = q, O2 = q + 4)
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
-  pts <- if (etape == 1) eq_cm7[c("E", "E1")] else eq_cm7
+  pts <- if (etape == 0) eq_cm7["E"] else if (etape == 1) eq_cm7[c("E", "E1")] else eq_cm7
+  i_lab <- if (etape >= 1) 1:3 else c(1, 3)   # O, O′, D (sans O′ à l'étape 0)
   px <- vapply(pts, `[[`, numeric(1), "q"); py <- vapply(pts, `[[`, numeric(1), "p")
   g <- ggplot(d, aes(q)) +
     annotate("segment", x = px, xend = px, y = 0, yend = py, linetype = "22", colour = neutre) +
     annotate("segment", x = 0, xend = px, y = py, yend = py, linetype = "22", colour = neutre) +
     geom_line(aes(y = D), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
     geom_line(aes(y = O), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
-    geom_line(aes(y = O2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22") +
-    annotate("segment", x = 9.6, xend = 6.4, y = 10.3, yend = 10.3, colour = couleurs_eco[["offre"]],
-             linewidth = 0.7, arrow = grid::arrow(length = grid::unit(0.25, "cm"), type = "closed")) +
-    annotate("text", x = c(10.3, 6.6, 1.3), y = c(9.9, 11.6, 11.6), label = c("O", "O′", "D"),
-             colour = couleurs_eco[c("offre", "offre", "demande")], family = police_cours, size = taille)
+    if (etape >= 1) list(
+      geom_line(aes(y = O2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22"),
+      annotate("segment", x = 9.6, xend = 6.4, y = 10.3, yend = 10.3, colour = couleurs_eco[["offre"]],
+               linewidth = 0.7, arrow = grid::arrow(length = grid::unit(0.25, "cm"), type = "closed")))
+  g <- g +
+    annotate("text", x = c(10.3, 6.6, 1.3)[i_lab], y = c(9.9, 11.6, 11.6)[i_lab], label = c("O", "O′", "D")[i_lab],
+             colour = couleurs_eco[c("offre", "offre", "demande")][i_lab], family = police_cours, size = taille)
   if (etape == 2) {
     g <- g +
       geom_line(aes(y = D2), colour = couleurs_eco[["demande"]], linewidth = 1.4, linetype = "22") +
@@ -232,7 +241,9 @@ graphe_offre_demande_agregees <- function(etape = 2, base_size = 16) {
 
 #' Taux conseillé par la règle de Taylor (écart de production nul) et droite
 #' « taux réel nul » (i = π), pour une inflation de 0 à 11 %.
-graphe_taylor <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = les deux droites ;
+#'   2 = + points de l'exemple ; 3 (défaut, figure de la page) = + points de la BCE.
+graphe_taylor <- function(base_size = 16, etape = 3) {
   infl <- seq(0, 11, length.out = 50)
   d <- data.frame(infl = infl, taylor = taux_taylor(infl), nul = infl)
   exemple <- data.frame(infl = c(2, 4), i = taux_taylor(c(2, 4)))
@@ -243,14 +254,16 @@ graphe_taylor <- function(base_size = 16) {
   ggplot(d, aes(infl)) +
     geom_line(aes(y = nul), colour = couleurs_eco[["neutre"]], linewidth = 1, linetype = "22") +
     geom_line(aes(y = taylor), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    annotate("segment", x = exemple$infl, xend = exemple$infl, y = 0, yend = exemple$i,
-             linetype = "22", colour = couleurs_eco[["neutre"]]) +
-    annotate("segment", x = 0, xend = exemple$infl, y = exemple$i, yend = exemple$i,
-             linetype = "22", colour = couleurs_eco[["neutre"]]) +
-    annotate("point", x = exemple$infl, y = exemple$i, size = 3, colour = couleurs_eco[["equilibre"]]) +
-    geom_point(data = bce, aes(infl, i), shape = 17, size = 3.2, colour = couleurs_eco[["alerte"]]) +
-    geom_text(data = bce, aes(infl + c(0, 0.35), i + c(1.4, 0), label = lab), hjust = c(1, 0),
-              family = police_cours, size = taille, colour = couleurs_eco[["alerte"]]) +
+    (if (etape >= 2) list(
+      annotate("segment", x = exemple$infl, xend = exemple$infl, y = 0, yend = exemple$i,
+               linetype = "22", colour = couleurs_eco[["neutre"]]),
+      annotate("segment", x = 0, xend = exemple$infl, y = exemple$i, yend = exemple$i,
+               linetype = "22", colour = couleurs_eco[["neutre"]]),
+      annotate("point", x = exemple$infl, y = exemple$i, size = 3, colour = couleurs_eco[["equilibre"]]))) +
+    (if (etape >= 3) list(
+      geom_point(data = bce, aes(infl, i), shape = 17, size = 3.2, colour = couleurs_eco[["alerte"]]),
+      geom_text(data = bce, aes(infl + c(0, 0.35), i + c(1.4, 0), label = lab), hjust = c(1, 0),
+                family = police_cours, size = taille, colour = couleurs_eco[["alerte"]]))) +
     annotate("text", x = c(6.3, 10.8), y = c(12.5, 7), hjust = 1,
              label = c("règle de Taylor", "taux réel nul (i = π)"),
              colour = couleurs_eco[c("demande", "neutre")], family = police_cours, size = taille) +

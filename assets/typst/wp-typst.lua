@@ -9,7 +9,7 @@ local ENCADRES = {
   s1      = { "Rappel", "wp-encre-2", "wp-teinte" },
   retenir = { "À retenir", "wp-accent", "wp-teinte" },
   droit   = { "Et le droit ?", "wp-encre-2" },
-  piege   = { "Piège classique", "wp-rouge" },
+  piege   = { "Point d'attention", "wp-rouge" },
   auteur  = { "Auteur · école", "wp-encre-2" },
   methode = { "Méthode", "wp-encre-2", nil, true },
 }

@@ -35,32 +35,41 @@ teinte_claire <- function(couleur, alpha) {
 #' par (100 ; 10) et (92 ; 12). Rectangle gagné : (12 - 10) × 92 = 184 M€ ;
 #' rectangle perdu : 10 × (100 - 92) = 80 M€. Graduations chiffrées assumées :
 #' la figure illustre l'exemple chiffré.
-graphe_depense <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = demande et point de
+#'   départ (100 ; 10) ; 2 = ajoute le point d'arrivée (92 ; 12) ; 3 = figure
+#'   complète avec les deux rectangles, identique à la page (valeur par défaut)
+graphe_depense <- function(base_size = 16, etape = 3) {
   e <- ex1_cm2
+  i_seg <- if (etape >= 2) 1:3 else 1:2        # tirets du point de départ (puis d'arrivée)
+  i_pt <- if (etape >= 2) 1:2 else 1           # point de départ (puis d'arrivée)
   q <- seq(60, 130, length.out = 30)
   d <- data.frame(q = q, p = (140 - q) / 4)
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
-  ggplot(d, aes(q, p)) +
+  g <- ggplot(d, aes(q, p))
+  if (etape >= 3) g <- g +
     annotate("rect", xmin = 0, xmax = e$q1_faible, ymin = e$p0, ymax = e$p1,
              fill = couleurs_eco[["demande"]], alpha = 0.25) +
     annotate("rect", xmin = e$q1_faible, xmax = e$q0, ymin = 0, ymax = e$p0,
-             fill = couleurs_eco[["alerte"]], alpha = 0.25) +
-    annotate("segment", x = c(0, e$q0, e$q1_faible), xend = c(e$q0, e$q0, e$q1_faible),
-             y = c(e$p0, 0, 0), yend = c(e$p0, e$p0, e$p1), linetype = "22", colour = neutre) +
+             fill = couleurs_eco[["alerte"]], alpha = 0.25)
+  g <- g +
+    annotate("segment", x = c(0, e$q0, e$q1_faible)[i_seg], xend = c(e$q0, e$q0, e$q1_faible)[i_seg],
+             y = c(e$p0, 0, 0)[i_seg], yend = c(e$p0, e$p0, e$p1)[i_seg], linetype = "22", colour = neutre) +
     geom_line(colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    annotate("point", x = c(e$q0, e$q1_faible), y = c(e$p0, e$p1), size = 3,
-             colour = couleurs_eco[["equilibre"]]) +
+    annotate("point", x = c(e$q0, e$q1_faible)[i_pt], y = c(e$p0, e$p1)[i_pt], size = 3,
+             colour = couleurs_eco[["equilibre"]])
+  if (etape >= 3) g <- g +
     annotate("text", x = 46, y = (e$p0 + e$p1) / 2, label = "+ 184", family = police_cours,
              size = taille, colour = couleurs_eco[["demande"]]) +
     annotate("text", x = 103, y = 3, label = "− 80", hjust = 0, family = police_cours,
-             size = taille, colour = couleurs_eco[["alerte"]]) +
+             size = taille, colour = couleurs_eco[["alerte"]])
+  g +
     annotate("text", x = 72, y = 19, label = "D", family = police_cours, size = taille,
              colour = couleurs_eco[["demande"]]) +
     # diapos : 92 et 100 sont trop proches à base_size 24, on les décale sur deux lignes
-    scale_x_continuous(breaks = c(e$q1_faible, e$q0), labels = c("92", "100"),
-                       guide = if (base_size > 16) guide_axis(n.dodge = 2) else "axis") +
-    scale_y_continuous(breaks = c(e$p0, e$p1), labels = c("10", "12")) +
+    scale_x_continuous(breaks = c(e$q1_faible, e$q0)[3 - rev(i_pt)], labels = c("92", "100")[3 - rev(i_pt)],
+                       guide = if (base_size > 16 && etape >= 2) guide_axis(n.dodge = 2) else "axis") +
+    scale_y_continuous(breaks = c(e$p0, e$p1)[i_pt], labels = c("10", "12")[i_pt]) +
     coord_cartesian(xlim = c(0, 130), ylim = c(0, 20), expand = FALSE, clip = "on") +
     labs(x = "Quantité Q (millions de paquets)", y = "Prix P (€ par paquet)") +
     theme_cours(base_size = base_size)
@@ -96,7 +105,10 @@ part_acheteurs <- function(eq0, eq1, t) (eq1$p - eq0$p) / t
 #' vendeur (P*' - t). Rectangles : part de la recette fiscale supportée par les
 #' acheteurs (azur) et par les vendeurs (ambre). Axes sans graduations chiffrées.
 #' La géométrie est celle du marché A de l'exemple 2.
-graphe_incidence <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = équilibre initial
+#'   (D, O, E) ; 2 = ajoute l'offre taxée O′ ; 3 = ajoute E′ et le coin fiscal t ;
+#'   4 = figure complète avec les rectangles, identique à la page (valeur par défaut)
+graphe_incidence <- function(base_size = 16, etape = 4) {
   m <- marche_cm2
   q <- seq(50, 125, length.out = 60)
   d <- data.frame(q = q,
@@ -106,36 +118,46 @@ graphe_incidence <- function(base_size = 16) {
   p0 <- eq_a0$p; q0 <- eq_a0$q; p1 <- eq_a1$p; pv <- eq_a1$pv; q1 <- eq_a1$q
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
-  ggplot(d, aes(q)) +
-    # rectangles de la recette fiscale : acheteurs au-dessus de P*, vendeurs au-dessous
+  i_tir <- if (etape >= 3) 1:5 else 1:2        # tirets vers P*, Q* (puis P*′, Q*′, P*′ − t)
+  i_eq <- if (etape >= 3) 1:2 else 1           # E seul, ou E et E′
+  i_lab <- if (etape >= 2) 1:3 else 1:2        # D, O (puis O′)
+  g <- ggplot(d, aes(q))
+  # rectangles de la recette fiscale : acheteurs au-dessus de P*, vendeurs au-dessous
+  if (etape >= 4) g <- g +
     annotate("rect", xmin = 50, xmax = q1, ymin = p0, ymax = p1,
              fill = couleurs_eco[["demande"]], alpha = 0.18) +
     annotate("rect", xmin = 50, xmax = q1, ymin = pv, ymax = p0,
-             fill = couleurs_eco[["offre"]], alpha = 0.22) +
-    annotate("segment", x = c(q0, 50, q1, 50, 50), xend = c(q0, q0, q1, q1, q1),
-             y = c(5, p0, 5, p1, pv), yend = c(p0, p0, p1, p1, pv),
+             fill = couleurs_eco[["offre"]], alpha = 0.22)
+  g <- g +
+    annotate("segment", x = c(q0, 50, q1, 50, 50)[i_tir], xend = c(q0, q0, q1, q1, q1)[i_tir],
+             y = c(5, p0, 5, p1, pv)[i_tir], yend = c(p0, p0, p1, p1, pv)[i_tir],
              linetype = "22", colour = neutre) +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
-    geom_line(aes(y = offre2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22") +
-    # le coin fiscal t, entre le prix payé et le prix gardé, à la quantité Q*'
+    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
+    geom_line(aes(y = offre2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22")
+  # le coin fiscal t, entre le prix payé et le prix gardé, à la quantité Q*'
+  if (etape >= 3) g <- g +
     annotate("segment", x = q1, xend = q1, y = pv, yend = p1,
              colour = couleurs_eco[["alerte"]], linewidth = 1.6) +
     annotate("text", x = q1 + 1.8, y = (pv + p1) / 2 - 0.9, label = "t", hjust = 0,
-             colour = couleurs_eco[["alerte"]], family = police_cours, size = taille) +
-    # étiquettes sur fond blanc : la courbe O' traverse le rectangle des acheteurs
+             colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
+  # étiquettes sur fond blanc : la courbe O' traverse le rectangle des acheteurs
+  if (etape >= 4) g <- g +
     annotate("label", x = 51.5, y = c(p0 + 0.8, (pv + p0) / 2),
              label = c("payé par les acheteurs", "payé par les vendeurs"),
              hjust = 0, family = police_cours, size = taille * 0.8, colour = couleurs_eco[["equilibre"]],
              fill = c(teinte_claire(couleurs_eco[["demande"]], 0.12),
-                      teinte_claire(couleurs_eco[["offre"]], 0.16)), border.colour = NA, label.padding = grid::unit(0.1, "lines")) +
-    annotate("point", x = c(q0, q1), y = c(p0, p1), size = 3, colour = couleurs_eco[["equilibre"]]) +
-    annotate("text", x = c(q0 + 2.2, q1 - 2.6), y = c(p0 - 0.35, p1 + 0.6), label = c("E", "E′"),
+                      teinte_claire(couleurs_eco[["offre"]], 0.16)), border.colour = NA, label.padding = grid::unit(0.1, "lines"))
+  i_y <- if (etape >= 3) 1:3 else 2            # P* seul, ou P*′ − t, P*, P*′
+  g +
+    annotate("point", x = c(q0, q1)[i_eq], y = c(p0, p1)[i_eq], size = 3, colour = couleurs_eco[["equilibre"]]) +
+    annotate("text", x = c(q0 + 2.2, q1 - 2.6)[i_eq], y = c(p0 - 0.35, p1 + 0.6)[i_eq], label = c("E", "E′")[i_eq],
              family = police_cours, size = taille) +
-    annotate("text", x = c(66, 122, 108), y = c(19.2, 11.9, 17.2), label = c("D", "O", "O′ = O + t"),
-             colour = couleurs_eco[c("demande", "offre", "offre")], family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(q1, q0), labels = c("Q*′", "Q*")) +
-    scale_y_continuous(breaks = c(pv, p0, p1), labels = c("P*′ − t", "P*", "P*′")) +
+    annotate("text", x = c(66, 122, 108)[i_lab], y = c(19.2, 11.9, 17.2)[i_lab], label = c("D", "O", "O′ = O + t")[i_lab],
+             colour = couleurs_eco[c("demande", "offre", "offre")][i_lab], family = police_cours, size = taille) +
+    scale_x_continuous(breaks = c(q1, q0)[3 - rev(i_eq)], labels = c("Q*′", "Q*")[3 - rev(i_eq)]) +
+    scale_y_continuous(breaks = c(pv, p0, p1)[i_y], labels = c("P*′ − t", "P*", "P*′")[i_y]) +
     coord_cartesian(xlim = c(50, 125), ylim = c(5, 20), expand = FALSE, clip = "on") +
     labs(x = "Quantité Q", y = "Prix P") +
     theme_cours(base_size = base_size)
@@ -148,7 +170,10 @@ graphe_incidence <- function(base_size = 16) {
 #' Deux panneaux : demande peu élastique (A) et plus élastique (B), même offre O,
 #' même taxe t = 5 € (O -> O'). Graduations chiffrées assumées : la figure
 #' illustre l'exemple chiffré (prix 7,5 ; 9 ; 10 ; 12,5 ; 14 € ; quantités 60, 84, 100).
-graphe_incidence_elasticite <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = même équilibre de
+#'   départ (D, O, E) dans les deux panneaux ; 2 = ajoute l'offre taxée O′ ;
+#'   3 = figure complète (coins fiscaux, nouveaux équilibres), identique à la page
+graphe_incidence_elasticite <- function(base_size = 16, etape = 3) {
   m <- marche_cm2
   q <- seq(40, 125, length.out = 60)
   panneaux <- c("A. Demande peu élastique (e = −0,4)", "B. Demande plus élastique (e = −1,6)")
@@ -176,25 +201,35 @@ graphe_incidence_elasticite <- function(base_size = 16) {
     col = unname(couleurs_eco[c("demande", "offre", "offre", "demande", "offre", "offre",
                                 "equilibre", "equilibre")])
   )
-  ggplot(d, aes(q)) +
+  if (etape < 3) {                             # étapes 1-2 : équilibre de départ seul
+    pts <- pts[c(1, 3), ]
+    etiquettes <- etiquettes[if (etape >= 2) 1:6 else c(1, 2, 4, 5), ]
+  }
+  i_y <- if (etape >= 3) 1:5 else 3            # 10 seul, ou tous les prix
+  g <- ggplot(d, aes(q)) +
     geom_segment(data = pts, aes(x = q, xend = q, y = 5, yend = p),
                  linetype = "22", colour = couleurs_eco[["neutre"]]) +
     geom_segment(data = pts, aes(x = 40, xend = q, y = p, yend = p),
-                 linetype = "22", colour = couleurs_eco[["neutre"]]) +
+                 linetype = "22", colour = couleurs_eco[["neutre"]])
+  if (etape >= 3) g <- g +
     geom_segment(data = coins, aes(x = 40, xend = q, y = pv, yend = pv),
-                 linetype = "22", colour = couleurs_eco[["neutre"]]) +
+                 linetype = "22", colour = couleurs_eco[["neutre"]])
+  g <- g +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
-    geom_line(aes(y = offre2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22") +
+    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
+    geom_line(aes(y = offre2), colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22")
+  if (etape >= 3) g <- g +
     geom_segment(data = coins, aes(x = q, xend = q, y = pv, yend = p),
-                 colour = couleurs_eco[["alerte"]], linewidth = 1.6) +
+                 colour = couleurs_eco[["alerte"]], linewidth = 1.6)
+  g +
     geom_point(data = pts, aes(y = p), size = 2.6, colour = couleurs_eco[["equilibre"]]) +
     geom_text(data = etiquettes, aes(x = q, y = p, label = lab, colour = col),
               family = police_cours, size = base_size / 3) +
     scale_colour_identity() +
     facet_wrap(~panneau, nrow = 1) +
     scale_x_continuous(breaks = 100, labels = "100") +
-    scale_y_continuous(breaks = c(7.5, 9, 10, 12.5, 14), labels = c("7,5", "9", "10", "12,5", "14")) +
+    scale_y_continuous(breaks = c(7.5, 9, 10, 12.5, 14)[i_y], labels = c("7,5", "9", "10", "12,5", "14")[i_y]) +
     coord_cartesian(xlim = c(40, 125), ylim = c(5, 20), expand = FALSE, clip = "on") +
     labs(x = "Quantité Q (millions de paquets)", y = "Prix P (€ par paquet)") +
     theme_cours(base_size = base_size) +
@@ -220,7 +255,10 @@ demande_par_point <- function(e, q0 = 100, p0 = 10) {
 #' La demande de long terme est plus plate que celle de court terme : la même
 #' hausse de prix (P* -> P*') réduit peu la quantité la première année (Q*CT)
 #' et davantage à long terme (Q*LT). Axes sans graduations chiffrées.
-graphe_court_long <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = demande de court
+#'   terme et point de départ ; 2 = hausse du prix, Q*CT ; 3 = ajoute la demande
+#'   de long terme et Q*LT, figure complète identique à la page (valeur par défaut)
+graphe_court_long <- function(base_size = 16, etape = 3) {
   a <- addiction_cm2
   ct <- demande_par_point(a$e_ct); lt <- demande_par_point(a$e_lt)
   q_ct <- ct$a - ct$b * a$p1; q_lt <- lt$a - lt$b * a$p1
@@ -228,22 +266,29 @@ graphe_court_long <- function(base_size = 16) {
   d <- data.frame(p = p, q_ct = ct$a - ct$b * p, q_lt = lt$a - lt$b * p)
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
-  ggplot(d) +
-    annotate("segment", x = c(a$q0, q_ct, q_lt, 70), xend = c(a$q0, q_ct, q_lt, q_ct),
-             y = c(6, 6, 6, a$p1), yend = c(a$p0, a$p1, a$p1, a$p1),
+  i_tir <- list(1, c(1, 2, 4), 1:4)[[etape]]   # tirets : Q*, puis Q*CT et P*′, puis Q*LT
+  i_pt <- seq_len(etape)                        # points : départ, court terme, long terme
+  i_lab <- if (etape >= 3) 1:2 else 1           # D court terme (puis D long terme)
+  i_x <- 4 - rev(i_pt)                          # graduations : Q*, Q*CT, Q*LT
+  i_y <- if (etape >= 2) 1:2 else 1             # P* (puis P*′)
+  g <- ggplot(d) +
+    annotate("segment", x = c(a$q0, q_ct, q_lt, 70)[i_tir], xend = c(a$q0, q_ct, q_lt, q_ct)[i_tir],
+             y = c(6, 6, 6, a$p1)[i_tir], yend = c(a$p0, a$p1, a$p1, a$p1)[i_tir],
              linetype = "22", colour = neutre) +
     annotate("segment", x = 70, xend = a$q0, y = a$p0, yend = a$p0, linetype = "22", colour = neutre) +
-    geom_line(aes(q_ct, p), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    # long terme : trait plein plus fin (les tirets sont réservés aux courbes déplacées, § 7)
-    geom_line(aes(q_lt, p), colour = couleurs_eco[["demande"]], linewidth = 0.7) +
-    annotate("point", x = c(a$q0, q_ct, q_lt), y = c(a$p0, a$p1, a$p1), size = 3,
+    geom_line(aes(q_ct, p), colour = couleurs_eco[["demande"]], linewidth = 1.4)
+  # long terme : trait plein plus fin (les tirets sont réservés aux courbes déplacées, § 7)
+  if (etape >= 3) g <- g +
+    geom_line(aes(q_lt, p), colour = couleurs_eco[["demande"]], linewidth = 0.7)
+  g +
+    annotate("point", x = c(a$q0, q_ct, q_lt)[i_pt], y = c(a$p0, a$p1, a$p1)[i_pt], size = 3,
              colour = couleurs_eco[["equilibre"]]) +
     # « D long terme » sous P*', à gauche de la courbe fine, pour ne pas la toucher
-    annotate("text", x = c(93.5, 71.5), y = c(14.2, 11.2),
-             label = c("D court terme", "D long terme"), hjust = c(0, 0),
+    annotate("text", x = c(93.5, 71.5)[i_lab], y = c(14.2, 11.2)[i_lab],
+             label = c("D court terme", "D long terme")[i_lab], hjust = c(0, 0)[i_lab],
              colour = couleurs_eco[["demande"]], family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(q_lt, q_ct, a$q0), labels = c("Q*LT", "Q*CT", "Q*")) +
-    scale_y_continuous(breaks = c(a$p0, a$p1), labels = c("P*", "P*′")) +
+    scale_x_continuous(breaks = c(q_lt, q_ct, a$q0)[i_x], labels = c("Q*LT", "Q*CT", "Q*")[i_x]) +
+    scale_y_continuous(breaks = c(a$p0, a$p1)[i_y], labels = c("P*", "P*′")[i_y]) +
     coord_cartesian(xlim = c(70, 115), ylim = c(6, 15), expand = FALSE, clip = "on") +
     labs(x = "Quantité Q", y = "Prix P") +
     theme_cours(base_size = base_size)

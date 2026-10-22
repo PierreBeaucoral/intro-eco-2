@@ -29,7 +29,7 @@ Depuis le 1^er^ juillet 2019 à Paris, puis notamment à Lille, Lyon, Montpellie
 
 **La question de la séance : faut-il encadrer les loyers ?** La théorie prédit qu'un plafond crée une pénurie. On va mesurer de combien, pour qui et à quel horizon, puis confronter cette prédiction aux évaluations faites en France et aux États-Unis.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### Un plafond sous le prix d'équilibre ne supprime pas la rareté
 
@@ -229,13 +229,13 @@ Le loyer pèse le plus sur les locataires modestes du secteur libre (@fig-taux-e
 
 ### Protéger les locataires d'aujourd'hui, ou ceux de demain ?
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - Un plafond **contraignant** crée une pénurie et une perte sèche, d'autant plus grandes que l'offre est élastique, donc que l'on regarde loin. Ce mécanisme est largement admis.
 - En France, l'encadrement a baissé les loyers de 2 à 5 % selon les villes et l'horizon (2 à 3 % hors Île-de-France, environ 5 % après deux ans ; 3 à 4 % en Seine-Saint-Denis ; environ 5 % à Paris). Il transfère environ 700 millions d'euros par an vers les locataires, dont un tiers payé par l'État, avec un ciblage qui dépend de la ville : mauvais à Paris, bon en Seine-Saint-Denis (Chapelle et Fack, mai 2026).
 - Son effet sur l'offre de logements n'est **ni démontré ni écarté** : les données manquent, et l'horizon est court. Là où les plafonds sont plus durs ou plus anciens, les annonces (Berlin) ou l'offre (San Francisco) ont reculé.
 
-**Ce qui relève d'un jugement (normatif).**
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
 
 - **Efficacité ou équité** : faut-il accepter une perte sèche pour un transfert vers les locataires ?
 - **Qui protéger** : les locataires en place, ou les ménages qui chercheront un logement demain ?

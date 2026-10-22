@@ -14,108 +14,117 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm2.R"))   # même fichier que la page de cours
 ```
 
-## Un paquet de cigarettes coûte 13,50 € en février 2026
+## Le fait de départ : le prix du paquet, de 3,20 € à 13,50 €
 
-Le prix moyen était de 3,20 € en 2000 et de 13 € en 2025.
+- Prix moyen d'un paquet : 3,20 € en 2000, 13 € en 2025 ; paquet type de 20 cigarettes : **13,50 €** en février 2026 (Hill, 2026 ; Obradovic, *The Conversation*, 25/07/2026).
+- Au 1^er^ novembre 2026, nouveaux prix homologués : le Marlboro Red souple passe à 14,00 € (*Bourse Inside*, 08/10/2026).
 
-(C. Hill, 2026 ; I. Obradovic, *The Conversation*, 25/07/2026)
+. . .
 
-::: {.notes}
-0 h 00 – 0 h 04. Accroche : qui connaît le prix d'un paquet ? Main levée.
-:::
+- Conséquences : ventes des buralistes **−8,2 %** en 2025 (OFDT) ; fumeurs quotidiens chez les 18-75 ans : 25 % en 2014, 18 % en 2024 (Santé publique France).
 
-## Pourtant, les ventes des buralistes reculent de 8,2 % en 2025
+. . .
 
-- Métropole : 30 165 tonnes vendues, contre 32 846 en 2024
-- Fumeurs quotidiens : environ 25 % des 18-75 ans en 2014, 18 % en 2024
-- Décès prématurés attribués au tabac : 68 000 en 2023
-
-(OFDT, AFP, 28/05/2026 ; Santé publique France, citée par La finance pour tous, 24/07/2026)
+**Question de la séance** : augmenter le prix du tabac fait-il arrêter de fumer ?
 
 ::: {.notes}
-0 h 04 – 0 h 08. Le tabac reste meurtrier malgré la baisse.
+0 h 00 – 0 h 05. Accroche : qui connaît le prix d'un paquet ? Main levée. Ventes : 30 165 tonnes en 2025 contre 32 846 en 2024 (OFDT, cité par l'AFP, *CB News*, 28/05/2026). Le tabac reste meurtrier : 68 000 décès prématurés en 2023 (*La finance pour tous*, 24/07/2026). Au 1^er^ novembre, 59 références sur 4 999 changent de prix, 37 hausses et 22 baisses. Transition : la question en contient trois.
 :::
 
-## Augmenter le prix fait-il arrêter de fumer ? Trois questions en une
+## Trois questions en une : élasticité, incidence fiscale, addiction
 
-1. **De combien** les ventes baissent-elles ? L'élasticité.
-2. **Qui paie** la taxe ? L'incidence fiscale.
-3. Un fumeur dépendant **réagit-il** au prix ? L'addiction.
+La question de la séance en contient trois.
+
+::: {.incremental}
+1. **De combien** les ventes baissent-elles quand le prix monte ? C'est l'**élasticité**.
+2. **Qui paie** vraiment la taxe : le fumeur, le fabricant, le buraliste ? C'est l'**incidence fiscale**.
+3. Un fumeur dépendant **réagit-il** au prix comme un acheteur ordinaire ? C'est l'**économie de l'addiction**.
+:::
 
 ::: {.notes}
-0 h 08 – 0 h 12. Demander à l'amphi de parier : le fumeur réagit-il, oui ou non ? On y revient à la fin.
+0 h 05 – 0 h 09. Demander à l'amphi de parier : le fumeur dépendant réagit-il au prix, oui ou non ? On y revient à la fin. Transition : les notions nécessaires.
 :::
 
-## Rappel : cinq notions suffisent pour la séance
+## Rappel : offre, demande et élasticité-prix de la demande
 
 ::: {.rappel}
-- **Élasticité** e = ΔQ (%) ÷ ΔP (%), négative ; |e| < 1 : peu élastique
-- **Déplacer** une courbe : O → O′
-- **Accise** : impôt indirect sur un produit précis
-- **Externalité** : effet sur les autres, non compensé
-- **Positif** décrit, **normatif** juge
+- **Offre et demande** : la quantité demandée baisse quand le prix monte, la quantité offerte augmente ; à l'équilibre (P\*, Q\*), elles sont égales.
+- Une variation du prix fait glisser *le long* des courbes ; une autre cause (coût, goûts, taxe) *déplace* une courbe : O → O′.
+- **Élasticité-prix de la demande** : e = variation de Q (en %) ÷ variation de P (en %). Elle est négative. Si |e| < 1, la demande est **peu élastique**.
 :::
 
 ::: {.notes}
-0 h 12 – 0 h 20. Lire la page ; ne pas redévelopper. Question : une hausse de taxe glisse-t-elle le long de la demande, ou la déplace-t-elle ?
+0 h 09 – 0 h 13. Rappel rapide, sans redévelopper. Question : une hausse de taxe fait-elle glisser le long de la demande, ou la déplace-t-elle ? (Elle déplace l'offre ; on glisse le long de la demande.) Transition : trois autres notions.
 :::
 
-## Marshall : l'élasticité mesure la sensibilité de la demande au prix
+## Rappel : impôt indirect, externalité, positif et normatif
 
-**Marshall** (1890) : l'élasticité dépend des substituts et du temps laissé aux acheteurs.
+::: {.rappel}
+- **Impôt indirect** : inclus dans le prix, versé à l'État par le vendeur. La **TVA** est un pourcentage du prix ; une **accise** frappe un produit précis (tabac, alcool, carburant).
+- **Externalité** : effet sur d'autres, sans compensation par le marché (le tabagisme passif). Une **taxe correctrice**, au sens de Pigou, fait payer ce coût à celui qui le cause.
+- **Positif et normatif** : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être.
+:::
 
 ::: {.notes}
-0 h 20 – 0 h 24. Pour le tabac : peu de substituts à court terme.
+0 h 13 – 0 h 17. L'accise peut être par unité ou en pourcentage : le tabac a les deux (exemple du paquet, plus loin). Question : citer un autre bien soumis à une accise. Transition : la mesure de la réaction au prix.
 :::
 
-## Si la demande est peu élastique, la dépense monte avec le prix
+## Élasticité-prix : Marshall (1890), substituts et temps d'adaptation
+
+$e = \dfrac{\Delta Q / Q}{\Delta P / P}$, en %.
+
+. . .
+
+Marshall, qui a fait de l'élasticité l'outil de mesure de la réaction au prix, note qu'elle dépend (1890) :
+
+::: {.incremental}
+- des **substituts** dont disposent les acheteurs ;
+- du **temps** laissé aux acheteurs pour s'adapter.
+:::
+
+. . .
+
+Pour le tabac : un fumeur dépendant a **peu de substituts à court terme**.
+
+::: {.notes}
+0 h 17 – 0 h 21. Question : quels substituts pour un fumeur ? (Tabac à rouler, achats à l'étranger : on les retrouvera dans les fuites.) Le temps : la réaction est plus forte à long terme, ce que l'addiction explique (Becker et Murphy). Transition : ce que l'élasticité dit de la dépense.
+:::
+
+## Dépense totale : elle augmente avec le prix si |e| < 1
 
 ::: {#def-depense}
-## Dépense totale
+## Dépense totale et élasticité
 
-Dépense = P × Q, aussi la recette des vendeurs. Prix en hausse : |e| < 1, la dépense **augmente** ; |e| > 1, elle **diminue**.
+La **dépense totale** des acheteurs est P × Q ; c'est aussi la recette des vendeurs. Quand le prix monte :
+
+- **peu élastique** (|e| < 1) : la quantité baisse moins vite que le prix ne monte, la dépense **augmente** ;
+- **élastique** (|e| > 1) : la quantité baisse plus vite, la dépense **diminue**.
+:::
+
+. . .
+
+**Élasticité de l'offre** : variation de la quantité offerte (en %) ÷ variation du prix (en %). Elle est positive.
+
+::: {.notes}
+0 h 21 – 0 h 25. Écrire P × Q au tableau. Question : si les fumeurs achètent moins de paquets, l'État peut-il gagner plus ? (Oui, si |e| < 1.) L'élasticité de l'offre servira pour l'incidence. Transition : que vaut e pour le tabac ?
+:::
+
+## Tabac : une élasticité-prix comprise entre −0,5 et −0,3
+
+Les estimations sont nettement inférieures à 1 en valeur absolue.
+
+::: {.incremental}
+- Santé publique France : e ≈ −0,4 sur 2000-2015.
+- Études récentes : entre −0,3 et −0,4 (*La finance pour tous*, 24/07/2026).
+- Sur 1950-2025, hors 2016 (année aberrante) : environ −0,50 (Hill, 2026, figure 4.2).
+- Fourchette retenue : une hausse de 10 % du prix fait baisser les ventes de **3 à 5 %**.
 :::
 
 ::: {.notes}
-0 h 24 – 0 h 28. Écrire P × Q au tableau ; deux rectangles à la diapo suivante.
+0 h 25 – 0 h 29. Faire calculer : 10 % × 0,3 = 3 % ; 10 % × 0,5 = 5 %. La troisième estimation est un rapport moyen entre la variation des ventes et celle du prix. Question : demande peu élastique ou élastique ? Transition : qui paie alors la taxe ?
 :::
 
-## Pour le tabac, e est compris entre −0,5 et −0,3
-
-Une hausse de 10 % du prix fait baisser les ventes de 3 à 5 %.
-
-(Santé publique France ; *La finance pour tous*, 24/07/2026 ; Hill, 2026)
-
-::: {.notes}
-0 h 28 – 0 h 32. Trois estimations : −0,4 ; entre −0,3 et −0,4 ; −0,50 sur 1950-2025 (hors 2016, année aberrante).
-:::
-
-## Quand le prix monte, on gagne un rectangle et on en perd un
-
-```{r}
-#| label: fig-depense
-#| fig-width: 8
-#| fig-height: 4.6
-#| fig-alt: "Demande bleue décroissante. De 10 à 12 euros, la quantité passe de 100 à 92 millions de paquets. Rectangle bleu gagné, plus 184 ; rectangle rouge perdu, moins 80."
-graphe_depense(base_size = 24)
-```
-
-::: {.notes}
-0 h 32 – 0 h 36. Exemple fictif. Bleu : +184 M€ ; rouge : −80 M€.
-:::
-
-## Même hausse de 20 %, deux histoires selon l'élasticité
-
-1. e = −0,4 : Q −8 %, 92 millions ; dépense 1 000 → **1 104** M€ (+10,4 %)
-2. e = −1,5 : Q −30 %, 70 millions ; dépense → **840** M€ (−16 %)
-
-Peu élastique : la hausse frappe surtout le budget. Élastique : elle réduit surtout la consommation.
-
-::: {.notes}
-0 h 36 – 0 h 44. Faire calculer à la main, étape par étape, avant de montrer le résultat.
-:::
-
-## Jenkin : celui qui verse la taxe n'est pas celui qui la paie
+## Jenkin (1872) : la charge d'une taxe dépend des deux courbes
 
 ::: {.auteur}
 ::: {.wp-portrait}
@@ -123,100 +132,36 @@ Peu élastique : la hausse frappe surtout le budget. Élastique : elle réduit s
 [Avant 1885 · photographie prêtée par Mrs Dew Smith, frontispice du *Memoir* de R. L. Stevenson, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Fleeming Jenkin** (1872), *Proceedings of the Royal Society of Edinburgh* · précurseur de l'analyse néoclassique. La charge dépend de la forme des deux courbes, non de celui qui verse.
+**Fleeming Jenkin** (1872), *Proceedings of the Royal Society of Edinburgh* · précurseur de l'analyse néoclassique. L'un des premiers à tracer des courbes d'offre et de demande, il montre que la charge d'une taxe dépend de leur forme, non de celui qui la verse.
 :::
 
-**Incidence fiscale** : répartition réelle de la charge entre acheteurs et vendeurs.
+. . .
+
+**La charge retombe sur le côté du marché le moins élastique**, celui qui peut le moins se dérober.
 
 ::: {.notes}
-0 h 44 – 0 h 50. Distinguer incidence légale et incidence économique. Le buraliste achète taxes comprises.
+0 h 29 – 0 h 34. Article : « On the Principles which Regulate the Incidence of Taxes ». L'accise est versée à l'État par les vendeurs, en amont du buraliste : celui-ci achète ses paquets taxes comprises. Mais un vendeur peut répercuter la taxe dans le prix. Question : le fumeur dépendant peut-il se dérober ? (Peu de substituts à court terme : il est en mauvaise position pour échapper à la taxe.) Transition : définir l'incidence.
 :::
 
-## Une taxe t déplace l'offre vers le haut : O devient O′ = O + t
+## Incidence fiscale : incidence légale et incidence économique
 
-```{r}
-#| label: fig-incidence
-#| fig-width: 8
-#| fig-height: 4.6
-#| fig-alt: "Offre-demande : l'offre monte de t, de O à O prime, en tirets. Le nouvel équilibre E prime a un prix plus élevé P étoile prime et une quantité plus faible. L'acheteur paie P étoile prime, le vendeur garde P étoile prime moins t."
-graphe_incidence(base_size = 24)
-```
+::: {#def-incidence}
+## Incidence fiscale
 
-::: {.notes}
-0 h 50 – 0 h 56. Suivre le déplacement de O à O′, puis glisser le long de D jusqu'à E′. L'acheteur paie P*′, le vendeur garde P*′ − t.
+L'**incidence fiscale** est la répartition réelle de la charge d'une taxe entre acheteurs et vendeurs.
 :::
 
-## La charge retombe sur le côté du marché le moins élastique
-
-Le fumeur dépendant a peu de substituts à court terme : il est en mauvaise position pour échapper à la taxe.
-
-::: {.notes}
-0 h 56 – 1 h 00. Question : et si le vendeur était le moins élastique ?
-:::
-
-## Une taxe de 5 € : les acheteurs en paient 4, les vendeurs 1
-
-- Offre Q = 16 P − 60 ; demande A : Q = 140 − 4 P ; P\* = 10 €, Q\* = 100
-- Offre taxée : Q = 16 P − 140
-- P\*′ = 14 €, Q\*′ = 84, vendeur : 9 €
-- Recette : 5 × 84 = **420** M€
-
-::: {.notes}
-1 h 00 – 1 h 10. Résoudre 140 − 4P = 16P − 140 au tableau. Part des acheteurs : 1,6 ÷ (1,6 + 0,4) = 0,8.
-:::
-
-## Avec une demande plus élastique, la taxe est partagée moitié-moitié
-
-```{r}
-#| label: fig-incidence-elasticite
-#| fig-width: 8
-#| fig-height: 4.6
-#| fig-alt: "Deux panneaux avec la même taxe de 5 euros. A, demande raide : prix payé 14 euros, prix gardé 9, quantité 84. B, demande plus plate : prix payé 12,50, prix gardé 7,50, quantité 60."
-graphe_incidence_elasticite(base_size = 24)
-```
-
-::: {.notes}
-1 h 10 – 1 h 18. Cas B : e = −1,6 ; 12,50 € ; 60 millions ; recette 300 M€.
-:::
-
-## Piège : « le buraliste encaisse la taxe, donc c'est lui qui la paie »
-
-::: {.piege}
-C'est faux. Si l'acheteur verse la taxe, la demande se déplace vers le bas de 5 € : même équilibre, vendeur 9 €, acheteur 14 €. Seules les élasticités décident.
+::: {.incremental}
+- L'incidence **légale** dit qui verse la taxe à l'État.
+- L'incidence **économique** dit qui la supporte : les acheteurs, par la hausse du prix qu'ils paient ; les vendeurs, par la baisse du prix qu'ils gardent.
+- Elle dépend des élasticités de l'offre et de la demande, et non de celui qui verse la taxe.
 :::
 
 ::: {.notes}
-1 h 18 – 1 h 22. Sondage : qui pensait que le buraliste paie ?
+0 h 34 – 0 h 38. Pour le tabac : incidence légale sur les vendeurs, en amont du buraliste ; incidence économique surtout sur les fumeurs, car ils sont le côté le moins élastique. Question : qui verse la TVA au restaurant ? Qui la supporte ? Transition : un produit addictif échappe-t-il à cette logique ?
 :::
 
-## Pause : 15 minutes
-
-::: {.notes}
-1 h 22 – 1 h 37. Pause. À la reprise : une demande peu élastique est une bonne assiette fiscale.
-:::
-
-## Une demande peu élastique rapporte plus, mais change peu les comportements
-
-Recette : 420 millions (A) contre 300 millions (B). Faire baisser la consommation et financer l'État sont **deux objectifs en partie contradictoires**.
-
-::: {.notes}
-1 h 37 – 1 h 41. Question : un État qui réussirait à faire arrêter tout le monde garderait-il sa recette ?
-:::
-
-## Sur un paquet à 13,50 €, l'État prend 82,5 %
-
-- Accises : 7,43 + 1,466 ≈ 8,89 €
-- TVA : 13,50 ÷ 6 = 2,25 €
-- Total des taxes : ≈ 11,14 €
-- Buraliste : ≈ 1,39 € ; fabricant : ≈ 0,97 €
-
-(Hill, 2026, tableaux 5.2 et 6 ; taux au 1^er^ janvier 2026)
-
-::: {.notes}
-1 h 41 – 1 h 49. Sur 1 € de hausse du prix de vente, l'État reçoit 0,72 € et le fabricant 0,18 €.
-:::
-
-## Becker et Murphy : un fumeur qui anticipe réagit aux prix futurs
+## Becker et Murphy (1988) : un fumeur qui anticipe les prix futurs
 
 ::: {.auteur}
 ::: {.wp-portrait}
@@ -224,186 +169,748 @@ Recette : 420 millions (A) contre 300 millions (B). Faire baisser la consommatio
 [2008 · MAR, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Gary S. Becker et Kevin M. Murphy** (1988), *Journal of Political Economy*, 96(4) · école de Chicago. Fumer aujourd'hui augmente l'envie de fumer demain ; une hausse durable et annoncée réduit la consommation.
+**Gary S. Becker et Kevin M. Murphy** (1988), « A Theory of Rational Addiction », *Journal of Political Economy* · école de Chicago. Fumer aujourd'hui augmente l'envie de fumer demain : c'est ce qui définit l'addiction.
 :::
+
+. . .
+
+Un fumeur rationnel le sait et tient compte des prix futurs. Une hausse de prix **durable et annoncée** réduit donc la consommation : un peu tout de suite, davantage à long terme.
 
 ::: {.notes}
-1 h 49 – 1 h 54. Addiction rationnelle : la demande est plus élastique à long terme.
+0 h 38 – 0 h 42. On pourrait croire qu'un produit addictif échappe à la logique du prix ; deux théories orthodoxes disent le contraire, mais n'en tirent pas les mêmes conclusions. Question : « rationnel » veut-il dire « raisonnable » ? (Non : cohérent avec ses préférences, en tenant compte du futur.) Transition : la définition.
 :::
 
-## L'addiction rend la demande plus élastique à long terme
+## Addiction rationnelle : la demande est plus élastique à long terme
 
-```{r}
-#| label: fig-court-long
-#| fig-width: 8
-#| fig-height: 4.6
-#| fig-alt: "Deux demandes bleues passant par le même point. Celle de court terme est raide, celle de long terme plus plate. Au prix plus élevé, la quantité baisse peu à court terme et nettement plus à long terme."
-graphe_court_long(base_size = 24)
-```
+::: {#def-addiction}
+## Addiction rationnelle
+
+Une consommation est **addictive** quand la quantité consommée aujourd'hui augmente l'envie de consommer demain. Elle est **rationnelle**, au sens de Becker et Murphy, quand le consommateur prend en compte cet effet et les prix futurs dans ses choix.
+:::
+
+. . .
+
+**Conséquence** : la demande est plus élastique à long terme qu'à court terme.
 
 ::: {.notes}
-1 h 54 – 1 h 59. Valeurs fictives : e = −0,3 puis −0,6 ; hausse de 20 % : −6 % puis −12 %.
+0 h 42 – 0 h 45. Lien avec Marshall : le temps laissé aux acheteurs. Le graphique court terme / long terme vient plus loin. Question : pourquoi une cigarette en moins aujourd'hui réduit-elle la demande de demain ? Transition : une autre lecture des mêmes faits.
 :::
 
-## Gruber et Kőszegi : beaucoup voudraient arrêter et n'y arrivent pas
+## Gruber et Kőszegi (2001) : des fumeurs qui anticipent mais regrettent
 
 ::: {.auteur}
 ::: {.wp-portrait}
 ![](../cours/img/portraits/gruber-jonathan.jpg){fig-alt="Portrait photographique de Jonathan Gruber en 2014, en buste."}
-[2014 · Commission de surveillance de la Chambre des représentants des États-Unis, domaine public, Wikimedia Commons]{.wp-credit}
+[2014 · Chambre des représentants des États-Unis, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Jonathan Gruber et Botond Kőszegi** (2001), *QJE*, 116(4) · économie comportementale. La consommation baisse dès le vote d'une taxe ; elle aide à tenir ses résolutions.
+**Jonathan Gruber et Botond Kőszegi** (2001), *Quarterly Journal of Economics* · économie comportementale. Aux États-Unis, la consommation de cigarettes baisse dès qu'une hausse de taxe est votée, avant même qu'elle s'applique : les fumeurs anticipent bien.
 :::
 
-**Internalité** : coût qu'on s'impose à soi-même dans le futur, sans en tenir compte au moment de choisir.
+. . .
+
+Mais beaucoup voudraient arrêter et n'y arrivent pas. La taxe les aide alors à **tenir leurs propres résolutions**.
 
 ::: {.notes}
-1 h 59 – 2 h 04. Externalité : sur les autres ; internalité : sur son « moi futur ». Taxe plus élevée d'au moins un dollar par paquet (NBER n° 7507).
+0 h 45 – 0 h 49. Article : « Is Addiction “Rational”? Theory and Evidence », QJE, 116(4). Même prédiction que Becker et Murphy (on anticipe), lecture différente (on regrette). Question : qui, dans l'amphi, connaît un fumeur qui voudrait arrêter ? Transition : nommer ce coût que l'on s'impose à soi-même.
 :::
 
-## En 2025, le prix du tabac a été multiplié par 4,6 depuis 2000 et les quantités divisées par 2,8
+## Internalité : un coût imposé à son propre « moi futur »
 
+::: {#def-internalite}
+## Internalité
+
+Une **internalité** est un coût qu'une personne s'impose à elle-même, dans le futur, sans en tenir compte au moment de choisir : le fumeur qui voulait arrêter et n'y arrive pas.
+:::
+
+::: {.incremental}
+- **Becker et Murphy** : le fumeur choisit en connaissance de cause ; la taxe ne se justifie que par le coût imposé aux **autres**.
+- **Gruber et Kőszegi** : la taxe doit aussi corriger l'internalité, plus élevée d'au moins un dollar par paquet aux États-Unis.
+:::
+
+::: {.notes}
+0 h 49 – 0 h 54. Une externalité pèse sur les autres ; une internalité pèse sur son propre « moi futur ». La différence entre les deux théories n'est pas dans la prédiction, mais dans la politique. Source du dollar : Gruber et Kőszegi, NBER Working Paper n° 7507, 2000. Transition : les outils, d'abord la dépense.
+:::
+
+## Dépense et élasticité (1/3) : au départ, 10 € et 100 millions
+
+:::: {.columns}
+::: {.column width="60%"}
 ```{r}
-#| label: fig-conso-tabac
-#| fig-width: 8
+#| fig-width: 6.4
 #| fig-height: 4.6
-#| fig-alt: "Trois indices base 100 en 2000. Le prix monte à 459 en 2025, les quantités baissent à 36, la dépense en euros courants monte à 164."
+#| fig-alt: "Une droite de demande bleue, raide et décroissante, avec un point au prix de 10 euros et à la quantité de 100 millions de paquets."
+graphe_depense(base_size = 24, etape = 1)
+```
+:::
+
+::: {.column width="40%"}
+- Marché fictif : le paquet coûte 10 €, il s'en vend 100 millions par an.
+- La dépense P × Q est l'aire d'un rectangle sous la demande.
+
+::: {.fragment}
+
+- Avant : 10 × 100 = **1 000 millions d'euros**.
+:::
+:::
+::::
+
+::: {.notes}
+0 h 54 – 0 h 56. Tracer le rectangle P × Q au tableau sous le point. Transition : le prix passe à 12 €.
+:::
+
+## Dépense et élasticité (2/3) : le prix passe à 12 €, avec e = −0,4
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même demande, avec un second point au prix de 12 euros et à la quantité de 92 millions de paquets."
+graphe_depense(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+1. Prix : (12 − 10) ÷ 10 = **+20 %**.
+2. Quantité : −0,4 × 20 = **−8 %**, soit 100 × 0,92 = **92 millions** de paquets.
+3. Dépense après : 12 × 92 = **1 104 millions**, soit **+10,4 %**.
+:::
+:::
+::::
+
+::: {.notes}
+0 h 56 – 1 h 00. Faire trouver chaque étape avant le clic. e = −0,4 : demande peu élastique, comme celle du tabac. Question : les fumeurs dépensent-ils plus ou moins ? Transition : d'où vient cette hausse, sur le graphique ?
+:::
+
+## Dépense et élasticité (3/3) : un rectangle gagné, un rectangle perdu
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même demande. Un rectangle bleu, entre 10 et 12 euros et de 0 à 92 millions de paquets, est marqué plus 184. Un rectangle rouge, entre 0 et 10 euros et de 92 à 100 millions de paquets, est marqué moins 80."
+graphe_depense(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- **Gagné** (bleu) : 92 millions de paquets encore achetés, (12 − 10) × 92 = **184** M€.
+- **Perdu** (rouge) : 8 millions abandonnés, 10 × 8 = **80** M€.
+- Solde : 184 − 80 = **+104** M€ : moins de paquets, plus de dépense.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 00 – 1 h 04. Vérifier : 1 104 − 1 000 = 104. Question : à quelle condition le rectangle rouge l'emporterait-il ? (Demande élastique.) Transition : refaire le calcul avec e = −1,5.
+:::
+
+## Exemple chiffré : même hausse de 20 %, demande élastique (e = −1,5)
+
+Même marché fictif, même hausse de 10 € à 12 €, mais e = −1,5 pour comparer.
+
+::: {.incremental}
+1. Quantité : −1,5 × 20 = **−30 %** : on vend 70 millions de paquets.
+2. Dépense : 12 × 70 = **840 millions**, soit **−16 %**.
+3. Même hausse de prix, deux histoires. Peu élastique : la hausse frappe surtout le **budget** des fumeurs. Élastique : elle réduit surtout la **consommation**.
+:::
+
+::: {.notes}
+1 h 04 – 1 h 08. Faire calculer à la main avant chaque clic. Question : pour un ministre de la Santé, laquelle des deux histoires est la bonne nouvelle ? Transition : d'où vient la hausse du prix ? D'une taxe.
+:::
+
+## Incidence d'une taxe (1/4) : l'équilibre initial E
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Graphique offre-demande : la demande D bleue, raide et décroissante, et l'offre O ambre, croissante, se coupent en E, au prix P étoile et à la quantité Q étoile."
+graphe_incidence(base_size = 24, etape = 1)
+```
+:::
+
+::: {.column width="40%"}
+- Sans taxe, le marché est à l'équilibre E : prix P\*, quantité Q\*.
+- La demande est raide : peu élastique, comme celle du tabac.
+- On crée ensuite une taxe t par paquet, versée par le vendeur.
+- Graphique théorique, sans chiffres.
+:::
+::::
+
+::: {.notes}
+1 h 08 – 1 h 10. Tracer D puis O, nommer E. Transition : l'État crée une taxe t par paquet.
+:::
+
+## Incidence d'une taxe (2/4) : l'offre monte de t, de O à O′
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même graphique : l'offre taxée O prime égale O plus t, en tirets, est parallèle à O et plus haute."
+graphe_incidence(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+1. Une taxe t par paquet, versée par le vendeur, agit comme une hausse de son coût.
+2. Pour vendre une quantité donnée, il demande désormais t euros de plus : l'offre se déplace **vers le haut de t**.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 10 – 1 h 13. La courbe entière se déplace, de t à chaque quantité. Question : au prix P\*, les vendeurs offrent-ils encore Q\* ? (Non : ils doivent reverser t, ils offrent moins.) Transition : le nouvel équilibre.
+:::
+
+## Incidence d'une taxe (3/4) : un coin entre prix payé et prix gardé
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Nouvel équilibre E prime au prix P étoile prime, plus élevé, et à la quantité Q étoile prime, plus faible. Un trait rouge vertical marqué t relie P étoile prime moins t, sur l'offre O, à P étoile prime."
+graphe_incidence(base_size = 24, etape = 3)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+3. Le prix payé monte jusqu'à E′ ; la quantité baisse de Q\* à Q\*′, **le long** de D.
+4. L'acheteur paie P\*′ au lieu de P\* ; le vendeur reçoit P\*′, reverse t et garde **P\*′ − t**, moins que P\*.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 13 – 1 h 17. Le trait rouge est le coin fiscal : l'écart entre prix payé et prix gardé égale la taxe. Chacun supporte une partie de la taxe. Question : qui perd le plus, ici ? Transition : lire les aires.
+:::
+
+## Incidence d'une taxe (4/4) : la recette, partagée entre acheteurs et vendeurs
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Figure complète : à gauche du trait rouge, un grand rectangle bleu entre P étoile et P étoile prime, marqué payé par les acheteurs, et un rectangle orangé plus mince entre P étoile prime moins t et P étoile, marqué payé par les vendeurs."
+graphe_incidence(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- La recette fiscale est le rectangle t × Q\*′.
+
+::: {.fragment}
+
+- Bleu : payé par les **acheteurs** (P\* → P\*′).
+- Orangé : payé par les **vendeurs** (P\* → P\*′ − t).
+- Demande peu élastique : les acheteurs paient la plus grande part.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 17 – 1 h 20. Retrouver le principe de Jenkin : la charge retombe sur le côté le moins élastique. Question : que deviendraient les rectangles avec une demande plus plate ? Transition : chiffrer, avec deux demandes.
+:::
+
+## Exemple chiffré : une taxe de 5 € par paquet, l'équilibre de départ
+
+Marché fictif, Q en millions de paquets, P en euros. Offre : Q = 16 P − 60. Demande **A** : Q = 140 − 4 P ; demande **B** : Q = 260 − 16 P.
+
+::: {.incremental}
+1. Sans taxe, à 10 € : demande 100, offre 16 × 10 − 60 = 100. **P\* = 10 €, Q\* = 100**, pour A comme pour B.
+2. Prix +1 € (+10 %) : A perd 4 millions (−4 %), e = **−0,4** ; B perd 16 millions, e = **−1,6** ; l'offre gagne 16 millions, élasticité **1,6**.
+:::
+
+::: {.notes}
+1 h 20 – 1 h 25. Faire vérifier l'équilibre au tableau avant le clic. A est peu élastique, B plus élastique ; même offre. Question : à quel marché ressemble le tabac ? (A.) Transition : on crée la taxe de 5 €.
+:::
+
+## Exemple chiffré : demande peu élastique, les acheteurs paient 80 %
+
+::: {.incremental}
+3. Taxe t = 5 €, le vendeur garde P − 5 : l'offre devient Q = 16 (P − 5) − 60 = 16 P − 140.
+4. Cas A : 140 − 4 P = 16 P − 140, soit 20 P = 280 : **P\*′ = 14 €**, Q\*′ = 140 − 4 × 14 = **84**. Le vendeur garde **9 €**.
+5. Partage : l'acheteur paie 4 € de plus (**80 %**), le vendeur garde 1 € de moins (20 %).
+6. Recette : 5 × 84 = **420 M€**, dont 336 payés par les acheteurs et 84 par les vendeurs.
+:::
+
+::: {.notes}
+1 h 25 – 1 h 31. Résoudre au tableau, une étape par clic. La dépense des acheteurs passe de 1 000 à 14 × 84 = 1 176 millions. Question : qui « paie » les 4 € ? Transition : même calcul pour B.
+:::
+
+## Exemple chiffré : demande plus élastique, partage moitié-moitié
+
+::: {.incremental}
+7. Cas B : 260 − 16 P = 16 P − 140, soit 32 P = 400 : **P\*′ = 12,50 €**, Q\*′ = **60**, le vendeur garde **7,50 €**.
+8. Partage : 2,50 € chacun. Recette : 5 × 60 = **300 M€** ; la quantité a baissé de 40 %.
+:::
+
+. . .
+
+**La règle** : part payée par les acheteurs = élasticité de l'offre ÷ (élasticité de l'offre + |e|).
+
+- A : 1,6 ÷ (1,6 + 0,4) = 0,8 ; B : 1,6 ÷ (1,6 + 1,6) = 0,5.
+
+::: {.notes}
+1 h 31 – 1 h 36. Faire trouver P\*′ avant le clic. La règle retrouve les deux partages calculés. Question : que donnerait une offre très peu élastique ? (Les vendeurs paieraient l'essentiel.) Transition : les deux marchés côte à côte.
+:::
+
+## Même taxe, deux demandes (1/3) : le même équilibre de départ
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Deux panneaux avec la même offre O ambre. À gauche, panneau A, la demande bleue est raide ; à droite, panneau B, elle est plus plate. Dans les deux, l'équilibre est à 10 euros et 100 millions de paquets."
+graphe_incidence_elasticite(base_size = 24, etape = 1)
+```
+:::
+
+::: {.column width="40%"}
+- Même offre O dans les deux panneaux.
+- A : demande raide, e = −0,4 ; B : demande plus plate, e = −1,6.
+- Même point de départ : 10 € et 100 millions de paquets.
+:::
+::::
+
+::: {.notes}
+1 h 36 – 1 h 38. Montrer que seule la pente de la demande change. Transition : la même taxe dans les deux marchés.
+:::
+
+## Même taxe, deux demandes (2/3) : la même offre taxée O′
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Mêmes panneaux : dans chacun, l'offre taxée O prime, en tirets, est plus haute de 5 euros que l'offre O."
+graphe_incidence_elasticite(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+- La taxe de 5 € déplace la même offre vers le haut, de O à O′.
+- Le déplacement est identique dans les deux marchés.
+
+::: {.fragment}
+
+- Seule la pente de la demande décidera du partage.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 38 – 1 h 40. Question : dans quel panneau le prix payé montera-t-il le plus ? Faire parier avant le clic suivant. Transition : les nouveaux équilibres.
+:::
+
+## Même taxe, deux demandes (3/3) : partage 4-1 en A, moitié-moitié en B
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Panneau A : l'équilibre passe à 14 euros et 84 millions, le trait rouge de la taxe va de 9 à 14 euros. Panneau B : l'équilibre passe à 12,50 euros et 60 millions, le trait rouge va de 7,50 à 12,50 euros."
+graphe_incidence_elasticite(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- A : payé 14 €, gardé 9 €, 84 millions.
+- B : payé 12,50 €, gardé 7,50 €, 60 millions.
+- Trait rouge = taxe : au-dessus de 10 €, part des acheteurs ; au-dessous, part des vendeurs.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 40 – 1 h 43. Lire les deux traits rouges : 4 + 1 en A, 2,50 + 2,50 en B. Transition : une erreur fréquente sur « qui paie ».
+:::
+
+## Point d'attention : verser la taxe n'est pas la supporter
+
+::: {.piege}
+« Le buraliste encaisse la taxe, donc c'est lui qui la paie. » C'est faux.
+:::
+
+. . .
+
+- Faisons verser la taxe par l'acheteur : c'est alors la **demande** qui se déplace, vers le bas de 5 €.
+- Pour chaque quantité, l'acheteur n'accepte plus de payer au vendeur que 5 € de moins qu'avant.
+- Même équilibre : le vendeur reçoit 9 €, l'acheteur paie 9 + 5 = 14 €. Seules les élasticités décident du partage.
+
+::: {.notes}
+1 h 43 – 1 h 47. Sondage à main levée avant le clic : qui pensait que le buraliste paie ? Le buraliste achète ses paquets taxes comprises. Transition : ce que la taxe rapporte à l'État.
+:::
+
+## Assiette fiscale : une demande peu élastique rapporte davantage
+
+Une demande peu élastique est une **bonne assiette fiscale** : 420 contre 300 millions d'euros, parce que la quantité baisse peu.
+
+. . .
+
+Mais la taxe rapporte d'autant plus qu'elle change peu les comportements.
+
+. . .
+
+Faire baisser la consommation et financer l'État sont **deux objectifs en partie contradictoires**.
+
+::: {.notes}
+1 h 47 – 1 h 50. Question : un État qui réussirait à faire arrêter tout le monde garderait-il sa recette ? Transition : ce que l'État prend sur un vrai paquet.
+:::
+
+## Exemple chiffré : les taxes font 82,5 % d'un paquet à 13,50 €
+
+Taux au 1^er^ janvier 2026, paquet de 20 cigarettes (Hill, 2026, tableau 5.2).
+
+::: {.incremental}
+1. Accise proportionnelle : 55 % du prix, 0,55 × 13,50 ≈ **7,43 €**.
+2. Accise spécifique : 73,30 € pour 1 000 cigarettes, soit **1,466 €** ; accises : ≈ **8,89 €**.
+3. TVA : 20 ÷ 120 = un sixième du prix, 13,50 ÷ 6 = **2,25 €**.
+4. Taxes : 8,89 + 2,25 ≈ **11,14 €**, soit **82,5 %** du prix.
+:::
+
+::: {.notes}
+1 h 50 – 1 h 55. Les fabricants proposent le prix de vente de chaque produit ; les douanes l'homologuent et le publient au *Journal officiel* (Hill, 2026, § 3.1). L'État fixe les taxes, les fabricants fixent les prix ; les taxes se calculent sur le prix de vente. Pourquoi un sixième ? La TVA est 20 % du prix hors TVA. Transition : le reste du paquet.
+:::
+
+## Exemple chiffré : le fabricant garde moins de 1 € par paquet
+
+::: {.incremental}
+5. Reste : 13,50 − 11,14 = **2,36 €**. Remise brute du buraliste : 10,29 % du prix (2025), ≈ **1,39 €**. Fabricant : ≈ **0,97 €** (7,2 % du prix).
+6. Si le prix monte de 1 € : accise proportionnelle 0,55 € ; TVA ≈ 0,17 € ; buraliste ≈ 0,10 €. Fabricant : ≈ **0,18 €**.
+7. L'État reçoit donc **0,72 €** de cet euro.
+:::
+
+::: {.notes}
+1 h 55 – 1 h 59. Taux de remise : Hill, 2026, tableau 6. Question : qui a intérêt à une hausse du prix de vente ? La chaîne de la séance : la taxe monte le prix (incidence), la quantité baisse de e × la hausse en % (peu au début, plus à long terme), la dépense et la recette montent si |e| < 1. Transition : la réaction dans le temps.
+:::
+
+## Court et long terme (1/3) : la demande de court terme est raide
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Une droite de demande bleue raide, marquée D court terme, avec un point en P étoile, Q étoile."
+graphe_court_long(base_size = 24, etape = 1)
+```
+:::
+
+::: {.column width="40%"}
+- Bien addictif : au départ, prix P\* et quantité Q\*.
+- Demande de court terme, celle de la première année : raide.
+- Fumer aujourd'hui augmente l'envie de fumer demain.
+- Valeurs fictives : e = −0,3 à un an.
+:::
+::::
+
+::: {.notes}
+1 h 59 – 2 h 01. Graphique théorique ; les valeurs fictives servent au calcul. Transition : une hausse durable du prix.
+:::
+
+## Court et long terme (2/3) : la première année, la quantité baisse peu
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même demande de court terme : au prix plus élevé P étoile prime, la quantité Q étoile CT est un peu inférieure à Q étoile."
+graphe_court_long(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+- Hausse durable du prix de 20 %, de P\* à P\*′.
+
+::: {.fragment}
+
+- On glisse le long de la demande de court terme.
+- Première année : −0,3 × 20 = **−6 %** ; la quantité tombe à Q\*CT.
+:::
+:::
+::::
+
+::: {.notes}
+2 h 01 – 2 h 03. Faire calculer avant le clic. Question : les fumeurs vont-ils en rester là ? Transition : plusieurs années plus tard.
+:::
+
+## Court et long terme (3/3) : à long terme, la demande est plus plate
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Figure complète : une seconde demande, en trait fin et plus plate, marquée D long terme, passe par le même point ; au prix P étoile prime, elle donne une quantité Q étoile LT nettement plus faible."
+graphe_court_long(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- Après plusieurs années, e = −0,6 : −0,6 × 20 = **−12 %**, quantité Q\*LT.
+- Becker et Murphy : qui fume moins aujourd'hui aura moins envie de fumer demain.
+- La demande de long terme est plus élastique.
+:::
+:::
+::::
+
+::: {.notes}
+2 h 03 – 2 h 06. Trait fin, pas de tirets : la courbe ne s'est pas déplacée, c'est une autre demande, à un autre horizon. Transition : que montrent les données françaises ?
+:::
+
+## France, 2006-2025 : prix réel multiplié par 2,1, ventes divisées par 2,6
+
+::: {.incremental}
+- Prix réel du tabac (corrigé de l'inflation) **× 2,1** ; ventes de cigarettes des buralistes par adulte **÷ 2,6** (Hill, 2026, chapitre 4).
+- Effet pour moitié sur le **nombre de fumeurs** (surtout des adultes qui arrêtent), pour moitié sur la **quantité fumée** par chacun (OMS, 2012 ; Hill, 2026).
+- Réponse : oui, en partie. D'autres mesures ont joué (campagnes, interdiction de vente aux mineurs) : une **corrélation**, pas une expérience.
+:::
+
+::: {.notes}
+2 h 06 – 2 h 09. « Selon la plupart des experts » (Hill, 2026, § 4.3). Question : pourquoi une corrélation ne suffit-elle pas à prouver l'effet du prix ? Transition : les comptes nationaux de l'Insee.
+:::
+
+## Tabac, 2000-2025 : prix multiplié par 4,6, quantités divisées par 2,8
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Trois indices base 100 en 2000, de 2000 à 2025 : le prix du tabac monte à 459, les quantités achetées baissent à 36, la dépense en euros courants monte à 164."
 graphe_conso_tabac(base_size = 24)
 ```
-
-Dépense : +64 %. Prix réel ×2,9, dépense réelle +3 % (Insee ; Eurostat, IPCH, février 2026). Corrélation, pas expérience. Source : Insee, comptes nationaux base 2020, 29/05/2026.
-
-::: {.notes}
-2 h 04 – 2 h 14. D'autres mesures ont joué en même temps (campagnes, interdiction de vente aux mineurs). 2020 : les quantités ne baissent presque pas (−0,2 %).
 :::
 
-## Les ventes des buralistes ne sont pas la consommation
+::: {.column width="40%"}
+- 2000-2025 : prix **× 4,6**, quantités **÷ 2,8**, dépense **+64 %** en euros courants.
 
-- Tabac à rouler : +4,2 % pour +10 % sur les cigarettes (jusqu'en 2013)
-- **17,7 %** en moyenne, selon une étude citée par le ministère, des produits échappent aux buralistes
-- Saisies de cigarettes : +24,5 % en 2025
+::: {.fragment}
 
-(Hill, 2026 ; *JO Sénat*, 26/02/2026 ; AFP, 28/05/2026)
+- Prix en général : +59 % (Eurostat, IPCH, février 2026). Prix réel du tabac **× 2,9** ; dépense réelle presque stable (**+3 %**).
+:::
+:::
+::::
 
 ::: {.notes}
-2 h 14 – 2 h 19. Étude TAFE (douanes et MILDECA), citée par le ministère de l'Action et des Comptes publics : 8 081 tonnes. Achats à l'étranger et contrebande.
+2 h 09 – 2 h 13. La dépense est le prix multiplié par la quantité : P × Q sur une même figure. En 2020, frontières fermées, les quantités ne baissent presque pas (−0,2 %). Les quantités baissent presque autant que le prix réel monte : à long terme, la réaction est bien plus forte que d'une année sur l'autre, mais elle mêle l'effet du prix et celui des autres mesures. Transition : ventes ou consommation ?
 :::
 
-## Depuis 2019, la recette stagne en euros courants et baisse de 13 % en euros constants
+## Fuites : les ventes des buralistes ne sont pas la consommation
 
+::: {.incremental}
+- **Tabac à rouler** : jusqu'en 2013, +10 % sur le prix des seules cigarettes faisait monter ses ventes de 4,2 % (Hill, 2026).
+- **Achats à l'étranger et contrebande** : 17,7 % des produits du tabac échappent en moyenne aux buralistes, soit 8 081 tonnes et 4,3 Md€ de taxes (*JO Sénat*, 26/02/2026).
+- **Saisies** de cigarettes par les douanes : +24,5 % en 2025 (AFP, 28/05/2026).
+:::
+
+::: {.notes}
+2 h 13 – 2 h 16. Le 17,7 % vient de l'étude TAFE des douanes et de la MILDECA, citée par le ministère de l'Action et des Comptes publics (réponse à la question écrite n° 04515). Question : le tabac à rouler est-il un substitut ? Transition : ce que ces fuites font à la recette.
+:::
+
+## Droit de consommation : sommet en 2020, puis recul en euros constants
+
+:::: {.columns}
+::: {.column width="60%"}
 ```{r}
-#| label: fig-recettes
 #| fig-width: 8
-#| fig-height: 4.6
+#| fig-height: 5.4
 #| fig-alt: "Recettes du droit de consommation sur les tabacs de 1991 à 2025, en euros courants et constants. Sommet en 2020 à 14,4 milliards, puis 12,7 milliards en 2025."
 graphe_recettes_tabac(base_size = 24)
 ```
-
-Source : C. Hill (2026), tableau 6. 2020, gonflé par la fermeture des frontières, est une mauvaise base.
-
-::: {.notes}
-2 h 19 – 2 h 24. Deux lectures, qui peuvent se cumuler : on fume moins, ou on achète hors réseau. Les données ne permettent pas de trancher.
 :::
 
-## Piège : l'élasticité mesurée sur les ventes légales surestime l'effet sur la santé
+::: {.column width="40%"}
+- 1991-2020 : recette **× 4,4** en euros courants ; 14,35 Md€ en 2020.
+
+::: {.fragment}
+
+- 2020, gonflé par les frontières fermées, est une mauvaise base. Depuis 2019 : **stable** en euros courants (12,60 puis 12,74 Md€), **−13 %** en euros constants.
+:::
+:::
+::::
+
+::: {.notes}
+2 h 16 – 2 h 20. Une demande peu élastique est une bonne assiette. Deux lectures, qui peuvent se cumuler : moins de fumeurs (le but sanitaire) ou plus d'achats hors réseau (une fuite). Les données ne permettent pas de trancher : Hill reproche à l'État de ne pas s'être donné les moyens de mesurer ces achats de façon indépendante. Transition : une erreur de mesure fréquente.
+:::
+
+## Point d'attention : ne pas calculer une élasticité sur les seules ventes légales
 
 ::: {.piege}
-Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes baissent plus que la consommation. On prend pour un arrêt du tabac ce qui est en partie une fuite, dont le coût pour les recettes passe inaperçu.
+Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes des buralistes baissent plus que la consommation.
+:::
+
+. . .
+
+- On **surestime** alors l'effet du prix sur la santé.
+- On prend pour un arrêt du tabac ce qui est en partie une fuite, dont le coût pour les recettes passe inaperçu.
+- L'élasticité mesurée par Hill est celle des ventes enregistrées, pas de la consommation.
+
+::: {.notes}
+2 h 20 – 2 h 23. Question : avec quelles données mesurerait-on la consommation ? (Enquêtes auprès des fumeurs.) Transition : qui gagne, qui perd ?
+:::
+
+## Par génération : les jeunes sont plus sensibles au prix
+
+::: {.incremental}
+- Plus sensibles que leurs aînés (Hill, 2026, § 4.3) : budget plus petit, dépendance moins installée. Lycéens fumeurs quotidiens : 30,8 % en 2010, **5,6 %** en 2024 (AFP, 28/05/2026).
+- Écart entre filières à 17 ans (ESCAPAD, mars 2022, cité par *The Conversation*, 25/07/2026) : lycée professionnel 22,1 %, général ou technologique 10,1 %, apprentis 38,4 %.
 :::
 
 ::: {.notes}
-2 h 24 – 2 h 28. L'élasticité mesurée par Hill est celle des ventes enregistrées.
+2 h 23 – 2 h 26. Ce sont sans doute les jeunes qui gagnent le plus en santé. Les chiffres ESCAPAD ne se comparent pas aux 5,6 % : autre enquête, autre année, un seul âge au lieu de tous les lycéens. Transition : par revenu.
 :::
 
-## Les jeunes gagnent sans doute le plus en santé, la taxe pèse le plus sur les budgets modestes
+## Par revenu : une taxe régressive, une réaction non démontrée
 
-- Lycéens fumeurs quotidiens : 30,8 % en 2010, 5,6 % en 2024
-- À 17 ans (ESCAPAD, mars 2022 ; autre enquête) : voie professionnelle 22,1 %, générale ou technologique 10,1 %
-- Taxe **régressive** ; réaction plus forte des modestes non montrée
-
-(AFP, 28/05/2026 ; *The Conversation*, 25/07/2026 ; Hill, 2026)
+::: {.incremental}
+- Taxe **régressive** : un paquet à 13,50 € pèse plus lourd dans un petit budget.
+- En théorie, les modestes devraient réagir davantage et gagner le plus en santé ; les données françaises ne le montrent pas (Hill, 2026, § 4.3).
+- Part de fumeurs chez les chômeurs : en hausse jusqu'en 2016, quand elle baissait chez les actifs occupés et les étudiants.
+- Pour qui n'arrive pas à arrêter : une **perte de pouvoir d'achat**.
+:::
 
 ::: {.notes}
-2 h 28 – 2 h 33. Les ménages modestes devraient réagir davantage au prix, mais les données ne le montrent pas.
+2 h 26 – 2 h 29. Chômeurs : Hill, 2026, § 2.4. Question : régressive veut-elle dire injuste ? (Non : c'est un constat positif ; le jugement vient dans la controverse.) Transition : territoires et genre.
 :::
 
-## Territoires, genres, vendeurs : des gains qui s'effritent
+## Par territoire et par genre : frontières et écart hommes-femmes
 
-![Kiosque Relay, Paris, 2026. Photo : Jacques Jeorges Anton, CC0, Wikimedia Commons](../cours/img/cm2/paquets-neutres-paris-2026.jpg){width=40% fig-alt="Photographie du rayon tabac d'un kiosque Relay à Paris : sous des enseignes rouges Tabac et E-cigarettes, des rangées de paquets de cigarettes neutres et de tabac à rouler, et un comptoir en bois au premier plan."}
+- **Territoire** : près des frontières, le paquet est moins cher de l'autre côté ; les buralistes frontaliers perdent des ventes, compensés par des aides (Hill, 2026, § 7.6).
 
-Fumeurs : 20,4 % des hommes, 16,2 % des femmes (2024). Buralistes : 32 850 (2002), 22 800 (2025) (Hill, 2026, tableaux 2.1 et 6).
+. . .
+
+- Les hausses de taxes en Belgique et au Luxembourg réduisent l'avantage d'y acheter (AFP, 28/05/2026).
+
+. . .
+
+- **Genre** : en 1953, 72 % des hommes et 17 % des femmes fumaient régulièrement ; en 2024, 20,4 % et 16,2 % (Hill, 2026, tableau 2.1).
 
 ::: {.notes}
-2 h 33 – 2 h 38. Départements frontaliers : aides aux buralistes. Fabricants : moins de 1 € par paquet, mais ils fixent les prix.
+2 h 29 – 2 h 31. Sondages Seita, Insee, Inpes puis Santé publique France. L'écart entre hommes et femmes s'est beaucoup réduit. Transition : l'État et les vendeurs.
 :::
 
-## L'analyse établit trois faits : peu élastique, surtout payé par les fumeurs, des fuites
+## Vendeurs et État : des gains qui s'effritent
 
-- Ventes en baisse moins que proportionnelle, davantage à long terme
-- Taxe surtout payée par les **fumeurs**
-- **Fuites** mal mesurées
+:::: {.columns}
+::: {.column width="60%"}
+![Kiosque Relay, Paris, 2026. Photo : Jacques Jeorges Anton, CC0, Wikimedia Commons.](../cours/img/cm2/paquets-neutres-paris-2026.jpg){fig-alt="Photographie du rayon tabac d'un kiosque Relay à Paris : sous des enseignes rouges Tabac et E-cigarettes, des rangées de paquets de cigarettes neutres et de tabac à rouler, et un comptoir en bois au premier plan."}
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- **État** : 82,5 % du prix ; 12,74 Md€ de droit de consommation en 2025.
+- **Buralistes** : 32 850 en 2002, 22 800 en 2025.
+- **Fabricants** : moins de 1 € par paquet, mais ils fixent les prix.
+- **Non-fumeurs** : moins de tabagisme passif.
+:::
+:::
+::::
 
 ::: {.notes}
-2 h 38 – 2 h 43. Le positif : ce que l'analyse établit.
+2 h 31 – 2 h 33. 4 999 références au catalogue des douanes en 2026 ; la remise du buraliste suit le prix (environ 1,39 € sur 13,50 €), la taxe part à l'État. OMS : plus de 7 millions de morts par an dans le monde, dont 1,6 million de non-fumeurs exposés (*La finance pour tous*, 24/07/2026). Transition : faut-il continuer ?
 :::
 
-## Protéger le fumeur contre lui-même relève d'un jugement
+## Controverse : continuer ou non à augmenter le prix du tabac
 
-- Fumeur rationnel : taxer seulement le coût imposé aux autres
-- Fumeur qui n'arrive pas à arrêter : une taxe plus forte se défend
-- C'est la question du **paternalisme**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
 
-La santé contre le pouvoir d'achat : un impôt régressif.
+- Les ventes baissent, moins que le prix ne monte (e entre −0,5 et −0,3), davantage à long terme et chez les jeunes.
+- La taxe pèse surtout sur les **fumeurs** ; elle nourrit des **fuites** mal mesurées.
+
+. . .
+
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+
+- Faut-il protéger le fumeur contre lui-même ? C'est la question du **paternalisme**.
+- Comment peser la santé de ceux qui arrêtent et le pouvoir d'achat de ceux qui continuent ?
 
 ::: {.notes}
-2 h 43 – 2 h 49. Le normatif. L'OMS : outil favorable aux pauvres si les recettes financent le sevrage (OMS, 2012, citée par Hill).
+2 h 33 – 2 h 37. Débat en amphi, 3 minutes, après le clic. Fumeur jugé pleinement rationnel : la taxe ne couvre que le coût imposé aux autres ; fumeur qui n'arrive pas à tenir ses résolutions : une taxe plus forte se défend. L'OMS juge que la taxe peut devenir « un outil de politique publique favorable aux pauvres » si une partie des recettes finance l'aide au sevrage des ménages modestes (OMS, 2012, citée par Hill, 2026, § 7.6). Transition : les positions en présence.
 :::
 
-## Quatre positions s'opposent, sans nier l'effet du prix
+## Positions en présence : l'effet du prix est admis par tous
 
-- *Chicago* : informer, taxer les dommages aux autres
-- *Comportementale* : taxe plus élevée, internalité
-- *Santé publique* : prix, « de loin le moyen le plus efficace »
-- *Buralistes* : marché parallèle, hausse limitée à l'inflation
+::: {.incremental}
+- *École de Chicago* (Becker et Murphy) : informer, et taxer les seuls dommages causés aux autres.
+- *Économie comportementale* (Gruber et Kőszegi) : taxe plus élevée, qui corrige aussi l'internalité.
+- *Santé publique* (OMS ; Hill, 2026) : la hausse des prix est « de loin le moyen le plus efficace ».
+- *Buralistes* : marché parallèle ; limiter la hausse des accises à l'inflation (*JO Sénat*, 08/05/2025).
+:::
 
-(Hill, 2026, § 4.3 ; *JO Sénat*, 08/05/2025)
+. . .
+
+Le débat porte sur la **taille des fuites** (positif) et le **droit de l'État à orienter des choix privés** (normatif).
 
 ::: {.notes}
-2 h 49 – 2 h 55. Le débat porte sur la taille des fuites (positif) et sur le droit d'orienter les choix privés (normatif).
+2 h 37 – 2 h 40. Le rapport de Hill est engagé dans la lutte antitabac. Les buralistes parlent d'une profession « fragilisée par l'ampleur croissante du marché parallèle » ; le gouvernement répond que la lutte contre la contrebande est « une priorité majeure de la douane » (*JO Sénat*, 26/02/2026). Transition : le droit.
 :::
 
-## En droit, les prix du tabac sont homologués par les douanes
+## Droit : prix homologués par les douanes, Convention-cadre de l'OMS
 
 ::: {.droit}
-La France a ratifié la Convention-cadre de l'OMS ; son article 6 recommande d'augmenter les taxes sur le tabac.
+Chaque fabricant propose ses prix, que l'administration des douanes homologue et publie au *Journal officiel* ; l'arrêté du 29 septembre 2026 fixe les prix au 1^er^ novembre 2026 (*Bourse Inside*, 08/10/2026).
 :::
 
-(*Bourse Inside*, 08/10/2026 ; Hill, 2026)
+. . .
+
+La France a ratifié la **Convention-cadre de l'OMS** pour la lutte antitabac, dont l'article 6 recommande d'augmenter les taxes sur le tabac (Hill, 2026).
 
 ::: {.notes}
-2 h 55 – 2 h 56. Les fabricants proposent, les douanes homologuent, le *Journal officiel* publie.
+2 h 40 – 2 h 41. Les prix du tabac ne sont pas libres au sens ordinaire. Procédure : Hill, 2026, § 3.1. Transition : ce qu'il faut retenir.
 :::
 
 ## À retenir
 
 ::: {.retenir}
-- e est compris entre −0,5 et −0,3
-- La charge retombe sur le côté le moins élastique
-- Plus élastique à long terme et chez les jeunes
-- Ventes légales ≠ consommation
-- Protéger le fumeur ou les autres : normatif
+- Tabac : e entre −0,5 et −0,3 ; +10 % de prix, −3 à −5 % de ventes.
+- Demande peu élastique : une hausse de prix augmente la dépense et la recette fiscale.
+- La charge d'une taxe retombe sur le côté le moins élastique : surtout les fumeurs.
+- L'addiction n'annule pas l'effet du prix : plus élastique à long terme et chez les jeunes.
+- Ventes légales ≠ consommation : les fuites réduisent l'effet sanitaire et la recette.
+- Protéger le fumeur (internalité) ou les autres (externalité) : un jugement normatif.
 :::
 
 ::: {.notes}
-2 h 56 – 2 h 58. Reprendre le pari de l'ouverture : le fumeur réagit-il ?
+2 h 41 – 2 h 43. Reprendre le pari de l'ouverture : le fumeur dépendant réagit-il au prix ? Oui, peu à court terme, davantage à long terme. Transition : le plan de dissertation.
 :::
 
-## Plan de dissertation : ce que dit l'outil, puis ce qu'il ne tranche pas
+## Plan de dissertation : ce que dit l'outil, ce qu'il ne tranche pas
 
-1. **Ce que dit l'outil** : élasticité, incidence, addiction
-2. **Ce qu'il ne tranche pas** : fuites, paternalisme, santé contre pouvoir d'achat
+**Sujet** : faut-il continuer à augmenter le prix du tabac ?
+
+. . .
+
+**I. Ce que dit l'outil (positif)**
+
+- A. Élasticité et addiction : les ventes baissent moins que le prix ne monte, davantage à long terme.
+- B. Incidence : la taxe pèse surtout sur les fumeurs ; les fuites réduisent l'effet.
+
+. . .
+
+**II. Ce qu'il ne tranche pas (normatif)**
+
+- A. Protéger les autres (externalité) ou le fumeur contre lui-même (internalité) : le paternalisme.
+- B. La santé contre le pouvoir d'achat : un impôt régressif.
 
 ::: {.notes}
-2 h 58 – 3 h 00. Annoncer le TD 2.
+2 h 43 – 2 h 45. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation. Annoncer le TD 2.
 :::

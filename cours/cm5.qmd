@@ -37,7 +37,7 @@ Le statut juridique est arrêté au 21/10/2026 ; le raisonnement n'en dépend pa
 
 ![Panneau d'entrée de la zone à faibles émissions de Lyon, rue Sœur Bouvier, février 2025. Lecture : le panneau n'autorise que les véhicules électriques, Crit'Air 1 et Crit'Air 2 ; une voiture plus ancienne, donc plus polluante, ne peut pas entrer, quel que soit le nombre de kilomètres qu'elle parcourt. Photo : Sebleouf, CC BY-SA 4.0, Wikimedia Commons.](img/cm5/zfe-lyon.jpg){#fig-panneau-zfe width=50% fig-alt="Photographie d'un poteau portant deux panneaux : en haut « Zone à faibles émissions », en bas « Sauf catégories » avec trois pastilles, véhicule électrique en vert, Crit'Air 1 en violet et Crit'Air 2 en jaune."}
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### La pollution est un coût que le marché oublie
 
@@ -278,14 +278,14 @@ En 2025, le **leasing social** propose 50 000 aides pour louer une voiture éle
 
 ### Faut-il garder les ZFE, et qui doit payer leur coût ?
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - La pollution automobile est une externalité : sans intervention, on roule plus que l'optimum.
 - Les ZFE réduisent les émissions, mais leur effet propre est modeste : 4,6 points sur une baisse de 38,9 % pour les oxydes d'azote (Insee, 27/08/2026).
 - Une norme par vignette ne rapporte rien et ne cible ni les trajets les moins utiles ni les kilomètres, mais l'âge de la voiture (Insee, 27/08/2026) ; une taxe rapporte une recette qui peut compenser les perdants.
 - Le coût d'adaptation pèse davantage sur les ménages modestes qui ont une vieille voiture et travaillent loin des transports en commun.
 
-**Ce qui relève d'un jugement (normatif).**
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
 
 - **Qui détient le droit ?** Si l'on juge que les riverains ont droit à un air sain, le pollueur doit payer (taxe, ou au moins norme). Si l'on juge que l'accès en voiture au centre est un droit, la société doit payer (subvention). C'est la question de Coase, et l'économie ne la tranche pas.
 - **Efficacité ou équité ?** Quand le dommage est à peu près constant, la taxe atteint l'optimum au moindre coût ; mais elle frappe les ménages captifs de la voiture ; on peut la compenser, si l'on sait les identifier.

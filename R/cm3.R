@@ -76,7 +76,10 @@ rationner_cm3 <- function(regle = c("file", "priorite"), boites = qo_cm3(marche_
 #' axes ne portent que P*, P*' et Q* (graphique théorique).
 #' @param prix_libre si TRUE, montre l'équilibre E' qu'atteindrait un prix libre
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_penurie <- function(prix_libre = TRUE, base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = équilibre initial
+#'   (D, O, E) ; 2 = ajoute le choc (D′, flèche) ; 3 = ajoute la pénurie (trait
+#'   rouge) ; 4 = figure complète (E′ si prix_libre), identique à la page (défaut)
+graphe_penurie <- function(prix_libre = TRUE, base_size = 16, etape = 4) {
   q <- seq(60, 190, length.out = 80)
   d <- data.frame(q = q,
                   demande  = (marche_cm3$d_a - q) / marche_cm3$d_b,
@@ -86,27 +89,32 @@ graphe_penurie <- function(prix_libre = TRUE, base_size = 16) {
   q_dem <- qd_cm3(p0)
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
+  i_lab <- if (etape >= 2) 1:3 else c(1, 3)   # D, O (puis D′)
   g <- ggplot(d, aes(q)) +
-    annotate("segment", x = c(q0, 60), xend = c(q0, q_dem), y = c(0, p0), yend = c(p0, p0),
+    annotate("segment", x = c(q0, 60), xend = c(q0, if (etape >= 2) q_dem else q0), y = c(0, p0), yend = c(p0, p0),
              linetype = "22", colour = neutre) +
-    geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    geom_line(aes(y = demande2), colour = couleurs_eco[["demande"]], linewidth = 1.4, linetype = "22") +
-    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
+    geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
+    geom_line(aes(y = demande2), colour = couleurs_eco[["demande"]], linewidth = 1.4, linetype = "22")
+  g <- g + geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
     # flèche du déplacement de la demande, vers la droite
     annotate("segment", x = 90, xend = 140, y = 210, yend = 210,
              colour = couleurs_eco[["demande"]], linewidth = 0.7,
-             arrow = grid::arrow(length = grid::unit(0.25, "cm"), type = "closed")) +
+             arrow = grid::arrow(length = grid::unit(0.25, "cm"), type = "closed"))
+  if (etape >= 3) g <- g +
     # la pénurie au prix fixé : de l'offre à la nouvelle demande
     annotate("segment", x = q0, xend = q_dem, y = p0, yend = p0,
              colour = couleurs_eco[["alerte"]], linewidth = 1.8) +
     annotate("text", x = (q0 + q_dem) / 2, y = p0 - 22, label = "pénurie",
-             colour = couleurs_eco[["alerte"]], family = police_cours, size = taille) +
+             colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
+  g <- g +
     annotate("text", x = 61, y = p0 + 16, label = "prix fixé", hjust = 0,
              colour = neutre, family = police_cours, size = taille * 0.85) +
     annotate("point", x = q0, y = p0, size = 3, colour = couleurs_eco[["equilibre"]]) +
     annotate("text", x = q0 - 7, y = p0 + 16, label = "E", family = police_cours, size = taille)
   breaks_y <- p0; labels_y <- "P*"
-  if (prix_libre) {
+  if (prix_libre && etape >= 4) {
     p1 <- eq_libre_ct$p; q1 <- eq_libre_ct$q
     g <- g +
       annotate("segment", x = 60, xend = q1, y = p1, yend = p1, linetype = "22", colour = neutre) +
@@ -117,8 +125,8 @@ graphe_penurie <- function(prix_libre = TRUE, base_size = 16) {
     breaks_y <- c(p0, p1); labels_y <- c("P*", "P*′")
   }
   g +
-    annotate("text", x = c(68, 172, 122), y = c(200, 62, 330), label = c("D", "D′", "O"),
-             colour = couleurs_eco[c("demande", "demande", "offre")], family = police_cours, size = taille) +
+    annotate("text", x = c(68, 172, 122)[i_lab], y = c(200, 62, 330)[i_lab], label = c("D", "D′", "O")[i_lab],
+             colour = couleurs_eco[c("demande", "demande", "offre")][i_lab], family = police_cours, size = taille) +
     scale_x_continuous(breaks = q0, labels = "Q*") +
     scale_y_continuous(breaks = breaks_y, labels = labels_y) +
     coord_cartesian(xlim = c(60, 190), ylim = c(0, 350), expand = FALSE, clip = "on") +
@@ -134,7 +142,10 @@ graphe_penurie <- function(prix_libre = TRUE, base_size = 16) {
 #' Deux panneaux : offre de court terme presque verticale (A) et offre de long
 #' terme élastique (B). Même demande D -> D', même prix fixé de 75 €.
 #' Point plein : prix fixé (E) ; point creux : équilibre si le prix était libre.
-graphe_rigidite <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = prix fixé et pénurie
+#'   seulement ; 2 = ajoute l'équilibre libre du panneau A ; 3 = figure complète,
+#'   identique à la page (défaut)
+graphe_rigidite <- function(base_size = 16, etape = 3) {
   q <- seq(60, 190, length.out = 80)
   panneaux <- c("A. Offre rigide", "B. Offre plus élastique")
   courbes <- rbind(
@@ -147,6 +158,7 @@ graphe_rigidite <- function(base_size = 16) {
   p0 <- marche_cm3$prix_fixe
   libres <- data.frame(panneau = factor(panneaux, levels = panneaux),
                        q = c(eq_libre_ct$q, eq_libre_lt$q), p = c(eq_libre_ct$p, eq_libre_lt$p))
+  if (etape < 3) libres <- libres[seq_len(etape - 1), , drop = FALSE]   # aucun, puis A seul
   fixe <- data.frame(panneau = factor(panneaux, levels = panneaux), q = eq_initial$q, p = p0,
                      q_dem = qd_cm3(p0))
   etiquettes <- data.frame(

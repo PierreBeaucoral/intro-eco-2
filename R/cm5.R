@@ -49,15 +49,23 @@ ex_cm5 <- within(list(), {
 #' Axes étiquetés P*, P* + Dm, Q°, Q* (graphique théorique, sans graduations).
 #' @param taxe si TRUE, montre la recette de la taxe au lieu de la perte sèche
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_externalite <- function(taxe = FALSE, base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = marché seul (D, Cm,
+#'   E, Q*) ; 2 = ajoute le coût social (Cms, Dm, E°, Q°) ; 3 = figure complète
+#'   (perte sèche, ou recette si taxe = TRUE), identique à la page (défaut)
+graphe_externalite <- function(taxe = FALSE, base_size = 16, etape = 3) {
   a <- marche_cm5$d_a; cm <- marche_cm5$cm; cms <- ex_cm5$cms
   q0 <- ex_cm5$q_optimum; q1 <- ex_cm5$q_marche
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
   d <- data.frame(q = seq(0, 11, length.out = 50))
   d$demande <- a - d$q
+  i_q <- if (etape >= 2) 1:2 else 2            # Q° et Q* (étape 1 : Q* seul)
+  i_e <- if (etape >= 2) 1:2 else 1            # E (puis E°)
+  i_lab <- if (etape >= 2) 1:3 else 1:2        # D, Cm (puis Cms)
   g <- ggplot(d, aes(q))
-  if (taxe) {
+  if (etape < 3) {
+    # pas encore d'aire : ni perte sèche, ni recette
+  } else if (taxe) {
     g <- g +
       annotate("rect", xmin = 0, xmax = q0, ymin = cm, ymax = cms, fill = neutre, alpha = 0.25) +
       annotate("text", x = q0 / 2, y = (cm + cms) / 2, label = "recette = t × Q°",
@@ -69,12 +77,13 @@ graphe_externalite <- function(taxe = FALSE, base_size = 16) {
       annotate("text", x = q1 + 0.15, y = cms + 0.55, label = "perte sèche", hjust = 0,
                colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
   }
-  g +
-    annotate("segment", x = c(q0, q1), xend = c(q0, q1), y = c(0, 0), yend = c(cms, cm),
+  g <- g +
+    annotate("segment", x = c(q0, q1)[i_q], xend = c(q0, q1)[i_q], y = c(0, 0)[i_q], yend = c(cms, cm)[i_q],
              linetype = "22", colour = neutre) +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
     annotate("segment", x = 0, xend = 11, y = cm, yend = cm,
-             colour = couleurs_eco[["offre"]], linewidth = 1.4) +
+             colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
     annotate("segment", x = 0, xend = 11, y = cms, yend = cms,
              colour = couleurs_eco[["offre"]], linewidth = 1.4, linetype = "22") +
     # accolade du dommage marginal : écart vertical entre Cm et Cms
@@ -82,15 +91,16 @@ graphe_externalite <- function(taxe = FALSE, base_size = 16) {
              colour = couleurs_eco[["alerte"]], linewidth = 0.7,
              arrow = grid::arrow(length = grid::unit(0.18, "cm"), ends = "both", type = "closed")) +
     annotate("text", x = 10.45, y = (cm + cms) / 2, label = if (taxe) "t = Dm" else "Dm",
-             hjust = 0, colour = couleurs_eco[["alerte"]], family = police_cours, size = taille) +
-    annotate("point", x = c(q1, q0), y = c(cm, cms), size = 3, colour = couleurs_eco[["equilibre"]]) +
-    annotate("text", x = c(q1 + 0.35, q0 + 0.1), y = c(cm - 0.45, cms + 0.5), label = c("E", "E°"),
+             hjust = 0, colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
+  g +
+    annotate("point", x = c(q1, q0)[i_e], y = c(cm, cms)[i_e], size = 3, colour = couleurs_eco[["equilibre"]]) +
+    annotate("text", x = c(q1 + 0.35, q0 + 0.1)[i_e], y = c(cm - 0.45, cms + 0.5)[i_e], label = c("E", "E°")[i_e],
              family = police_cours, size = taille) +
-    annotate("text", x = c(1.4, 11.4, 11.4), y = c(11.6, cm, cms), label = c("D", "Cm", "Cms"),
-             hjust = c(0.5, 0, 0), colour = couleurs_eco[c("demande", "offre", "offre")],
+    annotate("text", x = c(1.4, 11.4, 11.4)[i_lab], y = c(11.6, cm, cms)[i_lab], label = c("D", "Cm", "Cms")[i_lab],
+             hjust = c(0.5, 0, 0)[i_lab], colour = couleurs_eco[c("demande", "offre", "offre")][i_lab],
              family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(q0, q1), labels = c("Q°", "Q*")) +
-    scale_y_continuous(breaks = c(cm, cms), labels = c("P*", "P* + Dm")) +
+    scale_x_continuous(breaks = c(q0, q1)[i_q], labels = c("Q°", "Q*")[i_q]) +
+    scale_y_continuous(breaks = c(cm, cms)[i_e], labels = c("P*", "P* + Dm")[i_e]) +
     coord_cartesian(xlim = c(0, 12.6), ylim = c(0, 12.5), expand = FALSE, clip = "off") +
     labs(x = "Trajets en voiture ancienne Q", y = "Coût ou bénéfice par trajet P") +
     theme_cours(base_size = base_size)
@@ -115,7 +125,10 @@ weitzman_cm5 <- within(list(d_bas = 11, d_haut = 13, norme = 6), {
 #' B. Norme : la quantité est fixée à 6 ; la valeur du dernier trajet permis varie
 #'    de 5 à 7 €, soit un coût implicite de 1 à 3 € au-dessus de Cm.
 #' Graduations chiffrées assumées : la figure illustre l'exemple 2.
-graphe_weitzman <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = les deux demandes
+#'   et Cm ; 2 = ajoute la taxe (panneau A) ; 3 = figure complète avec la norme
+#'   (panneau B), identique à la page (défaut)
+graphe_weitzman <- function(base_size = 16, etape = 3) {
   w <- weitzman_cm5; cm <- marche_cm5$cm; prix_taxe <- cm + marche_cm5$dm
   panneaux <- c("A. Taxe : le prix est fixé", "B. Norme : la quantité est fixée")
   fp <- function(x) factor(x, levels = panneaux)
@@ -140,18 +153,27 @@ graphe_weitzman <- function(base_size = 16) {
                                 "offre", "equilibre", "alerte", "alerte")]),
     hj = c(0.5, 0.5, 1, 0, 0.5, 0.5, 0, 0, 0.5, 0)
   )
-  ggplot(d, aes(q)) +
+  if (etape < 3) {                              # instrument montré : aucun, puis la taxe (A)
+    vis <- panneaux[seq_len(etape - 1)]
+    pts <- pts[pts$panneau %in% vis, ]
+    ecart <- ecart[ecart$panneau %in% vis, ]
+    etiq <- etiq[if (etape == 1) c(1, 2, 4:7) else c(1:7, 9), ]
+  }
+  g <- ggplot(d, aes(q)) +
     geom_line(aes(y = bas), colour = couleurs_eco[["demande"]], linewidth = 1.3) +
     geom_line(aes(y = haut), colour = couleurs_eco[["demande"]], linewidth = 1.3, linetype = "22") +
     geom_segment(data = data.frame(panneau = fp(panneaux), x = 2, xend = 10, y = cm),
                  aes(x = x, xend = xend, y = y, yend = y),
-                 colour = couleurs_eco[["offre"]], linewidth = 1.1) +
+                 colour = couleurs_eco[["offre"]], linewidth = 1.1)
+  if (etape >= 2) g <- g +
     geom_segment(data = data.frame(panneau = fp(panneaux[1]), x = 2, xend = 10, y = prix_taxe),
                  aes(x = x, xend = xend, y = y, yend = y),
-                 colour = couleurs_eco[["offre"]], linewidth = 1.3, linetype = "22") +
+                 colour = couleurs_eco[["offre"]], linewidth = 1.3, linetype = "22")
+  if (etape >= 3) g <- g +
     geom_segment(data = data.frame(panneau = fp(panneaux[2]), x = w$norme, y = 2, yend = 10),
                  aes(x = x, xend = x, y = y, yend = yend),
-                 colour = couleurs_eco[["equilibre"]], linewidth = 1.1) +
+                 colour = couleurs_eco[["equilibre"]], linewidth = 1.1)
+  g +
     geom_segment(data = ecart, aes(x = x, xend = xend, y = y, yend = yend),
                  colour = couleurs_eco[["alerte"]], linewidth = 1.8) +
     geom_point(data = pts, aes(y = p), size = 2.6, colour = couleurs_eco[["equilibre"]]) +
@@ -159,8 +181,8 @@ graphe_weitzman <- function(base_size = 16) {
               family = police_cours, size = base_size / 3.4) +
     scale_colour_identity() +
     facet_wrap(~panneau, nrow = 1) +
-    scale_x_continuous(breaks = c(5, 6, 7)) +
-    scale_y_continuous(breaks = c(4, 5, 6, 7)) +
+    scale_x_continuous(breaks = if (etape >= 2) c(5, 6, 7) else 6) +      # étape 1 : la cible et Cm seules
+    scale_y_continuous(breaks = if (etape >= 2) c(4, 5, 6, 7) else 4) +
     coord_cartesian(xlim = c(2, 10), ylim = c(2, 10), expand = FALSE, clip = "on") +   # les courbes s'arrêtent au cadre
     labs(x = "Trajets Q (milliers par jour)", y = "€ par trajet") +
     theme_cours(base_size = base_size) +
@@ -182,7 +204,9 @@ fr_num <- function(x) sub("-", "−", format(x, decimal.mark = ",", nsmall = 1, 
 #' Barres horizontales : variation observée des émissions (avec ZFE, azur) et
 #' variation estimée sans ZFE (gris), avec l'intervalle de confiance de cette
 #' estimation ; à droite, l'effet propre publié par l'Insee.
-graphe_effet_zfe <- function(base_size = 16) {
+#' @param etape pour les diapos : 1 = variation observée seule (l'avant-après) ;
+#'   2 = figure complète avec le contrefactuel et l'effet propre (défaut)
+graphe_effet_zfe <- function(base_size = 16, etape = 2) {
   e <- effets_zfe_cm5
   noms <- c(NOx = "Oxydes d'azote (NOx)", "PM2,5" = "Particules fines (PM2,5)", CO2 = "Dioxyde de carbone (CO₂)")
   e$nom <- factor(noms[e$polluant], levels = rev(noms))
@@ -192,16 +216,19 @@ graphe_effet_zfe <- function(base_size = 16) {
     data.frame(nom = e$nom, serie = series[2], valeur = e$variation_contrefactuelle, bas = e$ic_bas, haut = e$ic_haut)
   )
   long$serie <- factor(long$serie, levels = rev(series))   # observé en haut de chaque groupe
+  if (etape < 2) long <- long[long$serie == series[1], ]   # l'avant-après seul
   dodge <- position_dodge(width = 0.8)
-  ggplot(long, aes(x = valeur, y = nom, fill = serie)) +
+  g <- ggplot(long, aes(x = valeur, y = nom, fill = serie)) +
     geom_col(position = dodge, width = 0.75) +
     geom_errorbar(aes(xmin = bas, xmax = haut), position = dodge, width = 0.3,
                   colour = couleurs_eco[["equilibre"]], linewidth = 0.5, na.rm = TRUE) +
     geom_text(aes(x = pmin(valeur, bas, na.rm = TRUE) - 0.8, label = paste0(fr_num(valeur), " %")),
-              position = dodge, hjust = 1, family = police_cours, size = base_size / 3.6) +
+              position = dodge, hjust = 1, family = police_cours, size = base_size / 3.6)
+  if (etape >= 2) g <- g +
     annotate("text", x = 1.5, y = as.numeric(e$nom), hjust = 0, family = police_cours,
              size = base_size / 3.6, colour = couleurs_eco[["alerte"]],
-             label = paste0("effet : ", fr_num(e$effet_points), " pt")) +
+             label = paste0("effet : ", fr_num(e$effet_points), " pt"))
+  g +
     geom_vline(xintercept = 0, colour = couleurs_eco[["equilibre"]], linewidth = 0.5) +
     scale_fill_manual(values = setNames(c(couleurs_eco[["demande"]],
                                          scales::alpha(couleurs_eco[["neutre"]], 0.5)), series),
@@ -283,7 +310,9 @@ carburant_cm5 <- read.csv(here::here("data/cm5/insee_ip2125_tc3_exposition.csv")
 #' (azur) et aux prix du printemps 2026 appliqués à 2021 (ambre ; scénario de
 #' l'Insee, revenus et kilomètres inchangés).
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_carburant <- function(base_size = 16) {
+#' @param etape pour les diapos : 1 = prix de 2021 seuls ; 2 = figure complète
+#'   avec les prix du printemps 2026, identique à la page (défaut)
+graphe_carburant <- function(base_size = 16, etape = 2) {
   noms <- c("Intercommunalités urbaines" = "Urbain", "Intercommunalités rurales" = "Rural",
             "Ensemble" = "Ensemble")
   e <- carburant_cm5[carburant_cm5$type_interco %in% names(noms), ]
@@ -292,6 +321,7 @@ graphe_carburant <- function(base_size = 16) {
   long <- rbind(data.frame(nom = e$nom, serie = series[1], valeur = e$part_exposes_prix_2021),
                 data.frame(nom = e$nom, serie = series[2], valeur = e$part_exposes_prix_2026))
   long$serie <- factor(long$serie, levels = rev(series))   # 2021 en haut de chaque groupe
+  if (etape < 2) long <- long[long$serie == series[1], ]   # prix de 2021 seuls
   dodge <- position_dodge(width = 0.8)
   ggplot(long, aes(x = valeur, y = nom, fill = serie)) +
     geom_col(position = dodge, width = 0.75) +

@@ -32,7 +32,7 @@ Deux énigmes, donc.
 
 **La question de la séance : d'où vient l'argent que nous avons sur nos comptes, et pourquoi la confiance des déposants suffit-elle à faire vivre ou tomber une banque ?** Deux outils y répondent : le **bilan bancaire** et le **jeu de la panique**.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### Ce sont les crédits qui font les dépôts
 
@@ -262,13 +262,13 @@ Créer de la monnaie rapporte aux banques. Leur gain n'est pas la totalité des 
 
 ### La banque crée-t-elle de l'argent « à partir de rien » ?
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - Les banques créent l'essentiel de la monnaie en accordant des crédits (Banque d'Angleterre, 2014 ; La finance pour tous, 2026) ; un remboursement la détruit (Banque d'Angleterre, 2014).
 - La monnaie n'est pas créée sans contrepartie : chaque dépôt nouveau correspond à une dette de l'emprunteur. La création est limitée par la rentabilité, la réglementation et la politique monétaire (@exm-bilan et section précédente).
 - Une banque solvable peut tomber par manque de liquidité si ses déposants paniquent (Diamond et Dybvig, 1983). SVB l'illustre en partie : ses pertes sur obligations ont donné une raison de craindre, et la panique a fait le reste.
 
-**Ce qui relève d'un jugement (normatif).**
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
 
 - Est-il juste que des banques privées touchent des intérêts sur une monnaie qu'elles créent ? Faut-il réserver la création monétaire à la puissance publique, ou la concurrence entre banques et la réglementation suffisent-elles à encadrer ce privilège ? L'analyse ne tranche pas : la réponse dépend de valeurs.
 - Le pouvoir de choisir qui reçoit du crédit, donc qui peut investir, doit-il appartenir aux banques, à la banque centrale, à l'État ?

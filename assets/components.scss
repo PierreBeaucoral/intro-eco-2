@@ -85,7 +85,7 @@ a:hover { text-decoration-thickness: 2px; }
   margin: 1.4rem 0;
   break-inside: avoid;
 }
-.theorem.definition { font-style: italic; }
+.theorem.definition { font-style: italic; padding-left: 1rem; border-left: 2px solid var(--wp-accent); }
 .theorem.definition .theorem-title, .theorem.definition strong, .theorem.definition b { font-style: normal; }
 .theorem .theorem-title, .proof .proof-title { font-weight: 700; margin-right: 0.35em; }
 .example { font-style: normal; padding-left: 1rem; border-left: 2px solid var(--wp-offre); }
@@ -118,7 +118,7 @@ a:hover { text-decoration-thickness: 2px; }
 .retenir { --label: "À retenir"; --c: var(--wp-accent); background: var(--wp-teinte); }
 .rappel, .s1 { --label: "Rappel"; --c: var(--wp-encre-2); background: var(--wp-teinte); }
 .droit   { --label: "Et le droit ?"; --c: var(--wp-encre-2); }
-.piege   { --label: "Piège classique"; --c: var(--wp-rouge); }
+.piege   { --label: "Point d'attention"; --c: var(--wp-rouge); }
 .auteur  { --label: "Auteur · école"; --c: var(--wp-encre-2); }
 .methode { --label: "Méthode"; --c: var(--wp-encre-2); border-left-style: dashed; }
 

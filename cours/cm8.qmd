@@ -29,7 +29,7 @@ Le résultat déroute (@fig-grece). De 2008 à 2013, le PIB réel recule de 27 %
 
 **La question de la séance : l'austérité a-t-elle marché ?** Pour quoi faire : alléger le poids de la dette, retrouver la croissance, regagner la confiance des prêteurs ? On construit trois outils simples : le **multiplicateur**, l'**effet boule de neige** de la dette et une règle qui les relie.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### Une baisse de la dépense publique fait baisser le PIB, parfois de plus que son montant
 
@@ -266,14 +266,14 @@ En 2013, le chômage dépasse 20 % dans tous les groupes de la @fig-chomage-grou
 
 ### Fallait-il un ajustement aussi rapide ?
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - **Le multiplicateur a été sous-estimé** au début de la crise : l'austérité a réduit l'activité plus que prévu (Blanchard et Leigh, 2013). Les auteurs ajoutent qu'il n'existe pas de multiplicateur unique, valable partout et toujours.
 - **Le ratio a monté tant que r dépassait g**, puis baissé vite quand la croissance est revenue, avec des excédents primaires (@tbl-decomposition).
 - **Il n'y avait pas de « sans austérité » simple.** En 2010, le solde primaire grec était de −5,3 % du PIB (Eurostat, solde public + intérêts, calculs du cours) et l'État ne pouvait plus emprunter sur les marchés. Sans prêts, il aurait dû combler ce déficit d'un coup, ou cesser de payer ses créanciers. Les plans d'aide ont **étalé** l'ajustement ; la question porte sur son rythme.
 - **Le PIB réel de 2025 reste inférieur de 13,9 % à celui de 2008**, en volume (Eurostat). La note du Trésor le dit « légèrement inférieur » à son niveau d'avant-crise, sans préciser valeur ou volume (03/11/2025). En valeur, le PIB de 2024 n'est qu'à 0,4 % sous celui de 2008 (Eurostat, calculs du cours) : avant de citer un chiffre, il faut savoir ce qu'il mesure.
 
-**Ce qui relève d'un jugement (normatif).**
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
 
 - Le **rythme** : vaut-il mieux une récession courte et brutale, ou un ajustement plus lent et plus coûteux en prêts ?
 - Le **partage du fardeau** : fallait-il annuler plus tôt une partie de la dette, au détriment des créanciers, plutôt que faire porter l'effort sur les contribuables et les fonctionnaires grecs ?

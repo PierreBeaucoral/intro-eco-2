@@ -66,9 +66,13 @@ sc_avant_lt_cm4 <- 0.5 * bilan_lt_cm4$q_eq * (prix_demande_cm4(0) - bilan_lt_cm4
 #' Plafond Pmax sous P* : pénurie (Qd - Qo), transfert des bailleurs vers les
 #' locataires logés (rectangle bleu) et perte sèche (triangle rouge).
 #' Géométrie de l'exemple de long terme, mais axes sans graduations chiffrées.
-#' @param aires si FALSE, ne montre que la pénurie (diapos : construction pas à pas)
+#' @param aires si FALSE, ne montre que la pénurie (équivaut à etape = 2)
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_plafond <- function(aires = TRUE, base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = équilibre initial
+#'   (D, O, E) ; 2 = ajoute le plafond, Qo, Qd et la pénurie ; 3 = ajoute le
+#'   rectangle de transfert ; 4 = ajoute la perte sèche, figure de la page (défaut)
+graphe_plafond <- function(aires = TRUE, base_size = 16, etape = 4) {
+  if (!aires) etape <- min(etape, 2)
   b <- bilan_lt_cm4
   pmax <- marche_cm4$plafond
   q <- seq(0, 175, length.out = 60)
@@ -76,41 +80,49 @@ graphe_plafond <- function(aires = TRUE, base_size = 16) {
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
   alerte <- couleurs_eco[["alerte"]]
+  i_tir <- if (etape >= 2) 1:4 else c(2, 4)    # tirets vers Q* et P* (puis Qo, Qd)
+  i_x <- if (etape >= 2) 1:3 else 2            # graduations Q* (puis Qo, Qd)
+  i_y <- if (etape >= 2) 1:2 else 2            # graduations P* (puis Pmax)
   g <- ggplot(d, aes(q))
-  if (aires) {
-    g <- g +
-      annotate("rect", xmin = 0, xmax = b$qo, ymin = pmax, ymax = b$p_eq,
-               fill = couleurs_eco[["demande"]], alpha = 0.18) +
-      annotate("polygon", x = c(b$qo, b$qo, b$q_eq), y = c(pmax, b$pd, b$p_eq),
-               fill = alerte, alpha = 0.35) +
-      annotate("text", x = b$qo / 2, y = (pmax + b$p_eq) / 2, label = "transfert",
-               family = police_cours, size = taille * 0.9, colour = couleurs_eco[["demande"]]) +
-      annotate("text", x = b$qo + 12, y = 1650, label = "perte sèche",
-               family = police_cours, size = taille * 0.9, colour = alerte, hjust = 0) +
-      annotate("segment", x = b$qo + 14, xend = b$qo + 7, y = 1610, yend = 1060,
-               colour = alerte, linewidth = 0.5,
-               arrow = grid::arrow(length = grid::unit(0.18, "cm"), type = "closed"))
-  }
-  g +
-    annotate("segment", x = c(b$qo, b$q_eq, b$qd, 0), xend = c(b$qo, b$q_eq, b$qd, b$q_eq),
-             y = c(0, 0, 0, b$p_eq), yend = c(b$pd, b$p_eq, pmax, b$p_eq),
-             linetype = "22", colour = neutre) +
+  if (etape >= 3) g <- g +
+    annotate("rect", xmin = 0, xmax = b$qo, ymin = pmax, ymax = b$p_eq,
+             fill = couleurs_eco[["demande"]], alpha = 0.18)
+  if (etape >= 4) g <- g +
+    annotate("polygon", x = c(b$qo, b$qo, b$q_eq), y = c(pmax, b$pd, b$p_eq),
+             fill = alerte, alpha = 0.35)
+  if (etape >= 3) g <- g +
+    annotate("text", x = b$qo / 2, y = (pmax + b$p_eq) / 2, label = "transfert",
+             family = police_cours, size = taille * 0.9, colour = couleurs_eco[["demande"]])
+  if (etape >= 4) g <- g +
+    annotate("text", x = b$qo + 12, y = 1650, label = "perte sèche",
+             family = police_cours, size = taille * 0.9, colour = alerte, hjust = 0) +
+    annotate("segment", x = b$qo + 14, xend = b$qo + 7, y = 1610, yend = 1060,
+             colour = alerte, linewidth = 0.5,
+             arrow = grid::arrow(length = grid::unit(0.18, "cm"), type = "closed"))
+  g <- g +
+    annotate("segment", x = c(b$qo, b$q_eq, b$qd, 0)[i_tir], xend = c(b$qo, b$q_eq, b$qd, b$q_eq)[i_tir],
+             y = c(0, 0, 0, b$p_eq)[i_tir], yend = c(b$pd, b$p_eq, pmax, b$p_eq)[i_tir],
+             linetype = "22", colour = neutre)
+  if (etape >= 2) g <- g +
     annotate("segment", x = 0, xend = 175, y = pmax, yend = pmax,
-             colour = couleurs_eco[["equilibre"]], linewidth = 0.8) +
+             colour = couleurs_eco[["equilibre"]], linewidth = 0.8)
+  g <- g +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
+    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
     annotate("segment", x = b$qo, xend = b$qd, y = pmax, yend = pmax,
              colour = alerte, linewidth = 1.8) +
     annotate("text", x = (b$qo + b$qd) / 2, y = pmax - 110, label = "pénurie",
              colour = alerte, family = police_cours, size = taille) +
     annotate("text", x = 174, y = pmax + 80, label = "plafond", hjust = 1,
-             family = police_cours, size = taille * 0.9) +
+             family = police_cours, size = taille * 0.9)
+  g +
     annotate("point", x = b$q_eq, y = b$p_eq, size = 3, colour = couleurs_eco[["equilibre"]]) +
     annotate("text", x = b$q_eq + 7, y = b$p_eq - 70, label = "E", family = police_cours, size = taille) +
     annotate("text", x = c(158, 163), y = c(260, 1790), label = c("D", "O"),
              colour = couleurs_eco[c("demande", "offre")], family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(b$qo, b$q_eq, b$qd), labels = c("Qo", "Q*", "Qd")) +
-    scale_y_continuous(breaks = c(pmax, b$p_eq), labels = c("Pmax", "P*")) +
+    scale_x_continuous(breaks = c(b$qo, b$q_eq, b$qd)[i_x], labels = c("Qo", "Q*", "Qd")[i_x]) +
+    scale_y_continuous(breaks = c(pmax, b$p_eq)[i_y], labels = c("Pmax", "P*")[i_y]) +
     coord_cartesian(xlim = c(0, 175), ylim = c(0, 2100), expand = FALSE, clip = "on") +
     labs(x = "Quantité Q (logements loués)", y = "Prix P (loyer)") +
     theme_cours(base_size = base_size)
@@ -123,7 +135,9 @@ graphe_plafond <- function(aires = TRUE, base_size = 16) {
 #' Deux panneaux : offre rigide (court terme, à gauche) et offre élastique
 #' (long terme, à droite), même demande, même plafond de 800 €.
 #' Graduations chiffrées assumées : la figure illustre l'exemple chiffré.
-graphe_court_long <- function(base_size = 16) {
+#' @param etape diapos : 1 = pénurie seule ; 2 = ajoute les triangles de perte
+#'   sèche, figure de la page (défaut)
+graphe_court_long <- function(base_size = 16, etape = 2) {
   panneaux <- c("A. Court terme : offre rigide", "B. Long terme : offre élastique")
   if (base_size > 16) panneaux <- c("A. Court terme", "B. Long terme")   # diapos : titres courts
   q <- seq(70, 130, length.out = 61)
@@ -148,7 +162,7 @@ graphe_court_long <- function(base_size = 16) {
   ggplot(d, aes(q)) +
     annotate("segment", x = 70, xend = 130, y = pmax, yend = pmax,
              colour = couleurs_eco[["equilibre"]], linewidth = 0.8) +
-    geom_polygon(data = tri, aes(q, p), fill = couleurs_eco[["alerte"]], alpha = 0.35) +
+    (if (etape >= 2) geom_polygon(data = tri, aes(q, p), fill = couleurs_eco[["alerte"]], alpha = 0.35)) +
     geom_segment(data = pen, aes(x = qo, xend = qd, y = pmax, yend = pmax),
                  colour = couleurs_eco[["alerte"]], linewidth = 1.6) +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
@@ -180,33 +194,44 @@ plancher_cm4$qo <- plancher_cm4$pmin                      # heures offertes par 
 
 #' Prix plancher au-dessus de P* sur un marché du travail : excès d'offre
 #' (Qo - Qd, chômage au sens du modèle) et perte sèche. Sans graduations chiffrées.
-graphe_plancher <- function(base_size = 16) {
+#' @param etape diapos : 1 = équilibre (D, O, P*, Q*) ; 2 = ajoute le plancher,
+#'   Qd, Qo et l'excès d'offre ; 3 = ajoute la perte sèche, figure de la page (défaut)
+graphe_plancher <- function(base_size = 16, etape = 3) {
   pl <- plancher_cm4
   q <- seq(0, 20, length.out = 41)
   d <- data.frame(q = q, demande = pl$d_a - q, offre = q)
   taille <- base_size / 3
   alerte <- couleurs_eco[["alerte"]]
-  ggplot(d, aes(q)) +
+  i_tir <- if (etape >= 2) 1:4 else c(2, 4)    # tirets vers Q* et P* (puis Qd, Qo)
+  i_x <- if (etape >= 2) 1:3 else 2            # graduations Q* (puis Qd, Qo)
+  i_y <- if (etape >= 2) 1:2 else 1            # graduations P* (puis Pmin)
+  g <- ggplot(d, aes(q))
+  if (etape >= 3) g <- g +
     annotate("polygon", x = c(pl$qd, pl$qd, pl$q_eq), y = c(pl$pmin, pl$qd, pl$q_eq),   # offre P = Q : prix d'offre en Qd = Qd
-             fill = alerte, alpha = 0.35) +
-    annotate("segment", x = c(pl$qd, pl$q_eq, pl$qo, 0), xend = c(pl$qd, pl$q_eq, pl$qo, pl$q_eq),
-             y = c(0, 0, 0, pl$q_eq), yend = c(pl$pmin, pl$q_eq, pl$pmin, pl$q_eq),
-             linetype = "22", colour = couleurs_eco[["neutre"]]) +
+             fill = alerte, alpha = 0.35)
+  g <- g +
+    annotate("segment", x = c(pl$qd, pl$q_eq, pl$qo, 0)[i_tir], xend = c(pl$qd, pl$q_eq, pl$qo, pl$q_eq)[i_tir],
+             y = c(0, 0, 0, pl$q_eq)[i_tir], yend = c(pl$pmin, pl$q_eq, pl$pmin, pl$q_eq)[i_tir],
+             linetype = "22", colour = couleurs_eco[["neutre"]])
+  if (etape >= 2) g <- g +
     annotate("segment", x = 0, xend = 20, y = pl$pmin, yend = pl$pmin,
-             colour = couleurs_eco[["equilibre"]], linewidth = 0.8) +
+             colour = couleurs_eco[["equilibre"]], linewidth = 0.8)
+  g <- g +
     geom_line(aes(y = demande), colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4) +
+    geom_line(aes(y = offre), colour = couleurs_eco[["offre"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
     annotate("segment", x = pl$qd, xend = pl$qo, y = pl$pmin, yend = pl$pmin,
              colour = alerte, linewidth = 1.8) +
     annotate("text", x = (pl$qd + pl$qo) / 2, y = pl$pmin + 1.1, label = "excès d’offre",
              colour = alerte, family = police_cours, size = taille) +
     annotate("text", x = 19.8, y = pl$pmin - 0.8, label = "plancher", hjust = 1,
-             family = police_cours, size = taille * 0.9) +
+             family = police_cours, size = taille * 0.9)
+  g +
     annotate("point", x = pl$q_eq, y = pl$q_eq, size = 3) +
     annotate("text", x = c(18.5, 18.5), y = c(3, 19.6), label = c("D", "O"),
              colour = couleurs_eco[c("demande", "offre")], family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(pl$qd, pl$q_eq, pl$qo), labels = c("Qd", "Q*", "Qo")) +
-    scale_y_continuous(breaks = c(pl$q_eq, pl$pmin), labels = c("P*", "Pmin")) +
+    scale_x_continuous(breaks = c(pl$qd, pl$q_eq, pl$qo)[i_x], labels = c("Qd", "Q*", "Qo")[i_x]) +
+    scale_y_continuous(breaks = c(pl$q_eq, pl$pmin)[i_y], labels = c("P*", "Pmin")[i_y]) +
     coord_cartesian(xlim = c(0, 20), ylim = c(0, 21), expand = FALSE, clip = "on") +
     labs(x = "Quantité de travail Q (heures)", y = "Salaire horaire P") +
     theme_cours(base_size = base_size)

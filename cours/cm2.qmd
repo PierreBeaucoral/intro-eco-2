@@ -32,7 +32,7 @@ Dans le même temps, la consommation recule. En 2025, le réseau des buralistes 
 2. **Qui paie** vraiment la taxe : le fumeur, le fabricant, le buraliste ? C'est l'incidence fiscale.
 3. Un fumeur dépendant **réagit-il** au prix comme un acheteur ordinaire ? C'est l'économie de l'addiction.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### L'élasticité mesure la force de la réaction au prix
 
@@ -269,13 +269,13 @@ graphe_recettes_tabac()
 
 ### Faut-il continuer à augmenter le prix du tabac ?
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - Une hausse de prix réduit les ventes, moins que proportionnellement (e entre −0,5 et −0,3), davantage à long terme et chez les jeunes.
 - La taxe pèse surtout sur les **fumeurs**, et en proportion davantage sur les fumeurs modestes.
 - Elle nourrit des **fuites** (tabac à rouler, achats à l'étranger, contrebande), dont l'ampleur est mal mesurée.
 
-**Ce qui relève d'un jugement (normatif).**
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
 
 - **Faut-il protéger le fumeur contre lui-même ?** Si l'on juge le fumeur pleinement rationnel, la taxe ne doit couvrir que le coût imposé aux autres. Si l'on juge qu'il n'arrive pas à tenir ses résolutions, une taxe plus forte se défend. C'est la question du **paternalisme** : jusqu'où l'État peut-il orienter les choix privés ?
 - **Comment peser santé et pouvoir d'achat ?** La taxe améliore la santé de ceux qui arrêtent et appauvrit ceux qui continuent. L'OMS juge qu'elle peut devenir « un outil de politique publique favorable aux pauvres » si une partie des recettes finance l'aide au sevrage des ménages modestes (OMS, 2012, citée par Hill, 2026, § 7.6). Vue sous l'angle du pouvoir d'achat, c'est d'abord un impôt régressif.

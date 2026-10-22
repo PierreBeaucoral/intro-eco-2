@@ -33,7 +33,7 @@ Deux faits intriguent.
 
 **La question de la séance : peut-on donner un prix au futur, et qui doit payer, du Nord ou du Sud ?** Cette séance d'ouverture n'est pas évaluée. Elle réunit trois outils du semestre, le prix, l'externalité et le taux, et en ajoute un seul : l'**actualisation**.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### Un euro dans cent ans vaut moins qu'un euro aujourd'hui
 
@@ -267,13 +267,13 @@ Les négociations traduisent ce débat en milliards. À Bakou, l'objectif de 300
 
 ### Le désaccord porte sur un chiffre qui n'est pas seulement technique
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - Le résultat d'une évaluation climatique dépend d'abord du taux d'actualisation. Pour Nordhaus lui-même, « presque toute la différence » entre le rapport Stern et les autres études vient de l'actualisation (conférence de Yale, 2007 ; notre traduction). Dans le scénario le plus pessimiste de Stern, les pertes sont inférieures à 1 % de la production mondiale en 2050 et d'environ 3 % en 2100 : c'est l'actualisation à un taux très faible qui les transforme en une perte « maintenant » de 14 % (*ibid.*).
 - Chez Nordhaus, le coût social du carbone varie de 50 à 235 dollars par tonne de carbone (soit 14 à 64 dollars par tonne de CO₂) selon que l'on actualise à 5 % ou à 2,5 % (*The Conversation*, 12/11/2018).
 - Le résultat dépend aussi de la **fonction de dommages**, qui traduit un réchauffement en perte de production. Dans le modèle de Nordhaus, un réchauffement de 6 °C ne détruirait que 10 % du PIB mondial (*ibid.*). Plus cette perte est forte, plus Dm est haut, quel que soit le taux.
 
-**Ce qui relève d'un jugement (normatif).**
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
 
 - Faut-il une impatience pure ? Ramsey et Stern disent non, pour des raisons morales ; d'autres répondent qu'il faut respecter les choix que font réellement les épargnants.
 - Quel poids donner à l'égalité, entre générations et entre pays ?

@@ -14,47 +14,74 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm4.R"))   # même fichier que la page de cours
 ```
 
-## Dans le secteur libre, se loger pèse environ deux fois plus sur les locataires modestes que sur les aisés
+## Le fait de départ : le plafonnement des loyers des nouveaux baux (2019)
 
+- Depuis le 1^er^ juillet 2019 à Paris, puis à Lille, Lyon, Montpellier, Bordeaux et dans plusieurs communes de Seine-Saint-Denis, le loyer d'un nouveau bail est plafonné par le préfet : 9 territoires et 70 communes en octobre 2026.
+
+. . .
+
+- Conséquences : loyers des annonces −2 à −5 % selon les villes (Chapelle et Fack, mai 2026).
+
+. . .
+
+Fin de l'expérimentation le 23/11/2026. **Question de la séance** : faut-il encadrer les loyers ?
+
+[Sources : Chapelle et Fack, rapport de la mission d'évaluation, mai 2026 ; Sénat, octobre 2026.]{.wp-source}
+
+::: {.notes}
+0 h 00 – 0 h 05. Question à l'amphi : qui paie un loyer ? Qui a signé un bail récemment dans une ville encadrée ? La théorie prédit qu'un plafond crée une pénurie : on va mesurer de combien, pour qui et à quel horizon, puis confronter la prédiction aux évaluations faites en France et aux États-Unis. Transition : pourquoi le sujet est-il si sensible ? Parce que le loyer pèse lourd.
+:::
+
+## Taux d'effort : le logement pèse lourd sur les locataires modestes
+
+:::: {.columns}
+::: {.column width="60%"}
 ```{r}
-#| label: fig-taux-effort
 #| fig-width: 8
-#| fig-height: 4.6
+#| fig-height: 5.4
 #| fig-alt: "Barres groupées du taux d'effort médian des locataires selon le quart de niveau de vie, secteur libre et secteur social, en 2023 : de 42,3 % pour les plus modestes du secteur libre à 21,6 % pour les plus aisés ; le secteur libre est toujours au-dessus du secteur social"
 graphe_taux_effort(base_size = 24)
 ```
-
-Taux d'effort médian, France métropolitaine, 2023 (Insee, *France, portrait social*, 18/11/2025).
-
-::: {.notes}
-0 h 00 – 0 h 05. Accroche : qui paie un loyer dans l'amphi ? Taux d'effort = part du revenu consacrée au logement, aides déduites. La moitié des locataires du secteur libre dépasse 29,6 %.
 :::
 
-## Depuis 2019, le loyer des nouveaux baux est plafonné, aujourd'hui dans 70 communes
-
-- Plafond fixé chaque année par le préfet, à Paris depuis le 1^er^ juillet 2019
-- En octobre 2026 : 9 territoires et 70 communes (Sénat)
-
-**Faut-il encadrer les loyers ?**
+::: {.column width="40%"}
+::: {.incremental}
+- **Taux d'effort** : part du revenu consacrée au logement, aides au logement déduites.
+- Secteur libre, 2023 : la moitié des locataires dépassent **29,6 %**.
+- Pour les 25 % les plus modestes : **42,3 %**, environ deux fois plus que les plus aisés.
+:::
+:::
+::::
 
 ::: {.notes}
-0 h 05 – 0 h 11. La théorie prédit une pénurie. On mesure de combien, pour qui, à quel horizon, puis on confronte aux évaluations en France et aux États-Unis. L'expérimentation s'arrête le 23 novembre 2026 (Sénat).
+0 h 05 – 0 h 09. Secteur libre = parc privé, hors logement social. Logement = loyer, charges, eau, énergie, assurance. France métropolitaine, données 2023 (Insee, *France, portrait social*, 18/11/2025). Question : pourquoi le secteur social est-il toujours plus bas ? Transition : avant la théorie, trois rappels.
 :::
 
-## Rappel : un plafond fixé sous P\* crée une pénurie qu'il faut répartir autrement
+## Rappel (1/2) : équilibre, prix plafond et prix plancher
 
 ::: {.rappel}
-- **Plafond** : prix maximal fixé par la loi
-- **Pénurie** : quantité demandée supérieure à la quantité offerte
-- **Surplus** : gain d'un échange
-- **Offre rigide** : réagit peu au prix
+- **Offre, demande, équilibre** : la quantité offerte augmente avec le prix, la quantité demandée diminue. Au prix d'équilibre P\*, elles sont égales, à Q\*.
+- **Prix plafond, prix plancher** : un prix maximal (plafond) ou minimal (plancher) imposé, en général par la loi. L'encadrement des loyers est un prix plafond ; le SMIC est un prix plancher du travail.
 :::
 
 ::: {.notes}
-0 h 11 – 0 h 17. Rappel court. Quand le prix ne peut pas monter, on répartit autrement : file d'attente, dossier, relations, hasard. Aujourd'hui : mesurer ce que coûte ce rationnement.
+0 h 09 – 0 h 12. Rappel rapide, sans redéfinir. Question : le SMIC est-il un plafond ou un plancher ? Transition : que se passe-t-il quand le prix ne peut pas monter ?
 :::
 
-## Friedman et Stigler : un plafond remplace le prix par le hasard et le favoritisme
+## Rappel (2/2) : rationnement, consentement à payer, élasticité de l'offre
+
+::: {.rappel}
+- **Pénurie et rationnement** : quand le prix ne peut pas monter jusqu'à P\*, la quantité demandée dépasse la quantité offerte ; on répartit alors le bien autrement : file d'attente, dossier, quota, relations, hasard.
+- **Consentement à payer** : le prix maximal qu'un acheteur accepte de payer ; c'est la hauteur de la demande.
+- **Élasticité de l'offre** : une offre rigide réagit peu au prix.
+- **Positif et normatif** : décrire ce qui est, ou juger ce qui devrait être.
+:::
+
+::: {.notes}
+0 h 12 – 0 h 15. Question : quand vous cherchez un appartement, sur quoi êtes-vous choisi, à part le loyer ? (Le dossier.) Transition : en 1946, deux économistes de Chicago ont fait de ce rationnement un argument.
+:::
+
+## Friedman et Stigler (1946) : un plafond ne supprime pas la rareté
 
 ::: {.auteur}
 ::: {.wp-portrait}
@@ -62,333 +89,779 @@ Taux d'effort médian, France métropolitaine, 2023 (Insee, *France, portrait so
 [1976 · UPI, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Milton Friedman et George J. Stigler** (1946), *Roofs or Ceilings?* · école de Chicago (néoclassique). Plafonds et pénurie se perpétuent l'un l'autre ; l'offre est découragée.
+**Milton Friedman et George J. Stigler** (1946), *Roofs or Ceilings?* · école de Chicago (néoclassique). Les plafonds de loyer ne font pas disparaître le manque de logements : ils remplacent la répartition par le prix par une répartition « par le hasard et le favoritisme », et découragent l'offre.
 :::
+
+. . .
+
+Plafonds et pénurie, écrivent-ils, se perpétuent l'un l'autre.
 
 ::: {.notes}
-0 h 17 – 0 h 22. Brochure d'un think tank libéral, pas un article évalué par des pairs, mais devenue un classique. Répartition « par le hasard et le favoritisme » (notre traduction).
+0 h 15 – 0 h 19. « Par le hasard et le favoritisme » : notre traduction. C'est une brochure publiée par un think tank libéral (Foundation for Economic Education), pas un article évalué par des pairs, mais son argument est devenu un classique. Question : quels « favoritismes » voit-on dans une file d'attente pour un appartement ? Transition : leur comparaison entre deux San Francisco.
 :::
 
-## En 1946 sous plafond, 375 recherches de logement pour 10 offres ; en 1906, une pour 10
+## San Francisco, 1906 et 1946 : sous plafond, la rareté devient file d'attente
 
-![San Francisco, vers avril 1906 : camp de tentes pour sinistrés sur Jefferson Square. Photo : auteur non identifié, domaine public, NARA, via Wikimedia Commons.](../cours/img/cm4/sf-1906-jefferson-square.jpg){fig-alt="Photographie en noir et blanc prise en hauteur d'un parc de San Francisco couvert de tentes blanches en rangs serrés, entre des arbres, avec des immeubles à l'arrière-plan." width="55%"}
+:::: {.columns}
+::: {.column width="60%"}
+![](../cours/img/cm4/sf-1906-jefferson-square.jpg){fig-alt="Photographie en noir et blanc prise en hauteur d'un parc de San Francisco couvert de tentes blanches en rangs serrés, entre des arbres, avec des immeubles à l'arrière-plan."}
 
-(Petites annonces, Friedman et Stigler, 1946)
+[Jefferson Square, vers avril 1906 · auteur non identifié, domaine public, NARA, Wikimedia Commons]{.wp-source}
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- **1906**, après le séisme, sans plafond : 1 recherche de logement pour 10 offres dans les petites annonces.
+- **1946**, sous plafond : 375 recherches pour 10 offres.
+- La rareté se voit dans les files d'attente, plus dans le prix.
+:::
+:::
+::::
 
 ::: {.notes}
-0 h 22 – 0 h 28. 1906 : ville détruite, aucun plafond. 1946 : plafond. La rareté se voit dans les files d'attente, plus dans le prix.
+0 h 19 – 0 h 23. Camp de tentes pour sinistrés : le séisme et l'incendie ont détruit une grande partie des logements de la ville. En 1906, la ville manque brutalement de logements et aucun plafond n'existe ; en 1946, le manque s'accompagne d'un plafond. Chiffres : Friedman et Stigler, 1946. Question : pourquoi y a-t-il moins de recherches en 1906, alors que la ville vient d'être détruite ? (Le prix monte et rationne.) Transition : quand un plafond agit-il ?
 :::
 
-## Un plafond n'agit que s'il est fixé sous le prix d'équilibre
+## Prix plafond contraignant : définition et portée
 
 ::: {#def-plafond-contraignant}
 ## Prix plafond contraignant
-Un plafond Pmax est **contraignant** s'il est fixé **sous** P\*. Au-dessus de P\*, il n'a aucun effet.
+Un prix plafond, noté Pmax, est **contraignant** s'il est fixé **sous** le prix d'équilibre P\*. Il empêche alors le prix d'atteindre P\*. Un plafond fixé au-dessus de P\* n'a aucun effet : le prix d'équilibre le respecte déjà.
 :::
+
+. . .
+
+- Dans l'exemple chiffré de la séance, Pmax = 800 € est 20 % sous P\* = 1 000 € : contraignant.
+- En France, le plafond est fixé au-dessus du loyer médian : pour un logement loué à ce loyer, il ne contraint pas.
 
 ::: {.notes}
-0 h 28 – 0 h 34. Question : un plafond à 1 500 € pour un loyer d'équilibre à 1 000 € ? Aucun effet.
+0 h 23 – 0 h 27. Question avant le clic : un plafond fixé au-dessus de P\* change-t-il quelque chose ? (Non.) On revient sur le cas français dans l'application. Transition : pour mesurer ce que coûte un plafond, il faut un outil, le surplus.
 :::
 
-## Le surplus se lit comme une aire ; la perte sèche est un gain que personne ne récupère
+## Surplus du consommateur, surplus du producteur : définition
 
 ::: {#def-surplus}
-## Surplus
-**Consommateur** : aire entre la demande et le prix. **Producteur** : aire entre le prix et l'offre. **Total** : leur somme.
+## Surplus du consommateur, surplus du producteur
+Le **surplus du consommateur** additionne, pour tous les acheteurs, l'écart entre le prix maximal que chacun était prêt à payer et le prix payé : c'est l'**aire entre la courbe de demande et le prix**. Le **surplus du producteur** est l'aire entre le prix et la courbe d'offre.
 :::
+
+. . .
+
+Leur somme, le **surplus total**, mesure le gain que l'échange procure à l'ensemble des participants.
+
+::: {.notes}
+0 h 27 – 0 h 31. Lien avec le rappel : le prix maximal qu'on est prêt à payer, c'est le consentement à payer, la hauteur de la demande. Question : un locataire prêt à payer 1 200 € qui paie 1 000 €, quel est son surplus ? (200 € par mois.) Transition : quand une intervention réduit ce surplus total.
+:::
+
+## Perte sèche : définition
 
 ::: {#def-perte-seche}
 ## Perte sèche
-Baisse du surplus total causée par une intervention : des échanges ne se font plus.
+La **perte sèche** est la baisse du surplus total par rapport à la quantité d'équilibre concurrentiel, celle qui rend le surplus total le plus grand.
 :::
+
+. . .
+
+- Une intervention écarte le marché de son équilibre : des échanges n'ont plus lieu.
+- Pourtant, l'acheteur était prêt à payer plus que ce que le bien coûtait au vendeur : ce gain disparaît pour tout le monde.
 
 ::: {.notes}
-0 h 34 – 0 h 43. Surplus du consommateur : écart entre le prix maximal qu'on était prêt à payer et le prix payé. Perte sèche : des acheteurs prêts à payer plus que le coût du vendeur, un gain qui disparaît.
+0 h 31 – 0 h 35. Insister : la perte sèche porte sur des échanges qui *n'ont pas lieu*, pas sur ceux qui ont lieu à un prix plus bas. Question : un logement qui n'est plus loué, qui y perd ? (Le ménage qui l'aurait loué, et le bailleur.) Transition : l'ampleur de ces pertes dépend de la réaction de l'offre.
 :::
 
-## L'offre de logements est rigide à court terme, souple à long terme
+## Offre de logements : rigide à court terme, souple à long terme
 
-- **Court terme** : le parc est donné
-- **Long terme** : vente, meublé de tourisme, moins d'entretien, moins de construction
+- **Court terme** : le parc est donné ; un bailleur ne fait pas disparaître son appartement parce que le loyer baisse. L'offre est peu élastique.
 
-« Un instrument redistributif à court terme, mais générateur de rationnement, de pertes de bien-être et de mauvaise allocation à long terme » (Chapelle et Fack, mai 2026)
+. . .
+
+- **Long terme** : il peut vendre à un ménage qui l'habitera, louer en meublé de tourisme ou moins entretenir ; les investisseurs construisent moins de logements à louer. L'offre devient plus élastique.
+
+. . .
+
+L'encadrement : « un instrument redistributif à court terme, mais générateur de rationnement, de pertes de bien-être et de mauvaise allocation à long terme » (Chapelle et Fack, mai 2026, § 3.1.1).
 
 ::: {.notes}
-0 h 43 – 0 h 49. Chaîne de causalité : la première ligne (le plafond baisse le loyer) est la même aux deux horizons ; ce qui change, c'est la réaction de l'offre, donc l'ampleur de la pénurie.
+0 h 35 – 0 h 39. La citation résume la théorie dans le rapport d'évaluation remis au gouvernement en mai 2026. Question : quelle option de long terme est la plus rapide pour un bailleur parisien ? Transition : on remet ces étapes en ordre, à deux horizons.
 :::
 
-## À San Francisco, les locataires protégés restent, mais les bailleurs réduisent l'offre de 15 %
+## Du plafond à la pénurie : une chaîne causale selon l'horizon
+
+| Étape | Court terme | Long terme |
+|---|---|---|
+| 1. Pmax sous P\* | Le loyer des nouveaux baux baisse | Il reste bas |
+| 2. Offre | Quasi nulle : parc donné | Ventes, meublés, moins d'entretien et de construction |
+| 3. Demande | La quantité demandée augmente | Elle reste élevée |
+| 4. Résultat | Pénurie modérée | Pénurie et perte sèche plus fortes |
+
+. . .
+
+Lecture : la ligne 1 est la même aux deux horizons ; ce qui change, c'est la ligne 2, donc l'ampleur de la pénurie.
+
+::: {.notes}
+0 h 39 – 0 h 43. Lire le tableau ligne par ligne, colonne de gauche puis de droite. Rationnement hors prix à court terme. Question avant le clic : quelle ligne change d'un horizon à l'autre ? Transition : que montrent les évaluations, aux États-Unis d'abord ?
+:::
+
+## Diamond, McQuade et Qian (2019) : San Francisco, offre locative −15 %
 
 ::: {.auteur}
-**Diamond, McQuade et Qian** (2019), *American Economic Review* · économie empirique. Extension de 1994 : locataires protégés 20 % moins mobiles ; offre à louer réduite de 15 %, ce qui a probablement fait monter les loyers à long terme.
+**Rebecca Diamond, Tim McQuade et Franklin Qian** (2019), *American Economic Review* · économie empirique. En 1994, une loi étend l'encadrement à une partie des immeubles de San Francisco, et pas aux autres : on peut comparer les deux groupes.
 :::
+
+. . .
+
+- Les locataires protégés déménagent 20 % moins souvent.
+- Les bailleurs concernés réduisent de 15 % l'offre de logements à louer, ce qui a probablement fait monter les loyers du marché à long terme.
 
 ::: {.notes}
-0 h 49 – 0 h 52. On compare des immeubles encadrés et d'autres qui ne l'ont pas été : la loi de 1994 ne touche qu'une partie du parc.
+0 h 43 – 0 h 47. La loi de 1994 ne touche qu'une partie du parc : c'est ce qui permet la comparaison, comme une expérience. Question : qui gagne, qui perd ? (Les locataires en place ; les futurs locataires.) Transition : le cas inverse, la suppression d'un encadrement.
 :::
 
-## À Cambridge, la fin de l'encadrement a valorisé même les logements voisins
+## Autor, Palmer et Pathak (2014) : la fin de l'encadrement à Cambridge
 
 ::: {.auteur}
-**Autor, Palmer et Pathak** (2014), *Journal of Political Economy* · économie empirique. Suppression en 1995 : environ 1,8 Md$ ajoutés à la valeur des logements de la ville entre 1994 et 2004, dont plus de la moitié sur des logements voisins jamais encadrés (estimation du document de travail de 2012).
+::: {.wp-portrait}
+![](../cours/img/portraits/david-autor.jpg){fig-alt="Portrait photographique de David Autor en 2015, homme souriant en chemise, en buste."}
+[2015 · Niccolò Caranti, CC BY-SA 4.0, Wikimedia Commons]{.wp-credit}
+:::
+
+**David H. Autor, Christopher J. Palmer et Parag A. Pathak** (2014), *Journal of Political Economy* · économie empirique. Fin soudaine d'un encadrement strict à Cambridge (Massachusetts) en 1995.
+:::
+
+. . .
+
+- Environ 1,8 milliard de dollars ajoutés à la valeur des logements de la ville entre 1994 et 2004, selon le résumé du document de travail (2012).
+- Plus de la moitié sur des logements **voisins, jamais encadrés**.
+
+::: {.notes}
+0 h 47 – 0 h 51. Chiffre tiré du résumé du document de travail NBER de 2012 : près d'un quart de la hausse totale. Question avant le second point : pourquoi les voisins ? Un parc encadré mal entretenu dévalorisait tout le quartier (Chapelle et Fack, mai 2026, § 3.1.2.3). Transition : ces résultats valent-ils pour la France ?
+:::
+
+## Évaluations américaines : un cas différent du dispositif français
+
+::: {.incremental}
+- **États-Unis** : dispositifs anciens, appliqués pendant des décennies, avec des loyers parfois très inférieurs à ceux du marché.
+- **France** : dispositif récent, plafond au-dessus du loyer médian, mais appliqué à tous les nouveaux baux, y compris dans le neuf.
+- **Évaluation de référence** : le rapport de Guillaume Chapelle et Gabrielle Fack (mai 2026), deux professeurs d'économie appuyés par deux inspections de l'État ; un rapport public, pas un article de revue.
 :::
 
 ::: {.notes}
-0 h 52 – 0 h 56. Chiffre tiré du résumé du document de travail de 2012. Pourquoi les voisins ? Un parc encadré mal entretenu dévalorisait le quartier (Chapelle et Fack, § 3.1.2.3).
+0 h 51 – 0 h 54. Question : un plafond plus haut, mais sur tous les nouveaux baux : plus ou moins contraignant qu'à San Francisco ? Transition : on construit l'outil graphique, pas à pas.
 :::
 
-## Un plafond contraignant fait baisser la quantité louée et crée une pénurie
+## Prix plafond (1/4) : l'équilibre initial E du marché locatif
 
+:::: {.columns}
+::: {.column width="60%"}
 ```{r}
-#| label: fig-plafond-penurie
-#| fig-width: 8
+#| fig-width: 6.4
 #| fig-height: 4.6
-#| fig-alt: "Graphique offre-demande du logement avec un plafond Pmax sous le prix d'équilibre P étoile ; un trait rouge marque la pénurie entre la quantité offerte Qo et la quantité demandée Qd"
-graphe_plafond(aires = FALSE, base_size = 24)
+#| fig-alt: "Graphique offre-demande du logement : la demande D décroissante et l'offre O croissante se coupent en E, au loyer P étoile et à la quantité Q étoile"
+graphe_plafond(base_size = 24, etape = 1)
 ```
-
-::: {.notes}
-0 h 56 – 1 h 07. Graphique théorique. Au loyer Pmax, les bailleurs n'offrent que Qo : la quantité échangée est la plus petite des deux. Qd − Qo ménages cherchent sans trouver.
 :::
 
-## Le rectangle passe des bailleurs aux locataires, le triangle est perdu pour tous
+::: {.column width="40%"}
+- Demande D : plus le loyer monte, moins on demande de logements.
+- Offre O : plus il monte, plus les bailleurs en proposent.
+- En E, au loyer P\*, offre et demande sont égales, à Q\* logements.
+:::
+::::
 
+::: {.notes}
+0 h 54 – 0 h 56. Tracer D puis O, nommer E. Graphique théorique, sans chiffres. Question : pourquoi la demande de logements décroît-elle avec le loyer ? Transition : la loi fixe un plafond sous P\*.
+:::
+
+## Prix plafond (2/4) : Pmax sous P\*, la quantité louée tombe à Qo
+
+:::: {.columns}
+::: {.column width="60%"}
 ```{r}
-#| label: fig-plafond-aires
-#| fig-width: 8
+#| fig-width: 6.4
 #| fig-height: 4.6
-#| fig-alt: "Même graphique avec un rectangle bleu entre Pmax et P étoile, de l'axe vertical à Qo, marqué transfert, et un triangle rouge de perte sèche entre Qo et la quantité d'équilibre"
-graphe_plafond(base_size = 24)
+#| fig-alt: "Même graphique avec un plafond horizontal Pmax sous P étoile ; un trait rouge marqué pénurie va de la quantité offerte Qo à la quantité demandée Qd, plus grande"
+graphe_plafond(base_size = 24, etape = 2)
 ```
-
-**Piège** : le rectangle change de poche ; seul le triangle est une perte nette.
-
-::: {.notes}
-1 h 07 – 1 h 20. Rectangle : transfert, ce que l'un perd, l'autre le gagne. Triangle : perte nette, des logements qui ne sont plus loués. Mesurer la perte sèche est positif ; juger le transfert est normatif. Sondage : « le rectangle est-il une perte ? » Puis pause.
 :::
 
-## Pause : 15 minutes
+::: {.column width="40%"}
+::: {.incremental}
+1. **La quantité louée baisse** : au loyer Pmax, les bailleurs ne proposent que Qo. La quantité échangée est la plus petite des deux.
+2. **La pénurie** : Qd ménages cherchent un logement ; Qd − Qo ne trouvent rien.
+:::
+:::
+::::
 
 ::: {.notes}
-1 h 20 – 1 h 35. Pause. À la reprise : le même plafond, chiffré dans une ville fictive.
+0 h 56 – 1 h 00. Comme les bailleurs décident de louer ou non, on lit la quantité échangée sur l'offre. Des ménages prêts à payer Pmax, et même plus, ne trouvent rien. Question : au loyer Pmax, qui décide de la quantité louée ? Transition : qui gagne au plafond ?
 :::
 
-## Ville fictive : l'équilibre est à 1 000 € et 100 000 logements, le plafond à 800 €
+## Prix plafond (3/4) : un rectangle de transfert vers les locataires logés
 
-| Loyer (€/mois) | 600 | 800 | 1 000 | 1 200 |
-|---|---|---|---|---|
-| Demandé | 140 | 120 | 100 | 80 |
-| Offert, long terme | 60 | 80 | 100 | 120 |
-
-Q en milliers de logements. Plafond : 20 % sous P\*.
-
-::: {.notes}
-1 h 35 – 1 h 40. Exemple fictif. Lire le tableau ligne par ligne. L'offre de court terme (96 à 800 €) vient plus tard.
-:::
-
-## À long terme, 40 000 ménages ne trouvent rien, et la perte sèche vaut 4 M€ par mois
-
-- À 800 € : demande 120, offre 80, **pénurie de 40 000**
-- Transfert : 80 000 × 200 = **16 M€ par mois**
-- Perte sèche : ½ × 20 000 × 400 = **4 M€ par mois**
-
-::: {.notes}
-1 h 40 – 1 h 50. Faire calculer à la main. Le 80 000e ménage logé était prêt à payer 1 200 € (lu dans le tableau). Base du triangle : 100 000 − 80 000 ; hauteur : 1 200 − 800.
-:::
-
-## Bilan : les locataires gagnent 14 M€, les bailleurs perdent 18 M€, la société 4 M€
-
-- Locataires : 16 − 2 = **14 M€**
-- Bailleurs : 16 + 2 = **18 M€**
-- Société : 14 − 18 = **−4 M€**, la perte sèche
-
-::: {.notes}
-1 h 50 – 1 h 55. Les 20 000 ménages non logés perdent ½ × 20 000 × 200 = 2 M€ ; les bailleurs perdent aussi ½ × 20 000 × 200 = 2 M€ sur les logements retirés.
-:::
-
-## À court terme, la perte sèche est environ huit fois plus petite
-
+:::: {.columns}
+::: {.column width="60%"}
 ```{r}
-#| label: fig-court-long
-#| fig-width: 8
-#| fig-height: 4.4
-#| fig-alt: "Deux panneaux avec la même demande et le même plafond de 800 euros : à gauche, court terme, offre rigide, on loue 96 milliers de logements et le triangle de perte sèche est étroit ; à droite, long terme, offre élastique, on loue 80 milliers et le triangle est bien plus grand"
-graphe_court_long(base_size = 24)
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même graphique avec un rectangle bleu clair marqué transfert, de l'axe vertical à Qo, entre Pmax et P étoile"
+graphe_plafond(base_size = 24, etape = 3)
 ```
-
-Exemple fictif : 0,48 M€ par mois à court terme, contre 4 M€.
-
-::: {.notes}
-1 h 55 – 2 h 00. À 800 €, on offre encore 96 : pénurie de 24 000 seulement. Juger un encadrement sur ses deux premières années, c'est regarder le panneau A.
 :::
 
-## Piège : rien ne garantit que les logements vont à ceux qui les valorisent le plus
+::: {.column width="40%"}
+::: {.incremental}
+3. **Le transfert** : les locataires logés paient Pmax au lieu de P\*.
+    - Le rectangle bleu, Qo logements × (P\* − Pmax), passe des bailleurs aux locataires.
+    - Ce que l'un perd, l'autre le gagne : ce n'est pas une perte pour la société.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 00 – 1 h 03. Base du rectangle : Qo logements loués ; hauteur : P\* − Pmax par logement. Question : la société perd-elle ce rectangle ? (Non, il change de poche.) Transition : ce qui est vraiment perdu.
+:::
+
+## Prix plafond (4/4) : un triangle de perte sèche, perdu pour tous
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Figure complète : en plus du rectangle de transfert, un triangle rouge de perte sèche a ses sommets en Qo sur le plafond, en Qo sur la demande, et au point E"
+graphe_plafond(base_size = 24, etape = 4)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+4. **La perte sèche** : entre Qo et Q\*, des logements ne sont plus loués.
+    - Pourtant, la demande y est au-dessus de l'offre : des ménages étaient prêts à payer plus que leur coût pour les bailleurs.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 03 – 1 h 07. Lecture finale : le triangle rouge est perdu pour tout le monde. Raisonnement en quatre temps : quantité louée, pénurie, transfert, perte sèche. Question : pourquoi ces logements non loués auraient-ils profité aux deux parties ? Transition : une erreur fréquente.
+:::
+
+## Point d'attention : le transfert n'est pas une perte sèche
 
 ::: {.piege}
-Avec une file d'attente ou des relations, un ménage qui tient peu à son logement le garde. La perte est alors plus grande que le triangle (Glaeser et Luttmer, 2003, cités par Chapelle et Fack, mai 2026).
+**Confondre le transfert et la perte sèche.** Le rectangle bleu n'est pas une perte pour la société : il change de poche, des bailleurs vers les locataires logés.
+:::
+
+. . .
+
+- Seul le triangle rouge est une perte nette.
+- Mesurer la perte sèche est une question **positive**.
+- Juger ce transfert, souhaitable ou non, est une question **normative**.
+
+::: {.notes}
+1 h 07 – 1 h 11. Sondage à main levée avant le clic : « le rectangle est-il une perte pour la société ? » Transition : chiffrer ces aires dans une ville fictive.
+:::
+
+## Exemple chiffré (1/6) : un plafond de 800 € dans une ville fictive
+
+Q en milliers de logements, P = loyer mensuel en euros.
+
+| Loyer P (€ par mois) | 600 | 800 | 1 000 | 1 200 |
+|---|---|---|---|---|
+| Quantité demandée | 140 | 120 | 100 | 80 |
+| Offerte à court terme | 92 | 96 | 100 | 104 |
+| Offerte à long terme | 60 | 80 | 100 | 120 |
+
+::: {.incremental}
+1. *L'équilibre* : à 1 000 €, on demande 100 et on offre 100 : P\* = 1 000 €, Q\* = 100 000 logements.
+2. *Le plafond* : Pmax = 800 €, 20 % sous P\* : contraignant.
 :::
 
 ::: {.notes}
-2 h 00 – 2 h 03. L'exemple suppose que les 80 000 logements restants vont aux ménages prêts à payer le plus.
+1 h 11 – 1 h 15. Lire le tableau ligne par ligne : l'offre de long terme est plus élastique que celle de court terme. Faire trouver l'équilibre avant le clic. Pour ceux qui aiment l'algèbre (facultatif) : demande Q = 200 − 0,1 P, offre de long terme Q = 0,1 P, offre de court terme Q = 80 + 0,02 P. Transition : on commence par le long terme.
 :::
 
-## Le SMIC est le miroir du plafond : un plancher crée un excès d'offre
+## Exemple chiffré (2/6) : à long terme, 40 000 ménages sans logement
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Graphique du plafond : la pénurie va de la quantité offerte Qo à la quantité demandée Qd au niveau du plafond Pmax"
+graphe_plafond(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+3. À 800 €, on demande 120, on n'offre que 80 : **40 000** ménages cherchent sans trouver.
+4. À 1 200 €, la demande vaut 80 : le 80 000^e^ ménage logé était prêt à payer **1 200 €**.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 15 – 1 h 19. La géométrie du graphique est celle de l'exemple de long terme : Qo = 80, Q\* = 100, Qd = 120 (milliers). On loue 80 000 logements. Le point 4 se lit dans le tableau : c'est la hauteur de la demande en Qo, le sommet du futur triangle. Question avant le clic : combien de ménages cherchent sans trouver ? Transition : le rectangle.
+:::
+
+## Exemple chiffré (3/6) : un transfert de 16 M€ par mois
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Graphique du plafond avec le rectangle bleu de transfert, de l'axe vertical à Qo, entre Pmax et P étoile"
+graphe_plafond(base_size = 24, etape = 3)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+5. Les 80 000 locataires logés paient 1 000 − 800 = 200 € de moins par mois.
+    - Rectangle : 80 000 × 200 = **16 millions d'euros par mois**, qui passent des bailleurs aux locataires.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 19 – 1 h 22. Faire calculer à la main avant le clic. Rectangle : base Qo = 80 000, hauteur P\* − Pmax = 1 000 − 800 = 200 €. Transition : le triangle.
+:::
+
+## Exemple chiffré (4/6) : une perte sèche de 4 M€ par mois
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Graphique du plafond complet, avec le triangle rouge de perte sèche entre Qo et Q étoile"
+graphe_plafond(base_size = 24, etape = 4)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+6. Triangle de base 100 000 − 80 000 = 20 000 logements, de hauteur 1 200 − 800 = 400 €.
+    - ½ × 20 000 × 400 = **4 millions d'euros par mois**, perdus pour tout le monde.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 22 – 1 h 25. Base : de Qo à Q\* ; hauteur : du plafond au prix que le dernier ménage logé était prêt à payer. Question : pourquoi ½ ? (Aire d'un triangle.) Transition : qui gagne, qui perd, au total ?
+:::
+
+## Exemple chiffré (5/6) : locataires +14 M€, bailleurs −18 M€, société −4 M€
+
+::: {.incremental}
+7. *Le bilan*, par mois :
+    - Les 20 000 ménages qui ne sont plus logés perdent ½ × 20 000 × (1 200 − 1 000) = 2 millions d'euros.
+    - **Locataires** : 16 − 2 = **+14 millions**.
+    - **Bailleurs** : perdent le transfert et le surplus des logements retirés, ½ × 20 000 × (1 000 − 800) = 2 millions : 16 + 2 = **18 millions**.
+    - **Société** : perd 18 − 14 = **4 millions**, la perte sèche.
+:::
+
+::: {.notes}
+1 h 25 – 1 h 30. Les locataires dans leur ensemble gagnent, mais pas tous : les 20 000 non logés perdent. Le triangle de perte sèche se coupe en deux à la hauteur de P\* : 2 millions perdus par les ménages, 2 millions par les bailleurs. Question : 14 − 18, est-ce une coïncidence que l'écart égale la perte sèche ? Transition : et à court terme ?
+:::
+
+## Exemple chiffré (6/6) : à court terme, une pénurie de 24 000 logements
+
+::: {.incremental}
+8. À 800 €, on offre encore 96 : pénurie de 120 − 96 = **24 milliers de logements**.
+    - Chaque millier de logements en moins ajoute 10 € au prix que le dernier ménage logé est prêt à payer : de 100 à 96, de 1 000 à **1 040 €**.
+    - Perte sèche : ½ × 4 000 × (1 040 − 800) = **0,48 million d'euros par mois**, environ huit fois moins.
+    - Transfert plus grand : 96 000 × 200 = **19,2 millions d'euros**.
+:::
+
+::: {.notes}
+1 h 30 – 1 h 35. De 100 à 80, le prix que le dernier ménage logé est prêt à payer passe de 1 000 à 1 200 € : 10 € par millier ; de 100 à 96, il passe de 1 000 à 1 040 €. Faire calculer chaque étape avant le clic. Question : pourquoi le transfert est-il plus grand à court terme ? (Plus de logements loués au prix plafond.) Transition : les deux horizons côte à côte.
+:::
+
+## Même plafond, deux horizons (1/2) : pénurie de 24 000 contre 40 000
 
 ```{r}
-#| label: fig-plancher
 #| fig-width: 8
 #| fig-height: 4.6
-#| fig-alt: "Graphique offre-demande du travail avec un salaire plancher Pmin au-dessus de P étoile ; un trait rouge marque l'excès d'offre entre la quantité demandée Qd et la quantité offerte Qo"
-graphe_plancher(base_size = 24)
+#| out-width: 72%
+#| fig-alt: "Deux panneaux avec la même demande et le même plafond de 800 euros : à gauche, court terme, offre presque verticale, on loue 96 milliers de logements et la pénurie va de 96 à 120 ; à droite, long terme, offre plus plate, on loue 80 milliers et la pénurie va de 80 à 120"
+graphe_court_long(base_size = 24, etape = 1)
 ```
 
-SMIC : 12,31 € brut de l'heure depuis le 1^er^ juin 2026 (Service-public.fr, consulté le 21/10/2026).
+. . .
+
+Plus l'offre réagit au prix, plus un plafond réduit le nombre de logements loués : 96 000 à court terme, 80 000 à long terme.
 
 ::: {.notes}
-2 h 03 – 2 h 08. Ici les employeurs, acheteurs, fixent la quantité : Qd. Mais si un employeur est presque seul à embaucher (monopsone, Joan Robinson, 1933), un salaire minimum bien placé peut augmenter l'emploi : question empirique.
+Même demande, même équilibre (1 000 €, 100) ; seule l'offre change. 1 h 35 – 1 h 38. Panneau A : offre rigide ; panneau B : offre élastique. Question : sur quel panneau la pénurie est-elle la plus grande ? Transition : les triangles.
 :::
 
-## Le plafond français est le loyer médian majoré de 20 %, et plus d'un tiers des baux le dépassent
-
-- Plafond = loyer de référence (médian) **+ 20 %** (Chapelle et Fack, mai 2026)
-- 35,6 % des baux dépassent le plafond à Paris, 43,5 % à Bordeaux (2020-2024)
-
-::: {.notes}
-2 h 08 – 2 h 12. Les études américaines portent sur des dispositifs anciens, avec des loyers parfois très inférieurs au marché. Le dispositif français est récent, plafond au-dessus du médian, mais il couvre tous les nouveaux baux, neuf compris. Le dépassement peut être légal (complément de loyer) ou non.
-:::
-
-## En France, l'encadrement a baissé les loyers de 2 à 5 %
-
-- Hors Île-de-France : −2 à −3 % par rapport à des communes témoins, environ −5 % après deux ans
-- Seine-Saint-Denis : −3 à −4 %
-- Paris : −5,2 % (juillet 2019-juin 2024, autre équipe)
-
-(Chapelle et Fack, mai 2026, § 3.4 ; Paris : Breuillé, Grivault et al., 2025, cités par le rapport)
-
-::: {.notes}
-2 h 12 – 2 h 16. Méthode : communes encadrées contre communes semblables non encadrées, avant et après. À Paris, la mission juge difficile d'attribuer toute la baisse à l'encadrement : des départs de ménages après le Covid ont aussi pesé sur la demande.
-:::
-
-## L'effet sur l'offre n'est ni démontré ni écarté
-
-- Hors Île-de-France : nouvelles annonces environ −8 % ; à Paris, sens inverse
-- Berlin, plafond plus strict : de 1 500 à 300 annonces par semaine (2019-2020)
-
-(−8 % : Chapelle et Fack, mai 2026, § 3.5 ; Berlin : Hahn et al., 2024, cités par le rapport)
-
-::: {.notes}
-2 h 16 – 2 h 20. Baisse d'offre, locataires qui restent plus longtemps, ou annonces passées par d'autres canaux : les données ne permettent pas de trancher. Court terme et plafond peu contraignant : panneau A, où la théorie prévoit des effets faibles.
-:::
-
-## Piège : les loyers français montent moins que les allemands, mais ce n'est pas l'effet de l'encadrement
+## Même plafond, deux horizons (2/2) : une perte sèche environ huit fois supérieure
 
 ```{r}
-#| label: fig-loyers-europe
 #| fig-width: 8
 #| fig-height: 4.6
+#| out-width: 72%
+#| fig-alt: "Mêmes deux panneaux avec les triangles rouges de perte sèche : étroit à court terme, à gauche ; bien plus grand à long terme, à droite, où il monte jusqu'à 1 200 euros"
+graphe_court_long(base_size = 24, etape = 2)
+```
+
+. . .
+
+Perte sèche : 0,48 million d'euros par mois à court terme, 4 millions à long terme. Juger un encadrement sur ses deux premières années, c'est regarder le panneau A.
+
+::: {.notes}
+Le triangle monte jusqu'à 1 040 € à court terme, jusqu'à 1 200 € à long terme. 1 h 38 – 1 h 41. Dans l'esprit de Friedman et Stigler : un plafond coûte peu au début, puis la pénurie se creuse à mesure que les bailleurs s'adaptent. Question : pourquoi le triangle s'élargit-il à long terme ? (Les bailleurs retirent plus de logements.) Transition : l'exemple repose sur une hypothèse favorable.
+:::
+
+## Point d'attention : sous rationnement, la perte dépasse le triangle
+
+::: {.piege}
+**Supposer que les logements vont à ceux qui les valorisent le plus.** L'exemple le suppose pour les 80 000 logements restants.
+:::
+
+. . .
+
+- Avec une file d'attente ou des relations, rien ne le garantit : un ménage qui tient peu à son logement le garde ; un autre, qui en aurait besoin pour un emploi, n'en trouve pas.
+- La perte est alors plus grande que le triangle (Glaeser et Luttmer, 2003, cités par Chapelle et Fack, mai 2026).
+
+::: {.notes}
+1 h 41 – 1 h 44. Lien avec Friedman et Stigler : « par le hasard et le favoritisme ». Question avant le clic : qui garde son logement encadré, même s'il n'en a plus vraiment besoin ? Transition : le cas symétrique, le prix plancher.
+:::
+
+## Prix plancher (1/3) : le marché du travail à l'équilibre
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Graphique offre-demande du travail : la demande de travail D décroissante et l'offre de travail O croissante se coupent au salaire P étoile et à la quantité Q étoile"
+graphe_plancher(base_size = 24, etape = 1)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- Le miroir du plafond : un prix plancher fixé **au-dessus** de P\*.
+- SMIC depuis le 1^er^ juin 2026 : **12,31 €** brut de l'heure, soit 1 867,02 € brut par mois pour 35 heures par semaine (Service-public.fr, consulté le 21/10/2026).
+:::
+:::
+::::
+
+::: {.notes}
+1 h 44 – 1 h 46. Arrêté du 22 mai 2026. Attention aux rôles : ici, les acheteurs sont les employeurs (demande de travail), les vendeurs sont les travailleurs (offre de travail). Graphique théorique, géométrie fictive. Question : sur ce marché, qui achète et qui vend ? Transition : le plancher.
+:::
+
+## Prix plancher (2/3) : Pmin au-dessus de P\*, un excès d'offre
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Même graphique avec un plancher horizontal Pmin au-dessus de P étoile ; un trait rouge marqué excès d'offre va de la quantité demandée Qd à la quantité offerte Qo"
+graphe_plancher(base_size = 24, etape = 2)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- Ici, ce sont les **acheteurs**, les employeurs, qui fixent la quantité échangée : Qd.
+- Au salaire Pmin, les travailleurs offrent Qo heures : l'excès d'offre Qo − Qd est du chômage au sens du modèle.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 46 – 1 h 49. Symétrie : sous plafond, la quantité est fixée par les vendeurs (Qo) ; sous plancher, par les acheteurs (Qd). Question : sous un plancher, qui décide de la quantité échangée ? Transition : la perte sèche, et une limite du modèle.
+:::
+
+## Prix plancher (3/3) : perte sèche, sauf pouvoir de marché des employeurs
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 6.4
+#| fig-height: 4.6
+#| fig-alt: "Figure complète : un triangle rouge de perte sèche relie Qd sur le plancher, Qd sur l'offre et l'équilibre"
+graphe_plancher(base_size = 24, etape = 3)
+```
+:::
+
+::: {.column width="40%"}
+- Triangle rouge : la perte sèche.
+
+::: {.fragment}
+
+- Le modèle suppose un marché concurrentiel. Employeur presque seul à embaucher : **monopsone** (Joan Robinson, 1933).
+- Un salaire minimum bien placé peut alors augmenter l'emploi : question empirique.
+:::
+:::
+::::
+
+::: {.notes}
+1 h 49 – 1 h 53. Monopsone : l'employeur paie un salaire inférieur à l'équilibre concurrentiel (Joan Robinson, *The Economics of Imperfect Competition*, 1933). L'effet dépend du marché et de la hauteur du plancher. Question : dans quel bassin d'emploi un employeur est-il presque seul ? Transition : retour au logement, au cas français.
+:::
+
+## Application (1/3) : un plafond français assez haut et souvent dépassé
+
+::: {.incremental}
+- **Loyer de référence** : loyer médian des logements comparables (secteur, nombre de pièces, époque, vide ou meublé), fixé chaque année par le préfet.
+- **Plafond** : le loyer de référence **majoré de 20 %** (Chapelle et Fack, § 1.1.1). Au loyer médian, il est au-dessus de P\*.
+- **Dépassements** : sur environ 270 000 baux (2020-2024), plus d'un tiers au-dessus du plafond : 35,6 % à Paris, 43,5 % à Bordeaux (§ 2.2.4).
+:::
+
+::: {.notes}
+1 h 53 – 1 h 57. On est loin de l'exemple chiffré, où le plafond est 20 % sous P\* pour tous les logements. Le dépassement peut être légal (un « complément de loyer », justifié par un confort ou une situation exceptionnels) ou non. Question : un plafond souvent dépassé est-il contraignant ? Transition : alors, quel effet sur les loyers ?
+:::
+
+## Application (2/3) : une baisse des loyers de 2 à 5 %
+
+- Méthode : comparer les communes encadrées et des communes **semblables mais non encadrées**, avant et après.
+
+. . .
+
+- Hors Île-de-France : −2 à −3 % par rapport aux communes témoins, environ −5 % après deux ans ; Seine-Saint-Denis : −3 à −4 % (§ 3.4).
+- Paris : −5,2 % entre juillet 2019 et juin 2024 (Breuillé, Grivault et al., 2025, cités par le rapport).
+    - Pas entièrement attribuable à l'encadrement : des ménages ont quitté Paris après le Covid.
+
+::: {.notes}
+1 h 57 – 2 h 01. Comparer avant et après ne suffit pas : les loyers auraient pu bouger pour d'autres raisons. À Paris, la mission juge difficile d'attribuer toute la baisse à l'encadrement : des départs de ménages après le Covid ont aussi pesé sur la demande. Question avant le clic : pourquoi ne pas comparer simplement 2018 et 2024 ? Transition : et l'offre ?
+:::
+
+## Application (3/3) : un effet sur l'offre ni démontré ni écarté
+
+- Hors Île-de-France : nouvelles annonces, rapportées au nombre de logements, environ −8 % ; à Paris, sens inverse (§ 3.5).
+- Offre réduite, locataires qui restent plus longtemps, autres canaux : les données ne permettent pas de trancher.
+
+. . .
+
+- Plafonds plus durs : à Berlin (9,8 € par m² au plus), de 1 500 annonces par semaine en 2019 à 300 en 2020 (Hahn et al., 2024) ; à San Francisco, offre −15 %.
+
+::: {.notes}
+2 h 01 – 2 h 05. Court terme et plafond peu contraignant : on est dans le panneau A, où la théorie elle-même prévoit des effets faibles. Berlin : cité par Chapelle et Fack, § 3.1.2.3. Question : pourquoi des annonces en moins ne prouvent-elles pas une offre en moins ? Transition : une comparaison tentante entre pays.
+:::
+
+## Loyers effectifs, 2015-2025 : +9,72 % en France, +17,9 % en Allemagne
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
 #| fig-alt: "Indice des loyers effectivement payés de 2015 à 2025, base 100 en 2015 : la France atteint 109,7, l'Allemagne 117,9 et la zone euro 118,9"
 graphe_loyers_europe(base_size = 24)
 ```
-
-Source : Eurostat, IPCH, loyers effectifs, consulté le 21/10/2026.
-
-::: {.notes}
-2 h 20 – 2 h 23. L'encadrement ne couvre que 70 communes ; l'indice mêle secteur libre et social ; bien d'autres causes séparent les pays. Pour mesurer une politique : un groupe de comparaison semblable, avant et après.
 :::
 
-## Les bailleurs paient les deux tiers, l'État un tiers, et le ciblage dépend de la ville
-
-- Transferts : environ 700 M€ par an (Chapelle et Fack, mai 2026)
-- Mal ciblé à Paris
-- En Seine-Saint-Denis, gains surtout pour les ménages modestes
+::: {.column width="40%"}
+::: {.incremental}
+- En dix ans : France **+9,72 %**, Allemagne **+17,9 %**, zone euro **+18,85 %**.
+- Indice de tous les loyers effectivement payés, secteur social compris, dans les communes encadrées ou non : il ne mesure pas l'effet de l'encadrement.
+:::
+:::
+::::
 
 ::: {.notes}
-2 h 23 – 2 h 28. Pourquoi l'État ? Loyer plus bas, revenu imposable du bailleur plus bas : environ un tiers de chaque euro de baisse. Hors Île-de-France, « pour deux euros distribués aux 10 % les plus modestes, un euro est redistribué aux 10 % les plus aisés ». Gain moyen : environ 500 € par an en province, 800 € à Paris. Retour sur le graphique d'ouverture : l'encadrement ne vise pas les plus modestes.
+2 h 05 – 2 h 08. Indice des prix à la consommation harmonisé, poste « loyers effectifs », moyennes annuelles. La France reste presque plate jusqu'en 2022, puis monte. Question : peut-on en conclure que l'encadrement freine les loyers ? Transition : non, et voici pourquoi.
 :::
 
-## Le plafond protège les locataires en place, au détriment des nouveaux arrivants
+## Point d'attention : l'écart avec l'Allemagne ne mesure pas l'encadrement
 
-- **Génération** : les perdants potentiels sont les étudiants, jeunes actifs et ménages qui déménagent pour un emploi
-- **Territoire** : 70 communes, où la demande dépasse nettement l'offre
-- **Genre** : aucune source ouverte
+::: {.piege}
+**Lire un effet de l'encadrement dans ce graphique.** Les loyers français montent moins vite que les loyers allemands, mais ce n'est pas la preuve d'un effet.
+:::
+
+. . .
+
+- L'encadrement ne couvre que 70 communes, et l'indice mêle secteur libre et social.
+- Bien d'autres causes séparent les deux pays.
+- Pour mesurer l'effet d'une politique : un groupe de comparaison semblable, observé avant et après.
 
 ::: {.notes}
-2 h 28 – 2 h 31. À San Francisco, les bénéficiaires sont plus âgés, mieux installés, relativement aisés. Dans l'exemple : les 40 000 ménages qui ne trouvent rien. Voisins : pas de réaction à court terme en France ; à Cambridge, les logements voisins non encadrés ont perdu de la valeur.
+2 h 08 – 2 h 11. Sondage avant le clic. C'est la méthode du rapport d'évaluation, vue deux diapos plus tôt. Transition : qui gagne, qui paie ?
 :::
 
-## Ce que l'analyse établit : la pénurie, la baisse de 2 à 5 %, et un effet sur l'offre ni démontré ni écarté
+## Répartition par revenu : les bailleurs paient deux tiers, l'État un tiers
 
-- Plafond contraignant : pénurie et perte sèche, plus grandes si l'offre est élastique
-- Transfert d'environ 700 M€ par an, ciblage variable
-- Effet sur l'offre ni démontré ni écarté
-
-::: {.notes}
-2 h 31 – 2 h 35. Le positif. Mécanisme largement admis ; là où les plafonds sont plus durs ou plus anciens, annonces (Berlin) ou offre (San Francisco) ont reculé.
-:::
-
-## Ce qui relève d'un jugement : qui protéger, qui paie, et sur quelle preuve
-
-- Efficacité ou équité
-- Locataires en place ou ménages de demain
-- Bailleurs ou contribuables
-- Prolonger ou arrêter, tant que le doute subsiste
-
-::: {.notes}
-2 h 35 – 2 h 41. Le normatif. Débat en amphi : 6 minutes, quatre groupes.
-:::
-
-## Deux institutions, deux études : l'effet sur l'offre lu en sens inverse
-
-- Rapporteure du Sénat (rapport de la mission) : « les conditions pour pérenniser cette expérimentation ne sont pas réunies » (AFP, 14/10/2026)
-- Ville de Paris (étude Apur-SeLoger) : « une absence d'effet […] sur l'offre locative parisienne » (paris.fr, 11/09/2026)
-
-::: {.notes}
-2 h 41 – 2 h 44. La rapporteure de la commission des affaires économiques du Sénat s'appuie sur le rapport de la mission (Sénat, *La loi en clair*) ; citation reprise par MoneyVox avec l'AFP. La Ville de Paris s'appuie sur une autre étude, limitée à Paris : Apur, deux laboratoires universitaires et groupe SeLoger, 2024, actualisée en 2025 (série Breuillé et al.). La mission ne voit pas de contraction de l'offre à Paris, mais juge « ambigus » les résultats de cette étude sur les annonces ; hors Île-de-France, baisse des annonces sans pouvoir dire si l'offre recule. L'une souligne qu'aucun effet n'a été écarté, l'autre qu'aucun n'a été trouvé : décider à qui revient la charge de la preuve est un jugement. Droit : article 140 de la loi Élan (23/11/2018), expérimentation prolongée par la loi 3DS (21/02/2022) jusqu'au 23/11/2026 ; la commission du Sénat a réduit la proposition de loi à une prolongation de deux ans (14/10/2026), examinée en séance le 21/10/2026 : à mettre à jour avant le cours (Légifrance).
-:::
-
-## Arnott : un encadrement modéré peut rééquilibrer bailleur et locataire
-
-::: {.auteur}
-**Richard Arnott** (1995), puis **Arnott et Igarashi** (2000) · économie standard. Les logements sont si différents que les bailleurs ont un pouvoir de marché ; un encadrement **modéré** peut améliorer l'efficacité, s'il exempte le neuf et autorise des hausses indexées.
+::: {.incremental}
+- Transferts vers les locataires : environ **700 millions d'euros par an** (Chapelle et Fack, mai 2026, § 4.4.1).
+- Deux tiers payés par les bailleurs, un tiers par l'État : un loyer plus bas réduit le revenu imposable du bailleur, donc son impôt (§ 5.1).
+- Les bailleurs sont en moyenne parmi les ménages les plus aisés : le transfert va plutôt des riches vers les moins riches.
 :::
 
 ::: {.notes}
-2 h 44 – 2 h 47. *Journal of Economic Perspectives*, 1995 (cités par Chapelle et Fack, § 3.1.1). Le dispositif français n'exempte pas le neuf : le rapport le classe parmi les encadrements de « première génération ». Le rapport recommande de « taxer plutôt que de subventionner la rente foncière ou de réguler les prix » : position normative des auteurs, pas un résultat.
+2 h 11 – 2 h 14. Citation du rapport : « pour un euro de baisse de loyer, environ un tiers est financé par l'État ». Question : qui paie la part de l'État ? (Les contribuables.) Transition : le transfert va-t-il aux plus modestes ?
 :::
 
-## En France, l'encadrement repose sur une expérimentation prolongée jusqu'au 23 novembre 2026
+## Répartition par revenu : un ciblage qui dépend de la ville
+
+::: {.incremental}
+- Hors Île-de-France : « pour deux euros distribués aux 10 % les plus modestes, un euro est redistribué aux 10 % les plus aisés » (§ 4.4.3).
+- **Paris** : mal ciblé, une part importante des gains va à des locataires aisés.
+- **Seine-Saint-Denis** : les gains vont surtout aux ménages modestes.
+- Gain moyen par ménage locataire : environ 500 € par an en province, 800 € à Paris.
+:::
+
+::: {.notes}
+2 h 14 – 2 h 17. Chapelle et Fack, mai 2026, § 4.4.3. Question : pourquoi le ciblage est-il meilleur en Seine-Saint-Denis qu'à Paris ? Transition : retour au graphique d'ouverture.
+:::
+
+## Taux d'effort : l'encadrement ne vise pas les locataires les plus modestes
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Barres groupées du taux d'effort médian des locataires selon le quart de niveau de vie, secteur libre en bleu et secteur social en ambre, en 2023 : les barres baissent quand le niveau de vie augmente"
+graphe_taux_effort(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+- Le loyer pèse le plus sur les locataires modestes du secteur libre : 42,3 %, contre 21,6 % pour les plus aisés.
+
+::: {.fragment}
+
+- L'encadrement baisse le loyer des logements chers, quel que soit le revenu du locataire.
+:::
+:::
+::::
+
+::: {.notes}
+2 h 17 – 2 h 19. Même figure qu'en ouverture : Insee, *France, portrait social*, 18/11/2025. Question : quel instrument viserait directement les barres de gauche ? Transition : les autres effets de répartition.
+:::
+
+## Répartition par génération et territoire : les nouveaux arrivants perdent
+
+::: {.incremental}
+- **Génération** : le plafond protège les locataires en place ; perdants potentiels : étudiants, jeunes actifs, ménages qui déménagent pour un emploi.
+- **Territoire** : 70 communes, où la demande dépasse nettement l'offre ; les loyers des communes voisines ne semblent pas avoir réagi à court terme (§ 3.6).
+- **Genre** : aucune source ouverte pour cette séance ne chiffre l'effet.
+:::
+
+::: {.notes}
+2 h 19 – 2 h 22. À San Francisco, les bénéficiaires sont en moyenne plus âgés, mieux installés et relativement aisés (Diamond, McQuade et Qian, 2019). Dans l'exemple chiffré : les 40 000 ménages qui ne trouvent rien. À Cambridge, à l'inverse, l'encadrement pesait sur la valeur des logements voisins non encadrés. Question : dans l'amphi, êtes-vous plutôt locataires en place ou nouveaux arrivants ? Transition : faut-il donc encadrer ?
+:::
+
+## Controverse : protéger les locataires d'aujourd'hui, ou ceux de demain
+
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+
+- Plafond contraignant : pénurie et perte sèche, plus grandes si l'offre est élastique.
+- France : loyers −2 à −5 %, environ 700 M€ transférés par an.
+- Effet sur l'offre ni démontré ni écarté.
+
+. . .
+
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+
+- Efficacité ou équité ; locataires en place ou ménages de demain.
+- Bailleurs ou contribuables ; prolonger ou arrêter tant que le doute subsiste.
+
+::: {.notes}
+2 h 22 – 2 h 28. Le mécanisme est largement admis ; là où les plafonds sont plus durs ou plus anciens, les annonces (Berlin) ou l'offre (San Francisco) ont reculé. Débat en amphi après le clic, 4 minutes, quatre groupes, un par question normative : accepter une perte sèche pour un transfert ? Qui protéger ? Qui doit payer, les bailleurs ou les contribuables par des aides au logement ? Prolonger tant qu'aucun effet négatif n'est démontré, ou arrêter tant qu'il n'est pas écarté ? Question : lequel des trois points positifs une nouvelle étude pourrait-elle changer ? Transition : cette dernière question divise deux institutions.
+:::
+
+## Deux études, deux lectures : à qui revient la charge de la preuve
+
+- **Sénat**, rapporteure de la commission des affaires économiques, sur le rapport de la mission : « aucune étude empirique n'a permis d'écarter l'incidence négative sur l'offre locative » (MoneyVox avec l'AFP, 14/10/2026).
+
+. . .
+
+- **Ville de Paris**, sur l'étude Apur, deux laboratoires et SeLoger : « une absence d'effet de l'encadrement des loyers sur l'offre locative parisienne » (paris.fr, 11/09/2026).
+
+. . .
+
+L'une : aucun effet écarté ; l'autre : aucun effet trouvé. Choisir la charge de la preuve est un jugement.
+
+::: {.notes}
+2 h 28 – 2 h 31. Citation complète du Sénat : « les conditions pour pérenniser cette expérimentation ne sont pas réunies : aucune étude empirique… ». Étude parisienne réalisée en 2024, actualisée en 2025, période 2018-2025 : c'est la série Breuillé et al. La Ville de Paris applique l'encadrement : source partie prenante. La mission ne voit pas non plus de contraction de l'offre à Paris, où les annonces augmentent, mais juge « ambigus » les résultats de cette étude sur le volume d'annonces (§ 3.1.3 et 3.5). Question : ne trouver aucun effet, est-ce prouver qu'il n'y en a pas ? Transition : le désaccord existe aussi entre économistes.
+:::
+
+## Deux modèles de l'économie standard : concurrence ou pouvoir des bailleurs
+
+- **Friedman et Stigler** : marché concurrentiel ; le plafond est un prix maximal comme un autre, il crée une pénurie.
+
+. . .
+
+- **Arnott** (1995) : les logements sont si différents que les bailleurs ont un pouvoir de marché.
+- **Arnott et Igarashi** (2000) : un encadrement **modéré** peut améliorer l'efficacité, s'il exempte le neuf et autorise des hausses indexées.
+
+. . .
+
+- Le rapport classe le dispositif français, qui n'exempte pas le neuf, en « première génération ».
+
+::: {.notes}
+2 h 31 – 2 h 34. Arnott, *Journal of Economic Perspectives*, 1995 ; Arnott et Igarashi autorisent aussi un réajustement entre deux locataires (cités par Chapelle et Fack, § 3.1.1). « Première génération » : les plus durs par leur conception (nouveaux baux, pas d'exemption du neuf), même si le niveau du plafond reste proche du marché. Le rapport recommande de « taxer plutôt que de subventionner la rente foncière ou de réguler les prix » (§ 5.2.5) : position normative des auteurs, pas un résultat de l'analyse. Question : qu'est-ce qui rend deux logements si différents l'un de l'autre ? (Emplacement, taille, état.) Transition : et si la loi change demain ?
+:::
+
+## Méthode : si le droit change, le raisonnement reste le même
+
+::: {.methode}
+- **Prolongation ou pérennisation** : l'analyse reste valable ; la question devient « faut-il l'étendre à d'autres villes ? ».
+- **Fin de l'expérimentation** : 2019-2026 devient une étude de cas ; le modèle prédit une remontée des loyers des nouveaux baux, comme en Catalogne (§ 3.1.2.1).
+:::
+
+. . .
+
+Mêmes questions : le plafond est-il contraignant ? L'offre est-elle élastique ? Quels sont les effets de répartition ?
+
+::: {.notes}
+2 h 34 – 2 h 36. En Catalogne, le dispositif a été annulé. Question : laquelle des deux branches est la plus probable aujourd'hui ? Transition : où en est le droit ?
+:::
+
+## Encadrement des loyers : une expérimentation en navette au Parlement
 
 ::: {.droit}
-Article 140 de la loi Élan (23/11/2018) : expérimentation d'encadrement des loyers, prolongée par la loi 3DS (21/02/2022) jusqu'au 23/11/2026. Un texte qui la prolonge de deux ans est en navette au Parlement : adopté par le Sénat le 21/10/2026, il repart à l'Assemblée nationale (Sénat, La loi en clair, consulté le 21/10/2026).
+**État du droit au 21 octobre 2026.** Article 140 de la loi Élan (23/11/2018) : une expérimentation, prolongée par la loi 3DS (21/02/2022) jusqu'au 23/11/2026.
 :::
 
+. . .
+
+- Assemblée nationale, 11/12/2025 : pérennisation et extension votées, 105 voix contre 56 (LCP).
+- Sénat : texte réduit en commission à une prolongation de deux ans (14/10/2026), adopté en séance le 21/10/2026 ; retour à l'Assemblée en deuxième lecture (Sénat, *La loi en clair*).
+
 ::: {.notes}
-2 h 47 – 2 h 49. Texte non définitif au 21/10/2026 : à mettre à jour avant le cours (Légifrance). Minutes prises sur les diapos Diamond et Autor.
+2 h 36 – 2 h 39. Texte non définitif. Question : si le texte n'est pas définitif le 23/11/2026, que devient l'encadrement ? Avant le cours, vérifier où en est la navette et relire sur Légifrance la date exacte de fin de l'expérimentation. Prolongation de deux ans dans les mêmes territoires. Transition : ce qu'il faut retenir.
 :::
 
 ## À retenir
 
 ::: {.retenir}
-- Un plafond n'agit que sous P\*.
-- Il crée une pénurie.
-- Rectangle : transfert ; triangle : perte sèche.
-- Plus l'offre est élastique, plus il coûte.
-- France : −2 à −5 %, offre ni démontrée ni écartée.
-- Plancher : le miroir du plafond.
+- Un prix plafond n'a d'effet que s'il est fixé sous le prix d'équilibre.
+- Un plafond contraignant crée une pénurie : les logements se répartissent hors du prix.
+- Le rectangle est un transfert des bailleurs aux locataires logés ; le triangle, une perte sèche.
+- Plus l'offre est élastique, plus pénurie et perte sèche sont grandes.
+- France : loyers −2 à −5 %, ciblage variable, effet sur l'offre ni démontré ni écarté.
+- Le SMIC est le miroir du plafond : un plancher crée un excès d'offre, sauf si les employeurs ont un pouvoir de marché.
 :::
 
 ::: {.notes}
-2 h 49 – 2 h 54. Reprendre la question d'ouverture : faut-il encadrer les loyers ? Séparer le positif du normatif.
+2 h 39 – 2 h 43. Reprendre la question d'ouverture : faut-il encadrer les loyers ? Séparer le positif du normatif. Question : lequel de ces six points vous a le plus surpris ? Transition : le plan de dissertation.
 :::
 
-## Plan de dissertation : I. Ce que dit l'outil ; II. Ce qu'il ne tranche pas
+## Plan de dissertation : ce que dit l'outil, ce qu'il ne tranche pas
 
-**Faut-il encadrer les loyers ?**
+**Sujet** : faut-il encadrer les loyers ?
 
-**I.** Un plafond contraignant crée pénurie et perte sèche, croissantes avec l'élasticité de l'offre ; en France, loyers en baisse de 2 à 5 %.
+. . .
 
-**II.** Efficacité ou équité, locataires en place ou de demain : un jugement, et un effet sur l'offre ni démontré ni écarté.
+**I. Ce que dit l'outil (positif)**
+
+- A. Un plafond contraignant crée pénurie et perte sèche, croissantes avec l'élasticité de l'offre.
+- B. En France : loyers −2 à −5 %, environ 700 M€ transférés par an, effet sur l'offre ni démontré ni écarté.
+
+. . .
+
+**II. Ce qu'il ne tranche pas (normatif)**
+
+- A. Efficacité ou équité ; locataires en place ou ménages de demain.
+- B. Bailleurs ou contribuables ; à qui revient la charge de la preuve.
 
 ::: {.notes}
-2 h 54 – 3 h 00. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation.
+2 h 43 – 2 h 45. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation.
 :::

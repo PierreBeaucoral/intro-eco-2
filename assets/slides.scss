@@ -34,14 +34,16 @@ $presentation-block-margin: 20px;
   // Théorèmes et encadrés à l'échelle amphi
   .theorem, .proof, .retenir, .piege, .auteur, .methode, .rappel, .s1, .droit { max-width: 36em; margin: 0.5em 0; }
   .retenir, .piege, .auteur, .methode, .rappel, .s1, .droit { padding: 0.45em 0.8em 0.5em; border-left-width: 4px; &::before { font-size: 0.6em; } }
-  .example { border-left-width: 4px; }
+  .example, .theorem.definition { border-left-width: 4px; }
   .wp-video { max-width: 22em; }
 
   // Figures et légendes
   .quarto-figure-center, .cell-output-display { text-align: center; }
   .figure-caption, figcaption { font-size: 22px; }
+  .wp-source { display: block; font-size: 20px; color: var(--wp-encre-2); }   // ligne de source en pied de diapo
   .columns { display: flex; gap: 1em; }
   .columns .column { flex: 1 1 0; min-width: 0; }
+  .columns img { max-height: 380px; object-fit: contain; }   // photos et cartes en colonne : tiennent dans 720 px
 
   // Note de marge (aside) en bas de diapo
   .aside, aside { font-size: 22px; color: var(--wp-encre-2); border-top: 1px solid var(--wp-filet); padding-top: 0.3em; max-width: 26em; }

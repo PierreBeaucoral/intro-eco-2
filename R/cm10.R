@@ -38,7 +38,9 @@ ramsey <- function(impatience, aversion, g) impatience + aversion * g
 #' Valeur actuelle de 1 000 € selon l'horizon, pour trois taux d'actualisation.
 #' Graphique « outil » : les axes portent des valeurs, car c'est ce qu'on lit.
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_actualisation <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = courbe à 1 % seule ;
+#'   2 = courbes à 1 % et 3 % ; 3 = les trois taux, identique à la page (défaut)
+graphe_actualisation <- function(base_size = 16, etape = 3) {
   n <- 0:100
   d <- do.call(rbind, lapply(seq_along(taux_cm10), function(i)
     data.frame(n = n, va = valeur_actuelle(1000, taux_cm10[i], n),
@@ -46,6 +48,11 @@ graphe_actualisation <- function(base_size = 16) {
   fin <- d[d$n == 100, ]
   fin$etiquette <- paste0("δ = ", fin$taux, " : ", round(fin$va), " €")
   fin$y_etiquette <- c(fin$va[1], 95, 5)   # écarte les étiquettes 3 % et 5 %, trop proches
+  if (etape < 3) {   # taux montrés : les `etape` premiers ; l'ordre des couleurs est conservé
+    gardes <- names(facteurs_cm10[1, ])[seq_len(etape)]
+    d <- d[d$taux %in% gardes, ]
+    fin <- fin[fin$taux %in% gardes, ]
+  }
   taille <- base_size / 3.2
   ggplot(d, aes(n, va, colour = taux)) +
     annotate("segment", x = 50, xend = 50, y = 0, yend = 1000,
@@ -78,29 +85,36 @@ q_coupe <- function(c) climat_cm10$d_a - c
 
 #' L'optimum d'émissions selon le taux d'actualisation.
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_cms_taux <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = marché sans politique
+#'   (D, Cm, Q*) ; 2 = ajoute Cms si δ élevé ; 3 = ajoute Cms si δ faible, figure
+#'   complète identique à la page (défaut)
+graphe_cms_taux <- function(base_size = 16, etape = 3) {
   cm <- climat_cm10$cm
   cms_e <- cm + climat_cm10$dm_eleve
   cms_f <- cm + climat_cm10$dm_faible
   q_star <- q_coupe(cm); q_e <- q_coupe(cms_e); q_f <- q_coupe(cms_f)
   neutre <- couleurs_eco[["neutre"]]; ambre <- couleurs_eco[["offre"]]
   taille <- base_size / 3.2
-  ggplot() +
-    annotate("segment", x = c(q_star, q_e, q_f), xend = c(q_star, q_e, q_f),
-             y = 0, yend = c(cm, cms_e, cms_f), linetype = "22", colour = neutre) +
+  i <- seq_len(etape)                        # Q* (puis Q° δ élevé, puis Q° δ faible)
+  g <- ggplot() +
+    annotate("segment", x = c(q_star, q_e, q_f)[i], xend = c(q_star, q_e, q_f)[i],
+             y = 0, yend = c(cm, cms_e, cms_f)[i], linetype = "22", colour = neutre) +
     annotate("segment", x = 0, xend = 10, y = 10, yend = 0,
              colour = couleurs_eco[["demande"]], linewidth = 1.4) +
-    annotate("segment", x = 0, xend = 10, y = cm, yend = cm, colour = ambre, linewidth = 1.4) +
-    annotate("segment", x = 0, xend = 10, y = c(cms_e, cms_f), yend = c(cms_e, cms_f),
-             colour = ambre, linewidth = 1.4, linetype = "22") +
-    annotate("point", x = c(q_star, q_e, q_f), y = c(cm, cms_e, cms_f), size = 3) +
-    annotate("text", x = 10.15, y = c(cm, cms_e, cms_f), hjust = 0,
-             label = c("Cm (coût privé)", "Cms si δ élevé", "Cms si δ faible"),
+    annotate("segment", x = 0, xend = 10, y = cm, yend = cm, colour = ambre, linewidth = 1.4)
+  if (etape >= 2) g <- g +
+    annotate("segment", x = 0, xend = 10, y = c(cms_e, cms_f)[i[-1] - 1],
+             yend = c(cms_e, cms_f)[i[-1] - 1],
+             colour = ambre, linewidth = 1.4, linetype = "22")
+  g +
+    annotate("point", x = c(q_star, q_e, q_f)[i], y = c(cm, cms_e, cms_f)[i], size = 3) +
+    annotate("text", x = 10.15, y = c(cm, cms_e, cms_f)[i], hjust = 0,
+             label = c("Cm (coût privé)", "Cms si δ élevé", "Cms si δ faible")[i],
              colour = ambre, family = police_cours, size = taille) +
     annotate("text", x = 0.9, y = 9.6, hjust = 0, label = "D (bénéfice d’émettre)",
              colour = couleurs_eco[["demande"]], family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(q_f, q_e, q_star),
-                       labels = c("Q°\n(δ faible)", "Q°\n(δ élevé)", "Q*\n")) +
+    scale_x_continuous(breaks = c(q_f, q_e, q_star)[4 - rev(i)],
+                       labels = c("Q°\n(δ faible)", "Q°\n(δ élevé)", "Q*\n")[4 - rev(i)]) +
     scale_y_continuous(breaks = NULL) +
     coord_cartesian(xlim = c(0, 10), ylim = c(0, 10.5), clip = "off") +
     labs(x = "Émissions Q", y = "€ par tonne") +
@@ -121,7 +135,9 @@ co2_cm10$part_pop   <- 100 * co2_cm10$population_2023 / monde_cm10$population_20
 
 #' Barres horizontales : part du CO2 cumulé (1750-2024) et part de la population (2023)
 #' @param base_size 16 (page) ou 24 (diapos)
-graphe_parts_co2 <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = barres du CO₂ cumulé
+#'   seules (emplacements de la population vides) ; 2 = figure complète (défaut)
+graphe_parts_co2 <- function(base_size = 16, etape = 2) {
   ordre <- c("États-Unis", "Union européenne (27)", "Chine", "Inde", "Afrique", "France")
   x <- co2_cm10[match(ordre, co2_cm10$entite), ]
   d <- rbind(
@@ -132,12 +148,20 @@ graphe_parts_co2 <- function(base_size = 16) {
   d$entite <- factor(courts[match(d$entite, ordre)], levels = rev(courts))
   d$serie <- factor(d$serie, levels = unique(d$serie))
   virgule <- function(v) paste0(format(round(v, 1), decimal.mark = ",", nsmall = 1), " %")
+  d$etiquette <- virgule(d$part)
+  remplissage <- unname(couleurs_eco[c("demande", "neutre")])
+  legende <- levels(d$serie)
+  if (etape < 2) {   # population masquée : barres transparentes, sans étiquette ni légende
+    d$etiquette[d$serie == legende[2]] <- ""
+    remplissage <- stats::setNames(c(remplissage[1], "transparent"), legende)
+    legende <- legende[1]
+  }
   ggplot(d, aes(part, entite, fill = serie)) +
     geom_col(position = position_dodge(width = 0.8, reverse = TRUE), width = 0.75) +
-    geom_text(aes(label = virgule(part)), position = position_dodge(width = 0.8, reverse = TRUE),
+    geom_text(aes(label = etiquette), position = position_dodge(width = 0.8, reverse = TRUE),
               hjust = -0.15, family = police_cours, size = base_size / 3.6,
               colour = couleurs_eco[["equilibre"]]) +
-    scale_fill_manual(values = unname(couleurs_eco[c("demande", "neutre")])) +
+    scale_fill_manual(values = remplissage, breaks = legende) +
     scale_x_continuous(limits = c(0, 28), breaks = c(0, 10, 20),
                        labels = function(v) paste0(v, " %")) +
     labs(x = "Part du total mondial", y = NULL,

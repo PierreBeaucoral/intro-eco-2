@@ -50,7 +50,7 @@ Trois faits intriguent.
 
 Les chiffres sont arrêtés au 14 octobre 2026 (pétrole) et au 12 octobre 2026 (pompe). La situation a pu évoluer ; le raisonnement reste valable.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### Le prix se forme à la rencontre de l'offre et de la demande
 
@@ -271,9 +271,9 @@ Depuis mars 2026, par intermittence, TotalEnergies plafonne ses prix. Depuis le 
 
 ### Faut-il bloquer les prix à la pompe ou aider les automobilistes ?
 
-On sépare ce que l'analyse **établit** (positif) de ce qui relève d'un **jugement** (normatif).
+On sépare l'analyse **positive** de l'analyse **normative**.
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - **Bloquer le prix** au-dessous du nouvel équilibre P\*′ recrée la pénurie de la @fig-choc-offre. Il faut alors rationner : files d'attente, quotas par client, stations à sec. Le plafond de TotalEnergies le montre en 2026 dans ses propres stations (@sec-plafond-total) ; les CM 3 et 4 chiffreront ce mécanisme.
 - **Une remise générale à la pompe** baisse le prix payé par tous, coûte de l'argent public, affaiblit l'incitation à économiser et profite davantage, en euros, aux gros consommateurs. En 2022, la remise a été de 0,18 €/L TTC au 1^er^ avril, puis de 0,30 €/L en septembre, ramenée à 0,10 €/L à la mi-novembre, avant sa suppression au 1^er^ janvier 2023 ; elle a évité de 51 à 81 € de dépense par ménage automobiliste (Insee Analyses n° 86, 06/07/2023).
@@ -281,7 +281,7 @@ On sépare ce que l'analyse **établit** (positif) de ce qui relève d'un **juge
 - **Libérer des stocks stratégiques** agit sur l'offre : O′ se déplace vers la droite et le prix baisse, le temps que durent les stocks. Après la libération de stocks de diesel, TotalEnergies annonce un avantage d'environ 10 centimes par litre de gazole du 1^er^ novembre 2026 au 31 janvier 2027 (communiqué, 12/10/2026).
 - **Taxer les profits exceptionnels** des vendeurs ne change pas le prix à court terme si l'offre n'en dépend pas, et finance les aides. L'Union européenne l'a fait en 2022 avec une « contribution de solidarité temporaire » sur le pétrole brut, le gaz, le charbon et le raffinage ([règlement (UE) 2022/1854 du Conseil](http://data.europa.eu/eli/reg/2022/1854/oj), 6 octobre 2022).
 
-**Ce qui relève d'un jugement (normatif).** Le choix dépend de l'objectif.
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur). Le choix dépend de l'objectif.
 
 - L'**efficacité** : le prix doit-il signaler la rareté ?
 - L'**équité** : faut-il d'abord protéger les ménages captifs de la voiture ?

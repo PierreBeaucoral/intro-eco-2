@@ -32,3 +32,9 @@ _design/
 
 # Dossiers de figures laissés par un rendu --to typst -M keep-typ
 cours/*_files/
+
+# Prototype des diapos v3 : rendu local seulement
+_templates/prototype-cm1/*.html
+_templates/prototype-cm1/*_files/
+_templates/prototype-cm1/.quarto/
+_templates/prototype-cm1/captures/

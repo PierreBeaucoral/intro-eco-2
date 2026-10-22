@@ -41,7 +41,7 @@ Trois faits intriguent.
 
 Faits arrêtés au 21/10/2026. La BCE se réunit de nouveau les 28-29/10 et les 16-17/12/2026 (BCE, calendrier) : si les taux ont changé, le raisonnement reste valable.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### Une inflation durable suppose trop de monnaie pour trop peu de biens
 
@@ -264,12 +264,12 @@ La @fig-inflation-diffusion montre cette diffusion. L'inflation d'ensemble culmi
 
 ### Fallait-il relever les taux face à un choc d'énergie ?
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - Une hausse des taux ne réduit pas le prix de l'énergie : elle agit sur la demande, avec retard, et sur les anticipations. Face à un choc d'offre, elle limite la hausse des prix au prix d'une baisse de l'activité (@fig-transmission).
 - En 2022, le taux réel est resté très négatif pendant plus d'un an et l'inflation s'est diffusée ; en 2026, l'inflation hors énergie reste proche de 2 %.
 
-**Ce qui relève d'un jugement (normatif).** Combien d'activité et d'emplois accepte-t-on de perdre pour ramener l'inflation à 2 % un an plus tôt ? Qui doit porter le coût : les emprunteurs, par des taux plus élevés, ou les contribuables, par des aides publiques comme le bouclier tarifaire ? Et faut-il qu'une institution non élue fasse ce choix ?
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur). Combien d'activité et d'emplois accepte-t-on de perdre pour ramener l'inflation à 2 % un an plus tôt ? Qui doit porter le coût : les emprunteurs, par des taux plus élevés, ou les contribuables, par des aides publiques comme le bouclier tarifaire ? Et faut-il qu'une institution non élue fasse ce choix ?
 
 **Les écoles en présence.**
 

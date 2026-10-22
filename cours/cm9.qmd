@@ -33,7 +33,7 @@ Deux questions se posent.
 
 **La question de la séance : à quoi servent les droits de douane ?** Un gouvernement qui les relève leur donne des objectifs : procurer des recettes à l'État, protéger une industrie naissante ou en difficulté, peser dans une négociation commerciale, réduire la dépendance envers un fournisseur étranger (la sécurité économique, la souveraineté), ou encore, avec le mécanisme d'ajustement carbone aux frontières (MACF) européen, faire payer le carbone importé. On confronte ces objectifs affichés à ce que les droits coûtent, et à qui. Deux outils le mesurent : l'avantage comparatif, qui dit d'où viennent les gains de l'échange, et l'analyse d'un droit de douane en surplus, qui dit qui paie le droit, qui en profite et ce qui est perdu pour tous. Savoir si un objectif vaut ce qu'il coûte relève d'un jugement : la controverse expose les positions sans trancher. Cette séance est la dernière du programme du CC2 ; elle n'a pas de TD et n'est évaluée que dans la partie cours.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ### L'échange enrichit même le pays le moins productif
 
@@ -271,7 +271,7 @@ Ce droit vise moins à protéger une industrie qu'à faire payer le même prix a
 
 ### Faut-il protéger ses producteurs ?
 
-**Ce que l'analyse établit (positif).**
+**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
 
 - **Qui paie.** Les droits américains de 2018 et de 2025 ont été payés à 86 % ou plus par les importateurs et les consommateurs américains (Amiti et al., 2019 ; *Liberty Street Economics*, 12/02/2026).
 - **Combien.** Un droit transfère du revenu des acheteurs vers les producteurs protégés et l'État, et en détruit une partie (la perte sèche), dont l'ampleur varie selon les estimations.
@@ -285,7 +285,7 @@ Ce droit vise moins à protéger une industrie qu'à faire payer le même prix a
 
 : Échanges de biens entre l'UE à 27 et les États-Unis. Source : Eurostat, jeu `ext_lt_maineu`, mis à jour le 16/10/2026, téléchargé le 21/10/2026 ; solde calculé par l'auteur. {#tbl-commerce-ue-usa}
 
-**Ce qui relève d'un jugement (normatif).** Savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Tout dépend du poids que l'on donne :
+**Analyse normative** (ce qui devrait être : dépend de jugements de valeur). Savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Tout dépend du poids que l'on donne :
 
 - au **pouvoir d'achat** de tous les consommateurs ;
 - aux **emplois** et aux **territoires** concentrés qui perdent à l'ouverture ;

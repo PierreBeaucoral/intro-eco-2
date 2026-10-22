@@ -60,18 +60,25 @@ seuil_k_cm8 <- coupe_cm8$pib / coupe_cm8$dette   # la coupe fait baisser d si k 
 
 #' Baisse cumulée du PIB, vague après vague, après une coupe de 10 Md€ (c = 0,5).
 #' Le total tend vers k × 10 = 20 Md€ (tirets).
-graphe_multiplicateur <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = première vague seule ;
+#'   2 = trois vagues ; 3 = six vagues et limite k × 10, identique à la page (défaut)
+graphe_multiplicateur <- function(base_size = 16, etape = 3) {
   v <- vagues_cm8
+  if (etape < 3) v <- v[v$vague <= c(1, 3)[etape], ]   # axe des vagues inchangé (drop = FALSE)
+  niveaux <- vagues_cm8$vague
   total <- multiplicateur(0.5) * 10
   taille <- base_size / 3
-  ggplot(v, aes(factor(vague), cumul)) +
+  g <- ggplot(v, aes(factor(vague, levels = niveaux), cumul)) +
     geom_col(fill = couleurs_eco[["demande"]], width = 0.65) +
     geom_text(aes(label = format(round(cumul, 1), decimal.mark = ",")), vjust = 1.6,   # dans la barre, sous les tirets
-              family = police_cours, size = taille * 0.85, colour = "#FFFFFF") +
+              family = police_cours, size = taille * 0.85, colour = "#FFFFFF")
+  if (etape < 3) g <- g + scale_x_discrete(drop = FALSE)
+  if (etape >= 3) g <- g +
     annotate("segment", x = 0.5, xend = 6.5, y = total, yend = total,
              linetype = "22", colour = couleurs_eco[["alerte"]], linewidth = 0.8) +
     annotate("text", x = 0.6, y = total + 1.6, label = "k × 10 = 20 Md€", hjust = 0,
-             family = police_cours, size = taille, colour = couleurs_eco[["alerte"]]) +
+             family = police_cours, size = taille, colour = couleurs_eco[["alerte"]])
+  g +
     scale_y_continuous(breaks = c(0, 10, 20), labels = c("0", "10", "20")) +
     coord_cartesian(ylim = c(0, 24), clip = "off") +
     labs(x = "Vague de dépense", y = "Baisse cumulée du PIB (Md€)") +
@@ -85,7 +92,9 @@ graphe_multiplicateur <- function(base_size = 16) {
 #' Trois trajectoires du ratio dette / PIB sur dix ans, toutes parties de 150 % :
 #' r - g = +4 sans excédent primaire (boule de neige), r - g = +4 avec un excédent
 #' primaire de 6 % (le solde stabilisant), r - g = -2 sans excédent (la dette fond).
-graphe_boule_de_neige <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = boule de neige seule (rouge) ;
+#'   2 = ajoute le solde stabilisant (gris) ; 3 = les trois trajectoires, identique à la page (défaut)
+graphe_boule_de_neige <- function(base_size = 16, etape = 3) {
   scen <- c("r − g = +4, s = 0", "r − g = +4, s = 6", "r − g = −2, s = 0")
   d <- rbind(
     cbind(trajectoire_dette(150, 4, 0), scenario = scen[1]),
@@ -93,6 +102,7 @@ graphe_boule_de_neige <- function(base_size = 16) {
     cbind(trajectoire_dette(150, -2, 0), scenario = scen[3])
   )
   d$scenario <- factor(d$scenario, levels = scen)
+  if (etape < 3) d <- d[as.integer(d$scenario) <= etape, ]   # couleurs gardées : on retire les derniers scénarios
   fin <- d[d$annee == 10, ]
   cols <- unname(couleurs_eco[c("alerte", "neutre", "demande")])
   ggplot(d, aes(annee, d, colour = scenario)) +
@@ -114,25 +124,32 @@ graphe_boule_de_neige <- function(base_size = 16) {
 
 #' Ratio dette / PIB juste après une coupe de 10 Md€ (dette 300, PIB 200),
 #' selon le multiplicateur k. Au-dessus de k = 1 / d = 0,67, le ratio monte.
-graphe_ratio_coupe <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = courbe et ratio de départ ;
+#'   2 = ajoute le point de la prévision (k = 0,5) ; 3 = ajoute k = 1,5 et le seuil 0,67,
+#'   identique à la page (défaut)
+graphe_ratio_coupe <- function(base_size = 16, etape = 3) {
   k <- seq(0, 2, length.out = 81)
   d <- data.frame(k = k, ratio = ratio_apres_coupe(k))
   pts <- data.frame(k = c(0.5, 1.5), ratio = ratio_apres_coupe(k = c(0.5, 1.5)))
   taille <- base_size / 3
   neutre <- couleurs_eco[["neutre"]]
-  ggplot(d, aes(k, ratio)) +
-    annotate("segment", x = 0, xend = 2, y = 150, yend = 150, linetype = "22", colour = neutre) +
+  i_pt <- seq_len(max(etape - 1, 0))           # aucun point, prévision, puis prévision et réalité
+  g <- ggplot(d, aes(k, ratio)) +
+    annotate("segment", x = 0, xend = 2, y = 150, yend = 150, linetype = "22", colour = neutre)
+  if (etape >= 3) g <- g +
     annotate("segment", x = seuil_k_cm8, xend = seuil_k_cm8, y = 144, yend = 150,
-             linetype = "22", colour = neutre) +
-    geom_line(colour = couleurs_eco[["alerte"]], linewidth = 1.4) +
-    geom_point(data = pts, size = 3, colour = couleurs_eco[["equilibre"]]) +
-    annotate("text", x = c(0.56, 1.44), y = pts$ratio + c(-1.2, 1.2), hjust = c(0, 1),
-             label = c("prévision (k = 0,5)", "réalité ? (k = 1,5)"),
-             family = police_cours, size = taille * 0.9) +
+             linetype = "22", colour = neutre)
+  g <- g + geom_line(colour = couleurs_eco[["alerte"]], linewidth = 1.4)
+  if (etape >= 2) g <- g +
+    geom_point(data = pts[i_pt, ], size = 3, colour = couleurs_eco[["equilibre"]]) +
+    annotate("text", x = c(0.56, 1.44)[i_pt], y = pts$ratio[i_pt] + c(-1.2, 1.2)[i_pt], hjust = c(0, 1)[i_pt],
+             label = c("prévision (k = 0,5)", "réalité ? (k = 1,5)")[i_pt],
+             family = police_cours, size = taille * 0.9)
+  g +
     annotate("text", x = 2, y = 150.9, label = "ratio de départ : 150 %", hjust = 1,
              family = police_cours, size = taille * 0.85, colour = neutre) +
-    scale_x_continuous(breaks = c(0, 0.5, seuil_k_cm8, 1, 1.5, 2),
-                       labels = c("0", "0,5", "0,67", "1", "1,5", "2")) +
+    scale_x_continuous(breaks = c(0, 0.5, seuil_k_cm8, 1, 1.5, 2)[c(1:2, if (etape >= 3) 3, 4:6)],   # 0,67 avec le seuil
+                       labels = c("0", "0,5", "0,67", "1", "1,5", "2")[c(1:2, if (etape >= 3) 3, 4:6)]) +
     scale_y_continuous(breaks = c(145, 150, 155, 160)) +
     coord_cartesian(xlim = c(0, 2), ylim = c(144, 162), expand = FALSE, clip = "off") +
     labs(x = "Multiplicateur k", y = "Dette / PIB après la coupe (%)") +
@@ -178,7 +195,9 @@ reprise_cm8 <- list(totale = var_pct(gr("pib_reel", 2018), gr("pib_reel", 2024))
 
 #' Trois panneaux : PIB réel (indice 100 en 2008), chômage (% des actifs, 15-74 ans),
 #' dette publique (% du PIB), 2008-2025 ; bande grise = plans d'aide 2010-2018.
-graphe_grece <- function(base_size = 16) {
+#' @param etape pour les diapos : 1, 2 ou 3 = un seul panneau (PIB, chômage, dette),
+#'   lisible en deux colonnes ; 4 = les trois panneaux, identique à la page (défaut)
+graphe_grece <- function(base_size = 16, etape = 4) {
   panneaux <- c("PIB réel (indice 100 en 2008)", "Chômage (% des actifs)", "Dette publique (% du PIB)")
   d <- rbind(
     data.frame(annee = grece_cm8$annee, panneau = panneaux[1],
@@ -188,16 +207,27 @@ graphe_grece <- function(base_size = 16) {
   )
   d <- d[!is.na(d$valeur), ]
   d$panneau <- factor(d$panneau, levels = panneaux)
+  cols <- unname(couleurs_eco[c("demande", "alerte", "offre")])
+  legende <- "Bande grise : plans d'aide, 2010-2018. Source : Eurostat (nama_10_gdp, une_rt_a, gov_10dd_edpt1),\nséries téléchargées le 21/10/2026 ; 2024 et 2025 provisoires pour le PIB."
+  if (etape <= 3) {                            # un panneau, avec sa couleur de la page
+    d <- d[d$panneau == panneaux[etape], ]
+    cols <- cols[etape]
+    # légende courte, propre au panneau : la légende à trois séries déborde d'un panneau seul
+    legende <- paste0("Bande grise : plans d'aide, 2010-2018.\nSource : Eurostat (",
+                      c("nama_10_gdp", "une_rt_a", "gov_10dd_edpt1")[etape],
+                      "), téléchargée le 21/10/2026",
+                      c(" ;\n2024 et 2025 provisoires.", ".", ".")[etape])
+  }
   ggplot(d, aes(annee, valeur, colour = panneau)) +
     annotate("rect", xmin = 2010, xmax = 2018, ymin = -Inf, ymax = Inf,
              fill = "#E5E7EB", alpha = 0.6) +
     geom_line(linewidth = 1.2) +
     geom_point(size = 1.4) +
     facet_wrap(~panneau, nrow = 1, scales = "free_y") +
-    scale_colour_manual(values = unname(couleurs_eco[c("demande", "alerte", "offre")])) +
+    scale_colour_manual(values = cols) +
     scale_x_continuous(breaks = c(2008, 2013, 2018, 2025)) +
     labs(x = NULL, y = NULL,
-         caption = "Bande grise : plans d'aide, 2010-2018. Source : Eurostat (nama_10_gdp, une_rt_a, gov_10dd_edpt1),\nséries téléchargées le 21/10/2026 ; 2024 et 2025 provisoires pour le PIB.") +
+         caption = legende) +
     theme_cours(base_size = base_size, donnees = TRUE) +
     theme(legend.position = "none",
           strip.text = element_text(family = police_cours, hjust = 0, size = rel(0.75)),

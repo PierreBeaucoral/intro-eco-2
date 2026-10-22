@@ -20,7 +20,7 @@ source(here::here("R/cmN.R"))   # remplacer N
 
 Un paragraphe d'accroche : le fait, daté et sourcé, et la question à laquelle la séance répond.
 
-## Ce que dit la théorie
+## Apports théoriques
 
 ::: {.auteur}
 **Alfred Marshall** (1890), *Principles of Economics* : le prix d'équilibre égalise les quantités offertes et demandées ; on raisonne marché par marché.
@@ -55,7 +55,7 @@ Par revenu, territoire, génération et, quand c'est pertinent, genre.
 
 ## La controverse
 
-Ce que l'analyse établit (positif) ; ce qui relève d'un jugement (normatif). Les positions en présence, sourcées, sans parti pris.
+Analyse positive (ce qui est : mécanismes et effets, vérifiables) ; analyse normative (ce qui devrait être : dépend de jugements de valeur). Les positions en présence, sourcées, sans parti pris.
 
 ::: {.droit}
 Une institution ou une règle de droit liée au sujet, en deux ou trois phrases.

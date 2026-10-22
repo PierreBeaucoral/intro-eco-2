@@ -1,0 +1,26 @@
+# Prototype des diapos v3 (CM 1), rendu à part : ce _quarto.yml en fait un
+# projet autonome, hors du site (rien ne part dans _site ni en ligne).
+# Rendu : quarto render _templates/prototype-cm1/cm1.qmd
+# Mêmes réglages que slides/_metadata.yml, chemins décalés d'un niveau.
+project:
+  type: default
+lang: fr
+author:
+  - name: "Pierre Beaucoral"
+    url: "https://pierrebeaucoral.github.io/"
+    affiliation: "ATER en économie, Université Clermont Auvergne"
+format:
+  revealjs:
+    theme: [default, ../../assets/theme-light.scss, ../../assets/components.scss, ../../assets/slides.scss]
+    include-in-header: ../../assets/fonts.html
+    width: 1280
+    height: 720
+    margin: 0.06
+    center: false
+    transition: none
+    slide-number: c/t
+    hash: true
+knitr:
+  opts_chunk:
+    dev: ragg_png
+    dpi: 200

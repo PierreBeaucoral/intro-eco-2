@@ -22,6 +22,35 @@ bilan_cm6 <- data.frame(
 )
 pret_lea_cm6 <- 1000
 
+#' Diapos seulement : le bilan de la banque A de l'exemple 1 en deux colonnes
+#' empilées (actif, passif), une étape par appel : 1 = avant le prêt ; 2 = après
+#' le prêt de 1 000 € à Léa ; 3 = après le paiement au vendeur (banque B).
+graphe_bilan <- function(base_size = 16, etape = 3) {
+  b <- bilan_cm6[etape, ]
+  postes <- c(reserves = "Réserves", credits = "Crédits", fonds_propres = "Fonds propres", depots = "Dépôts")
+  d <- data.frame(
+    cote = factor(c("Actif", "Actif", "Passif", "Passif"), levels = c("Actif", "Passif")),
+    poste = factor(unname(postes), levels = unname(postes)),
+    montant = unlist(b[names(postes)])
+  )
+  millier <- function(x) format(x, big.mark = " ", trim = TRUE)
+  d$etiquette <- paste(d$poste, millier(d$montant))
+  totaux <- data.frame(cote = factor(c("Actif", "Passif"), levels = c("Actif", "Passif")),
+                       total = c(b$reserves + b$credits, b$depots + b$fonds_propres))
+  taille <- base_size / 3.6
+  ggplot(d, aes(cote, montant, fill = poste, group = poste)) +
+    geom_col(width = 0.9, colour = "#FFFFFF", linewidth = 0.8, position = position_stack(reverse = TRUE)) +
+    geom_text(aes(label = etiquette), position = position_stack(vjust = 0.5, reverse = TRUE),
+              colour = "#FFFFFF", family = police_cours, size = taille * 0.62) +
+    geom_text(data = totaux, aes(cote, total, label = paste("Total", millier(total))), inherit.aes = FALSE,
+              vjust = -0.5, family = police_cours, size = taille, colour = couleurs_eco[["equilibre"]]) +
+    scale_fill_manual(values = c(`Réserves` = couleurs_eco[["offre"]], `Crédits` = couleurs_eco[["demande"]],
+                                 `Dépôts` = couleurs_eco[["demande"]], `Fonds propres` = couleurs_eco[["neutre"]])) +
+    scale_y_continuous(limits = c(0, 12500), breaks = c(0, 5000, 10000), labels = millier) +
+    labs(x = NULL, y = "Montant (€)") +
+    theme_cours(base_size = base_size)
+}
+
 # ---------------------------------------------------------------------------
 # 2. Exemple 2 : une panique bancaire à la Diamond et Dybvig (nombres ronds)
 #    100 déposants de 100 € ; réserves 1 000 €, prêts 9 000 € remboursés dans
@@ -69,33 +98,39 @@ seuil_panique_cm6 <- with(panique_cm6, {
 #' tout de suite ou qu'il attend, en fonction du nombre de déposants qui
 #' retirent. Deux équilibres : calme (10 retraits) et panique (100 retraits).
 #' Graduations chiffrées assumées : la figure illustre l'exemple chiffré.
-graphe_panique <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = « retirer » seule,
+#'   avec la banque vide à 55 ; 2 = ajoute « attendre » et l'équilibre calme ;
+#'   3 = ajoute le seuil ≈ 18 ; 4 = figure complète (panique), identique à la page
+graphe_panique <- function(base_size = 16, etape = 4) {
   n <- seq(panique_cm6$impatients, panique_cm6$deposants, by = 0.5)
   d <- rbind(
     data.frame(n = n, serie = "retirer", gain = gain_retirer(n)),
     data.frame(n = n, serie = "attendre", gain = gain_attendre(n))
   )
   d <- d[!is.na(d$gain), ]
+  if (etape < 2) d <- d[d$serie == "retirer", ]
   taille <- base_size / 3
   vide <- liquidite_max() / panique_cm6$depot                # 55 : la banque est vide
+  i_pt <- if (etape >= 4) 1:2 else if (etape >= 2) 1 else integer(0)   # calme, puis panique
+  i_ser <- if (etape >= 2) 1:2 else 1                                   # retirer, puis attendre
   ggplot(d, aes(n, gain, colour = serie)) +
-    annotate("segment", x = seuil_panique_cm6, xend = seuil_panique_cm6, y = 0, yend = 108,
-             linetype = "22", colour = couleurs_eco[["neutre"]]) +
+    (if (etape >= 3) annotate("segment", x = seuil_panique_cm6, xend = seuil_panique_cm6, y = 0, yend = 108,
+             linetype = "22", colour = couleurs_eco[["neutre"]])) +
     annotate("segment", x = vide, xend = vide, y = 0, yend = 118,
              linetype = "22", colour = couleurs_eco[["neutre"]]) +
-    annotate("text", x = seuil_panique_cm6 + 1, y = 6, label = "seuil ≈ 18",
-             hjust = 0, family = police_cours, size = taille * 0.85, colour = couleurs_eco[["neutre"]]) +
+    (if (etape >= 3) annotate("text", x = seuil_panique_cm6 + 1, y = 6, label = "seuil ≈ 18",
+             hjust = 0, family = police_cours, size = taille * 0.85, colour = couleurs_eco[["neutre"]])) +
     annotate("text", x = vide + 1, y = 122, label = "banque vide (55)",
              hjust = 0, family = police_cours, size = taille * 0.85, colour = couleurs_eco[["neutre"]]) +
     geom_line(linewidth = 1.4) +
-    annotate("point", x = c(10, 100), y = c(gain_attendre(10), gain_retirer(100)), size = 3,
-             colour = couleurs_eco[["equilibre"]]) +
-    annotate("text", x = 12, y = 116, label = "équilibre calme", hjust = 0,   # près du point (10 ; 110)
-             family = police_cours, size = taille * 0.85) +
-    annotate("text", x = 99, y = 46, label = "panique", hjust = 1,
-             family = police_cours, size = taille * 0.85) +
-    annotate("text", x = c(58, 21), y = c(108, 25), label = c("retirer tout de suite", "attendre un an"),
-             colour = unname(couleurs_eco[c("alerte", "demande")]), hjust = 0,
+    (if (etape >= 2) annotate("point", x = c(10, 100)[i_pt], y = c(gain_attendre(10), gain_retirer(100))[i_pt], size = 3,
+             colour = couleurs_eco[["equilibre"]])) +
+    (if (etape >= 2) annotate("text", x = 12, y = 116, label = "équilibre calme", hjust = 0,   # près du point (10 ; 110)
+             family = police_cours, size = taille * 0.85)) +
+    (if (etape >= 4) annotate("text", x = 99, y = 46, label = "panique", hjust = 1,
+             family = police_cours, size = taille * 0.85)) +
+    annotate("text", x = c(58, 21)[i_ser], y = c(108, 25)[i_ser], label = c("retirer tout de suite", "attendre un an")[i_ser],
+             colour = unname(couleurs_eco[c("alerte", "demande")])[i_ser], hjust = 0,
              family = police_cours, size = taille) +
     scale_colour_manual(values = c(retirer = couleurs_eco[["alerte"]], attendre = couleurs_eco[["demande"]])) +
     scale_x_continuous(breaks = c(10, 30, 55, 100)) +
@@ -113,7 +148,9 @@ graphe_panique <- function(base_size = 16) {
 svb_cm6 <- utils::read.csv(here::here("data/cm6/svb_table1.csv"), check.names = FALSE)
 
 #' Barres horizontales : SVB face aux grandes banques américaines (2022 T4).
-graphe_svb <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = composition de
+#'   l'actif (prêts, titres ; les quatre lignes restent en place) ; 2 = figure complète
+graphe_svb <- function(base_size = 16, etape = 2) {
   d <- rbind(
     data.frame(indicateur = svb_cm6$indicateur, banque = "SVB", valeur = svb_cm6$svb),
     data.frame(indicateur = svb_cm6$indicateur, banque = "Grandes banques américaines (moyenne)",
@@ -125,7 +162,9 @@ graphe_svb <- function(base_size = 16) {
   d$indicateur <- factor(courtes[match(d$indicateur, svb_cm6$indicateur)], levels = rev(courtes))
   d$banque <- factor(d$banque, levels = c("SVB", "Grandes banques américaines (moyenne)"),
                      labels = c("SVB", "Grandes banques (moyenne)"))   # libellé court : la légende tient
+  if (etape < 2) d <- d[d$indicateur %in% courtes[1:2], ]
   ggplot(d, aes(valeur, indicateur, fill = banque)) +
+    (if (etape < 2) scale_y_discrete(drop = FALSE)) +
     geom_col(position = position_dodge(width = 0.75), width = 0.7) +
     geom_text(aes(label = paste0(valeur, " %")), position = position_dodge(width = 0.75),
               hjust = -0.15, family = police_cours, size = base_size / 3.4, colour = couleurs_eco[["equilibre"]]) +
@@ -154,19 +193,23 @@ valeur_mois <- function(serie, mois) m3_cm6[[serie]][m3_cm6$mois == mois]
 
 #' Lignes : croissance sur un an de M3, des crédits aux ménages et des crédits
 #' aux entreprises (sociétés non financières), zone euro, janvier 2019 - août 2026.
-graphe_m3_credits <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = M3 seule ;
+#'   2 = ajoute les deux séries de crédits ; 3 = figure complète (hausse des taux
+#'   de juillet 2022), identique à la page
+graphe_m3_credits <- function(base_size = 16, etape = 3) {
   noms <- c(m3 = "Monnaie (M3)", credits_snf = "Crédits aux entreprises",
             credits_menages = "Crédits aux ménages")
   d <- do.call(rbind, lapply(names(noms), function(s)
     data.frame(date = m3_cm6$date, serie = noms[[s]], valeur = m3_cm6[[s]])))
   d$serie <- factor(d$serie, levels = unname(noms))
+  if (etape < 2) d <- d[d$serie == noms[["m3"]], ]
   ggplot(d, aes(date, valeur, colour = serie)) +
     geom_hline(yintercept = 0, colour = couleurs_eco[["equilibre"]], linewidth = 0.4) +
-    annotate("segment", x = as.Date("2022-07-27"), xend = as.Date("2022-07-27"), y = -2, yend = 13,
-             linetype = "22", colour = couleurs_eco[["neutre"]]) +
-    annotate("text", x = as.Date("2022-09-01"), y = 13, label = "juillet 2022 : la BCE\ncommence à relever ses taux",
+    (if (etape >= 3) annotate("segment", x = as.Date("2022-07-27"), xend = as.Date("2022-07-27"), y = -2, yend = 13,
+             linetype = "22", colour = couleurs_eco[["neutre"]])) +
+    (if (etape >= 3) annotate("text", x = as.Date("2022-09-01"), y = 13, label = "juillet 2022 : la BCE\ncommence à relever ses taux",
              hjust = 0, vjust = 1, lineheight = 0.9, family = police_cours, size = base_size / 3.6,
-             colour = couleurs_eco[["neutre"]]) +
+             colour = couleurs_eco[["neutre"]])) +
     geom_line(linewidth = 1.1) +
     scale_colour_manual(values = unname(couleurs_eco[c("equilibre", "demande", "offre")])) +
     scale_x_date(breaks = as.Date(paste0(2019:2026, "-01-01")), labels = as.character(2019:2026)) +
@@ -197,12 +240,16 @@ composition_m3_cm6$part <- 100 * composition_m3_cm6$md_eur / encours("m3")
 
 #' Barres horizontales : les quatre composantes de M3, zone euro, août 2026.
 #' Les billets et pièces (ambre) se détachent des formes bancaires (azur).
-graphe_composition_m3 <- function(base_size = 16) {
+#' @param etape construction pas à pas pour les diapos : 1 = M1 seule (billets
+#'   et dépôts à vue, les quatre lignes restent en place) ; 2 = figure complète
+graphe_composition_m3 <- function(base_size = 16, etape = 2) {
   d <- composition_m3_cm6
   d$composante <- factor(d$composante, levels = rev(d$composante))   # billets en haut
   d$billets <- d$composante == "Billets et pièces"
   d$etiquette <- paste0(format(d$md_eur, big.mark = " ", trim = TRUE), " Md€ (", round(d$part), " %)")
+  if (etape < 2) d <- d[1:2, ]                                       # M1 = deux premières lignes
   ggplot(d, aes(md_eur, composante, fill = billets)) +
+    (if (etape < 2) scale_y_discrete(drop = FALSE)) +
     geom_col(width = 0.65) +
     geom_text(aes(label = etiquette), hjust = -0.08, family = police_cours,
               size = base_size / 3.4, colour = couleurs_eco[["equilibre"]]) +
