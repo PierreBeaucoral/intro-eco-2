@@ -36,7 +36,7 @@ source(here::here("R/cmN.R"))   # même fichier que la page de cours
 
 **Question de la séance** : comment la fermeture d'un détroit lointain se répercute-t-elle si vite sur les prix en France ?
 
-[Sources : Insee, 24/03/2026 ; Commission européenne, *Weekly Oil Bulletin*, consulté le 21/10/2026.]{.wp-source}
+[Sources : [Insee, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf) ; Commission européenne, [*Weekly Oil Bulletin*](https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en), consulté le 21/10/2026.]{.wp-source}
 
 ::: {.notes}
 0 h 00 – 0 h 06. Question à l'amphi : qui a fait le plein cette semaine ? Transition : trois outils déjà connus.

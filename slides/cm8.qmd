@@ -26,7 +26,7 @@ source(here::here("R/cm8.R"))   # même fichier que la page de cours
 
 - Mai 2010 : premier plan d'aide de la zone euro et du FMI, puis deux autres (2012, 2015) : environ 289 Md€ de prêts. En échange, l'État baisse ses dépenses et augmente ses impôts : c'est l'**austérité**.
 
-[Sources : Commission européenne, 08/01/2010 (révision d'octobre 2009) ; MES, page « Greece » (février à mai 2010), consultée le 21/10/2026.]{.wp-source}
+[Sources : [Commission européenne, 08/01/2010](https://ec.europa.eu/eurostat/web/products-eurostat-news/-/com_2010_report_greek) (révision d'octobre 2009) ; [MES, page « Greece »](https://www.esm.europa.eu/assistance/greece) (février à mai 2010), consultée le 21/10/2026.]{.wp-source}
 
 ::: {.notes}
 0 h 00 – 0 h 05. Accroche : l'événement déclencheur est la révision des comptes, pas la récession. Question à l'amphi : qui a entendu parler de la crise grecque ? Le déficit de 2009 est aujourd'hui estimé à 15,4 % du PIB (Eurostat, série téléchargée le 21/10/2026). La Grèce sort du dernier plan le 20 août 2018 (La finance pour tous) ; la DG Trésor arrondit à 290 Md€ (03/11/2025). Transition : quelles conséquences observe-t-on ensuite ?
@@ -50,7 +50,7 @@ graphe_grece(base_size = 24, etape = 1)
 
 ::: {.fragment}
 
-- En 2025, il reste inférieur de 13,9 % à son niveau de 2008 (Eurostat).
+- En 2025, il reste inférieur de 13,9 % à son niveau de 2008 ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table)).
 :::
 :::
 ::::
@@ -213,7 +213,7 @@ graphe_solde_corrige(base_size = 24)
 :::
 ::::
 
-[Source : Commission européenne, AMECO (UBLGIE, UBLGBP), printemps 2026, téléchargé le 22/10/2026.]{.wp-source}
+[Source : [Commission européenne, AMECO](https://economy-finance.ec.europa.eu/economic-research-and-databases/economic-databases/ameco-database_en) (UBLGIE, UBLGBP), printemps 2026, téléchargé le 22/10/2026.]{.wp-source}
 
 ::: {.notes}
 0 h 29 – 0 h 32. PIB potentiel : la production qu'on obtiendrait si les capacités de production étaient utilisées normalement ; c'est une estimation, révisée et discutée, pas une observation. Les deux séries n'ont pas le même dénominateur (PIB et PIB potentiel). Le creux de 2013 vient de mesures ponctuelles, environ 8,6 points de PIB potentiel, dont la base ne donne pas la nature : ne pas le commenter davantage. Question : pourquoi le solde observé s'améliore-t-il moins vite que le solde corrigé ? (La récession fait baisser les recettes.) Transition : de combien une coupe réduit-elle le PIB ?
@@ -337,7 +337,7 @@ graphe_multiplicateur(base_size = 24)
 ::: {.incremental}
 - Une partie de chaque euro de revenu part en **impôts**, en **épargne** ou en **importations** : elle ne relance pas la vague suivante.
 - La **banque centrale** peut baisser ses taux pour soutenir l'activité.
-- Les multiplicateurs estimés sont donc bien plus petits : proches de **0,5 en temps normal**, d'après les études citées par Blanchard et Leigh (2013).
+- Les multiplicateurs estimés sont donc bien plus petits : proches de **0,5 en temps normal**, d'après les études citées par [Blanchard et Leigh (2013)](https://www.aeaweb.org/articles?id=10.1257/aer.103.3.117).
 :::
 
 ::: {.notes}
@@ -352,7 +352,7 @@ graphe_multiplicateur(base_size = 24)
 [2008 · Eugene Salazar (FMI), domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Olivier Blanchard et Daniel Leigh** (2013), « Growth Forecast Errors and Fiscal Multipliers », *American Economic Review* · macroéconomie appliquée (FMI). Plus un pays européen prévoyait une austérité forte en 2010, plus sa croissance a été inférieure aux prévisions.
+**Olivier Blanchard et Daniel Leigh** (2013), [« Growth Forecast Errors and Fiscal Multipliers »](https://www.aeaweb.org/articles?id=10.1257/aer.103.3.117), *American Economic Review* · macroéconomie appliquée (FMI). Plus un pays européen prévoyait une austérité forte en 2010, plus sa croissance a été inférieure aux prévisions.
 :::
 
 . . .
@@ -684,7 +684,7 @@ Taux apparent i = intérêts versés / dette de l'année précédente, comparé 
 4. Variation observée : **+27,3 points**.
 :::
 
-[Source : Eurostat (gov_10dd_edpt1, nama_10_gdp), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
+[Source : Eurostat ([gov_10dd_edpt1](https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table), [nama_10_gdp](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table)), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
 
 ::: {.notes}
 2 h 03 – 2 h 07. Appliquer la méthode en trois questions. L'essentiel de la hausse vient de l'effet boule de neige, pas du déficit primaire, déjà réduit à 2,8 % du PIB. L'écart restant (27,3 contre 23,1) vient en partie de l'approximation, qui sous-estime l'effet quand la croissance est très négative, et d'opérations hors solde. De 2012 à 2016, les prix baissent même (déflateur du PIB : −2,0 % en 2013) : le taux réel r ≈ i − π dépasse alors le taux nominal. Question : la hausse vient-elle surtout du déficit primaire ou de la boule de neige ? Transition : la même formule en 2023.
@@ -705,7 +705,7 @@ Même formule, autre signe.
 
 La croissance en valeur, gonflée par l'inflation, dépasse un taux apparent resté bas.
 
-[Source : Eurostat (gov_10dd_edpt1, nama_10_gdp), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
+[Source : Eurostat ([gov_10dd_edpt1](https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table), [nama_10_gdp](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table)), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
 
 ::: {.notes}
 2 h 07 – 2 h 10. Écarts et effets calculés sur les valeurs non arrondies (i = 2,08 %, croissance = 8,74 %, écart = −6,66 points) : d'où −6,7 et non 2,1 − 8,7 = −6,6. Pourquoi un taux apparent si bas ? Une grande partie de la dette est due à des prêteurs publics européens, qui ont réduit les taux et allongé les durées de remboursement dès novembre 2012 (MES). Transition : la dette a changé de nature.
@@ -733,7 +733,7 @@ graphe_dette_instruments(base_size = 24)
 :::
 ::::
 
-[Source : Eurostat (gov_10q_ggdebt, 4e trimestre), téléchargé le 22/10/2026.]{.wp-source}
+[Source : Eurostat ([gov_10q_ggdebt](https://ec.europa.eu/eurostat/databrowser/view/gov_10q_ggdebt/default/table), 4e trimestre), téléchargé le 22/10/2026.]{.wp-source}
 
 ::: {.notes}
 2 h 10 – 2 h 13. Précaution : la série distingue l'instrument, pas le prêteur ; mais en 2025, 252,7 des 257,2 Md€ de prêts sont dus à des non-résidents (Eurostat, gov_10dd_ggd). La chute des titres en 2012 mêle la décote, l'échange contre de nouveaux titres et le rachat de décembre 2012 : ce n'est pas le seul montant annulé. Depuis 2018, les titres remontent, de 52,9 à 98,0 Md€ en 2025. Question : pourquoi un prêteur public peut-il prêter moins cher que le marché ? Transition : le taux du marché, lui, a explosé.
@@ -824,8 +824,8 @@ graphe_chomage_groupes(base_size = 24) +
 ## Répartition par génération et par revenu : chômage des jeunes et pauvreté
 
 ::: {.incremental}
-- **Par génération** : chez les 15-24 ans actifs, le chômage passe de 26,1 % en 2009 à **59,2 %** en 2013, puis 19,1 % en 2025 (Eurostat). De 2010 à 2017, le solde migratoire est « largement négatif » (DG Trésor, 03/11/2025) ; il redevient positif depuis 2022.
-- **Par revenu** : risque de pauvreté ou d'exclusion sociale de 28,1 % en 2008 à **36,0 %** en 2014 (Eurostat, définition « Europe 2020 »).
+- **Par génération** : chez les 15-24 ans actifs, le chômage passe de 26,1 % en 2009 à **59,2 %** en 2013, puis 19,1 % en 2025 ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/une_rt_a/default/table)). De 2010 à 2017, le solde migratoire est « largement négatif » ([DG Trésor, 03/11/2025](https://www.tresor.economie.gouv.fr/PagesInternationales/Pages/67796625-12c8-45e7-8872-6b274f92ad24/files/8ccbdff5-3afc-4274-a508-f6991b0c4db4)) ; il redevient positif depuis 2022.
+- **Par revenu** : risque de pauvreté ou d'exclusion sociale de 28,1 % en 2008 à **36,0 %** en 2014 ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01/default/table), définition « Europe 2020 »).
 :::
 
 ::: {.notes}
@@ -855,7 +855,7 @@ graphe_soldes_demographiques(base_size = 24)
 :::
 ::::
 
-[Source : Eurostat (demo_gind), téléchargé le 22/10/2026 ; 2025 provisoire.]{.wp-source}
+[Source : Eurostat ([demo_gind](https://ec.europa.eu/eurostat/databrowser/view/demo_gind/default/table)), téléchargé le 22/10/2026 ; 2025 provisoire.]{.wp-source}
 
 ::: {.notes}
 2 h 24 – 2 h 27. Solde migratoire : arrivées moins départs ; solde naturel : naissances moins décès. Le solde migratoire est calculé par différence et absorbe les corrections des recensements de 2011 et 2021 : ne pas commenter 2021. La citation de la DG Trésor (« largement négatif » depuis 2010) vaut pour la crise, pas pour les années récentes. Question : quel lien faire avec le chômage des 15-24 ans, à 59,2 % en 2013 ? Transition : le coût social se voit aussi dans la rue.
@@ -883,12 +883,12 @@ graphe_soldes_demographiques(base_size = 24)
 ## Les créanciers ont partagé la perte, inégalement
 
 ::: {.incremental}
-- **Investisseurs privés, surtout des banques** : décote de 53,5 % sur leurs obligations grecques en 2012 (MES).
+- **Investisseurs privés, surtout des banques** : décote de 53,5 % sur leurs obligations grecques en 2012 ([MES](https://www.esm.europa.eu/assistance/greece)).
 - **Créanciers publics** (zone euro, fonds européens, FMI) : environ 289 Md€ prêtés, remboursés à des taux réduits et sur des durées allongées.
 - **Les Grecs** : hausses d'impôts, coupes, puis une reprise lente : +11 % de PIB réel de 2018 à 2024, moins de 2 % par an.
 :::
 
-[Sources : MES, consulté le 21/10/2026 ; Eurostat, calculs du cours.]{.wp-source}
+[Sources : [MES, consulté le 21/10/2026](https://www.esm.europa.eu/assistance/greece) ; [Eurostat](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table), calculs du cours.]{.wp-source}
 
 ::: {.notes}
 2 h 28 – 2 h 30. Détail des 289 Md€ (MES, consulté le 21/10/2026) : 52,9 Md€ de prêts des pays de la zone euro, 141,8 Md€ du Fonds européen de stabilité financière, 32,1 Md€ du FMI, 61,9 Md€ du MES. Reprise : Eurostat, calculs du cours ; la DG Trésor avance 3,9 % par an en retirant 2020, mais pas le rebond de 2021 (03/11/2025). Question : qui, des trois, a le plus perdu ? Laisser répondre, sans trancher. Transition : fallait-il un ajustement aussi rapide ?
@@ -903,7 +903,7 @@ graphe_soldes_demographiques(base_size = 24)
 - Bilan mesuré : PIB réel de 2025 inférieur de **13,9 %** à 2008, en volume.
 :::
 
-[Source : Eurostat (gov_10dd_edpt1, nama_10_gdp), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
+[Source : Eurostat ([gov_10dd_edpt1](https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table), [nama_10_gdp](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table)), séries téléchargées le 21/10/2026 ; calculs du cours.]{.wp-source}
 
 ::: {.notes}
 2 h 30 – 2 h 32. Solde primaire : Eurostat, solde public + intérêts, calculs du cours. Avant de citer un chiffre, savoir ce qu'il mesure : la note du Trésor (03/11/2025) dit le PIB « légèrement inférieur » à son niveau d'avant-crise, sans préciser valeur ou volume ; en valeur, le PIB de 2024 n'est qu'à 0,4 % sous celui de 2008. Question : sans prêts, quelles options restaient à l'État grec ? Transition : la controverse, ce qui est et ce qui devrait être.
@@ -913,7 +913,7 @@ graphe_soldes_demographiques(base_size = 24)
 
 **Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
 
-- Le multiplicateur a été sous-estimé au début de la crise (Blanchard et Leigh, 2013).
+- Le multiplicateur a été sous-estimé au début de la crise ([Blanchard et Leigh, 2013](https://www.aeaweb.org/articles?id=10.1257/aer.103.3.117)).
 - Le ratio a monté tant que r dépassait g, puis baissé vite avec la croissance et des excédents primaires.
 
 . . .
@@ -931,8 +931,8 @@ graphe_soldes_demographiques(base_size = 24)
 
 ::: {.incremental}
 - **Keynésiens** : en pleine récession, le multiplicateur est élevé ; l'austérité y est contre-productive.
-- **Équivalence ricardienne** (Barro, 1974) : une baisse d'impôts financée par l'emprunt est compensée par l'épargne des ménages ; multiplicateur inférieur à 1.
-- **Austérité expansive** (Giavazzi et Pagano, 1990) : au Danemark et en Irlande, dans les années 1980, une forte austérité a été suivie d'une reprise : un ajustement crédible peut rétablir la **confiance**.
+- **Équivalence ricardienne** ([Barro, 1974](https://doi.org/10.1086/260266)) : une baisse d'impôts financée par l'emprunt est compensée par l'épargne des ménages ; multiplicateur inférieur à 1.
+- **Austérité expansive** ([Giavazzi et Pagano, 1990](https://doi.org/10.1086/654131)) : au Danemark et en Irlande, dans les années 1980, une forte austérité a été suivie d'une reprise : un ajustement crédible peut rétablir la **confiance**.
 :::
 
 ::: {.notes}

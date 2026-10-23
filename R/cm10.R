@@ -1,4 +1,4 @@
-# cm10.R · graphiques du CM 10 (actualisation, climat entre Nord et Sud),
+# cm10.R · graphiques du CM 10 (actualisation, économie du changement climatique),
 # partagés par la page de cours (base_size = 16) et les diapos (base_size = 24).
 # Dépend de R/theme_cours.R (couleurs_eco, ordre_series, police_cours, theme_cours).
 #

@@ -69,6 +69,8 @@ Une institution ou une règle de droit liée au sujet, en deux ou trois phrases.
 
 ## Pour aller plus loin
 
+<!-- Dans le texte, chaque source citée est un lien vers l'URL de cette liste : ([*Média*, JJ/MM/AAAA](https://…)). Pas de lien dans fig-alt. -->
+
 <!-- Dans le PDF, la vidéo devient automatiquement un lien (assets/typst/wp-typst.lua). -->
 ::: {.wp-video}
 <iframe src="https://www.youtube-nocookie.com/embed/IDENTIFIANT" title="Titre exact de la vidéo" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>

@@ -614,3 +614,90 @@ stopifnot(
                         chine_an_cm9("emploi_industrie_millions", 2000))), 33),
   max(chine_cm9$part_chine_pct) < 26, min(chine_cm9$emploi_industrie_millions) > 10      # dans les axes
 )
+
+# ---------------------------------------------------------------------------
+# 11. Graphiques de données : répartition du coût des droits par revenu
+#     (paragraphe « Par revenu » de la page, @fig-biens-revenu-quintiles et
+#     @fig-cout-droits-deciles). Fichiers et provenance : data/cm9/SOURCES.md ;
+#     CSV construits par data/cm9/preparer_revenu.R (jamais appelé au rendu).
+# ---------------------------------------------------------------------------
+# 11 a. BLS, Consumer Expenditure Surveys, quintiles de revenu avant impôt, 2023 :
+#       dépense en biens (six postes) en % du revenu après impôt. 2023 et non 2024 :
+#       le BLS n'a pas produit le revenu après impôt dans les tableaux 2024.
+cex_cm9 <- utils::read.csv(here::here("data/cm9/depenses_biens_quintiles_us_2023_2024.csv"))
+biens_q_cm9 <- cex_cm9$biens_pct_rev_apres[cex_cm9$annee == 2023 & cex_cm9$groupe %in% paste0("Q", 1:5)]
+# 11 b. Yale Budget Lab, droits en vigueur au 24/08/2026, après substitution des achats :
+#       coût annuel en % du revenu après impôts et transferts et en dollars de 2025.
+ybl_cm9 <- utils::read.csv(here::here("data/cm9/cout_droits_deciles_yale_2026.csv"))
+ybl_d_cm9 <- ybl_cm9[ybl_cm9$decile != "Total", ]
+# 11 c. Tax Policy Center (cité dans le texte seulement) : hausse du taux moyen
+#       d'imposition fédérale, en points de revenu monétaire élargi, 2026.
+tpc_cm9 <- utils::read.csv(here::here("data/cm9/hausse_impot_droits_quintiles_tpc_2026.csv"))
+tpc_pts_cm9 <- function(g) tpc_cm9$hausse_taux_moyen_pts[tpc_cm9$groupe == g]
+
+#' Barres verticales étiquetées (« valeur % ») ; les deux extrêmes, à comparer, en rouge.
+#' @param x étiquettes des groupes, dans l'ordre ; y valeurs en %
+#' @param ymax, pas étendue et pas de l'axe vertical ; n_axe décimales des graduations
+#' @param x_lab, y_lab, source_txt titres des axes et source (sous le graphique)
+barres_revenu_cm9 <- function(x, y, ymax, pas, n_axe, x_lab, y_lab, source_txt, base_size = 16) {
+  d <- data.frame(x = factor(x, levels = x), y = y)
+  d$couleur <- ifelse(seq_along(y) %in% c(1, length(y)), couleurs_eco[["alerte"]], couleurs_eco[["demande"]])
+  ggplot(d, aes(x, y)) +
+    geom_col(aes(fill = couleur), width = 0.7) +
+    # diapos : valeurs sans « % » (déjà sur l'axe), pour que dix étiquettes ne se touchent pas
+    geom_text(aes(label = if (base_size > 16) virgule_cm9(y) else paste(virgule_cm9(y), "%"),
+                  colour = couleur), vjust = -0.5,
+              family = police_cours, size = base_size / 3.6) +
+    scale_fill_identity() + scale_colour_identity() +
+    scale_y_continuous(limits = c(0, ymax), breaks = seq(0, ymax, pas),
+                       labels = function(v) paste(virgule_cm9(v, n_axe), "%"), expand = c(0, 0)) +
+    labs(x = x_lab, y = y_lab, caption = source_txt) +
+    theme_cours(base_size = base_size, donnees = TRUE) +
+    theme(legend.position = "none", plot.caption = element_text(margin = margin(t = 10)))
+}
+
+#' Dépense en biens de consommation des ménages américains, en % du revenu après
+#' impôt, par quintile de revenu avant impôt, 2023 (BLS).
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_biens_revenu <- function(base_size = 16) {
+  diapo <- base_size > 16   # diapos : titres d'axe et source plus courts
+  barres_revenu_cm9(
+    c("20 % les plus\nmodestes", "2e", "3e", "4e", "20 % les plus\naisés"), biens_q_cm9,
+    ymax = 60, pas = 10, n_axe = 0,
+    x_lab = if (diapo) "Quintile de revenu avant impôt" else "Cinquième (quintile) de revenu avant impôt",
+    y_lab = if (diapo) "% du revenu après impôt" else "Biens, en % du revenu après impôt",
+    source_txt = if (diapo) "Source : BLS, Consumer Expenditure Surveys 2023 (23/10/2026)." else
+      paste0("Source : BLS, Consumer Expenditure Surveys, 2023 (téléchargé le 23/10/2026) ;\n",
+             "calcul de l'auteur."),
+    base_size = base_size)
+}
+
+#' Coût annuel estimé des droits de douane américains en vigueur, en % du revenu
+#' après impôts et transferts, par décile de revenu (Yale Budget Lab, 24/08/2026).
+#' @param base_size 16 (page) ou 24 (diapos)
+graphe_cout_droits_deciles <- function(base_size = 16) {
+  diapo <- base_size > 16
+  barres_revenu_cm9(
+    ybl_d_cm9$decile, ybl_d_cm9$pct_revenu_postsub, ymax = 1.6, pas = 0.4, n_axe = 1,
+    x_lab = if (diapo) "Décile (1 : plus modestes ; 10 : plus aisés)" else
+      "Décile de revenu (1 : plus modestes ; 10 : plus aisés)",
+    y_lab = if (diapo) "% du revenu disponible" else "Coût, en % du revenu disponible",
+    source_txt = if (diapo) "Source : Yale Budget Lab (24/08/2026)." else
+      paste0("Source : Yale Budget Lab, « The State of U.S. Tariffs », mise à jour du 24/08/2026\n",
+             "(droits en vigueur, après substitution des achats ; téléchargé le 23/10/2026)."),
+    base_size = base_size)
+}
+
+# Vérifications : chiffres du paragraphe « Par revenu » et des deux légendes
+stopifnot(
+  length(biens_q_cm9) == 5, nrow(ybl_d_cm9) == 10, identical(ybl_d_cm9$decile, as.character(1:10)),
+  proche(biens_q_cm9, c(48.9, 26.8, 23.2, 19.9, 15.6)),                           # BLS, 2023
+  proche(round(biens_q_cm9[1] / biens_q_cm9[5], 1), 3.1),                         # 3,1 fois
+  proche(round(ybl_d_cm9$pct_revenu_postsub[c(1, 10)], 2), c(1.32, 0.42)),        # Yale, % du revenu
+  proche(round(ybl_d_cm9$pct_revenu_postsub[c(1, 10)], 1), c(1.3, 0.4)),
+  proche(round(range(ybl_d_cm9$pct_revenu_postsub[2:9]), 1), c(0.6, 0.8)),        # déciles 2 à 9
+  proche(round(ybl_d_cm9$pct_revenu_postsub[1] / ybl_d_cm9$pct_revenu_postsub[10]), 3),   # trois fois
+  proche(round(ybl_d_cm9$usd_postsub[c(1, 10)], -1), c(490, 2100)),               # environ 490 et 2 100 $
+  proche(c(tpc_pts_cm9("Lowest Quintile"), tpc_pts_cm9("Top Quintile")), c(0.8, 0.6)),   # TPC, points
+  max(biens_q_cm9) < 60, max(ybl_d_cm9$pct_revenu_postsub) < 1.6                  # dans les axes
+)

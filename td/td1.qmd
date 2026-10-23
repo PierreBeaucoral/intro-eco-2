@@ -42,7 +42,7 @@ Les références complètes des documents, avec leurs liens, sont données à la
 
 Le détroit d'Ormuz est fermé de fait à partir du 28 février 2026. Les prix sont des moyennes nationales pondérées, relevées chaque semaine, et non des prix de station ; ils sont arrondis au centime.
 
-[Source : Commission européenne, *Weekly Oil Bulletin*, prix à la consommation avec taxes, France, consulté le 21/10/2026 ; conversion en euros par litre par l'enseignant.]{.wp-source}
+[Source : [Commission européenne, *Weekly Oil Bulletin*](https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en), prix à la consommation avec taxes, France, consulté le 21/10/2026 ; conversion en euros par litre par l'enseignant.]{.wp-source}
 :::
 
 ::: {.wp-document data-label="Document 2"}
@@ -52,7 +52,7 @@ Le 28 février 2026, la guerre entre les États-Unis et Israël d'un côté et l
 
 Le gazole est touché deux fois. L'Europe importe une partie de son gazole déjà raffiné dans le Golfe : son prix augmente donc plus que ne le voudrait la seule hausse du pétrole brut. Fin juillet, la Russie décide un moratoire sur ses exportations de diesel ; fin août, les hostilités reprennent entre l'Iran et les États-Unis et des raffineries sont endommagées.
 
-[Source : texte rédigé par l'enseignant d'après Insee, *Note de conjoncture*, 24/03/2026 (citation entre guillemets) et 17/06/2026 ; AFP, *Connaissance des Énergies*, 10/09/2026 ; Brent : EIA, *Europe Brent Spot Price FOB*, consulté le 21/10/2026.]{.wp-source}
+[Source : texte rédigé par l'enseignant d'après [Insee, *Note de conjoncture*, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf) (citation entre guillemets) et [17/06/2026](https://www.insee.fr/fr/statistiques/fichier/9007948/ndc-juin-2026.pdf) ; [AFP, *Connaissance des Énergies*, 10/09/2026](https://www.connaissancedesenergies.org/afp/detroit-dormuz-russie-houthis-les-raisons-de-la-nouvelle-flambee-du-diesel-260910) ; Brent : [EIA, *Europe Brent Spot Price FOB*](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=D), consulté le 21/10/2026.]{.wp-source}
 :::
 
 ::: {.wp-document data-label="Document 3"}
@@ -72,7 +72,7 @@ Chaque valeur par groupe est estimée à part : elle peut sortir de la fourchet
 
 Près de 90 % des actifs ruraux vont au travail en voiture, contre moins de 60 % dans les pôles urbains.
 
-[Source : Insee, « Comment les automobilistes ajustent leur consommation de carburant aux variations de prix à court terme », *Insee Analyses* n° 86, 06/07/2023 ; dernière phrase : Insee, *Insee Première* n° 2125, 08/09/2026.]{.wp-source}
+[Source : [Insee, « Comment les automobilistes ajustent leur consommation de carburant aux variations de prix à court terme », *Insee Analyses* n° 86, 06/07/2023](https://www.insee.fr/fr/statistiques/7645853) ; dernière phrase : [Insee, *Insee Première* n° 2125, 08/09/2026](https://www.insee.fr/fr/statistiques/9037833).]{.wp-source}
 :::
 
 ::: {.wp-document data-label="Document 4"}
@@ -82,7 +82,7 @@ Les 2 et 3 mars 2026, alors que les prix à la pompe ont encore peu bougé, plus
 
 Depuis le 22 juillet, TotalEnergies plafonne de nouveau ses prix dans ses quelque 3 300 stations de France hexagonale : le litre de sans-plomb 95 (SP95-E10) n'y dépasse pas 1,99 €, celui de gazole 2,25 €. Le 23 septembre, le SP95-E10 coûte en moyenne 2,16 € en France. Sa part de marché passe de 22 % habituellement à 25 % fin août, selon son PDG, puis dépasse 30 % en octobre, selon l'entreprise. Le 21 septembre, 17 % des stations françaises manquent d'au moins un carburant, et 91 % d'entre elles sont des stations Total.
 
-[Source : texte rédigé par l'enseignant d'après S. Collot, *The Conversation*, 13/10/2026 ; prix du 10 septembre (2,297 €, arrondi) : AFP, d'après les données gouvernementales, *Connaissance des Énergies*, 10/09/2026. Ces prix journaliers ne viennent pas de la même série que ceux du document 1. Second paragraphe : TotalEnergies, communiqués des 22/07 et 12/10/2026 ; AFP, *Connaissance des Énergies*, 29/08, 21/09 et 24/09/2026. Situation au 21/10/2026.]{.wp-source}
+[Source : texte rédigé par l'enseignant d'après [S. Collot, *The Conversation*, 13/10/2026](https://theconversation.com/ruee-anticipative-debut-mars-puis-effondrement-en-septembre-comment-expliquer-la-consommation-de-carburant-en-france-en-2026-293608) ; prix du 10 septembre (2,297 €, arrondi) : [AFP, d'après les données gouvernementales, *Connaissance des Énergies*, 10/09/2026](https://www.connaissancedesenergies.org/afp/detroit-dormuz-russie-houthis-les-raisons-de-la-nouvelle-flambee-du-diesel-260910). Ces prix journaliers ne viennent pas de la même série que ceux du document 1. Second paragraphe : [TotalEnergies, communiqués des 22/07](https://totalenergies.com/newsroom/compte-tenu-de-la-reprise-du-conflit-au-moyen-orient-totalenergies-remet-en-place-le-plafonnement-sur-lessence-a-199-eurl-dans-toutes-ses-stations-service-en-france/?lang=fra) et [12/10/2026](https://totalenergies.com/newsroom/diesel-en-france-totalenergies-sengage-a-restituer-aux-francais-lavantage-lie-a-la-liberation-de-stocks-strategiques-de-diesel/?lang=fra) ; [AFP, *Connaissance des Énergies*, 29/08](https://www.connaissancedesenergies.org/afp/prix-des-carburants-totalenergies-maintiendra-son-plafonnement-tant-que-le-conflit-durera-assure-son-pdg-260829), [21/09](https://www.connaissancedesenergies.org/afp/carburants-pas-denjeu-dapprovisionnement-a-ce-stade-en-france-assure-lescure-260921) et [24/09/2026](https://www.connaissancedesenergies.org/afp/carburants-face-a-une-crise-jamais-vue-les-stations-service-ont-le-blues-260924). Situation au 21/10/2026.]{.wp-source}
 :::
 
 ## Questions sur les documents
@@ -167,7 +167,7 @@ Sur un marché fictif de gazole, P est en euros par litre ; toutes les quantit�
 **Document 4.**
 
 - S. Collot, « Ruée anticipative début mars, puis effondrement en septembre : comment expliquer la consommation de carburant en France en 2026 ? », *The Conversation*, 13/10/2026, <https://theconversation.com/ruee-anticipative-debut-mars-puis-effondrement-en-septembre-comment-expliquer-la-consommation-de-carburant-en-france-en-2026-293608>.
-- AFP, *Connaissance des Énergies*, 10/09/2026 (prix du 10 septembre) : voir document 2.
+- [AFP, *Connaissance des Énergies*, 10/09/2026](https://www.connaissancedesenergies.org/afp/detroit-dormuz-russie-houthis-les-raisons-de-la-nouvelle-flambee-du-diesel-260910) (prix du 10 septembre) : voir document 2.
 - TotalEnergies, communiqué du 22/07/2026, <https://totalenergies.com/newsroom/compte-tenu-de-la-reprise-du-conflit-au-moyen-orient-totalenergies-remet-en-place-le-plafonnement-sur-lessence-a-199-eurl-dans-toutes-ses-stations-service-en-france/?lang=fra>.
 - TotalEnergies, communiqué du 12/10/2026, <https://totalenergies.com/newsroom/diesel-en-france-totalenergies-sengage-a-restituer-aux-francais-lavantage-lie-a-la-liberation-de-stocks-strategiques-de-diesel/?lang=fra>.
 - AFP, *Connaissance des Énergies*, 29/08/2026 (part de marché selon le PDG), <https://www.connaissancedesenergies.org/afp/prix-des-carburants-totalenergies-maintiendra-son-plafonnement-tant-que-le-conflit-durera-assure-son-pdg-260829>.

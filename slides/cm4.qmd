@@ -20,13 +20,13 @@ source(here::here("R/cm4.R"))   # même fichier que la page de cours
 
 . . .
 
-- Conséquences : loyers des annonces −2 à −5 % selon les villes (Chapelle et Fack, mai 2026).
+- Conséquences : loyers des annonces −2 à −5 % selon les villes ([Chapelle et Fack, mai 2026](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf)).
 
 . . .
 
 Fin de l'expérimentation le 23/11/2026. **Question de la séance** : faut-il encadrer les loyers ?
 
-[Sources : Chapelle et Fack, rapport de la mission d'évaluation, mai 2026 ; Sénat, octobre 2026.]{.wp-source}
+[Sources : [Chapelle et Fack, rapport de la mission d'évaluation, mai 2026](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf) ; [Sénat, octobre 2026](https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-retrouver-la-confiance-et-lequilibre-dans-les-rapports-locatifs.html).]{.wp-source}
 
 ::: {.notes}
 0 h 00 – 0 h 04. Question à l'amphi : qui paie un loyer ? Qui a signé un bail récemment dans une ville encadrée ? La théorie prédit qu'un plafond crée une pénurie : on va mesurer de combien, pour qui et à quel horizon, puis confronter la prédiction aux évaluations faites en France et aux États-Unis. Transition : pourquoi le sujet est-il si sensible ? Parce que le loyer pèse lourd.
@@ -89,7 +89,7 @@ graphe_taux_effort(base_size = 24)
 [1976 · UPI, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Milton Friedman et George J. Stigler** (1946), *Roofs or Ceilings?* · école de Chicago (néoclassique). Les plafonds de loyer ne font pas disparaître le manque de logements : ils remplacent la répartition par le prix par une répartition « par le hasard et le favoritisme », et découragent l'offre.
+**Milton Friedman et George J. Stigler** (1946), [*Roofs or Ceilings?*](https://fee.org/resources/roofs-or-ceilings-the-current-housing-problem/) · école de Chicago (néoclassique). Les plafonds de loyer ne font pas disparaître le manque de logements : ils remplacent la répartition par le prix par une répartition « par le hasard et le favoritisme », et découragent l'offre.
 :::
 
 . . .
@@ -179,7 +179,7 @@ La **perte sèche** est la baisse du surplus total par rapport à la quantité d
 
 . . .
 
-L'encadrement : « un instrument redistributif à court terme, mais générateur de rationnement, de pertes de bien-être et de mauvaise allocation à long terme » (Chapelle et Fack, mai 2026, § 3.1.1).
+L'encadrement : « un instrument redistributif à court terme, mais générateur de rationnement, de pertes de bien-être et de mauvaise allocation à long terme » ([Chapelle et Fack, mai 2026, § 3.1.1](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf)).
 
 ::: {.notes}
 0 h 35 – 0 h 38. La citation résume la théorie dans le rapport d'évaluation remis au gouvernement en mai 2026. Question : quelle option de long terme est la plus rapide pour un bailleur parisien ? Transition : que pèse la construction neuve face au parc existant ?
@@ -205,7 +205,7 @@ graphe_construction_parc(base_size = 24)
 :::
 ::::
 
-[Source : Insee, BDM, séries 001718270 (données SDES) et 001791241 (consulté le 22/10/2026).]{.wp-source}
+[Source : [Insee, BDM, séries 001718270 (données SDES)](https://www.insee.fr/fr/statistiques/serie/001718270) et [001791241](https://www.insee.fr/fr/metadonnees/source/serie/s1350) (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 0 h 38 – 0 h 41. France hors Mayotte : 263 000 logements mis en chantier en 2025, pour un parc de 38,4 millions. Ordre de grandeur du rapport entre flux et stock, pas l'offre locative privée : les mises en chantier comprennent les logements sociaux et les maisons de propriétaires occupants, le parc comprend résidences secondaires et logements vacants. Le creux de 2023-2025 coïncide avec la hausse des taux d'intérêt : ne pas le lier à l'encadrement. Question : à court terme, une baisse de loyer peut-elle changer beaucoup le nombre de logements ? Transition : on remet ces étapes en ordre, à deux horizons.
@@ -231,7 +231,7 @@ Lecture : la ligne 1 est la même aux deux horizons ; ce qui change, c'est la li
 ## Diamond, McQuade et Qian (2019) : San Francisco, offre locative −15 %
 
 ::: {.auteur}
-**Rebecca Diamond, Tim McQuade et Franklin Qian** (2019), *American Economic Review* · économie empirique. En 1994, une loi étend l'encadrement à une partie des immeubles de San Francisco, et pas aux autres : on peut comparer les deux groupes.
+**Rebecca Diamond, Tim McQuade et Franklin Qian** (2019), [*American Economic Review*](https://www.aeaweb.org/articles?id=10.1257/aer.20181289) · économie empirique. En 1994, une loi étend l'encadrement à une partie des immeubles de San Francisco, et pas aux autres : on peut comparer les deux groupes.
 :::
 
 . . .
@@ -251,7 +251,7 @@ Lecture : la ligne 1 est la même aux deux horizons ; ce qui change, c'est la li
 [2015 · Niccolò Caranti, CC BY-SA 4.0, Wikimedia Commons]{.wp-credit}
 :::
 
-**David H. Autor, Christopher J. Palmer et Parag A. Pathak** (2014), *Journal of Political Economy* · économie empirique. Fin soudaine d'un encadrement strict à Cambridge (Massachusetts) en 1995.
+**David H. Autor, Christopher J. Palmer et Parag A. Pathak** (2014), [*Journal of Political Economy*](https://www.nber.org/papers/w18125) · économie empirique. Fin soudaine d'un encadrement strict à Cambridge (Massachusetts) en 1995.
 :::
 
 . . .
@@ -268,7 +268,7 @@ Lecture : la ligne 1 est la même aux deux horizons ; ce qui change, c'est la li
 ::: {.incremental}
 - **États-Unis** : dispositifs anciens, appliqués pendant des décennies, avec des loyers parfois très inférieurs à ceux du marché.
 - **France** : dispositif récent, plafond au-dessus du loyer médian, mais appliqué à tous les nouveaux baux, y compris dans le neuf.
-- **Évaluation de référence** : le rapport de Guillaume Chapelle et Gabrielle Fack (mai 2026), deux professeurs d'économie appuyés par deux inspections de l'État ; un rapport public, pas un article de revue.
+- **Évaluation de référence** : le [rapport de Guillaume Chapelle et Gabrielle Fack (mai 2026)](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf), deux professeurs d'économie appuyés par deux inspections de l'État ; un rapport public, pas un article de revue.
 :::
 
 ::: {.notes}
@@ -550,7 +550,7 @@ Le triangle monte jusqu'à 1 040 € à court terme, jusqu'à 1 200 € à long 
 . . .
 
 - Avec une file d'attente ou des relations, rien ne le garantit : un ménage qui tient peu à son logement le garde ; un autre, qui en aurait besoin pour un emploi, n'en trouve pas.
-- La perte est alors plus grande que le triangle (Glaeser et Luttmer, 2003, cités par Chapelle et Fack, mai 2026).
+- La perte est alors plus grande que le triangle ([Glaeser et Luttmer, 2003](https://doi.org/10.1257/000282803769206188), cités par [Chapelle et Fack, mai 2026](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf)).
 
 ::: {.notes}
 1 h 41 – 1 h 44. Lien avec Friedman et Stigler : « par le hasard et le favoritisme ». Question avant le clic : qui garde son logement encadré, même s'il n'en a plus vraiment besoin ? Transition : le cas symétrique, le prix plancher.
@@ -571,7 +571,7 @@ graphe_plancher(base_size = 24, etape = 1)
 ::: {.column width="40%"}
 ::: {.incremental}
 - Le miroir du plafond : un prix plancher fixé **au-dessus** de P\*.
-- SMIC depuis le 1^er^ juin 2026 : **12,31 €** brut de l'heure, soit 1 867,02 € brut par mois pour 35 heures par semaine (Service-public.fr, consulté le 21/10/2026).
+- SMIC depuis le 1^er^ juin 2026 : **12,31 €** brut de l'heure, soit 1 867,02 € brut par mois pour 35 heures par semaine ([Service-public.fr, consulté le 21/10/2026](https://www.service-public.gouv.fr/particuliers/vosdroits/F2300)).
 :::
 :::
 ::::
@@ -652,7 +652,7 @@ graphe_salaire_minimum(base_size = 24)
 :::
 ::::
 
-[Source : OCDE, DSD_EARNINGS@MIN2AVE, salariés à temps plein (consulté le 22/10/2026).]{.wp-source}
+[Source : [OCDE, DSD_EARNINGS@MIN2AVE, salariés à temps plein](https://data-explorer.oecd.org/) (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 1 h 52 – 1 h 55. Salaire médian brut des salariés à temps plein (OCDE). Allemagne : salaire minimum légal depuis 2015 seulement. États-Unis : minimum fédéral, 7,25 $ de l'heure ; beaucoup d'États ont un minimum plus élevé. La série s'arrête en 2025 : le SMIC de 12,31 € du 1^er^ juin 2026 n'y figure pas. Le graphique montre la hauteur du plancher, pas son effet sur l'emploi. Question : un plancher plus haut par rapport au salaire médian a-t-il plus de chances d'être contraignant ? Transition : retour au logement, au cas français.
@@ -662,7 +662,7 @@ graphe_salaire_minimum(base_size = 24)
 
 ::: {.incremental}
 - **Loyer de référence** : loyer médian des logements comparables (secteur, nombre de pièces, époque, vide ou meublé), fixé chaque année par le préfet.
-- **Plafond** : le loyer de référence **majoré de 20 %** (Chapelle et Fack, § 1.1.1). Au loyer médian, il est au-dessus de P\*.
+- **Plafond** : le loyer de référence **majoré de 20 %** ([Chapelle et Fack, § 1.1.1](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf)). Au loyer médian, il est au-dessus de P\*.
 - **Dépassements** : sur environ 270 000 baux (2020-2024), plus d'un tiers au-dessus du plafond : 35,6 % à Paris, 43,5 % à Bordeaux (§ 2.2.4).
 :::
 
@@ -677,7 +677,7 @@ graphe_salaire_minimum(base_size = 24)
 . . .
 
 - Hors Île-de-France : −2 à −3 % par rapport aux communes témoins, environ −5 % après deux ans ; Seine-Saint-Denis : −3 à −4 % (§ 3.4).
-- Paris : −5,2 % entre juillet 2019 et juin 2024 (Breuillé, Grivault et al., 2025, cités par le rapport).
+- Paris : −5,2 % entre juillet 2019 et juin 2024 ([Breuillé, Grivault et al., 2025](https://www.apur.org/sites/default/files/2025-06/rapport-impact_encadrement_loyers_paris.pdf), cités par [le rapport](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf)).
     - Pas entièrement attribuable à l'encadrement : des ménages ont quitté Paris après le Covid.
 
 ::: {.notes}
@@ -691,7 +691,7 @@ graphe_salaire_minimum(base_size = 24)
 
 . . .
 
-- Plafonds plus durs : à Berlin (9,8 € par m² au plus), de 1 500 annonces par semaine en 2019 à 300 en 2020 (Hahn et al., 2024) ; à San Francisco, offre −15 %.
+- Plafonds plus durs : à Berlin (9,8 € par m² au plus), de 1 500 annonces par semaine en 2019 à 300 en 2020 ([Hahn et al., 2024](https://doi.org/10.1287/mnsc.2023.4775)) ; à San Francisco, offre −15 %.
 
 ::: {.notes}
 2 h 01 – 2 h 05. Court terme et plafond peu contraignant : on est dans le panneau A, où la théorie elle-même prévoit des effets faibles. Berlin : cité par Chapelle et Fack, § 3.1.2.3. Question : pourquoi des annonces en moins ne prouvent-elles pas une offre en moins ? Transition : une comparaison tentante entre pays.
@@ -758,7 +758,7 @@ graphe_locataires(base_size = 24)
 :::
 ::::
 
-[Source : Eurostat, EU-SILC, ilc_lvho02 (consulté le 22/10/2026).]{.wp-source}
+[Source : [Eurostat, EU-SILC, ilc_lvho02](https://ec.europa.eu/eurostat/databrowser/view/ilc_lvho02/default/table) (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 10 – 2 h 13. Catégories au sens d'Eurostat, en personnes et non en ménages : elles ne coïncident pas avec le secteur libre et le secteur social de l'Insee ; en France, « loyer réduit ou gratuit » regroupe le logement social et les personnes logées gratuitement. Total des locataires : 52,8 % en Allemagne, 38,6 % en France. Question : en France, qui loue à loyer réduit ? (Surtout les locataires du logement social.) Transition : qui gagne, qui paie ?
@@ -767,7 +767,7 @@ graphe_locataires(base_size = 24)
 ## Répartition par revenu : les bailleurs paient deux tiers, l'État un tiers
 
 ::: {.incremental}
-- Transferts vers les locataires : environ **700 millions d'euros par an** (Chapelle et Fack, mai 2026, § 4.4.1).
+- Transferts vers les locataires : environ **700 millions d'euros par an** ([Chapelle et Fack, mai 2026, § 4.4.1](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf)).
 - Deux tiers payés par les bailleurs, un tiers par l'État : un loyer plus bas réduit le revenu imposable du bailleur, donc son impôt (§ 5.1).
 - Les bailleurs sont en moyenne parmi les ménages les plus aisés : le transfert va plutôt des riches vers les moins riches.
 :::
@@ -848,11 +848,11 @@ graphe_taux_effort(base_size = 24)
 
 ## Deux études, deux lectures : à qui revient la charge de la preuve
 
-- **Sénat**, rapporteure de la commission des affaires économiques, sur le rapport de la mission : « aucune étude empirique n'a permis d'écarter l'incidence négative sur l'offre locative » (MoneyVox avec l'AFP, 14/10/2026).
+- **Sénat**, rapporteure de la commission des affaires économiques, sur le rapport de la mission : « aucune étude empirique n'a permis d'écarter l'incidence négative sur l'offre locative » ([MoneyVox avec l'AFP, 14/10/2026](https://www.moneyvox.fr/immobilier/actualites/110804/encadrement-des-loyers-le-senat-opte-pour-une-prolongation-de-experimentation)).
 
 . . .
 
-- **Ville de Paris**, sur l'étude Apur, deux laboratoires et SeLoger : « une absence d'effet de l'encadrement des loyers sur l'offre locative parisienne » (paris.fr, 11/09/2026).
+- **Ville de Paris**, sur l'étude Apur, deux laboratoires et SeLoger : « une absence d'effet de l'encadrement des loyers sur l'offre locative parisienne » ([paris.fr, 11/09/2026](https://www.paris.fr/pages/encadrement-des-loyers-les-resultats-sont-la-31465)).
 
 . . .
 
@@ -868,8 +868,8 @@ L'une : aucun effet écarté ; l'autre : aucun effet trouvé. Choisir la charge 
 
 . . .
 
-- **Arnott** (1995) : les logements sont si différents que les bailleurs ont un pouvoir de marché.
-- **Arnott et Igarashi** (2000) : un encadrement **modéré** peut améliorer l'efficacité, s'il exempte le neuf et autorise des hausses indexées.
+- [**Arnott** (1995)](https://doi.org/10.1257/jep.9.1.99) : les logements sont si différents que les bailleurs ont un pouvoir de marché.
+- [**Arnott et Igarashi** (2000)](https://doi.org/10.1016/S0166-0462%2800%2900033-8) : un encadrement **modéré** peut améliorer l'efficacité, s'il exempte le neuf et autorise des hausses indexées.
 
 . . .
 
@@ -902,8 +902,8 @@ Mêmes questions : le plafond est-il contraignant ? L'offre est-elle élastique 
 
 . . .
 
-- Assemblée nationale, 11/12/2025 : pérennisation et extension votées, 105 voix contre 56 (LCP).
-- Sénat : texte réduit en commission à une prolongation de deux ans (14/10/2026), adopté en séance le 21/10/2026 ; retour à l'Assemblée en deuxième lecture (Sénat, *La loi en clair*).
+- Assemblée nationale, 11/12/2025 : pérennisation et extension votées, 105 voix contre 56 ([LCP](https://lcp.fr/actualites/encadrement-des-loyers-l-assemblee-vote-en-faveur-d-une-perennisation-du-dispositif)).
+- Sénat : texte réduit en commission à une prolongation de deux ans (14/10/2026), adopté en séance le 21/10/2026 ; retour à l'Assemblée en deuxième lecture ([Sénat, *La loi en clair*](https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/proposition-de-loi-pour-retrouver-la-confiance-et-lequilibre-dans-les-rapports-locatifs.html)).
 
 ::: {.notes}
 2 h 36 – 2 h 39. Texte non définitif. Question : si le texte n'est pas définitif le 23/11/2026, que devient l'encadrement ? Avant le cours, vérifier où en est la navette et relire sur Légifrance la date exacte de fin de l'expérimentation. Prolongation de deux ans dans les mêmes territoires. Transition : ce qu'il faut retenir.

@@ -45,7 +45,7 @@ La question 8 demande un court paragraphe argumenté. La démarche (définir les
 
 En 2013, le taux de chômage de la zone euro est de 12,2 %. En euros, la dette publique grecque passe d'environ 330 Md€ fin 2010 à environ 321 Md€ fin 2013 : en 2012, les obligations grecques détenues par des investisseurs privés, surtout des banques, ont été restructurées avec une décote de 53,5 %. Entre 2010 et 2013, le PIB en valeur (en euros courants) baisse de 20,3 %. La période des trois plans d'aide va de 2010 à 2018.
 
-[Source : Eurostat, jeux de données nama_10_gdp (PIB), une_rt_a (chômage) et gov_10dd_edpt1 (dette), séries téléchargées le 21/10/2026, <https://ec.europa.eu/eurostat/data/database> ; indice du PIB et dette en euros (ratio × PIB en valeur) calculés par l'enseignant. Décote : Mécanisme européen de stabilité, page « Greece », consultée le 21/10/2026, <https://www.esm.europa.eu/assistance/greece>.]{.wp-source}
+[Source : Eurostat, jeux de données [nama_10_gdp](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table) (PIB), [une_rt_a](https://ec.europa.eu/eurostat/databrowser/view/une_rt_a/default/table) (chômage) et [gov_10dd_edpt1](https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table) (dette), séries téléchargées le 21/10/2026, <https://ec.europa.eu/eurostat/data/database> ; indice du PIB et dette en euros (ratio × PIB en valeur) calculés par l'enseignant. Décote : Mécanisme européen de stabilité, page « Greece », consultée le 21/10/2026, <https://www.esm.europa.eu/assistance/greece>.]{.wp-source}
 :::
 
 ::: {.wp-document data-label="Document 2"}
@@ -69,7 +69,7 @@ Entre 2018 et 2024, la croissance s'est élevée à 3,9 % en moyenne par an (ho
 
 À comparer : d'après Eurostat, de 2018 à 2024, le PIB réel augmente de 11 % au total, l'année 2020 comprise. En 2020, la crise sanitaire fait fortement reculer le PIB ; il rebondit en 2021.
 
-[Source : DG Trésor, service économique régional d'Athènes, « Où en est l'économie grecque, dix ans après le point culminant de la crise ? », 03/11/2025, <https://www.tresor.economie.gouv.fr/PagesInternationales/Pages/67796625-12c8-45e7-8872-6b274f92ad24/files/8ccbdff5-3afc-4274-a508-f6991b0c4db4> (extraits). Dernier paragraphe : Eurostat, nama_10_gdp, série téléchargée le 21/10/2026, calcul de l'enseignant.]{.wp-source}
+[Source : DG Trésor, service économique régional d'Athènes, « Où en est l'économie grecque, dix ans après le point culminant de la crise ? », 03/11/2025, <https://www.tresor.economie.gouv.fr/PagesInternationales/Pages/67796625-12c8-45e7-8872-6b274f92ad24/files/8ccbdff5-3afc-4274-a508-f6991b0c4db4> (extraits). Dernier paragraphe : [Eurostat, nama_10_gdp](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table), série téléchargée le 21/10/2026, calcul de l'enseignant.]{.wp-source}
 :::
 
 ::: {.content-visible when-format="typst"}
@@ -97,7 +97,7 @@ Sauf mention contraire, il s'agit des actifs de 15 à 74 ans. Les taux par dipl�
 
 La part de la population en risque de pauvreté ou d'exclusion sociale passe de 28,1 % en 2008 à 36,0 % en 2014 (définition « Europe 2020 »). Elle vaut 27,5 % en 2025, selon une définition plus récente, qui ne se compare pas directement à l'ancienne.
 
-[Source : Eurostat, une_rt_a, lfsa_urgaed, lfst_r_lfu3rt (chômage), ilc_peps01 et ilc_peps01n (pauvreté), séries téléchargées le 21/10/2026, <https://ec.europa.eu/eurostat/data/database> ; citation : chapeau de M. Rafenberg (*Le Monde*), « Crise grecque de la dette : dix ans après le référendum sur l'austérité, la population reste traumatisée », *Le Temps*, 19/08/2025, <https://www.letemps.ch/articles/crise-grecque-de-la-dette-dix-ans-apres-le-referendum-sur-l-austerite-la-population-reste-traumatisee>.]{.wp-source}
+[Source : Eurostat, [une_rt_a](https://ec.europa.eu/eurostat/databrowser/view/une_rt_a/default/table), [lfsa_urgaed](https://ec.europa.eu/eurostat/databrowser/view/lfsa_urgaed/default/table), [lfst_r_lfu3rt](https://ec.europa.eu/eurostat/databrowser/view/lfst_r_lfu3rt/default/table) (chômage), [ilc_peps01](https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01/default/table) et [ilc_peps01n](https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01n/default/table) (pauvreté), séries téléchargées le 21/10/2026, <https://ec.europa.eu/eurostat/data/database> ; citation : chapeau de M. Rafenberg (*Le Monde*), « Crise grecque de la dette : dix ans après le référendum sur l'austérité, la population reste traumatisée », *Le Temps*, 19/08/2025, <https://www.letemps.ch/articles/crise-grecque-de-la-dette-dix-ans-apres-le-referendum-sur-l-austerite-la-population-reste-traumatisee>.]{.wp-source}
 :::
 
 ## Questions sur les documents

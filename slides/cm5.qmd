@@ -16,12 +16,12 @@ source(here::here("R/cm5.R"))   # même fichier que la page de cours
 
 ## Le fait de départ : l'Assemblée examine l'abrogation des ZFE (08/10/2026)
 
-- Le 8 octobre 2026, l'Assemblée nationale examine une proposition de loi visant à abroger les zones à faibles émissions (ZFE) (n° 2970).
+- Le 8 octobre 2026, l'Assemblée nationale examine une proposition de loi visant à abroger les zones à faibles émissions (ZFE) ([n° 2970](https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54557)).
 
 . . .
 
-- Le débat s'arrête à minuit sans vote : le texte n'est pas adopté (LCP, 09/10/2026).
-- Les ZFE, déjà maintenues en mai par une censure de procédure du Conseil constitutionnel (décision n° 2026-903 DC), restent en vigueur.
+- Le débat s'arrête à minuit sans vote : le texte n'est pas adopté ([LCP, 09/10/2026](https://lcp.fr/actualites/zfe-le-rn-ne-parvient-pas-a-faire-voter-leur-suppression-lors-de-sa-niche-parlementaire)).
+- Les ZFE, déjà maintenues en mai par une censure de procédure du Conseil constitutionnel ([décision n° 2026-903 DC](https://www.conseil-constitutionnel.fr/decision/2026/2026903DC.htm)), restent en vigueur.
 
 . . .
 
@@ -44,7 +44,7 @@ source(here::here("R/cm5.R"))   # même fichier que la page de cours
 
 ::: {.fragment}
 
-- 25 agglomérations de l'Hexagone en ont une au 1^er^ janvier 2025 (*The Conversation*, 11/06/2026).
+- 25 agglomérations de l'Hexagone en ont une au 1^er^ janvier 2025 ([*The Conversation*, 11/06/2026](https://theconversation.com/zfe-de-la-suppression-au-sursis-une-saga-juridique-qui-na-pas-encore-dit-son-dernier-mot-284844)).
 :::
 :::
 ::::
@@ -57,7 +57,7 @@ source(here::here("R/cm5.R"))   # même fichier que la page de cours
 
 ::: {.incremental}
 1. Tous admettent que la pollution de l'air nuit à la santé, mais la mesure qui la combat divise.
-2. Les ZFE ont bien fait baisser les émissions, mais beaucoup moins que la baisse totale observée (Insee, 27/08/2026).
+2. Les ZFE ont bien fait baisser les émissions, mais beaucoup moins que la baisse totale observée ([Insee, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)).
 3. Les ménages modestes, qui polluent peu au total, sont souvent ceux qui doivent changer de voiture.
 :::
 
@@ -152,7 +152,7 @@ graphe_deces_pm25(base_size = 24)
 :::
 ::::
 
-[Source : Eurostat, sdg_11_52, estimations de l'AEE (consulté le 22/10/2026).]{.wp-source}
+[Source : [Eurostat, sdg_11_52](https://ec.europa.eu/eurostat/databrowser/view/sdg_11_52/default/table), estimations de l'AEE (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 0 h 25 – 0 h 28. Exposition de long terme aux particules fines (PM2,5). Série heurtée (22 279 en 2014, 27 834 en 2015), sensible à la météorologie et aux révisions de méthode ; ne pas comparer avec les estimations de Santé publique France, qui suivent une autre méthode. Question : ce chiffre est-il le dommage marginal d'un trajet ? (Non : toutes sources, tous trajets confondus.) Transition : où la société voudrait-elle s'arrêter ?
@@ -181,7 +181,7 @@ L'optimum n'est pas « zéro pollution » : un trajet qui vaut 20 € à son aut
 [2003 · University of Chicago Law School, licence Attribution, Wikimedia Commons]{.wp-credit}
 :::
 
-**Ronald Coase** (1960), « The Problem of Social Cost » · école de Chicago, économie du droit. Le dommage est réciproque : protéger le riverain gêne l'automobiliste, et laisser rouler l'automobiliste gêne le riverain. Si les droits sont clairs et la négociation peu coûteuse, les parties trouvent entre elles la bonne quantité, quel que soit celui qui détient le droit.
+**Ronald Coase** (1960), « [The Problem of Social Cost](https://doi.org/10.1086/466560) » · école de Chicago, économie du droit. Le dommage est réciproque : protéger le riverain gêne l'automobiliste, et laisser rouler l'automobiliste gêne le riverain. Si les droits sont clairs et la négociation peu coûteuse, les parties trouvent entre elles la bonne quantité, quel que soit celui qui détient le droit.
 :::
 
 . . .
@@ -216,7 +216,7 @@ L'État tranche : **choisir un instrument, c'est aussi choisir qui détient le d
 [2015 · European University Institute, CC BY-SA 2.0, recadré, Wikimedia Commons]{.wp-credit}
 :::
 
-**Martin Weitzman** (1974), « Prices vs. Quantities » · économie publique. Le régulateur connaît mal ce que coûtera l'effort de dépollution : une taxe fixe le prix de la pollution mais laisse la quantité incertaine, une norme fixe la quantité mais laisse le coût incertain.
+**Martin Weitzman** (1974), « [Prices vs. Quantities](https://doi.org/10.2307/2296698) » · économie publique. Le régulateur connaît mal ce que coûtera l'effort de dépollution : une taxe fixe le prix de la pollution mais laisse la quantité incertaine, une norme fixe la quantité mais laisse le coût incertain.
 :::
 
 . . .
@@ -606,7 +606,7 @@ graphe_weitzman(base_size = 24)
 ## Application : le NO₂ appelle une norme, le CO₂ un prix
 
 ::: {.incremental}
-- **NO₂** : le droit européen fixe des **valeurs limites** de concentration ; la France a été condamnée par la Cour de justice de l'Union européenne pour les avoir dépassées « de manière systématique et persistante » (*The Conversation*, 11/06/2026).
+- **NO₂** : le droit européen fixe des **valeurs limites** de concentration ; la France a été condamnée par la Cour de justice de l'Union européenne pour les avoir dépassées « de manière systématique et persistante » ([*The Conversation*, 11/06/2026](https://theconversation.com/zfe-de-la-suppression-au-sursis-une-saga-juridique-qui-na-pas-encore-dit-son-dernier-mot-284844)).
 - Au-delà du seuil, la sanction rend le dépassement très coûteux : argument de Weitzman pour un instrument qui garantit le résultat.
 - **CO₂** : le dommage d'une tonne de plus est à peu près constant, car il dépend du stock mondial ; cela plaide pour un prix.
 :::
@@ -742,7 +742,7 @@ graphe_emissions_voitures(base_size = 24)
 :::
 ::::
 
-[Source : Eurostat, env_air_emis, inventaire national de la France (Citepa) (consulté le 22/10/2026).]{.wp-source}
+[Source : [Eurostat, env_air_emis](https://ec.europa.eu/eurostat/databrowser/view/env_air_emis/default/table), inventaire national de la France (Citepa) (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 03 – 2 h 05. Champ : France entière, ZFE comprises, émissions à l'échappement seulement (l'usure des pneus, des freins et des routes n'est pas comptée) : ce n'est pas forcément le champ de l'Insee, ne pas comparer les deux sources chiffre à chiffre. Le parc se renouvelle depuis longtemps. Question : que montrerait un simple avant-après autour de 2019 ? Transition : une erreur de lecture fréquente.
@@ -765,7 +765,7 @@ graphe_emissions_voitures(base_size = 24)
 
 ## Un effet modeste : la norme vise la vignette, pas le kilomètre
 
-D'après l'Insee (Insee Analyses n° 124, 27/08/2026) :
+D'après l'Insee ([Insee Analyses n° 124, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)) :
 
 ::: {.incremental}
 - **La vignette, pas le kilomètre** : les voitures des résidents ne roulent pas significativement moins ; la ZFE change **quelle** voiture on conduit, pas **combien** on roule.
@@ -800,7 +800,7 @@ graphe_parc_critair(base_size = 24)
 :::
 ::::
 
-[Source : SDES, parc de véhicules routiers (millésime 2026-06), somme nationale par l'auteur (consulté le 22/10/2026).]{.wp-source}
+[Source : [SDES, parc de véhicules routiers (millésime 2026-06)](https://www.statistiques.developpement-durable.gouv.fr/catalogue?page=datafile&datafileRid=1582861b-e042-4490-9161-6429d8229703), somme nationale par l'auteur (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 10 – 2 h 12. Ce n'est pas un contrefactuel : les agglomérations à ZFE sont comprises. Vignette attribuée après coup, y compris avant la création de Crit'Air en 2016 ; données 2026 provisoires. Les Crit'Air 3 et plus sont celles que le panneau de Lyon n'autorise pas. Le parc verdit fortement même sans ZFE : on y reviendra avec l'effet d'aubaine du leasing social. Question : qui possède encore ces 24,3 % de voitures ? Transition : qui supporte l'effort ?
@@ -809,9 +809,9 @@ graphe_parc_critair(base_size = 24)
 ## Par revenu : l'effort pèse sur les ménages modestes, qui polluent peu
 
 ::: {.incremental}
-- L'effet de la ZFE est « plus marqué dans les communes à revenu intermédiaire ou modeste », où les voitures sont plus anciennes (Insee, 27/08/2026).
-- Sur huit villes étudiées, employés et ouvriers sont les plus touchés dans six (C. Liotta, *The Conversation*, 27/11/2024).
-- En Île-de-France, les déplacements des 20 % les plus pauvres ne représentent que 9 % de la pollution automobile (A. Poulhès, *The Conversation*, 23/06/2025).
+- L'effet de la ZFE est « plus marqué dans les communes à revenu intermédiaire ou modeste », où les voitures sont plus anciennes ([Insee, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)).
+- Sur huit villes étudiées, employés et ouvriers sont les plus touchés dans six ([C. Liotta, *The Conversation*, 27/11/2024](https://theconversation.com/les-zones-a-faibles-emissions-sont-elles-inequitables-243994)).
+- En Île-de-France, les déplacements des 20 % les plus pauvres ne représentent que 9 % de la pollution automobile ([A. Poulhès, *The Conversation*, 23/06/2025](https://theconversation.com/faut-il-supprimer-les-zones-a-faibles-emissions-au-nom-de-la-justice-sociale-259516)).
 :::
 
 ::: {.notes}
@@ -821,7 +821,7 @@ graphe_parc_critair(base_size = 24)
 ## Par territoire : les vieilles voitures partent vers des territoires éloignés
 
 - Une partie des voitures polluantes est revendue d'occasion dans des territoires sans restriction, et non voisins de la zone.
-- Dans les communes proches, le parc verdit comme ailleurs (Insee, 27/08/2026).
+- Dans les communes proches, le parc verdit comme ailleurs ([Insee, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)).
 
 . . .
 
@@ -904,7 +904,7 @@ graphe_prix_carburants(base_size = 24)
 :::
 ::::
 
-[Source : Commission européenne, *Weekly Oil Bulletin*, prix toutes taxes (consulté le 22/10/2026).]{.wp-source}
+[Source : [Commission européenne, *Weekly Oil Bulletin*](https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en), prix toutes taxes (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 21 – 2 h 23. Moyennes nationales pondérées, toutes taxes, pas des relevés de station. Scénario de l'Insee : 2,0 € le litre d'essence, 2,2 € le gazole. À revenus et kilomètres inchangés, des prix plus élevés ne peuvent qu'accroître la part des ménages très exposés. Question : quels ménages ces nouvelles hausses touchent-elles le plus ? Transition : et selon l'âge ?
@@ -914,7 +914,7 @@ graphe_prix_carburants(base_size = 24)
 
 ::: {.incremental}
 - Parmi les ménages très exposés au prix du carburant, 77,9 % ont au moins un membre en emploi, contre 70,9 % pour l'ensemble des ménages motorisés.
-- Les ménages sans emploi de 65 ans ou plus n'en représentent que 10,2 %, contre 24,3 % (Insee Première n° 2125, données 2021).
+- Les ménages sans emploi de 65 ans ou plus n'en représentent que 10,2 %, contre 24,3 % ([Insee Première n° 2125](https://www.insee.fr/fr/statistiques/9037833), données 2021).
 :::
 
 . . .
@@ -934,7 +934,7 @@ La charge tomberait surtout sur les actifs qui roulent loin pour travailler.
 | 3. Le parc | Moins de voitures polluantes dans la zone, certaines revendues hors zone | Territoires sans restriction, non voisins |
 | 4. L'air | Moins d'émissions, quelques points au-delà du tendanciel | Habitants de la zone |
 
-: Source : synthèse de la page (Insee Analyses n° 124, 27/08/2026 ; Insee Première n° 2125, 08/09/2026).
+: Source : synthèse de la page ([Insee Analyses n° 124, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856) ; [Insee Première n° 2125, 08/09/2026](https://www.insee.fr/fr/statistiques/9037833)).
 
 . . .
 
@@ -947,7 +947,7 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 ## Leasing social : une subvention financée par les certificats d'économies d'énergie
 
 ::: {.incremental}
-- En 2025, 50 000 aides pour louer une voiture électrique, jusqu'à 5 700 € pour les ménages très modestes ; environ 49 600 utilisées (*L'Info durable*, 30/12/2025).
+- En 2025, 50 000 aides pour louer une voiture électrique, jusqu'à 5 700 € pour les ménages très modestes ; environ 49 600 utilisées ([*L'Info durable*, 30/12/2025](https://www.linfodurable.fr/voitures-electriques-quelques-heures-de-la-fin-2025-le-leasing-social-na-pas-fait-le-plein-53945)).
 - 350 M€ financés par les certificats d'économies d'énergie, et non par l'impôt : les vendeurs d'énergie peuvent en répercuter le coût sur tous les consommateurs (incidence).
 - Risque d'**effet d'aubaine** : le parc verdit fortement même sans ZFE.
 :::
@@ -961,7 +961,7 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 **Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
 
 - Externalité : sans intervention, on roule plus que l'optimum.
-- Effet propre modeste : 4,6 points sur 38,9 % pour les oxydes d'azote (Insee, 27/08/2026).
+- Effet propre modeste : 4,6 points sur 38,9 % pour les oxydes d'azote ([Insee, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)).
 - La norme par vignette ne rapporte rien et cible l'âge de la voiture ; une taxe rapporte une recette qui peut compenser les perdants.
 
 . . .
@@ -977,7 +977,7 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 ## Positions en présence et écoles : Pigou, Coase, Weitzman
 
 ::: {.incremental}
-- **Supprimer** : mesure injuste pour les ménages qui ne peuvent pas changer de voiture (France 24, 29/05/2025), pour un effet de quelques points.
+- **Supprimer** : mesure injuste pour les ménages qui ne peuvent pas changer de voiture ([France 24, 29/05/2025](https://www.youtube.com/watch?v=7OczPMFm2xk)), pour un effet de quelques points.
 - **Liotta** : les ZFE réduisent l'accès à l'emploi des plus modestes ; les accompagner pour les rendre plus égalitaires. **Poulhès** : l'argument social ne justifie pas de les supprimer, les plus pauvres polluent peu.
 - **Écoles** : Pigou corrige par un prix, la taxe ; Coase objecte que l'intervention a elle-même un coût ; pour Weitzman, tout dépend de l'erreur la plus grave.
 :::
@@ -989,7 +989,7 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 ## Conseil constitutionnel : une censure de procédure, pas de fond
 
 ::: {.droit}
-*État au 21 octobre 2026.* Le 21 mai 2026, le Conseil constitutionnel a censuré l'article 37 de la loi de simplification de la vie économique, qui supprimait les ZFE, parce qu'il avait été ajouté au projet sans lien, « même indirect », avec son contenu initial (article 45 de la Constitution) ; il ne s'est pas prononcé sur le fond (décision n° 2026-903 DC). Les ZFE restent donc en vigueur.
+*État au 21 octobre 2026.* Le 21 mai 2026, le Conseil constitutionnel a censuré l'article 37 de la loi de simplification de la vie économique, qui supprimait les ZFE, parce qu'il avait été ajouté au projet sans lien, « même indirect », avec son contenu initial (article 45 de la Constitution) ; il ne s'est pas prononcé sur le fond ([décision n° 2026-903 DC](https://www.conseil-constitutionnel.fr/decision/2026/2026903DC.htm)). Les ZFE restent donc en vigueur.
 :::
 
 ::: {.notes}
@@ -1003,7 +1003,7 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 - La taxe pigouvienne (t = Dm) mène à Q° ; sa recette est un transfert, pas une perte.
 - Taxe, norme, subvention : même quantité, payeurs différents (Coase).
 - Dommage qui grimpe vite : fixer la quantité ; dommage constant : fixer le prix (Weitzman).
-- Effet propre contre un contrefactuel : 4,6 points sur 38,9 % (Insee, 2026).
+- Effet propre contre un contrefactuel : 4,6 points sur 38,9 % ([Insee, 2026](https://www.insee.fr/fr/statistiques/9031856)).
 - Qui doit payer relève d'un jugement ; l'analyse dit qui paie.
 :::
 

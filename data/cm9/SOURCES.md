@@ -90,6 +90,48 @@
 - **Traitement** : sommes et moyennes annuelles ; `_drafts/donnees/cm9/preparation.R` vérifie que chaque année 1990-2025 a bien douze mois dans les deux sources.
 - **Utilisé par** : `R/cm9.R`, section 9 (`chine_cm9`, `graphe_chine_emploi()`) ; figure `fig-chine-emploi` de `cours/cm9.qmd` et diapo correspondante de `slides/cm9.qmd`.
 
+## `depenses_biens_quintiles_us_2023_2024.csv`
+
+- **Contenu** : moyennes annuelles par « consumer unit » (ménage au sens du BLS), en dollars courants, 2023 et 2024, pour l'ensemble et pour chaque quintile de revenu avant impôt (12 lignes).
+  - `annee`, `groupe` (`ensemble`, `Q1` à `Q5`) ;
+  - `revenu_avant_impot` (INCBEFTX), `revenu_apres_impot` (INCAFTTX, `NA` en 2024 : le BLS « is unable to produce […] estimates of after-tax income in the 2024 tables », communiqué du 19/12/2025), `depense_totale` (TOTALEXP) ;
+  - six postes de biens : `alimentation_domicile` (FOODHOME), `boissons_alcoolisees` (ALCBEVG), `produits_entretien` (HKPGSUPP), `meubles_equipement_logement` (HHFURNSH), `habillement` (APPAREL, « apparel and services »), `achats_vehicules` (VEHPURCH, dépense nette), et leur somme `biens_total` ;
+  - ratios en %, arrondis à une décimale : `depense_pct_rev_apres`, `depense_pct_rev_avant`, `biens_pct_rev_apres` (colonne tracée, 2023), `biens_pct_rev_avant`, `biens_pct_depense`.
+- **Source** : Bureau of Labor Statistics (BLS), Consumer Expenditure Surveys, tableaux « Quintiles of income before taxes », diffusés par l'API publique v2. Séries `CXU<poste>LB01<groupe>M` : `LB0101` = ensemble, `LB0102` à `LB0106` = quintiles 1 à 5.
+  - API : `POST https://api.bls.gov/publicAPI/v2/timeseries/data/` avec `{"seriesid":[…],"startyear":"2023","endyear":"2025"}` (trois requêtes de 24 séries ; aucune donnée 2025 publiée au 23/10/2026).
+  - Page des tableaux : https://www.bls.gov/cex/tables.htm (les fichiers XLSX n'ont pas pu être téléchargés : bls.gov répond 403 aux clients non navigateurs).
+- **Téléchargé le** : 23/10/2026. SHA-256 des réponses JSON : `bls_api_cex_quintiles_part1.json` `6d674f7d86e9f43c64359607bd425c4ee97cbf3e0edd52c76faec8665e8742a9` ; `bls_api_cex_quintiles_part2.json` `d6c021fd1e6b6385dc0e600d5fd081f065e2210acf89ce9cff71aaf2addfeec8` ; `bls_api_cex_quintiles_part3.json` `459109d6e8f5fe228451a4ce72eaa5280f10f10b19c03dd8236edd3ea2c4cd72` (conservées dans `_drafts/donnees/cm9-revenu/brut/`).
+- **Traitement** : somme des six postes et ratios, rien d'autre (`data/cm9/preparer_revenu.R`, à relancer depuis la racine du projet ; vérifié le 23/10/2026 : sortie identique octet pour octet au CSV). La série `GASOIL`, demandée aussi, renvoie des valeurs aberrantes (1 ou 2 $) : écartée. Contrôle : les dépenses moyennes 2024 (78 535 ; 35 046 ; 50 054 ; 66 900 ; 89 972 ; 150 342 $) sont celles du tableau C du communiqué du 19/12/2025 (https://www.bls.gov/news.release/cesan.nr0.htm, lu le 23/10/2026) ; le script s'arrête sinon.
+- **Limites** : la liste des « biens » est un choix de l'auteur, et tous ne sont pas importés ; les achats de véhicules varient beaucoup d'une année à l'autre ; le revenu du premier quintile est sous-estimé (FAQ du BLS, questions 41 et 43, https://www.bls.gov/cex/csxfaqs.htm, lue le 23/10/2026), ce qui grossit son ratio ; les quintiles sont définis sur le revenu avant impôt.
+- **Utilisé par** : `R/cm9.R`, section 11 a (`cex_cm9`, `biens_q_cm9`, `graphe_biens_revenu()`) ; figure `fig-biens-revenu-quintiles` de `cours/cm9.qmd` et diapo de répartition par revenu de `slides/cm9.qmd`.
+
+## `cout_droits_deciles_yale_2026.csv`
+
+- **Contenu** : coût annuel des droits de douane américains en vigueur par décile de revenu (1 à 10, et `Total`), en valeur positive, arrondi à trois décimales.
+  - `decile` ;
+  - `pct_revenu_presub`, `pct_revenu_postsub` : en % du revenu après impôts et transferts (projection 2027 du CBO), avant et après substitution des achats (report vers d'autres fournisseurs) ; la colonne tracée est `pct_revenu_postsub` ;
+  - `usd_presub`, `usd_postsub` : en dollars de 2025 par ménage.
+- **Source** : The Budget Lab at Yale, « The State of U.S. Tariffs », outil interactif, onglet « Projected Effects: Default Scenario », figure 4 « Household Cost of Tariffs by Income Decile » (source citée par l'outil : « GTAP v7 [Corong et al. (2017)], The Budget Lab analysis »). Mise à jour du 24/08/2026 (version de données `2026082411`), droit en vigueur (« current law »).
+  - Page : https://budgetlab.yale.edu/research/state-us-tariffs
+  - Fichier : https://interactives.budgetlab.yale.edu/tools/state-of-tariffs/data/default-scenario/distribution/data.csv
+  - Contexte : `…/data/default-scenario/summary-statistics/data.csv` et `…/data/manifest.json` (méthodologie, date de version).
+- **Téléchargé le** : 23/10/2026. SHA-256 : `ybl_default-scenario_distribution.csv` `701924fd26b81a27ffb6b77d5e680ea000168a5c74f61c1ea5d1fd355d8bb15b` ; `ybl_default-scenario_summary-statistics.csv` `115d05ae36160f95fcf470aae237418d22ced846f5c0965c75a569935fbda4b4` ; `ybl_state-of-tariffs_manifest_2026082411.json` `069fd64dd3968e09d80f6f0f01cc2c47fa2beac2abda412bab965b81d863391b` ; page `ybl_state-us-tariffs.html` `883f6373f63780baed63f833c9b9ae0893452cb2d79a88062d160c48f1e8b2e3` (conservés dans `_drafts/donnees/cm9-revenu/brut/`).
+- **Traitement** : passage du format long au format large et changement de signe (le fichier note les pertes en négatif), rien d'autre (`data/cm9/preparer_revenu.R` ; vérifié le 23/10/2026 : sortie identique octet pour octet au CSV).
+- **Limites** : estimation faite avant coup par un modèle (prix entrées-sorties et GTAP), pas une mesure ; répercussion des droits sur les prix payés par les acheteurs américains supposée, atténuée seulement par le dollar ; coût « ultime », après ajustement des prix ; la source ne dit pas sur quel revenu sont définis les déciles ; les montants changent à chaque mise à jour, d'où la date citée.
+- **Utilisé par** : `R/cm9.R`, section 11 b (`ybl_cm9`, `ybl_d_cm9`, `graphe_cout_droits_deciles()`) ; figure `fig-cout-droits-deciles` de `cours/cm9.qmd` et diapo « En part du revenu, les droits pèsent trois fois plus sur les ménages modestes » de `slides/cm9.qmd`.
+
+## `hausse_impot_droits_quintiles_tpc_2026.csv`
+
+- **Contenu** : 9 lignes. `groupe` (libellé d'origine : cinq quintiles, puis 80-90, 90-95, 95-99 et 1 % les plus aisés) ; `hausse_taux_moyen_pts` : hausse du taux moyen d'imposition fédérale due aux droits annoncés du 20/01/2025 au 08/09/2026, en points de revenu monétaire élargi (« expanded cash income », un revenu avant impôt), 2026. La charge est répartie selon le revenu, et non selon la consommation.
+- **Source** : Tax Policy Center (Urban-Brookings), R. McClelland et J. Wong, « TPC Tariff Tracker », 11/09/2026, figure 3, graphique Datawrapper `UATS7`, version 41 (tableau T26-0148).
+  - Page : https://taxpolicycenter.org/features/tracking-trump-tariffs (lue dans le navigateur le 23/10/2026 : le site passe par une vérification Cloudflare qui bloque curl).
+  - Fichier : https://datawrapper.dwcdn.net/UATS7/41/dataset.csv. La version 1, appelée par la page, redirige vers la 41 dans le navigateur ; `…/UATS7/1/dataset.csv` renvoie d'anciens chiffres.
+- **Téléchargé le** : 23/10/2026. SHA-256 du fichier brut `tpc_datawrapper_UATS7_v41_dataset.csv` : `2cd3b89eecf9a5c9c639fa59a0d349397df04049b58e4a1c79751aa8e4177964` (conservé dans `_drafts/donnees/cm9-revenu/brut/`).
+- **Traitement** : suppression de la ligne vide de séparation (`data/cm9/preparer_revenu.R` ; vérifié le 23/10/2026 : sortie identique octet pour octet au CSV).
+- **Utilisé par** : `R/cm9.R`, section 11 c (`tpc_cm9`, vérification des 0,8 et 0,6 point cités dans le texte) ; pas de figure.
+
+**Documents lus dans le navigateur, non enregistrés** (protection anti-robots du site), qui ont servi à la recherche mais ne sont pas cités dans la page : Congressional Budget Office, « Budgetary and Economic Effects of Increases in Tariffs Implemented Between January 6 and May 13, 2025 », 04/06/2025, https://www.cbo.gov/publication/61389 (PDF de 259 537 octets ; SHA-256 calculé dans le navigateur sur les octets servis : `548c4669c186b3d3c8fba14f2487d9c1d9607849e55518cb5b3ce132a2eb5894`) ; Tax Policy Center, Holtzblatt, McClelland et Wong, « Offsetting Families' Tariff Burdens through Refundable Tax Credits », juin 2026 (PDF de 2 449 141 octets ; SHA-256 calculé dans le navigateur : `9c48af485c885876f9cac6ba07de6057e5ff5291908b56019f2f7aef425167b4`). Détails : `quality_reports/donnees/cm9-revenu.md`.
+
 ## Utilisation
 
-`R/cm9.R` lit les sept fichiers (`recettes_cm9`, `commerce_cm9`, `prix_cm9`, `effectif_cm9`, `part_douane_cm9`, `export_cm9`, `chine_cm9`), trace `graphe_recettes_douane()`, `graphe_prix_import()`, `graphe_droit_effectif()`, `graphe_part_douane()`, `graphe_export_ue_usa()` et `graphe_chine_emploi()`, et vérifie par `stopifnot()` chaque chiffre cité dans `cours/cm9.qmd`.
+`R/cm9.R` lit les dix fichiers (`recettes_cm9`, `commerce_cm9`, `prix_cm9`, `effectif_cm9`, `part_douane_cm9`, `export_cm9`, `chine_cm9`, `cex_cm9`, `ybl_cm9`, `tpc_cm9`), trace `graphe_recettes_douane()`, `graphe_prix_import()`, `graphe_droit_effectif()`, `graphe_part_douane()`, `graphe_export_ue_usa()`, `graphe_chine_emploi()`, `graphe_biens_revenu()` et `graphe_cout_droits_deciles()`, et vérifie par `stopifnot()` chaque chiffre cité dans `cours/cm9.qmd`. `data/cm9/preparer_revenu.R` reconstruit les trois derniers CSV à partir des fichiers bruts ; ni la page ni les diapos ne l'appellent.

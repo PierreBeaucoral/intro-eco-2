@@ -16,21 +16,31 @@ source(here::here("R/cm9.R"))   # même fichier que la page de cours
 
 ## Le fait de départ : le « Jour de la libération » (02/04/2025)
 
-- Le 2 avril 2025, que l'administration américaine baptise « Jour de la libération », les États-Unis relèvent leurs droits de douane sur presque tous leurs partenaires.
+:::: {.columns}
+::: {.column width="58%"}
+- Le 2 avril 2025, les États-Unis relèvent leurs droits de douane sur presque tous leurs partenaires.
 
-. . .
+::: {.fragment}
+- Droit moyen américain : 4,9 % en janvier 2025, **24,2 %** le 2 avril, environ 15 % en février 2026.
+- Recettes douanières : 202,4 Md\$ (exercice 2025), 317,8 Md\$ (2026), **+57 %**.
+:::
 
-- Droit de douane moyen américain : 4,9 % en janvier 2025, 24,2 % le 2 avril, encore environ 15 % en février 2026.
-- Recettes douanières brutes : 202,4 Md\$ sur l'exercice 2025, 317,8 Md\$ sur l'exercice 2026, soit +57 %.
-
-. . .
-
+::: {.fragment}
 **Question de la séance** : à quoi servent les droits de douane ?
+:::
+:::
 
-[Sources : Guimbard, CEPII, *The Conversation*, 22/07/2026 ; Trésor des États-Unis, *Monthly Treasury Statement*, téléchargé le 21/10/2026, calcul de l'auteur.]{.wp-source}
+::: {.column width="42%"}
+![](../cours/img/cm9/trump-tableau-droits-2025.jpg){height="330px" fig-alt="Donald Trump derrière un pupitre au sceau présidentiel tient un grand panneau « Reciprocal Tariffs » qui liste des pays et deux colonnes de pourcentages."}
+
+[2/04/2025 · Daniel Torok, Maison-Blanche, domaine public, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Trump_showing_a_chart_with_reciprocal_tariffs_(cropped).jpg)]{.wp-credit}
+:::
+::::
+
+[Sources : [Guimbard, *The Conversation*, 22/07/2026](https://theconversation.com/le-mur-tarifaire-de-donald-trump-brique-apres-brique-288065) ; [Trésor américain, *Monthly Treasury Statement*](https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/) ; calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
-0 h 00 – 0 h 05. Accueil. Le fait de départ est la décision américaine du 2 avril 2025 ; la hausse du droit moyen et des recettes en sont les conséquences. Les douanes encaissaient 7,9 Md\$ en octobre 2024 et 33,1 Md\$ en octobre 2025 ; l'exercice 2026 va d'octobre 2025 à septembre 2026 ; +57 % est un calcul de l'auteur. En février 2026, le droit moyen vaut trois fois son niveau de départ. Question à l'amphi : qui a suivi l'actualité sur les « taxes Trump » ? L'argent rentre : alors, qui paie ? Laisser proposer. Cette séance est la dernière du programme du CC2 ; elle n'a pas de TD et n'est évaluée que dans la partie cours. Transition : ce droit, mesuré sur un siècle.
+0 h 00 – 0 h 05. Accueil. Le fait de départ est la décision américaine du 2 avril 2025 ; la hausse du droit moyen et des recettes en sont les conséquences. Les douanes encaissaient 7,9 Md\$ en octobre 2024 et 33,1 Md\$ en octobre 2025 ; l'exercice 2026 va d'octobre 2025 à septembre 2026 ; +57 % est un calcul de l'auteur (Monthly Treasury Statement téléchargé le 21/10/2026 ; Guimbard est chercheur au CEPII). En février 2026, le droit moyen vaut trois fois son niveau de départ. Question à l'amphi : qui a suivi l'actualité sur les « taxes Trump » ? L'argent rentre : alors, qui paie ? Laisser proposer. Cette séance est la dernière du programme du CC2 ; elle n'a pas de TD et n'est évaluée que dans la partie cours. Transition : ce droit, mesuré sur un siècle.
 :::
 
 ## Droit effectivement perçu : en 2025, le plus élevé depuis 1946
@@ -54,7 +64,7 @@ graphe_droit_effectif(base_size = 24)
 :::
 ::::
 
-[Source : BEA, comptes nationaux, via FRED, consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+[Source : [BEA, comptes nationaux, via FRED, consulté le 22/10/2026](https://fred.stlouisfed.org/series/B235RC1A027NBEA) ; calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
 0 h 05 – 0 h 08. Une conséquence du 2 avril, vue sur un siècle. Lecture : le droit effectivement perçu triple en un an. Ce droit effectif n'est pas le droit moyen de Guimbard : il est plus bas parce que les achats se détournent des produits les plus taxés, que certains produits sont exemptés et que les droits sont versés avec retard ; l'écart entre les deux mesures est lui-même un effet du droit. Le pic de 1933 suit la loi Smoot-Hawley de 1930. Moyenne annuelle : elle lisse les variations à l'intérieur de 2025. Question à l'amphi : pourquoi le droit effectivement payé est-il plus bas que le droit affiché ? Transition : deux questions précises.
@@ -269,7 +279,7 @@ A vend 20 t de blé à B contre 20 lots. A consomme 40 t et 20 lots (au lieu de 
 
 . . .
 
-**Stolper et Samuelson** (1941) : l'ouverture enrichit les détenteurs du facteur abondant et appauvrit ceux du facteur rare.
+**Stolper et Samuelson** ([1941](https://doi.org/10.2307/2967638)) : l'ouverture enrichit les détenteurs du facteur abondant et appauvrit ceux du facteur rare.
 
 ::: {.notes}
 0 h 47 – 0 h 51. Heckscher, « Utrikeshandelns verkan på inkomstfördelningen », *Ekonomisk Tidskrift* ; Ohlin, *Interregional and International Trade*, Harvard University Press. Stolper et Samuelson, « Protection and Real Wages », 1941, en tirent la conséquence. Question : quel est le facteur abondant de la France ? Le facteur rare ? Transition : ce que cela change au message de Ricardo.
@@ -578,7 +588,7 @@ Un grand pays gagne à un droit modéré si l'étranger paie plus que la perte s
 
 Le droit sert aussi de **menace** : il a aidé à conclure plusieurs accords, dont celui avec l'UE ; son coût est le risque de représailles.
 
-[Sources : Maison-Blanche, 21/08/2025 ; Deysine, 23/02/2026 ; DG Trésor, 06/08/2026 ; Guimbard, 22/07/2026.]{.wp-source}
+[Sources : [Maison-Blanche, 21/08/2025](https://www.whitehouse.gov/briefings-statements/2025/08/joint-statement-on-a-united-states-european-union-framework-on-an-agreement-on-reciprocal-fair-and-balanced-trade/) ; [Deysine, 23/02/2026](https://theconversation.com/trump-desavoue-par-la-cour-supreme-sur-les-droits-de-douane-et-maintenant-276613) ; [DG Trésor, 06/08/2026](https://www.tresor.economie.gouv.fr/services-aux-entreprises/droits-de-douane-americains-et-reponse-europeenne-informations-pour-les-entreprises) ; [Guimbard, 22/07/2026](https://theconversation.com/le-mur-tarifaire-de-donald-trump-brique-apres-brique-288065).]{.wp-source}
 
 ::: {.notes}
 1 h 43 – 1 h 46. Repères arrêtés au 21/10/2026. Accord du 21/08/2025 : le droit NPF s'applique s'il est plus élevé ; l'UE annonce supprimer ses droits sur les produits industriels américains. Le 30/07/2026, l'UE suspend sans limite de durée ses contre-mesures (jusqu'à 30 % sur 93 Md€), jamais entrées en vigueur, réactivables à tout moment (DG Trésor, 06/08/2026). Droits annulés à rembourser : environ 165 Md\$ à 330 566 importateurs (Bouët, 27/03/2026). Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer. Transition : qui a payé ?
@@ -586,7 +596,7 @@ Le droit sert aussi de **menace** : il a aidé à conclure plusieurs accords, do
 
 ## En 2025, près de 90 % des droits payés aux États-Unis
 
-- **Repère 2018** : les prix hors droit des exportateurs n'avaient pas baissé ; le droit était passé en entier dans les prix américains (Amiti, Redding et Weinstein, 2019 ; Fajgelbaum et al., 2020).
+- **Repère 2018** : les prix hors droit des exportateurs n'avaient pas baissé ; le droit était passé en entier dans les prix américains ([Amiti, Redding et Weinstein, 2019](https://doi.org/10.1257/jep.33.4.187) ; [Fajgelbaum et al., 2020](https://doi.org/10.1093/qje/qjz036)).
 
 . . .
 
@@ -595,7 +605,7 @@ Le droit sert aussi de **menace** : il a aidé à conclure plusieurs accords, do
 - **Part payée aux États-Unis** : 94 %, 92 %, puis 86 %.
 :::
 
-[Source : Amiti, Flanagan, Heise et Weinstein, *Liberty Street Economics*, 12/02/2026.]{.wp-source}
+[Source : [Amiti, Flanagan, Heise et Weinstein, *Liberty Street Economics*, 12/02/2026](https://libertystreeteconomics.newyorkfed.org/2026/02/who-is-paying-for-the-2025-u-s-tariffs/).]{.wp-source}
 
 ::: {.notes}
 1 h 46 – 1 h 49. Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Près de 90 % du fardeau retombe sur les entreprises et les consommateurs américains. Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s'est passé. Question : qui avait parié « grand pays » ? Transition : ce que montrent les indices de prix.
@@ -634,7 +644,7 @@ graphe_prix_import(base_size = 24)
 - **Février 2026** : les droits ajoutent **2,9 points** à l'inflation des biens.
 :::
 
-[Source : Amiti, Heise et Weinstein, *Liberty Street Economics*, 06/10/2026.]{.wp-source}
+[Source : [Amiti, Heise et Weinstein, *Liberty Street Economics*, 06/10/2026](https://libertystreeteconomics.newyorkfed.org/2026/10/how-fast-do-tariffs-pass-through-into-consumer-prices/).]{.wp-source}
 
 ::: {.notes}
 1 h 53 – 1 h 56. Sans les droits, les prix de ces biens auraient légèrement baissé en février 2026. Question : un droit de 10 points, combien sur les prix des biens au bout d'un an ? (Environ 2,5 %.) Transition : combien cela coûte-t-il au pays ?
@@ -709,7 +719,7 @@ graphe_part_douane(base_size = 24)
 :::
 ::::
 
-[Source : BEA, comptes nationaux, via FRED, consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+[Source : [BEA, comptes nationaux, via FRED, consulté le 22/10/2026](https://fred.stlouisfed.org/series/B235RC1A027NBEA) ; calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
 2 h 02 – 2 h 04. Les droits perçus ont plus que triplé, mais restent une petite part des impôts fédéraux (impôts courants, cotisations sociales non comprises). Le pic de 1931 vient aussi de l'effondrement des autres impôts pendant la crise. Années civiles : ne pas comparer directement aux exercices budgétaires du graphique précédent. Question : les droits de douane peuvent-ils financer l'État fédéral ? Transition : à qui va l'argent rendu ?
@@ -734,13 +744,41 @@ Qui a supporté le droit : question **positive**. Qui doit être remboursé : qu
 ## Effets de répartition par revenu : un droit pèse sur les ménages modestes
 
 ::: {.incremental}
-- Les droits relevés en 2018 et en 2019 devaient coûter **831 \$** par an à un ménage américain typique, hors représailles (Amiti, Redding et Weinstein, *Liberty Street Economics*, 23/05/2019).
+- Les droits relevés en 2018 et en 2019 devaient coûter **831 \$** par an à un ménage américain typique, hors représailles ([Amiti, Redding et Weinstein, *Liberty Street Economics*, 23/05/2019](https://libertystreeteconomics.newyorkfed.org/2019/05/new-china-tariffs-increase-costs-to-us-households/)).
 - Comme une taxe sur les biens de consommation, un tel droit pèse plus, en part du revenu, sur les ménages qui dépensent tout leur revenu.
-- C'est un raisonnement : les sources de la séance ne chiffrent pas l'écart par niveau de revenu.
+- Les données le confirment : en 2023, les biens représentent **48,9 %** du revenu après impôt des 20 % de ménages les plus modestes, **15,6 %** de celui des 20 % les plus aisés ([BLS, *Consumer Expenditure Surveys*, téléchargé le 23/10/2026](https://www.bls.gov/cex/tables.htm) ; calcul de l'auteur).
 :::
 
 ::: {.notes}
-2 h 07 – 2 h 09. Les ménages qui épargnent une partie de leur revenu sont moins touchés en proportion. Question : un étudiant qui dépense tout ce qu'il gagne est-il plus ou moins touché, en part de son revenu ? Transition : les entreprises qui achètent des biens importés.
+2 h 07 – 2 h 09. Les ménages qui épargnent une partie de leur revenu sont moins touchés en proportion. Les biens comptés : alimentation à domicile, alcools, produits d'entretien, meubles et équipement du logement, habillement, achats de véhicules ; tous ne sont pas importés. Le revenu des plus modestes est sous-estimé dans l'enquête, ce qui grossit le 48,9 % ; la baisse se lit aussi du 2e au 5e quintile (26,8 % à 15,6 %). Question : un étudiant qui dépense tout ce qu'il gagne est-il plus ou moins touché, en part de son revenu ? Transition : les droits de 2026, chiffrés par décile.
+:::
+
+## En part du revenu, les droits pèsent trois fois plus sur les ménages modestes
+
+:::: {.columns}
+::: {.column width="60%"}
+```{r}
+#| fig-width: 8
+#| fig-height: 5.4
+#| fig-alt: "Diagramme en barres sur dix déciles de revenu : coût des droits de douane en pourcentage du revenu disponible. 1,32 % pour le premier décile, barre rouge, entre 0,6 et 0,8 % environ pour les déciles 2 à 9, barres bleues, et 0,42 % pour le dixième décile, barre rouge."
+graphe_cout_droits_deciles(base_size = 24)
+```
+:::
+
+::: {.column width="40%"}
+::: {.incremental}
+- 10 % les plus modestes : **1,3 %** du revenu, environ 490 \$ par an.
+- 10 % les plus aisés : **0,4 %**, environ 2 100 \$.
+- En dollars, les aisés paient plus ; en part du revenu, les modestes paient **trois fois plus**.
+- Selon une autre méthode, l'écart est plus faible.
+:::
+:::
+::::
+
+[Sources : [Yale Budget Lab, 24/08/2026](https://budgetlab.yale.edu/research/state-us-tariffs) ; [Tax Policy Center, 11/09/2026](https://taxpolicycenter.org/features/tracking-trump-tariffs).]{.wp-source}
+
+::: {.notes}
+2 h 09 – 2 h 11. Droits en vigueur au 24/08/2026, après report des achats vers d'autres fournisseurs ; coût en % du revenu après impôts et transferts. En dollars, les riches paient plus ; en part du revenu, les modestes paient plus, parce qu'ils dépensent presque tout leur revenu (diapo précédente). Objection : le Tax Policy Center, qui répartit la charge selon le revenu plutôt que selon la consommation, trouve 0,8 point d'impôt en plus pour les 20 % les plus modestes contre 0,6 point pour les 20 % les plus aisés. Estimations faites avant coup, qui supposent que les droits passent dans les prix ; les chiffres changent à chaque mise à jour, d'où la date. Question : pourquoi un ménage aisé peut-il payer plus en dollars et moins en part de son revenu ? Transition : les entreprises qui achètent des biens importés.
 :::
 
 ## Chaîne de valeur : un bien franchit plusieurs frontières
@@ -761,7 +799,7 @@ Une **chaîne de valeur** est la suite des étapes de production d'un bien, de l
 ::::
 
 ::: {.notes}
-2 h 09 – 2 h 11. Le droit de douane se perçoit à ce type de frontière ; une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Question : combien de frontières franchit un téléphone avant d'arriver en magasin ? Transition : l'exemple de l'acier.
+2 h 11 – 2 h 13. Le droit de douane se perçoit à ce type de frontière ; une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Question : combien de frontières franchit un téléphone avant d'arriver en magasin ? Transition : l'exemple de l'acier.
 :::
 
 ## Droit sur l'acier : les aciéries gagnent a, leurs clients paient
@@ -788,19 +826,19 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 ::::
 
 ::: {.notes}
-2 h 11 – 2 h 14. Chaîne de causalité d'un droit sur un bien intermédiaire. Étape 4 : les entreprises relèvent leur prix ou réduisent leur production. Étape 5 : le droit censé protéger l'industrie en pénalise une partie ; c'est un raisonnement, que les sources de cette séance ne chiffrent pas. En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme ceux des biens finals, et les chaînes d'approvisionnement ont été réorganisées (Amiti et al., 2019). Question : qui, dans l'automobile, réclamerait la suppression du droit ? Transition : les territoires.
+2 h 13 – 2 h 16. Chaîne de causalité d'un droit sur un bien intermédiaire. Étape 4 : les entreprises relèvent leur prix ou réduisent leur production. Étape 5 : le droit censé protéger l'industrie en pénalise une partie ; c'est un raisonnement, que les sources de cette séance ne chiffrent pas. En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme ceux des biens finals, et les chaînes d'approvisionnement ont été réorganisées (Amiti et al., 2019). Question : qui, dans l'automobile, réclamerait la suppression du droit ? Transition : les territoires.
 :::
 
 ## Effets de répartition par territoire : des pertes concentrées
 
 ::: {.incremental}
 - Les gains de l'ouverture sont **diffus** ; ses pertes sont **concentrées**.
-- 1990-2007 : les zones industrielles américaines les plus exposées aux importations chinoises ont connu plus de chômage, des salaires plus bas, plus d'aides sociales ; environ **un quart** du recul de l'emploi industriel (Autor, Dorn et Hanson, 2013).
-- 2018 : les représailles ont surtout visé l'agriculture (Fajgelbaum et al., 2020).
+- 1990-2007 : les zones industrielles américaines les plus exposées aux importations chinoises ont connu plus de chômage, des salaires plus bas, plus d'aides sociales ; environ **un quart** du recul de l'emploi industriel ([Autor, Dorn et Hanson, 2013](https://doi.org/10.1257/aer.103.6.2121)).
+- 2018 : les représailles ont surtout visé l'agriculture ([Fajgelbaum et al., 2020](https://doi.org/10.1093/qje/qjz036)).
 :::
 
 ::: {.notes}
-2 h 14 – 2 h 17. Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles de 2018 ont frappé les travailleurs des secteurs exposés au commerce. Question : pourquoi des perdants concentrés pèsent-ils plus en politique que des gagnants dispersés ? Transition : la concurrence chinoise et l'emploi industriel, en données.
+2 h 16 – 2 h 18. Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles de 2018 ont frappé les travailleurs des secteurs exposés au commerce. Question : pourquoi des perdants concentrés pèsent-ils plus en politique que des gagnants dispersés ? Transition : la concurrence chinoise et l'emploi industriel, en données.
 :::
 
 ## 2000-2010 : la part de la Chine double, l'emploi industriel recule d'un tiers
@@ -824,10 +862,10 @@ graphe_chine_emploi(base_size = 24)
 :::
 ::::
 
-[Sources : Census Bureau via FRED ; Bureau of Labor Statistics ; consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+[Sources : [Census Bureau via FRED](https://fred.stlouisfed.org/series/IMPCH) ; [Bureau of Labor Statistics](https://data.bls.gov/timeseries/CES3000000001) ; consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
-2 h 17 – 2 h 20. La ligne verticale marque l'entrée de la Chine à l'OMC, en décembre 2001. Un quart du recul de 1990 à 2007 selon Autor, Dorn et Hanson (2013) ; le reste tient à d'autres causes, que le graphique ne distingue pas. Depuis 2018, la part de la Chine baisse sans que l'emploi industriel remonte. Question à l'amphi : les droits de 2018 et de 2025 ont-ils fait revenir les emplois ? (Le graphique seul ne permet pas de le dire.) Transition : les générations et l'étranger.
+2 h 18 – 2 h 21. La ligne verticale marque l'entrée de la Chine à l'OMC, en décembre 2001. Un quart du recul de 1990 à 2007 selon Autor, Dorn et Hanson (2013) ; le reste tient à d'autres causes, que le graphique ne distingue pas. Depuis 2018, la part de la Chine baisse sans que l'emploi industriel remonte. Question à l'amphi : les droits de 2018 et de 2025 ont-ils fait revenir les emplois ? (Le graphique seul ne permet pas de le dire.) Transition : les générations et l'étranger.
 :::
 
 ## Effets de répartition entre générations et à l'étranger
@@ -838,10 +876,10 @@ graphe_chine_emploi(base_size = 24)
 - **À l'étranger** : les exportateurs qui perdent leurs ventes perdent leur surplus. En 2025, l'UE a vendu pour **554,7 Md€** de biens aux États-Unis.
 :::
 
-[Source : Eurostat, `ext_lt_maineu`, téléchargé le 21/10/2026.]{.wp-source}
+[Source : [Eurostat, `ext_lt_maineu`, téléchargé le 21/10/2026](https://ec.europa.eu/eurostat/databrowser/view/ext_lt_maineu/default/table?lang=fr).]{.wp-source}
 
 ::: {.notes}
-2 h 20 – 2 h 22. L'industrie naissante revient dans la controverse avec List. Question : qui décide qu'une protection doit être retirée, et quand ? Transition : les exportations européennes, mois par mois.
+2 h 21 – 2 h 23. L'industrie naissante revient dans la controverse avec List. Question : qui décide qu'une protection doit être retirée, et quand ? Transition : les exportations européennes, mois par mois.
 :::
 
 ## Exportations de l'UE aux États-Unis : anticipation en mars 2025, puis repli
@@ -865,10 +903,10 @@ graphe_export_ue_usa(base_size = 24)
 :::
 ::::
 
-[Source : Eurostat, `ext_st_eu27_2020sitc`, consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
+[Source : [Eurostat, `ext_st_eu27_2020sitc`, consulté le 22/10/2026](https://ec.europa.eu/eurostat/databrowser/view/ext_st_eu27_2020sitc/default/table?lang=fr) ; calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
-2 h 22 – 2 h 24. Données corrigées des variations saisonnières et des jours ouvrables. Le total annuel de 2025 (554,7 Md€) dépasse celui de 2024 (535,6 Md€) parce qu'il est gonflé par les livraisons anticipées du premier trimestre ; la baisse n'apparaît qu'en mensuel (les 382,9 et 407,7 Md€ sont des valeurs brutes). Une chronologie, pas l'effet du seul droit : le taux de change de l'euro et la conjoncture américaine jouent aussi. Septembre 2025 (51,4 Md€) est un mois atypique, que ces données n'expliquent pas. Question : pourquoi un exportateur livre-t-il en mars ce qu'il aurait vendu en mai ? Transition : un droit de douane d'un autre type, pour le climat.
+2 h 23 – 2 h 25. Données corrigées des variations saisonnières et des jours ouvrables. Le total annuel de 2025 (554,7 Md€) dépasse celui de 2024 (535,6 Md€) parce qu'il est gonflé par les livraisons anticipées du premier trimestre ; la baisse n'apparaît qu'en mensuel (les 382,9 et 407,7 Md€ sont des valeurs brutes). Une chronologie, pas l'effet du seul droit : le taux de change de l'euro et la conjoncture américaine jouent aussi. Septembre 2025 (51,4 Md€) est un mois atypique, que ces données n'expliquent pas. Question : pourquoi un exportateur livre-t-il en mars ce qu'il aurait vendu en mai ? Transition : un droit de douane d'un autre type, pour le climat.
 :::
 
 ## MACF : un droit de douane pour le climat
@@ -879,10 +917,10 @@ graphe_export_ue_usa(base_size = 24)
 - Régime définitif depuis le 1^er^ janvier 2026 : ciment, fer et acier, aluminium, engrais, électricité, hydrogène. Payant en 2027.
 :::
 
-[Sources : Commission européenne, page CBAM, consultée le 21/10/2026 ; Mayer Brown, 17/10/2025.]{.wp-source}
+[Sources : [Commission européenne, page CBAM, consultée le 21/10/2026](https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en) ; [Mayer Brown, 17/10/2025](https://www.mayerbrown.com/en/insights/publications/2025/10/eu-adopts-cbam-simplification-regulation-10-key-amendments-and-challenges-ahead).]{.wp-source}
 
 ::: {.notes}
-2 h 24 – 2 h 27. De 2023 à 2025, phase de simple déclaration. Les certificats pour les importations de 2026 sont vendus à partir du 1er février 2027 ; pour le ciment, l'acier, l'aluminium et les engrais, seuls les importateurs de plus de 50 tonnes par an sont concernés. Question : le MACF protège-t-il une industrie ou le climat ? Transition : ses perdants.
+2 h 25 – 2 h 27. De 2023 à 2025, phase de simple déclaration. Les certificats pour les importations de 2026 sont vendus à partir du 1er février 2027 ; pour le ciment, l'acier, l'aluminium et les engrais, seuls les importateurs de plus de 50 tonnes par an sont concernés. Question : le MACF protège-t-il une industrie ou le climat ? Transition : ses perdants.
 :::
 
 ## MACF : un même prix du carbone, des perdants éloignés
@@ -894,7 +932,7 @@ graphe_export_ue_usa(base_size = 24)
 - Ses perdants sont souvent loin : le **Mozambique** tire de l'aluminium environ **un sixième** de ses exportations totales (2023), vendu presque tout à l'UE.
 - Deux économistes de l'Agence française de développement proposent d'en exempter les pays les moins avancés et de les aider autrement.
 
-[Sources : Godin et Riccioppo Magacho, *The Conversation*, 10/01/2023 ; ONU, Comtrade ; Eurostat, Comext (consultés le 22/10/2026).]{.wp-source}
+[Sources : [Godin et Riccioppo Magacho, *The Conversation*, 10/01/2023](https://theconversation.com/un-ajustement-carbone-aux-frontieres-de-lue-nest-pas-sans-risque-pour-les-pays-les-plus-pauvres-197218) ; [ONU, Comtrade](https://comtradeplus.un.org/) ; [Eurostat, Comext](https://ec.europa.eu/eurostat/comext/newxtweb/) (consultés le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 27 – 2 h 29. On retrouve l'incidence : qui supporte le MACF dépend de qui voit son prix changer, ici les producteurs d'aluminium du Mozambique. Question : exempter les pays les moins avancés, est-ce une question positive ou normative ? Transition : la controverse.
@@ -929,7 +967,7 @@ graphe_export_ue_usa(base_size = 24)
 
 Dans l'exemple de Ricardo, le gain vient de ce qu'on **importe** à bon prix, pas d'un solde positif. Un solde bilatéral ignore les autres pays et les services.
 
-[Source : Eurostat, `ext_lt_maineu`, mis à jour le 16/10/2026, téléchargé le 21/10/2026 ; solde calculé par l'auteur.]{.wp-source}
+[Source : [Eurostat, `ext_lt_maineu`, mis à jour le 16/10/2026, téléchargé le 21/10/2026](https://ec.europa.eu/eurostat/databrowser/view/ext_lt_maineu/default/table?lang=fr) ; solde calculé par l'auteur.]{.wp-source}
 
 ::: {.notes}
 2 h 32 – 2 h 34. L'administration américaine a justifié ses droits par le déficit commercial (Deysine, 23/02/2026) : les États-Unis achètent à l'UE bien plus de biens qu'ils ne lui en vendent. Les services ne figurent pas dans ce tableau. Question : A, qui achète des vêtements à B, s'est-il appauvri ? Transition : les écoles en présence.
@@ -940,7 +978,7 @@ Dans l'exemple de Ricardo, le gain vient de ce qu'on **importe** à bon prix, pa
 ::: {.incremental}
 - **Libre-échange** (Ricardo, puis les néoclassiques) : l'échange enrichit les pays ; mieux vaut compenser les perdants (aides, formation, politiques régionales) que taxer tout le monde.
 - **Protectionnisme éducateur** (Friedrich List, XIX^e^ siècle) : protéger **temporairement** les « industries naissantes », jusqu'à ce qu'elles soient compétitives.
-- **Limites, selon les critiques** : compensation partielle en pratique (Autor et al., 2013) ; représailles, secteurs choisis par les mieux organisés, rentes protégées.
+- **Limites, selon les critiques** : compensation partielle en pratique ([Autor et al., 2013](https://doi.org/10.1257/aer.103.6.2121)) ; représailles, secteurs choisis par les mieux organisés, rentes protégées.
 :::
 
 ::: {.notes}

@@ -41,6 +41,7 @@ $presentation-block-margin: 20px;
   .quarto-figure-center, .cell-output-display { text-align: center; }
   .figure-caption, figcaption { font-size: 22px; }
   .wp-source { display: block; font-size: 20px; color: var(--wp-encre-2); }   // ligne de source en pied de diapo
+  .wp-credit { display: block; font-size: 16px; line-height: 1.3; color: var(--wp-encre-2); }   // crédit photo sous une image en colonne
   .columns { display: flex; gap: 1em; }
   .columns .column { flex: 1 1 0; min-width: 0; }
   .columns img { max-height: 380px; object-fit: contain; }   // photos et cartes en colonne : tiennent dans 720 px

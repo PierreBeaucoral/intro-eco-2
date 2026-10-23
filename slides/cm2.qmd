@@ -16,12 +16,12 @@ source(here::here("R/cm2.R"))   # même fichier que la page de cours
 
 ## Le fait de départ : le prix du paquet, de 3,20 € à 13,50 €
 
-- Prix moyen d'un paquet : 3,20 € en 2000, 13 € en 2025 ; paquet type de 20 cigarettes : **13,50 €** en février 2026 (Hill, 2026 ; Obradovic, *The Conversation*, 25/07/2026).
-- Au 1^er^ novembre 2026, nouveaux prix homologués : le Marlboro Red souple passe à 14,00 € (*Bourse Inside*, 08/10/2026).
+- Prix moyen d'un paquet : 3,20 € en 2000, 13 € en 2025 ; paquet type de 20 cigarettes : **13,50 €** en février 2026 ([Hill, 2026](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf) ; [Obradovic, *The Conversation*, 25/07/2026](https://theconversation.com/alcool-tabac-cannabis-les-jeunes-se-sont-ils-vraiment-detournes-des-drogues-286189)).
+- Au 1^er^ novembre 2026, nouveaux prix homologués : le Marlboro Red souple passe à 14,00 € ([*Bourse Inside*, 08/10/2026](https://bourseinside.fr/?p=13529)).
 
 . . .
 
-- Conséquences : ventes des buralistes **−8,2 %** en 2025 (OFDT) ; fumeurs quotidiens chez les 18-75 ans : 25 % en 2021, 18 % en 2024 (Santé publique France).
+- Conséquences : ventes des buralistes **−8,2 %** en 2025 ([OFDT](https://www.ofdt.fr/publication/2026/tabagisme-et-arret-du-tabac-en-2025-2681)) ; fumeurs quotidiens chez les 18-75 ans : 25 % en 2021, 18 % en 2024 (Santé publique France).
 
 . . .
 
@@ -115,8 +115,8 @@ Les estimations sont nettement inférieures à 1 en valeur absolue.
 
 ::: {.incremental}
 - Santé publique France : e ≈ −0,4 sur 2000-2015.
-- Études récentes : entre −0,3 et −0,4 (*La finance pour tous*, 24/07/2026).
-- Sur 1950-2025, hors 2016 (année aberrante) : environ −0,50 (Hill, 2026, figure 4.2).
+- Études récentes : entre −0,3 et −0,4 ([*La finance pour tous*, 24/07/2026](https://www.lafinancepourtous.com/juniors/lyceens/boite-a-outils-de-leconomiste/augmenter-le-prix-des-cigarettes-est-il-un-bon-moyen-de-reduire-la-consommation-de-tabac)).
+- Sur 1950-2025, hors 2016 (année aberrante) : environ −0,50 ([Hill, 2026, figure 4.2](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)).
 - Fourchette retenue : une hausse de 10 % du prix fait baisser les ventes de **3 à 5 %**.
 :::
 
@@ -169,7 +169,7 @@ L'**incidence fiscale** est la répartition réelle de la charge d'une taxe entr
 [2008 · MAR, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Gary S. Becker et Kevin M. Murphy** (1988), « A Theory of Rational Addiction », *Journal of Political Economy* · école de Chicago. Fumer aujourd'hui augmente l'envie de fumer demain : c'est ce qui définit l'addiction.
+**Gary S. Becker et Kevin M. Murphy** (1988), [« A Theory of Rational Addiction »](https://doi.org/10.1086/261558), *Journal of Political Economy* · école de Chicago. Fumer aujourd'hui augmente l'envie de fumer demain : c'est ce qui définit l'addiction.
 :::
 
 . . .
@@ -204,7 +204,7 @@ Une consommation est **addictive** quand la quantité consommée aujourd'hui aug
 [2014 · Chambre des représentants des États-Unis, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Jonathan Gruber et Botond Kőszegi** (2001), *Quarterly Journal of Economics* · économie comportementale. Aux États-Unis, la consommation de cigarettes baisse dès qu'une hausse de taxe est votée, avant même qu'elle s'applique : les fumeurs anticipent bien.
+**Jonathan Gruber et Botond Kőszegi** (2001), [*Quarterly Journal of Economics*](https://doi.org/10.1162/003355301753265570) · économie comportementale. Aux États-Unis, la consommation de cigarettes baisse dès qu'une hausse de taxe est votée, avant même qu'elle s'applique : les fumeurs anticipent bien.
 :::
 
 . . .
@@ -575,7 +575,7 @@ Faire baisser la consommation et financer l'État sont **deux objectifs en parti
 
 ## Exemple chiffré : les taxes font 82,5 % d'un paquet à 13,50 €
 
-Taux au 1^er^ janvier 2026, paquet de 20 cigarettes (Hill, 2026, tableau 5.2).
+Taux au 1^er^ janvier 2026, paquet de 20 cigarettes ([Hill, 2026, tableau 5.2](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)).
 
 ::: {.incremental}
 1. Accise proportionnelle : 55 % du prix, 0,55 × 13,50 ≈ **7,43 €**.
@@ -693,7 +693,7 @@ graphe_conso_tabac(base_size = 24)
 
 ::: {.fragment}
 
-- Effet pour moitié sur le **nombre de fumeurs**, pour moitié sur la **quantité fumée** (OMS, 2012 ; Hill, 2026).
+- Effet pour moitié sur le **nombre de fumeurs**, pour moitié sur la **quantité fumée** (OMS, 2012 ; [Hill, 2026](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)).
 - Oui, en partie : d'autres mesures ont joué, c'est une **corrélation**, pas une expérience.
 :::
 :::
@@ -706,8 +706,8 @@ graphe_conso_tabac(base_size = 24)
 ## Fuites : les ventes des buralistes ne sont pas la consommation
 
 ::: {.incremental}
-- **Tabac à rouler** : jusqu'en 2013, +10 % sur le prix des seules cigarettes faisait monter ses ventes de 4,2 % (Hill, 2026).
-- **Achats à l'étranger et contrebande** : 17,7 % des produits du tabac échappent en moyenne aux buralistes, soit 8 081 tonnes et 4,3 Md€ de taxes (*JO Sénat*, 26/02/2026).
+- **Tabac à rouler** : jusqu'en 2013, +10 % sur le prix des seules cigarettes faisait monter ses ventes de 4,2 % ([Hill, 2026](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)).
+- **Achats à l'étranger et contrebande** : 17,7 % des produits du tabac échappent en moyenne aux buralistes, soit 8 081 tonnes et 4,3 Md€ de taxes ([*JO Sénat*, 26/02/2026](https://www.senat.fr/questions/base/2025/qSEQ250504515.html)).
 - **Saisies** de cigarettes par les douanes : +24,5 % en 2025 (AFP, 28/05/2026).
 :::
 
@@ -737,7 +737,7 @@ graphe_cigarettes_rouler(base_size = 24)
 :::
 ::::
 
-[Source : C. Hill (2026), tableau 1.1, ventes en tonnes, France métropolitaine (consulté le 22/10/2026).]{.wp-source}
+[Source : [C. Hill (2026), tableau 1.1](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf), ventes en tonnes, France métropolitaine (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 13 – 2 h 15. Rapport de prix entre 20 cigarettes et 16 grammes de tabac à rouler : 2,7 en 2000, 1,3 en 2025 (Hill, 2026). Petit rebond en 2020, frontières fermées. L'année 2023 n'est pas tracée : la ligne du tableau source montre un rebond que les autres sources ne confirment pas (probable coquille). Question : pourquoi le tabac à rouler recule-t-il à son tour ? (Son prix rattrape celui des cigarettes.) Transition : l'autre substitut, acheter à l'étranger.
@@ -765,7 +765,7 @@ graphe_prix_europe(base_size = 24)
 :::
 ::::
 
-[Source : Eurostat, prc_ppp_ind_1, poste « Tabac », 2025 (consulté le 22/10/2026).]{.wp-source}
+[Source : [Eurostat, prc_ppp_ind_1](https://ec.europa.eu/eurostat/databrowser/view/prc_ppp_ind_1/default/table), poste « Tabac », 2025 (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 15 – 2 h 17. Indice de l'ensemble des produits du tabac, pas le prix d'un paquet ; prix en euros, sans correction du pouvoir d'achat. France 2,35 fois plus chère que l'Espagne. Question : quels fumeurs ont intérêt à acheter de l'autre côté de la frontière ? Transition : ce que ces fuites font à la recette.
@@ -816,8 +816,8 @@ Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes des
 ## Par génération : les jeunes sont plus sensibles au prix
 
 ::: {.incremental}
-- Plus sensibles que leurs aînés (Hill, 2026, § 4.3) : budget plus petit, dépendance moins installée. Lycéens fumeurs quotidiens : 30,8 % en 2010, **5,6 %** en 2024 (AFP, 28/05/2026).
-- Écart entre filières à 17 ans (ESCAPAD, mars 2022, cité par *The Conversation*, 25/07/2026) : lycée professionnel 22,1 %, général ou technologique 10,1 %, apprentis 38,4 %.
+- Plus sensibles que leurs aînés ([Hill, 2026, § 4.3](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)) : budget plus petit, dépendance moins installée. Lycéens fumeurs quotidiens : 30,8 % en 2010, **5,6 %** en 2024 ([AFP, 28/05/2026](https://www.cbnews.fr/node/101206)).
+- Écart entre filières à 17 ans (ESCAPAD, mars 2022, cité par [*The Conversation*, 25/07/2026](https://theconversation.com/alcool-tabac-cannabis-les-jeunes-se-sont-ils-vraiment-detournes-des-drogues-286189)) : lycée professionnel 22,1 %, général ou technologique 10,1 %, apprentis 38,4 %.
 :::
 
 ::: {.notes}
@@ -828,7 +828,7 @@ Si une partie des fumeurs achète en Belgique ou au marché noir, les ventes des
 
 ::: {.incremental}
 - Taxe **régressive** : un paquet à 13,50 € pèse plus lourd dans un petit budget.
-- En théorie, les modestes devraient réagir davantage et gagner le plus en santé ; les données françaises ne le montrent pas (Hill, 2026, § 4.3).
+- En théorie, les modestes devraient réagir davantage et gagner le plus en santé ; les données françaises ne le montrent pas ([Hill, 2026, § 4.3](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)).
 - Part de fumeurs chez les chômeurs : en hausse jusqu'en 2016, quand elle baissait chez les actifs occupés et les étudiants.
 - Pour qui n'arrive pas à arrêter : une **perte de pouvoir d'achat**.
 :::
@@ -859,7 +859,7 @@ graphe_ventes_frontaliers(base_size = 24)
 :::
 ::::
 
-[Source : DGDDI, exploitation OFDT (Douchet, 2026, graphique 2), France continentale (consulté le 22/10/2026).]{.wp-source}
+[Source : DGDDI, exploitation OFDT ([Douchet, 2026, graphique 2](https://www.ofdt.fr/publication/2026/tabagisme-et-arret-du-tabac-en-2025-2681)), France continentale (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 27 – 2 h 29. Ventes enregistrées, pas consommation : une partie de la baisse est une fuite, non un arrêt du tabac. Près des frontières, le paquet est moins cher de l'autre côté ; les buralistes frontaliers perdent des ventes, compensés par des aides (Hill, 2026, § 7.6). En 2025, la baisse sur un an est presque la même des deux côtés, ce que l'OFDT attribue aux hausses de taxes belges et luxembourgeoises (Douchet, 2026) : de 2024 à 2025, l'indice de niveau des prix du tabac par rapport à la moyenne de l'UE passe de 135,7 à 144,4 en Belgique, de 84,0 à 87,5 au Luxembourg (Eurostat). Question : pourquoi 2020 ressemble-t-il à une expérience ? Transition : l'écart entre hommes et femmes.
@@ -888,7 +888,7 @@ graphe_fumeurs_sexe(base_size = 24)
 :::
 ::::
 
-[Source : sondages SEITA, Insee, Inpes puis Santé publique France, compilés par C. Hill (2026), tableau 2.1 (consulté le 22/10/2026).]{.wp-source}
+[Source : sondages SEITA, Insee, Inpes puis Santé publique France, compilés par [C. Hill (2026), tableau 2.1](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf) (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 29 – 2 h 31. Sondages Seita, Insee, Inpes puis Santé publique France. Chaque point est une enquête ; aucune entre 1953 et 1980 (tirets). Le champ change : depuis 2017 (trait vertical), tabagisme quotidien des 18-75 ans. 2023 → 2024 : 25,4 → 20,4 % chez les hommes, 20,9 → 16,2 % chez les femmes. Question : pourquoi les femmes ont-elles commencé à fumer plus tard ? Transition : l'État et les vendeurs.
@@ -936,10 +936,10 @@ graphe_fumeurs_sexe(base_size = 24)
 ## Positions en présence : l'effet du prix est admis par tous
 
 ::: {.incremental}
-- *École de Chicago* (Becker et Murphy) : informer, et taxer les seuls dommages causés aux autres.
-- *Économie comportementale* (Gruber et Kőszegi) : taxe plus élevée, qui corrige aussi l'internalité.
-- *Santé publique* (OMS ; Hill, 2026) : la hausse des prix est « de loin le moyen le plus efficace ».
-- *Buralistes* : marché parallèle ; limiter la hausse des accises à l'inflation (*JO Sénat*, 08/05/2025).
+- *École de Chicago* ([Becker et Murphy](https://doi.org/10.1086/261558)) : informer, et taxer les seuls dommages causés aux autres.
+- *Économie comportementale* ([Gruber et Kőszegi](https://doi.org/10.1162/003355301753265570)) : taxe plus élevée, qui corrige aussi l'internalité.
+- *Santé publique* (OMS ; [Hill, 2026](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)) : la hausse des prix est « de loin le moyen le plus efficace ».
+- *Buralistes* : marché parallèle ; limiter la hausse des accises à l'inflation ([*JO Sénat*, 08/05/2025](https://www.senat.fr/questions/base/2025/qSEQ250504515.html)).
 :::
 
 . . .
@@ -953,12 +953,12 @@ Le débat porte sur la **taille des fuites** (positif) et le **droit de l'État 
 ## Droit : prix homologués par les douanes, Convention-cadre de l'OMS
 
 ::: {.droit}
-Chaque fabricant propose ses prix, que l'administration des douanes homologue et publie au *Journal officiel* ; l'arrêté du 29 septembre 2026 fixe les prix au 1^er^ novembre 2026 (*Bourse Inside*, 08/10/2026).
+Chaque fabricant propose ses prix, que l'administration des douanes homologue et publie au *Journal officiel* ; l'arrêté du 29 septembre 2026 fixe les prix au 1^er^ novembre 2026 ([*Bourse Inside*, 08/10/2026](https://bourseinside.fr/?p=13529)).
 :::
 
 . . .
 
-La France a ratifié la **Convention-cadre de l'OMS** pour la lutte antitabac, dont l'article 6 recommande d'augmenter les taxes sur le tabac (Hill, 2026).
+La France a ratifié la **Convention-cadre de l'OMS** pour la lutte antitabac, dont l'article 6 recommande d'augmenter les taxes sur le tabac ([Hill, 2026](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)).
 
 ::: {.notes}
 2 h 40 – 2 h 41. Les prix du tabac ne sont pas libres au sens ordinaire. Procédure : Hill, 2026, § 3.1. Transition : ce qu'il faut retenir.

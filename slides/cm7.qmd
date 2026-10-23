@@ -16,15 +16,15 @@ source(here::here("R/cm7.R"))   # même fichier que la page de cours
 
 ## Le fait de départ : la fermeture du détroit d'Ormuz (28/02/2026)
 
-- La guerre déclenchée le 28/02/2026 ferme de fait le détroit d'Ormuz (Insee, *Note de conjoncture*, 24/03/2026).
+- La guerre déclenchée le 28/02/2026 ferme de fait le détroit d'Ormuz ([Insee, *Note de conjoncture*, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf)).
 
 . . .
 
-- Conséquence sur les prix : inflation de la zone euro à **3,8 %** en septembre 2026, contre 2,2 % un an plus tôt ; l'énergie en apporte 1,7 point (Eurostat, 16/10/2026).
+- Conséquence sur les prix : inflation de la zone euro à **3,8 %** en septembre 2026, contre 2,2 % un an plus tôt ; l'énergie en apporte 1,7 point ([Eurostat, 16/10/2026](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-16102026-ap)).
 
 . . .
 
-- Réaction de la BCE : taux de dépôt de 2,00 % à **2,25 %** (17/06/2026), puis **2,50 %** (16/09/2026) (BCE).
+- Réaction de la BCE : taux de dépôt de 2,00 % à **2,25 %** (17/06/2026), puis **2,50 %** (16/09/2026) ([BCE](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)).
 
 . . .
 
@@ -40,7 +40,7 @@ source(here::here("R/cm7.R"))   # même fichier que la page de cours
 ::: {.column width="60%"}
 ![](../cours/img/cm7/detroit-ormuz.png){height="380px" fig-alt="Carte en couleurs du détroit d'Ormuz. Le golfe Persique, à gauche, communique avec le golfe d'Oman, à droite, par un passage étroit entre la côte iranienne au nord et la péninsule omanaise de Musandam au sud. Deux couloirs de navigation, l'un dans chaque sens, sont tracés en violet et suivent ce passage. Les Émirats arabes unis bordent le golfe Persique au sud."}
 
-[Carte : Goran tek-en, CC BY-SA 4.0, Wikimedia Commons (d'après OpenStreetMap).]{.wp-source}
+[Carte : Goran tek-en, CC BY-SA 4.0, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Strait_of_Hormuz-svg-en.svg) (d'après OpenStreetMap).]{.wp-source}
 :::
 
 ::: {.column width="40%"}
@@ -69,7 +69,7 @@ source(here::here("R/cm7.R"))   # même fichier que la page de cours
 graphe_petrole_gaz(base_size = 24)
 ```
 
-[Sources : Banque mondiale, Pink Sheet ; BCE, taux de change (consultés le 22/10/2026).]{.wp-source}
+[Sources : [Banque mondiale, Pink Sheet](https://www.worldbank.org/en/research/commodity-markets) ; [BCE, taux de change](https://data.ecb.europa.eu/data/datasets/EXR/EXR.M.USD.EUR.SP00.A) (consultés le 22/10/2026).]{.wp-source}
 :::
 
 ::: {.column width="40%"}
@@ -117,7 +117,7 @@ graphe_taux_inflation(base_size = 24, etape = 1)
 
 ::: {.incremental}
 1. La BCE ne produit pas de pétrole : relever un taux d'intérêt ne rouvre pas un détroit.
-2. En 2026, elle agit dès 3,2 % d'inflation (mai 2026) ; en 2022, à 8,6 % (juin 2022) (Eurostat).
+2. En 2026, elle agit dès 3,2 % d'inflation (mai 2026) ; en 2022, à 8,6 % (juin 2022) ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table)).
 3. En 2026, elle relève son taux de 0,50 point ; en 2022-2023, de 4,50 points.
 :::
 
@@ -161,7 +161,7 @@ graphe_taux_inflation(base_size = 24, etape = 1)
 [1976 · UPI, domaine public, Wikimedia Commons]{.wp-credit}
 :::
 
-**Irving Fisher** (1911), *The Purchasing Power of Money* ; **Milton Friedman et Anna J. Schwartz** (1963), *A Monetary History of the United States, 1867-1960* · théorie quantitative, puis école monétariste. Si la quantité de monnaie augmente plus vite que la production, les prix finissent par monter.
+**Irving Fisher** (1911), *The Purchasing Power of Money* ; **Milton Friedman et Anna J. Schwartz** (1963), [*A Monetary History of the United States, 1867-1960*](https://doi.org/10.1515/9781400829330) · théorie quantitative, puis école monétariste. Si la quantité de monnaie augmente plus vite que la production, les prix finissent par monter.
 :::
 
 . . .
@@ -227,7 +227,7 @@ L'**IPCH** mesure les prix de la même façon dans tous les pays de l'Union euro
 
 . . .
 
-- L'Insee publie aussi l'IPC, propre à la France : en septembre 2026, 3,1 % selon l'IPC, 3,4 % selon l'IPCH (Insee, 15/10/2026).
+- L'Insee publie aussi l'IPC, propre à la France : en septembre 2026, 3,1 % selon l'IPC, 3,4 % selon l'IPCH ([Insee, 15/10/2026](https://www.insee.fr/fr/statistiques/9080209)).
 
 ::: {.notes}
 0 h 38 – 0 h 42. Source IPC : Insee, Informations rapides n° 247, 15/10/2026. IPCH : indice des prix à la consommation harmonisé. L'énergie varie beaucoup, d'où l'intérêt de la retirer. Question : lequel des deux indices la BCE suit-elle ? (L'IPCH.) Transition : deuxième théorie, celle du taux d'intérêt.
@@ -271,7 +271,7 @@ Le **taux d'intérêt réel** r mesure ce que rapporte vraiment un prêt, en pou
 ## Taylor (1993) : relever le taux directeur plus que l'inflation
 
 ::: {.auteur}
-**John B. Taylor** (1993), « Discretion versus policy rules in practice », *Carnegie-Rochester Conference Series on Public Policy*, 39 · nouvelle synthèse. Une règle simple décrit bien la politique de la banque centrale des États-Unis de 1987 à 1992 : le taux directeur monte avec l'inflation et avec l'activité.
+**John B. Taylor** (1993), [« Discretion versus policy rules in practice »](https://doi.org/10.1016/0167-2231%2893%2990009-L), *Carnegie-Rochester Conference Series on Public Policy*, 39 · nouvelle synthèse. Une règle simple décrit bien la politique de la banque centrale des États-Unis de 1987 à 1992 : le taux directeur monte avec l'inflation et avec l'activité.
 :::
 
 . . .
@@ -292,7 +292,7 @@ Les **taux directeurs** sont les trois taux que la BCE fixe pour les banques. La
 
 . . .
 
-- Depuis le 16/09/2026 : 2,50 % (dépôt), 2,65 % (refinancement), 2,90 % (prêt marginal) (BCE, consulté le 22/10/2026).
+- Depuis le 16/09/2026 : 2,50 % (dépôt), 2,65 % (refinancement), 2,90 % (prêt marginal) ([BCE, consulté le 22/10/2026](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)).
 
 ::: {.notes}
 0 h 52 – 0 h 56. Les trois taux bougent en général ensemble. Exemple : 0,25 point = 25 points de base. Question : la hausse de juin 2026, en points de base ? (25.) Transition : la règle de Taylor tient aussi compte de l'activité.
@@ -404,7 +404,7 @@ graphe_taux_inflation(base_size = 24)
 . . .
 
 - **Vrai** pour le taux de refinancement : 0 % jusqu'en juillet 2022, 4 % en juin 2023.
-- **Faux** pour le taux de dépôt : −0,50 %, puis 4 % en septembre 2023 (BCE).
+- **Faux** pour le taux de dépôt : −0,50 %, puis 4 % en septembre 2023 ([BCE](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html)).
 - Il faut dire de quel taux on parle, et de quelle inflation (ensemble, hors énergie).
 
 ::: {.notes}
@@ -573,7 +573,7 @@ On parle d'**effets de second tour** quand une hausse de prix initiale (ici l'é
 graphe_salaires_inflation(base_size = 24)
 ```
 
-[Sources : BCE, salaires négociés ; Eurostat, IPCH (consultés le 22/10/2026).]{.wp-source}
+[Sources : [BCE, salaires négociés](https://data.ecb.europa.eu/data/datasets/INW/INW.Q.U2.N.INWR.000000.4F0.GY.IX) ; [Eurostat, IPCH](https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table) (consultés le 22/10/2026).]{.wp-source}
 :::
 
 ::: {.column width="40%"}
@@ -582,7 +582,7 @@ graphe_salaires_inflation(base_size = 24)
 
 ::: {.fragment}
 
-- 2026 : **2,6 %** puis **2,4 %**, contre 2,9 % fin 2025 : pas d'accélération (BCE : « à ce stade », pas de réaction notable).
+- 2026 : **2,6 %** puis **2,4 %**, contre 2,9 % fin 2025 : pas d'accélération ([BCE](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html) : « à ce stade », pas de réaction notable).
 :::
 :::
 ::::
@@ -602,7 +602,7 @@ graphe_salaires_inflation(base_size = 24)
 graphe_anticipations(base_size = 24)
 ```
 
-[Source : BCE, enquêtes CES et SPF (consultées le 22/10/2026).]{.wp-source}
+[Source : BCE, enquêtes [CES](https://data.ecb.europa.eu/data/datasets/CES) et [SPF](https://data.ecb.europa.eu/data/datasets/SPF) (consultées le 22/10/2026).]{.wp-source}
 :::
 
 ::: {.column width="40%"}
@@ -723,7 +723,7 @@ graphe_taylor(base_size = 24)
 
 ::: {.incremental}
 1. Un taux réel « normal » de 2 %, calculé par Taylor pour les États-Unis.
-2. Un écart de production nul, alors qu'une croissance faible (0,9 % prévus en 2026 par la BCE, 10/09/2026) peut creuser un écart négatif.
+2. Un écart de production nul, alors qu'une croissance faible (0,9 % prévus en 2026 par la [BCE, 10/09/2026](https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260910~6a45359cfc.en.html)) peut creuser un écart négatif.
 3. Le choix de l'inflation : totale ou hors énergie.
 :::
 
@@ -746,7 +746,7 @@ graphe_taylor(base_size = 24)
 | Hors énergie et alimentation | 5,0 % (oct.) | 2,5 % (sept.) |
 | Taux de dépôt | −0,50 % → 4,00 %, 10 hausses | 2,00 % → 2,50 %, 2 hausses |
 
-[Sources : BCE (décisions et taux) ; Eurostat, prc_hicp_minr (consulté le 21/10/2026).]{.wp-source}
+[Sources : [BCE (décisions et taux)](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/key_ecb_interest_rates/html/index.en.html) ; [Eurostat, prc_hicp_minr](https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table) (consulté le 21/10/2026).]{.wp-source}
 
 ::: {.notes}
 2 h 08 – 2 h 10. Lire le tableau ligne par ligne. En octobre 2022, les prix hors énergie montent de 6,9 %, dont une part vient de l'alimentation (13,1 %), autre choc d'offre. Même hors énergie et alimentation, ils montent de 5,0 % : le choc s'est doublé d'effets de second tour. En septembre 2026, 2,5 % hors énergie et alimentation, à peine au-dessus de la cible. Transition : le graphique de la diffusion.
@@ -806,7 +806,7 @@ graphe_inflation_diffusion(base_size = 24)
 ## En 2026, la BCE agit plus tôt et reste prudente
 
 ::: {.incremental}
-- **Plus tôt** : sa réaction de 2022 avait été « jugée tardive » (AFP, *La Libre*, 11/06/2026). Agir tôt et peu vise les anticipations (étape 5) : montrer que la cible de 2 % tient avant que les salaires ne s'ajustent.
+- **Plus tôt** : sa réaction de 2022 avait été « jugée tardive » ([AFP, *La Libre*, 11/06/2026](https://www.lalibre.be/economie/2026/06/11/la-bce-releve-ses-taux-de-025-point-face-a-linflation-liee-a-la-guerre-en-iran-QEZSADHVDNBKFHIHL4PXHGVTGM/)). Agir tôt et peu vise les anticipations (étape 5) : montrer que la cible de 2 % tient avant que les salaires ne s'ajustent.
 - **Prudente** : le 10/09/2026, elle prévoit une inflation de 3,0 % (2026), 2,5 % (2027), 2,1 % (2028), et décide « réunion par réunion », sans s'engager sur une trajectoire de taux.
 :::
 
@@ -821,9 +821,9 @@ graphe_inflation_diffusion(base_size = 24)
 ## France et Allemagne : un écart d'inflation refermé en 2026
 
 ::: {.incremental}
-- **Octobre 2022** : inflation (IPCH) de 11,6 % en Allemagne, contre 7,1 % en France (Eurostat).
-- **Le bouclier tarifaire** a divisé par deux l'effet de l'énergie en France : de mi-2021 à mi-2022, 5,3 % d'inflation, contre 8,4 % sans bouclier (Insee Analyses n° 75, 01/09/2022).
-- **Septembre 2026** : 3,4 % en France, 3,3 % en Allemagne (Eurostat, 16/10/2026).
+- **Octobre 2022** : inflation (IPCH) de 11,6 % en Allemagne, contre 7,1 % en France ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table)).
+- **Le bouclier tarifaire** a divisé par deux l'effet de l'énergie en France : de mi-2021 à mi-2022, 5,3 % d'inflation, contre 8,4 % sans bouclier ([Insee Analyses n° 75, 01/09/2022](https://www.insee.fr/fr/statistiques/6524161)).
+- **Septembre 2026** : 3,4 % en France, 3,3 % en Allemagne ([Eurostat, 16/10/2026](https://ec.europa.eu/eurostat/web/products-euro-indicators/w/2-16102026-ap)).
 :::
 
 ::: {.notes}
@@ -833,8 +833,8 @@ graphe_inflation_diffusion(base_size = 24)
 ## Effets de répartition par revenu : énergie et épargne réglementée
 
 ::: {.incremental}
-- **Énergie** : de mi-2021 à mi-2022, même avec le bouclier, +3,3 points d'inflation pour les 10 % les plus modestes, +2,7 pour les 10 % les plus aisés (Insee Analyses n° 75).
-- **Épargne** : la hausse des taux rémunère celle des ménages qui en ont ; les 30 % les moins dotés possèdent moins de 40 000 €, presque uniquement en livrets réglementés (Picault et Burietz, *The Conversation*, 04/10/2026).
+- **Énergie** : de mi-2021 à mi-2022, même avec le bouclier, +3,3 points d'inflation pour les 10 % les plus modestes, +2,7 pour les 10 % les plus aisés ([Insee Analyses n° 75](https://www.insee.fr/fr/statistiques/6524161)).
+- **Épargne** : la hausse des taux rémunère celle des ménages qui en ont ; les 30 % les moins dotés possèdent moins de 40 000 €, presque uniquement en livrets réglementés ([Picault et Burietz, *The Conversation*, 04/10/2026](https://theconversation.com/quel-est-limpact-des-decisions-de-la-banque-centrale-europeenne-sur-les-menages-modestes-284478)).
 - **Livret A** : 1,7 % depuis le 01/08/2026, soit un taux réel ≈ 1,7 − 3,1 = **−1,4 %**.
 :::
 
@@ -878,7 +878,7 @@ graphe_credit_habitat(base_size = 24)
 graphe_inflation_pays(base_size = 24)
 ```
 
-[Sources : Eurostat ; BCE (consultés le 22/10/2026).]{.wp-source}
+[Sources : [Eurostat](https://ec.europa.eu/eurostat/databrowser/view/prc_hicp_minr/default/table) ; [BCE](https://data.ecb.europa.eu/data/datasets/FM/FM.B.U2.EUR.4F.KR.DFR.LEV) (consultés le 22/10/2026).]{.wp-source}
 :::
 
 ::: {.column width="40%"}

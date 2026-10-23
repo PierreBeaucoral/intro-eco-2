@@ -16,7 +16,7 @@ source(here::here("R/cm1.R"))   # même fichier que la page de cours
 
 ## Le fait de départ : la fermeture du détroit d'Ormuz (28/02/2026)
 
-- La guerre entre les États-Unis et Israël d'un côté, l'Iran de l'autre, ferme de fait le détroit, par lequel transite environ un cinquième du pétrole et du gaz liquéfié mondiaux (Insee, *Note de conjoncture*, 24/03/2026).
+- La guerre entre les États-Unis et Israël d'un côté, l'Iran de l'autre, ferme de fait le détroit, par lequel transite environ un cinquième du pétrole et du gaz liquéfié mondiaux ([Insee, *Note de conjoncture*, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf)).
 
 . . .
 
@@ -26,7 +26,7 @@ source(here::here("R/cm1.R"))   # même fichier que la page de cours
 
 **Question de la séance** : comment la fermeture d'un détroit lointain se répercute-t-elle si vite sur les prix en France ?
 
-[Sources : Insee, 24/03/2026 ; Commission européenne, *Weekly Oil Bulletin*, prix TTC, consulté le 21/10/2026.]{.wp-source}
+[Sources : [Insee, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf) ; [Commission européenne, *Weekly Oil Bulletin*](https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en), prix TTC, consulté le 21/10/2026.]{.wp-source}
 
 ::: {.notes}
 0 h 00 – 0 h 04. Demander à l'amphi : qui a fait le plein cette semaine ? Transition : la carte montre pourquoi ce passage se bloque si facilement.
@@ -58,8 +58,8 @@ source(here::here("R/cm1.R"))   # même fichier que la page de cours
 :::: {.columns}
 ::: {.column width="66%"}
 ::: {.incremental}
-- *Le Figaro*, 09/03/2026 : « La hausse des coûts d'approvisionnement en pétrole fait flamber les prix des carburants ».
-- *Sud Ouest*, 30/03/2026 : « Si cela continue, je n'aurai plus les moyens d'aller travailler ».
+- [*Le Figaro*, 09/03/2026](https://www.lefigaro.fr/societes/la-hausse-des-couts-d-approvisionnement-en-petrole-fait-flamber-les-prix-des-carburants-20260309) : « La hausse des coûts d'approvisionnement en pétrole fait flamber les prix des carburants ».
+- [*Sud Ouest*, 30/03/2026](https://www.sudouest.fr/charente-maritime/royan/municipales-de-royan/temoignages-prix-des-carburants-si-cela-continue-je-n-aurai-plus-les-moyens-d-aller-travailler-28508665.php) : « Si cela continue, je n'aurai plus les moyens d'aller travailler ».
 - Les deux moitiés du raisonnement : l'offre recule (choc d'offre) ; la demande est peu élastique à court terme.
 :::
 :::
@@ -98,7 +98,7 @@ graphe_prix_pompe_long(base_size = 24)
 :::
 ::::
 
-[Source : Commission européenne, *Weekly Oil Bulletin*, prix TTC, moyennes hebdomadaires, consulté le 22/10/2026.]{.wp-source}
+[Source : [Commission européenne, *Weekly Oil Bulletin*](https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en), prix TTC, moyennes hebdomadaires, consulté le 22/10/2026.]{.wp-source}
 
 ::: {.notes}
 0 h 10 – 0 h 13. Euros courants, non corrigés de la hausse générale des prix ; le record journalier de 2,41 € du 20 septembre vient d'une autre série (*The Conversation*). Question : en 2022, le gazole coûtait-il déjà plus cher que l'essence ? (Oui, 33 semaines sur 51 à partir du 14 mars.) Transition : trois faits à expliquer.
@@ -326,7 +326,7 @@ graphe_cout_marginal(base_size = 24, etape = 2)
 
 . . .
 
-- En 2026, on est probablement dans ce cas : le Brent atteint 126,55 \$ le baril le 14/10/2026 (EIA). C'est le **court terme** de Marshall : le prix dépend surtout de la demande.
+- En 2026, on est probablement dans ce cas : le Brent atteint 126,55 \$ le baril le 14/10/2026 ([EIA](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=D)). C'est le **court terme** de Marshall : le prix dépend surtout de la demande.
 
 ::: {.notes}
 1 h 03 – 1 h 07. À court terme, les autres producteurs ne peuvent pas produire beaucoup plus. Rappel de Marshall : à court terme, le prix dépend surtout de la demande ; à long terme, surtout du coût de production. Question : qu'est-ce qui pourrait ramener le prix vers les coûts ? (De nouvelles capacités, à long terme.) Transition : si la demande compte autant, il faut mesurer sa réaction au prix.
@@ -342,7 +342,7 @@ L'**élasticité-prix de la demande** (e) mesure la réaction de la quantité de
 
 . . .
 
-- Carburant, court terme : une hausse de 1 % du prix réduit la consommation de 0,21 % à 0,40 % ; e est compris entre −0,40 et −0,21 (Insee Analyses n° 86, 06/07/2023).
+- Carburant, court terme : une hausse de 1 % du prix réduit la consommation de 0,21 % à 0,40 % ; e est compris entre −0,40 et −0,21 ([Insee Analyses n° 86, 06/07/2023](https://www.insee.fr/fr/statistiques/7645853)).
 - Changer de voiture, déménager, covoiturer prend des mois.
 
 ::: {.notes}
@@ -462,9 +462,9 @@ graphe_prix_pompe(base_size = 24)
 ## Pétrole brut : l'excès d'offre attendu devient une chute de production
 
 ::: {.incremental}
-- **Avant la guerre** : l'AIE prévoit pour 2026 un excès d'offre de 3,7 Mb/j ; le Brent vaut en moyenne moins de 70 \$ en 2025 (Insee, 24/03/2026).
+- **Avant la guerre** : l'AIE prévoit pour 2026 un excès d'offre de 3,7 Mb/j ; le Brent vaut en moyenne moins de 70 \$ en 2025 ([Insee, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf)).
 - **Le 12 mars** : l'AIE prévoit une baisse de la production de 8 Mb/j pour le mois (*ibid.*).
-- **Le Brent au comptant** : 71,66 \$ le 26 février, 118,42 \$ le 20 mars, 126,55 \$ le 14 octobre 2026 (EIA, consulté le 21/10/2026).
+- **Le Brent au comptant** : 71,66 \$ le 26 février, 118,42 \$ le 20 mars, 126,55 \$ le 14 octobre 2026 ([EIA, consulté le 21/10/2026](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=D)).
 :::
 
 ::: {.notes}
@@ -510,7 +510,7 @@ graphe_brent(base_size = 24)
 - L'accise, montant fixe par litre, ne bouge pas ; la TVA, pourcentage du prix, amplifie la hausse.
 - Le choc naît en amont de la chaîne, que l'État ne fixe pas.
 
-[Source : Commission européenne, *Weekly Oil Bulletin* ; calcul de l'auteur (consulté le 21/10/2026).]{.wp-source}
+[Source : [Commission européenne, *Weekly Oil Bulletin*](https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en) ; calcul de l'auteur (consulté le 21/10/2026).]{.wp-source}
 
 ::: {.notes}
 1 h 45 – 1 h 50. Le hors-taxes regroupe le brut, le raffinage, le transport et la marge de distribution, que la source ne sépare pas : il revient aux producteurs, raffineurs et distributeurs. Pour le gazole, la part du hors-taxes dans la hausse est mécaniquement la même (83 %), l'accise étant fixe ; la TVA amplifie le choc de 20 %. Question : si l'État baissait l'accise, qui en profiterait ? (Renvoi au CM 2.) Transition : pourquoi le gazole a-t-il plus monté ?
@@ -519,9 +519,9 @@ graphe_brent(base_size = 24)
 ## Gazole : un second choc d'offre, sur le raffinage
 
 ::: {.incremental}
-1. L'Europe importe une partie de son gazole raffiné dans le Golfe (Insee, *Note de conjoncture*, juin 2026).
+1. L'Europe importe une partie de son gazole raffiné dans le Golfe ([Insee, *Note de conjoncture*, juin 2026](https://www.insee.fr/fr/statistiques/fichier/9007948/ndc-juin-2026.pdf)).
 2. Fin juillet : la Russie décide un moratoire sur ses exportations de diesel, puis le prolonge.
-3. Fin août : les hostilités reprennent, des raffineries sont endommagées (AFP, *Connaissance des Énergies*, 10/09/2026).
+3. Fin août : les hostilités reprennent, des raffineries sont endommagées ([AFP, *Connaissance des Énergies*, 10/09/2026](https://www.connaissancedesenergies.org/afp/detroit-dormuz-russie-houthis-les-raisons-de-la-nouvelle-flambee-du-diesel-260910)).
 :::
 
 . . .
@@ -555,7 +555,7 @@ graphe_gazole_brut(base_size = 24)
 :::
 ::::
 
-[Sources : Commission européenne, *Weekly Oil Bulletin* (hors taxes) ; EIA (Brent) ; BCE (euro-dollar) ; calcul de l'auteur, consulté le 22/10/2026.]{.wp-source}
+[Sources : [Commission européenne, *Weekly Oil Bulletin*](https://energy.ec.europa.eu/data-and-analysis/weekly-oil-bulletin_en) (hors taxes) ; [EIA](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=RBRTE&f=D) (Brent) ; [BCE](https://data.ecb.europa.eu/data/datasets/EXR) (euro-dollar) ; calcul de l'auteur, consulté le 22/10/2026.]{.wp-source}
 
 ::: {.notes}
 1 h 53 – 1 h 56. On retire les taxes pour comparer au brut, converti en euros par litre. En août, l'écart du gazole s'ouvre encore (0,75 € la semaine du 31 août) : moratoire russe, raffineries endommagées. En juillet, l'écart de l'essence gonfle aussi (0,53 €) : le prix ne baisse pas aussi vite qu'il monte (S. Ruel, *The Conversation*). Question : où voit-on le second choc d'offre ? (Dans l'écart entre le gazole et l'essence après le 28 février.) Transition : et la quantité, a-t-elle beaucoup baissé ?
@@ -605,7 +605,7 @@ graphe_livraisons(base_size = 24)
 
 ## Mars 2026 : les anticipations déplacent la demande vers la droite
 
-- Les 2 et 3 mars 2026, plus de 6 millions de paiements par carte sont demandés dans les stations : une « ruée anticipative » (*The Conversation*, 13/10/2026).
+- Les 2 et 3 mars 2026, plus de 6 millions de paiements par carte sont demandés dans les stations : une « ruée anticipative » ([*The Conversation*, 13/10/2026](https://theconversation.com/ruee-anticipative-debut-mars-puis-effondrement-en-septembre-comment-expliquer-la-consommation-de-carburant-en-france-en-2026-293608)).
 
 . . .
 
@@ -644,7 +644,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 :::
 
 ::: {.column width="40%"}
-- Depuis le 22/07/2026, dans ses quelque 3 300 stations : SP95-E10 à 1,99 € au plus, gazole à 2,25 € (TotalEnergies).
+- Depuis le 22/07/2026, dans ses quelque 3 300 stations : SP95-E10 à 1,99 € au plus, gazole à 2,25 € ([TotalEnergies](https://totalenergies.com/newsroom/compte-tenu-de-la-reprise-du-conflit-au-moyen-orient-totalenergies-remet-en-place-le-plafonnement-sur-lessence-a-199-eurl-dans-toutes-ses-stations-service-en-france/?lang=fra)).
 
 ::: {.fragment}
 
@@ -661,8 +661,8 @@ graphe_choc_offre(base_size = 24, etape = 2)
 ## Plafond TotalEnergies : report de clientèle et ruptures d'approvisionnement
 
 ::: {.incremental}
-1. **Le report de clientèle** : le 23/09/2026, le SP95-E10 coûte en moyenne 2,16 €, plus de 15 centimes au-dessus du plafond (AFP). La part de marché de Total passe de 22 % habituellement à 25 % fin août, selon son PDG, puis dépasse 30 % en octobre, selon l'entreprise.
-2. **Les ruptures** : le 21/09/2026, 17 % des stations manquent d'au moins un carburant ; 91 % d'entre elles sont des stations Total (AFP).
+1. **Le report de clientèle** : le 23/09/2026, le SP95-E10 coûte en moyenne 2,16 €, plus de 15 centimes au-dessus du plafond ([AFP](https://www.connaissancedesenergies.org/afp/carburants-face-a-une-crise-jamais-vue-les-stations-service-ont-le-blues-260924)). La part de marché de Total passe de 22 % habituellement à 25 % fin août, selon son PDG, puis dépasse 30 % en octobre, selon l'entreprise.
+2. **Les ruptures** : le 21/09/2026, 17 % des stations manquent d'au moins un carburant ; 91 % d'entre elles sont des stations Total ([AFP](https://www.connaissancedesenergies.org/afp/carburants-pas-denjeu-dapprovisionnement-a-ce-stade-en-france-assure-lescure-260921)).
 :::
 
 ::: {.notes}
@@ -672,9 +672,9 @@ graphe_choc_offre(base_size = 24, etape = 2)
 ## Plafond TotalEnergies : la file d'attente rationne à la place du prix
 
 ::: {.incremental}
-1. **Le diagnostic** : le ministre de l'Économie y voit « la conséquence directe du plafonnement du prix », tout en jugeant l'approvisionnement du pays assuré (AFP, 21/09/2026).
-2. **La file d'attente** : disputes, cuves vides (AFP, 24/09/2026). Le temps perdu et le risque de trouver la station à sec s'ajoutent au 1,99 €.
-3. **Le coût** : manque à gagner de 250 à 300 M€ fin août selon son PDG, estimation non vérifiée, pour un résultat net ajusté de 11,4 Md\$ au premier semestre (AFP, 29/08/2026).
+1. **Le diagnostic** : le ministre de l'Économie y voit « la conséquence directe du plafonnement du prix », tout en jugeant l'approvisionnement du pays assuré ([AFP, 21/09/2026](https://www.connaissancedesenergies.org/afp/carburants-pas-denjeu-dapprovisionnement-a-ce-stade-en-france-assure-lescure-260921)).
+2. **La file d'attente** : disputes, cuves vides ([AFP, 24/09/2026](https://www.connaissancedesenergies.org/afp/carburants-face-a-une-crise-jamais-vue-les-stations-service-ont-le-blues-260924)). Le temps perdu et le risque de trouver la station à sec s'ajoutent au 1,99 €.
+3. **Le coût** : manque à gagner de 250 à 300 M€ fin août selon son PDG, estimation non vérifiée, pour un résultat net ajusté de 11,4 Md\$ au premier semestre ([AFP, 29/08/2026](https://www.connaissancedesenergies.org/afp/prix-des-carburants-totalenergies-maintiendra-son-plafonnement-tant-que-le-conflit-durera-assure-son-pdg-260829)).
 :::
 
 ::: {.notes}
@@ -686,7 +686,7 @@ graphe_choc_offre(base_size = 24, etape = 2)
 ::: {.incremental}
 - **Producteurs épargnés** : comme X dans l'exemple, ils vendent plus cher sans que leurs coûts aient changé ; les raffineries intactes profitent de l'écart entre gazole et brut.
 - **Accise** (fixe par litre) : rapporte moins si l'on vend moins de litres. **TVA** (en % du prix) : rapporte plus par litre.
-- Au 30/09/2026, recettes de carburant de l'État : **−383 M€** sur un an (+798 M€ de TVA, −1,18 Md€ d'accises) (*The Conversation*, 13/10/2026).
+- Au 30/09/2026, recettes de carburant de l'État : **−383 M€** sur un an (+798 M€ de TVA, −1,18 Md€ d'accises) ([*The Conversation*, 13/10/2026](https://theconversation.com/ruee-anticipative-debut-mars-puis-effondrement-en-septembre-comment-expliquer-la-consommation-de-carburant-en-france-en-2026-293608)).
 :::
 
 ::: {.notes}
@@ -717,7 +717,7 @@ graphe_menages_exposes(base_size = 24)
 :::
 ::::
 
-[Source : Insee Première n° 2125, 08/09/2026, tableau complémentaire 3.]{.wp-source}
+[Source : [Insee Première n° 2125, 08/09/2026](https://www.insee.fr/fr/statistiques/9037833), tableau complémentaire 3.]{.wp-source}
 
 ::: {.notes}
 2 h 17 – 2 h 22. Point gris : prix de 2021 ; point rouge : 2,0 € et 2,2 € le litre, niveaux que l'Insee présente comme ceux du printemps 2026. Simulation à revenus et kilomètres de 2021 inchangés, litre à 2,0 € (essence) et 2,2 € (gazole). La part double environ partout ; c'est le niveau qui est près de deux fois plus haut à la campagne. Les ruraux ne sont pas moins sensibles au prix, ils consomment plus de litres. Génération : aucune source consultée ne chiffre l'effet par âge. Par usage (diapo suivante) : e = −0,32 pour le quart qui consomme le plus, −1,06 pour le quart qui consomme le moins (Insee Analyses n° 86). Question : qui, dans l'amphi, ne peut pas se passer de sa voiture ? Puis : pourquoi les ruraux sont-ils plus exposés, s'ils ne sont pas moins sensibles au prix ? (Ils consomment plus de litres.) Transition : qui réagit le moins au prix ?
@@ -746,7 +746,7 @@ graphe_elasticite_usage(base_size = 24)
 :::
 ::::
 
-[Source : Insee Analyses n° 86, 06/07/2023, figure 3c ; paiements par carte, septembre 2021 à janvier 2023.]{.wp-source}
+[Source : [Insee Analyses n° 86, 06/07/2023](https://www.insee.fr/fr/statistiques/7645853), figure 3c ; paiements par carte, septembre 2021 à janvier 2023.]{.wp-source}
 
 ::: {.notes}
 2 h 22 – 2 h 25. Tirets : ensemble des consommateurs, −0,40, même méthode. L'intervalle de confiance est la marge d'incertitude de l'estimation : ne pas départager les quarts voisins. Données d'avant 2026. Question : pourquoi les gros rouleurs réduisent-ils si peu ? (Ils dépendent de la voiture, par exemple pour aller travailler.) Transition : faut-il alors bloquer les prix ?
@@ -755,7 +755,7 @@ graphe_elasticite_usage(base_size = 24)
 ## Analyse positive : remise générale et aide ciblée
 
 ::: {.incremental}
-- **Remise générale** : baisse le prix pour tous, coûte de l'argent public, affaiblit l'incitation à économiser et profite davantage, en euros, aux gros consommateurs. En 2022 : 0,18 €/L au 1^er^ avril, 0,30 €/L en septembre, 0,10 €/L mi-novembre ; 51 à 81 € évités par ménage automobiliste (Insee Analyses n° 86).
+- **Remise générale** : baisse le prix pour tous, coûte de l'argent public, affaiblit l'incitation à économiser et profite davantage, en euros, aux gros consommateurs. En 2022 : 0,18 €/L au 1^er^ avril, 0,30 €/L en septembre, 0,10 €/L mi-novembre ; 51 à 81 € évités par ménage automobiliste ([Insee Analyses n° 86](https://www.insee.fr/fr/statistiques/7645853)).
 - **Aide ciblée** : garde le signal-prix et concentre la dépense, à condition de savoir cibler. Septembre 2026 : aide élargie aux travailleurs modestes « grands rouleurs », plan de 450 M€.
 :::
 
@@ -767,7 +767,7 @@ graphe_elasticite_usage(base_size = 24)
 
 ::: {.incremental}
 - **Libérer des stocks stratégiques** agit sur l'offre : O′ se déplace vers la droite et le prix baisse, le temps que durent les stocks. TotalEnergies annonce un avantage d'environ 10 centimes par litre de gazole du 1^er^ novembre 2026 au 31 janvier 2027.
-- **Taxer les profits exceptionnels** ne change pas le prix à court terme si l'offre n'en dépend pas, et finance les aides. L'Union européenne l'a fait en 2022 (règlement (UE) 2022/1854).
+- **Taxer les profits exceptionnels** ne change pas le prix à court terme si l'offre n'en dépend pas, et finance les aides. L'Union européenne l'a fait en 2022 ([règlement (UE) 2022/1854](http://data.europa.eu/eli/reg/2022/1854/oj)).
 :::
 
 ::: {.notes}
@@ -794,7 +794,7 @@ graphe_elasticite_usage(base_size = 24)
 
 . . .
 
-- **Post-keynésiens** : en situation d'urgence, de grandes entreprises peuvent relever leurs prix au-delà de leurs coûts (Weber et Wasner, 2023) ; ils préfèrent contenir dès le départ quelques prix clés, comme ceux de l'énergie.
+- **Post-keynésiens** : en situation d'urgence, de grandes entreprises peuvent relever leurs prix au-delà de leurs coûts ([Weber et Wasner, 2023](https://doi.org/10.4337/roke.2023.02.05)) ; ils préfèrent contenir dès le départ quelques prix clés, comme ceux de l'énergie.
 
 . . .
 
@@ -817,7 +817,7 @@ Le débat porte moins sur le mécanisme que sur ce qu'on accepte de payer, en p�
 **Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
 
 - Objectifs en balance : efficacité, équité, climat, coût budgétaire, concurrence.
-- Néoclassiques : prix libre et transferts ciblés (Tinbergen, 1952) ; post-keynésiens : contenir quelques prix clés (Weber et Wasner, 2023).
+- Néoclassiques : prix libre et transferts ciblés (Tinbergen, 1952) ; post-keynésiens : contenir quelques prix clés ([Weber et Wasner, 2023](https://doi.org/10.4337/roke.2023.02.05)).
 
 ::: {.notes}
 2 h 34 – 2 h 38. Débat en amphi, 3 minutes, après le clic. Les écoles divergent sur ce qu'on accepte de payer, en pénurie ou en argent public, pas sur le mécanisme. Exemple de 2026 : le plafond de TotalEnergies. Transition : que permet le droit ?
@@ -826,7 +826,7 @@ Le débat porte moins sur le mécanisme que sur ce qu'on accepte de payer, en p�
 ## Droit : la liberté des prix et ses exceptions temporaires
 
 ::: {.droit}
-En France, les prix sont en principe « librement déterminés par le jeu de la concurrence » (Code de commerce, art. L410-2). Le Gouvernement peut prendre, par décret en Conseil d'État, des **mesures temporaires** d'au plus six mois contre des hausses ou des baisses excessives de prix, « dans un secteur déterminé », en cas de crise, de circonstances exceptionnelles ou de situation manifestement anormale du marché.
+En France, les prix sont en principe « librement déterminés par le jeu de la concurrence » ([Code de commerce, art. L410-2](https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000005634379/LEGISCTA000006133183/)). Le Gouvernement peut prendre, par décret en Conseil d'État, des **mesures temporaires** d'au plus six mois contre des hausses ou des baisses excessives de prix, « dans un secteur déterminé », en cas de crise, de circonstances exceptionnelles ou de situation manifestement anormale du marché.
 :::
 
 . . .
