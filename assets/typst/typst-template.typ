@@ -40,7 +40,7 @@
   fill: fond,
   stroke: (left: (paint: couleur, thickness: 1.5pt, dash: if tirets { "dashed" } else { none })),
   wp-etiquette(label, couleur),
-  if portraits.len() == 0 { body } else { grid(columns: (1fr, 2.1cm), column-gutter: 10pt, body, wp-portraits(portraits)) })
+  if portraits.len() == 0 { body } else { grid(columns: (1fr, 2.1cm), column-gutter: 10pt, align: horizon, body, wp-portraits(portraits)) })
 
 // Document de TD (.wp-document) : cadre fin, étiquette en Plex Sans
 #let wp-document(label: "", body) = wp-bloc(

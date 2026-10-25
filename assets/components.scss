@@ -138,6 +138,13 @@ a:hover { text-decoration-thickness: 2px; }
   .wp-credit { display: block; margin-top: 0.25rem; font-family: var(--wp-ui); font-size: 0.65rem; line-height: 1.25; color: var(--wp-encre-2); }
   @media (max-width: 576px) { width: 5rem; }
 }
+// Encadré avec portrait : texte centré verticalement sur la photo, photo à droite (un paragraphe par encadré)
+.auteur:has(> .wp-portrait) {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1rem; align-items: center;
+  &::before { grid-column: 1 / -1; }
+  > * { grid-column: 1; }
+  > .wp-portrait { grid-column: 2; grid-row: 2; float: none; margin: 0; }
+}
 
 // Vidéo YouTube intégrée (youtube-nocookie), en petit : ::: {.wp-video} <iframe …> :::
 .wp-video {

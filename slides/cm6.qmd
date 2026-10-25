@@ -18,21 +18,32 @@ source_m3 <- labs(caption = "Source : BCE, Data Portal, séries BSI (consulté l
 
 ## La chute de Silicon Valley Bank (mars 2023)
 
-- **8 mars 2023** : Silicon Valley Bank (SVB), la banque des start-up, annonce une perte de 1,8 Md$ sur la vente de 21 Md$ de titres et cherche du capital.
+:::: {.columns}
+::: {.column width="58%"}
+- **8 mars 2023** : Silicon Valley Bank (SVB), la banque des start-up, annonce une perte de 1,8 Md$ et cherche du capital.
 
-. . .
-
-- **Jeudi 9 mars** : ses clients retirent plus de **40 milliards de dollars** en une journée ; la direction en attend plus de 100 milliards de plus le lendemain : en tout, environ 85 % des dépôts.
+::: {.fragment}
+- **Jeudi 9 mars** : ses clients retirent plus de **40 Md$** en une journée.
 - **Vendredi 10 mars** : le régulateur ferme la banque.
+:::
 
-. . .
+:::
 
-**Question de la séance** : d'où vient l'argent de nos comptes, et pourquoi la défiance des déposants peut-elle faire tomber une banque ?
+::: {.column width="42%"}
+![](../cours/img/cm6/svb-siege-2023.jpg){height="270px" fig-alt="Photographie : entrée du siège de Silicon Valley Bank à Santa Clara, façade grise, enseigne « Silicon Valley Bank » au-dessus de portes vitrées fermées couvertes d'avis en papier, mâts sans drapeau, parvis désert."}
 
-[Source : [Réserve fédérale, rapport sur SVB, 28/04/2023](https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf).]{.wp-source}
+[13/03/2023 · Minh Nguyen, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fr), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:3003_West_Tasman_Drive_entrance_2,_Santa_Clara,_California.jpg)]{.wp-credit}
+:::
+::::
+
+::: {.fragment}
+**Question de la séance** : d'où vient l'argent de nos comptes, et pourquoi la défiance des déposants peut-elle faire tomber une banque ?
+:::
+
+[Sources : [Réserve fédérale, 28/04/2023](https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf) ; [*Le Figaro*, 10/03/2023](https://www.lefigaro.fr/societes/la-banque-americaine-silicon-valley-bank-fermee-par-les-autorites-20230310) ; [*BBC News*, 10/03/2023](https://www.bbc.com/news/business-64915616).]{.wp-source}
 
 ::: {.notes}
-0 h 00 – 0 h 05. Question à l'amphi avant le premier clic : « Qui pense que sa banque prête l'argent des autres clients ? » Le fait déclencheur est l'annonce du 8 mars ; les retraits du 9 et la fermeture du 10 en sont les conséquences. Ne pas encore expliquer pourquoi les clients partent : c'est l'objet de la seconde moitié. Transition : ces 40 milliards, ce n'étaient pas des billets.
+0 h 00 – 0 h 05. Question à l'amphi avant le premier clic : « Qui pense que sa banque prête l'argent des autres clients ? » Le fait déclencheur est l'annonce du 8 mars ; les retraits du 9 et la fermeture du 10 en sont les conséquences. Sur 1,8 Md$ : perte sur la vente de 21 Md$ de titres. Le 9, la direction attendait plus de 100 Md$ de retraits le lendemain : en tout, environ 85 % des dépôts (Fed, 28/04/2023). Presse du 10 mars : « Les autorités américaines prennent le contrôle de la banque SVB » (Le Figaro, avec l'AFP) ; « Silicon Valley Bank: Regulators take over as failure raises fears » (BBC). Photo : le siège le 13 mars, trois jours après, désert : la ruée s'est faite en ligne, pas devant les guichets. Ne pas encore expliquer pourquoi les clients partent : c'est l'objet de la seconde moitié. Transition : ces 40 milliards, ce n'étaient pas des billets.
 :::
 
 ## Zone euro, août 2026 : 9 % seulement de la monnaie en billets
