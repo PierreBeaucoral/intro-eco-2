@@ -132,23 +132,7 @@ Un pays a un **avantage absolu** dans un bien s'il le produit avec moins de trav
 - Il a toujours un avantage comparatif dès que ses coûts d'opportunité diffèrent de ceux de son partenaire.
 
 ::: {.notes}
-0 h 18 – 0 h 21. Définition mot pour mot. Insister : l'avantage absolu compare des heures de travail entre pays ; l'avantage comparatif compare, à l'intérieur de chaque pays, ce qu'il faut sacrifier d'un bien pour produire l'autre. Question : un pays peut-il avoir un avantage comparatif dans les deux biens ? (Non : s'il renonce à moins de blé pour les vêtements, il renonce à plus de vêtements pour le blé.) Transition : une image tirée du monde du droit.
-:::
-
-## L'avocate et son assistant : les écarts de coûts d'opportunité
-
-- Une avocate tape plus vite que son assistant : elle a l'avantage absolu dans la frappe.
-
-. . .
-
-- Elle a pourtant intérêt à lui confier la frappe : chaque heure qu'elle y passerait est une heure de plaidoirie perdue, beaucoup plus coûteuse.
-
-. . .
-
-- Le gain de l'échange vient des **écarts de coûts d'opportunité**, pas des écarts de productivité.
-
-::: {.notes}
-0 h 21 – 0 h 24. Image utile pour les étudiants de Droit. Question : quel est le coût d'opportunité d'une heure de frappe pour l'avocate ? (Une heure de plaidoirie.) Et pour l'assistant ? Transition : le même raisonnement, chiffré, entre deux pays.
+0 h 18 – 0 h 22. Définition mot pour mot. Insister : l'avantage absolu compare des heures de travail entre pays ; l'avantage comparatif compare, à l'intérieur de chaque pays, ce qu'il faut sacrifier d'un bien pour produire l'autre. Question : un pays peut-il avoir un avantage comparatif dans les deux biens ? (Non : s'il renonce à moins de blé pour les vêtements, il renonce à plus de vêtements pour le blé.) Après le clic, une image tirée du monde du droit, à raconter à l'oral (utile pour les étudiants de Droit ; elle est dans la page) : l'avocate et son assistant. Une avocate tape plus vite que son assistant : elle a l'avantage absolu dans la frappe. Elle a pourtant intérêt à lui confier la frappe : chaque heure qu'elle y passerait est une heure de plaidoirie perdue, beaucoup plus coûteuse. Le gain de l'échange vient des écarts de coûts d'opportunité, pas des écarts de productivité. Question : quel est le coût d'opportunité d'une heure de frappe pour l'avocate ? (Une heure de plaidoirie.) Et pour l'assistant ? Transition : le même raisonnement, chiffré, entre deux pays.
 :::
 
 ## Exemple chiffré : deux pays, deux biens, un avantage comparatif
@@ -165,7 +149,7 @@ Un pays a un **avantage absolu** dans un bien s'il le produit avec moins de trav
 :::
 
 ::: {.notes}
-0 h 24 – 0 h 28. Pays fictifs ; le travail est le seul facteur. Faire calculer les étudiants avant chaque clic. Dans A, un lot de vêtements prend 4 h, le temps de produire 2 tonnes de blé ; dans B, il prend 6 h, le temps de produire 0,5 tonne. Les vêtements coûtent moins de blé dans B. Question : quel est le coût d'opportunité d'une tonne de blé dans B ? (2 lots.) Transition : on représente ce que chaque pays peut produire seul.
+0 h 22 – 0 h 28. Pays fictifs ; le travail est le seul facteur. Faire calculer les étudiants avant chaque clic. Dans A, un lot de vêtements prend 4 h, le temps de produire 2 tonnes de blé ; dans B, il prend 6 h, le temps de produire 0,5 tonne. Les vêtements coûtent moins de blé dans B. Question : quel est le coût d'opportunité d'une tonne de blé dans B ? (2 lots.) Transition : on représente ce que chaque pays peut produire seul.
 :::
 
 ## Gains de l'échange (1/3) : frontières de production de A et de B
@@ -504,49 +488,26 @@ graphe_tarif(chiffres = TRUE, base_size = 24, etape = 4)
 1 h 24 – 1 h 28. Les consommateurs paient 10 € de plus : sur les 70 millions qu'ils achètent encore, ils perdent 700 M€ par an ; sur les 10 millions auxquels ils renoncent, ils perdent en moyenne 5 €, soit 50 M€. Les aires valent a = 250, b = 50, c = 400 et d = 50 M€. Question : qui récupère les 100 M€ ? (Personne.) Transition : d'où vient cette perte.
 :::
 
-## Perte sèche : produire trop cher, acheter moins
+## Perte sèche : faible devant les transferts, dans l'exemple comme en 2018
 
 ::: {.incremental}
-6. *Aire b* : (30 − 20) × 10 ÷ 2 = **50 M€**. Le pays produit 10 millions de tee-shirts qui lui coûtent entre 20 et 30 €, alors qu'il pourrait les importer à 20 €.
-7. *Aire d* : (80 − 70) × 10 ÷ 2 = **50 M€**. 10 millions d'achats n'ont plus lieu, alors que les acheteurs étaient prêts à payer plus que le prix mondial.
+6. *Aire b* : (30 − 20) × 10 ÷ 2 = **50 M€**. Le pays produit 10 millions de tee-shirts qui lui coûtent entre 20 et 30 €.
+7. *Aire d* : (80 − 70) × 10 ÷ 2 = **50 M€**. 10 millions d'achats n'ont plus lieu.
 8. *Lecture* : le droit **transfère** 650 M€ et en **détruit** 100, six fois moins.
+9. *Ordre de grandeur réel* : droits américains de 2018, **51 Md\$** perdus par les acheteurs, **7,2 Md\$** de perte nette ([Fajgelbaum et al., 2020](https://doi.org/10.1093/qje/qjz036)).
 :::
 
 ::: {.notes}
-1 h 28 – 1 h 32. 650 = 250 + 400 : des consommateurs vers les producteurs et l'État. b : le coût marginal des producteurs du pays dépasse Pw ; d : surplus d'acheteurs qui renoncent. Question : pourquoi le transfert est-il politiquement plus visible que la perte sèche ? Transition : une erreur fréquente sur « qui paie ».
+1 h 28 – 1 h 33. 650 = 250 + 400 : des consommateurs vers les producteurs et l'État. Point 6, fin de phrase : ces 10 millions de tee-shirts coûtent au pays entre 20 et 30 €, alors qu'il pourrait les importer à 20 € ; b : le coût marginal des producteurs du pays dépasse Pw. Point 7, fin de phrase : ces 10 millions d'achats n'ont plus lieu alors que les acheteurs étaient prêts à payer plus que le prix mondial ; d : surplus d'acheteurs qui renoncent. Point 9 : estimation de [Fajgelbaum et al. (2020)](https://doi.org/10.1093/qje/qjz036) sur les droits de 2018. Perte des acheteurs de biens importés (consommateurs et entreprises) : 51 Md\$, 0,27 % du PIB américain ; après recette douanière (c) et gain des producteurs (a), perte nette de 7,2 Md\$, 0,04 % du PIB. C'est l'exemple du tee-shirt en grand : un transfert massif, une perte sèche faible (b + d). Le graphique est celui de « Droit de douane (4/4) ». Question : quelle aire correspond aux 7,2 Md\$ ? Pourquoi le transfert est-il politiquement plus visible que la perte sèche ? Transition : qui paie le droit ?
 :::
 
-## Point d'attention : dans un petit pays, l'étranger ne paie pas le droit
+## Qui paie le droit : l'étranger seulement si le pays est grand
 
-:::: {.columns}
-::: {.column width="60%"}
-```{r}
-#| fig-width: 6.4
-#| fig-height: 4.6
-#| fig-alt: "Graphique des tee-shirts : le prix mondial reste à 20 euros, le prix intérieur passe à 30 euros ; les importations passent de 60 à 40 millions."
-graphe_tarif(chiffres = TRUE, base_size = 24, etape = 2)
-```
-:::
+Un droit de 10 € par tee-shirt importé : qui le paie ?
 
-::: {.column width="40%"}
-::: {.piege}
-« Le droit est payé par l'étranger, puisque c'est son produit qui est taxé. »
-:::
+. . .
 
-::: {.fragment}
-
-L'exportateur reçoit toujours 20 € : il vend moins, au même prix. Les acheteurs du pays paient les 10 €. Regarder **qui voit son prix changer**.
-:::
-:::
-::::
-
-::: {.notes}
-1 h 32 – 1 h 35. Sondage avant le clic : qui paie les 10 € ? Il faut regarder qui voit son prix changer, pas qui est nommé dans la loi. Question à l'amphi : dans quel cas l'étranger paierait-il une partie ? (Si le pays est grand et que les exportateurs baissent leur prix hors droit.) Transition : le grand pays.
-:::
-
-## Grand pays : la part payée par l'étranger, exemple chiffré
-
-Même droit de 10 € par tee-shirt, dans un **grand pays** : s'il achète moins, des exportateurs étrangers baissent leur prix hors droit pour garder leurs ventes, ici de 20 € à 19 €.
+**Petit pays** : l'exportateur reçoit toujours 20 €, les acheteurs du pays paient les 10 €. **Grand pays** : s'il achète moins, des exportateurs baissent leur prix hors droit pour garder leurs ventes, ici de 20 € à 19 €.
 
 ::: {.incremental}
 1. *Prix intérieur* : 19 + 10 = 29 € : les acheteurs paient **9 €** de plus.
@@ -555,7 +516,7 @@ Même droit de 10 € par tee-shirt, dans un **grand pays** : s'il achète moins
 :::
 
 ::: {.notes}
-1 h 35 – 1 h 39. Formule à retenir : part payée par l'étranger = baisse de son prix hors droit ÷ droit. Faire calculer avant chaque clic. Question : quelle part paierait l'étranger s'il baissait son prix de 5 € ? (50 %.) Transition : le pays gagne-t-il pour autant ?
+1 h 33 – 1 h 38. Sondage avant le premier clic : qui paie les 10 € ? Point d'attention, l'erreur fréquente : « Le droit est payé par l'étranger, puisque c'est son produit qui est taxé. » Dans un petit pays, l'exportateur reçoit toujours 20 € : il vend moins, au même prix ; les acheteurs du pays paient les 10 €. Il faut regarder qui voit son prix changer, pas qui est nommé dans la loi. Le graphique du petit pays est celui de l'exemple chiffré (1/3) : le prix mondial reste à 20 €, le prix intérieur passe à 30 €. Question à l'amphi : dans quel cas l'étranger paierait-il une partie ? (Si le pays est grand et que les exportateurs baissent leur prix hors droit.) Grand pays, formule à retenir : part payée par l'étranger = baisse de son prix hors droit ÷ droit. Faire calculer avant chaque clic. Question : quelle part paierait l'étranger s'il baissait son prix de 5 € ? (50 %.) Transition : le pays gagne-t-il pour autant ?
 :::
 
 ## Grand pays : 42 M€ payés par l'étranger, 81 M€ de perte sèche
@@ -572,7 +533,7 @@ Même droit de 10 € par tee-shirt, dans un **grand pays** : s'il achète moins
 Un grand pays gagne à un droit modéré si l'étranger paie plus que la perte sèche, sans représailles.
 
 ::: {.notes}
-1 h 39 – 1 h 43. Encore faut-il que les fournisseurs baissent vraiment leurs prix et que leurs gouvernements ne répliquent pas : c'est ce que mesurent les études empiriques. Question : les États-Unis sont-ils un grand pays ? Pariez avant de voir les données. Transition : les droits américains de 2025-2026.
+1 h 38 – 1 h 42. Encore faut-il que les fournisseurs baissent vraiment leurs prix et que leurs gouvernements ne répliquent pas : c'est ce que mesurent les études empiriques. Question : les États-Unis sont-ils un grand pays ? Pariez avant de voir les données. Transition : les droits américains de 2025-2026.
 :::
 
 ## Droits américains 2025-2026 : des taux qui changent vite
@@ -591,7 +552,7 @@ Le droit sert aussi de **menace** : il a aidé à conclure plusieurs accords, do
 [Sources : [Maison-Blanche, 21/08/2025](https://www.whitehouse.gov/briefings-statements/2025/08/joint-statement-on-a-united-states-european-union-framework-on-an-agreement-on-reciprocal-fair-and-balanced-trade/) ; [Deysine, 23/02/2026](https://theconversation.com/trump-desavoue-par-la-cour-supreme-sur-les-droits-de-douane-et-maintenant-276613) ; [DG Trésor, 06/08/2026](https://www.tresor.economie.gouv.fr/services-aux-entreprises/droits-de-douane-americains-et-reponse-europeenne-informations-pour-les-entreprises) ; [Guimbard, 22/07/2026](https://theconversation.com/le-mur-tarifaire-de-donald-trump-brique-apres-brique-288065).]{.wp-source}
 
 ::: {.notes}
-1 h 43 – 1 h 46. Repères arrêtés au 21/10/2026. Accord du 21/08/2025 : le droit NPF s'applique s'il est plus élevé ; l'UE annonce supprimer ses droits sur les produits industriels américains. Le 30/07/2026, l'UE suspend sans limite de durée ses contre-mesures (jusqu'à 30 % sur 93 Md€), jamais entrées en vigueur, réactivables à tout moment (DG Trésor, 06/08/2026). Droits annulés à rembourser : environ 165 Md\$ à 330 566 importateurs (Bouët, 27/03/2026). Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer. Transition : qui a payé ?
+1 h 42 – 1 h 47. Repères arrêtés au 21/10/2026. Accord du 21/08/2025 : le droit NPF s'applique s'il est plus élevé ; l'UE annonce supprimer ses droits sur les produits industriels américains. Le 30/07/2026, l'UE suspend sans limite de durée ses contre-mesures (jusqu'à 30 % sur 93 Md€), jamais entrées en vigueur, réactivables à tout moment (DG Trésor, 06/08/2026). Droits annulés à rembourser : environ 165 Md\$ à 330 566 importateurs (Bouët, 27/03/2026). Les taux changent vite ; le raisonnement reste : on cherche qui voit son prix changer. Transition : qui a payé ?
 :::
 
 ## En 2025, près de 90 % des droits payés aux États-Unis
@@ -608,7 +569,7 @@ Le droit sert aussi de **menace** : il a aidé à conclure plusieurs accords, do
 [Source : [Amiti, Flanagan, Heise et Weinstein, *Liberty Street Economics*, 12/02/2026](https://libertystreeteconomics.newyorkfed.org/2026/02/who-is-paying-for-the-2025-u-s-tariffs/).]{.wp-source}
 
 ::: {.notes}
-1 h 46 – 1 h 49. Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Près de 90 % du fardeau retombe sur les entreprises et les consommateurs américains. Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s'est passé. Question : qui avait parié « grand pays » ? Transition : ce que montrent les indices de prix.
+1 h 47 – 1 h 50. Des économistes de la Réserve fédérale de New York comparent les prix hors droit des produits taxés et non taxés. Près de 90 % du fardeau retombe sur les entreprises et les consommateurs américains. Même pour un pays aussi grand que les États-Unis, le modèle du petit pays décrit bien ce qui s'est passé. Question : qui avait parié « grand pays » ? Transition : ce que montrent les indices de prix.
 :::
 
 ## Prix américains : importations hors droit stables, biens de consommation en hausse
@@ -632,7 +593,7 @@ graphe_prix_import(base_size = 24)
 ::::
 
 ::: {.notes}
-1 h 49 – 1 h 53. Lecture : si l'étranger payait le droit, la courbe bleue baisserait après le 2 avril 2025 ; elle reste plate, tandis que la courbe ambre monte. Bleu : prix des biens importés hors carburants, mesurés sans le droit, donc ce que reçoit l'exportateur ; ambre : biens hors alimentation et énergie. L'indice couvre tous les biens importés, taxés ou non. Pas de relevé en octobre 2025 (fermeture de l'administration fédérale). De décembre 2025 à septembre 2026, prix hors droit +5,2 % : la figure ne dit pas pourquoi, mais elle ne montre toujours pas d'exportateurs qui baissent leurs prix. Calculs de l'auteur sur le BLS. Transition : à quelle vitesse le droit passe-t-il dans les prix de détail ?
+1 h 50 – 1 h 54. Lecture : si l'étranger payait le droit, la courbe bleue baisserait après le 2 avril 2025 ; elle reste plate, tandis que la courbe ambre monte. Bleu : prix des biens importés hors carburants, mesurés sans le droit, donc ce que reçoit l'exportateur ; ambre : biens hors alimentation et énergie. L'indice couvre tous les biens importés, taxés ou non. Pas de relevé en octobre 2025 (fermeture de l'administration fédérale). De décembre 2025 à septembre 2026, prix hors droit +5,2 % : la figure ne dit pas pourquoi, mais elle ne montre toujours pas d'exportateurs qui baissent leurs prix. Calculs de l'auteur sur le BLS. Transition : à quelle vitesse le droit passe-t-il dans les prix de détail ?
 :::
 
 ## Du droit aux prix à la consommation : un passage en un an
@@ -647,31 +608,7 @@ graphe_prix_import(base_size = 24)
 [Source : [Amiti, Heise et Weinstein, *Liberty Street Economics*, 06/10/2026](https://libertystreeteconomics.newyorkfed.org/2026/10/how-fast-do-tariffs-pass-through-into-consumer-prices/).]{.wp-source}
 
 ::: {.notes}
-1 h 53 – 1 h 56. Sans les droits, les prix de ces biens auraient légèrement baissé en février 2026. Question : un droit de 10 points, combien sur les prix des biens au bout d'un an ? (Environ 2,5 %.) Transition : combien cela coûte-t-il au pays ?
-:::
-
-## Droits de 2018 : transferts importants, perte nette faible
-
-:::: {.columns}
-::: {.column width="60%"}
-```{r}
-#| fig-width: 6.4
-#| fig-height: 4.6
-#| fig-alt: "Le graphique théorique du droit de douane dans un petit pays, avec les aires a, b, c et d entre Pw et Pw plus t."
-graphe_tarif(chiffres = FALSE, base_size = 24)
-```
-:::
-
-::: {.column width="40%"}
-::: {.incremental}
-- Perte des acheteurs de biens importés : **51 Md\$**, 0,27 % du PIB américain.
-- Après recette douanière (c) et gain des producteurs (a) : perte nette de **7,2 Md\$**, 0,04 % du PIB.
-:::
-:::
-::::
-
-::: {.notes}
-1 h 56 – 1 h 59. Estimation de Fajgelbaum et al. (2020) sur les droits de 2018. Acheteurs : consommateurs et entreprises. C'est l'exemple du tee-shirt en grand : un transfert massif, une perte sèche faible (b + d). Question : quelle aire correspond aux 7,2 Md\$ ? Transition : la recette, aire c, en données.
+1 h 54 – 1 h 58. Sans les droits, les prix de ces biens auraient légèrement baissé en février 2026. Question : un droit de 10 points, combien sur les prix des biens au bout d'un an ? (Environ 2,5 %.) Transition : la recette, aire c, en données.
 :::
 
 ## Recettes douanières américaines : quadruplées, puis amputées par les remboursements
@@ -695,7 +632,7 @@ graphe_recettes_douane(base_size = 24)
 ::::
 
 ::: {.notes}
-1 h 59 – 2 h 02. Bleu : recettes brutes ; ambre : recettes nettes des remboursements. 7,9 Md\$ en octobre 2024, 33,1 Md\$ en octobre 2025 ; recettes nettes autour de zéro en mai 2026, de −26 Md\$ en juin et −9 Md\$ en juillet. Question : quelle aire du graphique théorique ces recettes représentent-elles ? (c.) Transition : que pèsent ces recettes dans les impôts fédéraux ?
+1 h 58 – 2 h 01. Bleu : recettes brutes ; ambre : recettes nettes des remboursements. 7,9 Md\$ en octobre 2024, 33,1 Md\$ en octobre 2025 ; recettes nettes autour de zéro en mai 2026, de −26 Md\$ en juin et −9 Md\$ en juillet. Question : quelle aire du graphique théorique ces recettes représentent-elles ? (c.) Transition : que pèsent ces recettes dans les impôts fédéraux ?
 :::
 
 ## Droits de douane : moins d'un dixième des impôts fédéraux en 2025
@@ -722,7 +659,7 @@ graphe_part_douane(base_size = 24)
 [Source : [BEA, comptes nationaux, via FRED, consulté le 22/10/2026](https://fred.stlouisfed.org/series/B235RC1A027NBEA) ; calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
-2 h 02 – 2 h 04. Les droits perçus ont plus que triplé, mais restent une petite part des impôts fédéraux (impôts courants, cotisations sociales non comprises). Le pic de 1931 vient aussi de l'effondrement des autres impôts pendant la crise. Années civiles : ne pas comparer directement aux exercices budgétaires du graphique précédent. Question : les droits de douane peuvent-ils financer l'État fédéral ? Transition : à qui va l'argent rendu ?
+2 h 01 – 2 h 03. Les droits perçus ont plus que triplé, mais restent une petite part des impôts fédéraux (impôts courants, cotisations sociales non comprises). Le pic de 1931 vient aussi de l'effondrement des autres impôts pendant la crise. Années civiles : ne pas comparer directement aux exercices budgétaires du graphique précédent. Question : les droits de douane peuvent-ils financer l'État fédéral ? Transition : à qui va l'argent rendu ?
 :::
 
 ## Remboursements : l'argent rendu va aux importateurs
@@ -738,19 +675,7 @@ graphe_part_douane(base_size = 24)
 Qui a supporté le droit : question **positive**. Qui doit être remboursé : question **normative**, que tranchent le droit et les tribunaux.
 
 ::: {.notes}
-2 h 04 – 2 h 07. Calcul de l'auteur sur le *Monthly Treasury Statement* (21/10/2026) ; Bouët, Blog du CEPII, 27/03/2026 ; Deysine, *The Conversation*, 23/02/2026. Environ 165 Md\$ à rembourser à 330 566 importateurs. Les importateurs ont pu répercuter une partie du droit sur leurs clients. Question : un consommateur qui a payé plus cher sera-t-il remboursé ? Transition : qui gagne et qui perd, groupe par groupe.
-:::
-
-## Effets de répartition par revenu : un droit pèse sur les ménages modestes
-
-::: {.incremental}
-- Les droits relevés en 2018 et en 2019 devaient coûter **831 \$** par an à un ménage américain typique, hors représailles ([Amiti, Redding et Weinstein, *Liberty Street Economics*, 23/05/2019](https://libertystreeteconomics.newyorkfed.org/2019/05/new-china-tariffs-increase-costs-to-us-households/)).
-- Comme une taxe sur les biens de consommation, un tel droit pèse plus, en part du revenu, sur les ménages qui dépensent tout leur revenu.
-- Les données le confirment : en 2023, les biens représentent **48,9 %** du revenu après impôt des 20 % de ménages les plus modestes, **15,6 %** de celui des 20 % les plus aisés ([BLS, *Consumer Expenditure Surveys*, téléchargé le 23/10/2026](https://www.bls.gov/cex/tables.htm) ; calcul de l'auteur).
-:::
-
-::: {.notes}
-2 h 07 – 2 h 09. Les ménages qui épargnent une partie de leur revenu sont moins touchés en proportion. Les biens comptés : alimentation à domicile, alcools, produits d'entretien, meubles et équipement du logement, habillement, achats de véhicules ; tous ne sont pas importés. Le revenu des plus modestes est sous-estimé dans l'enquête, ce qui grossit le 48,9 % ; la baisse se lit aussi du 2e au 5e quintile (26,8 % à 15,6 %). Question : un étudiant qui dépense tout ce qu'il gagne est-il plus ou moins touché, en part de son revenu ? Transition : les droits de 2026, chiffrés par décile.
+2 h 03 – 2 h 06. Calcul de l'auteur sur le *Monthly Treasury Statement* (21/10/2026) ; Bouët, Blog du CEPII, 27/03/2026 ; Deysine, *The Conversation*, 23/02/2026. Environ 165 Md\$ à rembourser à 330 566 importateurs. Les importateurs ont pu répercuter une partie du droit sur leurs clients. Question : un consommateur qui a payé plus cher sera-t-il remboursé ? Transition : qui gagne et qui perd, groupe par groupe.
 :::
 
 ## En part du revenu, les droits pèsent trois fois plus sur les ménages modestes
@@ -770,15 +695,15 @@ graphe_cout_droits_deciles(base_size = 24)
 - 10 % les plus modestes : **1,3 %** du revenu, environ 490 \$ par an.
 - 10 % les plus aisés : **0,4 %**, environ 2 100 \$.
 - En dollars, les aisés paient plus ; en part du revenu, les modestes paient **trois fois plus**.
-- Selon une autre méthode, l'écart est plus faible.
+- *Mécanisme* : les modestes dépensent tout leur revenu, surtout en biens (**48,9 %** contre 15,6 %, BLS 2023).
 :::
 :::
 ::::
 
-[Sources : [Yale Budget Lab, 24/08/2026](https://budgetlab.yale.edu/research/state-us-tariffs) ; [Tax Policy Center, 11/09/2026](https://taxpolicycenter.org/features/tracking-trump-tariffs).]{.wp-source}
+[Sources : [Yale Budget Lab, 24/08/2026](https://budgetlab.yale.edu/research/state-us-tariffs) ; [Tax Policy Center, 11/09/2026](https://taxpolicycenter.org/features/tracking-trump-tariffs) ; [BLS, *Consumer Expenditure Surveys*, téléchargé le 23/10/2026](https://www.bls.gov/cex/tables.htm), calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
-2 h 09 – 2 h 11. Droits en vigueur au 24/08/2026, après report des achats vers d'autres fournisseurs ; coût en % du revenu après impôts et transferts. En dollars, les riches paient plus ; en part du revenu, les modestes paient plus, parce qu'ils dépensent presque tout leur revenu (diapo précédente). Objection : le Tax Policy Center, qui répartit la charge selon le revenu plutôt que selon la consommation, trouve 0,8 point d'impôt en plus pour les 20 % les plus modestes contre 0,6 point pour les 20 % les plus aisés. Estimations faites avant coup, qui supposent que les droits passent dans les prix ; les chiffres changent à chaque mise à jour, d'où la date. Question : pourquoi un ménage aisé peut-il payer plus en dollars et moins en part de son revenu ? Transition : les entreprises qui achètent des biens importés.
+2 h 06 – 2 h 10. Repère de 2018-2019 : les droits relevés en 2018 et en 2019 devaient coûter 831 \$ par an à un ménage américain typique, hors représailles ([Amiti, Redding et Weinstein, *Liberty Street Economics*, 23/05/2019](https://libertystreeteconomics.newyorkfed.org/2019/05/new-china-tariffs-increase-costs-to-us-households/)). Comme une taxe sur les biens de consommation, un tel droit pèse plus, en part du revenu, sur les ménages qui dépensent tout leur revenu. Les données le confirment : en 2023, les biens représentent 48,9 % du revenu après impôt des 20 % de ménages les plus modestes, 15,6 % de celui des 20 % les plus aisés (BLS, calcul de l'auteur). Les ménages qui épargnent une partie de leur revenu sont moins touchés en proportion. Les biens comptés : alimentation à domicile, alcools, produits d'entretien, meubles et équipement du logement, habillement, achats de véhicules ; tous ne sont pas importés. Le revenu des plus modestes est sous-estimé dans l'enquête, ce qui grossit le 48,9 % ; la baisse se lit aussi du 2e au 5e quintile (26,8 % à 15,6 %). Question : un étudiant qui dépense tout ce qu'il gagne est-il plus ou moins touché, en part de son revenu ? Figure : droits en vigueur au 24/08/2026, après report des achats vers d'autres fournisseurs ; coût en % du revenu après impôts et transferts. En dollars, les riches paient plus ; en part du revenu, les modestes paient plus, parce qu'ils dépensent presque tout leur revenu (dernier point). Selon une autre méthode, l'écart est plus faible. Objection : le Tax Policy Center, qui répartit la charge selon le revenu plutôt que selon la consommation, trouve 0,8 point d'impôt en plus pour les 20 % les plus modestes contre 0,6 point pour les 20 % les plus aisés. Estimations faites avant coup, qui supposent que les droits passent dans les prix ; les chiffres changent à chaque mise à jour, d'où la date. Question : pourquoi un ménage aisé peut-il payer plus en dollars et moins en part de son revenu ? Transition : les entreprises qui achètent des biens importés.
 :::
 
 ## Chaîne de valeur : un bien franchit plusieurs frontières
@@ -799,7 +724,7 @@ Une **chaîne de valeur** est la suite des étapes de production d'un bien, de l
 ::::
 
 ::: {.notes}
-2 h 11 – 2 h 13. Le droit de douane se perçoit à ce type de frontière ; une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Question : combien de frontières franchit un téléphone avant d'arriver en magasin ? Transition : l'exemple de l'acier.
+2 h 10 – 2 h 12. Le droit de douane se perçoit à ce type de frontière ; une pièce ou un conteneur peut franchir plusieurs fois une frontière avant le produit fini, et chaque passage peut être taxé. Question : combien de frontières franchit un téléphone avant d'arriver en magasin ? Transition : l'exemple de l'acier.
 :::
 
 ## Droit sur l'acier : les aciéries gagnent a, leurs clients paient
@@ -826,7 +751,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 ::::
 
 ::: {.notes}
-2 h 13 – 2 h 16. Chaîne de causalité d'un droit sur un bien intermédiaire. Étape 4 : les entreprises relèvent leur prix ou réduisent leur production. Étape 5 : le droit censé protéger l'industrie en pénalise une partie ; c'est un raisonnement, que les sources de cette séance ne chiffrent pas. En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme ceux des biens finals, et les chaînes d'approvisionnement ont été réorganisées (Amiti et al., 2019). Question : qui, dans l'automobile, réclamerait la suppression du droit ? Transition : les territoires.
+2 h 12 – 2 h 15. Chaîne de causalité d'un droit sur un bien intermédiaire. Étape 4 : les entreprises relèvent leur prix ou réduisent leur production. Étape 5 : le droit censé protéger l'industrie en pénalise une partie ; c'est un raisonnement, que les sources de cette séance ne chiffrent pas. En 2018, les prix des biens intermédiaires, comme l'acier, ont augmenté comme ceux des biens finals, et les chaînes d'approvisionnement ont été réorganisées (Amiti et al., 2019). Question : qui, dans l'automobile, réclamerait la suppression du droit ? Transition : les territoires.
 :::
 
 ## Effets de répartition par territoire : des pertes concentrées
@@ -838,7 +763,7 @@ graphe_tarif(chiffres = FALSE, base_size = 24, etape = 3)
 :::
 
 ::: {.notes}
-2 h 16 – 2 h 18. Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles de 2018 ont frappé les travailleurs des secteurs exposés au commerce. Question : pourquoi des perdants concentrés pèsent-ils plus en politique que des gagnants dispersés ? Transition : la concurrence chinoise et l'emploi industriel, en données.
+2 h 15 – 2 h 17. Les travailleurs changent difficilement de métier et de région, et les pertes se concentrent là où étaient les usines : cette concentration explique une partie de la demande de protection. Les représailles de 2018 ont frappé les travailleurs des secteurs exposés au commerce. Question : pourquoi des perdants concentrés pèsent-ils plus en politique que des gagnants dispersés ? Transition : la concurrence chinoise et l'emploi industriel, en données.
 :::
 
 ## 2000-2010 : la part de la Chine double, l'emploi industriel recule d'un tiers
@@ -865,7 +790,7 @@ graphe_chine_emploi(base_size = 24)
 [Sources : [Census Bureau via FRED](https://fred.stlouisfed.org/series/IMPCH) ; [Bureau of Labor Statistics](https://data.bls.gov/timeseries/CES3000000001) ; consulté le 22/10/2026 ; calcul de l'auteur.]{.wp-source}
 
 ::: {.notes}
-2 h 18 – 2 h 21. La ligne verticale marque l'entrée de la Chine à l'OMC, en décembre 2001. Un quart du recul de 1990 à 2007 selon Autor, Dorn et Hanson (2013) ; le reste tient à d'autres causes, que le graphique ne distingue pas. Depuis 2018, la part de la Chine baisse sans que l'emploi industriel remonte. Question à l'amphi : les droits de 2018 et de 2025 ont-ils fait revenir les emplois ? (Le graphique seul ne permet pas de le dire.) Transition : les générations et l'étranger.
+2 h 17 – 2 h 20. La ligne verticale marque l'entrée de la Chine à l'OMC, en décembre 2001. Un quart du recul de 1990 à 2007 selon Autor, Dorn et Hanson (2013) ; le reste tient à d'autres causes, que le graphique ne distingue pas. Depuis 2018, la part de la Chine baisse sans que l'emploi industriel remonte. Question à l'amphi : les droits de 2018 et de 2025 ont-ils fait revenir les emplois ? (Le graphique seul ne permet pas de le dire.) Transition : les générations et l'étranger.
 :::
 
 ## Effets de répartition entre générations et à l'étranger
@@ -879,7 +804,7 @@ graphe_chine_emploi(base_size = 24)
 [Source : [Eurostat, `ext_lt_maineu`, téléchargé le 21/10/2026](https://ec.europa.eu/eurostat/databrowser/view/ext_lt_maineu/default/table?lang=fr).]{.wp-source}
 
 ::: {.notes}
-2 h 21 – 2 h 23. L'industrie naissante revient dans la controverse avec List. Question : qui décide qu'une protection doit être retirée, et quand ? Transition : les exportations européennes, mois par mois.
+2 h 20 – 2 h 23. L'industrie naissante revient dans la controverse avec List. Question : qui décide qu'une protection doit être retirée, et quand ? Transition : les exportations européennes, mois par mois.
 :::
 
 ## Exportations de l'UE aux États-Unis : anticipation en mars 2025, puis repli
@@ -952,7 +877,7 @@ graphe_export_ue_usa(base_size = 24)
 - Quel poids donner au **pouvoir d'achat**, aux **emplois** et aux **territoires**, au **rapport de force**, à la **dépendance**, au **climat** ?
 
 ::: {.notes}
-2 h 29 – 2 h 32. Sources du positif : Amiti et al., 2019 ; *Liberty Street Economics*, 12/02/2026. Normatif : savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Rapport de force face au risque de représailles ; dépendance envers un fournisseur étranger en cas de crise ; climat quand le droit porte sur le carbone importé. Débat en amphi, 3 minutes, après le clic : quel poids donnez-vous à chacun ? Transition : un argument positif souvent mal posé, le déficit.
+2 h 29 – 2 h 33. Sources du positif : Amiti et al., 2019 ; *Liberty Street Economics*, 12/02/2026. Normatif : savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Rapport de force face au risque de représailles ; dépendance envers un fournisseur étranger en cas de crise ; climat quand le droit porte sur le carbone importé. Débat en amphi, 3 minutes, après le clic : quel poids donnez-vous à chacun ? Transition : un argument positif souvent mal posé, le déficit.
 :::
 
 ## Analyse positive : un déficit bilatéral n'est pas une perte
@@ -970,41 +895,23 @@ Dans l'exemple de Ricardo, le gain vient de ce qu'on **importe** à bon prix, pa
 [Source : [Eurostat, `ext_lt_maineu`, mis à jour le 16/10/2026, téléchargé le 21/10/2026](https://ec.europa.eu/eurostat/databrowser/view/ext_lt_maineu/default/table?lang=fr) ; solde calculé par l'auteur.]{.wp-source}
 
 ::: {.notes}
-2 h 32 – 2 h 34. L'administration américaine a justifié ses droits par le déficit commercial (Deysine, 23/02/2026) : les États-Unis achètent à l'UE bien plus de biens qu'ils ne lui en vendent. Les services ne figurent pas dans ce tableau. Question : A, qui achète des vêtements à B, s'est-il appauvri ? Transition : les écoles en présence.
+2 h 33 – 2 h 35. L'administration américaine a justifié ses droits par le déficit commercial (Deysine, 23/02/2026) : les États-Unis achètent à l'UE bien plus de biens qu'ils ne lui en vendent. Les services ne figurent pas dans ce tableau. Question : A, qui achète des vêtements à B, s'est-il appauvri ? Transition : les écoles en présence.
 :::
 
-## Libre-échange et protectionnisme éducateur : deux écoles
+## Libre-échange et protectionnisme éducateur : même mécanisme, désaccord sur l'emploi
 
 ::: {.incremental}
-- **Libre-échange** (Ricardo, puis les néoclassiques) : l'échange enrichit les pays ; mieux vaut compenser les perdants (aides, formation, politiques régionales) que taxer tout le monde.
+- **Libre-échange** (Ricardo, puis les néoclassiques) : l'échange enrichit les pays ; mieux vaut compenser les perdants que taxer tout le monde.
 - **Protectionnisme éducateur** (Friedrich List, XIX^e^ siècle) : protéger **temporairement** les « industries naissantes », jusqu'à ce qu'elles soient compétitives.
 - **Limites, selon les critiques** : compensation partielle en pratique ([Autor et al., 2013](https://doi.org/10.1257/aer.103.6.2121)) ; représailles, secteurs choisis par les mieux organisés, rentes protégées.
 :::
 
-::: {.notes}
-2 h 34 – 2 h 37. Frédéric Bastiat refusait de répondre à la protection par la protection, selon une phrase qu'on lui attribue : « Ce n'est pas parce que les étrangers ont des côtes rocheuses que nous devons mettre des rochers dans nos ports » (cité par La finance pour tous, « Le protectionnisme », 07/04/2025). Limites du protectionnisme : risque de protéger des rentes plutôt que des industries d'avenir (*ibid.*). Question : quelle école vous convainc, et pourquoi ? Transition : sur quoi porte vraiment le désaccord.
-:::
+. . .
 
-## Le désaccord porte sur la valeur d'un emploi, pas sur le mécanisme
-
-:::: {.columns}
-::: {.column width="60%"}
-```{r}
-#| fig-width: 6.4
-#| fig-height: 4.6
-#| fig-alt: "Le graphique théorique du droit de douane dans un petit pays, avec les aires a, b, c et d."
-graphe_tarif(chiffres = FALSE, base_size = 24)
-```
-:::
-
-::: {.column width="40%"}
-- Le mécanisme du graphique est **largement admis**.
-- Le désaccord porte sur ce que vaut un **emploi industriel préservé**, comparé au surcoût payé par des millions d'acheteurs.
-:::
-::::
+Le mécanisme du droit de douane (aires a, b, c, d) est **largement admis** ; le désaccord porte sur ce que vaut un **emploi industriel préservé**, comparé au surcoût payé par des millions d'acheteurs.
 
 ::: {.notes}
-2 h 37 – 2 h 39. Les écoles s'accordent sur les aires a, b, c, d ; elles divergent sur le poids donné à l'aire a (les producteurs protégés et leurs emplois) face à la perte des consommateurs. Question : combien seriez-vous prêts à payer de plus vos vêtements pour garder une usine dans votre région ? Transition : qui a le pouvoir de fixer ces droits.
+2 h 35 – 2 h 39. Compenser les perdants : aides, formation, politiques régionales. Frédéric Bastiat refusait de répondre à la protection par la protection, selon une phrase qu'on lui attribue : « Ce n'est pas parce que les étrangers ont des côtes rocheuses que nous devons mettre des rochers dans nos ports » (cité par La finance pour tous, « Le protectionnisme », 07/04/2025). Limites du protectionnisme : risque de protéger des rentes plutôt que des industries d'avenir (*ibid.*). Question : quelle école vous convainc, et pourquoi ? Puis, au dernier clic, sur quoi porte vraiment le désaccord : le graphique du droit de douane (« Droit de douane (4/4) »). Les écoles s'accordent sur les aires a, b, c, d ; elles divergent sur le poids donné à l'aire a (les producteurs protégés et leurs emplois) face à la perte des consommateurs. Question : combien seriez-vous prêts à payer de plus vos vêtements pour garder une usine dans votre région ? Transition : qui a le pouvoir de fixer ces droits.
 :::
 
 ## Et le droit ? Le Congrès aux États-Unis, l'Union en Europe

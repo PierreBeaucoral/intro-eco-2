@@ -18,9 +18,9 @@
 #let wp-etiquette(label, couleur) = text(font: wp-ui, weight: "semibold", size: 7.5pt, tracking: 0.06em, fill: couleur, upper(label))
 
 // Un bloc court (moins de 40 % de la page) ne se coupe pas ; un bloc long se coupe, étiquette collée au texte.
-// Largeur et hauteur utiles : A4 moins les marges de `article` (2 × 2,3 cm ; 2,4 + 2,2 cm).
+// Largeur et hauteur utiles : A4 moins les marges de `article` (2 × 2,3 cm ; 2,4 + 2,2 cm). tete: none = pas d'étiquette.
 #let wp-bloc(..args, tete, body) = context {
-  let contenu = [#block(sticky: true, below: 0.5em, tete)#body]
+  let contenu = if tete == none { body } else [#block(sticky: true, below: 0.5em, tete)#body]
   let h = measure(block(width: 16.4cm, ..args, contenu)).height
   block(width: 100%, breakable: h > 0.4 * 25.1cm, ..args, contenu)
 }
@@ -138,6 +138,10 @@
   show table: set par(justify: false)
   show table.cell.where(y: 0): set text(font: wp-ui, weight: "medium", size: 8.5pt)
   show table: it => block(breakable: false, stroke: (bottom: 0.8pt + wp-encre), it)
+  // Définitions et exemples (#def-, #exm-) : filet à gauche, comme .theorem.definition et .example de components.scss.
+  // Quarto les rend en figures theorion (kind = nom de l'environnement) ; ces règles, internes à `article`, passent avant le show-frame de Quarto.
+  show figure.where(kind: "definition"): it => wp-bloc(inset: (left: 10pt, y: 2pt), stroke: (left: 1.5pt + wp-accent), none, it)
+  show figure.where(kind: "example"): it => wp-bloc(inset: (left: 10pt, y: 2pt), stroke: (left: 1.5pt + wp-offre), none, it)
   set image(width: 80%)  // figures R de 7 pouces : 80 % de la colonne suffit à l'impression
   show figure.caption: set text(font: wp-ui, size: 8.5pt, fill: wp-encre-2)
   show figure.caption: set par(justify: false)
