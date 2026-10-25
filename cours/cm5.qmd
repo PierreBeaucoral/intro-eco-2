@@ -18,7 +18,7 @@ source(here::here("R/cm5.R"))
 - **La demande comme bénéfice marginal** : la hauteur de la demande D, pour une quantité donnée, mesure ce que vaut la dernière unité pour celui qui l'achète.
 - **Surplus et perte sèche** : le surplus est l'écart entre ce qu'une unité vaut et ce qu'elle coûte ; la perte sèche est le surplus perdu quand on s'écarte de la meilleure quantité (CM 4).
 - **Incidence** : celui qui verse un impôt n'est pas toujours celui qui le supporte (CM 2).
-- **Positif et normatif** : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
 :::
 
 ## La question
@@ -322,14 +322,14 @@ En 2025, le **leasing social** propose 50 000 aides pour louer une voiture éle
 
 ### Faut-il garder les ZFE, et qui doit payer leur coût ?
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - La pollution automobile est une externalité : sans intervention, on roule plus que l'optimum.
 - Les ZFE réduisent les émissions, mais leur effet propre est modeste : 4,6 points sur une baisse de 38,9 % pour les oxydes d'azote ([Insee, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)).
 - Une norme par vignette ne rapporte rien et ne cible ni les trajets les moins utiles ni les kilomètres, mais l'âge de la voiture ([Insee, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)) ; une taxe rapporte une recette qui peut compenser les perdants.
 - Le coût d'adaptation pèse davantage sur les ménages modestes qui ont une vieille voiture et travaillent loin des transports en commun.
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur).
 
 - **Qui détient le droit ?** Si l'on juge que les riverains ont droit à un air sain, le pollueur doit payer (taxe, ou au moins norme). Si l'on juge que l'accès en voiture au centre est un droit, la société doit payer (subvention). C'est la question de Coase, et l'économie ne la tranche pas.
 - **Efficacité ou équité ?** Quand le dommage est à peu près constant, la taxe atteint l'optimum au moindre coût ; mais elle frappe les ménages captifs de la voiture ; on peut la compenser, si l'on sait les identifier.

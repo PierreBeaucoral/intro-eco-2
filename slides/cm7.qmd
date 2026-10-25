@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm7.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : la fermeture du détroit d'Ormuz (28/02/2026)
+## La fermeture du détroit d'Ormuz (28/02/2026)
 
 - La guerre déclenchée le 28/02/2026 ferme de fait le détroit d'Ormuz ([Insee, *Note de conjoncture*, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf)).
 
@@ -146,7 +146,7 @@ graphe_taux_inflation(base_size = 24, etape = 1)
 ::: {.rappel}
 - **Création monétaire** : les banques créent de la monnaie quand elles accordent des crédits ; la banque centrale fournit aux banques la monnaie dont elles ont besoin entre elles (CM 6).
 - **Choc d'offre** : événement qui déplace la courbe d'offre (O → O′) ; un choc négatif fait monter le prix et baisser la quantité (CM 1).
-- **Positif et normatif** : ce qui est (on peut le vérifier) et ce qui devrait être (cela dépend d'un jugement).
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : ce qui est (on peut le vérifier) et ce qui devrait être (cela dépend d'un jugement).
 :::
 
 ::: {.notes}
@@ -899,14 +899,14 @@ graphe_inflation_pays(base_size = 24)
 
 ## Controverse : relever les taux face à un choc d'énergie
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - La hausse des taux agit sur la demande et les anticipations, pas sur l'énergie : moins d'inflation, moins d'activité.
 - 2022 : taux réel très négatif plus d'un an, inflation diffusée ; 2026 : hors énergie proche de 2 %.
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Combien d'emplois perdre pour revenir à 2 % un an plus tôt ? Qui paie : emprunteurs ou contribuables ? Qui décide : une institution non élue ?
 
@@ -952,7 +952,7 @@ L'objectif principal de la BCE, la **stabilité des prix**, et son **indépendan
 - Pour freiner l'inflation, le taux doit monter plus que l'inflation (règle de Taylor).
 - Face à un choc d'offre, la hausse des taux réduit l'inflation au prix d'une activité plus faible.
 - BCE : +4,50 points en 2022-2023, après la diffusion ; +0,50 point en 2026, tôt.
-- Choisir entre inflation et activité relève d'un jugement normatif.
+- Choisir entre inflation et activité relève d'un jugement [normatif]{.normatif}.
 :::
 
 ::: {.notes}
@@ -965,14 +965,14 @@ L'objectif principal de la BCE, la **stabilité des prix**, et son **indépendan
 
 . . .
 
-**I. Ce que disent les outils (positif)**
+[**I. Ce que disent les outils (positif)**]{.positif}
 
 - A. Taux réel (Fisher) et règle de Taylor : le taux doit monter plus que l'inflation.
 - B. Transmission : la hausse freine la demande, pas l'offre ; elle limite la diffusion.
 
 . . .
 
-**II. Ce qu'ils ne tranchent pas (normatif)**
+[**II. Ce qu'ils ne tranchent pas (normatif)**]{.normatif}
 
 - A. L'origine du choc et le coût en activité et en emplois.
 - B. Qui porte le coût, et qui décide : une institution non élue.

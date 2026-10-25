@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm9.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : le « Jour de la libération » (02/04/2025)
+## Le « Jour de la libération » (02/04/2025)
 
 :::: {.columns}
 ::: {.column width="58%"}
@@ -672,7 +672,7 @@ graphe_part_douane(base_size = 24)
 
 . . .
 
-Qui a supporté le droit : question **positive**. Qui doit être remboursé : question **normative**, que tranchent le droit et les tribunaux.
+Qui a supporté le droit : question [**positive**]{.positif}. Qui doit être remboursé : question [**normative**]{.normatif}, que tranchent le droit et les tribunaux.
 
 ::: {.notes}
 2 h 03 – 2 h 06. Calcul de l'auteur sur le *Monthly Treasury Statement* (21/10/2026) ; Bouët, Blog du CEPII, 27/03/2026 ; Deysine, *The Conversation*, 23/02/2026. Environ 165 Md\$ à rembourser à 330 566 importateurs. Les importateurs ont pu répercuter une partie du droit sur leurs clients. Question : un consommateur qui a payé plus cher sera-t-il remboursé ? Transition : qui gagne et qui perd, groupe par groupe.
@@ -865,14 +865,14 @@ graphe_export_ue_usa(base_size = 24)
 
 ## Controverse : protéger ses producteurs, ce qui est et ce qui devrait être
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - **Qui paie** : les droits américains de 2018 et de 2025 ont été payés à 86 % ou plus par les importateurs et les consommateurs américains.
 - **Combien** : un droit transfère du revenu et en détruit une partie, d'ampleur variable selon les estimations.
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Quel poids donner au **pouvoir d'achat**, aux **emplois** et aux **territoires**, au **rapport de force**, à la **dépendance**, au **climat** ?
 
@@ -880,7 +880,7 @@ graphe_export_ue_usa(base_size = 24)
 2 h 29 – 2 h 33. Sources du positif : Amiti et al., 2019 ; *Liberty Street Economics*, 12/02/2026. Normatif : savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Rapport de force face au risque de représailles ; dépendance envers un fournisseur étranger en cas de crise ; climat quand le droit porte sur le carbone importé. Débat en amphi, 3 minutes, après le clic : quel poids donnez-vous à chacun ? Transition : un argument positif souvent mal posé, le déficit.
 :::
 
-## Analyse positive : un déficit bilatéral n'est pas une perte
+## [Analyse positive]{.positif} : un déficit bilatéral n'est pas une perte
 
 | Milliards d'euros | 2023 | 2024 | 2025 |
 |---|---|---|---|
@@ -935,7 +935,7 @@ Dans l'UE, la politique commerciale est une **compétence exclusive de l'Union**
 - L'ouverture enrichit le pays, pas tous ses habitants : le facteur rare y perd (Stolper-Samuelson).
 - Petit pays : prix de Pw à Pw + t ; le droit transfère du revenu et en détruit une partie.
 - Part payée par l'étranger : baisse de son prix hors droit ÷ droit, de 0 à 14 % en 2018 et 2025.
-- L'objectif vaut-il son coût : une question normative.
+- L'objectif vaut-il son coût : une question [normative]{.normatif}.
 :::
 
 ::: {.notes}
@@ -948,14 +948,14 @@ Dans l'UE, la politique commerciale est une **compétence exclusive de l'Union**
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. L'avantage comparatif enrichit les pays, pas tous leurs habitants.
 - B. Un droit transfère du revenu aux producteurs et à l'État, en détruit une part, et se paie surtout dans le pays.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Recettes, protection, rapport de force, sécurité, climat : un objectif vaut-il son coût ?
 - B. Libre-échange et protectionnisme éducateur : le poids donné aux perdants.

@@ -16,7 +16,7 @@ source(here::here("R/cm6.R"))
 - **Monnaie** : ce que tout le monde accepte en paiement. Elle sert à échanger, à compter les valeurs (unité de compte) et à garder du pouvoir d'achat pour plus tard (réserve de valeur).
 - **Bilan** : la photographie, à une date donnée, de ce qu'un agent possède (l'**actif**) et de la façon dont il l'a financé (le **passif** : ses dettes et ses fonds propres). Par construction, le total de l'actif égale le total du passif.
 - **Taux d'intérêt** : le prix d'un emprunt, en pourcentage de la somme empruntée, par an.
-- **Analyse positive et analyse normative** : la première décrit ce qui est ou ce qui se passera ; la seconde dit ce qui devrait être, à partir de valeurs.
+- [**Analyse positive**]{.positif} **et** [**analyse normative**]{.normatif} : la première décrit ce qui est ou ce qui se passera ; la seconde dit ce qui devrait être, à partir de valeurs.
 :::
 
 ## La question
@@ -254,23 +254,32 @@ La @fig-depots-us suit les dépôts des autres banques américaines. Entre le me
 graphe_depots_us()
 ```
 
-### Le mobile money : payer sans banque, ce n'est pas créer de la monnaie
-
-En 2025, on compte **2,3 milliards** de comptes de mobile money dans le monde, et plus de 2 100 milliards de dollars y ont circulé ([GSMA, *State of the Industry Report on Mobile Money 2026*](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf)).
-
-::: {.piege}
-Le mobile money **n'est pas** de la création monétaire par le crédit. L'opérateur reçoit des billets ou un virement et inscrit la même somme sur le compte du client. En général, la réglementation l'oblige à placer un montant égal sur des comptes bancaires à part, pour que les clients puissent récupérer leur argent même s'il fait faillite ([GSMA, 2026](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf), glossaire). C'est un **moyen de paiement** : la monnaie change de forme, pas de quantité. Il n'y a création monétaire que si une banque, commerciale ou centrale, accorde un **prêt** (@exm-bilan) ou achète un titre.
-:::
-
-Le crédit arrive pourtant par le téléphone. À Abidjan, des offres comme Tik Tak (Orange) ou MoMo Kash (MTN) accordent, sans guichet ni vendeur, de petits prêts de un à trois mois, sur décision d'un algorithme qui lit l'historique du compte de mobile money ([Ducourant et al., *The Conversation*, 01/09/2026](https://theconversation.com/et-clic-largent-est-la-les-usages-du-credit-digital-en-cote-divoire-290006)).
-
 ## Effets de répartition
 
 ### Les petits déposants sont protégés, les gros beaucoup moins
 
-**Par revenu.** Avec un plafond de 100 000 € par client et par banque, un ménage qui a moins que cette somme dans sa banque est couvert en entier ([FGDR](https://www.garantiedesdepots.fr/fr/connaitre-mes-garanties/je-detiens-des-comptes-et-des-livrets-bancaires-quelles-sont-mes-garanties)). Les gros déposants, entreprises ou ménages aisés, ne sont couverts que jusqu'au plafond : ce sont eux qui ont intérêt à fuir les premiers, comme chez SVB. L'extension de la garantie en mars 2023 a donc surtout protégé de gros déposants, les petits l'étant déjà. Côté emprunteurs, le crédit digital dépanne des ménages aux revenus irréguliers, mais coûte cher : au Kenya, en 2021, les taux annuels allaient de 49 % à 442 % selon l'offre ([Ducourant et al., 01/09/2026](https://theconversation.com/et-clic-largent-est-la-les-usages-du-credit-digital-en-cote-divoire-290006)).
+**Par revenu.** Avec un plafond de 100 000 € par client et par banque, un ménage qui a moins que cette somme dans sa banque est couvert en entier ([FGDR](https://www.garantiedesdepots.fr/fr/connaitre-mes-garanties/je-detiens-des-comptes-et-des-livrets-bancaires-quelles-sont-mes-garanties)). Les gros déposants, entreprises ou ménages aisés, ne sont couverts que jusqu'au plafond : ce sont eux qui ont intérêt à fuir les premiers, comme chez SVB. L'extension de la garantie en mars 2023 a donc surtout protégé de gros déposants, les petits l'étant déjà.
 
-**Par territoire.** Le mobile money donne accès au paiement là où les banques sont rares : c'est d'Afrique subsaharienne que vient l'essentiel des nouveaux comptes ([GSMA, 2026](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf)). En septembre 2025, le Sénégal a adopté une taxe de 0,5 % sur les paiements, transferts et retraits en mobile money ; selon Awa Diouf ([*The Conversation*, 10/10/2025](https://theconversation.com/mobilisation-de-recettes-vs-inclusion-financiere-le-dilemme-de-la-taxation-du-mobile-money-au-senegal-266811)), ce type de taxe pèse proportionnellement plus sur les ménages pauvres et peut les ramener vers l'argent liquide. En France, le Fonds de garantie des dépôts est né d'une crise locale : la défaillance du Crédit martiniquais, en 1999 ([FGDR](https://www.garantiedesdepots.fr/fr/a-propos-du-fgdr/histoire-du-FGDR)).
+**Par territoire.** En France, le Fonds de garantie des dépôts est né d'une crise locale : la défaillance du Crédit martiniquais, en 1999 ([FGDR](https://www.garantiedesdepots.fr/fr/a-propos-du-fgdr/histoire-du-FGDR)).
+
+### Les banques et leurs emprunteurs profitent de la création monétaire
+
+Créer de la monnaie rapporte aux banques. Leur gain n'est pas la totalité des intérêts : c'est l'écart entre le taux de leurs prêts et le coût de leurs ressources (dépôts rémunérés, réserves empruntées). En contrepartie, elles portent le risque que l'emprunteur ne rembourse pas. Les emprunteurs, eux, peuvent acheter tout de suite un logement, une machine ou un scooter, sans attendre d'avoir épargné.
+
+::: {.plus}
+**Le mobile money : payer sans banque, ce n'est pas créer de la monnaie**
+
+Le **mobile money** est un compte ouvert chez un opérateur de téléphonie, sans compte bancaire (Orange Money, MTN MoMo) : on y dépose des billets chez un agent, puis on paie ou on envoie de l'argent par téléphone. En 2025, on compte **2,3 milliards** de comptes de mobile money dans le monde, et plus de 2 100 milliards de dollars y ont circulé ([GSMA, *State of the Industry Report on Mobile Money 2026*](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf)).
+
+**Le mobile money n'est pas de la création monétaire par le crédit.** L'opérateur reçoit des billets ou un virement et inscrit la même somme sur le compte du client. En général, la réglementation l'oblige à placer un montant égal sur des comptes bancaires à part, pour que les clients puissent récupérer leur argent même s'il fait faillite ([GSMA, 2026](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf), glossaire). C'est un **moyen de paiement** : la monnaie change de forme, pas de quantité. Il n'y a création monétaire que si une banque, commerciale ou centrale, accorde un **prêt** (@exm-bilan) ou achète un titre.
+
+Le crédit arrive pourtant par le téléphone. À Abidjan, des offres comme Tik Tak (Orange) ou MoMo Kash (MTN) accordent, sans guichet ni vendeur, de petits prêts de un à trois mois, sur décision d'un algorithme qui lit l'historique du compte de mobile money ([Ducourant et al., *The Conversation*, 01/09/2026](https://theconversation.com/et-clic-largent-est-la-les-usages-du-credit-digital-en-cote-divoire-290006)).
+
+**Qui y gagne, qui y perd ?**
+
+**Par revenu.** Le crédit digital dépanne des ménages aux revenus irréguliers, mais coûte cher : au Kenya, en 2021, les taux annuels allaient de 49 % à 442 % selon l'offre ([Ducourant et al., 01/09/2026](https://theconversation.com/et-clic-largent-est-la-les-usages-du-credit-digital-en-cote-divoire-290006)).
+
+**Par territoire.** Le mobile money donne accès au paiement là où les banques sont rares : c'est d'Afrique subsaharienne que vient l'essentiel des nouveaux comptes ([GSMA, 2026](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf)). En septembre 2025, le Sénégal a adopté une taxe de 0,5 % sur les paiements, transferts et retraits en mobile money ; selon Awa Diouf ([*The Conversation*, 10/10/2025](https://theconversation.com/mobilisation-de-recettes-vs-inclusion-financiere-le-dilemme-de-la-taxation-du-mobile-money-au-senegal-266811)), ce type de taxe pèse proportionnellement plus sur les ménages pauvres et peut les ramener vers l'argent liquide.
 
 La @fig-findex-regions donne un ordre de grandeur de l'avance africaine : en 2024, 40 % des adultes d'Afrique subsaharienne ont un compte de mobile money, 2,5 fois plus que dans le monde (16 %) ; ils n'étaient que 11 % en 2014 ([Banque mondiale, Global Findex 2025](https://www.worldbank.org/en/publication/globalfindex)).
 
@@ -297,22 +306,19 @@ La @fig-findex-genre reprend les données de la Banque mondiale : 14,6 % des fe
 #| fig-height: 3.8
 graphe_findex_genre()
 ```
-
-### Les banques et leurs emprunteurs profitent de la création monétaire
-
-Créer de la monnaie rapporte aux banques. Leur gain n'est pas la totalité des intérêts : c'est l'écart entre le taux de leurs prêts et le coût de leurs ressources (dépôts rémunérés, réserves empruntées). En contrepartie, elles portent le risque que l'emprunteur ne rembourse pas. Les emprunteurs, eux, peuvent acheter tout de suite un logement, une machine ou un scooter, sans attendre d'avoir épargné.
+:::
 
 ## La controverse
 
 ### La banque crée-t-elle de l'argent « à partir de rien » ?
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - Les banques créent l'essentiel de la monnaie en accordant des crédits ([Banque d'Angleterre, 2014](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy) ; [La finance pour tous, 2026](https://www.lafinancepourtous.com/decryptages/politiques-economiques/theories-economiques/creation-monetaire/la-creation-monetaire-comment-ca-marche/)) ; un remboursement la détruit ([Banque d'Angleterre, 2014](https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy)).
 - La monnaie n'est pas créée sans contrepartie : chaque dépôt nouveau correspond à une dette de l'emprunteur. La création est limitée par la rentabilité, la réglementation et la politique monétaire (@exm-bilan et section précédente).
 - Une banque solvable peut tomber par manque de liquidité si ses déposants paniquent ([Diamond et Dybvig, 1983](https://doi.org/10.1086/261155)). SVB l'illustre en partie : ses pertes sur obligations ont donné une raison de craindre, et la panique a fait le reste.
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur).
 
 - Est-il juste que des banques privées touchent des intérêts sur une monnaie qu'elles créent ? Faut-il réserver la création monétaire à la puissance publique, ou la concurrence entre banques et la réglementation suffisent-elles à encadrer ce privilège ? L'analyse ne tranche pas : la réponse dépend de valeurs.
 - Le pouvoir de choisir qui reçoit du crédit, donc qui peut investir, doit-il appartenir aux banques, à la banque centrale, à l'État ?
@@ -321,9 +327,9 @@ Créer de la monnaie rapporte aux banques. Leur gain n'est pas la totalité des 
 
 ### Faut-il garantir tous les dépôts ?
 
-**Positif.** Une garantie crédible empêche la panique (@exm-panique). Mais elle a un effet pervers possible : une banque qui sait ses dépôts garantis peut prendre plus de risques, puisque ses déposants n'ont plus de raison de la surveiller. C'est l'**aléa moral** : celui qui est assuré se comporte de façon plus risquée, et l'assureur ne peut pas tout observer. Caroline Perrin, Aurore Burietz et Jérémie Bertrand ([*The Conversation*, 23/03/2023](https://theconversation.com/garantir-les-depots-bancaires-de-facon-illimitee-une-nouvelle-arme-contre-les-crises-202278)) estiment qu'une garantie illimitée rassure à court terme, mais risque de rendre le système plus fragile à long terme. Éric Pichet ([*The Conversation*, 13/03/2023](https://theconversation.com/faillite-de-la-silicon-valley-bank-pourquoi-les-risques-dune-nouvelle-crise-financiere-restent-limites-201650)) insiste, lui, sur la rapidité d'intervention de l'assureur public américain des dépôts et note que les grandes banques, aux financements plus diversifiés, ont peu souffert.
+[**Positif.**]{.positif} Une garantie crédible empêche la panique (@exm-panique). Mais elle a un effet pervers possible : une banque qui sait ses dépôts garantis peut prendre plus de risques, puisque ses déposants n'ont plus de raison de la surveiller. C'est l'**aléa moral** : celui qui est assuré se comporte de façon plus risquée, et l'assureur ne peut pas tout observer. Caroline Perrin, Aurore Burietz et Jérémie Bertrand ([*The Conversation*, 23/03/2023](https://theconversation.com/garantir-les-depots-bancaires-de-facon-illimitee-une-nouvelle-arme-contre-les-crises-202278)) estiment qu'une garantie illimitée rassure à court terme, mais risque de rendre le système plus fragile à long terme. Éric Pichet ([*The Conversation*, 13/03/2023](https://theconversation.com/faillite-de-la-silicon-valley-bank-pourquoi-les-risques-dune-nouvelle-crise-financiere-restent-limites-201650)) insiste, lui, sur la rapidité d'intervention de l'assureur public américain des dépôts et note que les grandes banques, aux financements plus diversifiés, ont peu souffert.
 
-**Normatif.** Faut-il relever le plafond, au risque de couvrir des déposants riches capables de surveiller leur banque ? Ou le garder bas, au risque de nouvelles paniques chez les entreprises dont les comptes dépassent le plafond ? La réponse dépend du poids que l'on donne à la stabilité immédiate et aux comportements à long terme. Une autre voie consiste à mieux surveiller les banques : c'est la conclusion du [rapport de la Réserve fédérale sur SVB (28/04/2023)](https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf), qui reconnaît que ses superviseurs ont sous-estimé les fragilités de la banque.
+[**Normatif.**]{.normatif} Faut-il relever le plafond, au risque de couvrir des déposants riches capables de surveiller leur banque ? Ou le garder bas, au risque de nouvelles paniques chez les entreprises dont les comptes dépassent le plafond ? La réponse dépend du poids que l'on donne à la stabilité immédiate et aux comportements à long terme. Une autre voie consiste à mieux surveiller les banques : c'est la conclusion du [rapport de la Réserve fédérale sur SVB (28/04/2023)](https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf), qui reconnaît que ses superviseurs ont sous-estimé les fragilités de la banque.
 
 ::: {.droit}
 En France, le Fonds de garantie des dépôts a été créé par la loi n° 99-532 du 25 juin 1999 relative à l'épargne et à la sécurité financière (article 65), après la défaillance du Crédit martiniquais. Devenu **Fonds de garantie des dépôts et de résolution** (FGDR), il rembourse les dépôts jusqu'à **100 000 € par client et par établissement**, sous **7 jours ouvrables** depuis la directive européenne 2014/49/UE du 16 avril 2014, transposée fin 2015 ([FGDR, consulté le 21/10/2026](https://www.garantiedesdepots.fr/fr/connaitre-mes-garanties/je-detiens-des-comptes-et-des-livrets-bancaires-quelles-sont-mes-garanties)). Depuis la loi n° 2018-700 du 3 août 2018, les sommes que les clients confient à un émetteur de monnaie électronique sont aussi protégées jusqu'à 100 000 €, quand elles sont placées sur un compte à part dans une banque ([*ibid.*](https://www.garantiedesdepots.fr/fr/connaitre-mes-garanties/je-detiens-des-comptes-et-des-livrets-bancaires-quelles-sont-mes-garanties)).
@@ -337,7 +343,7 @@ En France, le Fonds de garantie des dépôts a été créé par la loi n° 99-53
 - La création monétaire a des limites : la rentabilité des prêts, la réglementation, le comportement des emprunteurs et, surtout, les taux de la banque centrale.
 - Une banque transforme des dépôts courts en prêts longs : solvable, elle peut quand même manquer de liquidité.
 - Une panique bancaire est auto-réalisatrice : si chacun croit que les autres vont retirer, tous retirent ; chez SVB, en mars 2023, elle a achevé une banque déjà fragilisée.
-- La garantie des dépôts empêche la panique, mais peut inciter les banques au risque : jusqu'où garantir relève d'un jugement normatif.
+- La garantie des dépôts empêche la panique, mais peut inciter les banques au risque : jusqu'où garantir relève d'un jugement [normatif]{.normatif}.
 :::
 
 ## Pour aller plus loin

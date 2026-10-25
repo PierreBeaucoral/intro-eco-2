@@ -16,7 +16,7 @@ Porte sur : CM 1
 
 - **Calculer** une variation en pourcentage et une élasticité-prix de la demande à partir d'un tableau.
 - **Expliquer** une hausse de prix en disant quelle courbe se déplace, et pourquoi : déplacement de l'offre ou de la demande, ou mouvement le long d'une courbe ; montrer ce que provoque un prix plafonné au-dessous de l'équilibre.
-- **Argumenter** sur une mesure publique en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+- **Argumenter** sur une mesure publique en séparant ce que l'analyse établit ([positif]{.positif}) de ce qui relève d'un jugement ([normatif]{.normatif}).
 
 ## À préparer avant la séance
 

@@ -18,7 +18,7 @@ source(here::here("R/cm4.R"))
 - **Pénurie et rationnement** : quand le prix ne peut pas monter jusqu'à P\*, la quantité demandée dépasse la quantité offerte. Il faut alors répartir le bien autrement que par le prix : file d'attente, critère (dossier), quota, ou encore relations et hasard.
 - **Consentement à payer** : le prix maximal qu'un acheteur accepte de payer ; c'est la hauteur de la demande.
 - **Élasticité de l'offre** : une offre est peu élastique, ou rigide, quand la quantité offerte réagit peu au prix.
-- **Positif et normatif** : décrire ce qui est, ou juger ce qui devrait être.
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : décrire ce qui est, ou juger ce qui devrait être.
 :::
 
 ## La question
@@ -129,7 +129,7 @@ Le raisonnement tient en quatre temps (@fig-plafond).
 4. **La perte sèche.** Entre Qo et Q\*, des logements ne sont plus loués, alors que des ménages étaient prêts à payer plus que ce qu'ils coûtaient aux bailleurs (la demande est au-dessus de l'offre). Le triangle rouge est perdu pour tout le monde.
 
 ::: {.piege}
-**Confondre le transfert et la perte sèche.** Le rectangle bleu n'est pas une perte pour la société : il change de poche, des bailleurs vers les locataires logés. Seul le triangle rouge est une perte nette. Juger ce transfert, souhaitable ou non, est une question normative ; mesurer la perte sèche est une question positive.
+**Confondre le transfert et la perte sèche.** Le rectangle bleu n'est pas une perte pour la société : il change de poche, des bailleurs vers les locataires logés. Seul le triangle rouge est une perte nette. Juger ce transfert, souhaitable ou non, est une question [normative]{.normatif} ; mesurer la perte sèche est une question [positive]{.positif}.
 :::
 
 ### Le même plafond coûte peu à court terme, beaucoup à long terme
@@ -273,13 +273,13 @@ graphe_surcharge()
 
 ### Protéger les locataires d'aujourd'hui, ou ceux de demain ?
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - Un plafond **contraignant** crée une pénurie et une perte sèche, d'autant plus grandes que l'offre est élastique, donc que l'on regarde loin. Ce mécanisme est largement admis.
 - En France, l'encadrement a baissé les loyers de 2 à 5 % selon les villes et l'horizon (2 à 3 % hors Île-de-France, environ 5 % après deux ans ; 3 à 4 % en Seine-Saint-Denis ; environ 5 % à Paris). Il transfère environ 700 millions d'euros par an vers les locataires, dont un tiers payé par l'État, avec un ciblage qui dépend de la ville : mauvais à Paris, bon en Seine-Saint-Denis ([Chapelle et Fack, mai 2026](https://www.clcv.org/storage/app/media/RAPPORT%20FACK%20CHAPELLE.pdf)).
 - Son effet sur l'offre de logements n'est **ni démontré ni écarté** : les données manquent, et l'horizon est court. Là où les plafonds sont plus durs ou plus anciens, les annonces (Berlin) ou l'offre (San Francisco) ont reculé.
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur).
 
 - **Efficacité ou équité** : faut-il accepter une perte sèche pour un transfert vers les locataires ?
 - **Qui protéger** : les locataires en place, ou les ménages qui chercheront un logement demain ?

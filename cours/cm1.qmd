@@ -17,7 +17,7 @@ source(here::here("R/cm1.R"))
 - **Toutes choses égales par ailleurs** : on fait varier une seule cause, les autres restant fixes. Comparer l'équilibre avant et après ce changement, c'est la **statique comparative**.
 - **Raisonnement à la marge** : on fait une unité de plus tant que ce qu'elle rapporte dépasse ce qu'elle coûte.
 - **Court terme et long terme** : selon Marshall, à court terme, le prix dépend surtout de la demande ; à long terme, surtout du coût de production.
-- **Positif et normatif** : l'analyse positive décrit ce qui est (« bloquer le prix crée une pénurie ») ; l'analyse normative dit ce qui devrait être (« il faut bloquer le prix »).
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : l'analyse positive décrit ce qui est (« bloquer le prix crée une pénurie ») ; l'analyse normative dit ce qui devrait être (« il faut bloquer le prix »).
 :::
 
 ## La question
@@ -315,9 +315,9 @@ graphe_elasticite_usage()
 
 ### Faut-il bloquer les prix à la pompe ou aider les automobilistes ?
 
-On sépare l'analyse **positive** de l'analyse **normative**.
+On sépare l'analyse [**positive**]{.positif} de l'analyse [**normative**]{.normatif}.
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - **Bloquer le prix** au-dessous du nouvel équilibre P\*′ recrée la pénurie de la @fig-choc-offre. Il faut alors rationner : files d'attente, quotas par client, stations à sec. Le plafond de TotalEnergies le montre en 2026 dans ses propres stations (@sec-plafond-total) ; les CM 3 et 4 chiffreront ce mécanisme.
 - **Une remise générale à la pompe** baisse le prix payé par tous, coûte de l'argent public, affaiblit l'incitation à économiser et profite davantage, en euros, aux gros consommateurs. En 2022, la remise a été de 0,18 €/L TTC au 1^er^ avril, puis de 0,30 €/L en septembre, ramenée à 0,10 €/L à la mi-novembre, avant sa suppression au 1^er^ janvier 2023 ; elle a évité de 51 à 81 € de dépense par ménage automobiliste ([Insee Analyses n° 86, 06/07/2023](https://www.insee.fr/fr/statistiques/7645853)).
@@ -325,7 +325,7 @@ On sépare l'analyse **positive** de l'analyse **normative**.
 - **Libérer des stocks stratégiques** agit sur l'offre : O′ se déplace vers la droite et le prix baisse, le temps que durent les stocks. Après la libération de stocks de diesel, TotalEnergies annonce un avantage d'environ 10 centimes par litre de gazole du 1^er^ novembre 2026 au 31 janvier 2027 ([communiqué, 12/10/2026](https://totalenergies.com/newsroom/diesel-en-france-totalenergies-sengage-a-restituer-aux-francais-lavantage-lie-a-la-liberation-de-stocks-strategiques-de-diesel/?lang=fra)).
 - **Taxer les profits exceptionnels** des vendeurs ne change pas le prix à court terme si l'offre n'en dépend pas, et finance les aides. L'Union européenne l'a fait en 2022 avec une « contribution de solidarité temporaire » sur le pétrole brut, le gaz, le charbon et le raffinage ([règlement (UE) 2022/1854 du Conseil](http://data.europa.eu/eli/reg/2022/1854/oj), 6 octobre 2022).
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur). Le choix dépend de l'objectif.
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur). Le choix dépend de l'objectif.
 
 - L'**efficacité** : le prix doit-il signaler la rareté ?
 - L'**équité** : faut-il d'abord protéger les ménages captifs de la voiture ?
@@ -347,7 +347,7 @@ En France, les prix sont en principe « librement déterminés par le jeu de la
 - Le blocage d'Ormuz est un choc d'offre négatif (O → O′) : le prix monte et la quantité échangée baisse.
 - Une variation du prix du bien fait glisser *le long* d'une courbe ; une autre cause (guerre, coûts, anticipations) *déplace* la courbe.
 - À court terme, la demande de carburant est peu élastique (e entre −0,40 et −0,21, Insee) : le choc passe surtout dans le prix et pèse sur les ménages captifs de la voiture.
-- Bloquer les prix crée une pénurie ; aider les ménages coûte de l'argent public : choisir entre les deux relève d'un jugement normatif.
+- Bloquer les prix crée une pénurie ; aider les ménages coûte de l'argent public : choisir entre les deux relève d'un jugement [normatif]{.normatif}.
 :::
 
 ## Pour aller plus loin

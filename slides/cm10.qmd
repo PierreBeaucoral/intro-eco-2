@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm10.R"))   # même fichier que la page de cours
 ```
 
-## Fait de départ : France Stratégie relève la valeur du carbone (2025)
+## France Stratégie relève la valeur du carbone (2025)
 
 - En mars 2025, une commission d'experts réunie par France Stratégie fixe la « valeur de l'action pour le climat » à **256 € par tonne d'équivalent CO₂** évitée en 2025 (en euros de 2023), contre 187 € auparavant, et à **300 €** en 2030.
 
@@ -69,7 +69,7 @@ source(here::here("R/cm10.R"))   # même fichier que la page de cours
 - **Externalité** : une activité impose aux autres un dommage qu'elle ne paie pas : Cms = Cm + Dm, où Dm est le dommage marginal. Sans correction, le marché va trop loin.
 - **Taux réel** : r ≈ i − π, le taux nominal corrigé de l'inflation.
 - **Croissance** g : variation, en % par an, du PIB ou du revenu par habitant.
-- **Positif** : ce qui est, vérifiable ; **normatif** : ce qui devrait être, selon un jugement de valeur.
+- [**Positif**]{.positif} : ce qui est, vérifiable ; [**normatif**]{.normatif} : ce qui devrait être, selon un jugement de valeur.
 :::
 
 ::: {.notes}
@@ -852,13 +852,13 @@ graphe_financement_climat(base_size = 24)
 
 ## Controverse : un désaccord qui n'est pas seulement technique
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Le résultat d'une évaluation climatique dépend d'abord du taux, puis de la fonction de dommages.
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Faut-il une impatience pure ? Ramsey et Stern disent non ; d'autres invoquent les choix réels des épargnants.
 - Quel poids donner à l'égalité, entre générations et entre pays ?
@@ -868,7 +868,7 @@ graphe_financement_climat(base_size = 24)
 2 h 31 – 2 h 34. Débat en amphi, 2 minutes, après le clic : et vous, quel taux ? Transition : le détail de l'analyse positive.
 :::
 
-## Analyse positive : « presque toute la différence » vient de l'actualisation
+## [Analyse positive]{.positif} : « presque toute la différence » vient de l'actualisation
 
 ::: {.incremental}
 - Pour Nordhaus, « presque toute la différence » entre le rapport Stern et les autres études vient de l'actualisation.
@@ -882,7 +882,7 @@ graphe_financement_climat(base_size = 24)
 2 h 34 – 2 h 36. Les courbes de valeur actuelle vues plus tôt montrent le mécanisme : plus le taux est faible, plus les dommages lointains pèsent. Question : en passant de 5 % à 2,5 %, par combien le coût social du carbone est-il multiplié ? (Par près de 5.) Transition : le taux n'est pas le seul paramètre.
 :::
 
-## Analyse positive : la fonction de dommages déplace aussi Cms
+## [Analyse positive]{.positif} : la fonction de dommages déplace aussi Cms
 
 :::: {.columns}
 ::: {.column width="60%"}
@@ -959,14 +959,14 @@ graphe_cms_taux(base_size = 24)
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. L'actualisation donne un prix au futur ; le taux δ décide du résultat.
 - B. Le stock émis et le revenu situent la responsabilité et la capacité de chaque pays.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Le poids des générations futures : taux « descriptif » ou « prescriptif ».
 - B. Le poids des pays les plus pauvres : le même argument joue entre pays.

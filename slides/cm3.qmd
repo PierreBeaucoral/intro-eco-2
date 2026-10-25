@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm3.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : la demande mondiale d'analogues du GLP-1 s'envole
+## La demande mondiale d'analogues du GLP-1 s'envole
 
 - Cause officielle : « une augmentation importante de la demande mondiale », sur fond d'usage pour maigrir, que les industriels ne peuvent suivre « dans un temps restreint » ([ministère de la Santé, JO du 21/05/2024](https://www.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE15498.pdf)).
 
@@ -898,7 +898,7 @@ graphe_rigidite(base_size = 24, etape = 2)
 
 ## Controverse (1/2) : payer les médicaments plus cher contre les pénuries
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 ::: {.incremental}
 - **À court terme**, avec une offre rigide, un prix plus élevé fait peu produire : il rationne surtout par la capacité à payer.
@@ -912,11 +912,11 @@ graphe_rigidite(base_size = 24, etape = 2)
 
 ## Controverse (2/2) : qui servir, combien payer, quelle liberté de prescrire
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables) : le mécanisme de la pénurie à prix fixé est admis par tous.
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables) : le mécanisme de la pénurie à prix fixé est admis par tous.
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 ::: {.incremental}
 - **Qui servir d'abord ?** Les plus malades, les premiers arrivés, ou ceux qui paient le plus ?
@@ -975,14 +975,14 @@ Le droit agit ici sur la demande remboursée, non sur le prix.
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. Choc de demande sous prix fixé : la pénurie demeure, il faut rationner hors prix.
 - B. Offre rigide : un prix libre rationne surtout par la capacité à payer.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Qui servir d'abord, combien payer, quelle liberté de prescrire.
 - B. Marché ou économie de la santé : l'offre de demain ou l'accès aux soins.

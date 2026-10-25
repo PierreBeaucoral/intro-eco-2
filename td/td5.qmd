@@ -16,7 +16,7 @@ Porte sur : CM 5
 
 - **Calculer** le coût marginal social, la quantité de marché et la quantité optimale, la perte sèche, puis ce que chaque instrument (taxe, norme, subvention) fait payer, et à qui.
 - **Mesurer** l'effet propre d'une politique par la méthode des doubles différences, et l'exprimer en points de pourcentage.
-- **Argumenter** sur la question « qui doit payer la transition automobile ? » en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+- **Argumenter** sur la question « qui doit payer la transition automobile ? » en séparant ce que l'analyse établit ([positif]{.positif}) de ce qui relève d'un jugement ([normatif]{.normatif}).
 
 ## À préparer avant la séance
 

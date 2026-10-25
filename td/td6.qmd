@@ -17,7 +17,7 @@ Porte sur : CM 6 et 7
 - **Construire** le bilan d'une banque avant et après un crédit, et montrer qu'un prêt crée un dépôt, donc de la monnaie.
 - **Expliquer** une panique bancaire avec le jeu de la panique, en distinguant liquidité et solvabilité.
 - **Calculer** un taux d'intérêt réel (r ≈ i − π) et le taux conseillé par la règle de Taylor, puis expliquer pourquoi une hausse des taux freine la demande et non l'offre d'énergie.
-- **Argumenter** sur la garantie des dépôts et sur la politique de la BCE, en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+- **Argumenter** sur la garantie des dépôts et sur la politique de la BCE, en séparant ce que l'analyse établit ([positif]{.positif}) de ce qui relève d'un jugement ([normatif]{.normatif}).
 
 ## À préparer avant la séance
 

@@ -325,16 +325,16 @@ On applique les trois outils, dans l'ordre :
 
 ### Faut-il payer les médicaments plus cher pour éviter les pénuries ?
 
-On sépare l'analyse **positive** de l'analyse **normative**.
+On sépare l'analyse [**positive**]{.positif} de l'analyse [**normative**]{.normatif}.
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - **À court terme**, avec une offre rigide, un prix plus élevé fait peu produire : il rationne surtout par la capacité à payer (@exm-ozempic).
 - **À long terme**, le prix compte pour l'offre. Pour M. Coris et B. Bégaud, sur les médicaments anciens, dont le brevet a expiré, « la politique du prix toujours plus bas prévaut ». Elle pousse à produire dans des pays à bas coûts auprès de fournisseurs moins nombreux, ce qui « accentue la dépendance et le risque de pénuries » ([*The Conversation*, 02/06/2024](https://theconversation.com/medicaments-comprendre-pourquoi-penuries-et-prix-sont-lies-231198)). L'article ne porte pas sur Ozempic, médicament récent.
 - **Le prix ne suffit pas.** Les industriels imputent les pénuries à la faiblesse des prix français sur ces médicaments anciens ; la rapporteure du Sénat juge l'analyse trop courte (Suisse et Allemagne, plus haut). La commission, présidée par une sénatrice centriste avec une rapporteure communiste, appelle à un « pilotage public », tout en envisageant des hausses de prix « sous certaines conditions », ciblées sur les médicaments matures ([Public Sénat, 06/07/2023](https://www.publicsenat.fr/actualites/sante/penuries-de-medicaments-la-commission-denquete-du-senat-appelle-a-un-pilotage-public)).
 - **La responsabilité du fabricant est discutée.** Pour [Test-Achats](https://www.test-achats.be/sante/maladies-et-medicaments/medicaments/presse/penurie-ozempic), association de consommateurs belge, la pénurie est « principalement la faute » de Novo Nordisk, qui n'aurait pas anticipé la hausse de la demande liée à sa promotion de Wegovy (14/11/2023).
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur).
 
 - **Qui servir d'abord ?** Les plus malades, les premiers arrivés, ou ceux qui paient le plus ?
 - **Combien payer ?** Un prix plus élevé coûte à l'Assurance maladie et aux patients, pour un effet incertain à court terme.

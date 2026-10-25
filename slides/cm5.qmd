@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm5.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : l'Assemblée examine l'abrogation des ZFE (08/10/2026)
+## L'Assemblée examine l'abrogation des ZFE (08/10/2026)
 
 - Le 8 octobre 2026, l'Assemblée nationale examine une proposition de loi visant à abroger les zones à faibles émissions (ZFE) ([n° 2970](https://www.assemblee-nationale.fr/dyn/17/dossiers/DLR5L17N54557)).
 
@@ -86,7 +86,7 @@ source(here::here("R/cm5.R"))   # même fichier que la page de cours
 ::: {.rappel}
 - **Surplus et perte sèche** : le surplus est l'écart entre ce qu'une unité vaut et ce qu'elle coûte ; la perte sèche est le surplus perdu quand on s'écarte de la meilleure quantité (CM 4).
 - **Incidence** : celui qui verse un impôt n'est pas toujours celui qui le supporte (CM 2).
-- **Positif et normatif** : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
 :::
 
 ::: {.notes}
@@ -884,7 +884,7 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 
 ## Controverse : garder les ZFE, et qui doit en payer le coût
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Externalité : sans intervention, on roule plus que l'optimum.
 - Effet propre modeste : 4,6 points sur 38,9 % pour les oxydes d'azote ([Insee, 27/08/2026](https://www.insee.fr/fr/statistiques/9031856)).
@@ -892,7 +892,7 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Qui détient le droit, le riverain ou l'automobiliste ? Efficacité ou équité ? Quel poids pour la santé face à l'accès à l'emploi ?
 
@@ -943,14 +943,14 @@ Le coût d'adaptation tombe à l'étape 2, le bénéfice sanitaire à l'étape 4
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. Externalité : Cms > Cm, on roule trop ; taxe, norme et subvention visent Q° avec des payeurs différents.
 - B. L'effet propre des ZFE est modeste, et leur coût pèse sur les ménages modestes.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Qui détient le droit : le riverain ou l'automobiliste (Coase).
 - B. Efficacité ou équité : santé des riverains contre accès à l'emploi.

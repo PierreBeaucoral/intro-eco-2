@@ -16,7 +16,7 @@ source(here::here("R/cm6.R"))   # même fichier que la page de cours
 source_m3 <- labs(caption = "Source : BCE, Data Portal, séries BSI (consulté le 21/10/2026) ;\naoût 2026 provisoire.")
 ```
 
-## Le fait de départ : la chute de Silicon Valley Bank (mars 2023)
+## La chute de Silicon Valley Bank (mars 2023)
 
 - **8 mars 2023** : Silicon Valley Bank (SVB), la banque des start-up, annonce une perte de 1,8 Md$ sur la vente de 21 Md$ de titres et cherche du capital.
 
@@ -73,7 +73,7 @@ source_m3 <- labs(caption = "Source : BCE, Data Portal, séries BSI (consulté l
 - **Monnaie** : ce que tout le monde accepte en paiement ; elle sert à échanger, à compter les valeurs (unité de compte) et à garder du pouvoir d'achat pour plus tard (réserve de valeur).
 - **Bilan** : à une date donnée, ce qu'un agent possède (**actif**) et la façon dont il l'a financé (**passif** : dettes et fonds propres). Total de l'actif = total du passif.
 - **Taux d'intérêt** : le prix d'un emprunt, en % de la somme empruntée, par an.
-- **Positif** : ce qui est ou sera ; **normatif** : ce qui devrait être, à partir de valeurs.
+- [**Positif**]{.positif} : ce qui est ou sera ; [**normatif**]{.normatif} : ce qui devrait être, à partir de valeurs.
 :::
 
 ::: {.notes}
@@ -784,24 +784,7 @@ graphe_depots_us(base_size = 24) + labs(caption = NULL)
 [Source : [Réserve fédérale, H.8](https://www.federalreserve.gov/releases/h8/current/), via [FRED](https://fred.stlouisfed.org/series/DPSSCBW027SBOG), données corrigées des variations saisonnières (consulté le 22/10/2026).]{.wp-source}
 
 ::: {.notes}
-2 h 04 – 2 h 07. Indice 100 le mercredi 8 mars, veille des retraits chez SVB. Creux des petites banques le 29 mars (96,3) ; fin juin, encore 2,5 % sous le niveau du 8 mars. Les grandes banques perdaient déjà des dépôts avant (101,9 début janvier). Séries révisées : le communiqué du 24/03/2023 donnait −2,2 % et +0,6 % pour la même semaine. Les banques-relais de SVB et de Signature sont comptées parmi les autres banques (H.8, 31/03/2023) : une partie de la baisse vient des deux banques en faillite elles-mêmes. Lien avec Pichet (controverse) : les grandes banques ont peu souffert. Question : « Pourquoi un déposant inquiet va-t-il vers une très grande banque ? » Transition : un autre argent sans banque, le mobile money.
-:::
-
-## Point d'attention : le mobile money n'est pas une création monétaire
-
-- En 2025 : **2,3 milliards** de comptes de mobile money dans le monde ([GSMA, 2026](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf)).
-
-::: {.piege}
-« Le mobile money crée de la monnaie. » Ce raisonnement est faux : l'opérateur reçoit des billets ou un virement et inscrit la même somme sur le compte du client.
-:::
-
-. . .
-
-- C'est un **moyen de paiement** : la monnaie change de forme, pas de quantité.
-- Création monétaire seulement si une banque, commerciale ou centrale, accorde un **prêt** ou achète un titre.
-
-::: {.notes}
-2 h 07 – 2 h 09. Question avant le clic : « Recharger son compte de mobile money avec des billets change-t-il la quantité de monnaie ? » (Non.) Plus de 2 100 milliards de dollars ont circulé sur ces comptes en 2025. En général, la réglementation oblige l'opérateur à placer un montant égal sur des comptes bancaires à part, pour que les clients récupèrent leur argent même s'il fait faillite (GSMA, 2026, glossaire). Le crédit arrive pourtant par le téléphone : à Abidjan, Tik Tak (Orange) ou MoMo Kash (MTN) accordent de petits prêts de un à trois mois, sur décision d'un algorithme qui lit l'historique du compte (Ducourant et al., The Conversation, 01/09/2026). Transition : qui gagne, qui perd ?
+2 h 04 – 2 h 07. Indice 100 le mercredi 8 mars, veille des retraits chez SVB. Creux des petites banques le 29 mars (96,3) ; fin juin, encore 2,5 % sous le niveau du 8 mars. Les grandes banques perdaient déjà des dépôts avant (101,9 début janvier). Séries révisées : le communiqué du 24/03/2023 donnait −2,2 % et +0,6 % pour la même semaine. Les banques-relais de SVB et de Signature sont comptées parmi les autres banques (H.8, 31/03/2023) : une partie de la baisse vient des deux banques en faillite elles-mêmes. Lien avec Pichet (controverse) : les grandes banques ont peu souffert. Question : « Pourquoi un déposant inquiet va-t-il vers une très grande banque ? » Transition : qui gagne, qui perd quand la garantie s'applique ?
 :::
 
 ## Effets de répartition : petits déposants couverts, gros déposants exposés
@@ -810,79 +793,10 @@ graphe_depots_us(base_size = 24) + labs(caption = NULL)
 - **Par revenu** : plafond de 100 000 € par client et par banque ; un ménage qui a moins est couvert en entier ([FGDR](https://www.garantiedesdepots.fr/fr/connaitre-mes-garanties/je-detiens-des-comptes-et-des-livrets-bancaires-quelles-sont-mes-garanties)).
 - Les gros déposants, entreprises ou ménages aisés, ne le sont que jusqu'au plafond : ils ont intérêt à fuir les premiers.
 - L'extension de mars 2023 chez SVB a donc surtout protégé de gros déposants.
-- Côté emprunteurs, le crédit digital coûte cher : au Kenya, en 2021, de 49 % à 442 % par an ([Ducourant et al., 01/09/2026](https://theconversation.com/et-clic-largent-est-la-les-usages-du-credit-digital-en-cote-divoire-290006)).
 :::
 
 ::: {.notes}
-2 h 09 – 2 h 12. Les petits déposants étaient déjà protégés. Le crédit digital dépanne des ménages aux revenus irréguliers, mais à des taux annuels très élevés selon l'offre. Question : « Qui, dans l'amphi, a plus de 100 000 € sur un compte ? » Transition : territoire, génération, genre.
-:::
-
-## Effets de répartition : territoire, génération et genre
-
-::: {.incremental}
-- **Territoire** : l'essentiel des nouveaux comptes vient d'Afrique subsaharienne ([GSMA, 2026](https://www.gsma.com/sotir/wp-content/plugins/plugin_gsma_sotir/reports/The-State-of-the-Industry-Report-2026_English.pdf)). Au Sénégal, une taxe de 0,5 % adoptée en septembre 2025 pèse proportionnellement plus sur les ménages pauvres ([Diouf, 2025](https://theconversation.com/mobilisation-de-recettes-vs-inclusion-financiere-le-dilemme-de-la-taxation-du-mobile-money-au-senegal-266811)).
-- **Génération** : à Abidjan, de jeunes adultes sans accès au crédit bancaire empruntent sur leur historique de mobile money ; l'enquête ne compare pas les âges.
-- **Genre** : dans les pays à revenu faible ou intermédiaire, en 2024, les femmes avaient **34 %** de chances en moins que les hommes d'avoir un compte de mobile money (30 % en 2021 ; [Banque mondiale, Global Findex 2025](https://www.worldbank.org/en/publication/globalfindex)).
-:::
-
-::: {.notes}
-2 h 12 – 2 h 15. Sénégal : taxe sur les paiements, transferts et retraits en mobile money ; elle peut ramener les ménages pauvres vers l'argent liquide (A. Diouf, The Conversation, 10/10/2025). En France, le Fonds de garantie des dépôts est né d'une crise locale, le Crédit martiniquais (1999). Génération : enquête qualitative de mai 2025, dont des enquêtés de 21 ans ; bien rembourser fait monter le plafond, un retard le fait baisser (Ducourant et al., 01/09/2026). Genre : pays à revenu faible ou intermédiaire, Global Findex 2025 ; l'écart se creuse. Transition : les chiffres de la Banque mondiale, région par région.
-:::
-
-## Mobile money, 2014-2024 : 40 % des adultes en Afrique subsaharienne
-
-:::: {.columns}
-::: {.column width="60%"}
-```{r}
-#| fig-width: 8
-#| fig-height: 5.4
-#| fig-alt: "Deux lignes avec points, 2014, 2017, 2021 et 2024. Afrique subsaharienne, en orange : 11,4 %, 20,5 %, 27,3 % et 40,0 % des adultes. Monde, en gris : 2,1 %, 4,5 %, 10,5 % et 16,0 %."
-graphe_findex_regions(base_size = 24) + labs(caption = NULL)
-```
-:::
-
-::: {.column width="40%"}
-- Adultes ayant un compte de mobile money, Afrique subsaharienne : de 11 % (2014) à **40 %** (2024).
-
-::: {.fragment}
-- Monde : 16 % en 2024, soit 2,5 fois moins.
-- Une part d'adultes, pas un nombre de comptes.
-:::
-:::
-::::
-
-[Source : [Banque mondiale, Global Findex 2025](https://www.worldbank.org/en/publication/globalfindex), 15 ans et plus (consulté le 22/10/2026).]{.wp-source}
-
-::: {.notes}
-2 h 15 – 2 h 18. Afrique subsaharienne hors pays à revenu élevé. La figure ne dit pas à elle seule d'où viennent les nouveaux comptes (chiffre GSMA). L'indicateur compte aussi des portefeuilles numériques hors d'Afrique (Corée 60 %, Brésil 58 % en 2024) : prudence sur la ligne « monde ». Question : « Pourquoi le mobile money s'est-il diffusé là où les agences bancaires sont rares ? » Transition : et selon le genre ?
-:::
-
-## Mobile money et genre : l'écart passe de 4,5 à 7,5 points
-
-:::: {.columns}
-::: {.column width="60%"}
-```{r}
-#| fig-width: 8
-#| fig-height: 5.4
-#| fig-alt: "Deux haltères, pays à revenu faible ou intermédiaire. 2021 : femmes 10,5 %, hommes 15,0 %, écart de 4,5 points. 2024 : femmes 14,6 %, hommes 22,1 %, écart de 7,5 points."
-graphe_findex_genre(base_size = 24) + labs(caption = NULL)
-```
-:::
-
-::: {.column width="40%"}
-- 2024 : **14,6 %** des femmes, **22,1 %** des hommes (10,5 et 15,0 % en 2021).
-
-::: {.fragment}
-- Les deux progressent, les hommes plus vite.
-- Écart relatif : 30 % en 2021, 34 % en 2024.
-:::
-:::
-::::
-
-[Source : [Banque mondiale, Global Findex 2025](https://www.worldbank.org/en/publication/globalfindex), pays à revenu faible ou intermédiaire (consulté le 22/10/2026).]{.wp-source}
-
-::: {.notes}
-2 h 18 – 2 h 20. Écart relatif = 1 − part des femmes ÷ part des hommes : 1 − 14,6 ÷ 22,1 ≈ 33,9 % en 2024. Si un étudiant cite les 36 % de la GSMA (2026) : autre champ ou autre pondération, non vérifiés ; le Findex donne 30 % en 2021 et 34 % en 2024. Question : « Pourquoi l'écart en points peut-il se creuser alors que les femmes progressent aussi ? » Transition : qui profite de la création monétaire ?
+2 h 07 – 2 h 10. Les petits déposants étaient déjà protégés. Question : « Qui, dans l'amphi, a plus de 100 000 € sur un compte ? » Transition : qui profite de la création monétaire ?
 :::
 
 ## Création monétaire : un gain pour les banques et pour leurs emprunteurs
@@ -899,25 +813,25 @@ graphe_findex_genre(base_size = 24) + labs(caption = NULL)
 - Les emprunteurs peuvent acheter tout de suite un logement, une machine ou un scooter, sans attendre d'avoir épargné.
 
 ::: {.notes}
-2 h 20 – 2 h 22. Revenir sur Léa : le scooter tout de suite, plutôt qu'après un été d'épargne. Question : « Pourquoi le gain de la banque n'est-il pas égal aux intérêts ? » Transition : ce privilège est-il juste ?
+2 h 10 – 2 h 12. Revenir sur Léa : le scooter tout de suite, plutôt qu'après un été d'épargne. Question : « Pourquoi le gain de la banque n'est-il pas égal aux intérêts ? » Transition : ce privilège est-il juste ?
 :::
 
 ## Controverse : création monétaire bancaire et privilège des banques
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Les banques créent l'essentiel de la monnaie en prêtant ; un remboursement la détruit.
 - Chaque dépôt nouveau a pour contrepartie une dette de l'emprunteur. Limites : rentabilité, réglementation, politique monétaire.
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Est-il juste que des banques privées touchent des intérêts sur une monnaie qu'elles créent ?
 - Qui doit choisir qui reçoit du crédit : les banques, la banque centrale, l'État ?
 
 ::: {.notes}
-2 h 22 – 2 h 26. Sources : Banque d'Angleterre, 2014 ; La finance pour tous, 2026. Réserver la création monétaire à la puissance publique, ou laisser la concurrence et la réglementation encadrer ce privilège ? L'analyse ne tranche pas : la réponse dépend de valeurs. Faire voter l'amphi après le clic. Transition : deux écoles s'opposent sur la description elle-même.
+2 h 12 – 2 h 18. Sources : Banque d'Angleterre, 2014 ; La finance pour tous, 2026. Réserver la création monétaire à la puissance publique, ou laisser la concurrence et la réglementation encadrer ce privilège ? L'analyse ne tranche pas : la réponse dépend de valeurs. Faire voter l'amphi après le clic. Transition : deux écoles s'opposent sur la description elle-même.
 :::
 
 ## Deux écoles : monnaie exogène ou monnaie endogène
@@ -929,24 +843,24 @@ graphe_findex_genre(base_size = 24) + labs(caption = NULL)
 :::
 
 ::: {.notes}
-2 h 26 – 2 h 30. Moore et Howells sont cités par la Banque d'Angleterre (2014). Selon elle, le multiplicateur peut servir d'introduction, mais il inverse l'ordre des causes. Question : « Laquelle des deux visions l'exemple de Léa illustre-t-il ? » (Endogène.) Transition : seconde controverse, la garantie.
+2 h 18 – 2 h 24. Moore et Howells sont cités par la Banque d'Angleterre (2014). Selon elle, le multiplicateur peut servir d'introduction, mais il inverse l'ordre des causes. Question : « Laquelle des deux visions l'exemple de Léa illustre-t-il ? » (Endogène.) Transition : seconde controverse, la garantie.
 :::
 
 ## Controverse : garantir tous les dépôts, entre stabilité et aléa moral
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Une garantie crédible empêche la panique, mais peut inciter la banque au risque : c'est l'**aléa moral**, celui qui est assuré se comporte de façon plus risquée.
 - Garantie illimitée : rassure à court terme, risque de fragiliser le système à long terme, selon [Perrin, Burietz et Bertrand (2023)](https://theconversation.com/garantir-les-depots-bancaires-de-facon-illimitee-une-nouvelle-arme-contre-les-crises-202278).
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Relever le plafond, au risque de couvrir des déposants riches, ou le garder bas, au risque de nouvelles paniques ?
 
 ::: {.notes}
-2 h 30 – 2 h 35. Aléa moral : l'assureur ne peut pas tout observer ; les déposants garantis n'ont plus de raison de surveiller leur banque. Perrin, Burietz et Bertrand : The Conversation, 23/03/2023. Éric Pichet (The Conversation, 13/03/2023) insiste sur la rapidité d'intervention de l'assureur public américain et note que les grandes banques, aux financements plus diversifiés, ont peu souffert. La réponse normative dépend du poids donné à la stabilité immédiate et aux comportements à long terme. Autre voie : mieux surveiller les banques, conclusion du rapport de la Réserve fédérale (28/04/2023), qui reconnaît que ses superviseurs ont sous-estimé les fragilités de SVB. Débat de 3 minutes après le clic. Transition : en France, la règle.
+2 h 24 – 2 h 32. Aléa moral : l'assureur ne peut pas tout observer ; les déposants garantis n'ont plus de raison de surveiller leur banque. Perrin, Burietz et Bertrand : The Conversation, 23/03/2023. Éric Pichet (The Conversation, 13/03/2023) insiste sur la rapidité d'intervention de l'assureur public américain et note que les grandes banques, aux financements plus diversifiés, ont peu souffert. La réponse normative dépend du poids donné à la stabilité immédiate et aux comportements à long terme. Autre voie : mieux surveiller les banques, conclusion du rapport de la Réserve fédérale (28/04/2023), qui reconnaît que ses superviseurs ont sous-estimé les fragilités de SVB. Débat de 5 minutes après le clic. Transition : en France, la règle.
 :::
 
 ## Et le droit : le Fonds de garantie des dépôts et de résolution
@@ -960,7 +874,7 @@ Le Fonds de garantie des dépôts est créé par la loi n° 99-532 du 25 juin 19
 - Depuis la loi n° 2018-700 du 3 août 2018, les sommes confiées à un émetteur de monnaie électronique sont aussi protégées jusqu'à 100 000 €, si elles sont placées sur un compte à part dans une banque.
 
 ::: {.notes}
-2 h 35 – 2 h 38. Loi relative à l'épargne et à la sécurité financière. Directive du 16 avril 2014, transposée fin 2015 (FGDR, consulté le 21/10/2026). Question pour les juristes : « Pourquoi une directive européenne fixe-t-elle le délai de remboursement ? » Transition : ce qu'il faut retenir.
+2 h 32 – 2 h 35. Loi relative à l'épargne et à la sécurité financière. Directive du 16 avril 2014, transposée fin 2015 (FGDR, consulté le 21/10/2026). Question pour les juristes : « Pourquoi une directive européenne fixe-t-elle le délai de remboursement ? » Transition : ce qu'il faut retenir.
 :::
 
 ## À retenir
@@ -971,11 +885,11 @@ Le Fonds de garantie des dépôts est créé par la loi n° 99-532 du 25 juin 19
 - La création monétaire a des limites, surtout les taux de la banque centrale.
 - Une banque solvable peut quand même manquer de liquidité.
 - Une panique bancaire est auto-réalisatrice ; chez SVB, elle a achevé une banque fragilisée.
-- La garantie des dépôts empêche la panique ; jusqu'où garantir relève d'un jugement normatif.
+- La garantie des dépôts empêche la panique ; jusqu'où garantir relève d'un jugement [normatif]{.normatif}.
 :::
 
 ::: {.notes}
-2 h 38 – 2 h 42. Reprendre les deux énigmes du début : qui crée la monnaie (les banques, en prêtant) ; pourquoi une banque tombe en deux jours (la panique, auto-réalisatrice). Question de sortie : « Quel est le chaînon qui rend une panique possible ? » (La transformation : dépôts courts, prêts longs.) Transition : le plan de dissertation.
+2 h 35 – 2 h 40. Reprendre les deux énigmes du début : qui crée la monnaie (les banques, en prêtant) ; pourquoi une banque tombe en deux jours (la panique, auto-réalisatrice). Question de sortie : « Quel est le chaînon qui rend une panique possible ? » (La transformation : dépôts courts, prêts longs.) Transition : le plan de dissertation.
 :::
 
 ## Plan de dissertation : l'apport des outils, puis leurs limites normatives
@@ -984,18 +898,18 @@ Le Fonds de garantie des dépôts est créé par la loi n° 99-532 du 25 juin 19
 
 . . .
 
-**I. Ce que disent les outils (positif)**
+[**I. Ce que disent les outils (positif)**]{.positif}
 
 - A. Le bilan : le crédit crée des dépôts exigibles tout de suite.
 - B. Le jeu : une garantie crédible écarte la panique, au prix d'un aléa moral.
 
 . . .
 
-**II. Ce qu'ils ne tranchent pas (normatif)**
+[**II. Ce qu'ils ne tranchent pas (normatif)**]{.normatif}
 
 - A. Où placer le plafond : stabilité immédiate ou long terme ?
 - B. Garantir davantage, ou mieux surveiller les banques ?
 
 ::: {.notes}
-2 h 42 – 2 h 45. Dernière diapo. La fiche Méthodo en ligne détaille la méthode de dissertation. Vidéos de la page (Banque de France, « Comment est créée la monnaie ? », 3 min 17) à regarder avant le TD.
+2 h 40 – 2 h 45. Dernière diapo. Avant le premier clic, laisser l'amphi proposer deux parties. La fiche Méthodo en ligne détaille la méthode de dissertation. Vidéos de la page (Banque de France, « Comment est créée la monnaie ? », 3 min 17) à regarder avant le TD.
 :::

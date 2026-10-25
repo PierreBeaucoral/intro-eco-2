@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm2.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : le prix du paquet, de 3,20 € à 13,50 €
+## Le prix du paquet, de 3,20 € à 13,50 €
 
 - Prix moyen d'un paquet : 3,20 € en 2000, 13 € en 2025 ; paquet type de 20 cigarettes : **13,50 €** en février 2026 ([Hill, 2026](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf) ; [Obradovic, *The Conversation*, 25/07/2026](https://theconversation.com/alcool-tabac-cannabis-les-jeunes-se-sont-ils-vraiment-detournes-des-drogues-286189)).
 - Au 1^er^ novembre 2026, nouveaux prix homologués : le Marlboro Red souple passe à 14,00 € ([*Bourse Inside*, 08/10/2026](https://bourseinside.fr/?p=13529)).
@@ -62,7 +62,7 @@ La question de la séance en contient trois.
 ::: {.rappel}
 - **Impôt indirect** : inclus dans le prix, versé à l'État par le vendeur. La **TVA** est un pourcentage du prix ; une **accise** frappe un produit précis (tabac, alcool, carburant).
 - **Externalité** : effet sur d'autres, sans compensation par le marché (le tabagisme passif). Une **taxe correctrice**, au sens de Pigou, fait payer ce coût à celui qui le cause.
-- **Positif et normatif** : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être.
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être.
 :::
 
 ::: {.notes}
@@ -917,14 +917,14 @@ graphe_fumeurs_sexe(base_size = 24)
 
 ## Controverse : continuer ou non à augmenter le prix du tabac
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Les ventes baissent, moins que le prix ne monte (e entre −0,5 et −0,3), davantage à long terme et chez les jeunes.
 - La taxe pèse surtout sur les **fumeurs** ; elle nourrit des **fuites** mal mesurées.
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Faut-il protéger le fumeur contre lui-même ? C'est la question du **paternalisme**.
 - Comment peser la santé de ceux qui arrêtent et le pouvoir d'achat de ceux qui continuent ?
@@ -944,7 +944,7 @@ graphe_fumeurs_sexe(base_size = 24)
 
 . . .
 
-Le débat porte sur la **taille des fuites** (positif) et le **droit de l'État à orienter des choix privés** (normatif).
+Le débat porte sur la **taille des fuites** ([positif]{.positif}) et le **droit de l'État à orienter des choix privés** ([normatif]{.normatif}).
 
 ::: {.notes}
 2 h 37 – 2 h 40. Le rapport de Hill est engagé dans la lutte antitabac. Les buralistes parlent d'une profession « fragilisée par l'ampleur croissante du marché parallèle » ; le gouvernement répond que la lutte contre la contrebande est « une priorité majeure de la douane » (*JO Sénat*, 26/02/2026). Transition : le droit.
@@ -972,7 +972,7 @@ La France a ratifié la **Convention-cadre de l'OMS** pour la lutte antitabac, d
 - La charge d'une taxe retombe sur le côté le moins élastique : surtout les fumeurs.
 - L'addiction n'annule pas l'effet du prix : plus élastique à long terme et chez les jeunes.
 - Ventes légales ≠ consommation : les fuites réduisent l'effet sanitaire et la recette.
-- Protéger le fumeur (internalité) ou les autres (externalité) : un jugement normatif.
+- Protéger le fumeur (internalité) ou les autres (externalité) : un jugement [normatif]{.normatif}.
 :::
 
 ::: {.notes}
@@ -985,14 +985,14 @@ La France a ratifié la **Convention-cadre de l'OMS** pour la lutte antitabac, d
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. Élasticité et addiction : les ventes baissent moins que le prix ne monte, davantage à long terme.
 - B. Incidence : la taxe pèse surtout sur les fumeurs ; les fuites réduisent l'effet.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Protéger les autres (externalité) ou le fumeur contre lui-même (internalité) : le paternalisme.
 - B. La santé contre le pouvoir d'achat : un impôt régressif.

@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm8.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : la Grèce révise ses comptes publics (2009-2010)
+## La Grèce révise ses comptes publics (2009-2010)
 
 - Octobre 2009 : le gouvernement grec révise fortement ses chiffres de déficit ; février 2010 : il reconnaît des comptes mal déclarés.
 
@@ -148,7 +148,7 @@ Trois outils simples : le **multiplicateur**, l'**effet boule de neige** de la d
 ::: {.rappel}
 - **Propension marginale à consommer** (c) : part d'un euro de revenu supplémentaire qui est consommée. Avec c = 0,8, un ménage qui gagne 100 € de plus en dépense 80.
 - **Taux d'intérêt réel** : r ≈ i − π, le taux nominal moins l'inflation.
-- **Analyse positive et analyse normative** : ce qui est (vérifiable) et ce qui devrait être (jugement de valeur).
+- [**Analyse positive**]{.positif} **et** [**analyse normative**]{.normatif} : ce qui est (vérifiable) et ce qui devrait être (jugement de valeur).
 :::
 
 ::: {.notes}
@@ -894,7 +894,7 @@ graphe_soldes_demographiques(base_size = 24)
 2 h 28 – 2 h 30. Détail des 289 Md€ (MES, consulté le 21/10/2026) : 52,9 Md€ de prêts des pays de la zone euro, 141,8 Md€ du Fonds européen de stabilité financière, 32,1 Md€ du FMI, 61,9 Md€ du MES. Reprise : Eurostat, calculs du cours ; la DG Trésor avance 3,9 % par an en retirant 2020, mais pas le rebond de 2021 (03/11/2025). Question : qui, des trois, a le plus perdu ? Laisser répondre, sans trancher. Transition : fallait-il un ajustement aussi rapide ?
 :::
 
-## Analyse positive : il n'existait pas de scénario « sans austérité » simple
+## [Analyse positive]{.positif} : il n'existait pas de scénario « sans austérité » simple
 
 ::: {.incremental}
 - En 2010, le solde primaire grec était de **−5,3 %** du PIB et l'État ne pouvait plus emprunter sur les marchés.
@@ -911,14 +911,14 @@ graphe_soldes_demographiques(base_size = 24)
 
 ## Controverse : le rythme de l'ajustement budgétaire grec
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Le multiplicateur a été sous-estimé au début de la crise ([Blanchard et Leigh, 2013](https://www.aeaweb.org/articles?id=10.1257/aer.103.3.117)).
 - Le ratio a monté tant que r dépassait g, puis baissé vite avec la croissance et des excédents primaires.
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Le **rythme** : récession courte et brutale, ou ajustement plus lent et plus coûteux en prêts ?
 - Le **partage du fardeau** et la **conditionnalité** : créanciers ou contribuables ? un prêteur peut-il imposer des réformes ?
@@ -973,7 +973,7 @@ Les deux premiers plans grecs ont précédé ce cadre ; le troisième (2015) en 
 - En 2010, les prévisions supposaient k ≈ 0,5 ; il était plutôt supérieur à 1.
 - Δd ≈ (r − g) × d − s : quand r dépasse g, la dette fait boule de neige.
 - À court terme, une coupe fait monter le ratio si k × d > 1.
-- « A marché » dépend de l'objectif, du rythme et de qui paie : un jugement normatif.
+- « A marché » dépend de l'objectif, du rythme et de qui paie : un jugement [normatif]{.normatif}.
 :::
 
 ::: {.notes}
@@ -986,14 +986,14 @@ Les deux premiers plans grecs ont précédé ce cadre ; le troisième (2015) en 
 
 . . .
 
-**I. Ce que disent les outils (positif)**
+[**I. Ce que disent les outils (positif)**]{.positif}
 
 - A. Multiplicateur : couper réduit le PIB ; si k × d > 1, le ratio monte à court terme.
 - B. Δd ≈ (r − g) × d − s : le ratio baisse quand la croissance dépasse le taux d'intérêt.
 
 . . .
 
-**II. Ce qu'ils ne tranchent pas (normatif)**
+[**II. Ce qu'ils ne tranchent pas (normatif)**]{.normatif}
 
 - A. Le rythme, le partage du fardeau, la conditionnalité.
 - B. « A marché » : selon l'objectif (dette, croissance, confiance des prêteurs).

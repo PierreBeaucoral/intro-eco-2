@@ -9,6 +9,8 @@
 #let wp-offre = rgb("#B45309")
 #let wp-rouge = rgb("#B42318")
 #let wp-teinte = rgb("#F1F5FB")
+#let wp-positif = rgb("#067647")   // analyse positive (theme-light.scss)
+#let wp-normatif = rgb("#6941C6")  // analyse normative
 #let wp-serif = ("STIX Two Text", "STIX Two Math")  // Math : flèches et ≈ absentes de Text
 #let wp-ui = ("IBM Plex Sans",)
 #let wp-mono = ("IBM Plex Mono",)

@@ -55,7 +55,7 @@ Par revenu, territoire, génération et, quand c'est pertinent, genre.
 
 ## La controverse
 
-Analyse positive (ce qui est : mécanismes et effets, vérifiables) ; analyse normative (ce qui devrait être : dépend de jugements de valeur). Les positions en présence, sourcées, sans parti pris.
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables) ; [**analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur). Les positions en présence, sourcées, sans parti pris.
 
 ::: {.droit}
 Une institution ou une règle de droit liée au sujet, en deux ou trois phrases.

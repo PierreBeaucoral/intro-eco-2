@@ -16,7 +16,7 @@ Porte sur : CM 8
 
 - **Calculer** l'effet d'une variation de la dépense publique sur le PIB avec le multiplicateur, et l'effet d'une coupe sur le ratio dette / PIB.
 - **Expliquer** pourquoi le ratio dette / PIB de la Grèce a monté de 2010 à 2013, avec la règle k × d ; comprendre, avec l'effet boule de neige, pourquoi il peut ensuite baisser.
-- **Argumenter** sur le bilan de l'austérité en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+- **Argumenter** sur le bilan de l'austérité en séparant ce que l'analyse établit ([positif]{.positif}) de ce qui relève d'un jugement ([normatif]{.normatif}).
 
 ## À préparer avant la séance
 

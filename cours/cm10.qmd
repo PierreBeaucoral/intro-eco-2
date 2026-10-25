@@ -17,7 +17,7 @@ source(here::here("R/cm10.R"))
 - **Externalité et coût marginal social** : quand une activité impose aux autres un dommage qu'elle ne paie pas, le coût pour la société dépasse le coût privé : Cms = Cm + Dm, où Dm est le dommage marginal. Sans correction, le marché va trop loin (CM 5).
 - **Taux d'intérêt nominal et réel** : le taux nominal i est le prix du crédit, en % par an ; le taux réel r corrige de l'inflation π : r ≈ i − π (CM 7).
 - **Croissance** g : la variation, en % par an, du PIB ou du revenu par habitant.
-- **Positif et normatif** : l'analyse positive décrit ce qui est et se vérifie ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : l'analyse positive décrit ce qui est et se vérifie ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
 :::
 
 ## La question
@@ -300,13 +300,13 @@ La @fig-financement-climat situe ces montants. Selon [l'OCDE](https://www.oecd.o
 
 ### Le désaccord porte sur un chiffre qui n'est pas seulement technique
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - Le résultat d'une évaluation climatique dépend d'abord du taux d'actualisation. Pour Nordhaus lui-même, « presque toute la différence » entre le rapport Stern et les autres études vient de l'actualisation ([conférence de Yale, 2007](https://ycsg.yale.edu/sites/default/files/files/chapter5.pdf) ; notre traduction). Dans le scénario le plus pessimiste de Stern, les pertes sont inférieures à 1 % de la production mondiale en 2050 et d'environ 3 % en 2100 : c'est l'actualisation à un taux très faible qui les transforme en une perte « maintenant » de 14 % (*ibid.*).
 - Chez Nordhaus, le coût social du carbone varie de 50 à 235 dollars par tonne de carbone (soit 14 à 64 dollars par tonne de CO₂) selon que l'on actualise à 5 % ou à 2,5 % ([*The Conversation*, 12/11/2018](https://theconversation.com/retour-sur-la-polemique-autour-du-prix-nobel-deconomie-a-william-nordhaus-104891)).
 - Le résultat dépend aussi de la **fonction de dommages**, qui traduit un réchauffement en perte de production. Dans le modèle de Nordhaus, un réchauffement de 6 °C ne détruirait que 10 % du PIB mondial (*ibid.*). Plus cette perte est forte, plus Dm est haut, quel que soit le taux.
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur).
 
 - Faut-il une impatience pure ? Ramsey et Stern disent non, pour des raisons morales ; d'autres répondent qu'il faut respecter les choix que font réellement les épargnants.
 - Quel poids donner à l'égalité, entre générations et entre pays ?

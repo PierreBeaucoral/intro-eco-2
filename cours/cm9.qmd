@@ -239,7 +239,7 @@ De janvier à septembre 2025, les prix hors droit des biens importés ne bougent
 graphe_recettes_douane()
 ```
 
-**L'argent rendu ne revient pas forcément à ceux qui ont payé.** L'écart entre recettes brutes et nettes, surtout des remboursements, passe de 7,5 Md\$ sur l'exercice 2025 à 145 Md\$ sur l'exercice 2026 (@fig-recettes-douane ; calcul de l'auteur). Ces remboursements vont aux **importateurs**, qui ont versé les droits, alors qu'ils ont pu en répercuter une partie sur leurs clients. La Cour du commerce international a ordonné de rembourser les importateurs, qui ont versé les droits ([Bouët, Blog du CEPII, 27/03/2026](https://www.cepii.fr/BLOG/bi/post.asp?IDcommunique=1186)) ; pour beaucoup, les entreprises qui ont répercuté la hausse sur leurs clients n'ont droit à aucun remboursement ([Deysine, *The Conversation*, 23/02/2026](https://theconversation.com/trump-desavoue-par-la-cour-supreme-sur-les-droits-de-douane-et-maintenant-276613)). Savoir qui a supporté le droit est une question positive ; décider qui doit être remboursé est une question normative, que tranchent le droit et les tribunaux.
+**L'argent rendu ne revient pas forcément à ceux qui ont payé.** L'écart entre recettes brutes et nettes, surtout des remboursements, passe de 7,5 Md\$ sur l'exercice 2025 à 145 Md\$ sur l'exercice 2026 (@fig-recettes-douane ; calcul de l'auteur). Ces remboursements vont aux **importateurs**, qui ont versé les droits, alors qu'ils ont pu en répercuter une partie sur leurs clients. La Cour du commerce international a ordonné de rembourser les importateurs, qui ont versé les droits ([Bouët, Blog du CEPII, 27/03/2026](https://www.cepii.fr/BLOG/bi/post.asp?IDcommunique=1186)) ; pour beaucoup, les entreprises qui ont répercuté la hausse sur leurs clients n'ont droit à aucun remboursement ([Deysine, *The Conversation*, 23/02/2026](https://theconversation.com/trump-desavoue-par-la-cour-supreme-sur-les-droits-de-douane-et-maintenant-276613)). Savoir qui a supporté le droit est une question [positive]{.positif} ; décider qui doit être remboursé est une question [normative]{.normatif}, que tranchent le droit et les tribunaux.
 
 ```{r}
 #| label: fig-part-douane-impots
@@ -335,7 +335,7 @@ Ce droit vise moins à protéger une industrie qu'à faire payer le même prix a
 
 ### Faut-il protéger ses producteurs ?
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - **Qui paie.** Les droits américains de 2018 et de 2025 ont été payés à 86 % ou plus par les importateurs et les consommateurs américains ([Amiti et al., 2019](https://doi.org/10.1257/jep.33.4.187) ; [*Liberty Street Economics*, 12/02/2026](https://libertystreeteconomics.newyorkfed.org/2026/02/who-is-paying-for-the-2025-u-s-tariffs/)).
 - **Combien.** Un droit transfère du revenu des acheteurs vers les producteurs protégés et l'État, et en détruit une partie (la perte sèche), dont l'ampleur varie selon les estimations.
@@ -349,7 +349,7 @@ Ce droit vise moins à protéger une industrie qu'à faire payer le même prix a
 
 : Échanges de biens entre l'UE à 27 et les États-Unis. Source : [Eurostat, jeu `ext_lt_maineu`, mis à jour le 16/10/2026, téléchargé le 21/10/2026](https://ec.europa.eu/eurostat/databrowser/view/ext_lt_maineu/default/table?lang=fr) ; solde calculé par l'auteur. {#tbl-commerce-ue-usa}
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur). Savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Tout dépend du poids que l'on donne :
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur). Savoir qui paie ne dit pas si l'objectif affiché vaut ce qu'il coûte. Tout dépend du poids que l'on donne :
 
 - au **pouvoir d'achat** de tous les consommateurs ;
 - aux **emplois** et aux **territoires** concentrés qui perdent à l'ouverture ;
@@ -376,7 +376,7 @@ Aux États-Unis, la Constitution donne au Congrès, et à lui seul, le pouvoir d
 - L'ouverture fait gagner le pays mais pas tous ses habitants : les détenteurs du facteur rare y perdent (Heckscher-Ohlin, Stolper-Samuelson), et ces pertes se concentrent sur les territoires concurrencés.
 - Dans un petit pays, un droit t fait monter le prix intérieur de Pw à Pw + t : il transfère du revenu des acheteurs vers les producteurs protégés et l'État, et en détruit une partie, la perte sèche.
 - La part d'un droit payée par l'étranger est la baisse de son prix hors droit divisée par le droit ; pour les droits américains de 2018 et de 2025, elle a été faible, de 0 à 14 %.
-- Un droit de douane peut viser des recettes, la protection d'une industrie, un rapport de force, la sécurité des approvisionnements ou le climat ; juger si cet objectif vaut son coût est une question normative, qui oppose le libre-échange au protectionnisme éducateur de List.
+- Un droit de douane peut viser des recettes, la protection d'une industrie, un rapport de force, la sécurité des approvisionnements ou le climat ; juger si cet objectif vaut son coût est une question [normative]{.normatif}, qui oppose le libre-échange au protectionnisme éducateur de List.
 :::
 
 ## Pour aller plus loin

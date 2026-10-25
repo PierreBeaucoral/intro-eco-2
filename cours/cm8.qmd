@@ -18,7 +18,7 @@ source(here::here("R/cm8.R"))
 - **Dette publique** : un stock, la somme de ce que les administrations doivent ; on la rapporte au PIB, un flux annuel.
 - **Propension marginale à consommer** (c) : part d'un euro de revenu supplémentaire qui est consommée. Avec c = 0,8, un ménage qui gagne 100 € de plus en dépense 80.
 - **Taux d'intérêt réel** : r ≈ i − π, le taux nominal moins l'inflation (CM 7).
-- **Analyse positive et analyse normative** : ce qui est (vérifiable) et ce qui devrait être (jugement de valeur).
+- [**Analyse positive**]{.positif} **et** [**analyse normative**]{.normatif} : ce qui est (vérifiable) et ce qui devrait être (jugement de valeur).
 :::
 
 ## La question
@@ -299,14 +299,14 @@ La @fig-soldes-demographiques détaille ces départs ([Eurostat, demo_gind, tél
 
 ### Fallait-il un ajustement aussi rapide ?
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - **Le multiplicateur a été sous-estimé** au début de la crise : l'austérité a réduit l'activité plus que prévu ([Blanchard et Leigh, 2013](https://www.aeaweb.org/articles?id=10.1257/aer.103.3.117)). Les auteurs ajoutent qu'il n'existe pas de multiplicateur unique, valable partout et toujours.
 - **Le ratio a monté tant que r dépassait g**, puis baissé vite quand la croissance est revenue, avec des excédents primaires (@tbl-decomposition).
 - **Il n'y avait pas de « sans austérité » simple.** En 2010, le solde primaire grec était de −5,3 % du PIB ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/gov_10dd_edpt1/default/table), solde public + intérêts, calculs du cours) et l'État ne pouvait plus emprunter sur les marchés. Sans prêts, il aurait dû combler ce déficit d'un coup, ou cesser de payer ses créanciers. Les plans d'aide ont **étalé** l'ajustement ; la question porte sur son rythme.
 - **Le PIB réel de 2025 reste inférieur de 13,9 % à celui de 2008**, en volume ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table)). La [note du Trésor](https://www.tresor.economie.gouv.fr/PagesInternationales/Pages/67796625-12c8-45e7-8872-6b274f92ad24/files/8ccbdff5-3afc-4274-a508-f6991b0c4db4) le dit « légèrement inférieur » à son niveau d'avant-crise, sans préciser valeur ou volume (03/11/2025). En valeur, le PIB de 2024 n'est qu'à 0,4 % sous celui de 2008 ([Eurostat](https://ec.europa.eu/eurostat/databrowser/view/nama_10_gdp/default/table), calculs du cours) : avant de citer un chiffre, il faut savoir ce qu'il mesure.
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur).
 
 - Le **rythme** : vaut-il mieux une récession courte et brutale, ou un ajustement plus lent et plus coûteux en prêts ?
 - Le **partage du fardeau** : fallait-il annuler plus tôt une partie de la dette, au détriment des créanciers, plutôt que faire porter l'effort sur les contribuables et les fonctionnaires grecs ?
@@ -332,7 +332,7 @@ Le **Mécanisme européen de stabilité** (MES) a été créé en octobre 2012 p
 - Le ratio dette / PIB évolue selon Δd ≈ (r − g) × d − s : quand r dépasse g, la dette fait boule de neige, même sans déficit primaire.
 - À court terme, une coupe de dépense fait monter le ratio dette / PIB si k × d > 1 : avec une dette de 150 % du PIB, il suffit d'un multiplicateur supérieur à 0,67.
 - En Grèce, le ratio est monté de 147,8 % (2010) à 189,0 % (2018) et, après un pic de 209,4 % en 2020 (crise sanitaire), est retombé à 145,4 % (2025) quand la croissance a dépassé le taux d'intérêt.
-- Juger que l'austérité « a marché » dépend de l'objectif, du rythme et de qui en supporte le coût : c'est un jugement normatif.
+- Juger que l'austérité « a marché » dépend de l'objectif, du rythme et de qui en supporte le coût : c'est un jugement [normatif]{.normatif}.
 :::
 
 ## Pour aller plus loin

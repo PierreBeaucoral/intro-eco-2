@@ -69,12 +69,12 @@ graphe_externalite <- function(taxe = FALSE, base_size = 16, etape = 3) {
     g <- g +
       annotate("rect", xmin = 0, xmax = q0, ymin = cm, ymax = cms, fill = neutre, alpha = 0.25) +
       annotate("text", x = q0 / 2, y = (cm + cms) / 2, label = "recette = t × Q°",
-               family = police_cours, size = taille)
+               family = police_cours, size = 0.85 * taille)   # 0,85 : tient entre l'axe et Q° en diapo
   } else {
     g <- g +
       annotate("polygon", x = c(q0, q1, q1), y = c(cms, cms, cm),
                fill = couleurs_eco[["alerte"]], alpha = 0.35) +
-      annotate("text", x = q1 + 0.15, y = cms + 0.55, label = "perte sèche", hjust = 0,
+      annotate("text", x = q1 + 0.15, y = cms + 1, label = "perte sèche", hjust = 0,   # au-dessus de « Cms »
                colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
   }
   g <- g +
@@ -90,11 +90,12 @@ graphe_externalite <- function(taxe = FALSE, base_size = 16, etape = 3) {
     annotate("segment", x = 10.2, xend = 10.2, y = cm + 0.1, yend = cms - 0.1,
              colour = couleurs_eco[["alerte"]], linewidth = 0.7,
              arrow = grid::arrow(length = grid::unit(0.18, "cm"), ends = "both", type = "closed")) +
-    annotate("text", x = 10.45, y = (cm + cms) / 2, label = if (taxe) "t = Dm" else "Dm",
-             hjust = 0, colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
+    # « t = Dm » au-dessus de la flèche : à droite, il sortirait du cadre
+    annotate("text", x = if (taxe) 10.2 else 10.45, y = if (taxe) cms + 0.8 else (cm + cms) / 2,
+             label = if (taxe) "t = Dm" else "Dm", hjust = if (taxe) 0.5 else 0, colour = couleurs_eco[["alerte"]], family = police_cours, size = taille)
   g +
     annotate("point", x = c(q1, q0)[i_e], y = c(cm, cms)[i_e], size = 3, colour = couleurs_eco[["equilibre"]]) +
-    annotate("text", x = c(q1 + 0.35, q0 + 0.1)[i_e], y = c(cm - 0.45, cms + 0.5)[i_e], label = c("E", "E°")[i_e],
+    annotate("text", x = c(q1 - 0.45, q0 + 0.45)[i_e], y = c(cm - 0.5, cms + 0.55)[i_e], label = c("E", "E°")[i_e],   # côté opposé à D
              family = police_cours, size = taille) +
     annotate("text", x = c(1.4, 11.4, 11.4)[i_lab], y = c(11.6, cm, cms)[i_lab], label = c("D", "Cm", "Cms")[i_lab],
              hjust = c(0.5, 0, 0)[i_lab], colour = couleurs_eco[c("demande", "offre", "offre")][i_lab],

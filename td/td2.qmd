@@ -16,7 +16,7 @@ Porte sur : CM 2
 
 - **Calculer** l'effet d'une hausse de prix sur la quantité et sur la dépense à partir d'une élasticité, et vérifier un chiffre publié.
 - **Déterminer** qui supporte une taxe, sur un graphique puis par le calcul, et expliquer pourquoi le partage dépend des élasticités et non de celui qui verse la taxe.
-- **Argumenter** sur la hausse du prix du tabac en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+- **Argumenter** sur la hausse du prix du tabac en séparant ce que l'analyse établit ([positif]{.positif}) de ce qui relève d'un jugement ([normatif]{.normatif}).
 
 ## À préparer avant la séance
 

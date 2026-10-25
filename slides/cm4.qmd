@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm4.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : le plafonnement des loyers des nouveaux baux (2019)
+## Le plafonnement des loyers des nouveaux baux (2019)
 
 - Depuis le 1^er^ juillet 2019 à Paris, puis à Lille, Lyon, Montpellier, Bordeaux et dans plusieurs communes de Seine-Saint-Denis, le loyer d'un nouveau bail est plafonné par le préfet : 9 territoires et 70 communes en octobre 2026.
 
@@ -74,7 +74,7 @@ graphe_taux_effort(base_size = 24)
 - **Pénurie et rationnement** : quand le prix ne peut pas monter jusqu'à P\*, la quantité demandée dépasse la quantité offerte ; on répartit alors le bien autrement : file d'attente, dossier, quota, relations, hasard.
 - **Consentement à payer** : le prix maximal qu'un acheteur accepte de payer ; c'est la hauteur de la demande.
 - **Élasticité de l'offre** : une offre rigide réagit peu au prix.
-- **Positif et normatif** : décrire ce qui est, ou juger ce qui devrait être.
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : décrire ce qui est, ou juger ce qui devrait être.
 :::
 
 ::: {.notes}
@@ -380,8 +380,8 @@ graphe_plafond(base_size = 24, etape = 4)
 . . .
 
 - Seul le triangle rouge est une perte nette.
-- Mesurer la perte sèche est une question **positive**.
-- Juger ce transfert, souhaitable ou non, est une question **normative**.
+- Mesurer la perte sèche est une question [**positive**]{.positif}.
+- Juger ce transfert, souhaitable ou non, est une question [**normative**]{.normatif}.
 
 ::: {.notes}
 1 h 07 – 1 h 11. Sondage à main levée avant le clic : « le rectangle est-il une perte pour la société ? » Transition : chiffrer ces aires dans une ville fictive.
@@ -829,7 +829,7 @@ graphe_taux_effort(base_size = 24)
 
 ## Controverse : protéger les locataires d'aujourd'hui, ou ceux de demain
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Plafond contraignant : pénurie et perte sèche, plus grandes si l'offre est élastique.
 - France : loyers −2 à −5 %, environ 700 M€ transférés par an.
@@ -837,7 +837,7 @@ graphe_taux_effort(base_size = 24)
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Efficacité ou équité ; locataires en place ou ménages de demain.
 - Bailleurs ou contribuables ; prolonger ou arrêter tant que le doute subsiste.
@@ -930,14 +930,14 @@ Mêmes questions : le plafond est-il contraignant ? L'offre est-elle élastique 
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. Un plafond contraignant crée pénurie et perte sèche, croissantes avec l'élasticité de l'offre.
 - B. En France : loyers −2 à −5 %, environ 700 M€ transférés par an, effet sur l'offre ni démontré ni écarté.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Efficacité ou équité ; locataires en place ou ménages de demain.
 - B. Bailleurs ou contribuables ; à qui revient la charge de la preuve.

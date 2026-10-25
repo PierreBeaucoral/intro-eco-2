@@ -27,6 +27,8 @@ $border-radius-lg: 6px;
   --wp-offre: #{$wp-offre};
   --wp-rouge: #{$wp-rouge};
   --wp-teinte: #{$wp-teinte};
+  --wp-positif: #{$wp-positif};
+  --wp-normatif: #{$wp-normatif};
   --wp-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --wp-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
 }
@@ -99,7 +101,7 @@ a:hover { text-decoration-thickness: 2px; }
 // Encadrés pédagogiques : même grammaire, étiquette en tête, filet à gauche
 // Usage : ::: {.retenir} … :::   (aussi .piege, .auteur, .methode)
 // ------------------------------------------------------------------
-.retenir, .piege, .auteur, .methode, .rappel, .s1, .droit {
+.retenir, .piege, .auteur, .methode, .rappel, .s1, .droit, .plus {
   --c: var(--wp-encre);
   margin: 1.5rem 0;
   padding: 0.85rem 1.1rem 0.9rem;
@@ -121,9 +123,14 @@ a:hover { text-decoration-thickness: 2px; }
 .piege   { --label: "Point d'attention"; --c: var(--wp-rouge); }
 .auteur  { --label: "Auteur · école"; --c: var(--wp-encre-2); }
 .methode { --label: "Méthode"; --c: var(--wp-encre-2); border-left-style: dashed; }
+.plus    { --label: "Pour aller plus loin"; --c: var(--wp-encre-2); border-left-style: dotted; }
+
+// Positif / normatif : même couleur partout où l'analyse est nommée. Usage : [**Analyse positive**]{.positif}
+.positif  { color: var(--wp-positif); }
+.normatif { color: var(--wp-normatif); }
 
 // Portrait dans un encadré (.auteur surtout) : ::: {.wp-portrait} ![](…){fig-alt=…} [crédit]{.wp-credit} :::
-.retenir, .piege, .auteur, .methode, .rappel, .droit { display: flow-root; }
+.retenir, .piege, .auteur, .methode, .rappel, .droit, .plus { display: flow-root; }
 .wp-portrait {
   float: right; width: 6.5rem; margin: 0 0 0.6rem 1rem;
   p { margin: 0; max-width: none; }

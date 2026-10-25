@@ -17,7 +17,7 @@ source(here::here("R/cm2.R"))
 - **Élasticité-prix de la demande** : e = variation de Q (en %) ÷ variation de P (en %). Elle est négative. Si |e| est inférieur à 1, la demande est **peu élastique**.
 - **Impôt indirect** : impôt inclus dans le prix d'un bien, versé à l'État par le vendeur. La **TVA** est un pourcentage du prix ; une **accise** frappe un produit précis (tabac, alcool, carburant), par unité ou en pourcentage.
 - **Externalité** : effet d'un agent sur d'autres, sans compensation par le marché (le tabagisme passif). Une **taxe correctrice**, au sens de Pigou, fait payer ce coût à celui qui le cause.
-- **Positif et normatif** : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : l'analyse positive décrit ce qui est ; l'analyse normative dit ce qui devrait être, à partir d'un jugement de valeur.
 :::
 
 ## La question
@@ -313,13 +313,13 @@ La @fig-fumeurs-sexe montre tout le chemin. La part des hommes qui fument baisse
 
 ### Faut-il continuer à augmenter le prix du tabac ?
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - Une hausse de prix réduit les ventes, moins que proportionnellement (e entre −0,5 et −0,3), davantage à long terme et chez les jeunes.
 - La taxe pèse surtout sur les **fumeurs**, et en proportion davantage sur les fumeurs modestes.
 - Elle nourrit des **fuites** (tabac à rouler, achats à l'étranger, contrebande), dont l'ampleur est mal mesurée.
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur).
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur).
 
 - **Faut-il protéger le fumeur contre lui-même ?** Si l'on juge le fumeur pleinement rationnel, la taxe ne doit couvrir que le coût imposé aux autres. Si l'on juge qu'il n'arrive pas à tenir ses résolutions, une taxe plus forte se défend. C'est la question du **paternalisme** : jusqu'où l'État peut-il orienter les choix privés ?
 - **Comment peser santé et pouvoir d'achat ?** La taxe améliore la santé de ceux qui arrêtent et appauvrit ceux qui continuent. L'OMS juge qu'elle peut devenir « un outil de politique publique favorable aux pauvres » si une partie des recettes finance l'aide au sevrage des ménages modestes (OMS, 2012, citée par [Hill, 2026, § 7.6](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)). Vue sous l'angle du pouvoir d'achat, c'est d'abord un impôt régressif.
@@ -331,7 +331,7 @@ La @fig-fumeurs-sexe montre tout le chemin. La part des hommes qui fument baisse
 - *La santé publique* (OMS ; [Hill, 2026](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)) : pour les experts de la Banque mondiale et de l'OMS, la hausse des prix est « de loin le moyen le plus efficace » de faire baisser les ventes ([Hill, 2026, § 4.3](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)). Ce rapport, engagé dans la lutte antitabac, reproche aux douanes, aux buralistes et à l'industrie d'avoir entretenu la confusion entre achats frontaliers licites et contrebande.
 - *Les buralistes* : la profession, « fragilisée par l'ampleur croissante du marché parallèle », demande de limiter la hausse des accises à l'inflation (question écrite n° 04515 au Sénat, qui relaie ses demandes, [*JO Sénat*, 08/05/2025](https://www.senat.fr/questions/base/2025/qSEQ250504515.html)). Le gouvernement répond que la lutte contre la contrebande est « une priorité majeure de la douane » ([*JO Sénat*, 26/02/2026](https://www.senat.fr/questions/base/2025/qSEQ250504515.html)).
 
-Le débat porte moins sur le sens de l'effet, admis par tous, que sur la **taille des fuites** (une question positive, mal mesurée) et sur le **droit de l'État à orienter des choix privés** (une question normative).
+Le débat porte moins sur le sens de l'effet, admis par tous, que sur la **taille des fuites** (une question [positive]{.positif}, mal mesurée) et sur le **droit de l'État à orienter des choix privés** (une question [normative]{.normatif}).
 
 ::: {.droit}
 Les prix du tabac ne sont pas libres au sens ordinaire : chaque fabricant propose ses prix, que l'administration des douanes homologue et publie au *Journal officiel* ; d'après [*Bourse Inside* (08/10/2026)](https://bourseinside.fr/?p=13529), l'arrêté du 29 septembre 2026 fixe les prix au 1^er^ novembre 2026 ([Hill, 2026, § 3.1](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf), pour la procédure). La France a aussi ratifié la Convention-cadre de l'OMS pour la lutte antitabac, dont l'article 6 recommande d'augmenter les taxes sur le tabac ([Hill, 2026, introduction](https://www.gustaveroussy.fr/sites/default/files/impact_prix_consommation_tabac_2026.pdf)).
@@ -345,7 +345,7 @@ Les prix du tabac ne sont pas libres au sens ordinaire : chaque fabricant propos
 - La charge d'une taxe retombe sur le côté du marché le moins élastique, quel que soit celui qui la verse à l'État : pour le tabac, surtout sur les fumeurs.
 - L'addiction n'annule pas l'effet du prix : la demande est plus élastique à long terme (Becker et Murphy) et chez les jeunes.
 - Les ventes légales ne sont pas la consommation : tabac à rouler, achats à l'étranger et contrebande réduisent l'effet sanitaire et la recette.
-- Faut-il taxer pour protéger le fumeur contre lui-même (internalité) ou seulement pour protéger les autres (externalité) ? C'est un jugement normatif.
+- Faut-il taxer pour protéger le fumeur contre lui-même (internalité) ou seulement pour protéger les autres (externalité) ? C'est un jugement [normatif]{.normatif}.
 :::
 
 ## Pour aller plus loin

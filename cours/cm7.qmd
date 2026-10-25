@@ -18,7 +18,7 @@ source(here::here("R/cm7.R"))
 - **Taux d'intérêt** : prix du crédit, en pourcentage par an de la somme prêtée.
 - **Création monétaire** : les banques créent de la monnaie quand elles accordent des crédits ; la banque centrale fournit aux banques la monnaie dont elles ont besoin entre elles (CM 6).
 - **Choc d'offre** : événement qui déplace la courbe d'offre (O → O′) ; un choc négatif fait monter le prix et baisser la quantité (CM 1).
-- **Positif et normatif** : ce qui est (on peut le vérifier) et ce qui devrait être (cela dépend d'un jugement).
+- [**Positif**]{.positif} **et** [**normatif**]{.normatif} : ce qui est (on peut le vérifier) et ce qui devrait être (cela dépend d'un jugement).
 :::
 
 ## La question
@@ -308,12 +308,12 @@ La @fig-inflation-pays montre les 21 pays : le taux de dépôt est inférieur à
 
 ### Fallait-il relever les taux face à un choc d'énergie ?
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables).
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - Une hausse des taux ne réduit pas le prix de l'énergie : elle agit sur la demande, avec retard, et sur les anticipations. Face à un choc d'offre, elle limite la hausse des prix au prix d'une baisse de l'activité (@fig-transmission).
 - En 2022, le taux réel est resté très négatif pendant plus d'un an et l'inflation s'est diffusée ; en 2026, l'inflation hors énergie reste proche de 2 %.
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur). Combien d'activité et d'emplois accepte-t-on de perdre pour ramener l'inflation à 2 % un an plus tôt ? Qui doit porter le coût : les emprunteurs, par des taux plus élevés, ou les contribuables, par des aides publiques comme le bouclier tarifaire ? Et faut-il qu'une institution non élue fasse ce choix ?
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur). Combien d'activité et d'emplois accepte-t-on de perdre pour ramener l'inflation à 2 % un an plus tôt ? Qui doit porter le coût : les emprunteurs, par des taux plus élevés, ou les contribuables, par des aides publiques comme le bouclier tarifaire ? Et faut-il qu'une institution non élue fasse ce choix ?
 
 **Les écoles en présence.**
 
@@ -334,7 +334,7 @@ L'objectif principal de la BCE, la **stabilité des prix**, et son **indépendan
 - Pour freiner l'inflation, une banque centrale doit relever son taux plus que l'inflation, pour que le taux réel monte (règle de Taylor).
 - La hausse des taux freine la demande, pas l'offre d'énergie : face à un choc d'offre, elle réduit l'inflation au prix d'une activité plus faible.
 - En 2022, la BCE a monté ses taux de 4,50 points après la diffusion de l'inflation ; en 2026, elle les a montés de 0,50 point, tôt, en visant les anticipations.
-- Choisir entre inflation et activité, et confier ce choix à une banque centrale indépendante, relève d'un jugement normatif.
+- Choisir entre inflation et activité, et confier ce choix à une banque centrale indépendante, relève d'un jugement [normatif]{.normatif}.
 :::
 
 ## Pour aller plus loin

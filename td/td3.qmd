@@ -16,7 +16,7 @@ Porte sur : CM 3 et 4
 
 - **Expliquer** pourquoi un prix bloqué crée une pénurie quand la demande se déplace, et pourquoi il faut alors répartir le bien autrement que par le prix.
 - **Calculer** une pénurie, un transfert et une perte sèche à partir d'un tableau, à court et à long terme.
-- **Argumenter** sur l'encadrement des loyers en séparant ce que l'analyse établit (positif) de ce qui relève d'un jugement (normatif).
+- **Argumenter** sur l'encadrement des loyers en séparant ce que l'analyse établit ([positif]{.positif}) de ce qui relève d'un jugement ([normatif]{.normatif}).
 
 ## À préparer avant la séance
 

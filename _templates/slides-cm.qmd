@@ -24,7 +24,7 @@ source(here::here("R/cmN.R"))   # même fichier que la page de cours
 
 <!-- 1. Fait déclencheur (la cause), puis conséquences, puis question : chacun au clic -->
 
-## Le fait de départ : la fermeture du détroit d'Ormuz (28/02/2026)
+## La fermeture du détroit d'Ormuz (28/02/2026)
 
 - La guerre entre les États-Unis et Israël d'un côté, l'Iran de l'autre, ferme de fait le détroit, par lequel transite environ un cinquième du pétrole et du gaz liquéfié mondiaux (Insee, *Note de conjoncture*, 24/03/2026).
 
@@ -250,7 +250,7 @@ graphe_offre_demande(base_size = 24)   # remplacer par la fonction de données d
 
 ## Controverse : bloquer les prix ou aider les automobilistes
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Bloquer le prix sous P\*′ recrée la pénurie : files, quotas, stations à sec.
 - Une remise générale coûte de l'argent public et profite davantage aux gros consommateurs.
@@ -258,7 +258,7 @@ graphe_offre_demande(base_size = 24)   # remplacer par la fonction de données d
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Objectifs en balance : efficacité, équité, climat, coût budgétaire, concurrence.
 - Néoclassiques : prix libre et transferts ciblés (Tinbergen, 1952) ; post-keynésiens : contenir quelques prix clés (Weber et Wasner, 2023).
@@ -276,7 +276,7 @@ graphe_offre_demande(base_size = 24)   # remplacer par la fonction de données d
 - L'offre reflète le coût marginal : le prix est fixé par le dernier producteur nécessaire.
 - Prix du bien : glissement le long d'une courbe ; autre cause : déplacement.
 - Demande peu élastique : le choc passe surtout dans le prix.
-- Bloquer ou aider : un jugement normatif.
+- Bloquer ou aider : un jugement [normatif]{.normatif}.
 :::
 
 ::: {.notes}
@@ -291,14 +291,14 @@ graphe_offre_demande(base_size = 24)   # remplacer par la fonction de données d
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. Choc d'offre et demande peu élastique : le prix monte fort, la quantité baisse peu.
 - B. Bloquer recrée la pénurie ; la remise coûte ; l'aide ciblée garde le signal-prix.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Efficacité, équité, climat, coût budgétaire : des objectifs en tension.
 - B. Néoclassiques et post-keynésiens : ce qu'on accepte de payer.

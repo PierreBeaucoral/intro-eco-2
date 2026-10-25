@@ -14,7 +14,7 @@ source(here::here("R/theme_cours.R"))
 source(here::here("R/cm1.R"))   # même fichier que la page de cours
 ```
 
-## Le fait de départ : la fermeture du détroit d'Ormuz (28/02/2026)
+## La fermeture du détroit d'Ormuz (28/02/2026)
 
 - La guerre entre les États-Unis et Israël d'un côté, l'Iran de l'autre, ferme de fait le détroit, par lequel transite environ un cinquième du pétrole et du gaz liquéfié mondiaux ([Insee, *Note de conjoncture*, 24/03/2026](https://www.insee.fr/fr/statistiques/fichier/8907455/ndc-mars-2026-energie-mat-prem.pdf)).
 
@@ -752,18 +752,18 @@ graphe_elasticite_usage(base_size = 24)
 2 h 22 – 2 h 25. Tirets : ensemble des consommateurs, −0,40, même méthode. L'intervalle de confiance est la marge d'incertitude de l'estimation : ne pas départager les quarts voisins. Données d'avant 2026. Question : pourquoi les gros rouleurs réduisent-ils si peu ? (Ils dépendent de la voiture, par exemple pour aller travailler.) Transition : faut-il alors bloquer les prix ?
 :::
 
-## Analyse positive : remise générale et aide ciblée
+## [Analyse positive]{.positif} : remise générale et aide ciblée
 
 ::: {.incremental}
 - **Remise générale** : baisse le prix pour tous, coûte de l'argent public, affaiblit l'incitation à économiser et profite davantage, en euros, aux gros consommateurs. En 2022 : 0,18 €/L au 1^er^ avril, 0,30 €/L en septembre, 0,10 €/L mi-novembre ; 51 à 81 € évités par ménage automobiliste ([Insee Analyses n° 86](https://www.insee.fr/fr/statistiques/7645853)).
-- **Aide ciblée** : garde le signal-prix et concentre la dépense, à condition de savoir cibler. Septembre 2026 : aide élargie aux travailleurs modestes « grands rouleurs », plan de 450 M€.
+- **Aide ciblée** : garde le signal-prix et concentre la dépense, à condition de savoir cibler. Septembre 2026 : aide élargie aux travailleurs modestes « grands rouleurs », plan de 450 M€.
 :::
 
 ::: {.notes}
 2 h 25 – 2 h 28. Analyse positive : ce qui est, mécanismes et effets vérifiables. Remise de 2022 supprimée au 1^er^ janvier 2023. Aide ciblée : ministère de la Transition écologique, 22/09/2026, cité par l'AFP le 23/09/2026. Question : pourquoi une remise profite-t-elle plus, en euros, aux gros rouleurs ? Transition : deux instruments qui agissent sur l'offre et sur le financement.
 :::
 
-## Analyse positive : stocks stratégiques et taxe sur les profits exceptionnels
+## [Analyse positive]{.positif} : stocks stratégiques et taxe sur les profits exceptionnels
 
 ::: {.incremental}
 - **Libérer des stocks stratégiques** agit sur l'offre : O′ se déplace vers la droite et le prix baisse, le temps que durent les stocks. TotalEnergies annonce un avantage d'environ 10 centimes par litre de gazole du 1^er^ novembre 2026 au 31 janvier 2027.
@@ -774,7 +774,7 @@ graphe_elasticite_usage(base_size = 24)
 2 h 28 – 2 h 30. Stocks : communiqué TotalEnergies, 12/10/2026. Taxe : « contribution de solidarité temporaire » sur le pétrole brut, le gaz, le charbon et le raffinage, règlement du Conseil du 6 octobre 2022. Question : sur le graphique, dans quel sens se déplace O′ quand on libère des stocks ? Transition : l'analyse positive ne dit pas quoi choisir.
 :::
 
-## Analyse normative : cinq objectifs en balance
+## [Analyse normative]{.normatif} : cinq objectifs en balance
 
 ::: {.incremental}
 - **Efficacité** : le prix doit-il signaler la rareté ?
@@ -806,7 +806,7 @@ Le débat porte moins sur le mécanisme que sur ce qu'on accepte de payer, en p�
 
 ## Controverse : bloquer les prix ou aider les automobilistes
 
-**Analyse positive** (ce qui est : mécanismes et effets, vérifiables)
+[**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables)
 
 - Bloquer le prix sous P\*′ recrée la pénurie : files, quotas, stations à sec.
 - Une remise générale coûte de l'argent public et profite davantage aux gros consommateurs.
@@ -814,7 +814,7 @@ Le débat porte moins sur le mécanisme que sur ce qu'on accepte de payer, en p�
 
 . . .
 
-**Analyse normative** (ce qui devrait être : dépend de jugements de valeur)
+[**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur)
 
 - Objectifs en balance : efficacité, équité, climat, coût budgétaire, concurrence.
 - Néoclassiques : prix libre et transferts ciblés (Tinbergen, 1952) ; post-keynésiens : contenir quelques prix clés ([Weber et Wasner, 2023](https://doi.org/10.4337/roke.2023.02.05)).
@@ -845,7 +845,7 @@ Bloquer les prix à la pompe est donc juridiquement possible, mais encadré et p
 - Ormuz : choc d'offre négatif, O → O′ ; le prix monte, la quantité baisse.
 - Prix du bien : glissement le long d'une courbe ; autre cause : déplacement.
 - Demande peu élastique (e entre −0,40 et −0,21) : le choc passe surtout dans le prix.
-- Bloquer ou aider : un jugement normatif.
+- Bloquer ou aider : un jugement [normatif]{.normatif}.
 :::
 
 ::: {.notes}
@@ -858,14 +858,14 @@ Bloquer les prix à la pompe est donc juridiquement possible, mais encadré et p
 
 . . .
 
-**I. Ce que dit l'outil (positif)**
+[**I. Ce que dit l'outil (positif)**]{.positif}
 
 - A. Choc d'offre et demande peu élastique : le prix monte fort, la quantité baisse peu.
 - B. Bloquer recrée la pénurie ; la remise coûte ; l'aide ciblée garde le signal-prix.
 
 . . .
 
-**II. Ce qu'il ne tranche pas (normatif)**
+[**II. Ce qu'il ne tranche pas (normatif)**]{.normatif}
 
 - A. Efficacité, équité, climat, coût budgétaire : des objectifs en tension.
 - B. Néoclassiques et post-keynésiens : ce qu'on accepte de payer.

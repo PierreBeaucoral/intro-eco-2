@@ -12,6 +12,7 @@ local ENCADRES = {
   piege   = { "Point d'attention", "wp-rouge" },
   auteur  = { "Auteur · école", "wp-encre-2" },
   methode = { "Méthode", "wp-encre-2", nil, true },
+  plus    = { "Pour aller plus loin", "wp-encre-2", nil, true },
 }
 
 local function str(s) return '"' .. s:gsub('\\', '\\\\'):gsub('"', '\\"') .. '"' end
@@ -131,6 +132,8 @@ local SPANS = {
   ["wp-source"] = '#text(size: 0.85em, fill: wp-encre-2)',
   ["wp-cc"] = '#text(font: wp-mono, size: 0.75em, fill: wp-rouge)',
   ["wp-mono"] = '#text(font: wp-mono)',
+  positif = '#text(fill: wp-positif)',
+  normatif = '#text(fill: wp-normatif)',
 }
 
 function Span(span)
