@@ -402,7 +402,7 @@ graphe_incidence(base_size = 24, etape = 3)
 ```{r}
 #| fig-width: 6.4
 #| fig-height: 4.6
-#| fig-alt: "Figure complète : à gauche du trait rouge, un grand rectangle bleu entre P étoile et P étoile prime, marqué payé par les acheteurs, et un rectangle orangé plus mince entre P étoile prime moins t et P étoile, marqué payé par les vendeurs."
+#| fig-alt: "Figure complète : à gauche du trait rouge, un grand rectangle bleu entre P étoile et P étoile prime, marqué payé par les acheteurs, et un rectangle ambre plus mince entre P étoile prime moins t et P étoile, marqué payé par les vendeurs."
 graphe_incidence(base_size = 24)
 ```
 :::

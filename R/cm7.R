@@ -452,9 +452,9 @@ graphe_taylor <- function(base_size = 16, etape = 3) {
       annotate("point", x = exemple$infl, y = exemple$i, size = 3, colour = couleurs_eco[["equilibre"]]))) +
     (if (etape >= 3) list(
       geom_point(data = bce, aes(infl, i), shape = 17, size = 3.2, colour = couleurs_eco[["alerte"]]),
-      geom_text(data = bce, aes(infl + c(0, 0.35), i + c(1.4, 0), label = lab), hjust = c(1, 0),
+      geom_text(data = bce, aes(infl + c(-0.3, 0.35), i, label = lab), hjust = c(1, 0),   # oct. 2022 à gauche de son point : au-dessus, il touchait sept. 2026 en diapo
                 family = police_cours, size = taille, colour = couleurs_eco[["alerte"]]))) +
-    annotate("text", x = c(6.3, 10.8), y = c(12.5, 7), hjust = 1,
+    annotate("text", x = c(6.3, 10.8), y = c(12.5, 5.2), hjust = 1,   # i = π sous sa droite, sans la croiser
              label = c("règle de Taylor", "taux réel nul (i = π)"),
              colour = couleurs_eco[c("demande", "neutre")], family = police_cours, size = taille) +
     scale_x_continuous(breaks = c(0, 2, 4, 6, 8, 10), labels = function(x) paste0(x, " %")) +

@@ -287,7 +287,7 @@ graphe_court_long <- function(base_size = 16, etape = 3) {
     annotate("text", x = c(93.5, 71.5)[i_lab], y = c(14.2, 11.2)[i_lab],
              label = c("D court terme", "D long terme")[i_lab], hjust = c(0, 0)[i_lab],
              colour = couleurs_eco[["demande"]], family = police_cours, size = taille) +
-    scale_x_continuous(breaks = c(q_lt, q_ct, a$q0)[i_x], labels = c("Q*LT", "Q*CT", "Q*")[i_x]) +
+    scale_x_continuous(breaks = c(q_lt, q_ct, a$q0)[i_x], labels = c("\nQ*LT", "Q*CT", "Q*")[i_x]) +   # Q*LT une ligne plus bas : trop proche de Q*CT
     scale_y_continuous(breaks = c(a$p0, a$p1)[i_y], labels = c("P*", "P*′")[i_y]) +
     coord_cartesian(xlim = c(70, 115), ylim = c(6, 15), expand = FALSE, clip = "on") +
     labs(x = "Quantité Q", y = "Prix P") +
@@ -530,7 +530,7 @@ graphe_fumeurs_sexe <- function(base_size = 16) {
   deb <- d[d$annee == 1953, ]
   taille <- base_size / 3.4
   ggplot(d, aes(annee, pct, colour = serie)) +
-    geom_vline(xintercept = 2017, linetype = "22", colour = "grey55", linewidth = 0.4) +
+    geom_vline(xintercept = 2017, linetype = "22", colour = couleurs_eco[["neutre"]], linewidth = 0.4) +
     geom_line(data = d[d$annee <= 1980, ], linetype = "22", linewidth = 0.8) +
     geom_line(data = d[d$annee >= 1980, ], linewidth = 1.2) +
     geom_point(size = base_size / 9) +

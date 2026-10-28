@@ -159,7 +159,8 @@ graphe_parts_co2 <- function(base_size = 16, etape = 2) {
   ggplot(d, aes(part, entite, fill = serie)) +
     geom_col(position = position_dodge(width = 0.8, reverse = TRUE), width = 0.75) +
     geom_text(aes(label = etiquette), position = position_dodge(width = 0.8, reverse = TRUE),
-              hjust = -0.15, family = police_cours, size = base_size / 3.6,
+              hjust = -0.15, family = police_cours,
+              size = min(base_size, 17) / 3.6,   # plafonné : en diapo, les deux étiquettes d'un pays se chevauchaient
               colour = couleurs_eco[["equilibre"]]) +
     scale_fill_manual(values = remplissage, breaks = legende) +
     scale_x_continuous(limits = c(0, 28), breaks = c(0, 10, 20),

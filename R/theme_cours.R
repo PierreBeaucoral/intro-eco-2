@@ -14,12 +14,15 @@
 
 library(ggplot2)
 
+# Teintes tirées de ggtrout et MVZlibrary (github.com/eachambers), recopiées en dur
+# pour ne pas dépendre de paquets GitHub au rendu. Contraste sur blanc >= 3,7:1 ;
+# colorblindcheck::palette_check() : distance minimale >= 15 pour les trois daltonismes.
 couleurs_eco <- c(
-  demande   = "#0062C4",  # azur
-  offre     = "#B45309",  # ambre (lisible par les daltoniens avec l'azur)
-  equilibre = "#111111",  # encre
-  alerte    = "#B42318",  # chômage, perte sèche, écart à commenter
-  neutre    = "#4B5563"   # repères, pointillés, séries de contexte
+  demande   = "#2073b7",  # azur          MVZlibrary theAuk[2]
+  offre     = "#ac7d0d",  # ambre         ggtrout brook2[1]
+  equilibre = "#3e474a",  # encre         ggtrout greenback[1]
+  alerte    = "#a13549",  # rouge         MVZlibrary theAuk[8] : chômage, perte sèche, écart à commenter
+  neutre    = "#757877"   # gris          ggtrout brook1[5] : repères, pointillés, séries de contexte
 )
 ordre_series <- unname(couleurs_eco[c("demande", "offre", "alerte", "neutre")])
 
