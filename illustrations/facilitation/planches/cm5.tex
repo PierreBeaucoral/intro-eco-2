@@ -1,0 +1,22 @@
+% Source : cours/cm5.qmd. Comparaison d'instruments à objectif donné.
+\begin{board}{5}{Pollution : même objectif, payeurs différents}
+ {Réduire la pollution ne décide pas, à lui seul, qui doit porter l'effort.}
+\stage{5.4}{1}{Un coût pour les autres}
+\stage{16}{2}{Trois instruments}
+\stage{26.6}{3}{Trois répartitions}
+\car{4.4}{9.5}
+\person{8.1}{7.8}{amber}
+\draw[drawline,dashed] (2.2,10.1)..controls(1.4,8.2)and(6.2,8.8)..(7.1,8.8);
+\bill{3.1}{6.8}
+\captext{5.4}{Coût social = coût privé\\+ dommage aux autres.}
+\coin{13}{11.5}
+\node[label,text width=5.5cm] at (16.8,11.5) {Taxe};
+\draw[drawline,fill=amber!10] (12.6,8.5) rectangle (13.4,9.3);
+\node[label,text width=5.5cm] at (16.8,8.9) {Norme};
+\coin{13}{6.3}
+\node[label,text width=5.5cm] at (16.8,6.3) {Subvention};
+\foreach \y in {11.5,8.9,6.3}{\draw[flow] (19.6,\y)--(22.7,\y);}
+\node[label,text width=7.2cm] at (27,11.5) {Le pollueur paie};
+\node[label,text width=7.2cm] at (27,8.9) {Le conducteur\\concerné s'adapte};
+\node[label,text width=7.2cm] at (27,6.3) {Le contribuable\\finance};
+\end{board}

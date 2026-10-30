@@ -1,0 +1,26 @@
+% Source : cours/cm9.qmd. Hypothèse : petit pays.
+\begin{board}{9}{Douane : protection, recettes et coûts}
+ {Modèle du petit pays. La charge réelle dépend des prix ajustés et du pouvoir de marché.}
+\stage{5.4}{1}{L'importateur verse le droit}
+\stage{16}{2}{Le prix intérieur augmente}
+\stage{26.6}{3}{Transferts et perte sèche}
+\draw[drawline] (5.6,7.2)--(5.6,12.3);
+\draw[drawline,fill=amber!13] (3,9.1) rectangle (5,10.9);
+\draw[drawline] (3,10.2)--(5,10.2);
+\bank{8}{8.8}
+\coin{4.6}{12}
+\draw[flow] (5.3,12)--(8,12);
+\captext{5.4}{L'État encaisse le droit\\à la frontière.}
+\person{13.5}{8.4}{blue}
+\bill{15.4}{8.5}
+\factory{18.8}{7.6}
+\captext{16}{Acheteurs : une perte.\\Producteurs : un gain.}
+\coin{23.3}{11.5}
+\coin{24.5}{11.5}
+\node[smalllabel,text width=5.4cm] at (28,11.5) {Transferts vers\\l'État et les producteurs};
+% Un échange barré : perte d'opportunité, pas une recette détruite.
+\draw[flow] (23,7.4)--(25.1,7.4);
+\draw[amber,line width=2pt] (23.8,6.8)--(25,8);
+\node[smalllabel,text width=5cm] at (28,7.5) {Échanges\\qui disparaissent};
+\captext{26.6}{Perte sèche :\\personne ne la récupère.}
+\end{board}

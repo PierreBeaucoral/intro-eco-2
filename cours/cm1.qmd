@@ -317,6 +317,18 @@ graphe_elasticite_usage()
 
 On sépare l'analyse [**positive**]{.positif} de l'analyse [**normative**]{.normatif}.
 
+::: {.content-visible when-format="html"}
+::: {#fig-positif-normatif .wp-cote}
+![](img/facilitation-graphique/cm1-positif-normatif-compact.svg){fig-alt="Dessin en deux volets superposés. En haut, en vert, « Analyse positive : ce qui est » : une pompe à essence, une file de trois personnes et une loupe, avec la phrase « Bloquer le prix à la pompe crée une pénurie ». En bas, en violet, « Analyse normative : ce qui devrait être » : une balance qui penche du côté de l'équité plutôt que du coût public, avec la phrase « Il faut d'abord protéger les ménages qui dépendent de la voiture »."}
+
+Une même controverse pose deux questions : la première se vérifie avec des données, la seconde se tranche par un jugement de valeur.
+:::
+:::
+
+::: {.content-visible unless-format="html"}
+![Une même controverse pose deux questions : la première se vérifie avec des données, la seconde se tranche par un jugement de valeur.](img/facilitation-graphique/cm1-positif-normatif.svg){#fig-positif-normatif fig-alt="Dessin en deux volets. À gauche, en vert, « Analyse positive : ce qui est » : une pompe à essence, une file de trois personnes et une loupe, avec la phrase « Bloquer le prix à la pompe crée une pénurie », vérifiable par les données. À droite, en violet, « Analyse normative : ce qui devrait être » : une balance qui penche du côté de l'équité plutôt que du coût public, avec la phrase « Il faut d'abord protéger les ménages qui dépendent de la voiture », qui repose sur un jugement de valeur."}
+:::
+
 [**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
 
 - **Bloquer le prix** au-dessous du nouvel équilibre P\*′ recrée la pénurie de la @fig-choc-offre. Il faut alors rationner : files d'attente, quotas par client, stations à sec. Le plafond de TotalEnergies le montre en 2026 dans ses propres stations (@sec-plafond-total) ; les CM 3 et 4 chiffreront ce mécanisme.

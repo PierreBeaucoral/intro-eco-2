@@ -145,6 +145,27 @@ a:hover { text-decoration-thickness: 2px; }
   > * { grid-column: 1; }
   > .wp-portrait { grid-column: 2; grid-row: 2; float: none; margin: 0; }
 }
+// Deux portraits (co-auteurs) : côte à côte, sinon ils occupent la même cellule et se chevauchent
+.auteur:has(> .wp-portrait + .wp-portrait) {
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  > .wp-portrait + .wp-portrait { grid-column: 3; }
+  .wp-credit { min-height: 3.75em; } // même hauteur de crédit : les deux photos restent alignées
+  // Téléphone : les deux photos au-dessus, le texte en pleine largeur dessous
+  @media (max-width: 576px) {
+    grid-template-columns: auto auto minmax(0, 1fr); row-gap: 0.6rem;
+    > :not(.wp-portrait) { grid-column: 1 / -1; grid-row: 3; }
+    > .wp-portrait { grid-column: 1; align-self: start; }
+    > .wp-portrait + .wp-portrait { grid-column: 2; }
+  }
+}
+
+// Dessin flottant à droite du texte (site seulement) : ::: {.wp-cote} ![…](…){#fig-…} :::
+.wp-cote {
+  float: right; width: min(42%, 18rem); margin: 0.25rem 0 1rem 1.5rem;
+  figure, .quarto-float { margin: 0; }
+  img { display: block; width: 100%; height: auto; }
+  @media (max-width: 576px) { float: none; width: 100%; margin: 1rem 0; }
+}
 
 // Vidéo YouTube intégrée (youtube-nocookie), en petit : ::: {.wp-video} <iframe …> :::
 .wp-video {

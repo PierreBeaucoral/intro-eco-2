@@ -1,0 +1,25 @@
+% Source : cours/cm2.qmd. Élasticité et incidence ; pas de donnée inventée.
+\begin{board}{2}{Tabac : les achats réagissent au prix}
+ {Ventes légales $\neq$ consommation : achats à l'étranger et autres circuits.}
+\stage{5.4}{1}{Le paquet renchérit}
+\stage{16}{2}{Une réaction qui évolue}
+\stage{26.6}{3}{Versement et charge}
+\packet{3.7}{8.1}{amber}
+\packet{5}{8.1}{amber}
+\bill{7.1}{8}
+\draw[flow] (6.9,10.6)--(6.9,12);
+\captext{5.4}{Une taxe augmente\\le prix payé.}
+\noteat{16}{12.2}{Court terme}
+\foreach \x in {12.9,14.1,15.3,16.5,17.7}{\packet{\x}{10}{blue}}
+\noteat{16}{8.9}{Long terme}
+\foreach \x in {14.1,15.3,16.5}{\packet{\x}{6.8}{blue}}
+\captext{16}{L'effet du prix est\\plus fort à long terme.}
+\shop{24.2}{8}
+\bank{29}{8}
+\coin{26.6}{10.9}
+\draw[flow] (26,11.3)--(28,11.3);
+\noteat{26.6}{12.3}{Le vendeur verse la taxe}
+\node[smalllabel,text width=3cm] at (24.2,7.2) {Vendeur};
+\node[smalllabel,text width=3cm] at (29,7.2) {État};
+\captext{26.6}{Côté peu élastique :\\charge plus importante.}
+\end{board}

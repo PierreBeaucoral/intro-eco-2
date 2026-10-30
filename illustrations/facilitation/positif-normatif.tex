@@ -1,0 +1,32 @@
+% Planche de notion, hors des dix synthèses. Source pédagogique : cours/cm1.qmd,
+% « La controverse » (bloquer les prix à la pompe ou aider les automobilistes).
+% Vert = analyse positive, violet = analyse normative, comme sur le site.
+\documentclass{article}
+\input{style.tex}
+\begin{document}
+\begin{twoboard}{1}{Décrire un effet n'est pas choisir une politique}
+ {Le positif chiffre ce que coûte chaque option ; le normatif choisit entre elles.}
+\node[panel,text width=14cm] at (8,14.1)
+ {\textcolor{positif}{Analyse positive}~: ce qui est};
+\node[panel,text width=14cm] at (24,14.1)
+ {\textcolor{normatif}{Analyse normative}~: ce qui devrait être};
+% Positif : prix bloqué, file d'attente, on vérifie.
+\pump{3.6}{9.5}
+\person{6.9}{9.5}{muted}
+\person{8.85}{9.5}{muted}
+\person{10.8}{9.5}{muted}
+\magnifier{13.4}{11.6}{positif}
+\node[quote=positif] at (8,7.7)
+ {«~Bloquer le prix à la pompe\\crée une pénurie.~»};
+\node[caption,text width=13cm] at (8,4.6)
+ {Vérifiable : les données peuvent\\la confirmer ou la contredire.};
+% Normatif : une balance entre deux objectifs.
+\scales{24}{12.25}{normatif}
+\node[label,text width=3.4cm,text=normatif] at (18.4,10.55) {équité};
+\node[label,text width=3.4cm,text=normatif] at (29.6,11.25) {coût\\public};
+\node[quote=normatif] at (24,7.7)
+ {«~Il faut d'abord protéger les ménages\\qui dépendent de la voiture.~»};
+\node[caption,text width=13cm] at (24,4.6)
+ {Repose sur un jugement de valeur :\\ici, l'équité passe avant le coût.};
+\end{twoboard}
+\end{document}

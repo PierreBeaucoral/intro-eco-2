@@ -1,0 +1,52 @@
+[
+  {
+    "cm": 1,
+    "fichier": "cm1-ormuz",
+    "alt": "Trois scènes montrent le passage réduit des pétroliers à Ormuz, la faible possibilité de réduire les trajets à court terme et la hausse du prix à la pompe."
+  },
+  {
+    "cm": 2,
+    "fichier": "cm2-tabac",
+    "alt": "Une hausse du prix du tabac réduit les achats plus faiblement à court terme et davantage à long terme ; le versement de la taxe et sa charge économique sont distingués."
+  },
+  {
+    "cm": 3,
+    "fichier": "cm3-ozempic",
+    "alt": "Une usine à capacité limitée et une hausse de la demande laissent des demandes insatisfaites au prix fixé. La file d’attente et la priorité médicale attribuent différemment le même stock."
+  },
+  {
+    "cm": 4,
+    "fichier": "cm4-loyers",
+    "alt": "Sous un plafond contraignant, le locataire logé bénéficie d’un loyer limité tandis que les candidats doivent être départagés. Le risque de retrait de l’offre à long terme est présenté comme conditionnel."
+  },
+  {
+    "cm": 5,
+    "fichier": "cm5-zfe",
+    "alt": "Une voiture engendre un coût privé et des dommages pour des tiers. Taxe, norme et subvention sont comparées selon la personne qui supporte leur coût."
+  },
+  {
+    "cm": 6,
+    "fichier": "cm6-monnaie",
+    "alt": "Un prêt crée simultanément une créance bancaire et un dépôt de 1 000 euros. Le paiement change le titulaire du dépôt ; le remboursement du capital réduit la créance et le dépôt."
+  },
+  {
+    "cm": 7,
+    "fichier": "cm7-bce",
+    "alt": "Une hausse des taux directeurs renchérit le crédit, freine les dépenses et réduit les pressions inflationnistes avec un délai. Elle ne produit pas davantage d’énergie."
+  },
+  {
+    "cm": 8,
+    "fichier": "cm8-grece",
+    "alt": "Une coupe de dépense réduit des revenus puis d’autres dépenses. Si le PIB se contracte suffisamment, le ratio dette sur PIB peut augmenter malgré l’effort budgétaire."
+  },
+  {
+    "cm": 9,
+    "fichier": "cm9-douane",
+    "alt": "Dans le modèle du petit pays, l’importateur verse le droit à l’État et le prix intérieur augmente. Les producteurs protégés gagnent, les acheteurs perdent et certains échanges disparaissent."
+  },
+  {
+    "cm": 10,
+    "fichier": "cm10-climat",
+    "alt": "Le même dommage futur est évalué aujourd’hui à travers deux taux d’actualisation. Le dommage physique reste identique tandis que sa valeur présente change ; la répartition entre générations et pays reste une question distincte."
+  }
+]

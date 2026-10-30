@@ -1,0 +1,202 @@
+% Grammaire commune : aucune source bitmap, aucune ressource distante.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage[paperwidth=32cm,paperheight=18cm,margin=0cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\definecolor{ink}{HTML}{212A32}
+\definecolor{blue}{HTML}{0062C4}
+\definecolor{amber}{HTML}{B45309}
+\definecolor{paper}{HTML}{FFFFFF}
+\definecolor{muted}{HTML}{56616B}
+% Code couleur du site (assets/theme-light.scss) : analyse positive / normative.
+\definecolor{positif}{HTML}{067647}
+\definecolor{normatif}{HTML}{6941C6}
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+\newwrite\nodeaudit
+\immediate\openout\nodeaudit=\jobname.nodes.csv
+\AtEndDocument{\immediate\closeout\nodeaudit}
+\newcommand{\RecordNode}{%
+ \begingroup
+ \pgfpointtransformed{\pgfpointanchor{\tikzlastnode}{south west}}\pgfgetlastxy{\ax}{\ay}
+ \pgfpointtransformed{\pgfpointanchor{\tikzlastnode}{north east}}\pgfgetlastxy{\bx}{\by}
+ \immediate\write\nodeaudit{\BoardIndex,\ax,\ay,\bx,\by}
+ \endgroup
+}
+\tikzset{
+  every node/.style={append after command={\pgfextra{\RecordNode}}},
+  drawline/.style={draw=ink,line width=1.5pt,line cap=round,line join=round},
+  flow/.style={-{Stealth[length=4mm,width=3mm]},draw=blue,line width=2pt,line cap=round},
+  possible/.style={flow,dashed},
+  label/.style={text=ink,font=\fontsize{22}{26}\selectfont,align=center,
+    inner sep=0pt,outer sep=0pt,text width=8.5cm,minimum height=1.1cm},
+  smalllabel/.style={label,font=\fontsize{19}{23}\selectfont},
+  panel/.style={label,font=\bfseries\fontsize{22}{26}\selectfont,text width=9cm,minimum height=1.8cm},
+  caption/.style={label,text=muted,minimum height=1.9cm},
+  quote/.style={label,text width=12.5cm,draw=#1,fill=#1!6,line width=1.5pt,
+    rounded corners=3mm,inner sep=.35cm}
+}
+% Canvas fixe : les coordonnées sont les mêmes pour les dix séances.
+\newcommand{\boardframe}[3]{%
+  \path[use as bounding box] (0,0) rectangle (32,18);
+  \clip (0,0) rectangle (32,18);
+  \fill[paper] (0,0) rectangle (32,18);
+  \node[anchor=west,text=blue,font=\bfseries\fontsize{22}{26}\selectfont,
+    minimum width=2cm,minimum height=1cm,inner sep=0pt] at (0.9,16.7) {CM #1};
+  \node[anchor=west,text=ink,font=\bfseries\fontsize{29}{33}\selectfont,
+    text width=27cm,minimum height=1.5cm,inner sep=0pt,align=left] at (4,16.7) {#2};
+  \draw[blue,line width=2pt] (0.9,15.55)--(31.1,15.55);
+  \draw[amber,line width=1.5pt] (0.9,2.8)--(31.1,2.8);
+  \node[label,text width=29cm,minimum height=1.5cm,font=\fontsize{20}{24}\selectfont]
+    at (16,1.55) {#3};}
+\newenvironment{board}[3]{%
+\def\BoardIndex{#1}%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \boardframe{#1}{#2}{#3}
+  \draw[ink!18,line width=.7pt,dashed] (10.7,3.7)--(10.7,14.8);
+  \draw[ink!18,line width=.7pt,dashed] (21.3,3.7)--(21.3,14.8);
+}{\end{tikzpicture}\par}
+% Variante à deux volets (planches de notion, hors des dix synthèses).
+\newenvironment{twoboard}[3]{%
+\def\BoardIndex{1}%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \boardframe{#1}{#2}{#3}
+  \draw[ink!18,line width=.7pt,dashed] (16,3.7)--(16,14.8);
+}{\end{tikzpicture}\par}
+% Format étroit, sans titre ni pied, pour un dessin flottant à côté du texte : {largeur}{hauteur}.
+\newenvironment{compactboard}[2]{%
+\def\BoardIndex{1}%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \path[use as bounding box] (0,0) rectangle (#1,#2);
+  \clip (0,0) rectangle (#1,#2);
+  \fill[paper] (0,0) rectangle (#1,#2);
+}{\end{tikzpicture}\par}
+\newcommand{\stage}[3]{\node[panel] at (#1,14.1) {\textcolor{blue}{#2.} #3};}
+\newcommand{\say}[3]{\node[label,text width=3.4cm] at (#1,#2) {#3};}
+\newcommand{\noteat}[3]{\node[smalllabel] at (#1,#2) {#3};}
+\newcommand{\captext}[2]{\node[caption] at (#1,4.5) {#2};}
+% Pictogrammes de taille native. Les scopes déplacent, sans comprimer le texte.
+\newcommand{\person}[3]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=#3!12] (0,2.65) circle (.36);
+ \draw[drawline,fill=#3!80] (-.48,1.05)--(-.4,2.08)
+   ..controls(0,2.38)..(.4,2.08)--(.48,1.05)--cycle;
+ \draw[drawline,line width=3pt] (-.23,1.05)--(-.3,0) (.23,1.05)--(.3,0);
+ \draw[drawline,line width=3pt] (-.4,2.05)--(-.77,1.35) (.4,2.05)--(.77,1.35);
+\end{scope}}
+\newcommand{\house}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!12] (-1.7,0) rectangle (1.7,2.25);
+ \draw[drawline,fill=blue!80] (-2,2.25)--(0,3.8)--(2,2.25)--cycle;
+ \draw[drawline,fill=paper] (-.35,0) rectangle (.35,1.45);
+ \foreach \x in {-1.1,1.1}{\draw[drawline,fill=paper] (\x-.3,1.25) rectangle (\x+.3,1.85);}
+\end{scope}}
+\newcommand{\car}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!80] (-2.2,.45)--(-2.2,1.2)--(-1.35,1.42)
+ --(-.75,2.15)--(.85,2.15)--(1.5,1.42)--(2.25,1.2)--(2.25,.45)--cycle;
+ \draw[drawline,fill=paper] (-.9,.45) circle (.4) (1.2,.45) circle (.4);
+ \draw[drawline,fill=paper] (-.58,1.48)--(-.23,1.96)--(.7,1.96)--(1.12,1.48)--cycle;
+\end{scope}}
+\newcommand{\bank}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!80] (-1.6,2)--(0,2.9)--(1.6,2)--cycle;
+ \draw[drawline] (-1.6,0)--(1.6,0) (-1.6,.2)--(1.6,.2);
+ \foreach \x in {-1.05,0,1.05}{\draw[drawline,fill=blue!15] (\x-.18,.3) rectangle (\x+.18,1.8);}
+ \draw[drawline] (-1.6,1.9)--(1.6,1.9);
+\end{scope}}
+\newcommand{\factory}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!17] (-2.2,0)--(-2.2,2)--(-.8,2.8)--(-.8,2)
+ --(.6,2.8)--(.6,2)--(2.2,2)--(2.2,0)--cycle;
+ \draw[drawline,fill=blue!80] (1.25,2) rectangle (1.85,3.8);
+ \foreach \x in {-1.5,-.4,.7}{\draw[drawline,fill=paper] (\x, .7) rectangle (\x+.55,1.35);}
+\end{scope}}
+\newcommand{\barrel}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!25] (-.5,.1)--(-.5,1.4)
+ arc[start angle=180,end angle=0,x radius=.5,y radius=.16]--(.5,.1)
+ arc[start angle=0,end angle=-180,x radius=.5,y radius=.16];
+ \draw[drawline] (-.5,.48)--(.5,.48) (-.5,1.06)--(.5,1.06);
+ \draw[drawline,fill=paper] (0,1.4) ellipse (.5 and .16);
+\end{scope}}
+\newcommand{\packet}[3]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=paper] (0,0) rectangle (.8,1.3);
+ \fill[#3!35] (.02,.85) rectangle (.78,1.28);
+ \draw[drawline] (0,.85)--(.8,.85);
+\end{scope}}
+\newcommand{\coin}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=amber!20] (0,0) circle (.4);
+ \node[text=ink,font=\bfseries\fontsize{16}{18}\selectfont,inner sep=0pt] at (0,0) {€};
+\end{scope}}
+\newcommand{\bill}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=paper] (-.85,0) rectangle (.85,2.1);
+ \node[text=amber,font=\bfseries\fontsize{27}{29}\selectfont,inner sep=0pt] at (0,1.45) {€};
+ \foreach \y in {.4,.7}{\draw[drawline] (-.5,\y)--(.5,\y);}
+\end{scope}}
+\newcommand{\pharmacy}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!12] (-1.65,0) rectangle (1.65,2.9);
+ \draw[drawline,fill=paper] (-.45,0) rectangle (.45,1.75);
+ \draw[drawline,fill=paper] (-1.25,1.1) rectangle (-.7,1.75);
+ \draw[blue,line width=5pt] (0,2)--(0,2.65) (-.33,2.33)--(.33,2.33);
+\end{scope}}
+\newcommand{\pump}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!80,rounded corners=2mm] (-.9,0) rectangle (.9,3.5);
+ \draw[drawline,fill=paper] (-.6,2.3) rectangle (.6,3.1);
+ \draw[drawline] (-1.15,0)--(1.15,0);
+ \draw[drawline] (.9,2.8)..controls(1.8,2.8)and(1.9,.8)..(1.3,.8)
+ ..controls(1,.8)and(1,1.4)..(1.25,1.6)--(1.25,2.25);
+\end{scope}}
+\newcommand{\apartments}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!16] (-1.65,0) rectangle (1.65,4.25);
+ \draw[drawline,fill=paper] (-.35,0) rectangle (.35,1.05);
+ \foreach \x in {-1,.65}{\foreach \y in {1.45,2.65}{
+ \draw[drawline,fill=paper] (\x,\y) rectangle (\x+.5,\y+.7);}}
+ \draw[drawline] (-1.9,4.25)--(1.9,4.25);
+\end{scope}}
+\newcommand{\shop}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!8] (-1.5,0) rectangle (1.5,2.4);
+ \draw[drawline,fill=blue!80] (-1.7,2.4)--(-1.5,3)--(1.5,3)--(1.7,2.4)--cycle;
+ \draw[drawline,fill=paper] (-1.15,.5) rectangle (.4,1.9);
+ \draw[drawline,fill=paper] (.7,0) rectangle (1.2,1.9);
+\end{scope}}
+\newcommand{\magnifier}[3]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[#3,line width=7pt,line cap=round] (.7,-.7)--(1.55,-1.55);
+ \draw[drawline,fill=#3!10] (0,0) circle (1);
+ \draw[#3,line width=3pt] (0,0) circle (.82);
+\end{scope}}
+% Balance penchée à gauche : #3 = couleur ; plateaux à (-2.7,-.35) et (2.7,.35).
+\newcommand{\scales}[3]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=#3!80] (-1.1,-2.6)--(1.1,-2.6)--(.45,-2.2)--(-.45,-2.2)--cycle;
+ \draw[drawline,line width=3pt] (0,-2.2)--(0,.4);
+ \draw[drawline,line width=3pt] (-2.7,-.35)--(2.7,.35);
+ \draw[drawline,fill=#3!80] (0,.05) circle (.22);
+ \foreach \x/\y in {-2.7/-.35,2.7/.35}{
+   \draw[drawline] (\x,\y)--(\x-.85,\y-1.35) (\x,\y)--(\x+.85,\y-1.35);
+   \draw[drawline,fill=#3!15] (\x-1.05,\y-1.35)--(\x+1.05,\y-1.35)
+     arc[start angle=0,end angle=-180,x radius=1.05,y radius=.4];}
+\end{scope}}
+\newcommand{\globe}[2]{%
+\begin{scope}[shift={(#1,#2)}]
+ \draw[drawline,fill=blue!8] (0,0) circle (1.1);
+ \draw[drawline] (0,0) ellipse (.43 and 1.1);
+ \draw[drawline] (-1.1,0)--(1.1,0) (-.96,.55)--(.96,.55) (-.96,-.55)--(.96,-.55);
+\end{scope}}

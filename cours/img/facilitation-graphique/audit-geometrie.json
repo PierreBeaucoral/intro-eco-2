@@ -1,0 +1,7 @@
+{
+  "textes_mesures": 142,
+  "marge_minimale_cm": 0.5,
+  "ecart_minimal_textes_cm": 0.3,
+  "collisions_textuelles": 0,
+  "portee": "Boîtes des textes TikZ. Pictogrammes et flèches contrôlés visuellement."
+}

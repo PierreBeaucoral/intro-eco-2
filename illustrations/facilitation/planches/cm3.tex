@@ -1,0 +1,22 @@
+% Source : cours/cm3.qmd. Cas historique 2023-2025.
+\begin{board}{3}{Ozempic : une pénurie, plusieurs règles d'accès}
+ {Changer la règle d'accès ne crée pas de boîtes supplémentaires. Cas étudié : 2023--2025.}
+\stage{5.4}{1}{Une offre rigide}
+\stage{16}{2}{La demande augmente}
+\stage{26.6}{3}{Le même stock à répartir}
+\factory{5.4}{8.8}
+\foreach \x in {3.1,4.3,5.5,6.7}{\packet{\x}{6.8}{blue}}
+\captext{5.4}{À court terme, produire\\davantage prend du temps.}
+\pharmacy{13.7}{8.5}
+\person{16.3}{7.3}{blue}
+\person{18.1}{7.3}{amber}
+\person{19.9}{7.3}{amber}
+\noteat{16}{12.3}{Prix fixé}
+\draw[amber,line width=1.5pt] (17.4,6.6)--(20.4,6.6);
+\captext{16}{Prix fixé :\\une pénurie persiste.}
+\noteat{26.6}{12.3}{File d'attente}
+\foreach \x in {24,25.3,26.6,27.9}{\packet{\x}{10.1}{blue}}
+\noteat{26.6}{9.1}{Priorité médicale}
+\foreach \x in {24,25.3,26.6,27.9}{\packet{\x}{6.9}{blue}}
+\captext{26.6}{La règle décide\\qui obtient les boîtes.}
+\end{board}

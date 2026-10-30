@@ -1,0 +1,28 @@
+% Source : cours/cm6.qmd, prêt de Léa. Le capital, pas les intérêts.
+\begin{board}{6}{Crédit : création puis destruction de monnaie}
+ {Le risque, les fonds propres et le coût du financement limitent le crédit. Exemple fictif.}
+\stage{5.4}{1}{Un prêt : deux écritures}
+\stage{16}{2}{Le paiement circule}
+\stage{26.6}{3}{Le capital est remboursé}
+\bank{5.4}{10}
+\node[smalllabel,text width=3.5cm] at (3.2,8.9) {Actif};
+\node[smalllabel,text width=3.5cm] at (7.5,8.9) {Passif};
+\draw[drawline] (1.5,8.1)--(9.2,8.1) (5.35,6)--(5.35,8.1);
+\node[smalllabel,text width=3.5cm] at (3.2,6.9) {Crédit\\$+\,1\,000$ €};
+\node[smalllabel,text width=3.5cm] at (7.5,6.9) {Dépôt\\$+\,1\,000$ €};
+\captext{5.4}{Le dépôt naît du prêt.}
+\bank{13.5}{8.8}
+\bank{18.4}{8.8}
+\node[smalllabel,text width=3.5cm] at (13.5,7.7) {Banque A};
+\node[smalllabel,text width=3.5cm] at (18.4,7.7) {Banque B};
+\draw[flow] (13.5,12.4)--(18.4,12.4);
+\noteat{16}{6.3}{Réserves entre banques}
+\captext{16}{Le dépôt circule\\entre les comptes.}
+\node[smalllabel,text width=3.5cm] at (24.5,11.7) {Crédit};
+\node[smalllabel,text width=3.5cm] at (28.8,11.7) {Dépôt};
+\draw[drawline] (22.8,10.8)--(30.5,10.8) (26.65,8.3)--(26.65,10.8);
+\node[label,text width=3.5cm] at (24.5,9.5) {$-\,1\,000$ €};
+\node[label,text width=3.5cm] at (28.8,9.5) {$-\,1\,000$ €};
+\draw[amber,line width=2pt] (23.3,7)--(30,7);
+\captext{26.6}{La créance et le dépôt\\diminuent ensemble.}
+\end{board}

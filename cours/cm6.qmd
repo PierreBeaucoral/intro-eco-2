@@ -277,7 +277,7 @@ Le **mobile money** est un compte ouvert chez un opérateur de téléphonie, san
 
 Le crédit arrive pourtant par le téléphone. À Abidjan, des offres comme Tik Tak (Orange) ou MoMo Kash (MTN) accordent, sans guichet ni vendeur, de petits prêts de un à trois mois, sur décision d'un algorithme qui lit l'historique du compte de mobile money ([Ducourant et al., *The Conversation*, 01/09/2026](https://theconversation.com/et-clic-largent-est-la-les-usages-du-credit-digital-en-cote-divoire-290006)).
 
-**Qui y gagne, qui y perd ?**
+**Le mobile money ouvre la finance aux exclus des banques, mais pas à égalité**
 
 **Par revenu.** Le crédit digital dépanne des ménages aux revenus irréguliers, mais coûte cher : au Kenya, en 2021, les taux annuels allaient de 49 % à 442 % selon l'offre ([Ducourant et al., 01/09/2026](https://theconversation.com/et-clic-largent-est-la-les-usages-du-credit-digital-en-cote-divoire-290006)).
 

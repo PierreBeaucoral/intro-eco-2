@@ -1,0 +1,27 @@
+% Source : cours/cm10.qmd. 1000/(1+taux)^100, arrondis.
+\begin{board}{10}{Actualisation : le même futur, un poids différent}
+ {Le taux change la valeur actuelle des dommages, pas leur réalité physique.}
+\stage{5.4}{1}{Le même dommage futur}
+\stage{16}{2}{Deux taux, deux valeurs}
+\stage{26.6}{3}{Comment répartir l'effort ?}
+\house{5.4}{8.2}
+\foreach \y in {7.9,8.25,8.6}{
+ \draw[blue,line width=2pt] (2.4,\y) sin (3.15,\y+.15) cos (3.9,\y)
+ sin (4.65,\y+.15) cos (5.4,\y) sin (6.15,\y+.15) cos (6.9,\y)
+ sin (7.65,\y+.15) cos (8.4,\y);}
+\noteat{5.4}{6.7}{1 000 € dans 100 ans}
+\captext{5.4}{Exemple fictif :\\même dommage physique.}
+\noteat{16}{12.3}{Valeur aujourd'hui}
+\node[label,text width=3.1cm] at (13.6,10.5) {1\,\%};
+\draw[flow] (15.1,10.5)--(17,10.5);
+\node[label,text width=3.3cm,text=blue] at (19,10.5) {370 €};
+\node[label,text width=3.1cm] at (13.6,7.5) {5\,\%};
+\draw[flow] (15.1,7.5)--(17,7.5);
+\node[label,text width=3.3cm,text=amber] at (19,7.5) {8 €};
+\captext{16}{Un écart de taux devient\\décisif sur un siècle.}
+\person{24.2}{9}{blue}
+\person{29}{9}{amber}
+\globe{26.6}{10.5}
+\noteat{26.6}{7.2}{Entre générations\\et entre pays (Nord / Sud)}
+\captext{26.6}{Responsabilité, moyens\\et vulnérabilité.}
+\end{board}
