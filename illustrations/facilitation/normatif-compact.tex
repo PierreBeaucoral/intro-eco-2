@@ -1,0 +1,16 @@
+% Volet « analyse normative » de positif-normatif.tex, seul, pour la page du CM 1
+% (flottant à côté du paragraphe « Analyse normative »). Le titre du volet est
+% retiré : le texte du cours le donne. Canvas 16 x 7,7 cm (déclaré aussi dans build.py).
+\documentclass{article}
+\input{style.tex}
+\geometry{paperwidth=16cm,paperheight=7.7cm}
+\begin{document}
+\begin{compactboard}{16}{7.7}
+% Une balance entre deux objectifs.
+\scales{8}{6.1}{normatif}
+\node[label,text width=3.4cm,text=normatif] at (2.2,4.5) {équité};
+\node[label,text width=3.4cm,text=normatif] at (13.8,5.2) {coût\\public};
+\node[quote=normatif] at (8,1.85)
+ {«~Il faut d'abord protéger les ménages\\qui dépendent de la voiture.~»};
+\end{compactboard}
+\end{document}

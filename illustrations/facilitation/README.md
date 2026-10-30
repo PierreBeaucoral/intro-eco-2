@@ -19,8 +19,8 @@ Les essais ImageGen ont été abandonnés au choix de TikZ.
 ## Planches de notion (hors des dix synthèses)
 
 - positif-normatif.tex : analyse positive / normative, format 32 x 18 cm, pour le PDF du CM 1.
-- positif-normatif-compact.tex : même dessin en deux volets superposés (16 x 19 cm), flottant
-  à droite du texte sur le site (classe .wp-cote, assets/components.scss).
+- positif-compact.tex et normatif-compact.tex : chaque volet seul (16 x 7,7 cm), flottant à
+  droite du paragraphe correspondant sur le site (classe .wp-cote, assets/components.scss).
 
 Vert et violet reprennent le code couleur positif / normatif du site. build.py les compile
 après les dix planches (liste NOTIONS), avec les mêmes contrôles ; elles n'entrent ni dans

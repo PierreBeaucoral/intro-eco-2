@@ -1,0 +1,18 @@
+% Volet « analyse positive » de positif-normatif.tex, seul, pour la page du CM 1
+% (flottant à côté du paragraphe « Analyse positive »). Le titre du volet est
+% retiré : le texte du cours le donne. Canvas 16 x 7,7 cm (déclaré aussi dans build.py).
+\documentclass{article}
+\input{style.tex}
+\geometry{paperwidth=16cm,paperheight=7.7cm}
+\begin{document}
+\begin{compactboard}{16}{7.7}
+% Prix bloqué, file d'attente, on vérifie.
+\pump{2.3}{3.7}
+\person{5.4}{3.7}{muted}
+\person{7.35}{3.7}{muted}
+\person{9.3}{3.7}{muted}
+\magnifier{12.6}{5.5}{positif}
+\node[quote=positif] at (8,1.85)
+ {«~Bloquer le prix à la pompe\\crée une pénurie.~»};
+\end{compactboard}
+\end{document}

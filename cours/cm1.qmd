@@ -317,16 +317,14 @@ graphe_elasticite_usage()
 
 On sépare l'analyse [**positive**]{.positif} de l'analyse [**normative**]{.normatif}.
 
-::: {.content-visible when-format="html"}
-::: {#fig-positif-normatif .wp-cote}
-![](img/facilitation-graphique/cm1-positif-normatif-compact.svg){fig-alt="Dessin en deux volets superposés. En haut, en vert, « Analyse positive : ce qui est » : une pompe à essence, une file de trois personnes et une loupe, avec la phrase « Bloquer le prix à la pompe crée une pénurie ». En bas, en violet, « Analyse normative : ce qui devrait être » : une balance qui penche du côté de l'équité plutôt que du coût public, avec la phrase « Il faut d'abord protéger les ménages qui dépendent de la voiture »."}
-
-Une même controverse pose deux questions : la première se vérifie avec des données, la seconde se tranche par un jugement de valeur.
-:::
-:::
-
 ::: {.content-visible unless-format="html"}
 ![Une même controverse pose deux questions : la première se vérifie avec des données, la seconde se tranche par un jugement de valeur.](img/facilitation-graphique/cm1-positif-normatif.svg){#fig-positif-normatif fig-alt="Dessin en deux volets. À gauche, en vert, « Analyse positive : ce qui est » : une pompe à essence, une file de trois personnes et une loupe, avec la phrase « Bloquer le prix à la pompe crée une pénurie », vérifiable par les données. À droite, en violet, « Analyse normative : ce qui devrait être » : une balance qui penche du côté de l'équité plutôt que du coût public, avec la phrase « Il faut d'abord protéger les ménages qui dépendent de la voiture », qui repose sur un jugement de valeur."}
+:::
+
+::: {.content-visible when-format="html"}
+::: {.wp-cote}
+![](img/facilitation-graphique/cm1-positif-compact.svg){fig-alt="Dessin en vert : une pompe à essence, une file de trois personnes et une loupe, avec la phrase « Bloquer le prix à la pompe crée une pénurie »."}
+:::
 :::
 
 [**Analyse positive**]{.positif} (ce qui est : mécanismes et effets, vérifiables).
@@ -336,6 +334,12 @@ Une même controverse pose deux questions : la première se vérifie avec des do
 - **Une aide ciblée** laisse le prix jouer son rôle de signal et concentre la dépense sur les ménages les plus exposés, à condition de savoir les identifier. En septembre 2026, le gouvernement a élargi une aide aux travailleurs modestes « grands rouleurs », dans un plan de 450 millions d'euros ([ministère de la Transition écologique, 22/09/2026, cité par l'AFP le 23/09/2026](https://www.connaissancedesenergies.org/afp/carburants-gaz-fioul-lexposition-des-menages-francais-a-la-hausse-des-prix-260923)).
 - **Libérer des stocks stratégiques** agit sur l'offre : O′ se déplace vers la droite et le prix baisse, le temps que durent les stocks. Après la libération de stocks de diesel, TotalEnergies annonce un avantage d'environ 10 centimes par litre de gazole du 1^er^ novembre 2026 au 31 janvier 2027 ([communiqué, 12/10/2026](https://totalenergies.com/newsroom/diesel-en-france-totalenergies-sengage-a-restituer-aux-francais-lavantage-lie-a-la-liberation-de-stocks-strategiques-de-diesel/?lang=fra)).
 - **Taxer les profits exceptionnels** des vendeurs ne change pas le prix à court terme si l'offre n'en dépend pas, et finance les aides. L'Union européenne l'a fait en 2022 avec une « contribution de solidarité temporaire » sur le pétrole brut, le gaz, le charbon et le raffinage ([règlement (UE) 2022/1854 du Conseil](http://data.europa.eu/eli/reg/2022/1854/oj), 6 octobre 2022).
+
+::: {.content-visible when-format="html"}
+::: {.wp-cote}
+![](img/facilitation-graphique/cm1-normatif-compact.svg){fig-alt="Dessin en violet : une balance qui penche du côté de l'équité plutôt que du coût public, avec la phrase « Il faut d'abord protéger les ménages qui dépendent de la voiture »."}
+:::
+:::
 
 [**Analyse normative**]{.normatif} (ce qui devrait être : dépend de jugements de valeur). Le choix dépend de l'objectif.
 

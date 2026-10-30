@@ -133,8 +133,8 @@ def export_page(page: object, stem: str, title: str) -> None:
 # Planches de notion, hors des dix synthèses : source, export, titre, format (cm).
 NOTIONS = [("positif-normatif", "cm1-positif-normatif",
             "Décrire un effet n'est pas choisir une politique", (32, 18)),
-           ("positif-normatif-compact", "cm1-positif-normatif-compact",
-            "Analyse positive et analyse normative", (16, 19))]
+           ("positif-compact", "cm1-positif-compact", "Analyse positive", (16, 7.7)),
+           ("normatif-compact", "cm1-normatif-compact", "Analyse normative", (16, 7.7))]
 
 
 def build() -> None:
